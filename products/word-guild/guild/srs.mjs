@@ -6,13 +6,15 @@ import {spelling} from './board.mjs';
 export const INTERVALS = [0, 0, 1, 3, 7, 21]; // 箱ごとの、次に出るまでの日数
 export const MAX_BOX = 5;
 export const SESSION_SIZE = 12;
-export const MAX_DUE = 8;
 export const NEW_PER_SESSION = 4;
 export const GROUP_SIZE = 3;
 export const GROUP_LETTERS = 30;
 export const SOLO_LETTERS = 13; // この文字数以上の語は1語だけの盤面
 export const HEAVY_DUE = 20; // 期限の語がこれ以上たまったら新出を0にする
 export const LIT_BOX = 3; // 棚が灯る習熟度
+
+// 盤面用の綴りが SOLO_LETTERS 以上の語。1クエストに1語まで。
+export const isBig = word => spelling(word.w).length >= SOLO_LETTERS;
 
 // 端末の現地時間での日番号。
 export function todayNumber(now = Date.now(), offsetMinutes = new Date().getTimezoneOffset()) {
@@ -62,12 +64,16 @@ export function groupWords(words, rand = null) {
     target.letters += length;
   }
   const all = [...groups.filter(g => g.words.length), ...solo.map(word => ({words: [word], letters: spelling(word.w).length}))];
-  return all.sort((a, b) => a.letters - b.letters).map(g => g.words);
+  const small = all.filter(g => !isBig(g.words[0]) || g.words.length > 1);
+  const big = all.filter(g => !small.includes(g));
+  const byLetters = (a, b) => a.letters - b.letters;
+  return [...small.sort(byLetters), ...big.sort(byLetters)].map(g => g.words);
 }
 
 // progress.words は {id: {box, due, seen}}。戻り値は 3語ずつの組の配列。
-export function pickSession(words, progress, today, size = SESSION_SIZE, rand = null) {
+export function pickSession(words, progress, today, size = SESSION_SIZE, rand = null, fresh = NEW_PER_SESSION) {
   const state = word => progress.words[word.id];
+  const maxDue = Math.max(0, size - fresh);
   const dueAll = words
     .filter(word => isDue(state(word), today))
     .sort((a, b) => state(a).due - state(b).due || byShelfThenId(a, b));
@@ -75,10 +81,15 @@ export function pickSession(words, progress, today, size = SESSION_SIZE, rand = 
   const picked = [];
   const taken = new Set();
   const spells = new Set(); // 盤面の綴りが同じ語は1クエストに1つだけ
+  let bigTaken = false; // 大物は1クエストに1語まで
   const add = word => {
     if (picked.length >= size || taken.has(word)) return false;
     const text = spelling(word.w);
     if (spells.has(text)) return false;
+    if (isBig(word)) {
+      if (bigTaken) return false;
+      bigTaken = true;
+    }
     taken.add(word);
     spells.add(text);
     picked.push(word);
@@ -86,11 +97,11 @@ export function pickSession(words, progress, today, size = SESSION_SIZE, rand = 
   };
   let dueTaken = 0;
   for (const word of dueAll) {
-    if (dueTaken >= (heavy ? size : MAX_DUE)) break;
+    if (dueTaken >= (heavy ? size : maxDue)) break;
     if (add(word)) dueTaken++;
   }
-  const fresh = words.filter(word => !state(word)).sort(byShelfThenId);
-  if (!heavy) fresh.forEach(add);
+  const unseen = words.filter(word => !state(word)).sort(byShelfThenId);
+  if (!heavy) unseen.forEach(add);
   if (picked.length < size) {
     const rest = words
       .filter(word => state(word) && !taken.has(word))

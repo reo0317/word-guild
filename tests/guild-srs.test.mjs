@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {grade, pickSession, groupWords, shelfStatus, todayNumber, isDue, dueCount, INTERVALS, GROUP_LETTERS} from '../products/word-guild/guild/srs.mjs';
+import {grade, pickSession, groupWords, shelfStatus, todayNumber, isDue, dueCount, INTERVALS, GROUP_LETTERS, isBig} from '../products/word-guild/guild/srs.mjs';
 import {emptyProgress} from '../products/word-guild/guild/store.mjs';
 import {spelling} from '../products/word-guild/guild/board.mjs';
 import {mulberry32} from '../products/word-guild/guild/rng.mjs';
@@ -169,4 +169,50 @@ test('pickSession：盤面の綴りが同じ語は1クエストに2つ入れな�
   assert.equal(picked.length, 12);
   assert.equal(new Set(picked.map(w => spelling(w.w))).size, 12);
   assert.ok(picked.some(w => w.id === 'a1') && !picked.some(w => w.id === 'a2'), '後の方を次回へ');
+});
+
+const dueWords = n => Array.from({length: n}, (_, i) => ({id: `u${i}`, w: `due${String.fromCharCode(97 + i)}x`, ja: 'x', pos: 'n', shelf: 1}));
+const freshWords = n => Array.from({length: n}, (_, i) => ({id: `f${i}`, w: `new${String.fromCharCode(97 + i)}y`, ja: 'x', pos: 'n', shelf: 2}));
+const bigWords = n => Array.from({length: n}, (_, i) => ({id: `b${i}`, w: `internationa${String.fromCharCode(97 + i)}`, ja: 'x', pos: 'n', shelf: 3}));
+
+test('pickSession：fresh が 4／6／8 のとき期限語の上限は 8／6／4', () => {
+  const due = dueWords(12);
+  const progress = emptyProgress();
+  due.forEach((w, i) => { progress.words[w.id] = {box: 2, due: TODAY - i, seen: 2}; });
+  const all = [...due, ...freshWords(12)];
+  for (const [fresh, maxDue] of [[4, 8], [6, 6], [8, 4]]) {
+    const picked = pickSession(all, progress, TODAY, 12, null, fresh).flat();
+    assert.equal(picked.filter(w => progress.words[w.id]).length, maxDue, `fresh=${fresh}`);
+    assert.equal(picked.length, 12);
+  }
+  const dflt = pickSession(all, progress, TODAY).flat();
+  assert.equal(dflt.filter(w => progress.words[w.id]).length, 8, '既定は4');
+});
+
+test('isBig：13文字以上', () => {
+  assert.equal(isBig({w: 'internationala'}), true);
+  assert.equal(isBig({w: 'abcdefghijkl'}), false);
+});
+
+test('pickSession：大物は1クエストに1語まで（新出・期限・穴埋めのどの段でも）', () => {
+  const big = bigWords(5);
+  const small = freshWords(3);
+  const fresh = pickSession([...big, ...small], emptyProgress(), TODAY).flat();
+  assert.equal(fresh.filter(isBig).length, 1);
+  const due = emptyProgress();
+  big.forEach((w, i) => { due.words[w.id] = {box: 2, due: TODAY - i, seen: 2}; });
+  assert.equal(pickSession([...big, ...small], due, TODAY).flat().filter(isBig).length, 1, '期限の大物');
+  const seen = emptyProgress();
+  big.forEach(w => { seen.words[w.id] = {box: 3, due: TODAY + 5, seen: 1}; });
+  assert.equal(pickSession([...big, ...small], seen, TODAY).flat().filter(isBig).length, 1, '穴埋めの大物');
+});
+
+test('groupWords：大物の組がいちばん最後', () => {
+  const list = [...bigWords(1), ...mk(['aaaa', 'bbbbb', 'cccccc', 'dddd', 'eeeee', 'ffffff', 'gggg', 'hhhhh', 'iiiiiiiiiiiii'.slice(0, 12)])];
+  const groups = groupWords(list);
+  assert.deepEqual(groups.at(-1).map(w => w.id), ['b0']);
+  assert.ok(groups.slice(0, -1).every(g => !g.some(isBig)));
+  // 小さい組どうしは文字数の少ない順のまま
+  const sums = groups.slice(0, -1).map(g => g.reduce((n, w) => n + spelling(w.w).length, 0));
+  assert.deepEqual(sums, [...sums].sort((a, b) => a - b));
 });

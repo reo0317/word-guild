@@ -1,10 +1,12 @@
 // 1クエストの状態。時間は advance(ms) で外から進める。DOM もタイマーも持たない。
 import {generateBoard, matchWord, spelling} from './board.mjs';
-import {grade} from './srs.mjs';
+import {grade, isDue, isBig} from './srs.mjs';
+import {applyOutcome, streakNow} from './daily.mjs';
 import {emptyProgress} from './store.mjs';
 
 export const HEARTS = 5;
 export const IDLE_LIMIT = 15000;
+export const IDLE_LIMIT_BIG = 25000; // 大物は長い綴りをなぞるので猶予を延ばす
 export const MAX_REVENGE = 3;
 export const ENEMIES = ['cat', 'dog', 'sun', 'ant'];
 export const REVENGE_ENEMY = 'animal';
@@ -32,6 +34,8 @@ export class Quest {
   get total() { return this.groups.length; }
   get isRevenge() { return this.index >= this.total; }
   get enemy() { return this.isRevenge ? REVENGE_ENEMY : ENEMIES[Math.min(this.index, ENEMIES.length - 1)]; }
+  get isBig() { return !this.isRevenge && this.slots.length === 1 && isBig(this.slots[0].word); }
+  get idleLimit() { return this.isBig ? IDLE_LIMIT_BIG : IDLE_LIMIT; }
   get unsolved() { return this.slots.filter(slot => !slot.solved); }
   get solvedCount() { return this.slots.length - this.unsolved.length; }
 
@@ -107,8 +111,8 @@ export class Quest {
     const events = [];
     if (this.phase !== 'battle' || !(ms > 0)) return events;
     this.idle += ms;
-    while (this.idle >= IDLE_LIMIT && this.phase === 'battle') {
-      this.idle -= IDLE_LIMIT;
+    while (this.idle >= this.idleLimit && this.phase === 'battle') {
+      this.idle -= this.idleLimit;
       this.hearts--;
       const target = this.unsolved.reduce((best, slot) => (best && best.hint <= slot.hint ? best : slot), null);
       if (target) target.hint = Math.min(2, target.hint + 1);
@@ -133,10 +137,10 @@ export class Quest {
       const before = this.startProgress.words[word.id];
       const after = grade(before, result, this.today);
       words[word.id] = after;
-      entries.push({word, result, isNew: !before, box: after.box});
+      entries.push({word, result, isNew: !before, box: after.box, due: isDue(before, this.today), big: isBig(word)});
     }
-    this.progress = {
-      v: 1,
+    const progress = {
+      ...this.startProgress,
       words,
       quests: this.startProgress.quests + 1,
       lastDay: this.today,
@@ -145,10 +149,18 @@ export class Quest {
     if (retreated) {
       const upto = this.isRevenge ? this.total : this.index + 1;
       for (const word of this.groups.slice(0, upto).flat()) {
-        if (!this.results.has(word.id)) entries.push({word, result: 'missed', isNew: !this.startProgress.words[word.id], box: this.startProgress.words[word.id]?.box ?? 0});
+        if (!this.results.has(word.id)) entries.push({word, result: 'missed', isNew: !this.startProgress.words[word.id], box: this.startProgress.words[word.id]?.box ?? 0, due: isDue(this.startProgress.words[word.id], this.today), big: isBig(word)});
       }
     }
-    this.outcome = {retreated, entries};
+    const applied = applyOutcome(progress, {retreated, entries}, this.today);
+    this.progress = applied.progress;
+    this.outcome = {
+      retreated, entries,
+      dailyDone: applied.dailyDone,
+      streakUp: applied.streakUp,
+      daily: this.progress.daily,
+      streak: streakNow(this.progress.streak, this.today),
+    };
     this.save(this.progress);
   }
 }

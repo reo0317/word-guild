@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Quest, IDLE_LIMIT, HEARTS} from '../products/word-guild/guild/quest.mjs';
+import {Quest, IDLE_LIMIT, IDLE_LIMIT_BIG, HEARTS} from '../products/word-guild/guild/quest.mjs';
 import {mulberry32} from '../products/word-guild/guild/rng.mjs';
 import {emptyProgress} from '../products/word-guild/guild/store.mjs';
 
@@ -211,4 +211,78 @@ test('結果の分類：新出 clean（知ってた）・復習 clean（正解�
   assert.deepEqual([entries.w0.result, entries.w0.isNew], ['clean', true]);
   assert.deepEqual([entries.w1.result, entries.w1.isNew, entries.w1.box], ['clean', false, 3]);
   assert.equal(entries.w2.result, 'hint');
+});
+
+test('finish：追加項目を落とさず、entries に due と big が付く', () => {
+  const progress = {...emptyProgress(), settings: {fresh: 6}, dailyDone: 7, exportDay: 123, streak: {count: 2, last: TODAY - 1, best: 5}};
+  progress.words.w1 = {box: 2, due: TODAY, seen: 2};
+  progress.words.w2 = {box: 2, due: TODAY + 3, seen: 2};
+  const {quest, saved} = newQuest(progress);
+  for (let board = 0; board < 4; board++) { start(quest); solve(quest); quest.next(); }
+  assert.equal(quest.phase, 'finished');
+  const p = saved[0];
+  assert.deepEqual(p.settings, {fresh: 6});
+  assert.equal(p.dailyDone, 7);
+  assert.equal(p.exportDay, 123);
+  assert.deepEqual(p.streak, {count: 3, last: TODAY, best: 5});
+  assert.equal(quest.outcome.streakUp, true);
+  assert.equal(quest.outcome.streak, 3);
+  const entries = Object.fromEntries(quest.outcome.entries.map(e => [e.word.id, e]));
+  assert.equal(entries.w1.due, true);
+  assert.equal(entries.w2.due, false);
+  assert.equal(entries.w0.due, false);
+  assert.ok(quest.outcome.entries.every(e => e.big === false));
+  assert.equal(progress.streak.count, 2, '開始時の進捗は書き換えない');
+});
+
+test('大物の盤面は25秒で攻撃し、isBig と idleLimit が切り替わる', () => {
+  const big = {id: 'big0', w: 'internationally', ja: 'x', pos: 'adv', shelf: 1};
+  const bigGroups = [[big], words.slice(0, 3)];
+  const quest = new Quest(bigGroups, {rand: mulberry32(1), progress: emptyProgress(), today: TODAY});
+  assert.equal(quest.isBig, true);
+  assert.equal(quest.idleLimit, IDLE_LIMIT_BIG);
+  start(quest);
+  assert.deepEqual(quest.advance(IDLE_LIMIT), [], '15秒では攻撃されない');
+  assert.equal(quest.advance(IDLE_LIMIT_BIG - IDLE_LIMIT).length, 1);
+  quest.answer(quest.slots[0].text);
+  quest.next();
+  assert.equal(quest.isBig, false);
+  assert.equal(quest.idleLimit, IDLE_LIMIT);
+});
+
+test('撤退でも依頼と連続日数が動く', () => {
+  const progress = {...emptyProgress(), daily: {day: TODAY, kind: 'clean', goal: 10, count: 0, done: false}};
+  const {quest, saved} = newQuest(progress);
+  start(quest);
+  solve(quest, ['w0']);
+  quest.advance(IDLE_LIMIT * HEARTS);
+  assert.equal(quest.retreated, true);
+  assert.equal(saved[0].daily.count, 1);
+  assert.deepEqual(saved[0].streak, {count: 1, last: TODAY, best: 1});
+  assert.equal(quest.outcome.dailyDone, false);
+  assert.deepEqual(quest.outcome.daily, saved[0].daily);
+});
+
+test('依頼の達成は outcome.dailyDone に出る', () => {
+  const progress = {...emptyProgress(), daily: {day: TODAY, kind: 'clean', goal: 3, count: 0, done: false}};
+  const {quest, saved} = newQuest(progress);
+  for (let board = 0; board < 4; board++) { start(quest); solve(quest); quest.next(); }
+  assert.equal(quest.outcome.dailyDone, true);
+  assert.equal(saved[0].dailyDone, 1);
+  assert.equal(saved[0].daily.done, true);
+});
+
+test('リベンジ盤面の結果は依頼に数えない', () => {
+  const progress = {...emptyProgress(), daily: {day: TODAY, kind: 'clean', goal: 12, count: 0, done: false}};
+  const {quest, saved} = newQuest(progress);
+  for (let board = 0; board < 4; board++) {
+    start(quest);
+    if (board === 0) quest.hint('w0');
+    solve(quest);
+    quest.next();
+  }
+  start(quest);
+  solve(quest); // リベンジで w0 を clean で解く
+  quest.next();
+  assert.equal(saved[0].daily.count, 11, 'w0 は最初の結果 hint のまま');
 });
