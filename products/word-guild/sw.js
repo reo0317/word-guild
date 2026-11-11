@@ -1,5 +1,5 @@
-const VERSION = 'ccc6c08e';
-const PRECACHE = ["./app.mjs","./assets-loader.mjs","./audio-policy.mjs","./character-art.mjs","./claws.mjs","./conversation.mjs","./core.mjs","./data/words.json","./dev-scenes.mjs","./dialogue-script.json","./dialogue.mjs","./game.mjs","./guild/board.mjs","./guild/chapters.mjs","./guild/credits.mjs","./guild/dom.mjs","./guild/library.mjs","./guild/pwa.mjs","./guild/quest.mjs","./guild/rng.mjs","./guild/srs.mjs","./guild/store.mjs","./guild/view.mjs","./guild/words.mjs","./index.html","./manifest.webmanifest","./music-cues.mjs","./question-data.mjs","./sound-effects.mjs","./sprites.mjs","./story.mjs","./style.css","./transition.mjs","./voice-player.mjs","./walk-art.mjs"];
+const VERSION = '140e426f';
+const PRECACHE = ["./data/words.json","./guild/board.mjs","./guild/chapters.mjs","./guild/credits.mjs","./guild/daily.mjs","./guild/dom.mjs","./guild/library.mjs","./guild/pwa.mjs","./guild/quest.mjs","./guild/rng.mjs","./guild/srs.mjs","./guild/store.mjs","./guild/view.mjs","./guild/words.mjs","./index.html","./manifest.webmanifest","./style.css"];
 const CACHE = `wg-shell-${VERSION}`;
 const shellURL = new URL('./index.html', self.location.href).href;
 self.addEventListener('install', event => {
