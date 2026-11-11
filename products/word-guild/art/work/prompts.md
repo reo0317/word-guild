@@ -17,3 +17,9 @@ Morning outside the little post office: Tsumugi receives her mailbag at the door
 ## C
 
 Evening in dense harbor fog: a single streetlamp glows beside the slope and the small post office. Tsumugi and Furo stand together under its warm light. Quiet, mysterious and reassuring.
+
+## A2（描き直し）
+
+以下の同一指示を、key-a.png を編集対象として組み込み画像生成機能に2回渡した。
+
+Use case: illustration-story. Edit the supplied key visual into a portrait 9:16 game illustration. Preserve its composition and distinctive paper-and-letterpress print style: view uphill from the bottom of stone steps toward the little post office in a foggy harbor town at morning; Tsumugi and the tiny white owl Furo in foreground; streetlamp at left, distant harbor and lighthouse; upper third entirely open sky and fog. Bold ink outlines, flat colors, paper grain; navy #1f2a44, paper #f3ead8, vermilion #c8462f, fog #9fb3bf, lamplight #f2b84b. Tsumugi wears a vermilion cap and coat, white scarf, black braid with vermilion ribbon, navy skirt, shoulder mailbag. Furo has a vermilion wax seal on its chest. Redraw Tsumugi from behind, head clearly oriented up toward the post office. Anatomically coherent shoulders, elbows, wrists and hands; both coat sleeves match; only one hand grips the bag strap, with five correctly formed digits. The bag flap is closed with no letters visible. Show both complete boots firmly planted on two successive horizontal stair treads, one foot one step higher, climbing; leave room around the feet. Continuous structurally coherent fence posts and chains; streetlamp pole naturally overlaps buildings. Owl has exactly two matching wings, one on each side. No text, lettering, signs, symbols or marks resembling writing anywhere, including the mailbox slot; no logos or watermark.
