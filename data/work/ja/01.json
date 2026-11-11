@@ -1,100 +1,802 @@
-[{"id":"b0001","w":"say","ja":"言う","pos":"v","ex":"say thank you","exJa":"ありがとうと言う"},
-{"id":"b0002","w":"know","ja":"知っている","pos":"v","ex":"know the answer","exJa":"答えを知っている"},
-{"id":"b0003","w":"think","ja":"考える","pos":"v","ex":"think about it","exJa":"それについて考える"},
-{"id":"b0004","w":"time","ja":"時間","pos":"n","ex":"arrive on time","exJa":"時間通りに到着する"},
-{"id":"b0005","w":"see","ja":"見る","pos":"v","ex":"see the chart","exJa":"図表を見る"},
-{"id":"b0006","w":"good","ja":"良い","pos":"a","ex":"good news","exJa":"良い知らせ"},
-{"id":"b0007","w":"people","ja":"人々","pos":"n","ex":"local people","exJa":"地元の人々"},
-{"id":"b0008","w":"year","ja":"年","pos":"n","ex":"last year","exJa":"昨年"},
-{"id":"b0009","w":"come","ja":"来る","pos":"v","ex":"come early","exJa":"早く来る"},
-{"id":"b0010","w":"work","ja":"働く","pos":"v","ex":"work overtime","exJa":"残業する"},
-{"id":"b0011","w":"use","ja":"使う","pos":"v","ex":"use a coupon","exJa":"クーポンを使う"},
-{"id":"b0012","w":"look","ja":"〜に見える","pos":"v","ex":"look great","exJa":"すばらしく見える"},
-{"id":"b0013","w":"want","ja":"ほしい","pos":"v","ex":"want a refund","exJa":"返金がほしい"},
-{"id":"b0014","w":"give","ja":"与える","pos":"v","ex":"give a discount","exJa":"割引を与える"},
-{"id":"b0015","w":"new","ja":"新しい","pos":"a","ex":"new employee","exJa":"新入社員"},
-{"id":"b0016","w":"way","ja":"方法","pos":"n","ex":"a better way","exJa":"より良い方法"},
-{"id":"b0017","w":"find","ja":"見つける","pos":"v","ex":"find a seat","exJa":"席を見つける"},
-{"id":"b0018","w":"day","ja":"日","pos":"n","ex":"next day","exJa":"翌日"},
-{"id":"b0019","w":"need","ja":"必要とする","pos":"v","ex":"need help","exJa":"助けが必要だ"},
-{"id":"b0020","w":"back","ja":"後方の","pos":"a","ex":"back door","exJa":"裏口"},
-{"id":"b0021","w":"mean","ja":"意味する","pos":"v","ex":"mean delays","exJa":"遅れを意味する"},
-{"id":"b0022","w":"last","ja":"最後の","pos":"a","ex":"last chance","exJa":"最後の機会"},
-{"id":"b0023","w":"child","ja":"子供","pos":"n","ex":"child care","exJa":"育児"},
-{"id":"b0024","w":"tell","ja":"伝える","pos":"v","ex":"tell the manager","exJa":"部長に伝える"},
-{"id":"b0025","w":"call","ja":"電話する","pos":"v","ex":"call the client","exJa":"顧客に電話する"},
-{"id":"b0026","w":"show","ja":"見せる","pos":"v","ex":"show your ticket","exJa":"チケットを見せる"},
-{"id":"b0027","w":"life","ja":"生活","pos":"n","ex":"work-life balance","exJa":"仕事と生活の両立"},
-{"id":"b0028","w":"man","ja":"男性","pos":"n","ex":"a young man","exJa":"若い男性"},
-{"id":"b0029","w":"change","ja":"変更","pos":"n","ex":"schedule change","exJa":"予定の変更"},
-{"id":"b0030","w":"place","ja":"場所","pos":"n","ex":"meeting place","exJa":"待ち合わせ場所"},
-{"id":"b0031","w":"long","ja":"長い","pos":"a","ex":"long meeting","exJa":"長い会議"},
-{"id":"b0032","w":"feel","ja":"感じる","pos":"v","ex":"feel better","exJa":"気分が良くなる"},
-{"id":"b0033","w":"write","ja":"書く","pos":"v","ex":"write a report","exJa":"報告書を書く"},
-{"id":"b0034","w":"same","ja":"同じ","pos":"a","ex":"same price","exJa":"同じ価格"},
-{"id":"b0035","w":"great","ja":"素晴らしい","pos":"a","ex":"great job","exJa":"素晴らしい仕事"},
-{"id":"b0036","w":"try","ja":"試す","pos":"v","ex":"try the menu","exJa":"メニューを試す"},
-{"id":"b0037","w":"leave","ja":"去る","pos":"v","ex":"leave a message","exJa":"伝言を残す"},
-{"id":"b0038","w":"number","ja":"番号","pos":"n","ex":"phone number","exJa":"電話番号"},
-{"id":"b0039","w":"part","ja":"部分","pos":"n","ex":"part of the plan","exJa":"計画の一部"},
-{"id":"b0040","w":"point","ja":"要点","pos":"n","ex":"main point","exJa":"要点"},
-{"id":"b0041","w":"help","ja":"助ける","pos":"v","ex":"help customers","exJa":"客を助ける"},
-{"id":"b0042","w":"ask","ja":"尋ねる","pos":"v","ex":"ask a question","exJa":"質問する"},
-{"id":"b0043","w":"meet","ja":"会う","pos":"v","ex":"meet a client","exJa":"取引先に会う"},
-{"id":"b0044","w":"start","ja":"始める","pos":"v","ex":"start the meeting","exJa":"会議を始める"},
-{"id":"b0045","w":"talk","ja":"話す","pos":"v","ex":"talk to staff","exJa":"職員と話す"},
-{"id":"b0046","w":"put","ja":"置く","pos":"v","ex":"put it here","exJa":"ここに置く"},
-{"id":"b0047","w":"become","ja":"〜になる","pos":"v","ex":"become manager","exJa":"部長になる"},
-{"id":"b0048","w":"old","ja":"古い","pos":"a","ex":"old building","exJa":"古い建物"},
-{"id":"b0049","w":"school","ja":"学校","pos":"n","ex":"school bus","exJa":"スクールバス"},
-{"id":"b0050","w":"late","ja":"遅れた","pos":"a","ex":"late arrival","exJa":"遅れた到着"},
-{"id":"b0051","w":"high","ja":"高い","pos":"a","ex":"high quality","exJa":"高品質"},
-{"id":"b0052","w":"next","ja":"次の","pos":"a","ex":"next week","exJa":"来週"},
-{"id":"b0053","w":"end","ja":"終わり","pos":"n","ex":"end of the month","exJa":"月末"},
-{"id":"b0054","w":"live","ja":"住む","pos":"v","ex":"live downtown","exJa":"中心街に住む"},
-{"id":"b0055","w":"world","ja":"世界","pos":"n","ex":"world market","exJa":"世界市場"},
-{"id":"b0056","w":"week","ja":"週","pos":"n","ex":"this week","exJa":"今週"},
-{"id":"b0057","w":"play","ja":"演じる","pos":"v","ex":"play a role","exJa":"役割を果たす"},
-{"id":"b0058","w":"home","ja":"自宅","pos":"n","ex":"work from home","exJa":"在宅勤務"},
-{"id":"b0059","w":"house","ja":"住宅","pos":"n","ex":"house prices","exJa":"住宅価格"},
-{"id":"b0060","w":"report","ja":"報告書","pos":"n","ex":"sales report","exJa":"売上報告書"},
-{"id":"b0061","w":"group","ja":"グループ","pos":"n","ex":"tour group","exJa":"ツアーの団体"},
-{"id":"b0062","w":"case","ja":"場合","pos":"n","ex":"in case of fire","exJa":"火災の場合"},
-{"id":"b0063","w":"woman","ja":"女性","pos":"n","ex":"the woman at the desk","exJa":"受付の女性"},
-{"id":"b0064","w":"book","ja":"予約する","pos":"v","ex":"book a flight","exJa":"航空券を予約する"},
-{"id":"b0065","w":"family","ja":"家族","pos":"n","ex":"family business","exJa":"家族経営の会社"},
-{"id":"b0066","w":"kind","ja":"種類","pos":"n","ex":"what kind of food","exJa":"どんな種類の食べ物"},
-{"id":"b0067","w":"keep","ja":"保つ","pos":"v","ex":"keep a record","exJa":"記録を保つ"},
-{"id":"b0068","w":"hear","ja":"聞く","pos":"v","ex":"hear the news","exJa":"知らせを聞く"},
-{"id":"b0069","w":"system","ja":"システム","pos":"n","ex":"security system","exJa":"防犯システム"},
-{"id":"b0070","w":"big","ja":"大きい","pos":"a","ex":"big sale","exJa":"大きなセール"},
-{"id":"b0071","w":"set","ja":"設定する","pos":"v","ex":"set a date","exJa":"日取りを設定する"},
-{"id":"b0072","w":"small","ja":"小さい","pos":"a","ex":"small business","exJa":"小規模な事業"},
-{"id":"b0073","w":"study","ja":"勉強する","pos":"v","ex":"study English","exJa":"英語を勉強する"},
-{"id":"b0074","w":"follow","ja":"従う","pos":"v","ex":"follow the rules","exJa":"規則に従う"},
-{"id":"b0075","w":"begin","ja":"始まる","pos":"v","ex":"begin next week","exJa":"来週始まる"},
-{"id":"b0076","w":"run","ja":"経営する","pos":"v","ex":"run a store","exJa":"店を経営する"},
-{"id":"b0077","w":"turn","ja":"曲がる","pos":"v","ex":"turn left","exJa":"左に曲がる"},
-{"id":"b0078","w":"bring","ja":"持ってくる","pos":"v","ex":"bring your ID","exJa":"身分証を持参する"},
-{"id":"b0079","w":"early","ja":"早い","pos":"a","ex":"early morning","exJa":"早朝"},
-{"id":"b0080","w":"hand","ja":"手","pos":"n","ex":"hand tool","exJa":"手工具"},
-{"id":"b0081","w":"state","ja":"州","pos":"n","ex":"state law","exJa":"州法"},
-{"id":"b0082","w":"move","ja":"移る","pos":"v","ex":"move to Tokyo","exJa":"東京に移る"},
-{"id":"b0083","w":"money","ja":"お金","pos":"n","ex":"save money","exJa":"お金を節約する"},
-{"id":"b0084","w":"fact","ja":"事実","pos":"n","ex":"in fact","exJa":"実際は"},
-{"id":"b0085","w":"area","ja":"地域","pos":"n","ex":"parking area","exJa":"駐車エリア"},
-{"id":"b0086","w":"name","ja":"名前","pos":"n","ex":"company name","exJa":"会社名"},
-{"id":"b0087","w":"read","ja":"読む","pos":"v","ex":"read the manual","exJa":"説明書を読む"},
-{"id":"b0088","w":"friend","ja":"友人","pos":"n","ex":"a close friend","exJa":"親しい友人"},
-{"id":"b0089","w":"month","ja":"月","pos":"n","ex":"next month","exJa":"来月"},
-{"id":"b0090","w":"large","ja":"大規模な","pos":"a","ex":"large order","exJa":"大口注文"},
-{"id":"b0091","w":"open","ja":"開く","pos":"v","ex":"open a branch","exJa":"支店を開く"},
-{"id":"b0092","w":"order","ja":"注文","pos":"n","ex":"place an order","exJa":"注文を出す"},
-{"id":"b0093","w":"word","ja":"言葉","pos":"n","ex":"in other words","exJa":"言い換えれば"},
-{"id":"b0094","w":"issue","ja":"問題","pos":"n","ex":"major issue","exJa":"大きな問題"},
-{"id":"b0095","w":"market","ja":"市場","pos":"n","ex":"job market","exJa":"求人市場"},
-{"id":"b0096","w":"pay","ja":"支払う","pos":"v","ex":"pay by card","exJa":"カードで支払う"},
-{"id":"b0097","w":"build","ja":"建てる","pos":"v","ex":"build a factory","exJa":"工場を建てる"},
-{"id":"b0098","w":"hold","ja":"開催する","pos":"v","ex":"hold a meeting","exJa":"会議を開催する"},
-{"id":"b0099","w":"love","ja":"大好きだ","pos":"v","ex":"love the design","exJa":"デザインが大好きだ"},
-{"id":"b0100","w":"job","ja":"職","pos":"n","ex":"job interview","exJa":"就職面接"}]
+[
+  {
+    "id": "b0001",
+    "w": "say",
+    "ja": "言う",
+    "pos": "v",
+    "ex": "say thank you",
+    "exJa": "ありがとうと言う"
+  },
+  {
+    "id": "b0002",
+    "w": "know",
+    "ja": "知っている",
+    "pos": "v",
+    "ex": "know the answer",
+    "exJa": "答えを知っている"
+  },
+  {
+    "id": "b0003",
+    "w": "think",
+    "ja": "考える",
+    "pos": "v",
+    "ex": "think about it",
+    "exJa": "それについて考える"
+  },
+  {
+    "id": "b0004",
+    "w": "time",
+    "ja": "時間",
+    "pos": "n",
+    "ex": "arrive on time",
+    "exJa": "時間通りに到着する"
+  },
+  {
+    "id": "b0005",
+    "w": "see",
+    "ja": "見る",
+    "pos": "v",
+    "ex": "see the chart",
+    "exJa": "図表を見る"
+  },
+  {
+    "id": "b0006",
+    "w": "good",
+    "ja": "良い",
+    "pos": "a",
+    "ex": "good news",
+    "exJa": "良い知らせ"
+  },
+  {
+    "id": "b0007",
+    "w": "people",
+    "ja": "人々",
+    "pos": "n",
+    "ex": "local people",
+    "exJa": "地元の人々"
+  },
+  {
+    "id": "b0008",
+    "w": "year",
+    "ja": "年",
+    "pos": "n",
+    "ex": "last year",
+    "exJa": "昨年"
+  },
+  {
+    "id": "b0009",
+    "w": "come",
+    "ja": "来る",
+    "pos": "v",
+    "ex": "come early",
+    "exJa": "早く来る"
+  },
+  {
+    "id": "b0010",
+    "w": "work",
+    "ja": "働く",
+    "pos": "v",
+    "ex": "work overtime",
+    "exJa": "残業する"
+  },
+  {
+    "id": "b0011",
+    "w": "use",
+    "ja": "使う",
+    "pos": "v",
+    "ex": "use a coupon",
+    "exJa": "クーポンを使う"
+  },
+  {
+    "id": "b0012",
+    "w": "look",
+    "ja": "見る（目を向ける）",
+    "pos": "v",
+    "ex": "look at the map",
+    "exJa": "地図を見る"
+  },
+  {
+    "id": "b0013",
+    "w": "want",
+    "ja": "ほしい",
+    "pos": "v",
+    "ex": "want a refund",
+    "exJa": "返金がほしい"
+  },
+  {
+    "id": "b0014",
+    "w": "give",
+    "ja": "与える",
+    "pos": "v",
+    "ex": "give a discount",
+    "exJa": "割引を与える"
+  },
+  {
+    "id": "b0015",
+    "w": "new",
+    "ja": "新しい",
+    "pos": "a",
+    "ex": "new employee",
+    "exJa": "新入社員"
+  },
+  {
+    "id": "b0016",
+    "w": "way",
+    "ja": "方法",
+    "pos": "n",
+    "ex": "a better way",
+    "exJa": "より良い方法"
+  },
+  {
+    "id": "b0017",
+    "w": "find",
+    "ja": "見つける",
+    "pos": "v",
+    "ex": "find a seat",
+    "exJa": "席を見つける"
+  },
+  {
+    "id": "b0018",
+    "w": "day",
+    "ja": "日",
+    "pos": "n",
+    "ex": "next day",
+    "exJa": "翌日"
+  },
+  {
+    "id": "b0019",
+    "w": "need",
+    "ja": "必要とする",
+    "pos": "v",
+    "ex": "need help",
+    "exJa": "助けが必要だ"
+  },
+  {
+    "id": "b0020",
+    "w": "back",
+    "ja": "後ろ",
+    "pos": "n",
+    "ex": "back of the room",
+    "exJa": "部屋の後ろ"
+  },
+  {
+    "id": "b0021",
+    "w": "mean",
+    "ja": "意味する",
+    "pos": "v",
+    "ex": "mean delays",
+    "exJa": "遅れを意味する"
+  },
+  {
+    "id": "b0022",
+    "w": "last",
+    "ja": "最後の",
+    "pos": "a",
+    "ex": "last chance",
+    "exJa": "最後の機会"
+  },
+  {
+    "id": "b0023",
+    "w": "child",
+    "ja": "子供",
+    "pos": "n",
+    "ex": "child care",
+    "exJa": "育児"
+  },
+  {
+    "id": "b0024",
+    "w": "tell",
+    "ja": "伝える",
+    "pos": "v",
+    "ex": "tell the manager",
+    "exJa": "部長に伝える"
+  },
+  {
+    "id": "b0025",
+    "w": "call",
+    "ja": "電話する",
+    "pos": "v",
+    "ex": "call the client",
+    "exJa": "顧客に電話する"
+  },
+  {
+    "id": "b0026",
+    "w": "show",
+    "ja": "見せる",
+    "pos": "v",
+    "ex": "show your ticket",
+    "exJa": "チケットを見せる"
+  },
+  {
+    "id": "b0027",
+    "w": "life",
+    "ja": "生活",
+    "pos": "n",
+    "ex": "work-life balance",
+    "exJa": "仕事と生活の両立"
+  },
+  {
+    "id": "b0028",
+    "w": "man",
+    "ja": "男性",
+    "pos": "n",
+    "ex": "a young man",
+    "exJa": "若い男性"
+  },
+  {
+    "id": "b0029",
+    "w": "change",
+    "ja": "変更",
+    "pos": "n",
+    "ex": "schedule change",
+    "exJa": "予定の変更"
+  },
+  {
+    "id": "b0030",
+    "w": "place",
+    "ja": "場所",
+    "pos": "n",
+    "ex": "meeting place",
+    "exJa": "待ち合わせ場所"
+  },
+  {
+    "id": "b0031",
+    "w": "long",
+    "ja": "長い",
+    "pos": "a",
+    "ex": "long meeting",
+    "exJa": "長い会議"
+  },
+  {
+    "id": "b0032",
+    "w": "feel",
+    "ja": "感じる",
+    "pos": "v",
+    "ex": "feel better",
+    "exJa": "気分が良くなる"
+  },
+  {
+    "id": "b0033",
+    "w": "write",
+    "ja": "書く",
+    "pos": "v",
+    "ex": "write a report",
+    "exJa": "報告書を書く"
+  },
+  {
+    "id": "b0034",
+    "w": "same",
+    "ja": "同じ",
+    "pos": "a",
+    "ex": "same price",
+    "exJa": "同じ価格"
+  },
+  {
+    "id": "b0035",
+    "w": "great",
+    "ja": "素晴らしい",
+    "pos": "a",
+    "ex": "great job",
+    "exJa": "素晴らしい仕事"
+  },
+  {
+    "id": "b0036",
+    "w": "try",
+    "ja": "試す",
+    "pos": "v",
+    "ex": "try the menu",
+    "exJa": "メニューを試す"
+  },
+  {
+    "id": "b0037",
+    "w": "leave",
+    "ja": "出る",
+    "pos": "v",
+    "ex": "leave at noon",
+    "exJa": "正午に出る"
+  },
+  {
+    "id": "b0038",
+    "w": "number",
+    "ja": "数",
+    "pos": "n",
+    "ex": "a big number",
+    "exJa": "大きな数"
+  },
+  {
+    "id": "b0039",
+    "w": "part",
+    "ja": "部分",
+    "pos": "n",
+    "ex": "part of the plan",
+    "exJa": "計画の一部"
+  },
+  {
+    "id": "b0040",
+    "w": "point",
+    "ja": "点",
+    "pos": "n",
+    "ex": "a good point",
+    "exJa": "良い点"
+  },
+  {
+    "id": "b0041",
+    "w": "help",
+    "ja": "助ける",
+    "pos": "v",
+    "ex": "help customers",
+    "exJa": "客を助ける"
+  },
+  {
+    "id": "b0042",
+    "w": "ask",
+    "ja": "尋ねる",
+    "pos": "v",
+    "ex": "ask a question",
+    "exJa": "質問する"
+  },
+  {
+    "id": "b0043",
+    "w": "meet",
+    "ja": "会う",
+    "pos": "v",
+    "ex": "meet a client",
+    "exJa": "取引先に会う"
+  },
+  {
+    "id": "b0044",
+    "w": "start",
+    "ja": "始める",
+    "pos": "v",
+    "ex": "start the meeting",
+    "exJa": "会議を始める"
+  },
+  {
+    "id": "b0045",
+    "w": "talk",
+    "ja": "話す",
+    "pos": "v",
+    "ex": "talk to staff",
+    "exJa": "職員と話す"
+  },
+  {
+    "id": "b0046",
+    "w": "put",
+    "ja": "置く",
+    "pos": "v",
+    "ex": "put it here",
+    "exJa": "ここに置く"
+  },
+  {
+    "id": "b0047",
+    "w": "become",
+    "ja": "〜になる",
+    "pos": "v",
+    "ex": "become manager",
+    "exJa": "部長になる"
+  },
+  {
+    "id": "b0048",
+    "w": "old",
+    "ja": "古い",
+    "pos": "a",
+    "ex": "old building",
+    "exJa": "古い建物"
+  },
+  {
+    "id": "b0049",
+    "w": "school",
+    "ja": "学校",
+    "pos": "n",
+    "ex": "school bus",
+    "exJa": "スクールバス"
+  },
+  {
+    "id": "b0050",
+    "w": "late",
+    "ja": "遅れた",
+    "pos": "a",
+    "ex": "late arrival",
+    "exJa": "遅れた到着"
+  },
+  {
+    "id": "b0051",
+    "w": "high",
+    "ja": "高い",
+    "pos": "a",
+    "ex": "high quality",
+    "exJa": "高品質"
+  },
+  {
+    "id": "b0052",
+    "w": "next",
+    "ja": "次の",
+    "pos": "a",
+    "ex": "next week",
+    "exJa": "来週"
+  },
+  {
+    "id": "b0053",
+    "w": "end",
+    "ja": "終わり",
+    "pos": "n",
+    "ex": "end of the month",
+    "exJa": "月末"
+  },
+  {
+    "id": "b0054",
+    "w": "live",
+    "ja": "住む",
+    "pos": "v",
+    "ex": "live downtown",
+    "exJa": "中心街に住む"
+  },
+  {
+    "id": "b0055",
+    "w": "world",
+    "ja": "世界",
+    "pos": "n",
+    "ex": "world market",
+    "exJa": "世界市場"
+  },
+  {
+    "id": "b0056",
+    "w": "week",
+    "ja": "週",
+    "pos": "n",
+    "ex": "this week",
+    "exJa": "今週"
+  },
+  {
+    "id": "b0057",
+    "w": "play",
+    "ja": "遊ぶ",
+    "pos": "v",
+    "ex": "play in the park",
+    "exJa": "公園で遊ぶ"
+  },
+  {
+    "id": "b0058",
+    "w": "home",
+    "ja": "自宅",
+    "pos": "n",
+    "ex": "work from home",
+    "exJa": "在宅勤務"
+  },
+  {
+    "id": "b0059",
+    "w": "house",
+    "ja": "住宅",
+    "pos": "n",
+    "ex": "house prices",
+    "exJa": "住宅価格"
+  },
+  {
+    "id": "b0060",
+    "w": "report",
+    "ja": "報告書",
+    "pos": "n",
+    "ex": "sales report",
+    "exJa": "売上報告書"
+  },
+  {
+    "id": "b0061",
+    "w": "group",
+    "ja": "グループ",
+    "pos": "n",
+    "ex": "tour group",
+    "exJa": "ツアーの団体"
+  },
+  {
+    "id": "b0062",
+    "w": "case",
+    "ja": "場合",
+    "pos": "n",
+    "ex": "in case of fire",
+    "exJa": "火災の場合"
+  },
+  {
+    "id": "b0063",
+    "w": "woman",
+    "ja": "女性",
+    "pos": "n",
+    "ex": "the woman at the desk",
+    "exJa": "受付の女性"
+  },
+  {
+    "id": "b0064",
+    "w": "book",
+    "ja": "予約する",
+    "pos": "v",
+    "ex": "book a flight",
+    "exJa": "航空券を予約する"
+  },
+  {
+    "id": "b0065",
+    "w": "family",
+    "ja": "家族",
+    "pos": "n",
+    "ex": "family business",
+    "exJa": "家族経営の会社"
+  },
+  {
+    "id": "b0066",
+    "w": "kind",
+    "ja": "種類",
+    "pos": "n",
+    "ex": "what kind of food",
+    "exJa": "どんな種類の食べ物"
+  },
+  {
+    "id": "b0067",
+    "w": "keep",
+    "ja": "保つ",
+    "pos": "v",
+    "ex": "keep a record",
+    "exJa": "記録を保つ"
+  },
+  {
+    "id": "b0068",
+    "w": "hear",
+    "ja": "聞く",
+    "pos": "v",
+    "ex": "hear the news",
+    "exJa": "知らせを聞く"
+  },
+  {
+    "id": "b0069",
+    "w": "system",
+    "ja": "システム",
+    "pos": "n",
+    "ex": "security system",
+    "exJa": "防犯システム"
+  },
+  {
+    "id": "b0070",
+    "w": "big",
+    "ja": "大きい",
+    "pos": "a",
+    "ex": "big sale",
+    "exJa": "大きなセール"
+  },
+  {
+    "id": "b0071",
+    "w": "set",
+    "ja": "設定する",
+    "pos": "v",
+    "ex": "set a date",
+    "exJa": "日取りを設定する"
+  },
+  {
+    "id": "b0072",
+    "w": "small",
+    "ja": "小さい",
+    "pos": "a",
+    "ex": "small business",
+    "exJa": "小規模な事業"
+  },
+  {
+    "id": "b0073",
+    "w": "study",
+    "ja": "勉強する",
+    "pos": "v",
+    "ex": "study English",
+    "exJa": "英語を勉強する"
+  },
+  {
+    "id": "b0074",
+    "w": "follow",
+    "ja": "従う",
+    "pos": "v",
+    "ex": "follow the rules",
+    "exJa": "規則に従う"
+  },
+  {
+    "id": "b0075",
+    "w": "begin",
+    "ja": "始まる",
+    "pos": "v",
+    "ex": "begin next week",
+    "exJa": "来週始まる"
+  },
+  {
+    "id": "b0076",
+    "w": "run",
+    "ja": "経営する",
+    "pos": "v",
+    "ex": "run a store",
+    "exJa": "店を経営する"
+  },
+  {
+    "id": "b0077",
+    "w": "turn",
+    "ja": "曲がる",
+    "pos": "v",
+    "ex": "turn left",
+    "exJa": "左に曲がる"
+  },
+  {
+    "id": "b0078",
+    "w": "bring",
+    "ja": "持ってくる",
+    "pos": "v",
+    "ex": "bring your ID",
+    "exJa": "身分証を持参する"
+  },
+  {
+    "id": "b0079",
+    "w": "early",
+    "ja": "早い",
+    "pos": "a",
+    "ex": "early morning",
+    "exJa": "早朝"
+  },
+  {
+    "id": "b0080",
+    "w": "hand",
+    "ja": "手",
+    "pos": "n",
+    "ex": "hand tool",
+    "exJa": "手工具"
+  },
+  {
+    "id": "b0081",
+    "w": "state",
+    "ja": "状態",
+    "pos": "n",
+    "ex": "the state of the room",
+    "exJa": "部屋の状態"
+  },
+  {
+    "id": "b0082",
+    "w": "move",
+    "ja": "移る",
+    "pos": "v",
+    "ex": "move to Tokyo",
+    "exJa": "東京に移る"
+  },
+  {
+    "id": "b0083",
+    "w": "money",
+    "ja": "お金",
+    "pos": "n",
+    "ex": "save money",
+    "exJa": "お金を節約する"
+  },
+  {
+    "id": "b0084",
+    "w": "fact",
+    "ja": "事実",
+    "pos": "n",
+    "ex": "in fact",
+    "exJa": "実際は"
+  },
+  {
+    "id": "b0085",
+    "w": "area",
+    "ja": "地域",
+    "pos": "n",
+    "ex": "parking area",
+    "exJa": "駐車エリア"
+  },
+  {
+    "id": "b0086",
+    "w": "name",
+    "ja": "名前",
+    "pos": "n",
+    "ex": "company name",
+    "exJa": "会社名"
+  },
+  {
+    "id": "b0087",
+    "w": "read",
+    "ja": "読む",
+    "pos": "v",
+    "ex": "read the manual",
+    "exJa": "説明書を読む"
+  },
+  {
+    "id": "b0088",
+    "w": "friend",
+    "ja": "友人",
+    "pos": "n",
+    "ex": "a close friend",
+    "exJa": "親しい友人"
+  },
+  {
+    "id": "b0089",
+    "w": "month",
+    "ja": "月",
+    "pos": "n",
+    "ex": "next month",
+    "exJa": "来月"
+  },
+  {
+    "id": "b0090",
+    "w": "large",
+    "ja": "大規模な",
+    "pos": "a",
+    "ex": "large order",
+    "exJa": "大口注文"
+  },
+  {
+    "id": "b0091",
+    "w": "open",
+    "ja": "開く",
+    "pos": "v",
+    "ex": "open a branch",
+    "exJa": "支店を開く"
+  },
+  {
+    "id": "b0092",
+    "w": "order",
+    "ja": "注文",
+    "pos": "n",
+    "ex": "place an order",
+    "exJa": "注文を出す"
+  },
+  {
+    "id": "b0093",
+    "w": "word",
+    "ja": "単語",
+    "pos": "n",
+    "ex": "a new word",
+    "exJa": "新しい単語"
+  },
+  {
+    "id": "b0094",
+    "w": "issue",
+    "ja": "問題",
+    "pos": "n",
+    "ex": "major issue",
+    "exJa": "大きな問題"
+  },
+  {
+    "id": "b0095",
+    "w": "market",
+    "ja": "市場",
+    "pos": "n",
+    "ex": "job market",
+    "exJa": "求人市場"
+  },
+  {
+    "id": "b0096",
+    "w": "pay",
+    "ja": "支払う",
+    "pos": "v",
+    "ex": "pay by card",
+    "exJa": "カードで支払う"
+  },
+  {
+    "id": "b0097",
+    "w": "build",
+    "ja": "建てる",
+    "pos": "v",
+    "ex": "build a factory",
+    "exJa": "工場を建てる"
+  },
+  {
+    "id": "b0098",
+    "w": "hold",
+    "ja": "開催する",
+    "pos": "v",
+    "ex": "hold a meeting",
+    "exJa": "会議を開催する"
+  },
+  {
+    "id": "b0099",
+    "w": "love",
+    "ja": "大好きだ",
+    "pos": "v",
+    "ex": "love the design",
+    "exJa": "デザインが大好きだ"
+  },
+  {
+    "id": "b0100",
+    "w": "job",
+    "ja": "職",
+    "pos": "n",
+    "ex": "job interview",
+    "exJa": "就職面接"
+  }
+]

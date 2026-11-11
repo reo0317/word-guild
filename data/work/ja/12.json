@@ -1,100 +1,802 @@
-[{"id":"t0951","w":"thunderstorm","ja":"雷雨","pos":"n","ex":"A severe thunderstorm","exJa":"激しい雷雨"},
-{"id":"t0952","w":"transmission","ja":"伝送","pos":"n","ex":"Data transmission","exJa":"データ伝送"},
-{"id":"t0953","w":"transmit","ja":"送信する","pos":"v","ex":"Transmit the file","exJa":"ファイルを送信する"},
-{"id":"t0954","w":"unused","ja":"未使用の","pos":"a","ex":"Unused tickets","exJa":"未使用の切符"},
-{"id":"t0955","w":"waive","ja":"免除する","pos":"v","ex":"Waive the fee","exJa":"手数料を免除する"},
-{"id":"t0956","w":"yen","ja":"円","pos":"n","ex":"Ten thousand yen","exJa":"1万円"},
-{"id":"t0957","w":"activate","ja":"有効化する","pos":"v","ex":"Activate your card","exJa":"カードを有効化する"},
-{"id":"t0958","w":"additionally","ja":"加えて","pos":"a","ex":"Additionally, we offer delivery","exJa":"加えて配送も承ります"},
-{"id":"t0959","w":"affirmative","ja":"肯定の","pos":"a","ex":"An affirmative answer","exJa":"肯定的な返事"},
-{"id":"t0960","w":"baker","ja":"パン職人","pos":"n","ex":"A skilled baker","exJa":"腕のよいパン職人"},
-{"id":"t0961","w":"brainstorm","ja":"アイデアを出す","pos":"v","ex":"Brainstorm new ideas","exJa":"新案を出し合う"},
-{"id":"t0962","w":"cage","ja":"かご","pos":"n","ex":"A bird cage","exJa":"鳥かご"},
-{"id":"t0963","w":"cinema","ja":"映画館","pos":"n","ex":"A local cinema","exJa":"地元の映画館"},
-{"id":"t0964","w":"collaboration","ja":"協働","pos":"n","ex":"Close collaboration","exJa":"緊密な協働"},
-{"id":"t0965","w":"condominium","ja":"マンション","pos":"n","ex":"Buy a condominium","exJa":"マンションを買う"},
-{"id":"t0966","w":"consecutive","ja":"連続した","pos":"a","ex":"Three consecutive days","exJa":"3日連続"},
-{"id":"t0967","w":"cordless","ja":"コードレスの","pos":"a","ex":"A cordless phone","exJa":"コードレス電話"},
-{"id":"t0968","w":"deluxe","ja":"デラックスな","pos":"a","ex":"A deluxe room","exJa":"デラックスルーム"},
-{"id":"t0969","w":"desirable","ja":"望ましい","pos":"a","ex":"A desirable location","exJa":"望ましい立地"},
-{"id":"t0970","w":"discrepancy","ja":"相違点","pos":"n","ex":"A billing discrepancy","exJa":"請求の食い違い"},
-{"id":"t0971","w":"dispatch","ja":"派遣する","pos":"v","ex":"Dispatch a technician","exJa":"技術者を派遣する"},
-{"id":"t0972","w":"drawback","ja":"欠点","pos":"n","ex":"A major drawback","exJa":"大きな欠点"},
-{"id":"t0973","w":"dull","ja":"さえない","pos":"a","ex":"A dull speech","exJa":"退屈な演説"},
-{"id":"t0974","w":"economically","ja":"経済的に","pos":"a","ex":"Economically viable","exJa":"経済的に成り立つ"},
-{"id":"t0975","w":"evenly","ja":"均等に","pos":"a","ex":"Divide evenly","exJa":"均等に分ける"},
-{"id":"t0976","w":"excellence","ja":"卓越","pos":"n","ex":"Strive for excellence","exJa":"卓越を目指す"},
-{"id":"t0977","w":"exclusively","ja":"もっぱら","pos":"a","ex":"Exclusively for members","exJa":"会員専用"},
-{"id":"t0978","w":"farewell","ja":"別れ","pos":"n","ex":"A farewell party","exJa":"送別会"},
-{"id":"t0979","w":"fatigue","ja":"疲労","pos":"n","ex":"Mental fatigue","exJa":"精神的疲労"},
-{"id":"t0980","w":"fiscal","ja":"財政上の","pos":"a","ex":"The fiscal year","exJa":"会計年度"},
-{"id":"t0981","w":"fleet","ja":"保有車両","pos":"n","ex":"A delivery fleet","exJa":"配送車両群"},
-{"id":"t0982","w":"flour","ja":"小麦粉","pos":"n","ex":"A bag of flour","exJa":"小麦粉1袋"},
-{"id":"t0983","w":"fog","ja":"霧","pos":"n","ex":"Heavy fog","exJa":"濃霧"},
-{"id":"t0984","w":"formally","ja":"正式に","pos":"a","ex":"Formally announced","exJa":"正式に発表された"},
-{"id":"t0985","w":"gram","ja":"グラム","pos":"n","ex":"Fifty grams","exJa":"50グラム"},
-{"id":"t0986","w":"handbook","ja":"ハンドブック","pos":"n","ex":"Employee handbook","exJa":"社員ハンドブック"},
-{"id":"t0987","w":"headphone","ja":"ヘッドホン","pos":"n","ex":"A wireless headphone","exJa":"ワイヤレスヘッドホン"},
-{"id":"t0988","w":"heater","ja":"ヒーター","pos":"n","ex":"Turn on the heater","exJa":"ヒーターをつける"},
-{"id":"t0989","w":"helmet","ja":"ヘルメット","pos":"n","ex":"Wear a helmet","exJa":"ヘルメットをかぶる"},
-{"id":"t0990","w":"hiker","ja":"登山者","pos":"n","ex":"A mountain hiker","exJa":"山の登山者"},
-{"id":"t0991","w":"homeless","ja":"家のない","pos":"a","ex":"A homeless shelter","exJa":"ホームレス保護施設"},
-{"id":"t0992","w":"lighter","ja":"ライター","pos":"n","ex":"A gas lighter","exJa":"ガスライター"},
-{"id":"t0993","w":"loudly","ja":"大声で","pos":"a","ex":"Speak loudly","exJa":"大声で話す"},
-{"id":"t0994","w":"loyalty","ja":"忠誠","pos":"n","ex":"Customer loyalty","exJa":"顧客の忠誠心"},
-{"id":"t0995","w":"microwave","ja":"電子レンジ","pos":"n","ex":"Use the microwave","exJa":"電子レンジを使う"},
-{"id":"t0996","w":"misidentify","ja":"誤認する","pos":"v","ex":"Misidentify the cause","exJa":"原因を誤認する"},
-{"id":"t0997","w":"neat","ja":"こぎれいな","pos":"a","ex":"A neat desk","exJa":"こぎれいな机"},
-{"id":"t0998","w":"nomination","ja":"推薦","pos":"n","ex":"Receive a nomination","exJa":"推薦を受ける"},
-{"id":"t0999","w":"officially","ja":"公式に","pos":"a","ex":"Officially open","exJa":"正式に開店"},
-{"id":"t1000","w":"outfit","ja":"装い","pos":"n","ex":"A new outfit","exJa":"新しい装い"},
-{"id":"t1001","w":"pastry","ja":"ペストリー","pos":"n","ex":"Fresh pastry","exJa":"焼きたてのペストリー"},
-{"id":"t1002","w":"personalize","ja":"名入れする","pos":"v","ex":"Personalize the gift","exJa":"贈り物に名入れする"},
-{"id":"t1003","w":"poorly","ja":"お粗末に","pos":"a","ex":"Poorly written","exJa":"出来の悪い"},
-{"id":"t1004","w":"prestigious","ja":"格式高い","pos":"a","ex":"A prestigious award","exJa":"権威ある賞"},
-{"id":"t1005","w":"purser","ja":"パーサー","pos":"n","ex":"Ask the purser","exJa":"パーサーに尋ねる"},
-{"id":"t1006","w":"reassure","ja":"安心させる","pos":"v","ex":"Reassure the client","exJa":"顧客を安心させる"},
-{"id":"t1007","w":"resume","ja":"再開する","pos":"v","ex":"Resume the meeting","exJa":"会議を再開する"},
-{"id":"t1008","w":"reunion","ja":"同窓会","pos":"n","ex":"A class reunion","exJa":"同窓会"},
-{"id":"t1009","w":"revolutionize","ja":"一変させる","pos":"v","ex":"Revolutionize the industry","exJa":"業界を一変させる"},
-{"id":"t1010","w":"seafood","ja":"魚介類","pos":"n","ex":"Fresh seafood","exJa":"新鮮な魚介類"},
-{"id":"t1011","w":"signify","ja":"示す","pos":"v","ex":"Signify approval","exJa":"承認を示す"},
-{"id":"t1012","w":"slot","ja":"枠","pos":"n","ex":"A time slot","exJa":"時間枠"},
-{"id":"t1013","w":"steer","ja":"かじを取る","pos":"v","ex":"Steer the boat","exJa":"ボートのかじを取る"},
-{"id":"t1014","w":"sue","ja":"訴える","pos":"v","ex":"Sue the company","exJa":"会社を訴える"},
-{"id":"t1015","w":"superb","ja":"見事な","pos":"a","ex":"A superb meal","exJa":"見事な食事"},
-{"id":"t1016","w":"traditionally","ja":"伝統的に","pos":"a","ex":"Traditionally held in May","exJa":"伝統的に5月開催"},
-{"id":"t1017","w":"tremendous","ja":"途方もない","pos":"a","ex":"A tremendous success","exJa":"途方もない成功"},
-{"id":"t1018","w":"underway","ja":"始まっている","pos":"a","ex":"Work is underway","exJa":"作業が始まっている"},
-{"id":"t1019","w":"unpleasant","ja":"不快な","pos":"a","ex":"An unpleasant smell","exJa":"不快なにおい"},
-{"id":"t1020","w":"violin","ja":"バイオリン","pos":"n","ex":"Play the violin","exJa":"バイオリンを弾く"},
-{"id":"t1021","w":"ward","ja":"病棟","pos":"n","ex":"A hospital ward","exJa":"病院の病棟"},
-{"id":"t1022","w":"worthwhile","ja":"価値ある","pos":"a","ex":"A worthwhile investment","exJa":"価値ある投資"},
-{"id":"t1023","w":"adapter","ja":"アダプター","pos":"n","ex":"A power adapter","exJa":"電源アダプター"},
-{"id":"t1024","w":"advisable","ja":"賢明な","pos":"a","ex":"It is advisable","exJa":"そうするのが賢明だ"},
-{"id":"t1025","w":"archive","ja":"アーカイブ","pos":"n","ex":"The company archive","exJa":"社の記録保管所"},
-{"id":"t1026","w":"artistic","ja":"芸術的な","pos":"a","ex":"Artistic talent","exJa":"芸術の才能"},
-{"id":"t1027","w":"assurance","ja":"確約","pos":"n","ex":"Receive assurance","exJa":"確約を得る"},
-{"id":"t1028","w":"athletic","ja":"運動競技の","pos":"a","ex":"Athletic shoes","exJa":"運動靴"},
-{"id":"t1029","w":"attire","ja":"服装","pos":"n","ex":"Business attire","exJa":"ビジネス服装"},
-{"id":"t1030","w":"auditor","ja":"監査人","pos":"n","ex":"An external auditor","exJa":"外部監査人"},
-{"id":"t1031","w":"bankruptcy","ja":"破産","pos":"n","ex":"File for bankruptcy","exJa":"破産を申請する"},
-{"id":"t1032","w":"bulk","ja":"大口","pos":"n","ex":"Buy in bulk","exJa":"まとめ買いする"},
-{"id":"t1033","w":"butter","ja":"バター","pos":"n","ex":"Spread the butter","exJa":"バターを塗る"},
-{"id":"t1034","w":"centimeter","ja":"センチメートル","pos":"n","ex":"One centimeter wide","exJa":"幅1センチメートル"},
-{"id":"t1035","w":"circulate","ja":"回覧する","pos":"v","ex":"Circulate the memo","exJa":"メモを回覧する"},
-{"id":"t1036","w":"comb","ja":"くし","pos":"n","ex":"A plastic comb","exJa":"プラスチック製のくし"},
-{"id":"t1037","w":"comfortably","ja":"快適に","pos":"a","ex":"Sit comfortably","exJa":"楽に座る"},
-{"id":"t1038","w":"compliance","ja":"順守","pos":"n","ex":"Legal compliance","exJa":"法令順守"},
-{"id":"t1039","w":"contraction","ja":"収縮","pos":"n","ex":"Economic contraction","exJa":"経済の収縮"},
-{"id":"t1040","w":"cookbook","ja":"料理本","pos":"n","ex":"A new cookbook","exJa":"新しい料理本"},
-{"id":"t1041","w":"cushion","ja":"クッション","pos":"n","ex":"A soft cushion","exJa":"柔らかいクッション"},
-{"id":"t1042","w":"dose","ja":"服用量","pos":"n","ex":"The daily dose","exJa":"1日の服用量"},
-{"id":"t1043","w":"drum","ja":"太鼓","pos":"n","ex":"Play the drum","exJa":"太鼓を演奏する"},
-{"id":"t1044","w":"embed","ja":"埋め込む","pos":"v","ex":"Embed the video","exJa":"動画を埋め込む"},
-{"id":"t1045","w":"evacuate","ja":"避難する","pos":"v","ex":"Evacuate the building","exJa":"建物から避難する"},
-{"id":"t1046","w":"expedite","ja":"迅速化する","pos":"v","ex":"Expedite the order","exJa":"注文を迅速化する"},
-{"id":"t1047","w":"extinguisher","ja":"消火器","pos":"n","ex":"A fire extinguisher","exJa":"消火器"},
-{"id":"t1048","w":"familiarity","ja":"なじみ","pos":"n","ex":"Familiarity with software","exJa":"ソフトへの精通"},
-{"id":"t1049","w":"flaw","ja":"欠陥","pos":"n","ex":"A design flaw","exJa":"設計上の欠陥"},
-{"id":"t1050","w":"fluctuate","ja":"変動する","pos":"v","ex":"Prices fluctuate daily","exJa":"価格は毎日変動する"}]
+[
+  {
+    "id": "t0951",
+    "w": "thunderstorm",
+    "ja": "雷雨",
+    "pos": "n",
+    "ex": "A severe thunderstorm",
+    "exJa": "激しい雷雨"
+  },
+  {
+    "id": "t0952",
+    "w": "transmission",
+    "ja": "伝送",
+    "pos": "n",
+    "ex": "Data transmission",
+    "exJa": "データ伝送"
+  },
+  {
+    "id": "t0953",
+    "w": "transmit",
+    "ja": "送信する",
+    "pos": "v",
+    "ex": "Transmit the file",
+    "exJa": "ファイルを送信する"
+  },
+  {
+    "id": "t0954",
+    "w": "unused",
+    "ja": "未使用の",
+    "pos": "a",
+    "ex": "Unused tickets",
+    "exJa": "未使用の切符"
+  },
+  {
+    "id": "t0955",
+    "w": "waive",
+    "ja": "免除する",
+    "pos": "v",
+    "ex": "Waive the fee",
+    "exJa": "手数料を免除する"
+  },
+  {
+    "id": "t0956",
+    "w": "yen",
+    "ja": "円",
+    "pos": "n",
+    "ex": "Ten thousand yen",
+    "exJa": "1万円"
+  },
+  {
+    "id": "t0957",
+    "w": "activate",
+    "ja": "有効化する",
+    "pos": "v",
+    "ex": "Activate your card",
+    "exJa": "カードを有効化する"
+  },
+  {
+    "id": "t0958",
+    "w": "additionally",
+    "ja": "加えて",
+    "pos": "a",
+    "ex": "Additionally, we offer delivery",
+    "exJa": "加えて配送も承ります"
+  },
+  {
+    "id": "t0959",
+    "w": "affirmative",
+    "ja": "肯定の",
+    "pos": "a",
+    "ex": "An affirmative answer",
+    "exJa": "肯定的な返事"
+  },
+  {
+    "id": "t0960",
+    "w": "baker",
+    "ja": "パン職人",
+    "pos": "n",
+    "ex": "A skilled baker",
+    "exJa": "腕のよいパン職人"
+  },
+  {
+    "id": "t0961",
+    "w": "brainstorm",
+    "ja": "アイデアを出す",
+    "pos": "v",
+    "ex": "Brainstorm new ideas",
+    "exJa": "新案を出し合う"
+  },
+  {
+    "id": "t0962",
+    "w": "cage",
+    "ja": "檻",
+    "pos": "n",
+    "ex": "A lion cage",
+    "exJa": "ライオンの檻"
+  },
+  {
+    "id": "t0963",
+    "w": "cinema",
+    "ja": "映画館",
+    "pos": "n",
+    "ex": "A local cinema",
+    "exJa": "地元の映画館"
+  },
+  {
+    "id": "t0964",
+    "w": "collaboration",
+    "ja": "協働",
+    "pos": "n",
+    "ex": "Close collaboration",
+    "exJa": "緊密な協働"
+  },
+  {
+    "id": "t0965",
+    "w": "condominium",
+    "ja": "マンション",
+    "pos": "n",
+    "ex": "Buy a condominium",
+    "exJa": "マンションを買う"
+  },
+  {
+    "id": "t0966",
+    "w": "consecutive",
+    "ja": "連続した",
+    "pos": "a",
+    "ex": "Three consecutive days",
+    "exJa": "3日連続"
+  },
+  {
+    "id": "t0967",
+    "w": "cordless",
+    "ja": "コードレスの",
+    "pos": "a",
+    "ex": "A cordless phone",
+    "exJa": "コードレス電話"
+  },
+  {
+    "id": "t0968",
+    "w": "deluxe",
+    "ja": "デラックスな",
+    "pos": "a",
+    "ex": "A deluxe room",
+    "exJa": "デラックスルーム"
+  },
+  {
+    "id": "t0969",
+    "w": "desirable",
+    "ja": "望ましい",
+    "pos": "a",
+    "ex": "A desirable location",
+    "exJa": "望ましい立地"
+  },
+  {
+    "id": "t0970",
+    "w": "discrepancy",
+    "ja": "相違点",
+    "pos": "n",
+    "ex": "A billing discrepancy",
+    "exJa": "請求の食い違い"
+  },
+  {
+    "id": "t0971",
+    "w": "dispatch",
+    "ja": "派遣する",
+    "pos": "v",
+    "ex": "Dispatch a technician",
+    "exJa": "技術者を派遣する"
+  },
+  {
+    "id": "t0972",
+    "w": "drawback",
+    "ja": "欠点",
+    "pos": "n",
+    "ex": "A major drawback",
+    "exJa": "大きな欠点"
+  },
+  {
+    "id": "t0973",
+    "w": "dull",
+    "ja": "退屈な",
+    "pos": "a",
+    "ex": "A dull speech",
+    "exJa": "退屈な演説"
+  },
+  {
+    "id": "t0974",
+    "w": "economically",
+    "ja": "経済的に",
+    "pos": "a",
+    "ex": "Economically viable",
+    "exJa": "経済的に成り立つ"
+  },
+  {
+    "id": "t0975",
+    "w": "evenly",
+    "ja": "均等に",
+    "pos": "a",
+    "ex": "Divide evenly",
+    "exJa": "均等に分ける"
+  },
+  {
+    "id": "t0976",
+    "w": "excellence",
+    "ja": "卓越",
+    "pos": "n",
+    "ex": "Strive for excellence",
+    "exJa": "卓越を目指す"
+  },
+  {
+    "id": "t0977",
+    "w": "exclusively",
+    "ja": "もっぱら",
+    "pos": "a",
+    "ex": "Exclusively for members",
+    "exJa": "会員専用"
+  },
+  {
+    "id": "t0978",
+    "w": "farewell",
+    "ja": "別れ",
+    "pos": "n",
+    "ex": "A farewell party",
+    "exJa": "送別会"
+  },
+  {
+    "id": "t0979",
+    "w": "fatigue",
+    "ja": "疲労",
+    "pos": "n",
+    "ex": "Mental fatigue",
+    "exJa": "精神的疲労"
+  },
+  {
+    "id": "t0980",
+    "w": "fiscal",
+    "ja": "財政上の",
+    "pos": "a",
+    "ex": "The fiscal year",
+    "exJa": "会計年度"
+  },
+  {
+    "id": "t0981",
+    "w": "fleet",
+    "ja": "保有車両",
+    "pos": "n",
+    "ex": "A delivery fleet",
+    "exJa": "配送車両群"
+  },
+  {
+    "id": "t0982",
+    "w": "flour",
+    "ja": "小麦粉",
+    "pos": "n",
+    "ex": "A bag of flour",
+    "exJa": "小麦粉1袋"
+  },
+  {
+    "id": "t0983",
+    "w": "fog",
+    "ja": "霧",
+    "pos": "n",
+    "ex": "Heavy fog",
+    "exJa": "濃霧"
+  },
+  {
+    "id": "t0984",
+    "w": "formally",
+    "ja": "正式に",
+    "pos": "a",
+    "ex": "Formally announced",
+    "exJa": "正式に発表された"
+  },
+  {
+    "id": "t0985",
+    "w": "gram",
+    "ja": "グラム",
+    "pos": "n",
+    "ex": "Fifty grams",
+    "exJa": "50グラム"
+  },
+  {
+    "id": "t0986",
+    "w": "handbook",
+    "ja": "ハンドブック",
+    "pos": "n",
+    "ex": "Employee handbook",
+    "exJa": "社員ハンドブック"
+  },
+  {
+    "id": "t0987",
+    "w": "headphone",
+    "ja": "ヘッドホン",
+    "pos": "n",
+    "ex": "A wireless headphone",
+    "exJa": "ワイヤレスヘッドホン"
+  },
+  {
+    "id": "t0988",
+    "w": "heater",
+    "ja": "ヒーター",
+    "pos": "n",
+    "ex": "Turn on the heater",
+    "exJa": "ヒーターをつける"
+  },
+  {
+    "id": "t0989",
+    "w": "helmet",
+    "ja": "ヘルメット",
+    "pos": "n",
+    "ex": "Wear a helmet",
+    "exJa": "ヘルメットをかぶる"
+  },
+  {
+    "id": "t0990",
+    "w": "hiker",
+    "ja": "登山者",
+    "pos": "n",
+    "ex": "A mountain hiker",
+    "exJa": "山の登山者"
+  },
+  {
+    "id": "t0991",
+    "w": "homeless",
+    "ja": "家のない",
+    "pos": "a",
+    "ex": "A homeless shelter",
+    "exJa": "ホームレス保護施設"
+  },
+  {
+    "id": "t0992",
+    "w": "lighter",
+    "ja": "ライター",
+    "pos": "n",
+    "ex": "A gas lighter",
+    "exJa": "ガスライター"
+  },
+  {
+    "id": "t0993",
+    "w": "loudly",
+    "ja": "大声で",
+    "pos": "a",
+    "ex": "Speak loudly",
+    "exJa": "大声で話す"
+  },
+  {
+    "id": "t0994",
+    "w": "loyalty",
+    "ja": "忠誠",
+    "pos": "n",
+    "ex": "Customer loyalty",
+    "exJa": "顧客の忠誠心"
+  },
+  {
+    "id": "t0995",
+    "w": "microwave",
+    "ja": "電子レンジ",
+    "pos": "n",
+    "ex": "Use the microwave",
+    "exJa": "電子レンジを使う"
+  },
+  {
+    "id": "t0996",
+    "w": "misidentify",
+    "ja": "誤認する",
+    "pos": "v",
+    "ex": "Misidentify the cause",
+    "exJa": "原因を誤認する"
+  },
+  {
+    "id": "t0997",
+    "w": "neat",
+    "ja": "こぎれいな",
+    "pos": "a",
+    "ex": "A neat desk",
+    "exJa": "こぎれいな机"
+  },
+  {
+    "id": "t0998",
+    "w": "nomination",
+    "ja": "推薦",
+    "pos": "n",
+    "ex": "Receive a nomination",
+    "exJa": "推薦を受ける"
+  },
+  {
+    "id": "t0999",
+    "w": "officially",
+    "ja": "公式に",
+    "pos": "a",
+    "ex": "Officially open",
+    "exJa": "正式に開店"
+  },
+  {
+    "id": "t1000",
+    "w": "outfit",
+    "ja": "装い",
+    "pos": "n",
+    "ex": "A new outfit",
+    "exJa": "新しい装い"
+  },
+  {
+    "id": "t1001",
+    "w": "pastry",
+    "ja": "ペストリー",
+    "pos": "n",
+    "ex": "Fresh pastry",
+    "exJa": "焼きたてのペストリー"
+  },
+  {
+    "id": "t1002",
+    "w": "personalize",
+    "ja": "名入れする",
+    "pos": "v",
+    "ex": "Personalize the gift",
+    "exJa": "贈り物に名入れする"
+  },
+  {
+    "id": "t1003",
+    "w": "poorly",
+    "ja": "お粗末に",
+    "pos": "a",
+    "ex": "Poorly written",
+    "exJa": "出来の悪い"
+  },
+  {
+    "id": "t1004",
+    "w": "prestigious",
+    "ja": "格式高い",
+    "pos": "a",
+    "ex": "A prestigious award",
+    "exJa": "権威ある賞"
+  },
+  {
+    "id": "t1005",
+    "w": "purser",
+    "ja": "パーサー",
+    "pos": "n",
+    "ex": "Ask the purser",
+    "exJa": "パーサーに尋ねる"
+  },
+  {
+    "id": "t1006",
+    "w": "reassure",
+    "ja": "安心させる",
+    "pos": "v",
+    "ex": "Reassure the client",
+    "exJa": "顧客を安心させる"
+  },
+  {
+    "id": "t1007",
+    "w": "resume",
+    "ja": "再び始める",
+    "pos": "v",
+    "ex": "Resume the meeting",
+    "exJa": "会議を再開する"
+  },
+  {
+    "id": "t1008",
+    "w": "reunion",
+    "ja": "同窓会",
+    "pos": "n",
+    "ex": "A class reunion",
+    "exJa": "同窓会"
+  },
+  {
+    "id": "t1009",
+    "w": "revolutionize",
+    "ja": "一変させる",
+    "pos": "v",
+    "ex": "Revolutionize the industry",
+    "exJa": "業界を一変させる"
+  },
+  {
+    "id": "t1010",
+    "w": "seafood",
+    "ja": "魚介類",
+    "pos": "n",
+    "ex": "Fresh seafood",
+    "exJa": "新鮮な魚介類"
+  },
+  {
+    "id": "t1011",
+    "w": "signify",
+    "ja": "示す",
+    "pos": "v",
+    "ex": "Signify approval",
+    "exJa": "承認を示す"
+  },
+  {
+    "id": "t1012",
+    "w": "slot",
+    "ja": "枠",
+    "pos": "n",
+    "ex": "A time slot",
+    "exJa": "時間枠"
+  },
+  {
+    "id": "t1013",
+    "w": "steer",
+    "ja": "かじを取る",
+    "pos": "v",
+    "ex": "Steer the boat",
+    "exJa": "ボートのかじを取る"
+  },
+  {
+    "id": "t1014",
+    "w": "sue",
+    "ja": "訴える",
+    "pos": "v",
+    "ex": "Sue the company",
+    "exJa": "会社を訴える"
+  },
+  {
+    "id": "t1015",
+    "w": "superb",
+    "ja": "見事な",
+    "pos": "a",
+    "ex": "A superb meal",
+    "exJa": "見事な食事"
+  },
+  {
+    "id": "t1016",
+    "w": "traditionally",
+    "ja": "伝統的に",
+    "pos": "a",
+    "ex": "Traditionally held in May",
+    "exJa": "伝統的に5月開催"
+  },
+  {
+    "id": "t1017",
+    "w": "tremendous",
+    "ja": "途方もない",
+    "pos": "a",
+    "ex": "A tremendous success",
+    "exJa": "途方もない成功"
+  },
+  {
+    "id": "t1018",
+    "w": "underway",
+    "ja": "始まっている",
+    "pos": "a",
+    "ex": "Work is underway",
+    "exJa": "作業が始まっている"
+  },
+  {
+    "id": "t1019",
+    "w": "unpleasant",
+    "ja": "不快な",
+    "pos": "a",
+    "ex": "An unpleasant smell",
+    "exJa": "不快なにおい"
+  },
+  {
+    "id": "t1020",
+    "w": "violin",
+    "ja": "バイオリン",
+    "pos": "n",
+    "ex": "Play the violin",
+    "exJa": "バイオリンを弾く"
+  },
+  {
+    "id": "t1021",
+    "w": "ward",
+    "ja": "病棟",
+    "pos": "n",
+    "ex": "A hospital ward",
+    "exJa": "病院の病棟"
+  },
+  {
+    "id": "t1022",
+    "w": "worthwhile",
+    "ja": "価値ある",
+    "pos": "a",
+    "ex": "A worthwhile investment",
+    "exJa": "価値ある投資"
+  },
+  {
+    "id": "t1023",
+    "w": "adapter",
+    "ja": "アダプター",
+    "pos": "n",
+    "ex": "A power adapter",
+    "exJa": "電源アダプター"
+  },
+  {
+    "id": "t1024",
+    "w": "advisable",
+    "ja": "賢明な",
+    "pos": "a",
+    "ex": "It is advisable",
+    "exJa": "そうするのが賢明だ"
+  },
+  {
+    "id": "t1025",
+    "w": "archive",
+    "ja": "アーカイブ",
+    "pos": "n",
+    "ex": "The company archive",
+    "exJa": "社の記録保管所"
+  },
+  {
+    "id": "t1026",
+    "w": "artistic",
+    "ja": "芸術的な",
+    "pos": "a",
+    "ex": "Artistic talent",
+    "exJa": "芸術の才能"
+  },
+  {
+    "id": "t1027",
+    "w": "assurance",
+    "ja": "確約",
+    "pos": "n",
+    "ex": "Receive assurance",
+    "exJa": "確約を得る"
+  },
+  {
+    "id": "t1028",
+    "w": "athletic",
+    "ja": "運動競技の",
+    "pos": "a",
+    "ex": "Athletic shoes",
+    "exJa": "運動靴"
+  },
+  {
+    "id": "t1029",
+    "w": "attire",
+    "ja": "服装",
+    "pos": "n",
+    "ex": "Business attire",
+    "exJa": "ビジネス服装"
+  },
+  {
+    "id": "t1030",
+    "w": "auditor",
+    "ja": "監査人",
+    "pos": "n",
+    "ex": "An external auditor",
+    "exJa": "外部監査人"
+  },
+  {
+    "id": "t1031",
+    "w": "bankruptcy",
+    "ja": "破産",
+    "pos": "n",
+    "ex": "File for bankruptcy",
+    "exJa": "破産を申請する"
+  },
+  {
+    "id": "t1032",
+    "w": "bulk",
+    "ja": "大口",
+    "pos": "n",
+    "ex": "Buy in bulk",
+    "exJa": "まとめ買いする"
+  },
+  {
+    "id": "t1033",
+    "w": "butter",
+    "ja": "バター",
+    "pos": "n",
+    "ex": "Spread the butter",
+    "exJa": "バターを塗る"
+  },
+  {
+    "id": "t1034",
+    "w": "centimeter",
+    "ja": "センチメートル",
+    "pos": "n",
+    "ex": "One centimeter wide",
+    "exJa": "幅1センチメートル"
+  },
+  {
+    "id": "t1035",
+    "w": "circulate",
+    "ja": "回覧する",
+    "pos": "v",
+    "ex": "Circulate the memo",
+    "exJa": "メモを回覧する"
+  },
+  {
+    "id": "t1036",
+    "w": "comb",
+    "ja": "くし",
+    "pos": "n",
+    "ex": "A plastic comb",
+    "exJa": "プラスチック製のくし"
+  },
+  {
+    "id": "t1037",
+    "w": "comfortably",
+    "ja": "快適に",
+    "pos": "a",
+    "ex": "Sit comfortably",
+    "exJa": "楽に座る"
+  },
+  {
+    "id": "t1038",
+    "w": "compliance",
+    "ja": "順守",
+    "pos": "n",
+    "ex": "Legal compliance",
+    "exJa": "法令順守"
+  },
+  {
+    "id": "t1039",
+    "w": "contraction",
+    "ja": "縮小",
+    "pos": "n",
+    "ex": "Economic contraction",
+    "exJa": "経済の縮小"
+  },
+  {
+    "id": "t1040",
+    "w": "cookbook",
+    "ja": "料理本",
+    "pos": "n",
+    "ex": "A new cookbook",
+    "exJa": "新しい料理本"
+  },
+  {
+    "id": "t1041",
+    "w": "cushion",
+    "ja": "クッション",
+    "pos": "n",
+    "ex": "A soft cushion",
+    "exJa": "柔らかいクッション"
+  },
+  {
+    "id": "t1042",
+    "w": "dose",
+    "ja": "服用量",
+    "pos": "n",
+    "ex": "The daily dose",
+    "exJa": "1日の服用量"
+  },
+  {
+    "id": "t1043",
+    "w": "drum",
+    "ja": "太鼓",
+    "pos": "n",
+    "ex": "Play the drum",
+    "exJa": "太鼓を演奏する"
+  },
+  {
+    "id": "t1044",
+    "w": "embed",
+    "ja": "埋め込む",
+    "pos": "v",
+    "ex": "Embed the video",
+    "exJa": "動画を埋め込む"
+  },
+  {
+    "id": "t1045",
+    "w": "evacuate",
+    "ja": "避難する",
+    "pos": "v",
+    "ex": "Evacuate the building",
+    "exJa": "建物から避難する"
+  },
+  {
+    "id": "t1046",
+    "w": "expedite",
+    "ja": "迅速化する",
+    "pos": "v",
+    "ex": "Expedite the order",
+    "exJa": "注文を迅速化する"
+  },
+  {
+    "id": "t1047",
+    "w": "extinguisher",
+    "ja": "消火器",
+    "pos": "n",
+    "ex": "A fire extinguisher",
+    "exJa": "消火器"
+  },
+  {
+    "id": "t1048",
+    "w": "familiarity",
+    "ja": "なじみ",
+    "pos": "n",
+    "ex": "Familiarity with software",
+    "exJa": "ソフトへの精通"
+  },
+  {
+    "id": "t1049",
+    "w": "flaw",
+    "ja": "不具合",
+    "pos": "n",
+    "ex": "A design flaw",
+    "exJa": "設計上の不具合"
+  },
+  {
+    "id": "t1050",
+    "w": "fluctuate",
+    "ja": "変動する",
+    "pos": "v",
+    "ex": "Prices fluctuate daily",
+    "exJa": "価格は毎日変動する"
+  }
+]

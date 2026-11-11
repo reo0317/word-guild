@@ -1,100 +1,802 @@
-[{"id":"t0151","w":"indoor","ja":"屋内の","pos":"a","ex":"indoor pool","exJa":"屋内プール"},
-{"id":"t0152","w":"baggage","ja":"手荷物","pos":"n","ex":"baggage claim","exJa":"手荷物受取所"},
-{"id":"t0153","w":"dial","ja":"ダイヤルする","pos":"v","ex":"dial the number","exJa":"番号をダイヤルする"},
-{"id":"t0154","w":"container","ja":"容器","pos":"n","ex":"plastic container","exJa":"プラスチック容器"},
-{"id":"t0155","w":"drawer","ja":"引き出し","pos":"n","ex":"desk drawer","exJa":"机の引き出し"},
-{"id":"t0156","w":"lab","ja":"実験室","pos":"n","ex":"research lab","exJa":"研究実験室"},
-{"id":"t0157","w":"submission","ja":"提出","pos":"n","ex":"submission deadline","exJa":"提出期限"},
-{"id":"t0158","w":"bulletin","ja":"掲示","pos":"n","ex":"bulletin board","exJa":"掲示板"},
-{"id":"t0159","w":"certificate","ja":"証明書","pos":"n","ex":"gift certificate","exJa":"商品券"},
-{"id":"t0160","w":"gym","ja":"ジム","pos":"n","ex":"company gym","exJa":"社内ジム"},
-{"id":"t0161","w":"highway","ja":"高速道路","pos":"n","ex":"highway exit","exJa":"高速道路の出口"},
-{"id":"t0162","w":"respondent","ja":"回答者","pos":"n","ex":"survey respondent","exJa":"調査の回答者"},
-{"id":"t0163","w":"jewelry","ja":"宝石","pos":"n","ex":"jewelry store","exJa":"宝石店"},
-{"id":"t0164","w":"overtime","ja":"残業","pos":"n","ex":"overtime pay","exJa":"残業代"},
-{"id":"t0165","w":"battery","ja":"電池","pos":"n","ex":"replace the battery","exJa":"電池を交換する"},
-{"id":"t0166","w":"donate","ja":"寄付する","pos":"v","ex":"donate books","exJa":"本を寄付する"},
-{"id":"t0167","w":"outstanding","ja":"傑出した","pos":"a","ex":"outstanding service","exJa":"傑出したサービス"},
-{"id":"t0168","w":"skim","ja":"ざっと読む","pos":"v","ex":"skim the report","exJa":"報告書にざっと目を通す"},
-{"id":"t0169","w":"briefcase","ja":"ブリーフケース","pos":"n","ex":"carry a briefcase","exJa":"ブリーフケースを持つ"},
-{"id":"t0170","w":"dessert","ja":"デザート","pos":"n","ex":"dessert menu","exJa":"デザートメニュー"},
-{"id":"t0171","w":"impact","ja":"影響","pos":"n","ex":"positive impact","exJa":"好影響"},
-{"id":"t0172","w":"innovative","ja":"革新的な","pos":"a","ex":"innovative design","exJa":"革新的なデザイン"},
-{"id":"t0173","w":"inquire","ja":"問い合わせる","pos":"v","ex":"inquire about prices","exJa":"価格を問い合わせる"},
-{"id":"t0174","w":"overnight","ja":"一晩の","pos":"a","ex":"overnight stay","exJa":"一晩の宿泊"},
-{"id":"t0175","w":"venue","ja":"会場","pos":"n","ex":"event venue","exJa":"行事の会場"},
-{"id":"t0176","w":"commuter","ja":"通勤者","pos":"n","ex":"daily commuter","exJa":"毎日の通勤者"},
-{"id":"t0177","w":"logo","ja":"ロゴ","pos":"n","ex":"company logo","exJa":"会社のロゴ"},
-{"id":"t0178","w":"newsletter","ja":"ニュースレター","pos":"n","ex":"monthly newsletter","exJa":"月刊ニュースレター"},
-{"id":"t0179","w":"advisor","ja":"顧問","pos":"n","ex":"financial advisor","exJa":"財務顧問"},
-{"id":"t0180","w":"cartridge","ja":"カートリッジ","pos":"n","ex":"ink cartridge","exJa":"インクカートリッジ"},
-{"id":"t0181","w":"cloudy","ja":"曇りの","pos":"a","ex":"cloudy sky","exJa":"曇り空"},
-{"id":"t0182","w":"photographer","ja":"写真家","pos":"n","ex":"wedding photographer","exJa":"結婚式の写真家"},
-{"id":"t0183","w":"shopper","ja":"買い物客","pos":"n","ex":"busy shoppers","exJa":"忙しい買い物客"},
-{"id":"t0184","w":"tag","ja":"値札","pos":"n","ex":"price tag","exJa":"値札"},
-{"id":"t0185","w":"announcer","ja":"アナウンサー","pos":"n","ex":"radio announcer","exJa":"ラジオのアナウンサー"},
-{"id":"t0186","w":"aspect","ja":"側面","pos":"n","ex":"key aspect","exJa":"重要な側面"},
-{"id":"t0187","w":"audit","ja":"監査","pos":"n","ex":"annual audit","exJa":"年次監査"},
-{"id":"t0188","w":"contractor","ja":"請負業者","pos":"n","ex":"building contractor","exJa":"建設請負業者"},
-{"id":"t0189","w":"download","ja":"ダウンロードする","pos":"v","ex":"download the app","exJa":"アプリをダウンロードする"},
-{"id":"t0190","w":"password","ja":"パスワード","pos":"n","ex":"change your password","exJa":"パスワードを変更する"},
-{"id":"t0191","w":"prohibit","ja":"禁止する","pos":"v","ex":"prohibit smoking","exJa":"喫煙を禁止する"},
-{"id":"t0192","w":"stadium","ja":"競技場","pos":"n","ex":"baseball stadium","exJa":"野球場"},
-{"id":"t0193","w":"terminal","ja":"ターミナル","pos":"n","ex":"airport terminal","exJa":"空港ターミナル"},
-{"id":"t0194","w":"weekday","ja":"平日","pos":"n","ex":"on weekdays","exJa":"平日に"},
-{"id":"t0195","w":"bonus","ja":"賞与","pos":"n","ex":"year-end bonus","exJa":"年末賞与"},
-{"id":"t0196","w":"cart","ja":"カート","pos":"n","ex":"shopping cart","exJa":"買い物カート"},
-{"id":"t0197","w":"delicious","ja":"おいしい","pos":"a","ex":"delicious lunch","exJa":"おいしい昼食"},
-{"id":"t0198","w":"ink","ja":"インク","pos":"n","ex":"printer ink","exJa":"プリンターのインク"},
-{"id":"t0199","w":"supervise","ja":"監督する","pos":"v","ex":"supervise staff","exJa":"職員を監督する"},
-{"id":"t0200","w":"waitress","ja":"ウェイトレス","pos":"n","ex":"ask the waitress","exJa":"ウェイトレスに尋ねる"},
-{"id":"t0201","w":"cleaner","ja":"清掃員","pos":"n","ex":"office cleaner","exJa":"事務所の清掃員"},
-{"id":"t0202","w":"developer","ja":"開発者","pos":"n","ex":"software developer","exJa":"ソフトウェア開発者"},
-{"id":"t0203","w":"headquarter","ja":"本社を置く","pos":"v","ex":"We headquarter in Osaka","exJa":"当社は大阪に本社を置く"},
-{"id":"t0204","w":"shuttle","ja":"シャトルバス","pos":"n","ex":"airport shuttle","exJa":"空港シャトル"},
-{"id":"t0205","w":"stationery","ja":"文房具","pos":"n","ex":"office stationery","exJa":"事務用文房具"},
-{"id":"t0206","w":"subscribe","ja":"購読する","pos":"v","ex":"subscribe to a magazine","exJa":"雑誌を購読する"},
-{"id":"t0207","w":"alike","ja":"似ている","pos":"a","ex":"look alike","exJa":"そっくりに見える"},
-{"id":"t0208","w":"flavor","ja":"風味","pos":"n","ex":"new flavor","exJa":"新しい風味"},
-{"id":"t0209","w":"picnic","ja":"ピクニック","pos":"n","ex":"company picnic","exJa":"社内ピクニック"},
-{"id":"t0210","w":"recipe","ja":"レシピ","pos":"n","ex":"family recipe","exJa":"家庭のレシピ"},
-{"id":"t0211","w":"refreshment","ja":"飲食物","pos":"n","ex":"refreshments served","exJa":"飲食物が提供される"},
-{"id":"t0212","w":"administrative","ja":"事務の","pos":"a","ex":"administrative staff","exJa":"事務職員"},
-{"id":"t0213","w":"authorize","ja":"承認する","pos":"v","ex":"authorize payment","exJa":"支払いを承認する"},
-{"id":"t0214","w":"commonly","ja":"一般に","pos":"a","ex":"commonly used","exJa":"一般に使われる"},
-{"id":"t0215","w":"distribution","ja":"流通","pos":"n","ex":"product distribution","exJa":"製品の流通"},
-{"id":"t0216","w":"sofa","ja":"ソファー","pos":"n","ex":"leather sofa","exJa":"革のソファー"},
-{"id":"t0217","w":"accommodate","ja":"収容する","pos":"v","ex":"accommodate guests","exJa":"客を収容する"},
-{"id":"t0218","w":"affordable","ja":"手頃な","pos":"a","ex":"affordable price","exJa":"手頃な価格"},
-{"id":"t0219","w":"annoy","ja":"迷惑がらせる","pos":"v","ex":"annoy customers","exJa":"客を迷惑がらせる"},
-{"id":"t0220","w":"commute","ja":"通勤する","pos":"v","ex":"commute by train","exJa":"電車で通勤する"},
-{"id":"t0221","w":"coordinate","ja":"調整する","pos":"v","ex":"coordinate schedules","exJa":"日程を調整する"},
-{"id":"t0222","w":"paperwork","ja":"事務書類","pos":"n","ex":"complete the paperwork","exJa":"事務書類を仕上げる"},
-{"id":"t0223","w":"quit","ja":"やめる","pos":"v","ex":"quit the job","exJa":"仕事をやめる"},
-{"id":"t0224","w":"authority","ja":"当局","pos":"n","ex":"local authority","exJa":"地元当局"},
-{"id":"t0225","w":"flu","ja":"インフルエンザ","pos":"n","ex":"get the flu","exJa":"インフルエンザにかかる"},
-{"id":"t0226","w":"captain","ja":"機長","pos":"n","ex":"the captain","exJa":"機長"},
-{"id":"t0227","w":"installation","ja":"設置","pos":"n","ex":"software installation","exJa":"ソフトの設置"},
-{"id":"t0228","w":"trainer","ja":"指導員","pos":"n","ex":"personal trainer","exJa":"専属の指導員"},
-{"id":"t0229","w":"availability","ja":"空き状況","pos":"n","ex":"check availability","exJa":"空き状況を確認する"},
-{"id":"t0230","w":"bargain","ja":"お買い得品","pos":"n","ex":"a real bargain","exJa":"本当のお買い得品"},
-{"id":"t0231","w":"complimentary","ja":"無料の","pos":"a","ex":"complimentary breakfast","exJa":"無料の朝食"},
-{"id":"t0232","w":"hike","ja":"ハイキング","pos":"n","ex":"hike in the hills","exJa":"丘でのハイキング"},
-{"id":"t0233","w":"midnight","ja":"真夜中","pos":"n","ex":"until midnight","exJa":"真夜中まで"},
-{"id":"t0234","w":"productivity","ja":"生産性","pos":"n","ex":"improve productivity","exJa":"生産性を高める"},
-{"id":"t0235","w":"rainy","ja":"雨の","pos":"a","ex":"rainy season","exJa":"雨季"},
-{"id":"t0236","w":"relocate","ja":"移転する","pos":"v","ex":"relocate the office","exJa":"事務所を移転する"},
-{"id":"t0237","w":"trainee","ja":"研修生","pos":"n","ex":"new trainee","exJa":"新しい研修生"},
-{"id":"t0238","w":"transaction","ja":"取引","pos":"n","ex":"bank transaction","exJa":"銀行取引"},
-{"id":"t0239","w":"unhappy","ja":"不満な","pos":"a","ex":"unhappy customer","exJa":"不満な顧客"},
-{"id":"t0240","w":"verify","ja":"確かめる","pos":"v","ex":"verify the address","exJa":"住所を確かめる"},
-{"id":"t0241","w":"automobile","ja":"自動車","pos":"n","ex":"automobile industry","exJa":"自動車産業"},
-{"id":"t0242","w":"courier","ja":"宅配業者","pos":"n","ex":"courier service","exJa":"宅配サービス"},
-{"id":"t0243","w":"incomplete","ja":"不完全な","pos":"a","ex":"incomplete form","exJa":"不完全な用紙"},
-{"id":"t0244","w":"questionnaire","ja":"アンケート","pos":"n","ex":"fill out the questionnaire","exJa":"アンケートに記入する"},
-{"id":"t0245","w":"baseball","ja":"野球","pos":"n","ex":"baseball game","exJa":"野球の試合"},
-{"id":"t0246","w":"dock","ja":"埠頭","pos":"n","ex":"loading dock","exJa":"荷積み用埠頭"},
-{"id":"t0247","w":"lamp","ja":"ランプ","pos":"n","ex":"desk lamp","exJa":"卓上ランプ"},
-{"id":"t0248","w":"lately","ja":"最近","pos":"a","ex":"tired lately","exJa":"最近疲れている"},
-{"id":"t0249","w":"machinery","ja":"機械類","pos":"n","ex":"heavy machinery","exJa":"重機"},
-{"id":"t0250","w":"presenter","ja":"発表者","pos":"n","ex":"guest presenter","exJa":"招待発表者"}]
+[
+  {
+    "id": "t0151",
+    "w": "indoor",
+    "ja": "屋内の",
+    "pos": "a",
+    "ex": "indoor pool",
+    "exJa": "屋内プール"
+  },
+  {
+    "id": "t0152",
+    "w": "baggage",
+    "ja": "手荷物",
+    "pos": "n",
+    "ex": "baggage claim",
+    "exJa": "手荷物受取所"
+  },
+  {
+    "id": "t0153",
+    "w": "dial",
+    "ja": "ダイヤルする",
+    "pos": "v",
+    "ex": "dial the number",
+    "exJa": "番号をダイヤルする"
+  },
+  {
+    "id": "t0154",
+    "w": "container",
+    "ja": "容器",
+    "pos": "n",
+    "ex": "plastic container",
+    "exJa": "プラスチック容器"
+  },
+  {
+    "id": "t0155",
+    "w": "drawer",
+    "ja": "引き出し",
+    "pos": "n",
+    "ex": "desk drawer",
+    "exJa": "机の引き出し"
+  },
+  {
+    "id": "t0156",
+    "w": "lab",
+    "ja": "実験室",
+    "pos": "n",
+    "ex": "research lab",
+    "exJa": "研究実験室"
+  },
+  {
+    "id": "t0157",
+    "w": "submission",
+    "ja": "提出",
+    "pos": "n",
+    "ex": "submission deadline",
+    "exJa": "提出期限"
+  },
+  {
+    "id": "t0158",
+    "w": "bulletin",
+    "ja": "会報",
+    "pos": "n",
+    "ex": "a monthly bulletin",
+    "exJa": "月刊の会報"
+  },
+  {
+    "id": "t0159",
+    "w": "certificate",
+    "ja": "証明書",
+    "pos": "n",
+    "ex": "gift certificate",
+    "exJa": "商品券"
+  },
+  {
+    "id": "t0160",
+    "w": "gym",
+    "ja": "ジム",
+    "pos": "n",
+    "ex": "company gym",
+    "exJa": "社内ジム"
+  },
+  {
+    "id": "t0161",
+    "w": "highway",
+    "ja": "高速道路",
+    "pos": "n",
+    "ex": "highway exit",
+    "exJa": "高速道路の出口"
+  },
+  {
+    "id": "t0162",
+    "w": "respondent",
+    "ja": "回答者",
+    "pos": "n",
+    "ex": "survey respondent",
+    "exJa": "調査の回答者"
+  },
+  {
+    "id": "t0163",
+    "w": "jewelry",
+    "ja": "宝飾品",
+    "pos": "n",
+    "ex": "jewelry store",
+    "exJa": "宝飾品店"
+  },
+  {
+    "id": "t0164",
+    "w": "overtime",
+    "ja": "残業",
+    "pos": "n",
+    "ex": "overtime pay",
+    "exJa": "残業代"
+  },
+  {
+    "id": "t0165",
+    "w": "battery",
+    "ja": "電池",
+    "pos": "n",
+    "ex": "replace the battery",
+    "exJa": "電池を交換する"
+  },
+  {
+    "id": "t0166",
+    "w": "donate",
+    "ja": "寄付する",
+    "pos": "v",
+    "ex": "donate books",
+    "exJa": "本を寄付する"
+  },
+  {
+    "id": "t0167",
+    "w": "outstanding",
+    "ja": "傑出した",
+    "pos": "a",
+    "ex": "outstanding service",
+    "exJa": "傑出したサービス"
+  },
+  {
+    "id": "t0168",
+    "w": "skim",
+    "ja": "ざっと読む",
+    "pos": "v",
+    "ex": "skim the report",
+    "exJa": "報告書にざっと目を通す"
+  },
+  {
+    "id": "t0169",
+    "w": "briefcase",
+    "ja": "ブリーフケース",
+    "pos": "n",
+    "ex": "carry a briefcase",
+    "exJa": "ブリーフケースを持つ"
+  },
+  {
+    "id": "t0170",
+    "w": "dessert",
+    "ja": "デザート",
+    "pos": "n",
+    "ex": "dessert menu",
+    "exJa": "デザートメニュー"
+  },
+  {
+    "id": "t0171",
+    "w": "impact",
+    "ja": "影響",
+    "pos": "n",
+    "ex": "positive impact",
+    "exJa": "好影響"
+  },
+  {
+    "id": "t0172",
+    "w": "innovative",
+    "ja": "革新的な",
+    "pos": "a",
+    "ex": "innovative design",
+    "exJa": "革新的なデザイン"
+  },
+  {
+    "id": "t0173",
+    "w": "inquire",
+    "ja": "問い合わせる",
+    "pos": "v",
+    "ex": "inquire about prices",
+    "exJa": "価格を問い合わせる"
+  },
+  {
+    "id": "t0174",
+    "w": "overnight",
+    "ja": "一晩の",
+    "pos": "a",
+    "ex": "overnight stay",
+    "exJa": "一晩の宿泊"
+  },
+  {
+    "id": "t0175",
+    "w": "venue",
+    "ja": "会場",
+    "pos": "n",
+    "ex": "event venue",
+    "exJa": "行事の会場"
+  },
+  {
+    "id": "t0176",
+    "w": "commuter",
+    "ja": "通勤者",
+    "pos": "n",
+    "ex": "daily commuter",
+    "exJa": "毎日の通勤者"
+  },
+  {
+    "id": "t0177",
+    "w": "logo",
+    "ja": "ロゴ",
+    "pos": "n",
+    "ex": "company logo",
+    "exJa": "会社のロゴ"
+  },
+  {
+    "id": "t0178",
+    "w": "newsletter",
+    "ja": "ニュースレター",
+    "pos": "n",
+    "ex": "monthly newsletter",
+    "exJa": "月刊ニュースレター"
+  },
+  {
+    "id": "t0179",
+    "w": "advisor",
+    "ja": "顧問",
+    "pos": "n",
+    "ex": "financial advisor",
+    "exJa": "財務顧問"
+  },
+  {
+    "id": "t0180",
+    "w": "cartridge",
+    "ja": "カートリッジ",
+    "pos": "n",
+    "ex": "ink cartridge",
+    "exJa": "インクカートリッジ"
+  },
+  {
+    "id": "t0181",
+    "w": "cloudy",
+    "ja": "曇りの",
+    "pos": "a",
+    "ex": "cloudy sky",
+    "exJa": "曇り空"
+  },
+  {
+    "id": "t0182",
+    "w": "photographer",
+    "ja": "写真家",
+    "pos": "n",
+    "ex": "wedding photographer",
+    "exJa": "結婚式の写真家"
+  },
+  {
+    "id": "t0183",
+    "w": "shopper",
+    "ja": "買い物客",
+    "pos": "n",
+    "ex": "busy shoppers",
+    "exJa": "忙しい買い物客"
+  },
+  {
+    "id": "t0184",
+    "w": "tag",
+    "ja": "値札",
+    "pos": "n",
+    "ex": "price tag",
+    "exJa": "値札"
+  },
+  {
+    "id": "t0185",
+    "w": "announcer",
+    "ja": "アナウンサー",
+    "pos": "n",
+    "ex": "radio announcer",
+    "exJa": "ラジオのアナウンサー"
+  },
+  {
+    "id": "t0186",
+    "w": "aspect",
+    "ja": "側面",
+    "pos": "n",
+    "ex": "key aspect",
+    "exJa": "重要な側面"
+  },
+  {
+    "id": "t0187",
+    "w": "audit",
+    "ja": "監査",
+    "pos": "n",
+    "ex": "annual audit",
+    "exJa": "年次監査"
+  },
+  {
+    "id": "t0188",
+    "w": "contractor",
+    "ja": "請負業者",
+    "pos": "n",
+    "ex": "building contractor",
+    "exJa": "建設請負業者"
+  },
+  {
+    "id": "t0189",
+    "w": "download",
+    "ja": "ダウンロードする",
+    "pos": "v",
+    "ex": "download the app",
+    "exJa": "アプリをダウンロードする"
+  },
+  {
+    "id": "t0190",
+    "w": "password",
+    "ja": "パスワード",
+    "pos": "n",
+    "ex": "change your password",
+    "exJa": "パスワードを変更する"
+  },
+  {
+    "id": "t0191",
+    "w": "prohibit",
+    "ja": "禁止する",
+    "pos": "v",
+    "ex": "prohibit smoking",
+    "exJa": "喫煙を禁止する"
+  },
+  {
+    "id": "t0192",
+    "w": "stadium",
+    "ja": "競技場",
+    "pos": "n",
+    "ex": "baseball stadium",
+    "exJa": "野球場"
+  },
+  {
+    "id": "t0193",
+    "w": "terminal",
+    "ja": "ターミナル",
+    "pos": "n",
+    "ex": "airport terminal",
+    "exJa": "空港ターミナル"
+  },
+  {
+    "id": "t0194",
+    "w": "weekday",
+    "ja": "平日",
+    "pos": "n",
+    "ex": "on weekdays",
+    "exJa": "平日に"
+  },
+  {
+    "id": "t0195",
+    "w": "bonus",
+    "ja": "賞与",
+    "pos": "n",
+    "ex": "year-end bonus",
+    "exJa": "年末賞与"
+  },
+  {
+    "id": "t0196",
+    "w": "cart",
+    "ja": "カート",
+    "pos": "n",
+    "ex": "shopping cart",
+    "exJa": "買い物カート"
+  },
+  {
+    "id": "t0197",
+    "w": "delicious",
+    "ja": "おいしい",
+    "pos": "a",
+    "ex": "delicious lunch",
+    "exJa": "おいしい昼食"
+  },
+  {
+    "id": "t0198",
+    "w": "ink",
+    "ja": "インク",
+    "pos": "n",
+    "ex": "printer ink",
+    "exJa": "プリンターのインク"
+  },
+  {
+    "id": "t0199",
+    "w": "supervise",
+    "ja": "監督する",
+    "pos": "v",
+    "ex": "supervise staff",
+    "exJa": "職員を監督する"
+  },
+  {
+    "id": "t0200",
+    "w": "waitress",
+    "ja": "ウェイトレス",
+    "pos": "n",
+    "ex": "ask the waitress",
+    "exJa": "ウェイトレスに尋ねる"
+  },
+  {
+    "id": "t0201",
+    "w": "cleaner",
+    "ja": "清掃員",
+    "pos": "n",
+    "ex": "office cleaner",
+    "exJa": "事務所の清掃員"
+  },
+  {
+    "id": "t0202",
+    "w": "developer",
+    "ja": "開発者",
+    "pos": "n",
+    "ex": "software developer",
+    "exJa": "ソフトウェア開発者"
+  },
+  {
+    "id": "t0203",
+    "w": "headquarter",
+    "ja": "本社を置く",
+    "pos": "v",
+    "ex": "We headquarter in Osaka",
+    "exJa": "当社は大阪に本社を置く"
+  },
+  {
+    "id": "t0204",
+    "w": "shuttle",
+    "ja": "シャトルバス",
+    "pos": "n",
+    "ex": "airport shuttle",
+    "exJa": "空港シャトル"
+  },
+  {
+    "id": "t0205",
+    "w": "stationery",
+    "ja": "文房具",
+    "pos": "n",
+    "ex": "office stationery",
+    "exJa": "事務用文房具"
+  },
+  {
+    "id": "t0206",
+    "w": "subscribe",
+    "ja": "購読する",
+    "pos": "v",
+    "ex": "subscribe to a magazine",
+    "exJa": "雑誌を購読する"
+  },
+  {
+    "id": "t0207",
+    "w": "alike",
+    "ja": "そっくりな",
+    "pos": "a",
+    "ex": "look alike",
+    "exJa": "そっくりに見える"
+  },
+  {
+    "id": "t0208",
+    "w": "flavor",
+    "ja": "風味",
+    "pos": "n",
+    "ex": "new flavor",
+    "exJa": "新しい風味"
+  },
+  {
+    "id": "t0209",
+    "w": "picnic",
+    "ja": "ピクニック",
+    "pos": "n",
+    "ex": "company picnic",
+    "exJa": "社内ピクニック"
+  },
+  {
+    "id": "t0210",
+    "w": "recipe",
+    "ja": "レシピ",
+    "pos": "n",
+    "ex": "family recipe",
+    "exJa": "家庭のレシピ"
+  },
+  {
+    "id": "t0211",
+    "w": "refreshment",
+    "ja": "飲食物",
+    "pos": "n",
+    "ex": "refreshments served",
+    "exJa": "飲食物が提供される"
+  },
+  {
+    "id": "t0212",
+    "w": "administrative",
+    "ja": "事務の",
+    "pos": "a",
+    "ex": "administrative staff",
+    "exJa": "事務職員"
+  },
+  {
+    "id": "t0213",
+    "w": "authorize",
+    "ja": "承認する",
+    "pos": "v",
+    "ex": "authorize payment",
+    "exJa": "支払いを承認する"
+  },
+  {
+    "id": "t0214",
+    "w": "commonly",
+    "ja": "一般に",
+    "pos": "a",
+    "ex": "commonly used",
+    "exJa": "一般に使われる"
+  },
+  {
+    "id": "t0215",
+    "w": "distribution",
+    "ja": "流通",
+    "pos": "n",
+    "ex": "product distribution",
+    "exJa": "製品の流通"
+  },
+  {
+    "id": "t0216",
+    "w": "sofa",
+    "ja": "ソファー",
+    "pos": "n",
+    "ex": "leather sofa",
+    "exJa": "革のソファー"
+  },
+  {
+    "id": "t0217",
+    "w": "accommodate",
+    "ja": "収容する",
+    "pos": "v",
+    "ex": "accommodate guests",
+    "exJa": "客を収容する"
+  },
+  {
+    "id": "t0218",
+    "w": "affordable",
+    "ja": "手頃な",
+    "pos": "a",
+    "ex": "affordable price",
+    "exJa": "手頃な価格"
+  },
+  {
+    "id": "t0219",
+    "w": "annoy",
+    "ja": "いらだたせる",
+    "pos": "v",
+    "ex": "annoy customers",
+    "exJa": "客をいらだたせる"
+  },
+  {
+    "id": "t0220",
+    "w": "commute",
+    "ja": "通勤する",
+    "pos": "v",
+    "ex": "commute by train",
+    "exJa": "電車で通勤する"
+  },
+  {
+    "id": "t0221",
+    "w": "coordinate",
+    "ja": "調整する",
+    "pos": "v",
+    "ex": "coordinate schedules",
+    "exJa": "日程を調整する"
+  },
+  {
+    "id": "t0222",
+    "w": "paperwork",
+    "ja": "事務書類",
+    "pos": "n",
+    "ex": "complete the paperwork",
+    "exJa": "事務書類を仕上げる"
+  },
+  {
+    "id": "t0223",
+    "w": "quit",
+    "ja": "やめる",
+    "pos": "v",
+    "ex": "quit the job",
+    "exJa": "仕事をやめる"
+  },
+  {
+    "id": "t0224",
+    "w": "authority",
+    "ja": "当局",
+    "pos": "n",
+    "ex": "local authority",
+    "exJa": "地元当局"
+  },
+  {
+    "id": "t0225",
+    "w": "flu",
+    "ja": "インフルエンザ",
+    "pos": "n",
+    "ex": "get the flu",
+    "exJa": "インフルエンザにかかる"
+  },
+  {
+    "id": "t0226",
+    "w": "captain",
+    "ja": "機長",
+    "pos": "n",
+    "ex": "the captain",
+    "exJa": "機長"
+  },
+  {
+    "id": "t0227",
+    "w": "installation",
+    "ja": "設置",
+    "pos": "n",
+    "ex": "software installation",
+    "exJa": "ソフトの設置"
+  },
+  {
+    "id": "t0228",
+    "w": "trainer",
+    "ja": "指導員",
+    "pos": "n",
+    "ex": "personal trainer",
+    "exJa": "専属の指導員"
+  },
+  {
+    "id": "t0229",
+    "w": "availability",
+    "ja": "空き状況",
+    "pos": "n",
+    "ex": "check availability",
+    "exJa": "空き状況を確認する"
+  },
+  {
+    "id": "t0230",
+    "w": "bargain",
+    "ja": "お買い得品",
+    "pos": "n",
+    "ex": "a real bargain",
+    "exJa": "本当のお買い得品"
+  },
+  {
+    "id": "t0231",
+    "w": "complimentary",
+    "ja": "無料の",
+    "pos": "a",
+    "ex": "complimentary breakfast",
+    "exJa": "無料の朝食"
+  },
+  {
+    "id": "t0232",
+    "w": "hike",
+    "ja": "値上げ",
+    "pos": "n",
+    "ex": "a price hike",
+    "exJa": "価格の引き上げ"
+  },
+  {
+    "id": "t0233",
+    "w": "midnight",
+    "ja": "真夜中",
+    "pos": "n",
+    "ex": "until midnight",
+    "exJa": "真夜中まで"
+  },
+  {
+    "id": "t0234",
+    "w": "productivity",
+    "ja": "生産性",
+    "pos": "n",
+    "ex": "improve productivity",
+    "exJa": "生産性を高める"
+  },
+  {
+    "id": "t0235",
+    "w": "rainy",
+    "ja": "雨の",
+    "pos": "a",
+    "ex": "rainy season",
+    "exJa": "雨季"
+  },
+  {
+    "id": "t0236",
+    "w": "relocate",
+    "ja": "移転する",
+    "pos": "v",
+    "ex": "relocate the office",
+    "exJa": "事務所を移転する"
+  },
+  {
+    "id": "t0237",
+    "w": "trainee",
+    "ja": "研修生",
+    "pos": "n",
+    "ex": "new trainee",
+    "exJa": "新しい研修生"
+  },
+  {
+    "id": "t0238",
+    "w": "transaction",
+    "ja": "取引",
+    "pos": "n",
+    "ex": "bank transaction",
+    "exJa": "銀行取引"
+  },
+  {
+    "id": "t0239",
+    "w": "unhappy",
+    "ja": "不満な",
+    "pos": "a",
+    "ex": "unhappy customer",
+    "exJa": "不満な顧客"
+  },
+  {
+    "id": "t0240",
+    "w": "verify",
+    "ja": "確かめる",
+    "pos": "v",
+    "ex": "verify the address",
+    "exJa": "住所を確かめる"
+  },
+  {
+    "id": "t0241",
+    "w": "automobile",
+    "ja": "自動車",
+    "pos": "n",
+    "ex": "automobile industry",
+    "exJa": "自動車産業"
+  },
+  {
+    "id": "t0242",
+    "w": "courier",
+    "ja": "宅配業者",
+    "pos": "n",
+    "ex": "courier service",
+    "exJa": "宅配サービス"
+  },
+  {
+    "id": "t0243",
+    "w": "incomplete",
+    "ja": "不完全な",
+    "pos": "a",
+    "ex": "incomplete form",
+    "exJa": "不完全な用紙"
+  },
+  {
+    "id": "t0244",
+    "w": "questionnaire",
+    "ja": "アンケート",
+    "pos": "n",
+    "ex": "fill out the questionnaire",
+    "exJa": "アンケートに記入する"
+  },
+  {
+    "id": "t0245",
+    "w": "baseball",
+    "ja": "野球",
+    "pos": "n",
+    "ex": "baseball game",
+    "exJa": "野球の試合"
+  },
+  {
+    "id": "t0246",
+    "w": "dock",
+    "ja": "埠頭",
+    "pos": "n",
+    "ex": "loading dock",
+    "exJa": "荷積み用埠頭"
+  },
+  {
+    "id": "t0247",
+    "w": "lamp",
+    "ja": "ランプ",
+    "pos": "n",
+    "ex": "desk lamp",
+    "exJa": "卓上ランプ"
+  },
+  {
+    "id": "t0248",
+    "w": "lately",
+    "ja": "最近",
+    "pos": "a",
+    "ex": "tired lately",
+    "exJa": "最近疲れている"
+  },
+  {
+    "id": "t0249",
+    "w": "machinery",
+    "ja": "機械類",
+    "pos": "n",
+    "ex": "heavy machinery",
+    "exJa": "重機"
+  },
+  {
+    "id": "t0250",
+    "w": "presenter",
+    "ja": "発表者",
+    "pos": "n",
+    "ex": "guest presenter",
+    "exJa": "招待発表者"
+  }
+]

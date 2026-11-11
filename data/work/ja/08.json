@@ -1,100 +1,802 @@
-[{"id":"t0551","w":"pedestrian","ja":"歩行者","pos":"n","ex":"A pedestrian crossing","exJa":"歩行者用の横断歩道"},
-{"id":"t0552","w":"projection","ja":"予測","pos":"n","ex":"Sales projection for May","exJa":"5月の売上予測"},
-{"id":"t0553","w":"sleeve","ja":"袖","pos":"n","ex":"A short sleeve shirt","exJa":"半袖のシャツ"},
-{"id":"t0554","w":"suburb","ja":"郊外","pos":"n","ex":"Live in a suburb","exJa":"郊外に住む"},
-{"id":"t0555","w":"takeover","ja":"買収","pos":"n","ex":"A hostile takeover bid","exJa":"敵対的買収の提案"},
-{"id":"t0556","w":"unsure","ja":"自信がない","pos":"a","ex":"Unsure about the date","exJa":"日付に自信がない"},
-{"id":"t0557","w":"upstairs","ja":"上の階へ","pos":"a","ex":"Please go upstairs","exJa":"上の階へお進みください"},
-{"id":"t0558","w":"verbal","ja":"口頭の","pos":"a","ex":"A verbal agreement","exJa":"口頭での合意"},
-{"id":"t0559","w":"visa","ja":"ビザ","pos":"n","ex":"Apply for a visa","exJa":"ビザを申請する"},
-{"id":"t0560","w":"wildlife","ja":"野生動物","pos":"n","ex":"Protect local wildlife","exJa":"地元の野生動物を守る"},
-{"id":"t0561","w":"workforce","ja":"労働力","pos":"n","ex":"A skilled workforce","exJa":"熟練した労働力"},
-{"id":"t0562","w":"absent","ja":"欠席の","pos":"a","ex":"Absent from the meeting","exJa":"会議を欠席している"},
-{"id":"t0563","w":"accumulate","ja":"蓄積する","pos":"v","ex":"Accumulate vacation days","exJa":"休暇日数がたまる"},
-{"id":"t0564","w":"appraisal","ja":"査定","pos":"n","ex":"A performance appraisal","exJa":"業績評価"},
-{"id":"t0565","w":"apprentice","ja":"見習い","pos":"n","ex":"Hire an apprentice","exJa":"見習いを雇う"},
-{"id":"t0566","w":"businessman","ja":"ビジネスマン","pos":"n","ex":"A busy businessman","exJa":"多忙なビジネスマン"},
-{"id":"t0567","w":"ceiling","ja":"天井","pos":"n","ex":"A high ceiling","exJa":"高い天井"},
-{"id":"t0568","w":"colorful","ja":"色鮮やかな","pos":"a","ex":"A colorful brochure","exJa":"色鮮やかなパンフレット"},
-{"id":"t0569","w":"compensate","ja":"補償する","pos":"v","ex":"Compensate for the loss","exJa":"損失を補償する"},
-{"id":"t0570","w":"costume","ja":"衣装","pos":"n","ex":"Wear a costume","exJa":"衣装を着る"},
-{"id":"t0571","w":"editorial","ja":"社説","pos":"n","ex":"Read the editorial","exJa":"社説を読む"},
-{"id":"t0572","w":"effectiveness","ja":"有効性","pos":"n","ex":"Measure the effectiveness","exJa":"有効性を測定する"},
-{"id":"t0573","w":"facilitate","ja":"容易にする","pos":"v","ex":"Facilitate the process","exJa":"手続きを容易にする"},
-{"id":"t0574","w":"firefighter","ja":"消防士","pos":"n","ex":"A brave firefighter","exJa":"勇敢な消防士"},
-{"id":"t0575","w":"gasoline","ja":"ガソリン","pos":"n","ex":"Gasoline prices rose","exJa":"ガソリン価格が上がった"},
-{"id":"t0576","w":"inappropriate","ja":"不適切な","pos":"a","ex":"Inappropriate behavior","exJa":"不適切な行動"},
-{"id":"t0577","w":"internet","ja":"インターネット","pos":"n","ex":"Internet access included","exJa":"インターネット接続込み"},
-{"id":"t0578","w":"landlord","ja":"家主","pos":"n","ex":"Contact the landlord","exJa":"家主に連絡する"},
-{"id":"t0579","w":"layout","ja":"レイアウト","pos":"n","ex":"The office layout","exJa":"事務所のレイアウト"},
-{"id":"t0580","w":"lunchtime","ja":"昼食時","pos":"n","ex":"Closed at lunchtime","exJa":"昼食時は閉まっている"},
-{"id":"t0581","w":"payroll","ja":"給与計算","pos":"n","ex":"Process the payroll","exJa":"給与計算を処理する"},
-{"id":"t0582","w":"pharmaceutical","ja":"製薬の","pos":"a","ex":"A pharmaceutical company","exJa":"製薬会社"},
-{"id":"t0583","w":"plausible","ja":"もっともな","pos":"a","ex":"A plausible explanation","exJa":"もっともな説明"},
-{"id":"t0584","w":"premium","ja":"保険料","pos":"n","ex":"Pay the premium","exJa":"保険料を支払う"},
-{"id":"t0585","w":"safely","ja":"安全に","pos":"a","ex":"Arrive safely","exJa":"無事に到着する"},
-{"id":"t0586","w":"simplify","ja":"簡素化する","pos":"v","ex":"Simplify the process","exJa":"手順を簡素化する"},
-{"id":"t0587","w":"specialty","ja":"専門分野","pos":"n","ex":"Our specialty is seafood","exJa":"当店の専門は海鮮です"},
-{"id":"t0588","w":"tech","ja":"技術","pos":"n","ex":"Tech support team","exJa":"技術サポートチーム"},
-{"id":"t0589","w":"unexpected","ja":"予期せぬ","pos":"a","ex":"An unexpected delay","exJa":"予期せぬ遅れ"},
-{"id":"t0590","w":"unspecified","ja":"未指定の","pos":"a","ex":"An unspecified date","exJa":"指定のない日付"},
-{"id":"t0591","w":"adhere","ja":"固守する","pos":"v","ex":"Adhere to the rules","exJa":"規則を固守する"},
-{"id":"t0592","w":"bankrupt","ja":"破産した","pos":"a","ex":"Go bankrupt","exJa":"破産する"},
-{"id":"t0593","w":"caution","ja":"用心","pos":"n","ex":"Proceed with caution","exJa":"用心して進む"},
-{"id":"t0594","w":"clip","ja":"クリップ","pos":"n","ex":"Use a clip","exJa":"クリップを使う"},
-{"id":"t0595","w":"comply","ja":"従う","pos":"v","ex":"Comply with regulations","exJa":"規則に従う"},
-{"id":"t0596","w":"diner","ja":"食堂","pos":"n","ex":"A local diner","exJa":"地元の食堂"},
-{"id":"t0597","w":"duplicate","ja":"複製する","pos":"v","ex":"Duplicate the file","exJa":"ファイルを複製する"},
-{"id":"t0598","w":"eager","ja":"熱望した","pos":"a","ex":"Eager to start","exJa":"早く始めたい"},
-{"id":"t0599","w":"economist","ja":"経済学者","pos":"n","ex":"A leading economist","exJa":"一流の経済学者"},
-{"id":"t0600","w":"embassy","ja":"大使館","pos":"n","ex":"Visit the embassy","exJa":"大使館を訪れる"},
-{"id":"t0601","w":"fasten","ja":"留める","pos":"v","ex":"Fasten your seat belt","exJa":"シートベルトを締める"},
-{"id":"t0602","w":"harmful","ja":"有害な","pos":"a","ex":"Harmful to health","exJa":"健康に有害な"},
-{"id":"t0603","w":"informative","ja":"情報豊富な","pos":"a","ex":"An informative brochure","exJa":"情報豊富なパンフレット"},
-{"id":"t0604","w":"institute","ja":"機関","pos":"n","ex":"A research institute","exJa":"研究機関"},
-{"id":"t0605","w":"kit","ja":"キット","pos":"n","ex":"A first aid kit","exJa":"救急キット"},
-{"id":"t0606","w":"locally","ja":"地元で","pos":"a","ex":"Locally grown produce","exJa":"地元産の野菜"},
-{"id":"t0607","w":"mentor","ja":"メンター","pos":"n","ex":"Find a mentor","exJa":"メンターを見つける"},
-{"id":"t0608","w":"nominate","ja":"指名する","pos":"v","ex":"Nominate a candidate","exJa":"候補者を指名する"},
-{"id":"t0609","w":"opt","ja":"選択する","pos":"v","ex":"Opt for express shipping","exJa":"速達を選ぶ"},
-{"id":"t0610","w":"parade","ja":"パレード","pos":"n","ex":"A holiday parade","exJa":"祝日のパレード"},
-{"id":"t0611","w":"physician","ja":"医師","pos":"n","ex":"See a physician","exJa":"医師の診察を受ける"},
-{"id":"t0612","w":"polish","ja":"磨く","pos":"v","ex":"Polish the floor","exJa":"床を磨く"},
-{"id":"t0613","w":"postage","ja":"郵便料金","pos":"n","ex":"Postage is included","exJa":"郵便料金込み"},
-{"id":"t0614","w":"recreational","ja":"娯楽の","pos":"a","ex":"Recreational facilities","exJa":"娯楽施設"},
-{"id":"t0615","w":"rehearse","ja":"予行演習する","pos":"v","ex":"Rehearse the speech","exJa":"演説を予行演習する"},
-{"id":"t0616","w":"removal","ja":"除去","pos":"n","ex":"Snow removal service","exJa":"除雪サービス"},
-{"id":"t0617","w":"satisfactory","ja":"満足できる","pos":"a","ex":"Satisfactory results","exJa":"満足のいく結果"},
-{"id":"t0618","w":"seasonal","ja":"季節の","pos":"a","ex":"Seasonal discount","exJa":"季節限定の割引"},
-{"id":"t0619","w":"separately","ja":"別々に","pos":"a","ex":"Ship separately","exJa":"別便で送る"},
-{"id":"t0620","w":"turnover","ja":"離職率","pos":"n","ex":"Staff turnover is high","exJa":"離職率が高い"},
-{"id":"t0621","w":"unnecessary","ja":"不要な","pos":"a","ex":"Unnecessary expenses","exJa":"不要な経費"},
-{"id":"t0622","w":"accordingly","ja":"それに応じて","pos":"a","ex":"Act accordingly","exJa":"それに応じて行動する"},
-{"id":"t0623","w":"apple","ja":"りんご","pos":"n","ex":"An apple a day","exJa":"1日1個のりんご"},
-{"id":"t0624","w":"applicable","ja":"適用できる","pos":"a","ex":"Applicable to all","exJa":"全員に当てはまる"},
-{"id":"t0625","w":"auction","ja":"オークション","pos":"n","ex":"An online auction","exJa":"オンラインオークション"},
-{"id":"t0626","w":"balcony","ja":"バルコニー","pos":"n","ex":"A sunny balcony","exJa":"日当たりのよいバルコニー"},
-{"id":"t0627","w":"basement","ja":"地下室","pos":"n","ex":"In the basement","exJa":"地下室で"},
-{"id":"t0628","w":"beforehand","ja":"事前に","pos":"a","ex":"Pay beforehand","exJa":"事前に支払う"},
-{"id":"t0629","w":"culinary","ja":"料理の","pos":"a","ex":"A culinary school","exJa":"料理学校"},
-{"id":"t0630","w":"documentary","ja":"ドキュメンタリー","pos":"n","ex":"Watch a documentary","exJa":"ドキュメンタリーを見る"},
-{"id":"t0631","w":"downturn","ja":"落ち込み","pos":"n","ex":"An economic downturn","exJa":"景気の落ち込み"},
-{"id":"t0632","w":"earthquake","ja":"地震","pos":"n","ex":"A strong earthquake","exJa":"強い地震"},
-{"id":"t0633","w":"elegant","ja":"上品な","pos":"a","ex":"An elegant hotel","exJa":"上品なホテル"},
-{"id":"t0634","w":"excessive","ja":"過度の","pos":"a","ex":"Excessive noise","exJa":"過度の騒音"},
-{"id":"t0635","w":"generic","ja":"汎用の","pos":"a","ex":"A generic drug","exJa":"ジェネリック医薬品"},
-{"id":"t0636","w":"jazz","ja":"ジャズ","pos":"n","ex":"A jazz concert","exJa":"ジャズコンサート"},
-{"id":"t0637","w":"lifetime","ja":"生涯","pos":"n","ex":"A lifetime warranty","exJa":"生涯保証"},
-{"id":"t0638","w":"massage","ja":"マッサージ","pos":"n","ex":"A relaxing massage","exJa":"心地よいマッサージ"},
-{"id":"t0639","w":"maximize","ja":"最大化する","pos":"v","ex":"Maximize profits","exJa":"利益を最大化する"},
-{"id":"t0640","w":"mild","ja":"温和な","pos":"a","ex":"Mild weather","exJa":"穏やかな天気"},
-{"id":"t0641","w":"ongoing","ja":"進行中の","pos":"a","ex":"An ongoing project","exJa":"進行中のプロジェクト"},
-{"id":"t0642","w":"periodically","ja":"定期的に","pos":"a","ex":"Check periodically","exJa":"定期的に確認する"},
-{"id":"t0643","w":"pie","ja":"パイ","pos":"n","ex":"Bake a pie","exJa":"パイを焼く"},
-{"id":"t0644","w":"plug","ja":"プラグ","pos":"n","ex":"Check the plug","exJa":"プラグを確認する"},
-{"id":"t0645","w":"recruitment","ja":"採用","pos":"n","ex":"Staff recruitment plan","exJa":"人材採用計画"},
-{"id":"t0646","w":"referee","ja":"審判","pos":"n","ex":"A soccer referee","exJa":"サッカーの審判"},
-{"id":"t0647","w":"referral","ja":"紹介","pos":"n","ex":"A referral bonus","exJa":"紹介ボーナス"},
-{"id":"t0648","w":"renown","ja":"名声","pos":"n","ex":"Of great renown","exJa":"大変な名声のある"},
-{"id":"t0649","w":"runner","ja":"ランナー","pos":"n","ex":"A marathon runner","exJa":"マラソンランナー"},
-{"id":"t0650","w":"sock","ja":"靴下","pos":"n","ex":"A clean sock","exJa":"清潔な靴下"}]
+[
+  {
+    "id": "t0551",
+    "w": "pedestrian",
+    "ja": "歩行者",
+    "pos": "n",
+    "ex": "A pedestrian crossing",
+    "exJa": "歩行者用の横断歩道"
+  },
+  {
+    "id": "t0552",
+    "w": "projection",
+    "ja": "予測値",
+    "pos": "n",
+    "ex": "Sales projection for May",
+    "exJa": "5月の売上予測値"
+  },
+  {
+    "id": "t0553",
+    "w": "sleeve",
+    "ja": "袖",
+    "pos": "n",
+    "ex": "A short sleeve shirt",
+    "exJa": "半袖のシャツ"
+  },
+  {
+    "id": "t0554",
+    "w": "suburb",
+    "ja": "郊外",
+    "pos": "n",
+    "ex": "Live in a suburb",
+    "exJa": "郊外に住む"
+  },
+  {
+    "id": "t0555",
+    "w": "takeover",
+    "ja": "買収",
+    "pos": "n",
+    "ex": "A hostile takeover bid",
+    "exJa": "敵対的買収の提案"
+  },
+  {
+    "id": "t0556",
+    "w": "unsure",
+    "ja": "自信がない",
+    "pos": "a",
+    "ex": "Unsure about the date",
+    "exJa": "日付に自信がない"
+  },
+  {
+    "id": "t0557",
+    "w": "upstairs",
+    "ja": "上の階へ",
+    "pos": "a",
+    "ex": "Please go upstairs",
+    "exJa": "上の階へお進みください"
+  },
+  {
+    "id": "t0558",
+    "w": "verbal",
+    "ja": "口頭の",
+    "pos": "a",
+    "ex": "A verbal agreement",
+    "exJa": "口頭での合意"
+  },
+  {
+    "id": "t0559",
+    "w": "visa",
+    "ja": "ビザ",
+    "pos": "n",
+    "ex": "Apply for a visa",
+    "exJa": "ビザを申請する"
+  },
+  {
+    "id": "t0560",
+    "w": "wildlife",
+    "ja": "野生動物",
+    "pos": "n",
+    "ex": "Protect local wildlife",
+    "exJa": "地元の野生動物を守る"
+  },
+  {
+    "id": "t0561",
+    "w": "workforce",
+    "ja": "労働力",
+    "pos": "n",
+    "ex": "A skilled workforce",
+    "exJa": "熟練した労働力"
+  },
+  {
+    "id": "t0562",
+    "w": "absent",
+    "ja": "欠席の",
+    "pos": "a",
+    "ex": "Absent from the meeting",
+    "exJa": "会議を欠席している"
+  },
+  {
+    "id": "t0563",
+    "w": "accumulate",
+    "ja": "蓄積する",
+    "pos": "v",
+    "ex": "Accumulate vacation days",
+    "exJa": "休暇日数がたまる"
+  },
+  {
+    "id": "t0564",
+    "w": "appraisal",
+    "ja": "査定",
+    "pos": "n",
+    "ex": "A performance appraisal",
+    "exJa": "業績評価"
+  },
+  {
+    "id": "t0565",
+    "w": "apprentice",
+    "ja": "見習い",
+    "pos": "n",
+    "ex": "Hire an apprentice",
+    "exJa": "見習いを雇う"
+  },
+  {
+    "id": "t0566",
+    "w": "businessman",
+    "ja": "ビジネスマン",
+    "pos": "n",
+    "ex": "A busy businessman",
+    "exJa": "多忙なビジネスマン"
+  },
+  {
+    "id": "t0567",
+    "w": "ceiling",
+    "ja": "天井",
+    "pos": "n",
+    "ex": "A high ceiling",
+    "exJa": "高い天井"
+  },
+  {
+    "id": "t0568",
+    "w": "colorful",
+    "ja": "色鮮やかな",
+    "pos": "a",
+    "ex": "A colorful brochure",
+    "exJa": "色鮮やかなパンフレット"
+  },
+  {
+    "id": "t0569",
+    "w": "compensate",
+    "ja": "補償する",
+    "pos": "v",
+    "ex": "Compensate for the loss",
+    "exJa": "損失を補償する"
+  },
+  {
+    "id": "t0570",
+    "w": "costume",
+    "ja": "衣装",
+    "pos": "n",
+    "ex": "Wear a costume",
+    "exJa": "衣装を着る"
+  },
+  {
+    "id": "t0571",
+    "w": "editorial",
+    "ja": "社説",
+    "pos": "n",
+    "ex": "Read the editorial",
+    "exJa": "社説を読む"
+  },
+  {
+    "id": "t0572",
+    "w": "effectiveness",
+    "ja": "有効性",
+    "pos": "n",
+    "ex": "Measure the effectiveness",
+    "exJa": "有効性を測定する"
+  },
+  {
+    "id": "t0573",
+    "w": "facilitate",
+    "ja": "容易にする",
+    "pos": "v",
+    "ex": "Facilitate the process",
+    "exJa": "手続きを容易にする"
+  },
+  {
+    "id": "t0574",
+    "w": "firefighter",
+    "ja": "消防士",
+    "pos": "n",
+    "ex": "A brave firefighter",
+    "exJa": "勇敢な消防士"
+  },
+  {
+    "id": "t0575",
+    "w": "gasoline",
+    "ja": "ガソリン",
+    "pos": "n",
+    "ex": "Gasoline prices rose",
+    "exJa": "ガソリン価格が上がった"
+  },
+  {
+    "id": "t0576",
+    "w": "inappropriate",
+    "ja": "不適切な",
+    "pos": "a",
+    "ex": "Inappropriate behavior",
+    "exJa": "不適切な行動"
+  },
+  {
+    "id": "t0577",
+    "w": "internet",
+    "ja": "インターネット",
+    "pos": "n",
+    "ex": "Internet access included",
+    "exJa": "インターネット接続込み"
+  },
+  {
+    "id": "t0578",
+    "w": "landlord",
+    "ja": "家主",
+    "pos": "n",
+    "ex": "Contact the landlord",
+    "exJa": "家主に連絡する"
+  },
+  {
+    "id": "t0579",
+    "w": "layout",
+    "ja": "レイアウト",
+    "pos": "n",
+    "ex": "The office layout",
+    "exJa": "事務所のレイアウト"
+  },
+  {
+    "id": "t0580",
+    "w": "lunchtime",
+    "ja": "昼食時",
+    "pos": "n",
+    "ex": "Closed at lunchtime",
+    "exJa": "昼食時は閉まっている"
+  },
+  {
+    "id": "t0581",
+    "w": "payroll",
+    "ja": "給与計算",
+    "pos": "n",
+    "ex": "Process the payroll",
+    "exJa": "給与計算を処理する"
+  },
+  {
+    "id": "t0582",
+    "w": "pharmaceutical",
+    "ja": "製薬の",
+    "pos": "a",
+    "ex": "A pharmaceutical company",
+    "exJa": "製薬会社"
+  },
+  {
+    "id": "t0583",
+    "w": "plausible",
+    "ja": "もっともな",
+    "pos": "a",
+    "ex": "A plausible explanation",
+    "exJa": "もっともな説明"
+  },
+  {
+    "id": "t0584",
+    "w": "premium",
+    "ja": "保険料",
+    "pos": "n",
+    "ex": "Pay the premium",
+    "exJa": "保険料を支払う"
+  },
+  {
+    "id": "t0585",
+    "w": "safely",
+    "ja": "安全に",
+    "pos": "a",
+    "ex": "Arrive safely",
+    "exJa": "無事に到着する"
+  },
+  {
+    "id": "t0586",
+    "w": "simplify",
+    "ja": "簡素化する",
+    "pos": "v",
+    "ex": "Simplify the process",
+    "exJa": "手順を簡素化する"
+  },
+  {
+    "id": "t0587",
+    "w": "specialty",
+    "ja": "専門分野",
+    "pos": "n",
+    "ex": "Our specialty is seafood",
+    "exJa": "当店の専門は海鮮です"
+  },
+  {
+    "id": "t0588",
+    "w": "tech",
+    "ja": "技術",
+    "pos": "n",
+    "ex": "Tech support team",
+    "exJa": "技術サポートチーム"
+  },
+  {
+    "id": "t0589",
+    "w": "unexpected",
+    "ja": "予期せぬ",
+    "pos": "a",
+    "ex": "An unexpected delay",
+    "exJa": "予期せぬ遅れ"
+  },
+  {
+    "id": "t0590",
+    "w": "unspecified",
+    "ja": "未指定の",
+    "pos": "a",
+    "ex": "An unspecified date",
+    "exJa": "指定のない日付"
+  },
+  {
+    "id": "t0591",
+    "w": "adhere",
+    "ja": "忠実に守る",
+    "pos": "v",
+    "ex": "Adhere to the rules",
+    "exJa": "規則を忠実に守る"
+  },
+  {
+    "id": "t0592",
+    "w": "bankrupt",
+    "ja": "破産した",
+    "pos": "a",
+    "ex": "Go bankrupt",
+    "exJa": "破産する"
+  },
+  {
+    "id": "t0593",
+    "w": "caution",
+    "ja": "用心",
+    "pos": "n",
+    "ex": "Proceed with caution",
+    "exJa": "用心して進む"
+  },
+  {
+    "id": "t0594",
+    "w": "clip",
+    "ja": "クリップ",
+    "pos": "n",
+    "ex": "Use a clip",
+    "exJa": "クリップを使う"
+  },
+  {
+    "id": "t0595",
+    "w": "comply",
+    "ja": "順守する",
+    "pos": "v",
+    "ex": "Comply with regulations",
+    "exJa": "規則を順守する"
+  },
+  {
+    "id": "t0596",
+    "w": "diner",
+    "ja": "大衆食堂",
+    "pos": "n",
+    "ex": "A local diner",
+    "exJa": "地元の大衆食堂"
+  },
+  {
+    "id": "t0597",
+    "w": "duplicate",
+    "ja": "複製する",
+    "pos": "v",
+    "ex": "Duplicate the file",
+    "exJa": "ファイルを複製する"
+  },
+  {
+    "id": "t0598",
+    "w": "eager",
+    "ja": "熱望した",
+    "pos": "a",
+    "ex": "Eager to start",
+    "exJa": "早く始めたい"
+  },
+  {
+    "id": "t0599",
+    "w": "economist",
+    "ja": "経済学者",
+    "pos": "n",
+    "ex": "A leading economist",
+    "exJa": "一流の経済学者"
+  },
+  {
+    "id": "t0600",
+    "w": "embassy",
+    "ja": "大使館",
+    "pos": "n",
+    "ex": "Visit the embassy",
+    "exJa": "大使館を訪れる"
+  },
+  {
+    "id": "t0601",
+    "w": "fasten",
+    "ja": "留める",
+    "pos": "v",
+    "ex": "Fasten your seat belt",
+    "exJa": "シートベルトを締める"
+  },
+  {
+    "id": "t0602",
+    "w": "harmful",
+    "ja": "有害な",
+    "pos": "a",
+    "ex": "Harmful to health",
+    "exJa": "健康に有害な"
+  },
+  {
+    "id": "t0603",
+    "w": "informative",
+    "ja": "情報豊富な",
+    "pos": "a",
+    "ex": "An informative brochure",
+    "exJa": "情報豊富なパンフレット"
+  },
+  {
+    "id": "t0604",
+    "w": "institute",
+    "ja": "機関",
+    "pos": "n",
+    "ex": "A research institute",
+    "exJa": "研究機関"
+  },
+  {
+    "id": "t0605",
+    "w": "kit",
+    "ja": "キット",
+    "pos": "n",
+    "ex": "A first aid kit",
+    "exJa": "救急キット"
+  },
+  {
+    "id": "t0606",
+    "w": "locally",
+    "ja": "地元で",
+    "pos": "a",
+    "ex": "Locally grown produce",
+    "exJa": "地元産の野菜"
+  },
+  {
+    "id": "t0607",
+    "w": "mentor",
+    "ja": "メンター",
+    "pos": "n",
+    "ex": "Find a mentor",
+    "exJa": "メンターを見つける"
+  },
+  {
+    "id": "t0608",
+    "w": "nominate",
+    "ja": "指名する",
+    "pos": "v",
+    "ex": "Nominate a candidate",
+    "exJa": "候補者を指名する"
+  },
+  {
+    "id": "t0609",
+    "w": "opt",
+    "ja": "選択する",
+    "pos": "v",
+    "ex": "Opt for express shipping",
+    "exJa": "速達を選ぶ"
+  },
+  {
+    "id": "t0610",
+    "w": "parade",
+    "ja": "パレード",
+    "pos": "n",
+    "ex": "A holiday parade",
+    "exJa": "祝日のパレード"
+  },
+  {
+    "id": "t0611",
+    "w": "physician",
+    "ja": "医師",
+    "pos": "n",
+    "ex": "See a physician",
+    "exJa": "医師の診察を受ける"
+  },
+  {
+    "id": "t0612",
+    "w": "polish",
+    "ja": "磨く",
+    "pos": "v",
+    "ex": "Polish the floor",
+    "exJa": "床を磨く"
+  },
+  {
+    "id": "t0613",
+    "w": "postage",
+    "ja": "郵便料金",
+    "pos": "n",
+    "ex": "Postage is included",
+    "exJa": "郵便料金込み"
+  },
+  {
+    "id": "t0614",
+    "w": "recreational",
+    "ja": "娯楽の",
+    "pos": "a",
+    "ex": "Recreational facilities",
+    "exJa": "娯楽施設"
+  },
+  {
+    "id": "t0615",
+    "w": "rehearse",
+    "ja": "予行演習する",
+    "pos": "v",
+    "ex": "Rehearse the speech",
+    "exJa": "演説を予行演習する"
+  },
+  {
+    "id": "t0616",
+    "w": "removal",
+    "ja": "除去",
+    "pos": "n",
+    "ex": "Snow removal service",
+    "exJa": "除雪サービス"
+  },
+  {
+    "id": "t0617",
+    "w": "satisfactory",
+    "ja": "満足できる",
+    "pos": "a",
+    "ex": "Satisfactory results",
+    "exJa": "満足のいく結果"
+  },
+  {
+    "id": "t0618",
+    "w": "seasonal",
+    "ja": "季節の",
+    "pos": "a",
+    "ex": "Seasonal discount",
+    "exJa": "季節限定の割引"
+  },
+  {
+    "id": "t0619",
+    "w": "separately",
+    "ja": "別々に",
+    "pos": "a",
+    "ex": "Ship separately",
+    "exJa": "別便で送る"
+  },
+  {
+    "id": "t0620",
+    "w": "turnover",
+    "ja": "離職率",
+    "pos": "n",
+    "ex": "Staff turnover is high",
+    "exJa": "離職率が高い"
+  },
+  {
+    "id": "t0621",
+    "w": "unnecessary",
+    "ja": "不要な",
+    "pos": "a",
+    "ex": "Unnecessary expenses",
+    "exJa": "不要な経費"
+  },
+  {
+    "id": "t0622",
+    "w": "accordingly",
+    "ja": "それに応じて",
+    "pos": "a",
+    "ex": "Act accordingly",
+    "exJa": "それに応じて行動する"
+  },
+  {
+    "id": "t0623",
+    "w": "apple",
+    "ja": "りんご",
+    "pos": "n",
+    "ex": "An apple a day",
+    "exJa": "1日1個のりんご"
+  },
+  {
+    "id": "t0624",
+    "w": "applicable",
+    "ja": "適用できる",
+    "pos": "a",
+    "ex": "Applicable to all",
+    "exJa": "全員に当てはまる"
+  },
+  {
+    "id": "t0625",
+    "w": "auction",
+    "ja": "オークション",
+    "pos": "n",
+    "ex": "An online auction",
+    "exJa": "オンラインオークション"
+  },
+  {
+    "id": "t0626",
+    "w": "balcony",
+    "ja": "バルコニー",
+    "pos": "n",
+    "ex": "A sunny balcony",
+    "exJa": "日当たりのよいバルコニー"
+  },
+  {
+    "id": "t0627",
+    "w": "basement",
+    "ja": "地下室",
+    "pos": "n",
+    "ex": "In the basement",
+    "exJa": "地下室で"
+  },
+  {
+    "id": "t0628",
+    "w": "beforehand",
+    "ja": "事前に",
+    "pos": "a",
+    "ex": "Pay beforehand",
+    "exJa": "事前に支払う"
+  },
+  {
+    "id": "t0629",
+    "w": "culinary",
+    "ja": "料理の",
+    "pos": "a",
+    "ex": "A culinary school",
+    "exJa": "料理学校"
+  },
+  {
+    "id": "t0630",
+    "w": "documentary",
+    "ja": "ドキュメンタリー",
+    "pos": "n",
+    "ex": "Watch a documentary",
+    "exJa": "ドキュメンタリーを見る"
+  },
+  {
+    "id": "t0631",
+    "w": "downturn",
+    "ja": "落ち込み",
+    "pos": "n",
+    "ex": "An economic downturn",
+    "exJa": "景気の落ち込み"
+  },
+  {
+    "id": "t0632",
+    "w": "earthquake",
+    "ja": "地震",
+    "pos": "n",
+    "ex": "A strong earthquake",
+    "exJa": "強い地震"
+  },
+  {
+    "id": "t0633",
+    "w": "elegant",
+    "ja": "上品な",
+    "pos": "a",
+    "ex": "An elegant hotel",
+    "exJa": "上品なホテル"
+  },
+  {
+    "id": "t0634",
+    "w": "excessive",
+    "ja": "過度の",
+    "pos": "a",
+    "ex": "Excessive noise",
+    "exJa": "過度の騒音"
+  },
+  {
+    "id": "t0635",
+    "w": "generic",
+    "ja": "ジェネリックの",
+    "pos": "a",
+    "ex": "A generic drug",
+    "exJa": "ジェネリック医薬品"
+  },
+  {
+    "id": "t0636",
+    "w": "jazz",
+    "ja": "ジャズ",
+    "pos": "n",
+    "ex": "A jazz concert",
+    "exJa": "ジャズコンサート"
+  },
+  {
+    "id": "t0637",
+    "w": "lifetime",
+    "ja": "生涯",
+    "pos": "n",
+    "ex": "A lifetime warranty",
+    "exJa": "生涯保証"
+  },
+  {
+    "id": "t0638",
+    "w": "massage",
+    "ja": "マッサージ",
+    "pos": "n",
+    "ex": "A relaxing massage",
+    "exJa": "心地よいマッサージ"
+  },
+  {
+    "id": "t0639",
+    "w": "maximize",
+    "ja": "最大化する",
+    "pos": "v",
+    "ex": "Maximize profits",
+    "exJa": "利益を最大化する"
+  },
+  {
+    "id": "t0640",
+    "w": "mild",
+    "ja": "温和な",
+    "pos": "a",
+    "ex": "Mild weather",
+    "exJa": "穏やかな天気"
+  },
+  {
+    "id": "t0641",
+    "w": "ongoing",
+    "ja": "進行中の",
+    "pos": "a",
+    "ex": "An ongoing project",
+    "exJa": "進行中のプロジェクト"
+  },
+  {
+    "id": "t0642",
+    "w": "periodically",
+    "ja": "定期的に",
+    "pos": "a",
+    "ex": "Check periodically",
+    "exJa": "定期的に確認する"
+  },
+  {
+    "id": "t0643",
+    "w": "pie",
+    "ja": "パイ",
+    "pos": "n",
+    "ex": "Bake a pie",
+    "exJa": "パイを焼く"
+  },
+  {
+    "id": "t0644",
+    "w": "plug",
+    "ja": "プラグ",
+    "pos": "n",
+    "ex": "Check the plug",
+    "exJa": "プラグを確認する"
+  },
+  {
+    "id": "t0645",
+    "w": "recruitment",
+    "ja": "採用",
+    "pos": "n",
+    "ex": "Staff recruitment plan",
+    "exJa": "人材採用計画"
+  },
+  {
+    "id": "t0646",
+    "w": "referee",
+    "ja": "審判",
+    "pos": "n",
+    "ex": "A soccer referee",
+    "exJa": "サッカーの審判"
+  },
+  {
+    "id": "t0647",
+    "w": "referral",
+    "ja": "紹介",
+    "pos": "n",
+    "ex": "A referral bonus",
+    "exJa": "紹介ボーナス"
+  },
+  {
+    "id": "t0648",
+    "w": "renown",
+    "ja": "名声",
+    "pos": "n",
+    "ex": "Of great renown",
+    "exJa": "大変な名声のある"
+  },
+  {
+    "id": "t0649",
+    "w": "runner",
+    "ja": "ランナー",
+    "pos": "n",
+    "ex": "A marathon runner",
+    "exJa": "マラソンランナー"
+  },
+  {
+    "id": "t0650",
+    "w": "sock",
+    "ja": "靴下",
+    "pos": "n",
+    "ex": "A clean sock",
+    "exJa": "清潔な靴下"
+  }
+]

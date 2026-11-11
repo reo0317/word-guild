@@ -1,100 +1,802 @@
-[{"id":"t0851","w":"blanket","ja":"毛布","pos":"n","ex":"A warm blanket","exJa":"暖かい毛布"},
-{"id":"t0852","w":"chairperson","ja":"議長","pos":"n","ex":"The chairperson spoke","exJa":"議長が話した"},
-{"id":"t0853","w":"charitable","ja":"慈善の","pos":"a","ex":"A charitable donation","exJa":"慈善寄付"},
-{"id":"t0854","w":"checkup","ja":"健康診断","pos":"n","ex":"An annual checkup","exJa":"年1回の健康診断"},
-{"id":"t0855","w":"cooler","ja":"クーラーボックス","pos":"n","ex":"Pack a cooler","exJa":"クーラーボックスに詰める"},
-{"id":"t0856","w":"crane","ja":"クレーン","pos":"n","ex":"A construction crane","exJa":"建設用クレーン"},
-{"id":"t0857","w":"dealership","ja":"販売店","pos":"n","ex":"A car dealership","exJa":"自動車販売店"},
-{"id":"t0858","w":"dependable","ja":"信頼できる","pos":"a","ex":"A dependable partner","exJa":"信頼できる提携先"},
-{"id":"t0859","w":"disconnect","ja":"接続を切る","pos":"v","ex":"Disconnect the cable","exJa":"ケーブルを外す"},
-{"id":"t0860","w":"dispose","ja":"処分する","pos":"v","ex":"Dispose of waste","exJa":"ごみを処分する"},
-{"id":"t0861","w":"disrupt","ja":"混乱させる","pos":"v","ex":"Disrupt service","exJa":"業務を混乱させる"},
-{"id":"t0862","w":"dynamic","ja":"活動的な","pos":"a","ex":"A dynamic team","exJa":"活動的なチーム"},
-{"id":"t0863","w":"enthusiastically","ja":"熱烈に","pos":"a","ex":"Applaud enthusiastically","exJa":"熱烈に拍手する"},
-{"id":"t0864","w":"freelance","ja":"フリーランスの","pos":"a","ex":"A freelance writer","exJa":"フリーランスの記者"},
-{"id":"t0865","w":"grill","ja":"網焼きにする","pos":"v","ex":"Grill the chicken","exJa":"鶏肉を網焼きにする"},
-{"id":"t0866","w":"habitual","ja":"常習的な","pos":"a","ex":"A habitual error","exJa":"常習的な誤り"},
-{"id":"t0867","w":"internationally","ja":"国際的に","pos":"a","ex":"Internationally known","exJa":"国際的に有名な"},
-{"id":"t0868","w":"invaluable","ja":"非常に貴重な","pos":"a","ex":"Invaluable advice","exJa":"貴重な助言"},
-{"id":"t0869","w":"messenger","ja":"配達員","pos":"n","ex":"A bike messenger","exJa":"自転車便の配達員"},
-{"id":"t0870","w":"paperback","ja":"ペーパーバック","pos":"n","ex":"A paperback novel","exJa":"ペーパーバックの小説"},
-{"id":"t0871","w":"rebate","ja":"リベート","pos":"n","ex":"Claim a rebate","exJa":"リベートを請求する"},
-{"id":"t0872","w":"recur","ja":"再発する","pos":"v","ex":"Errors may recur","exJa":"誤りが再発するかも"},
-{"id":"t0873","w":"reproduce","ja":"再現する","pos":"v","ex":"Reproduce the error","exJa":"不具合を再現する"},
-{"id":"t0874","w":"spray","ja":"噴霧する","pos":"v","ex":"Spray the plants","exJa":"植物に噴霧する"},
-{"id":"t0875","w":"staple","ja":"ホチキス留めする","pos":"v","ex":"Staple the pages","exJa":"ページをホチキス留めする"},
-{"id":"t0876","w":"strategic","ja":"戦略的な","pos":"a","ex":"A strategic plan","exJa":"戦略的な計画"},
-{"id":"t0877","w":"stripe","ja":"しま模様","pos":"n","ex":"A red stripe","exJa":"赤いしま模様"},
-{"id":"t0878","w":"teen","ja":"10代の若者","pos":"n","ex":"A teen magazine","exJa":"10代向け雑誌"},
-{"id":"t0879","w":"tempt","ja":"誘惑する","pos":"v","ex":"Tempt customers","exJa":"客を誘惑する"},
-{"id":"t0880","w":"timer","ja":"タイマー","pos":"n","ex":"Set the timer","exJa":"タイマーを設定する"},
-{"id":"t0881","w":"unload","ja":"荷降ろしする","pos":"v","ex":"Unload the truck","exJa":"トラックの荷を降ろす"},
-{"id":"t0882","w":"unusually","ja":"異例なほど","pos":"a","ex":"Unusually cold","exJa":"異例の寒さ"},
-{"id":"t0883","w":"vacate","ja":"退去する","pos":"v","ex":"Vacate the room","exJa":"部屋を退去する"},
-{"id":"t0884","w":"whale","ja":"クジラ","pos":"n","ex":"Whale watching","exJa":"ホエールウォッチング"},
-{"id":"t0885","w":"wisely","ja":"賢明に","pos":"a","ex":"Spend wisely","exJa":"賢く使う"},
-{"id":"t0886","w":"amateur","ja":"アマチュア","pos":"n","ex":"An amateur photographer","exJa":"アマチュア写真家"},
-{"id":"t0887","w":"ambassador","ja":"大使","pos":"n","ex":"The ambassador arrived","exJa":"大使が到着した"},
-{"id":"t0888","w":"anew","ja":"新たに","pos":"a","ex":"Start anew","exJa":"新たに始める"},
-{"id":"t0889","w":"architectural","ja":"建築の","pos":"a","ex":"Architectural design","exJa":"建築設計"},
-{"id":"t0890","w":"attain","ja":"達成する","pos":"v","ex":"Attain a goal","exJa":"目標を達成する"},
-{"id":"t0891","w":"balloon","ja":"風船","pos":"n","ex":"A red balloon","exJa":"赤い風船"},
-{"id":"t0892","w":"blueprint","ja":"設計図","pos":"n","ex":"Review the blueprint","exJa":"設計図を見直す"},
-{"id":"t0893","w":"bug","ja":"バグ","pos":"n","ex":"Fix a bug","exJa":"バグを直す"},
-{"id":"t0894","w":"cautious","ja":"慎重な","pos":"a","ex":"A cautious approach","exJa":"慎重な取り組み"},
-{"id":"t0895","w":"circuit","ja":"回路","pos":"n","ex":"An electrical circuit","exJa":"電気回路"},
-{"id":"t0896","w":"clap","ja":"拍手する","pos":"v","ex":"Clap your hands","exJa":"手をたたく"},
-{"id":"t0897","w":"commerce","ja":"商取引","pos":"n","ex":"Online commerce","exJa":"ネット商取引"},
-{"id":"t0898","w":"convey","ja":"伝達する","pos":"v","ex":"Convey the message","exJa":"伝言を伝える"},
-{"id":"t0899","w":"cord","ja":"コード","pos":"n","ex":"A power cord","exJa":"電源コード"},
-{"id":"t0900","w":"counselor","ja":"カウンセラー","pos":"n","ex":"A career counselor","exJa":"進路カウンセラー"},
-{"id":"t0901","w":"debit","ja":"引き落とし","pos":"n","ex":"Debit card","exJa":"デビットカード"},
-{"id":"t0902","w":"delicate","ja":"壊れやすい","pos":"a","ex":"Delicate fabric","exJa":"繊細な生地"},
-{"id":"t0903","w":"dependence","ja":"依存","pos":"n","ex":"Dependence on oil","exJa":"石油への依存"},
-{"id":"t0904","w":"distraction","ja":"気を散らす物","pos":"n","ex":"Avoid distraction","exJa":"気が散るのを避ける"},
-{"id":"t0905","w":"downsize","ja":"人員削減する","pos":"v","ex":"Downsize the staff","exJa":"人員を削減する"},
-{"id":"t0906","w":"elephant","ja":"象","pos":"n","ex":"A large elephant","exJa":"大きな象"},
-{"id":"t0907","w":"enthusiasm","ja":"熱意","pos":"n","ex":"Show enthusiasm","exJa":"熱意を示す"},
-{"id":"t0908","w":"enthusiast","ja":"愛好家","pos":"n","ex":"A sports enthusiast","exJa":"スポーツ愛好家"},
-{"id":"t0909","w":"evident","ja":"明らかな","pos":"a","ex":"Evident improvement","exJa":"明らかな改善"},
-{"id":"t0910","w":"flexibility","ja":"柔軟性","pos":"n","ex":"Schedule flexibility","exJa":"勤務の柔軟性"},
-{"id":"t0911","w":"flextime","ja":"フレックス制","pos":"n","ex":"Offer flextime","exJa":"フレックス制を提供する"},
-{"id":"t0912","w":"fortunately","ja":"幸運にも","pos":"a","ex":"Fortunately, we won","exJa":"幸運にも我々は勝った"},
-{"id":"t0913","w":"freighter","ja":"貨物船","pos":"n","ex":"A cargo freighter","exJa":"貨物船"},
-{"id":"t0914","w":"generator","ja":"発電機","pos":"n","ex":"A backup generator","exJa":"予備の発電機"},
-{"id":"t0915","w":"hallway","ja":"廊下","pos":"n","ex":"A narrow hallway","exJa":"狭い廊下"},
-{"id":"t0916","w":"hamburger","ja":"ハンバーガー","pos":"n","ex":"Order a hamburger","exJa":"ハンバーガーを注文する"},
-{"id":"t0917","w":"hazard","ja":"危険要因","pos":"n","ex":"A safety hazard","exJa":"安全上の危険"},
-{"id":"t0918","w":"homeowner","ja":"住宅所有者","pos":"n","ex":"A new homeowner","exJa":"新しい住宅所有者"},
-{"id":"t0919","w":"imperative","ja":"必須の","pos":"a","ex":"Speed is imperative","exJa":"スピードが必須だ"},
-{"id":"t0920","w":"inflate","ja":"膨らませる","pos":"v","ex":"Inflate the tires","exJa":"タイヤに空気を入れる"},
-{"id":"t0921","w":"insert","ja":"差し込む","pos":"v","ex":"Insert the card","exJa":"カードを差し込む"},
-{"id":"t0922","w":"lecturer","ja":"講師","pos":"n","ex":"A guest lecturer","exJa":"客員講師"},
-{"id":"t0923","w":"meaningful","ja":"意義のある","pos":"a","ex":"Meaningful work","exJa":"意義ある仕事"},
-{"id":"t0924","w":"memorize","ja":"暗記する","pos":"v","ex":"Memorize the steps","exJa":"手順を暗記する"},
-{"id":"t0925","w":"merchant","ja":"商店主","pos":"n","ex":"A local merchant","exJa":"地元の商店主"},
-{"id":"t0926","w":"modification","ja":"修正","pos":"n","ex":"A minor modification","exJa":"軽微な修正"},
-{"id":"t0927","w":"occupant","ja":"入居者","pos":"n","ex":"The previous occupant","exJa":"前の入居者"},
-{"id":"t0928","w":"overcharge","ja":"高く請求する","pos":"v","ex":"Don't overcharge clients","exJa":"顧客に高く請求しない"},
-{"id":"t0929","w":"oversee","ja":"監督する","pos":"v","ex":"Oversee the project","exJa":"計画を監督する"},
-{"id":"t0930","w":"petition","ja":"請願","pos":"n","ex":"Sign the petition","exJa":"請願書に署名する"},
-{"id":"t0931","w":"pillow","ja":"枕","pos":"n","ex":"A soft pillow","exJa":"柔らかい枕"},
-{"id":"t0932","w":"popcorn","ja":"ポップコーン","pos":"n","ex":"Buy some popcorn","exJa":"ポップコーンを買う"},
-{"id":"t0933","w":"pottery","ja":"陶器","pos":"n","ex":"Handmade pottery","exJa":"手作りの陶器"},
-{"id":"t0934","w":"professionally","ja":"プロとして","pos":"a","ex":"Professionally cleaned","exJa":"専門業者が清掃した"},
-{"id":"t0935","w":"publicize","ja":"広報する","pos":"v","ex":"Publicize the event","exJa":"イベントを広報する"},
-{"id":"t0936","w":"ray","ja":"光線","pos":"n","ex":"A ray of light","exJa":"一筋の光"},
-{"id":"t0937","w":"redecorate","ja":"模様替えする","pos":"v","ex":"Redecorate the lobby","exJa":"ロビーを模様替えする"},
-{"id":"t0938","w":"refinery","ja":"製油所","pos":"n","ex":"An oil refinery","exJa":"製油所"},
-{"id":"t0939","w":"refresh","ja":"再読み込みする","pos":"v","ex":"Refresh the page","exJa":"ページを再読み込みする"},
-{"id":"t0940","w":"refundable","ja":"返金可能な","pos":"a","ex":"A refundable deposit","exJa":"返金可能な保証金"},
-{"id":"t0941","w":"reimbursement","ja":"払い戻し","pos":"n","ex":"Request reimbursement","exJa":"払い戻しを請求する"},
-{"id":"t0942","w":"reliability","ja":"信頼性","pos":"n","ex":"Product reliability","exJa":"製品の信頼性"},
-{"id":"t0943","w":"reluctant","ja":"気乗りしない","pos":"a","ex":"Reluctant to agree","exJa":"同意に乗り気でない"},
-{"id":"t0944","w":"sewer","ja":"下水道","pos":"n","ex":"A sewer pipe","exJa":"下水管"},
-{"id":"t0945","w":"skate","ja":"スケートする","pos":"v","ex":"Skate on ice","exJa":"氷上で滑る"},
-{"id":"t0946","w":"skateboard","ja":"スケートボード","pos":"n","ex":"Ride a skateboard","exJa":"スケートボードに乗る"},
-{"id":"t0947","w":"sleepy","ja":"眠い","pos":"a","ex":"Feel sleepy","exJa":"眠く感じる"},
-{"id":"t0948","w":"tailor","ja":"仕立てる","pos":"v","ex":"Tailor the plan to clients","exJa":"計画を顧客向けに仕立てる"},
-{"id":"t0949","w":"termination","ja":"解約","pos":"n","ex":"Contract termination","exJa":"契約解除"},
-{"id":"t0950","w":"theft","ja":"盗難","pos":"n","ex":"Report a theft","exJa":"盗難を届け出る"}]
+[
+  {
+    "id": "t0851",
+    "w": "blanket",
+    "ja": "毛布",
+    "pos": "n",
+    "ex": "A warm blanket",
+    "exJa": "暖かい毛布"
+  },
+  {
+    "id": "t0852",
+    "w": "chairperson",
+    "ja": "議長",
+    "pos": "n",
+    "ex": "The chairperson spoke",
+    "exJa": "議長が話した"
+  },
+  {
+    "id": "t0853",
+    "w": "charitable",
+    "ja": "慈善の",
+    "pos": "a",
+    "ex": "A charitable donation",
+    "exJa": "慈善寄付"
+  },
+  {
+    "id": "t0854",
+    "w": "checkup",
+    "ja": "健康診断",
+    "pos": "n",
+    "ex": "An annual checkup",
+    "exJa": "年1回の健康診断"
+  },
+  {
+    "id": "t0855",
+    "w": "cooler",
+    "ja": "クーラーボックス",
+    "pos": "n",
+    "ex": "Pack a cooler",
+    "exJa": "クーラーボックスに詰める"
+  },
+  {
+    "id": "t0856",
+    "w": "crane",
+    "ja": "クレーン",
+    "pos": "n",
+    "ex": "A construction crane",
+    "exJa": "建設用クレーン"
+  },
+  {
+    "id": "t0857",
+    "w": "dealership",
+    "ja": "販売店",
+    "pos": "n",
+    "ex": "A car dealership",
+    "exJa": "自動車販売店"
+  },
+  {
+    "id": "t0858",
+    "w": "dependable",
+    "ja": "信頼できる",
+    "pos": "a",
+    "ex": "A dependable partner",
+    "exJa": "信頼できる提携先"
+  },
+  {
+    "id": "t0859",
+    "w": "disconnect",
+    "ja": "接続を切る",
+    "pos": "v",
+    "ex": "Disconnect the cable",
+    "exJa": "ケーブルを外す"
+  },
+  {
+    "id": "t0860",
+    "w": "dispose",
+    "ja": "処分する",
+    "pos": "v",
+    "ex": "Dispose of waste",
+    "exJa": "ごみを処分する"
+  },
+  {
+    "id": "t0861",
+    "w": "disrupt",
+    "ja": "混乱させる",
+    "pos": "v",
+    "ex": "Disrupt service",
+    "exJa": "業務を混乱させる"
+  },
+  {
+    "id": "t0862",
+    "w": "dynamic",
+    "ja": "活動的な",
+    "pos": "a",
+    "ex": "A dynamic team",
+    "exJa": "活動的なチーム"
+  },
+  {
+    "id": "t0863",
+    "w": "enthusiastically",
+    "ja": "熱烈に",
+    "pos": "a",
+    "ex": "Applaud enthusiastically",
+    "exJa": "熱烈に拍手する"
+  },
+  {
+    "id": "t0864",
+    "w": "freelance",
+    "ja": "フリーランスの",
+    "pos": "a",
+    "ex": "A freelance writer",
+    "exJa": "フリーランスの記者"
+  },
+  {
+    "id": "t0865",
+    "w": "grill",
+    "ja": "網焼きにする",
+    "pos": "v",
+    "ex": "Grill the chicken",
+    "exJa": "鶏肉を網焼きにする"
+  },
+  {
+    "id": "t0866",
+    "w": "habitual",
+    "ja": "常習的な",
+    "pos": "a",
+    "ex": "A habitual error",
+    "exJa": "常習的な誤り"
+  },
+  {
+    "id": "t0867",
+    "w": "internationally",
+    "ja": "国際的に",
+    "pos": "a",
+    "ex": "Internationally known",
+    "exJa": "国際的に有名な"
+  },
+  {
+    "id": "t0868",
+    "w": "invaluable",
+    "ja": "非常に貴重な",
+    "pos": "a",
+    "ex": "Invaluable advice",
+    "exJa": "貴重な助言"
+  },
+  {
+    "id": "t0869",
+    "w": "messenger",
+    "ja": "配達員",
+    "pos": "n",
+    "ex": "A bike messenger",
+    "exJa": "自転車便の配達員"
+  },
+  {
+    "id": "t0870",
+    "w": "paperback",
+    "ja": "ペーパーバック",
+    "pos": "n",
+    "ex": "A paperback novel",
+    "exJa": "ペーパーバックの小説"
+  },
+  {
+    "id": "t0871",
+    "w": "rebate",
+    "ja": "割戻金",
+    "pos": "n",
+    "ex": "Claim a rebate",
+    "exJa": "割戻金を請求する"
+  },
+  {
+    "id": "t0872",
+    "w": "recur",
+    "ja": "再発する",
+    "pos": "v",
+    "ex": "Errors may recur",
+    "exJa": "誤りが再発するかも"
+  },
+  {
+    "id": "t0873",
+    "w": "reproduce",
+    "ja": "再現する",
+    "pos": "v",
+    "ex": "Reproduce the error",
+    "exJa": "不具合を再現する"
+  },
+  {
+    "id": "t0874",
+    "w": "spray",
+    "ja": "噴霧する",
+    "pos": "v",
+    "ex": "Spray the plants",
+    "exJa": "植物に噴霧する"
+  },
+  {
+    "id": "t0875",
+    "w": "staple",
+    "ja": "ホチキス留めする",
+    "pos": "v",
+    "ex": "Staple the pages",
+    "exJa": "ページをホチキス留めする"
+  },
+  {
+    "id": "t0876",
+    "w": "strategic",
+    "ja": "戦略的な",
+    "pos": "a",
+    "ex": "A strategic plan",
+    "exJa": "戦略的な計画"
+  },
+  {
+    "id": "t0877",
+    "w": "stripe",
+    "ja": "しま模様",
+    "pos": "n",
+    "ex": "A red stripe",
+    "exJa": "赤いしま模様"
+  },
+  {
+    "id": "t0878",
+    "w": "teen",
+    "ja": "10代の若者",
+    "pos": "n",
+    "ex": "A teen magazine",
+    "exJa": "10代向け雑誌"
+  },
+  {
+    "id": "t0879",
+    "w": "tempt",
+    "ja": "誘惑する",
+    "pos": "v",
+    "ex": "Tempt customers",
+    "exJa": "客を誘惑する"
+  },
+  {
+    "id": "t0880",
+    "w": "timer",
+    "ja": "タイマー",
+    "pos": "n",
+    "ex": "Set the timer",
+    "exJa": "タイマーを設定する"
+  },
+  {
+    "id": "t0881",
+    "w": "unload",
+    "ja": "荷降ろしする",
+    "pos": "v",
+    "ex": "Unload the truck",
+    "exJa": "トラックの荷を降ろす"
+  },
+  {
+    "id": "t0882",
+    "w": "unusually",
+    "ja": "異例なほど",
+    "pos": "a",
+    "ex": "Unusually cold",
+    "exJa": "異例の寒さ"
+  },
+  {
+    "id": "t0883",
+    "w": "vacate",
+    "ja": "退去する",
+    "pos": "v",
+    "ex": "Vacate the room",
+    "exJa": "部屋を退去する"
+  },
+  {
+    "id": "t0884",
+    "w": "whale",
+    "ja": "クジラ",
+    "pos": "n",
+    "ex": "Whale watching",
+    "exJa": "ホエールウォッチング"
+  },
+  {
+    "id": "t0885",
+    "w": "wisely",
+    "ja": "賢明に",
+    "pos": "a",
+    "ex": "Spend wisely",
+    "exJa": "賢く使う"
+  },
+  {
+    "id": "t0886",
+    "w": "amateur",
+    "ja": "アマチュア",
+    "pos": "n",
+    "ex": "An amateur photographer",
+    "exJa": "アマチュア写真家"
+  },
+  {
+    "id": "t0887",
+    "w": "ambassador",
+    "ja": "大使",
+    "pos": "n",
+    "ex": "The ambassador arrived",
+    "exJa": "大使が到着した"
+  },
+  {
+    "id": "t0888",
+    "w": "anew",
+    "ja": "新たに",
+    "pos": "a",
+    "ex": "Start anew",
+    "exJa": "新たに始める"
+  },
+  {
+    "id": "t0889",
+    "w": "architectural",
+    "ja": "建築の",
+    "pos": "a",
+    "ex": "Architectural design",
+    "exJa": "建築設計"
+  },
+  {
+    "id": "t0890",
+    "w": "attain",
+    "ja": "達成する",
+    "pos": "v",
+    "ex": "Attain a goal",
+    "exJa": "目標を達成する"
+  },
+  {
+    "id": "t0891",
+    "w": "balloon",
+    "ja": "風船",
+    "pos": "n",
+    "ex": "A red balloon",
+    "exJa": "赤い風船"
+  },
+  {
+    "id": "t0892",
+    "w": "blueprint",
+    "ja": "設計図",
+    "pos": "n",
+    "ex": "Review the blueprint",
+    "exJa": "設計図を見直す"
+  },
+  {
+    "id": "t0893",
+    "w": "bug",
+    "ja": "バグ",
+    "pos": "n",
+    "ex": "Fix a bug",
+    "exJa": "バグを直す"
+  },
+  {
+    "id": "t0894",
+    "w": "cautious",
+    "ja": "慎重な",
+    "pos": "a",
+    "ex": "A cautious approach",
+    "exJa": "慎重な取り組み"
+  },
+  {
+    "id": "t0895",
+    "w": "circuit",
+    "ja": "回路",
+    "pos": "n",
+    "ex": "An electrical circuit",
+    "exJa": "電気回路"
+  },
+  {
+    "id": "t0896",
+    "w": "clap",
+    "ja": "拍手する",
+    "pos": "v",
+    "ex": "Clap your hands",
+    "exJa": "手をたたく"
+  },
+  {
+    "id": "t0897",
+    "w": "commerce",
+    "ja": "商取引",
+    "pos": "n",
+    "ex": "Online commerce",
+    "exJa": "ネット商取引"
+  },
+  {
+    "id": "t0898",
+    "w": "convey",
+    "ja": "伝達する",
+    "pos": "v",
+    "ex": "Convey the message",
+    "exJa": "伝言を伝える"
+  },
+  {
+    "id": "t0899",
+    "w": "cord",
+    "ja": "コード",
+    "pos": "n",
+    "ex": "A power cord",
+    "exJa": "電源コード"
+  },
+  {
+    "id": "t0900",
+    "w": "counselor",
+    "ja": "カウンセラー",
+    "pos": "n",
+    "ex": "A career counselor",
+    "exJa": "進路カウンセラー"
+  },
+  {
+    "id": "t0901",
+    "w": "debit",
+    "ja": "引き落とし",
+    "pos": "n",
+    "ex": "Debit card",
+    "exJa": "デビットカード"
+  },
+  {
+    "id": "t0902",
+    "w": "delicate",
+    "ja": "壊れやすい",
+    "pos": "a",
+    "ex": "Delicate fabric",
+    "exJa": "繊細な生地"
+  },
+  {
+    "id": "t0903",
+    "w": "dependence",
+    "ja": "依存",
+    "pos": "n",
+    "ex": "Dependence on oil",
+    "exJa": "石油への依存"
+  },
+  {
+    "id": "t0904",
+    "w": "distraction",
+    "ja": "気を散らす物",
+    "pos": "n",
+    "ex": "Avoid distraction",
+    "exJa": "気が散るのを避ける"
+  },
+  {
+    "id": "t0905",
+    "w": "downsize",
+    "ja": "人員削減する",
+    "pos": "v",
+    "ex": "Downsize the staff",
+    "exJa": "人員を削減する"
+  },
+  {
+    "id": "t0906",
+    "w": "elephant",
+    "ja": "象",
+    "pos": "n",
+    "ex": "A large elephant",
+    "exJa": "大きな象"
+  },
+  {
+    "id": "t0907",
+    "w": "enthusiasm",
+    "ja": "熱意",
+    "pos": "n",
+    "ex": "Show enthusiasm",
+    "exJa": "熱意を示す"
+  },
+  {
+    "id": "t0908",
+    "w": "enthusiast",
+    "ja": "愛好家",
+    "pos": "n",
+    "ex": "A sports enthusiast",
+    "exJa": "スポーツ愛好家"
+  },
+  {
+    "id": "t0909",
+    "w": "evident",
+    "ja": "明らかな",
+    "pos": "a",
+    "ex": "Evident improvement",
+    "exJa": "明らかな改善"
+  },
+  {
+    "id": "t0910",
+    "w": "flexibility",
+    "ja": "柔軟性",
+    "pos": "n",
+    "ex": "Schedule flexibility",
+    "exJa": "勤務の柔軟性"
+  },
+  {
+    "id": "t0911",
+    "w": "flextime",
+    "ja": "フレックス制",
+    "pos": "n",
+    "ex": "Offer flextime",
+    "exJa": "フレックス制を提供する"
+  },
+  {
+    "id": "t0912",
+    "w": "fortunately",
+    "ja": "幸運にも",
+    "pos": "a",
+    "ex": "Fortunately, we won",
+    "exJa": "幸運にも我々は勝った"
+  },
+  {
+    "id": "t0913",
+    "w": "freighter",
+    "ja": "貨物船",
+    "pos": "n",
+    "ex": "A cargo freighter",
+    "exJa": "貨物船"
+  },
+  {
+    "id": "t0914",
+    "w": "generator",
+    "ja": "発電機",
+    "pos": "n",
+    "ex": "A backup generator",
+    "exJa": "予備の発電機"
+  },
+  {
+    "id": "t0915",
+    "w": "hallway",
+    "ja": "廊下",
+    "pos": "n",
+    "ex": "A narrow hallway",
+    "exJa": "狭い廊下"
+  },
+  {
+    "id": "t0916",
+    "w": "hamburger",
+    "ja": "ハンバーガー",
+    "pos": "n",
+    "ex": "Order a hamburger",
+    "exJa": "ハンバーガーを注文する"
+  },
+  {
+    "id": "t0917",
+    "w": "hazard",
+    "ja": "危険要因",
+    "pos": "n",
+    "ex": "A safety hazard",
+    "exJa": "安全上の危険"
+  },
+  {
+    "id": "t0918",
+    "w": "homeowner",
+    "ja": "住宅所有者",
+    "pos": "n",
+    "ex": "A new homeowner",
+    "exJa": "新しい住宅所有者"
+  },
+  {
+    "id": "t0919",
+    "w": "imperative",
+    "ja": "必須の",
+    "pos": "a",
+    "ex": "Speed is imperative",
+    "exJa": "スピードが必須だ"
+  },
+  {
+    "id": "t0920",
+    "w": "inflate",
+    "ja": "膨らませる",
+    "pos": "v",
+    "ex": "Inflate the tires",
+    "exJa": "タイヤに空気を入れる"
+  },
+  {
+    "id": "t0921",
+    "w": "insert",
+    "ja": "差し込む",
+    "pos": "v",
+    "ex": "Insert the card",
+    "exJa": "カードを差し込む"
+  },
+  {
+    "id": "t0922",
+    "w": "lecturer",
+    "ja": "講演者",
+    "pos": "n",
+    "ex": "A guest lecturer",
+    "exJa": "ゲストの講演者"
+  },
+  {
+    "id": "t0923",
+    "w": "meaningful",
+    "ja": "意義のある",
+    "pos": "a",
+    "ex": "Meaningful work",
+    "exJa": "意義ある仕事"
+  },
+  {
+    "id": "t0924",
+    "w": "memorize",
+    "ja": "暗記する",
+    "pos": "v",
+    "ex": "Memorize the steps",
+    "exJa": "手順を暗記する"
+  },
+  {
+    "id": "t0925",
+    "w": "merchant",
+    "ja": "商店主",
+    "pos": "n",
+    "ex": "A local merchant",
+    "exJa": "地元の商店主"
+  },
+  {
+    "id": "t0926",
+    "w": "modification",
+    "ja": "修正",
+    "pos": "n",
+    "ex": "A minor modification",
+    "exJa": "軽微な修正"
+  },
+  {
+    "id": "t0927",
+    "w": "occupant",
+    "ja": "居住者",
+    "pos": "n",
+    "ex": "The previous occupant",
+    "exJa": "前の居住者"
+  },
+  {
+    "id": "t0928",
+    "w": "overcharge",
+    "ja": "高く請求する",
+    "pos": "v",
+    "ex": "Don't overcharge clients",
+    "exJa": "顧客に高く請求しない"
+  },
+  {
+    "id": "t0929",
+    "w": "oversee",
+    "ja": "統括する",
+    "pos": "v",
+    "ex": "Oversee the project",
+    "exJa": "計画を統括する"
+  },
+  {
+    "id": "t0930",
+    "w": "petition",
+    "ja": "請願",
+    "pos": "n",
+    "ex": "Sign the petition",
+    "exJa": "請願書に署名する"
+  },
+  {
+    "id": "t0931",
+    "w": "pillow",
+    "ja": "枕",
+    "pos": "n",
+    "ex": "A soft pillow",
+    "exJa": "柔らかい枕"
+  },
+  {
+    "id": "t0932",
+    "w": "popcorn",
+    "ja": "ポップコーン",
+    "pos": "n",
+    "ex": "Buy some popcorn",
+    "exJa": "ポップコーンを買う"
+  },
+  {
+    "id": "t0933",
+    "w": "pottery",
+    "ja": "陶器",
+    "pos": "n",
+    "ex": "Handmade pottery",
+    "exJa": "手作りの陶器"
+  },
+  {
+    "id": "t0934",
+    "w": "professionally",
+    "ja": "プロとして",
+    "pos": "a",
+    "ex": "Professionally cleaned",
+    "exJa": "専門業者が清掃した"
+  },
+  {
+    "id": "t0935",
+    "w": "publicize",
+    "ja": "広報する",
+    "pos": "v",
+    "ex": "Publicize the event",
+    "exJa": "イベントを広報する"
+  },
+  {
+    "id": "t0936",
+    "w": "ray",
+    "ja": "光線",
+    "pos": "n",
+    "ex": "A ray of light",
+    "exJa": "一筋の光"
+  },
+  {
+    "id": "t0937",
+    "w": "redecorate",
+    "ja": "模様替えする",
+    "pos": "v",
+    "ex": "Redecorate the lobby",
+    "exJa": "ロビーを模様替えする"
+  },
+  {
+    "id": "t0938",
+    "w": "refinery",
+    "ja": "製油所",
+    "pos": "n",
+    "ex": "An oil refinery",
+    "exJa": "製油所"
+  },
+  {
+    "id": "t0939",
+    "w": "refresh",
+    "ja": "再読み込みする",
+    "pos": "v",
+    "ex": "Refresh the page",
+    "exJa": "ページを再読み込みする"
+  },
+  {
+    "id": "t0940",
+    "w": "refundable",
+    "ja": "返金可能な",
+    "pos": "a",
+    "ex": "A refundable deposit",
+    "exJa": "返金可能な保証金"
+  },
+  {
+    "id": "t0941",
+    "w": "reimbursement",
+    "ja": "払い戻し",
+    "pos": "n",
+    "ex": "Request reimbursement",
+    "exJa": "払い戻しを請求する"
+  },
+  {
+    "id": "t0942",
+    "w": "reliability",
+    "ja": "信頼性",
+    "pos": "n",
+    "ex": "Product reliability",
+    "exJa": "製品の信頼性"
+  },
+  {
+    "id": "t0943",
+    "w": "reluctant",
+    "ja": "気乗りしない",
+    "pos": "a",
+    "ex": "Reluctant to agree",
+    "exJa": "同意に乗り気でない"
+  },
+  {
+    "id": "t0944",
+    "w": "sewer",
+    "ja": "下水道",
+    "pos": "n",
+    "ex": "A sewer pipe",
+    "exJa": "下水管"
+  },
+  {
+    "id": "t0945",
+    "w": "skate",
+    "ja": "スケートする",
+    "pos": "v",
+    "ex": "Skate on ice",
+    "exJa": "氷上で滑る"
+  },
+  {
+    "id": "t0946",
+    "w": "skateboard",
+    "ja": "スケートボード",
+    "pos": "n",
+    "ex": "Ride a skateboard",
+    "exJa": "スケートボードに乗る"
+  },
+  {
+    "id": "t0947",
+    "w": "sleepy",
+    "ja": "眠い",
+    "pos": "a",
+    "ex": "Feel sleepy",
+    "exJa": "眠く感じる"
+  },
+  {
+    "id": "t0948",
+    "w": "tailor",
+    "ja": "仕立てる",
+    "pos": "v",
+    "ex": "Tailor the plan to clients",
+    "exJa": "計画を顧客向けに仕立てる"
+  },
+  {
+    "id": "t0949",
+    "w": "termination",
+    "ja": "解約",
+    "pos": "n",
+    "ex": "Contract termination",
+    "exJa": "契約解除"
+  },
+  {
+    "id": "t0950",
+    "w": "theft",
+    "ja": "盗難",
+    "pos": "n",
+    "ex": "Report a theft",
+    "exJa": "盗難を届け出る"
+  }
+]
