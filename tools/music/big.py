@@ -118,11 +118,11 @@ def build():
     place(tbn, THEME, 2, 78, transpose=-12, accent=12)
     mel += place(horn, THEME, 18, 96, transpose=1, accent=12, lag=0.004)
     place(tbn, THEME, 18, 84, transpose=-11, accent=12)
-    place(acc, THEME, 18, 70, transpose=13, accent=10, legato=0.9)
+    place(acc, THEME, 18, 80, transpose=13, accent=10, legato=0.9)
     mel += place(horn, TAIL_MEL, 26, 102, accent=10)
     place(tbn, TAIL_MEL, 26, 92, transpose=-12, accent=10)
     mel += place(pizz, B_PIZZ, 10, 74, legato=0.6, accent=6)
-    mel += place(glock, B_GLOCK, 10, 70, legato=0.8, accent=6)
+    mel += place(glock, B_GLOCK, 10, 94, legato=0.8, accent=6)
 
     horn.cc(0, 11, 96)
     phrase_arcs(horn, bs(2), 32, 92, 116)
@@ -175,9 +175,9 @@ def build():
         acc_pos = (0, 3, 6)
         k = SEC_DYN[sec] * (0.75 if bar == 1 else 1.0)
         for j in range(8):
-            v = (100 if j in acc_pos else 62) * k
+            v = (116 if j in acc_pos else 76) * k
             riff.note(start + j * 0.5, 0.3, shape[j], v, jitter=0.004)
-    riff.cc(0, 11, 100)
+    riff.cc(0, 11, 118)
 
     # ---------------- accordion: off-accent stabs in A (eighths 2, 5, 7)
     prevv = None
@@ -189,8 +189,8 @@ def build():
         prevv = v
         for j in (2, 5, 7):
             for p in v:
-                acc.note(start + j * 0.5, 0.32, p, 64 + (8 if j == 5 else 0), jitter=0.004)
-    acc.cc(0, 11, 92)
+                acc.note(start + j * 0.5, 0.32, p, 84 + (10 if j == 5 else 0), jitter=0.004)
+    acc.cc(0, 11, 112)
     # B: accordion holds the harmony with a bellows swell every bar
     prevv = None
     for start, dur, ch in prog:

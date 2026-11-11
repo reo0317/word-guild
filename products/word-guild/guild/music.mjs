@@ -1,5 +1,5 @@
 // AAC の末尾の詰め物を除いた、音楽上の一周の長さ（秒）。
-const LOOP_END = {post: 80.640, delivery: 80.000, big: null};
+const LOOP_END = {post: 80.640, delivery: 80.000, big: 53.760};
 const FADE = 0.6;
 
 export function createMusic(options = {}) {
