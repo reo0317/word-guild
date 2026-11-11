@@ -1,0 +1,2633 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "reason": null,
+  "files": {
+    "male": {
+      "url": "male-v1.wav",
+      "sha256": "5b8bcceb257d909edd3c66c67e463516672dd691a3aa6e44d5e8d5a92518938b",
+      "bytes": 2535148,
+      "sampleRate": 44100,
+      "channels": 1,
+      "duration": 28.742675736961452
+    },
+    "female": {
+      "url": "female-v1.wav",
+      "sha256": "1d9542fce0d08bc61da98980fd74778c7045d52bf6f61ad283c1531169538de7",
+      "bytes": 2513644,
+      "sampleRate": 44100,
+      "channels": 1,
+      "duration": 28.498866213151928
+    },
+    "guide": {
+      "url": "guide-v1.wav",
+      "sha256": "16cb3243619560b485d61b39db311fd2ea9c0ac0f867d81dfe82d34733bfaea2",
+      "bytes": 4588732,
+      "sampleRate": 44100,
+      "channels": 1,
+      "duration": 52.0259410430839
+    },
+    "cat": {
+      "url": "cat-v1.wav",
+      "sha256": "be3faa513742e9285dfd2f610558a026bfc946cc83d3c23923596e3c8d57ffb4",
+      "bytes": 296892,
+      "sampleRate": 44100,
+      "channels": 1,
+      "duration": 3.36562358276644
+    },
+    "dog": {
+      "url": "dog-v1.wav",
+      "sha256": "393d322480f16070f8ee8408f682ec3f251670ecba406a4bd2eba3664c66c854",
+      "bytes": 312252,
+      "sampleRate": 44100,
+      "channels": 1,
+      "duration": 3.5397732426303854
+    },
+    "sun": {
+      "url": "sun-v1.wav",
+      "sha256": "e9f34386342f30f20a51fc926b5662bef11120279339ef1b44bfbbff5113a372",
+      "bytes": 271292,
+      "sampleRate": 44100,
+      "channels": 1,
+      "duration": 3.075374149659864
+    },
+    "ant": {
+      "url": "ant-v1.wav",
+      "sha256": "72e5a107cd9e06f3f4563099c85b436e27ad107108e31dc1973c3676814bab0b",
+      "bytes": 254908,
+      "sampleRate": 44100,
+      "channels": 1,
+      "duration": 2.8896145124716552
+    },
+    "animal": {
+      "url": "animal-v1.wav",
+      "sha256": "cfb25e95bb2bdf461254eeccaf1f4dd713f13d76461aeb274a9f89f4d3d1e72e",
+      "bytes": 6872940,
+      "sampleRate": 44100,
+      "channels": 1,
+      "duration": 77.92399092970521
+    },
+    "final": {
+      "url": "final-v1.wav",
+      "sha256": "70b4dd2719432a85a6607c715b53ffedf2280c7cad1e23b3b4a4914e8078d0ce",
+      "bytes": 290748,
+      "sampleRate": 44100,
+      "channels": 1,
+      "duration": 3.2959637188208615
+    }
+  },
+  "lines": {
+    "select.hero.ready.male": {
+      "id": "select.hero.ready",
+      "speaker": "male",
+      "text": "剣より先に、言葉の出番か！",
+      "reading": "けんよりさきに、ことばのでばんか！",
+      "file": "male",
+      "start": 0.0,
+      "end": 2.9024943310657596,
+      "startSample": 0,
+      "endSample": 128000,
+      "duration": 2.9024943310657596,
+      "pcmSha256": "34a4cbbd83be0daa85c227385c159145fc94d1eca66f34a5d3838636c03c2971",
+      "rms": 0.11582911109985611,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.12065166312281955,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "けんよりさきに、ことばのでばんか！",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.7,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 3620085467
+      },
+      "direction": "勢いよく返事、語尾は自然",
+      "targetSeconds": 2.4,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "3941dd9c326b22b44845fdff44d2e26fd4910ac7d00835a69515d59eb5e8c911",
+        "pcmSha256": "34a4cbbd83be0daa85c227385c159145fc94d1eca66f34a5d3838636c03c2971"
+      }
+    },
+    "depart.hero.step.male": {
+      "id": "depart.hero.step",
+      "speaker": "male",
+      "text": "よし、森の書庫へ出発だ！",
+      "reading": "よし、もりのしょこへしゅっぱつだ！",
+      "file": "male",
+      "start": 2.9824943310657597,
+      "end": 5.420589569160998,
+      "startSample": 131528,
+      "endSample": 239048,
+      "duration": 2.4380952380952383,
+      "pcmSha256": "c0a6b400a185a806348cef4790cc637764fe6b409667aebc4cc12b46a59c2618",
+      "rms": 0.09129837690291726,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.09509997369515376,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "よし、もりのしょこへしゅっぱつだ！",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.7,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 107046151
+      },
+      "direction": "前を向く明るい決意",
+      "targetSeconds": 2.3,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "3941dd9c326b22b44845fdff44d2e26fd4910ac7d00835a69515d59eb5e8c911",
+        "pcmSha256": "c0a6b400a185a806348cef4790cc637764fe6b409667aebc4cc12b46a59c2618"
+      }
+    },
+    "cat.hero.whisker.male": {
+      "id": "cat.hero.whisker",
+      "speaker": "male",
+      "text": "ひげにも正解があるのかと思った。",
+      "reading": "ひげにもせいかいがあるのかとおもった。",
+      "file": "male",
+      "start": 5.500589569160998,
+      "end": 7.613605442176871,
+      "startSample": 242576,
+      "endSample": 335760,
+      "duration": 2.1130158730158732,
+      "pcmSha256": "ce917d0855d0f2f42c307ddfa0f937309c00c56c4502615f48bb87f10a0520c3",
+      "rms": 0.11999995504685544,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.16503770856331554,
+        "gain": 0.7271065567052687,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "ひげにもせいかいがあるのかとおもった。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.7,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 2966021063
+      },
+      "direction": "さらっと切り返す",
+      "targetSeconds": 2.2,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "3941dd9c326b22b44845fdff44d2e26fd4910ac7d00835a69515d59eb5e8c911",
+        "pcmSha256": "ce917d0855d0f2f42c307ddfa0f937309c00c56c4502615f48bb87f10a0520c3"
+      }
+    },
+    "dog.hero.bridge.male": {
+      "id": "dog.hero.bridge",
+      "speaker": "male",
+      "text": "橋は横なのに、文字は縦なんだな。",
+      "reading": "はしはよこなのに、もじはたてなんだな。",
+      "file": "male",
+      "start": 7.693605442176871,
+      "end": 11.002448979591836,
+      "startSample": 339288,
+      "endSample": 485208,
+      "duration": 3.308843537414966,
+      "pcmSha256": "f9ed7d86c6f2480f6117c81439b673d8010b50bb85303d3aa15c38acbba1768f",
+      "rms": 0.11999947219216851,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.15147227985255263,
+        "gain": 0.7922241621820928,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "はしはよこなのに、もじはたてなんだな。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.7,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 1297986977
+      },
+      "direction": "小さく納得して笑う",
+      "targetSeconds": 2.3,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "3941dd9c326b22b44845fdff44d2e26fd4910ac7d00835a69515d59eb5e8c911",
+        "pcmSha256": "f9ed7d86c6f2480f6117c81439b673d8010b50bb85303d3aa15c38acbba1768f"
+      }
+    },
+    "sun.hero.focus.male": {
+      "id": "sun.hero.focus",
+      "speaker": "male",
+      "text": "今、文字のほうを見てる！",
+      "reading": "いま、もじのほうをみてる！",
+      "file": "male",
+      "start": 11.082448979591836,
+      "end": 13.102585034013606,
+      "startSample": 488736,
+      "endSample": 577824,
+      "duration": 2.020136054421769,
+      "pcmSha256": "426d7bea3e339ae3a5a09e0437a271b4d27260c8d9376ef144d57ee3dfbda18b",
+      "rms": 0.11999985370220961,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.15341813255521736,
+        "gain": 0.782176122218215,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "いま、もじのほうをみてる！",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.7,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 2676397909
+      },
+      "direction": "落ち着いたツッコミ",
+      "targetSeconds": 2.0,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "3941dd9c326b22b44845fdff44d2e26fd4910ac7d00835a69515d59eb5e8c911",
+        "pcmSha256": "426d7bea3e339ae3a5a09e0437a271b4d27260c8d9376ef144d57ee3dfbda18b"
+      }
+    },
+    "ant.hero.turn.male": {
+      "id": "ant.hero.turn",
+      "speaker": "male",
+      "text": "文字も冒険も、寄り道が大事だな。",
+      "reading": "もじもぼうけんも、よりみちがだいじだな。",
+      "file": "male",
+      "start": 13.182585034013606,
+      "end": 16.456598639455784,
+      "startSample": 581352,
+      "endSample": 725736,
+      "duration": 3.274013605442177,
+      "pcmSha256": "283590a740ae7ed6f95e0fedb0cb9f297a8c1c8b8588c7fb835a115ebbd9e55b",
+      "rms": 0.11999954252191179,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.15306967310134237,
+        "gain": 0.7839567274737169,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "もじもぼうけんも、よりみちがだいじだな。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.7,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 780317295
+      },
+      "direction": "自信がついた軽い冗談",
+      "targetSeconds": 2.3,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "3941dd9c326b22b44845fdff44d2e26fd4910ac7d00835a69515d59eb5e8c911",
+        "pcmSha256": "283590a740ae7ed6f95e0fedb0cb9f297a8c1c8b8588c7fb835a115ebbd9e55b"
+      }
+    },
+    "animal.hero.review.male": {
+      "id": "animal.hero.review",
+      "speaker": "male",
+      "text": "強そうだけど、ちゃんと復習なんだな！",
+      "reading": "つよそうだけど、ちゃんとふくしゅうなんだな！",
+      "file": "male",
+      "start": 16.536598639455782,
+      "end": 19.69451247165533,
+      "startSample": 729264,
+      "endSample": 868528,
+      "duration": 3.1579138321995464,
+      "pcmSha256": "054638d0c68f3500d6cc7328ccc7b3ae3c4311e746fd95c07b39fbfcee829aa0",
+      "rms": 0.10375336499539585,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.1080732597284278,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "つよそうだけど、ちゃんとふくしゅうなんだな！",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.7,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 3756041930
+      },
+      "direction": "少し緊張から安心へ",
+      "targetSeconds": 2.4,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "3941dd9c326b22b44845fdff44d2e26fd4910ac7d00835a69515d59eb5e8c911",
+        "pcmSha256": "054638d0c68f3500d6cc7328ccc7b3ae3c4311e746fd95c07b39fbfcee829aa0"
+      }
+    },
+    "clear.hero.male": {
+      "id": "clear.hero",
+      "speaker": "male",
+      "text": "よし、言葉で道が開いた！",
+      "reading": "よし、ことばでみちがひらいた！",
+      "file": "male",
+      "start": 19.774512471655328,
+      "end": 22.37514739229025,
+      "startSample": 872056,
+      "endSample": 986744,
+      "duration": 2.6006349206349206,
+      "pcmSha256": "b603f1a7faa4b3f5c99d9d678c862782999293d407c9e225fb28052747e6ebe3",
+      "rms": 0.09146550383502247,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.09527386097772328,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "よし、ことばでみちがひらいた！",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.7,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 645578021
+      },
+      "direction": "短い勝利の声",
+      "targetSeconds": 1.8,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "3941dd9c326b22b44845fdff44d2e26fd4910ac7d00835a69515d59eb5e8c911",
+        "pcmSha256": "b603f1a7faa4b3f5c99d9d678c862782999293d407c9e225fb28052747e6ebe3"
+      }
+    },
+    "freezing.hero.ice.male": {
+      "id": "freezing.hero.ice",
+      "speaker": "male",
+      "text": "足元が凍ってきた…！",
+      "reading": "あしもとがこおってきた！",
+      "file": "male",
+      "start": 22.45514739229025,
+      "end": 23.894784580498865,
+      "startSample": 990272,
+      "endSample": 1053760,
+      "duration": 1.4396371882086167,
+      "pcmSha256": "62f34bc36798cd61aa6df8e689d84db2cd2b010d1a6f9783b24f5ba3644f4ee2",
+      "rms": 0.10918743982860156,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.11373368635806319,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "あしもとがこおってきた！",
+        "language": "JP",
+        "style": "Surprise",
+        "style_weight": 0.7,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 3321951637
+      },
+      "direction": "足元を見て驚く。男女とも同じ状況と読み",
+      "targetSeconds": 2.1,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "3941dd9c326b22b44845fdff44d2e26fd4910ac7d00835a69515d59eb5e8c911",
+        "pcmSha256": "62f34bc36798cd61aa6df8e689d84db2cd2b010d1a6f9783b24f5ba3644f4ee2"
+      }
+    },
+    "raid.hero.alarm.male": {
+      "id": "raid.hero.alarm",
+      "speaker": "male",
+      "text": "書庫に、こんな客も来るのか…！",
+      "reading": "しょこに、こんなきゃくもくるのか！",
+      "file": "male",
+      "start": 23.974784580498866,
+      "end": 26.552199546485262,
+      "startSample": 1057288,
+      "endSample": 1170952,
+      "duration": 2.5774149659863945,
+      "pcmSha256": "89c13d7da4f06e6a8eda70cd1cef91ac8247e74d07502635747dd0ad753e352e",
+      "rms": 0.11999993332875684,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.14691031478273295,
+        "gain": 0.8168248783447856,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "しょこに、こんなきゃくもくるのか！",
+        "language": "JP",
+        "style": "Surprise",
+        "style_weight": 0.7,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 3909723523
+      },
+      "direction": "強がりに戸惑いが混じる",
+      "targetSeconds": 2.2,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "3941dd9c326b22b44845fdff44d2e26fd4910ac7d00835a69515d59eb5e8c911",
+        "pcmSha256": "89c13d7da4f06e6a8eda70cd1cef91ac8247e74d07502635747dd0ad753e352e"
+      }
+    },
+    "flight.hero.launch.male": {
+      "id": "flight.hero.launch",
+      "speaker": "male",
+      "text": "うわああああああ",
+      "reading": "うわああああああ",
+      "file": "male",
+      "start": 26.63219954648526,
+      "end": 27.80480725623583,
+      "startSample": 1174480,
+      "endSample": 1226192,
+      "duration": 1.172607709750567,
+      "pcmSha256": "0dc76457972a35986ca327816198fcb5503aa5559f26c3887483527708e6ec01",
+      "rms": 0.11999955842204729,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.1983204542035022,
+        "gain": 0.605081308844042,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "うわああああああ",
+        "language": "JP",
+        "style": "Surprise",
+        "style_weight": 0.8,
+        "length": 1.35,
+        "line_split": false,
+        "seed": 981044319
+      },
+      "direction": "うわああああああだけを一息で叫ぶ。飛行開始で一度。落下・着地で再開しない",
+      "targetSeconds": 3.4,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "3941dd9c326b22b44845fdff44d2e26fd4910ac7d00835a69515d59eb5e8c911",
+        "pcmSha256": "0dc76457972a35986ca327816198fcb5503aa5559f26c3887483527708e6ec01"
+      }
+    },
+    "return.hero.guide.male": {
+      "id": "return.hero.guide",
+      "speaker": "male",
+      "text": "しるべは…？",
+      "reading": "しるべは？",
+      "file": "male",
+      "start": 27.884807256235828,
+      "end": 28.66267573696145,
+      "startSample": 1229720,
+      "endSample": 1264024,
+      "duration": 0.7778684807256235,
+      "pcmSha256": "cad4c371d529667d0c2d1bbecfd0bc9d9eef0a95aa69711c575b32debd111c1d",
+      "rms": 0.13329361340455378,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.22215803172918272,
+        "gain": 0.6,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "しるべは？",
+        "language": "JP",
+        "style": "Sad",
+        "style_weight": 0.7,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 4283960711
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 1.5
+    },
+    "select.hero.ready.female": {
+      "id": "select.hero.ready",
+      "speaker": "female",
+      "text": "まずは言葉で勝負、というわけね。",
+      "reading": "まずはことばでしょうぶ、というわけね。",
+      "file": "female",
+      "start": 0.0,
+      "end": 2.507755102040816,
+      "startSample": 0,
+      "endSample": 110592,
+      "duration": 2.507755102040816,
+      "pcmSha256": "2b06d97064884e4efd806d6b8b83326cd444aded1fd01ca40bffa0a9a22e5c49",
+      "rms": 0.11769745892024568,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.12259810601586986,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "まずはことばでしょうぶ、というわけね。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.5,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 3941323191
+      },
+      "direction": "勢いよく返事、語尾は自然",
+      "targetSeconds": 2.4,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "f8c4164251804bfcb23b8bf982c2e8f46fe6398d4178510fb931df0abd4e3fb8",
+        "pcmSha256": "2b06d97064884e4efd806d6b8b83326cd444aded1fd01ca40bffa0a9a22e5c49"
+      }
+    },
+    "depart.hero.step.female": {
+      "id": "depart.hero.step",
+      "speaker": "female",
+      "text": "準備よし。森の書庫へ行こう！",
+      "reading": "じゅんびよし。もりのしょこへいこう！",
+      "file": "female",
+      "start": 2.5877551020408163,
+      "end": 4.7588208616780046,
+      "startSample": 114120,
+      "endSample": 209864,
+      "duration": 2.1710657596371883,
+      "pcmSha256": "592c4d27a17a70f9aa120dc9158bca6e622e9b08b34991759df9e0593b0b861b",
+      "rms": 0.11999967720844214,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.16008026169539055,
+        "gain": 0.7496239619369347,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "じゅんびよし。もりのしょこへいこう！",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.5,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 514088398
+      },
+      "direction": "前を向く明るい決意",
+      "targetSeconds": 2.3,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "f8c4164251804bfcb23b8bf982c2e8f46fe6398d4178510fb931df0abd4e3fb8",
+        "pcmSha256": "592c4d27a17a70f9aa120dc9158bca6e622e9b08b34991759df9e0593b0b861b"
+      }
+    },
+    "cat.hero.whisker.female": {
+      "id": "cat.hero.whisker",
+      "speaker": "female",
+      "text": "文字よりひげのほうが目立つもの。",
+      "reading": "もじよりひげのほうがめだつもの。",
+      "file": "female",
+      "start": 4.838820861678005,
+      "end": 7.021496598639456,
+      "startSample": 213392,
+      "endSample": 309648,
+      "duration": 2.182675736961451,
+      "pcmSha256": "325dc48bf52cbbee40dc682fe06bf43bf6df1c4f6fbeeb594200d9e125f62294",
+      "rms": 0.11999909530323809,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.12651565198924222,
+        "gain": 0.948499241897783,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "もじよりひげのほうがめだつもの。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.5,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 4205249355
+      },
+      "direction": "さらっと切り返す",
+      "targetSeconds": 2.2,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "f8c4164251804bfcb23b8bf982c2e8f46fe6398d4178510fb931df0abd4e3fb8",
+        "pcmSha256": "325dc48bf52cbbee40dc682fe06bf43bf6df1c4f6fbeeb594200d9e125f62294"
+      }
+    },
+    "dog.hero.bridge.female": {
+      "id": "dog.hero.bridge",
+      "speaker": "female",
+      "text": "橋の向きまで試験に出なくてよかった。",
+      "reading": "はしのむきまでしけんにでなくてよかった。",
+      "file": "female",
+      "start": 7.101496598639455,
+      "end": 9.702131519274376,
+      "startSample": 313176,
+      "endSample": 427864,
+      "duration": 2.6006349206349206,
+      "pcmSha256": "f3de917947ab75aaee1b12cbc72a3f5da8c45e6f1b1d967fb72da25f7f2409af",
+      "rms": 0.1085549665396533,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.1130749032887468,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "はしのむきまでしけんにでなくてよかった。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.5,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 3802646869
+      },
+      "direction": "小さく納得して笑う",
+      "targetSeconds": 2.3,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "f8c4164251804bfcb23b8bf982c2e8f46fe6398d4178510fb931df0abd4e3fb8",
+        "pcmSha256": "f3de917947ab75aaee1b12cbc72a3f5da8c45e6f1b1d967fb72da25f7f2409af"
+      }
+    },
+    "sun.hero.focus.female": {
+      "id": "sun.hero.focus",
+      "speaker": "female",
+      "text": "ごめん、今は三文字に夢中。",
+      "reading": "ごめん、いまはさんもじにむちゅう。",
+      "file": "female",
+      "start": 9.782131519274376,
+      "end": 12.289886621315192,
+      "startSample": 431392,
+      "endSample": 541984,
+      "duration": 2.507755102040816,
+      "pcmSha256": "2b63d03eb7d3baa9d7f9c62dc577f7a9c230d5069a74edecaf7a9980b67c6a6c",
+      "rms": 0.11999886689901873,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.13378611681880356,
+        "gain": 0.8969540551246051,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "ごめん、いまはさんもじにむちゅう。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.5,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 2495240272
+      },
+      "direction": "落ち着いたツッコミ",
+      "targetSeconds": 2.0,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "f8c4164251804bfcb23b8bf982c2e8f46fe6398d4178510fb931df0abd4e3fb8",
+        "pcmSha256": "2b63d03eb7d3baa9d7f9c62dc577f7a9c230d5069a74edecaf7a9980b67c6a6c"
+      }
+    },
+    "ant.hero.turn.female": {
+      "id": "ant.hero.turn",
+      "speaker": "female",
+      "text": "文字の道も、まっすぐとは限らないね。",
+      "reading": "もじのみちも、まっすぐとはかぎらないね。",
+      "file": "female",
+      "start": 12.369886621315192,
+      "end": 15.632290249433106,
+      "startSample": 545512,
+      "endSample": 689384,
+      "duration": 3.2624036281179136,
+      "pcmSha256": "bbe1dade994cb52073091ab5953bbb716cd5a1aebf36925b2a3e818dc5c85824",
+      "rms": 0.11186635381707868,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.11652404681661752,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "もじのみちも、まっすぐとはかぎらないね。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.5,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 957388741
+      },
+      "direction": "自信がついた軽い冗談",
+      "targetSeconds": 2.3,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "f8c4164251804bfcb23b8bf982c2e8f46fe6398d4178510fb931df0abd4e3fb8",
+        "pcmSha256": "bbe1dade994cb52073091ab5953bbb716cd5a1aebf36925b2a3e818dc5c85824"
+      }
+    },
+    "animal.hero.review.female": {
+      "id": "animal.hero.review",
+      "speaker": "female",
+      "text": "見た目は迫力満点。でも、ちゃんと復習なのね。",
+      "reading": "みためははくりょくまんてん。でも、ちゃんとふくしゅうなのね。",
+      "file": "female",
+      "start": 15.712290249433106,
+      "end": 20.05442176870748,
+      "startSample": 692912,
+      "endSample": 884400,
+      "duration": 4.342131519274377,
+      "pcmSha256": "32e36ce5560c550c87bf82d8012734bf419b37c65d3a01de5ade0699b310fb05",
+      "rms": 0.11740203784815974,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.12229038789959502,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "みためははくりょくまんてん。でも、ちゃんとふくしゅうなのね。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.5,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 1628405406
+      },
+      "direction": "少し緊張から安心へ",
+      "targetSeconds": 2.4,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "f8c4164251804bfcb23b8bf982c2e8f46fe6398d4178510fb931df0abd4e3fb8",
+        "pcmSha256": "32e36ce5560c550c87bf82d8012734bf419b37c65d3a01de5ade0699b310fb05"
+      }
+    },
+    "clear.hero.female": {
+      "id": "clear.hero",
+      "speaker": "female",
+      "text": "見つけた！次の道が開くよ。",
+      "reading": "みつけた！つぎのみちがひらくよ。",
+      "file": "female",
+      "start": 20.134421768707483,
+      "end": 22.618956916099773,
+      "startSample": 887928,
+      "endSample": 997496,
+      "duration": 2.48453514739229,
+      "pcmSha256": "6cb3de973f0bc8f28a441585732fad3cd7d2542263d8f265b8f52dc7636b3b67",
+      "rms": 0.11999911156923372,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.16983402446654935,
+        "gain": 0.7065721982207122,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "みつけた！つぎのみちがひらくよ。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.5,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 3297215550
+      },
+      "direction": "短い勝利の声",
+      "targetSeconds": 1.8,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "f8c4164251804bfcb23b8bf982c2e8f46fe6398d4178510fb931df0abd4e3fb8",
+        "pcmSha256": "6cb3de973f0bc8f28a441585732fad3cd7d2542263d8f265b8f52dc7636b3b67"
+      }
+    },
+    "freezing.hero.ice.female": {
+      "id": "freezing.hero.ice",
+      "speaker": "female",
+      "text": "足元が凍ってきた…！",
+      "reading": "あしもとがこおってきた！",
+      "file": "female",
+      "start": 22.698956916099775,
+      "end": 24.161814058956917,
+      "startSample": 1001024,
+      "endSample": 1065536,
+      "duration": 1.4628571428571429,
+      "pcmSha256": "9fb26b1a632e2239c247faac721ccb01a353a318265b946103488a6de8307c8a",
+      "rms": 0.11999953337866226,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.15757545207118467,
+        "gain": 0.7615399379961164,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "あしもとがこおってきた！",
+        "language": "JP",
+        "style": "Surprise",
+        "style_weight": 0.5,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 1754426958
+      },
+      "direction": "足元を見て驚く。男女とも同じ状況と読み",
+      "targetSeconds": 2.1,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "f8c4164251804bfcb23b8bf982c2e8f46fe6398d4178510fb931df0abd4e3fb8",
+        "pcmSha256": "9fb26b1a632e2239c247faac721ccb01a353a318265b946103488a6de8307c8a"
+      }
+    },
+    "raid.hero.alarm.female": {
+      "id": "raid.hero.alarm",
+      "speaker": "female",
+      "text": "この気配、番人とは違う…！",
+      "reading": "このけはい、ばんにんとはちがう！",
+      "file": "female",
+      "start": 24.241814058956916,
+      "end": 26.50575963718821,
+      "startSample": 1069064,
+      "endSample": 1168904,
+      "duration": 2.2639455782312927,
+      "pcmSha256": "04af2acde2994949d39d88108c5b86540d02a81692ed38426effc7bab206a6e3",
+      "rms": 0.11999873629315348,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.15368782055496774,
+        "gain": 0.7808035768005506,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "このけはい、ばんにんとはちがう！",
+        "language": "JP",
+        "style": "Surprise",
+        "style_weight": 0.5,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 186303694
+      },
+      "direction": "強がりに戸惑いが混じる",
+      "targetSeconds": 2.2,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "f8c4164251804bfcb23b8bf982c2e8f46fe6398d4178510fb931df0abd4e3fb8",
+        "pcmSha256": "04af2acde2994949d39d88108c5b86540d02a81692ed38426effc7bab206a6e3"
+      }
+    },
+    "flight.hero.launch.female": {
+      "id": "flight.hero.launch",
+      "speaker": "female",
+      "text": "うわああああああ",
+      "reading": "うわああああああ",
+      "file": "female",
+      "start": 26.585759637188207,
+      "end": 27.58421768707483,
+      "startSample": 1172432,
+      "endSample": 1216464,
+      "duration": 0.9984580498866213,
+      "pcmSha256": "0f8abb0ca8d9ab587a89bbfede1e42db6f5782d9fe05951e3ecd1b4db396d891",
+      "rms": 0.16188725318815023,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.2698125973023943,
+        "gain": 0.6,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "うわああああああ",
+        "language": "JP",
+        "style": "Surprise",
+        "style_weight": 0.8,
+        "length": 1.35,
+        "line_split": false,
+        "seed": 1712569009
+      },
+      "direction": "うわああああああだけを一息で叫ぶ。飛行開始で一度。落下・着地で再開しない",
+      "targetSeconds": 3.4,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "f8c4164251804bfcb23b8bf982c2e8f46fe6398d4178510fb931df0abd4e3fb8",
+        "pcmSha256": "0f8abb0ca8d9ab587a89bbfede1e42db6f5782d9fe05951e3ecd1b4db396d891"
+      }
+    },
+    "return.hero.guide.female": {
+      "id": "return.hero.guide",
+      "speaker": "female",
+      "text": "しるべは…？",
+      "reading": "しるべは？",
+      "file": "female",
+      "start": 27.66421768707483,
+      "end": 28.418866213151926,
+      "startSample": 1219992,
+      "endSample": 1253272,
+      "duration": 0.7546485260770975,
+      "pcmSha256": "d239a4088fe1dc71c40b031ca9078da279ffce8c5046880fdb62de495a2571ae",
+      "rms": 0.12910816834087707,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.21518182487256002,
+        "gain": 0.6,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "しるべは？",
+        "language": "JP",
+        "style": "Sad",
+        "style_weight": 0.5,
+        "length": 0.98,
+        "line_split": false,
+        "seed": 762041094
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 1.5
+    },
+    "select.guide.welcome": {
+      "id": "select.guide.welcome",
+      "speaker": "guide",
+      "text": "ようこそ。今日は言葉で、森の道を開こう。",
+      "reading": "ようこそ。きょうはことばで、もりのみちをひらこう。",
+      "file": "guide",
+      "start": 0.0,
+      "end": 3.912562358276644,
+      "startSample": 0,
+      "endSample": 172544,
+      "duration": 3.912562358276644,
+      "pcmSha256": "224c295184e023aad8320b613fcbbab3c41d30060030f57c12614299396c4442",
+      "rms": 0.11999995275206285,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.13663915701049648,
+        "gain": 0.8782255586572575,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "ようこそ。きょうはことばで、もりのみちをひらこう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 828183823
+      },
+      "direction": "温かく、後半に期待",
+      "targetSeconds": 3.4,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "224c295184e023aad8320b613fcbbab3c41d30060030f57c12614299396c4442"
+      }
+    },
+    "select.guide.partner": {
+      "id": "select.guide.partner",
+      "speaker": "guide",
+      "text": "その前に、相棒を選ぼう。一緒なら心強いよ。",
+      "reading": "そのまえに、あいぼうをえらぼう。いっしょならこころづよいよ。",
+      "file": "guide",
+      "start": 3.992562358276644,
+      "end": 8.381133786848073,
+      "startSample": 176072,
+      "endSample": 369608,
+      "duration": 4.388571428571429,
+      "pcmSha256": "1dd9f7a8730c895784ca8f1ae58b55ab63070efb58bfc6ba1216a8f2ca7d9413",
+      "rms": 0.11999995226813737,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.17087384805488728,
+        "gain": 0.7022724739098412,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "そのまえに、あいぼうをえらぼう。いっしょならこころづよいよ。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 2431441766
+      },
+      "direction": "落ち着いた女性声。温かく、性別を強調する語尾は使わない",
+      "targetSeconds": 3.5,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "1dd9f7a8730c895784ca8f1ae58b55ab63070efb58bfc6ba1216a8f2ca7d9413"
+      }
+    },
+    "cat.guide.trace": {
+      "id": "cat.guide.trace",
+      "speaker": "guide",
+      "text": "猫はcat。横になぞって、指を離そう。",
+      "reading": "ねこはキャット。よこになぞって、ゆびをはなそう。",
+      "file": "guide",
+      "start": 8.461133786848073,
+      "end": 12.257596371882086,
+      "startSample": 373136,
+      "endSample": 540560,
+      "duration": 3.7964625850340137,
+      "pcmSha256": "8d9b94da7f37a38a6fc9d4bc5f5de301d9bedc1b82827f21344eafdae7ce1eaf",
+      "rms": 0.11930914853749663,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.1242767560015165,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "ねこはキャット。よこになぞって、ゆびをはなそう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 3342156967
+      },
+      "direction": "ゆっくり明瞭。英語は自然に",
+      "targetSeconds": 3.2,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "8d9b94da7f37a38a6fc9d4bc5f5de301d9bedc1b82827f21344eafdae7ce1eaf"
+      }
+    },
+    "cat.guide.undo": {
+      "id": "cat.guide.undo",
+      "speaker": "guide",
+      "text": "行きすぎたら、一歩戻して取り消せるよ。",
+      "reading": "いきすぎたら、いっぽもどしてとりけせるよ。",
+      "file": "guide",
+      "start": 12.337596371882086,
+      "end": 15.553560090702948,
+      "startSample": 544088,
+      "endSample": 685912,
+      "duration": 3.215963718820862,
+      "pcmSha256": "01e53a3563889510050de5b667bd76273057012795fd3718e427cd9265a35198",
+      "rms": 0.11999941406989315,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.16441272427849118,
+        "gain": 0.7298705165710745,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "いきすぎたら、いっぽもどしてとりけせるよ。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 1575186562
+      },
+      "direction": "短い補足、操作を急かさない",
+      "targetSeconds": 3.0,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "01e53a3563889510050de5b667bd76273057012795fd3718e427cd9265a35198"
+      }
+    },
+    "dog.guide.vertical": {
+      "id": "dog.guide.vertical",
+      "speaker": "guide",
+      "text": "犬はdog。今度は縦になぞろう。",
+      "reading": "いぬはドッグ。こんどはたてになぞろう。",
+      "file": "guide",
+      "start": 15.633560090702948,
+      "end": 18.74503401360544,
+      "startSample": 689440,
+      "endSample": 826656,
+      "duration": 3.111473922902494,
+      "pcmSha256": "7a460cf8874f1e558f4d5f7b0c3b0df360e7d38deb68c550a57f196f5b441b1f",
+      "rms": 0.1199997894814701,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.14802084189380063,
+        "gain": 0.8106966455851904,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "いぬはドッグ。こんどはたてになぞろう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 3038244768
+      },
+      "direction": "縦を少し強調",
+      "targetSeconds": 2.7,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "7a460cf8874f1e558f4d5f7b0c3b0df360e7d38deb68c550a57f196f5b441b1f"
+      }
+    },
+    "sun.guide.horizontal": {
+      "id": "sun.guide.horizontal",
+      "speaker": "guide",
+      "text": "太陽はsun。横の三文字を探そう。",
+      "reading": "たいようはサン。よこのさんもじをさがそう。",
+      "file": "guide",
+      "start": 18.825034013605443,
+      "end": 21.890068027210884,
+      "startSample": 830184,
+      "endSample": 965352,
+      "duration": 3.0650340136054424,
+      "pcmSha256": "24753608d18f12dad16738eec8bf638bcad778427ef60d53e8e2493ca247ef22",
+      "rms": 0.11999974628855908,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.14808977690157088,
+        "gain": 0.8103192705851601,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "たいようはサン。よこのさんもじをさがそう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 2727947299
+      },
+      "direction": "明るく短い説明",
+      "targetSeconds": 2.8,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "24753608d18f12dad16738eec8bf638bcad778427ef60d53e8e2493ca247ef22"
+      }
+    },
+    "ant.guide.turn": {
+      "id": "ant.guide.turn",
+      "speaker": "guide",
+      "text": "アリはant。隣のマスへ進んで、途中で曲がろう。",
+      "reading": "ありはアント。となりのマスへすすんで、とちゅうでまがろう。",
+      "file": "guide",
+      "start": 21.970068027210885,
+      "end": 26.161269841269842,
+      "startSample": 968880,
+      "endSample": 1153712,
+      "duration": 4.191201814058957,
+      "pcmSha256": "e37ba2548da376490d96a9725b644c87f784f2be700c1a592df32beee38f2c5a",
+      "rms": 0.11999986964107147,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.1572748341272144,
+        "gain": 0.7629955591174616,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "ありはアント。となりのマスへすすんで、とちゅうでまがろう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 1721445003
+      },
+      "direction": "曲がるを明瞭に",
+      "targetSeconds": 3.5,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "e37ba2548da376490d96a9725b644c87f784f2be700c1a592df32beee38f2c5a"
+      }
+    },
+    "animal.guide.two": {
+      "id": "animal.guide.two",
+      "speaker": "guide",
+      "text": "cat・dog・antから、違う言葉を二つ。",
+      "reading": "キャット、ドッグ、アントから、ちがうことばをふたつ。",
+      "file": "guide",
+      "start": 26.24126984126984,
+      "end": 30.165442176870748,
+      "startSample": 1157240,
+      "endSample": 1330296,
+      "duration": 3.924172335600907,
+      "pcmSha256": "90d19470c693e4f87d46c97de71782af3b2b9e953875d8fd7ee86fddf291e6d3",
+      "rms": 0.11999994598150361,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.15007627798205392,
+        "gain": 0.7995933908645413,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "キャット、ドッグ、アントから、ちがうことばをふたつ。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 296805586
+      },
+      "direction": "三語を区切る。二つを明瞭に",
+      "targetSeconds": 3.3,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "90d19470c693e4f87d46c97de71782af3b2b9e953875d8fd7ee86fddf291e6d3"
+      }
+    },
+    "retry.guide": {
+      "id": "retry.guide",
+      "speaker": "guide",
+      "text": "大丈夫。最初の文字から、もう一度。",
+      "reading": "だいじょうぶ。さいしょのもじから、もういちど。",
+      "file": "guide",
+      "start": 30.24544217687075,
+      "end": 33.62394557823129,
+      "startSample": 1333824,
+      "endSample": 1482816,
+      "duration": 3.378503401360544,
+      "pcmSha256": "22ff5922f6dd090c41f444bc1e24683b53ebf9d101862aa2dc42b7524c393718",
+      "rms": 0.11999984790605073,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.1515382814309586,
+        "gain": 0.7918791137582779,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "だいじょうぶ。さいしょのもじから、もういちど。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 989618562
+      },
+      "direction": "安心させる。残念そうにしない",
+      "targetSeconds": 2.6,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "22ff5922f6dd090c41f444bc1e24683b53ebf9d101862aa2dc42b7524c393718"
+      }
+    },
+    "duplicate.guide": {
+      "id": "duplicate.guide",
+      "speaker": "guide",
+      "text": "それは発見済み。違う言葉を探そう。",
+      "reading": "それははっけんずみ。ちがうことばをさがそう。",
+      "file": "guide",
+      "start": 33.70394557823129,
+      "end": 36.97795918367347,
+      "startSample": 1486344,
+      "endSample": 1630728,
+      "duration": 3.274013605442177,
+      "pcmSha256": "7bd948aa722396b219103335b4db2c9f4af094a892e63f0ed19b40824300a424",
+      "rms": 0.11888132897055478,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.12383093326593116,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "それははっけんずみ。ちがうことばをさがそう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 4231437777
+      },
+      "direction": "責めず、簡潔",
+      "targetSeconds": 2.7,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "7bd948aa722396b219103335b4db2c9f4af094a892e63f0ed19b40824300a424"
+      }
+    },
+    "found.guide": {
+      "id": "found.guide",
+      "speaker": "guide",
+      "text": "一つ見つけたね。あと一つ！",
+      "reading": "ひとつみつけたね。あとひとつ！",
+      "file": "guide",
+      "start": 37.05795918367347,
+      "end": 39.65859410430839,
+      "startSample": 1634256,
+      "endSample": 1748944,
+      "duration": 2.6006349206349206,
+      "pcmSha256": "0956c754dc170c9584002d732e5a9146f7923b2640b03ff3e6980ccda29a9135",
+      "rms": 0.11999966146985655,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.13349790700365968,
+        "gain": 0.8988904971874229,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "ひとつみつけたね。あとひとつ！",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 143282
+      },
+      "direction": "小さく祝福",
+      "targetSeconds": 2.2,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "0956c754dc170c9584002d732e5a9146f7923b2640b03ff3e6980ccda29a9135"
+      }
+    },
+    "returning.guide.guild": {
+      "id": "returning.guide.guild",
+      "speaker": "guide",
+      "text": "よし、ギルドに帰ろう。帰り道は、こっちだよ。",
+      "reading": "よし、ギルドにかえろう。かえりみちは、こっちだよ。",
+      "file": "guide",
+      "start": 39.73859410430839,
+      "end": 43.6627664399093,
+      "startSample": 1752472,
+      "endSample": 1925528,
+      "duration": 3.924172335600907,
+      "pcmSha256": "ec0bec688a9a63b88febe077c2f0856175869e6945878216b1168effb33988e0",
+      "rms": 0.10746835660627212,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.11194291786621677,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "よし、ギルドにかえろう。かえりみちは、こっちだよ。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 2784764607
+      },
+      "direction": "落ち着いた女性声。冒険を終えてほっとした帰還の案内",
+      "targetSeconds": 2.8,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "ec0bec688a9a63b88febe077c2f0856175869e6945878216b1168effb33988e0"
+      }
+    },
+    "freezing.guide.terrain": {
+      "id": "freezing.guide.terrain",
+      "speaker": "guide",
+      "text": "待って。道が…ゆがんでる！",
+      "reading": "まって。みちが、ゆがんでる！",
+      "file": "guide",
+      "start": 43.742766439909296,
+      "end": 46.204081632653065,
+      "startSample": 1929056,
+      "endSample": 2037600,
+      "duration": 2.461315192743764,
+      "pcmSha256": "8c65c685da34ccbc6a9fbe888583abfac781ac1a33b1de8a5ede247c067c9416",
+      "rms": 0.11999986438939102,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.145793242612347,
+        "gain": 0.8230834149088154,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "まって。みちが、ゆがんでる！",
+        "language": "JP",
+        "style": "Surprise",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 2339515970
+      },
+      "direction": "最初に気づいて息をのむ。道の変形に合わせる",
+      "targetSeconds": 2.6,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "8c65c685da34ccbc6a9fbe888583abfac781ac1a33b1de8a5ede247c067c9416"
+      }
+    },
+    "bewildered.guide.what": {
+      "id": "bewildered.guide.what",
+      "speaker": "guide",
+      "text": "何が起きてるの…！？",
+      "reading": "なにがおきてるの！？",
+      "file": "guide",
+      "start": 46.28408163265306,
+      "end": 47.758548752834464,
+      "startSample": 2041128,
+      "endSample": 2106152,
+      "duration": 1.474467120181406,
+      "pcmSha256": "0e032ea7f37fe0ce36af1d01c7305151d18601ed611c480d5677a624cfaf28b5",
+      "rms": 0.11999973037806072,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.17576078389352118,
+        "gain": 0.6827461583961641,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "なにがおきてるの！？",
+        "language": "JP",
+        "style": "Surprise",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 1268293363
+      },
+      "direction": "困惑して周囲を見回す。ヒントや解説はしない",
+      "targetSeconds": 1.8,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "0e032ea7f37fe0ce36af1d01c7305151d18601ed611c480d5677a624cfaf28b5"
+      }
+    },
+    "raid.guide.shock": {
+      "id": "raid.guide.shock",
+      "speaker": "guide",
+      "text": "ええっ…！",
+      "reading": "ええっ！",
+      "file": "guide",
+      "start": 47.83854875283447,
+      "end": 48.37260770975057,
+      "startSample": 2109680,
+      "endSample": 2133232,
+      "duration": 0.5340589569160997,
+      "pcmSha256": "e9f2f94d68a49c1ff9dc069d417556be8f3d1e8f607218e0067baeca92d6bc3b",
+      "rms": 0.14704161618177852,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.24507350210715165,
+        "gain": 0.6,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "ええっ！",
+        "language": "JP",
+        "style": "Surprise",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 3932825301
+      },
+      "direction": "息をのむ純粋な驚き。説明を足さない",
+      "targetSeconds": 1.2,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "997b448e1205ac88ba5bfb54e7199215e37867e33076d8480163cd022e9ba67a",
+        "pcmSha256": "e9f2f94d68a49c1ff9dc069d417556be8f3d1e8f607218e0067baeca92d6bc3b"
+      }
+    },
+    "rescue.guide.escape": {
+      "id": "rescue.guide.escape",
+      "speaker": "guide",
+      "text": "ここから逃します！",
+      "reading": "ここからにがします！",
+      "file": "guide",
+      "start": 48.452607709750566,
+      "end": 49.93868480725624,
+      "startSample": 2136760,
+      "endSample": 2202296,
+      "duration": 1.486077097505669,
+      "pcmSha256": "86bea9d7d7bed4d4a852200f3fed07d27eccce77a4062f4a958cbcd0904a42f6",
+      "rms": 0.11999993121059947,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.13167985116112974,
+        "gain": 0.9113011515570616,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "ここからにがします！",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 3590935822
+      },
+      "direction": "女性しるべ。切迫した決断。HP0を表示してから最優先",
+      "targetSeconds": 1.8
+    },
+    "rescue.guide.landing": {
+      "id": "rescue.guide.landing",
+      "speaker": "guide",
+      "text": "うまく着地してくださいね！",
+      "reading": "うまくちゃくちしてくださいね！",
+      "file": "guide",
+      "start": 50.018684807256236,
+      "end": 51.9459410430839,
+      "startSample": 2205824,
+      "endSample": 2290816,
+      "duration": 1.9272562358276644,
+      "pcmSha256": "5d46b2e8cb6f1a523fbd5eb04b7722e97cca5a28455600d38cbec7d7c5d34ebb",
+      "rms": 0.11999883981017363,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.15018281204803852,
+        "gain": 0.7990261892393915,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "うまくちゃくちしてくださいね！",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.45,
+        "length": 1.04,
+        "line_split": false,
+        "seed": 1046023350
+      },
+      "direction": "女性しるべ。HP10後、飛行前。語尾に気遣い",
+      "targetSeconds": 2.3
+    },
+    "cat.enemy.dignity": {
+      "id": "cat.enemy.dignity",
+      "speaker": "cat",
+      "text": "なぞるのは文字だ。私のひげではないぞ。",
+      "reading": "なぞるのはもじだ。わたしのひげではないぞ。",
+      "file": "cat",
+      "start": 0.0,
+      "end": 3.2856235827664397,
+      "startSample": 0,
+      "endSample": 144896,
+      "duration": 3.2856235827664397,
+      "pcmSha256": "e3a01cb82edaa26586417325289011919a7a3048f9aa6437ebeeea58d7dfe915",
+      "rms": 0.11999991109743904,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.12827661415291908,
+        "gain": 0.9354783862391901,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "なぞるのはもじだ。わたしのひげではないぞ。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 0.6,
+        "length": 0.94,
+        "line_split": false,
+        "seed": 4042290162
+      },
+      "direction": "真顔で気高く",
+      "targetSeconds": 3.0,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "be3faa513742e9285dfd2f610558a026bfc946cc83d3c23923596e3c8d57ffb4",
+        "pcmSha256": "e3a01cb82edaa26586417325289011919a7a3048f9aa6437ebeeea58d7dfe915"
+      }
+    },
+    "dog.enemy.bridge": {
+      "id": "dog.enemy.bridge",
+      "speaker": "dog",
+      "text": "この橋は、言葉を知る者だけ通す！",
+      "reading": "このはしは、ことばをしるものだけとおす！",
+      "file": "dog",
+      "start": 0.0,
+      "end": 3.4597732426303853,
+      "startSample": 0,
+      "endSample": 152576,
+      "duration": 3.4597732426303853,
+      "pcmSha256": "16f958b425dc5377d9e714d5dca7fcfaf9dfa5451fe8d149056618672241899c",
+      "rms": 0.11604898395721429,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.12088257169008361,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "このはしは、ことばをしるものだけとおす！",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.8,
+        "length": 1.06,
+        "line_split": false,
+        "seed": 3587884827
+      },
+      "direction": "律儀に宣言",
+      "targetSeconds": 2.7,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "393d322480f16070f8ee8408f682ec3f251670ecba406a4bd2eba3664c66c854",
+        "pcmSha256": "16f958b425dc5377d9e714d5dca7fcfaf9dfa5451fe8d149056618672241899c"
+      }
+    },
+    "sun.enemy.radiance": {
+      "id": "sun.enemy.radiance",
+      "speaker": "sun",
+      "text": "私の輝きに、目を奪われたか。",
+      "reading": "わたしのかがやきに、めをうばわれたか。",
+      "file": "sun",
+      "start": 0.0,
+      "end": 2.995374149659864,
+      "startSample": 0,
+      "endSample": 132096,
+      "duration": 2.995374149659864,
+      "pcmSha256": "709edfa26e33e5d6541b008114be653bff7da65a39b1ea4fd82e557b4ca2cdb9",
+      "rms": 0.11999982253531151,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.12883305973725287,
+        "gain": 0.9314379418196901,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "わたしのかがやきに、めをうばわれたか。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.4,
+        "length": 1.05,
+        "line_split": false,
+        "seed": 2641362181
+      },
+      "direction": "少し芝居がかって",
+      "targetSeconds": 2.4,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "e9f34386342f30f20a51fc926b5662bef11120279339ef1b44bfbbff5113a372",
+        "pcmSha256": "709edfa26e33e5d6541b008114be653bff7da65a39b1ea4fd82e557b4ca2cdb9"
+      }
+    },
+    "ant.enemy.bend": {
+      "id": "ant.enemy.bend",
+      "speaker": "ant",
+      "text": "根っこの道は、まっすぐとは限らん。",
+      "reading": "ねっこのみちは、まっすぐとはかぎらん。",
+      "file": "ant",
+      "start": 0.0,
+      "end": 2.809614512471655,
+      "startSample": 0,
+      "endSample": 123904,
+      "duration": 2.809614512471655,
+      "pcmSha256": "d796f845e02c7125800bb2052ce5849765c6970d94d95c7e308c682120527b7d",
+      "rms": 0.11999982422455177,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.14692100369418432,
+        "gain": 0.8167654520641561,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "ねっこのみちは、まっすぐとはかぎらん。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 0.8,
+        "length": 0.94,
+        "line_split": false,
+        "seed": 2784934887
+      },
+      "direction": "職人らしく簡潔",
+      "targetSeconds": 2.8,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "72e5a107cd9e06f3f4563099c85b436e27ad107108e31dc1973c3676814bab0b",
+        "pcmSha256": "d796f845e02c7125800bb2052ce5849765c6970d94d95c7e308c682120527b7d"
+      }
+    },
+    "animal.enemy.challenge": {
+      "id": "animal.enemy.challenge",
+      "speaker": "animal",
+      "text": "よく来た。覚えた動物の言葉を示せ。",
+      "reading": "よくきた。おぼえたどうぶつのことばをしめせ。",
+      "file": "animal",
+      "start": 0.0,
+      "end": 3.680362811791383,
+      "startSample": 0,
+      "endSample": 162304,
+      "duration": 3.680362811791383,
+      "pcmSha256": "1ee7ac0bcea3401ee8739819b209583dd5e323661afc807ae335adddaaa56e09",
+      "rms": 0.11999990946053475,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.13355108265637647,
+        "gain": 0.8985325885283681,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "よくきた。おぼえたどうぶつのことばをしめせ。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 335726617
+      },
+      "direction": "低く威厳、威圧しすぎない",
+      "targetSeconds": 2.8,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "b21e8a6ce33df7eca9e9af1afaa9851e0ad903fad1b9346c10669e9a6cc2012b",
+        "pcmSha256": "1ee7ac0bcea3401ee8739819b209583dd5e323661afc807ae335adddaaa56e09"
+      }
+    },
+    "animal.enemy.approval": {
+      "id": "animal.enemy.approval",
+      "speaker": "animal",
+      "text": "見事だ。今日の試練は、これで終わりだ。",
+      "reading": "みごとだ。きょうのしれんは、これでおわりだ。",
+      "file": "animal",
+      "start": 3.760362811791383,
+      "end": 7.313015873015873,
+      "startSample": 165832,
+      "endSample": 322504,
+      "duration": 3.5526530612244898,
+      "pcmSha256": "93b61c5742267749950d73bbb4de8c78b21e049a7af29d11905d34bbe19de8f5",
+      "rms": 0.11177231666794309,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.11642607692013204,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "みごとだ。きょうのしれんは、これでおわりだ。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 1823644508
+      },
+      "direction": "誇らしく学びを認める。さらに奥へは誘導しない",
+      "targetSeconds": 2.6,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "b21e8a6ce33df7eca9e9af1afaa9851e0ad903fad1b9346c10669e9a6cc2012b",
+        "pcmSha256": "93b61c5742267749950d73bbb4de8c78b21e049a7af29d11905d34bbe19de8f5"
+      }
+    },
+    "bewildered.animal.garden": {
+      "id": "bewildered.animal.garden",
+      "speaker": "animal",
+      "text": "なんだ、なんだ！？私の庭が凍っておるぞ！",
+      "reading": "なんだ、なんだ！？わたしのにわがこおっておるぞ！",
+      "file": "animal",
+      "start": 7.393015873015873,
+      "end": 11.293968253968254,
+      "startSample": 326032,
+      "endSample": 498064,
+      "duration": 3.900952380952381,
+      "pcmSha256": "fc9b65bc1e58d8ec2d9941742fda9f14af5e664258889223886e19bcc9f9537a",
+      "rms": 0.10225072461245262,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.10650791504365832,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "なんだ、なんだ！？わたしのにわがこおっておるぞ！",
+        "language": "JP",
+        "style": "Surprise",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 4177465414
+      },
+      "direction": "倒された番人も起き上がり困惑。威厳を忘れて慌てる",
+      "targetSeconds": 3.3,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "b21e8a6ce33df7eca9e9af1afaa9851e0ad903fad1b9346c10669e9a6cc2012b",
+        "pcmSha256": "fc9b65bc1e58d8ec2d9941742fda9f14af5e664258889223886e19bcc9f9537a"
+      }
+    },
+    "return.animal.arrival": {
+      "id": "return.animal.arrival",
+      "speaker": "animal",
+      "text": "おおっと！…ここがギルドか。",
+      "reading": "おおっと！ここがギルドか。",
+      "file": "animal",
+      "start": 11.373968253968254,
+      "end": 13.870113378684808,
+      "startSample": 501592,
+      "endSample": 611672,
+      "duration": 2.4961451247165534,
+      "pcmSha256": "26ad1909c1a7dc3cc83efa22835d3d1d85a6c4bbfc248ed441c4d643380a4737",
+      "rms": 0.10279130133623335,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.1070711770680506,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "おおっと！ここがギルドか。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 2221834377
+      },
+      "direction": "主人公着地後にのみ開始。通常ボスの飛来・着地をまたぐ",
+      "targetSeconds": 2.8
+    },
+    "return.animal.join": {
+      "id": "return.animal.join",
+      "speaker": "animal",
+      "text": "私も仲間に加えてくれ。これからの案内は任せろ。",
+      "reading": "わたしもなかまにくわえてくれ。これからのあんないはまかせろ。",
+      "file": "animal",
+      "start": 13.950113378684808,
+      "end": 18.628934240362813,
+      "startSample": 615200,
+      "endSample": 821536,
+      "duration": 4.6788208616780045,
+      "pcmSha256": "12885b8f61f74f356f94c712c2c97ec8023babcafeb0ca8c19613fe56fe6234c",
+      "rms": 0.1199999621101581,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.15362295927404596,
+        "gain": 0.7811332405459889,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "わたしもなかまにくわえてくれ。これからのあんないはまかせろ。",
+        "language": "JP",
+        "style": "Happy",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 100474740
+      },
+      "direction": "頼もしく気取らず。相棒交代を意味しない",
+      "targetSeconds": 4.0
+    },
+    "return.animal.welcome": {
+      "id": "return.animal.welcome",
+      "speaker": "animal",
+      "text": "大変だったな。まずは、ここで休もう。",
+      "reading": "たいへんだったな。まずは、ここでやすもう。",
+      "file": "animal",
+      "start": 18.70893424036281,
+      "end": 22.18031746031746,
+      "startSample": 825064,
+      "endSample": 978152,
+      "duration": 3.4713832199546486,
+      "pcmSha256": "32726498330f8853f80b9ba3a3390fe3c74a8365cb9615b6be57beaef76058e3",
+      "rms": 0.11511621737398432,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.11990911143429972,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "たいへんだったな。まずは、ここでやすもう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 2177998299
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 3.0
+    },
+    "return.animal.hp": {
+      "id": "return.animal.hp",
+      "speaker": "animal",
+      "text": "HPがゼロになると敗北だ。しるべが助けてくれたんだな。",
+      "reading": "エイチピーがゼロになるとはいぼくだ。しるべがたすけてくれたんだな。",
+      "file": "animal",
+      "start": 22.26031746031746,
+      "end": 27.124897959183674,
+      "startSample": 981680,
+      "endSample": 1196208,
+      "duration": 4.864580498866213,
+      "pcmSha256": "dd3b5a9d43f67c23e537c0a0bd0118efdca57e5d9731640e5be8386249123077",
+      "rms": 0.1199998374223281,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.13930278222662099,
+        "gain": 0.8614329023578382,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "エイチピーがゼロになるとはいぼくだ。しるべがたすけてくれたんだな。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 1102836254
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 4.2
+    },
+    "return.animal.separation": {
+      "id": "return.animal.separation",
+      "speaker": "animal",
+      "text": "今は会えない。次の冒険は、私が案内しよう。",
+      "reading": "いまはあえない。つぎのぼうけんは、わたしがあんないしよう。",
+      "file": "animal",
+      "start": 27.204897959183672,
+      "end": 31.872108843537415,
+      "startSample": 1199736,
+      "endSample": 1405560,
+      "duration": 4.667210884353741,
+      "pcmSha256": "8da13bd92103cde9e170365b9059c2515cbdea78d422fce2b3089f4a068cde1b",
+      "rms": 0.11999992487564144,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.13471548717993498,
+        "gain": 0.890766180726645,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "いまはあえない。つぎのぼうけんは、わたしがあんないしよう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 468040409
+      },
+      "direction": "死・居場所・終盤の詳細は創作しない",
+      "targetSeconds": 4.0
+    },
+    "companion.animal.home": {
+      "id": "companion.animal.home",
+      "speaker": "animal",
+      "text": "準備ができたら出発だ。次の案内も私に任せろ。",
+      "reading": "じゅんびができたらしゅっぱつだ。つぎのあんないもわたしにまかせろ。",
+      "file": "animal",
+      "start": 31.952108843537413,
+      "end": 36.642539682539685,
+      "startSample": 1409088,
+      "endSample": 1615936,
+      "duration": 4.690430839002268,
+      "pcmSha256": "294f3d0c707a5f3c1a9ec27b497812d397a37242d1204dcd81000857638add2a",
+      "rms": 0.11565792658724919,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.12047335700766375,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "じゅんびができたらしゅっぱつだ。つぎのあんないもわたしにまかせろ。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 2682623585
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 3.5
+    },
+    "companion.animal.select": {
+      "id": "companion.animal.select",
+      "speaker": "animal",
+      "text": "主人公と相棒を選ぼう。私は案内役だ。",
+      "reading": "しゅじんこうとあいぼうをえらぼう。わたしはあんないやくだ。",
+      "file": "animal",
+      "start": 36.72253968253968,
+      "end": 40.9253514739229,
+      "startSample": 1619464,
+      "endSample": 1804808,
+      "duration": 4.20281179138322,
+      "pcmSha256": "21358348c3992e0c35a0f537a92532297899990581203e4f8e3e52785964ec0d",
+      "rms": 0.1199998298954488,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.13325915969123833,
+        "gain": 0.9005009507642114,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "しゅじんこうとあいぼうをえらぼう。わたしはあんないやくだ。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 1363816491
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 3.3
+    },
+    "companion.animal.cat": {
+      "id": "companion.animal.cat",
+      "speaker": "animal",
+      "text": "猫はcat。横になぞって、指を離そう。",
+      "reading": "ねこはキャット。よこになぞって、ゆびをはなそう。",
+      "file": "animal",
+      "start": 41.0053514739229,
+      "end": 45.15011337868481,
+      "startSample": 1808336,
+      "endSample": 1991120,
+      "duration": 4.144761904761904,
+      "pcmSha256": "8ffa20c743469af52744276872c3ed009e238b4c1987e20a7be630fa32fd942b",
+      "rms": 0.11202640207402723,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.11669069914470159,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "ねこはキャット。よこになぞって、ゆびをはなそう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 1853521773
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 3.2
+    },
+    "companion.animal.undo": {
+      "id": "companion.animal.undo",
+      "speaker": "animal",
+      "text": "行きすぎたら、一歩戻して取り消せるぞ。",
+      "reading": "いきすぎたら、いっぽもどしてとりけせるぞ。",
+      "file": "animal",
+      "start": 45.230113378684806,
+      "end": 47.95845804988662,
+      "startSample": 1994648,
+      "endSample": 2114968,
+      "duration": 2.728344671201814,
+      "pcmSha256": "ac092cb5e5d597c235bb6e3040c64927d73c981d0311e5a0da53e1ffc288d224",
+      "rms": 0.11999995853348501,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.15399774027677365,
+        "gain": 0.7792322133060462,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "いきすぎたら、いっぽもどしてとりけせるぞ。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 2247021736
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 3.0
+    },
+    "companion.animal.dog": {
+      "id": "companion.animal.dog",
+      "speaker": "animal",
+      "text": "犬はdog。今度は縦になぞろう。",
+      "reading": "いぬはドッグ。こんどはたてになぞろう。",
+      "file": "animal",
+      "start": 48.03845804988662,
+      "end": 51.115102040816325,
+      "startSample": 2118496,
+      "endSample": 2254176,
+      "duration": 3.076643990929705,
+      "pcmSha256": "019d53fe6315a051cf78d5c9b6fe1ee865cc7531a507e19a9d3ec14f53f515ff",
+      "rms": 0.11999991573455389,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.15964165625321441,
+        "gain": 0.7516835067763448,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "いぬはドッグ。こんどはたてになぞろう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 4236782766
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 2.7
+    },
+    "companion.animal.sun": {
+      "id": "companion.animal.sun",
+      "speaker": "animal",
+      "text": "太陽はsun。横の三文字を探そう。",
+      "reading": "たいようはサン。よこのさんもじをさがそう。",
+      "file": "animal",
+      "start": 51.19510204081632,
+      "end": 54.60843537414966,
+      "startSample": 2257704,
+      "endSample": 2408232,
+      "duration": 3.4133333333333336,
+      "pcmSha256": "0f0d0c5853d04a0f71385cca76146ce5449a2fe6162bef73002e657ed6b5fe2d",
+      "rms": 0.1199998691007171,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.14621212878666318,
+        "gain": 0.8207253460832304,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "たいようはサン。よこのさんもじをさがそう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 2864461795
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 2.8
+    },
+    "companion.animal.ant": {
+      "id": "companion.animal.ant",
+      "speaker": "animal",
+      "text": "アリはant。隣のマスへ進んで、途中で曲がろう。",
+      "reading": "ありはアント。となりのマスへすすんで、とちゅうでまがろう。",
+      "file": "animal",
+      "start": 54.68843537414966,
+      "end": 59.227936507936505,
+      "startSample": 2411760,
+      "endSample": 2611952,
+      "duration": 4.539501133786848,
+      "pcmSha256": "1269a861e58e43ac0b66cd9abd092bd3f0d10ac0e823bfbad2aad8e934733883",
+      "rms": 0.1199999440172541,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.13046612086332626,
+        "gain": 0.919779013938106,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "ありはアント。となりのマスへすすんで、とちゅうでまがろう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 2576983190
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 3.5
+    },
+    "companion.animal.two": {
+      "id": "companion.animal.two",
+      "speaker": "animal",
+      "text": "覚えた動物の言葉から、違う言葉を二つ探そう。",
+      "reading": "おぼえたどうぶつのことばから、ちがうことばをふたつさがそう。",
+      "file": "animal",
+      "start": 59.30793650793651,
+      "end": 63.487528344671205,
+      "startSample": 2615480,
+      "endSample": 2799800,
+      "duration": 4.179591836734694,
+      "pcmSha256": "7de79dcf17c6449554e0c881463885102ce8c4f1b46522c584c15453637b0c98",
+      "rms": 0.11999990965081722,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.15325927100383294,
+        "gain": 0.7829868902155933,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "おぼえたどうぶつのことばから、ちがうことばをふたつさがそう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 2876273793
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 3.3
+    },
+    "companion.animal.retry": {
+      "id": "companion.animal.retry",
+      "speaker": "animal",
+      "text": "大丈夫。最初の文字から、もう一度。",
+      "reading": "だいじょうぶ。さいしょのもじから、もういちど。",
+      "file": "animal",
+      "start": 63.5675283446712,
+      "end": 67.01569160997732,
+      "startSample": 2803328,
+      "endSample": 2955392,
+      "duration": 3.4481632653061225,
+      "pcmSha256": "f3e04daceff86c980222bf9c924423d4512e1c4eb911c8d0cd6a3485ecbdd51d",
+      "rms": 0.11999991553631,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.12680037054364177,
+        "gain": 0.9463694742019603,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "だいじょうぶ。さいしょのもじから、もういちど。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 2867620073
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 2.6
+    },
+    "companion.animal.duplicate": {
+      "id": "companion.animal.duplicate",
+      "speaker": "animal",
+      "text": "それは発見済み。違う言葉を探そう。",
+      "reading": "それははっけんずみ。ちがうことばをさがそう。",
+      "file": "animal",
+      "start": 67.09569160997732,
+      "end": 70.71800453514739,
+      "startSample": 2958920,
+      "endSample": 3118664,
+      "duration": 3.622312925170068,
+      "pcmSha256": "4ae2496a910cd62e2929328f8f707e9562be3365565e25c47b6190f2e30a27d7",
+      "rms": 0.11999982420958202,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.12976281960348776,
+        "gain": 0.9247641224711384,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "それははっけんずみ。ちがうことばをさがそう。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 4201079751
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 2.7
+    },
+    "companion.animal.found": {
+      "id": "companion.animal.found",
+      "speaker": "animal",
+      "text": "一つ見つけたな。あと一つ！",
+      "reading": "ひとつみつけたな。あとひとつ！",
+      "file": "animal",
+      "start": 70.7980045351474,
+      "end": 73.67727891156463,
+      "startSample": 3122192,
+      "endSample": 3249168,
+      "duration": 2.8792743764172335,
+      "pcmSha256": "e7c610aa80f84c0c983b851d75d94b191831da5551372a1bc4b576b9e8251b46",
+      "rms": 0.11999962091660557,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.1314698590528954,
+        "gain": 0.9127567403241785,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "ひとつみつけたな。あとひとつ！",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 1442166224
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 2.2
+    },
+    "companion.animal.returning": {
+      "id": "companion.animal.returning",
+      "speaker": "animal",
+      "text": "よし、ギルドに帰ろう。帰り道はこっちだ。",
+      "reading": "よし、ギルドにかえろう。かえりみちはこっちだ。",
+      "file": "animal",
+      "start": 73.75727891156463,
+      "end": 77.84399092970521,
+      "startSample": 3252696,
+      "endSample": 3432920,
+      "duration": 4.08671201814059,
+      "pcmSha256": "f8ef335b91f4c628640b002ec00b3acb8ecc2cd663395663c1e455fee16f2f83",
+      "rms": 0.10015184197947354,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.10432175398768649,
+        "gain": 0.960029297769097,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "よし、ギルドにかえろう。かえりみちはこっちだ。",
+        "language": "JP",
+        "style": "Neutral",
+        "style_weight": 1.0,
+        "length": 1.12,
+        "line_split": false,
+        "seed": 1239738656
+      },
+      "direction": "明瞭に短く。追加本文と演技は制作提案",
+      "targetSeconds": 2.8
+    },
+    "raid.enemy.threat": {
+      "id": "raid.enemy.threat",
+      "speaker": "final",
+      "text": "その小さな言葉で、私に届くと思うか。",
+      "reading": "そのちいさなことばで、わたしにとどくとおもうか。",
+      "file": "final",
+      "start": 0.0,
+      "end": 3.215963718820862,
+      "startSample": 0,
+      "endSample": 141824,
+      "duration": 3.215963718820862,
+      "pcmSha256": "7657846aa39eaa726be9ae4b79530c5f9a73a5248df13a846361f3719a6e9781",
+      "rms": 0.11999990336435809,
+      "editing": {
+        "sourceSampleRate": 44100,
+        "sourceRms": 0.14838176527810698,
+        "gain": 0.8087247093676774,
+        "fadeMilliseconds": 5,
+        "gapMilliseconds": 80,
+        "resampling": "none-native-44100Hz"
+      },
+      "conditions": {
+        "text": "そのちいさなことばで、わたしにとどくとおもうか。",
+        "language": "JP",
+        "style": "Surprise",
+        "style_weight": 0.65,
+        "length": 1.08,
+        "line_split": false,
+        "seed": 1343176737
+      },
+      "direction": "低く静かに。長い笑いや追加アドリブなし",
+      "targetSeconds": 3.1,
+      "reusedFrom": {
+        "scriptSha256": "e9e85be5ddd21ed7aa5ea9641e830451ac86cd5ae8cb477e6d2085c99dffa5ad",
+        "wavSha256": "70b4dd2719432a85a6607c715b53ffedf2280c7cad1e23b3b4a4914e8078d0ce",
+        "pcmSha256": "7657846aa39eaa726be9ae4b79530c5f9a73a5248df13a846361f3719a6e9781"
+      }
+    }
+  },
+  "generator": {
+    "engine": "Style-Bert-VITS2",
+    "proposedVersion": "2.5.0",
+    "device": "cpu",
+    "language": "JP",
+    "modelRepository": "litagin/style_bert_vits2_jvnv",
+    "modelRevision": "205830ca1d49e666ddfbf2a755f0108e9cade4dd",
+    "modelLicense": "CC-BY-SA-4.0",
+    "generated": true,
+    "version": "2.5.0",
+    "modelsSha256": {
+      "jvnv-F1-jp": {
+        "jvnv-F1-jp_e160_s14000.safetensors": "a90fa6c9444d9235c9ec4db99daf7c5c6a21cc26ca141b4c48455d66a3257d01",
+        "config.json": "d310da5c1e9b095a833591b4bc07209631d6edece263da88e597aaf7f9984d3d",
+        "style_vectors.npy": "1f959bb45ed0922efc31ff24e9147253814f42cb1d2d1e2bb10391a9df368489"
+      },
+      "jvnv-M1-jp": {
+        "jvnv-M1-jp_e158_s14000.safetensors": "0d86765f1fe08dbba74cd06283e96b6941b3f232329fabbba9c30e6edc27887a",
+        "config.json": "1a66da636d8a9f0eed4120c59cb1bf1077b819731cf2c960d799e87d383bc76c",
+        "style_vectors.npy": "7a925435e8c1c9efc8fc8e90e690655ab9a7bae00a790892e13e936510d04f05"
+      },
+      "jvnv-F2-jp": {
+        "jvnv-F2_e166_s20000.safetensors": "f6289a6f30bb9795744815b9da764a3c8198b18652d9fddef82fff1e14f0e784",
+        "config.json": "b8aff1fcd9a17a744ce4b9e3e8dc066f2d7d8deb16e0adb09edbdeb569777286",
+        "style_vectors.npy": "900f8cde3a336d12193fec7b7d8e6c5dc77b3a5d719a9be3f8598389cd88e643"
+      },
+      "jvnv-M2-jp": {
+        "jvnv-M2-jp_e159_s17000.safetensors": "8245f39438076d36a3befd8aefb15c38830cef326c1f7c9d9c8e64b647645402",
+        "config.json": "6c14c32c69e92728ec29c5a8cda8d4938fd59c5d035896c8c4ff836887795835",
+        "style_vectors.npy": "c965bb63fa4a759d41a8a4a3649333125d6497ae8a705d81b7d5c5bd2854797c"
+      }
+    },
+    "bert": {
+      "repository": "ku-nlp/deberta-v2-large-japanese-char-wwm",
+      "revision": "547b0e8b044fba3f9b84d0ab9f990440bd130c8b",
+      "license": "CC-BY-SA-4.0",
+      "linearWeights": "torch-dynamic-qint8",
+      "quantizedLinearLayers": 146,
+      "filesSha256": {
+        "config.json": "8f387ab4c6b36e47c7071327c7a42099002781279b00a7e6a7fe88f3da237a3f",
+        "pytorch_model.bin": "bf0dab8ad87bd7c22e85ec71e04f2240804fda6d33196157d6b5923af6ea1201",
+        "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "tokenizer_config.json": "1cc5203f09ecac12bb7a98a05cb9c2e39a9e37a113a7d85d12542ef29190583b",
+        "vocab.txt": "902cbd7e218aaf23a72955533293ceac12fcc4e010ad98c0c14757b94ce7abb6"
+      }
+    },
+    "environment": {
+      "python": "3.11.3",
+      "packages": {
+        "style-bert-vits2": "2.5.0",
+        "torch": "2.3.1+cpu",
+        "transformers": "4.41.1",
+        "numpy": "1.26.4",
+        "pyopenjtalk-dict": "0.3.4.dev2"
+      },
+      "scriptExists": true,
+      "requiredEngineVersion": "2.5.0",
+      "ready": true
+    },
+    "dictionary": {
+      "source": "https://github.com/r9y9/open_jtalk/releases/tag/v1.11.1",
+      "sysDicSha256": "ca57d9029691a70a5dfb99afc2844180256161d7130da65b1a867510e129b9a6"
+    },
+    "threads": 4,
+    "interopThreads": 1,
+    "revision": "rescue-recruitment-v3",
+    "synthesizedScriptSha256": "9770e7af0ad4988792ca6d247fa52aba41e09f61debebd0bc7f3241f13b16d59"
+  },
+  "castStatus": "generated-cast-not-auditioned",
+  "cast": {
+    "male": {
+      "name": "リオ",
+      "model": "jvnv-M1-jp",
+      "style": "Neutral",
+      "styleWeight": 0.7,
+      "length": 0.98,
+      "direction": "好奇心を前に出し、短く軽い応答。"
+    },
+    "female": {
+      "name": "ミナ",
+      "model": "jvnv-F1-jp",
+      "style": "Happy",
+      "styleWeight": 0.5,
+      "length": 0.98,
+      "direction": "凛とした意欲。説明は急がず、返しは軽快。"
+    },
+    "guide": {
+      "name": "しるべ",
+      "model": "jvnv-F2-jp",
+      "style": "Neutral",
+      "styleWeight": 0.45,
+      "length": 1.04,
+      "direction": "落ち着いた案内役。乱入時はSurpriseで驚きだけ。"
+    },
+    "cat": {
+      "name": "猫",
+      "model": "jvnv-F2-jp",
+      "style": "Happy",
+      "styleWeight": 0.6,
+      "length": 0.94,
+      "direction": "素早い試し役。幼児風にはしない。"
+    },
+    "dog": {
+      "name": "犬",
+      "model": "jvnv-M1-jp",
+      "style": "Neutral",
+      "styleWeight": 0.8,
+      "length": 1.06,
+      "direction": "堂々と道を守る、落ち着いた断言。"
+    },
+    "sun": {
+      "name": "太陽",
+      "model": "jvnv-F2-jp",
+      "style": "Neutral",
+      "styleWeight": 0.4,
+      "length": 1.05,
+      "direction": "硬い守護像の雰囲気。明瞭に短く。"
+    },
+    "ant": {
+      "name": "アリ",
+      "model": "jvnv-F1-jp",
+      "style": "Neutral",
+      "styleWeight": 0.8,
+      "length": 0.94,
+      "direction": "几帳面な巡回役。区切りを明確に。"
+    },
+    "animal": {
+      "name": "通常ボス",
+      "model": "jvnv-M2-jp",
+      "style": "Neutral",
+      "styleWeight": 1.0,
+      "length": 1.12,
+      "direction": "威厳ある番人。低い落ち着き、認める時は柔らかく。"
+    },
+    "final": {
+      "name": "乱入ボス",
+      "model": "jvnv-M2-jp",
+      "style": "Angry",
+      "styleWeight": 0.65,
+      "length": 1.08,
+      "direction": "抑えた威圧。叫び続けず、冷たい短い断言。"
+    }
+  },
+  "verification": {
+    "generatedAudio": "generated-not-auditioned",
+    "audition": "not-run",
+    "iphone": "not-run"
+  },
+  "scriptSha256": "abf0c9ddf0005d036b38ef58daeaa16ea6ee848787670c2049bb01ef4d90f698"
+}

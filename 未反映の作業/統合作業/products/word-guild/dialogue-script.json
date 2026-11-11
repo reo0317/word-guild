@@ -1,0 +1,1093 @@
+{
+  "version": 1,
+  "language": "ja-JP",
+  "status": "production-proposal",
+  "source": "2026-10-12最新human_feedbackによる救出・別離・通常ボス加入。指定された救出台詞と叫び以外の追加台詞・演技・尺は制作提案。獅子／黒魔導士の名称提案は未採用。",
+  "requirements": [
+    "上下左右のみ。sunは横。直前のマスへ戻すと取り消し。",
+    "通常ボスはcat・dog・antの異なる2語。",
+    "乱入中のしるべは驚きだけ。答え・分類・経路を説明しない。",
+    "会話は入力・HP・時計・保存を変更しない。通常移動で現在の発話は続け、古い未再生説明は捨てる。",
+    "通常ボス撃破後は帰還相談→道の異変と凍結→しるべと番人の困惑→乱入。",
+    "乱入10秒はstage5の操作可能なbattleから測る。前の演出に攻撃・回復はない。",
+    "しるべは主人公女性声と区別できる落ち着いた女性声。配役の採用と聴感は別担当。",
+    "飛行開始から着地までは男女とも「うわああああああ」だけ。HPゼロ説明は帰還後。",
+    "HP0表示→ここから逃します！→救出HP10→うまく着地してくださいね！→主人公飛行・着地→通常ボス飛来・加入。",
+    "加入した通常ボスは進行役。選択済み相棒、属性、最大HP100を変更しない。しるべは終盤の再会まで不在。今回続章は追加しない。"
+  ],
+  "handoff": {
+    "load": "loadDialogueScript()でJSONを読む。ゲーム開始・操作は取得完了を待たない。失敗時はgetStoryBeatを表示する。",
+    "events": "dispatch({eventId,event,screen,stage,state,hero,ally,returned,bossRecruited,guideAvailable})。物語フラグはGame.storyState／保存から渡す。reset時も同じフラグを渡す。",
+    "end": "VoicePlayer完了時は開始時のline.playbackIdをonLineEndedへ渡す。失敗・声停止中はUI側の字幕表示時間で同じ通知を出し、ゲーム時計とは分ける。",
+    "voiceKeys": "音声manifestキーは通常行のid、主人公行はid + .male/.female。改稿の全キーはeventsから列挙する。旧fall・land・defeat.hero.returnは使用しない。本文と読みの変更行は再収録する。",
+    "render": "current.playbackIdが変わった時だけ会話欄のtextContent・話者・表情と声を更新。current=nullではvoice.stopして静的字幕へ。盤面DOMは再構築しない。onChangeは通知専用で、ゲーム状態を変更しない。",
+    "selection": "選択変更はdispatch({event:'context',eventId:固有ID,hero,ally,...})。現在の声は継続し、未再生主人公行を新しい選択で解決。出発前又は次の周回ではreset。",
+    "visibility": "VoicePlayerとDirectorを一緒にpause/resumeする。再開時にplayを最初から呼ばずVoicePlayer.resumeを使う。",
+    "checks": "node --test tests/word-guild-dialogue.test.mjsを基本担当がATELIER_CHECKS.jsonへ登録。DESIGN・REPORT・README追記と画面・音声統合は基本担当。",
+    "checkRegistration": {
+      "name": "word-guild 会話進行",
+      "argv": [
+        "node",
+        "--test",
+        "tests/word-guild-dialogue.test.mjs"
+      ],
+      "timeout": 30
+    },
+    "verification": {
+      "state": "owned-modules-verified-integration-pending",
+      "date": "2026-10-12",
+      "scope": "担当8ファイルを直接編集。入力・語彙・属性・Music・素材・共通設定は変更していない。",
+      "checks": [
+        {
+          "command": "node --test tests/word-guild.test.mjs tests/word-guild-transition.test.mjs tests/word-guild-dialogue.test.mjs tests/word-guild-conversation.test.mjs tests/word-guild-voice.test.mjs tests/word-guild-audio.test.mjs",
+          "result": "74件成功。HP0→10、回復一回、両即死経路、戦闘停止、保存互換、加入後guide不在、既存音声競合と音響回帰。実画面frame関数をVMでも実行。"
+        },
+        {
+          "command": "node --check products/word-guild/core.mjs / transition.mjs / dialogue.mjs / story.mjs（各ファイル個別実行）",
+          "result": "4ファイル成功。JSON UTF-8解析も成功。37イベント・54台詞・男女差分を含む66キー。"
+        },
+        {
+          "command": "python quality/run_ruff.py all",
+          "result": "全体check成功。format --check成功、98ファイル整形済み。"
+        },
+        {
+          "command": "Python Playwrightをインライン実行＋ThreadingHTTPServer(127.0.0.1,動的ポート)",
+          "result": "390×844、320×568、1280×900の9確認群成功。dev=1&scene=catで時計を固定し、実ポインターの行き過ぎ→一歩戻し→指を離した正解判定、全42マスの収まりを確認。ブラウザー内でGame/Directorをimportし、時間と2語の両経路、救出一回、保存復元、animal案内役を検査。新演出を自然攻略した検査ではない。"
+        },
+        {
+          "command": "同じローカル配信の3画面幅をPython PlaywrightでJPEG撮影し、ツールの画像出力で開いて確認",
+          "result": "3画像を実際に開き、HP・42マス・下側会話の収まりを確認。担当外への新規ファイル作成は禁止のため画像はメモリー内のみで保存ファイルはない。新救出・到着の画面演出は未接続であり、画像から確認済みとは扱わない。"
+        }
+      ],
+      "acceptanceEvidence": {
+        "HP0→救出10・一回・時間と2語・通常時計停止": "tests/word-guild.test.mjsの新しい2検査と既存相性/通常生存/即死回帰。",
+        "救出台詞順序・重複・古い終了通知・非表示復帰": "tests/word-guild-dialogue.test.mjsの新しい5検査、tests/word-guild-transition.test.mjsの実frame検査。",
+        "保存互換・加入後のguide不在": "旧completeのみではbossRecruited=false、guideAvailable=true。新加入保存はanimal。ホーム/選択/各段階/誤答のDirectorと静的字幕を検査。",
+        "名前・提案区分": "speakersの直接名、旧帰還guide行の撤去。獅子/黒魔導士は未採用。追加台詞と尺はproduction-proposal。",
+        "操作と素材の維持": "既存入力/盤面/属性/Musicは未変更。Node回帰と3画面幅の実ポインター確認。素材のファイルは編集していない。"
+      },
+      "limitations": [
+        "app.mjsの時間切れlossでleft=durations.lossが未設定。旧手動帰還ボタンはnext後もdurations.launchを使う。自動進行・HP0の表示尺を基本担当が接続する。",
+        "Conversationの大きなguide素材、appの旧敵名/question-clues、保存とcontextの新物語フラグ、開発シーンとreadonly表示は担当外。具体的な接続契約はintegrationRequiredを参照。",
+        "新音声21キー（しるべ2、animal17、主人公男女2）と旧帰還5キー撤去、scriptSha256/manifest同期は音声担当。escape3000ms/sendoff3800ms/recruited5200msは実尺確定前の制作値。",
+        "統合後の自然攻略、救出・主人公着地・通常ボス飛来加入の3幅/reduced-motion撮影とファイル保存、iPhone実機、発音と聴感は未確認。",
+        "DESIGN/REPORT/README/SCRIPT.mdとATELIER_CHECKSの編集は基本担当。今回の差分・検査結果と残件を転記する。"
+      ]
+    },
+    "integrationRequired": [
+      "app.mjsのloss手動帰還ボタンを除き、durations.lossから全段階を自動で進める。battleの時間切れによるloss時にもleft=durations.lossを設定。",
+      "new Game(ally,random,data)へ保存の物語フラグを渡す。recruitedでbossRecruited/guideAvailable、homeでcompleteをdataへコピーしpersist。保存キーとversionは1を維持。",
+      "Conversationのcontext/resetとstoryへ物語フラグを渡す。大きな案内役をGame.narrator（animal/guide/null）に接続し、加入後のhome/select/replayにも適用。",
+      "lossのHP0とダメージ衝撃、rescueのHP10とheal、主人公着地後のbossArrival/bossLand/recruitedを描画。question-cluesはDOMから削除。",
+      "開発シーンとreadonlyへ全新段階、rescueApplied、bossRecruited、guideAvailable、narratorを追加。確認用loadはフラグとHPを整合させる。",
+      "新録音のescape/sendoff/recruited実尺がdurationsの余裕内か確認して調整。物語時計は音声非依存、非表示中停止。声停止時も静的字幕は同じ順序。",
+      "音声担当は追加キー（companion.*を含む）をanimal配役で収録し、旧帰還guide3行とreturn.hero.lesson男女を再生一覧から外す。",
+      "基本担当がDESIGN/REPORT/README/SCRIPT.mdと検査登録へ転記し、ブラウザー自然攻略・画面確認・聴感・iPhone確認を実施。加入後はチュートリアル再演にguideを出さず、続章や再会イベントは追加しない。"
+    ],
+    "storyPhases": {
+      "returning": "stage4の番人と盤面を保持。ギルドへ帰る相談。12000ms。未再生はboss.clearの承認だけを残す。現在の通常声は継続。",
+      "freezing": "stage4の道の歪みを先に見せ、床と植生へ凍結を広げる。6000ms。前の会話を切替。",
+      "bewildered": "stage4の番人を困惑姿で残す。6500ms。しるべと番人の掛け合い。前の会話を切替。",
+      "intrusion": "stage5へ変更し、全石の到着1400ms後にbattle。即死時計はbattleでゼロから。",
+      "flight": "launchで優先割込み。fall・landは無発話で叫びを継続。完了後も再発火しない。字幕代替も叫びだけ。",
+      "timing": "演出は表示中のゲーム時計とdurationsで進める。音声完了・停止・取得失敗に依存しない。秒数は制作目安。新manifestの実尺は基本担当が確認・調整する。",
+      "loss": "HP0を1100ms表示。defeat割込みで乱入音声を終了。",
+      "escape": "rescue.startを最優先。指定台詞「ここから逃します！」。暫定3000ms。",
+      "rescue": "一度だけHP10とheal。900ms。通常の回復時計は再開しない。",
+      "sendoff": "rescue.recovered。指定台詞「うまく着地してくださいね！」。暫定3800ms。",
+      "bossArrival": "主人公着地後に通常ボス飛来。1700ms。",
+      "bossLand": "到着台詞を切らず着地。2300ms。",
+      "recruited": "加入とguide不在を確定。加入台詞。暫定5200ms。"
+    }
+  },
+  "speakers": {
+    "male": {
+      "name": "リオ",
+      "role": "好奇心の強い新人。言い切った後に少し照れる",
+      "asset": "male"
+    },
+    "female": {
+      "name": "ミナ",
+      "role": "観察の鋭い新人。切り返しは軽快",
+      "asset": "female"
+    },
+    "guide": {
+      "name": "しるべ",
+      "role": "落ち着いた案内人。主人公の勢いを柔らかく受け止める",
+      "asset": "guide"
+    },
+    "cat": {
+      "name": "猫",
+      "role": "気高い門番。短く自信を持って",
+      "asset": "cat"
+    },
+    "dog": {
+      "name": "犬",
+      "role": "律儀な守り手。はきはき",
+      "asset": "dog"
+    },
+    "sun": {
+      "name": "太陽",
+      "role": "穏やかで少し芝居がかった声",
+      "asset": "sun"
+    },
+    "ant": {
+      "name": "アリ",
+      "role": "職人気質。きびきび",
+      "asset": "ant"
+    },
+    "animal": {
+      "name": "通常ボス",
+      "role": "威厳があり、学びを認める守り手",
+      "asset": "animal"
+    },
+    "final": {
+      "name": "乱入ボス",
+      "role": "低く静かな脅威。専門語の答えは発音しない",
+      "asset": "final"
+    }
+  },
+  "events": [
+    {
+      "event": "select.enter",
+      "priority": 10,
+      "lines": [
+        {
+          "id": "select.guide.welcome",
+          "speaker": "guide",
+          "text": "ようこそ。今日は言葉で、森の道を開こう。",
+          "reading": "ようこそ。きょうはことばで、もりのみちをひらこう。",
+          "expression": "idle",
+          "direction": "温かく、後半に期待",
+          "targetSeconds": 3.4,
+          "carry": true
+        },
+        {
+          "id": "select.hero.ready",
+          "speaker": "hero",
+          "expression": "joy",
+          "direction": "勢いよく返事、語尾は自然",
+          "targetSeconds": 2.4,
+          "carry": false,
+          "variants": {
+            "male": {
+              "text": "剣より先に、言葉の出番か！",
+              "reading": "けんよりさきに、ことばのでばんか！"
+            },
+            "female": {
+              "text": "まずは言葉で勝負、というわけね。",
+              "reading": "まずはことばでしょうぶ、というわけね。"
+            }
+          }
+        },
+        {
+          "id": "select.guide.partner",
+          "speaker": "guide",
+          "text": "その前に、相棒を選ぼう。一緒なら心強いよ。",
+          "reading": "そのまえに、あいぼうをえらぼう。いっしょならこころづよいよ。",
+          "expression": "joy",
+          "direction": "落ち着いた女性声。温かく、性別を強調する語尾は使わない",
+          "targetSeconds": 3.5,
+          "carry": false
+        }
+      ]
+    },
+    {
+      "event": "depart",
+      "priority": 20,
+      "lines": [
+        {
+          "id": "depart.hero.step",
+          "speaker": "hero",
+          "expression": "idle",
+          "direction": "前を向く明るい決意",
+          "targetSeconds": 2.3,
+          "carry": true,
+          "variants": {
+            "male": {
+              "text": "よし、森の書庫へ出発だ！",
+              "reading": "よし、もりのしょこへしゅっぱつだ！"
+            },
+            "female": {
+              "text": "準備よし。森の書庫へ行こう！",
+              "reading": "じゅんびよし。もりのしょこへいこう！"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "stage.cat",
+      "priority": 20,
+      "lines": [
+        {
+          "id": "cat.guide.trace",
+          "speaker": "guide",
+          "text": "猫はcat。横になぞって、指を離そう。",
+          "reading": "ねこはキャット。よこになぞって、ゆびをはなそう。",
+          "expression": "idle",
+          "direction": "ゆっくり明瞭。英語は自然に",
+          "targetSeconds": 3.2,
+          "carry": false
+        },
+        {
+          "id": "cat.enemy.dignity",
+          "speaker": "cat",
+          "text": "なぞるのは文字だ。私のひげではないぞ。",
+          "reading": "なぞるのはもじだ。わたしのひげではないぞ。",
+          "expression": "idle",
+          "direction": "真顔で気高く",
+          "targetSeconds": 3.0,
+          "carry": false
+        },
+        {
+          "id": "cat.hero.whisker",
+          "speaker": "hero",
+          "expression": "joy",
+          "direction": "さらっと切り返す",
+          "targetSeconds": 2.2,
+          "carry": false,
+          "variants": {
+            "male": {
+              "text": "ひげにも正解があるのかと思った。",
+              "reading": "ひげにもせいかいがあるのかとおもった。"
+            },
+            "female": {
+              "text": "文字よりひげのほうが目立つもの。",
+              "reading": "もじよりひげのほうがめだつもの。"
+            }
+          }
+        },
+        {
+          "id": "cat.guide.undo",
+          "speaker": "guide",
+          "text": "行きすぎたら、一歩戻して取り消せるよ。",
+          "reading": "いきすぎたら、いっぽもどしてとりけせるよ。",
+          "expression": "idle",
+          "direction": "短い補足、操作を急かさない",
+          "targetSeconds": 3.0,
+          "carry": false
+        }
+      ]
+    },
+    {
+      "event": "stage.dog",
+      "priority": 20,
+      "lines": [
+        {
+          "id": "dog.enemy.bridge",
+          "speaker": "dog",
+          "text": "この橋は、言葉を知る者だけ通す！",
+          "reading": "このはしは、ことばをしるものだけとおす！",
+          "expression": "idle",
+          "direction": "律儀に宣言",
+          "targetSeconds": 2.7,
+          "carry": false
+        },
+        {
+          "id": "dog.guide.vertical",
+          "speaker": "guide",
+          "text": "犬はdog。今度は縦になぞろう。",
+          "reading": "いぬはドッグ。こんどはたてになぞろう。",
+          "expression": "idle",
+          "direction": "縦を少し強調",
+          "targetSeconds": 2.7,
+          "carry": false
+        },
+        {
+          "id": "dog.hero.bridge",
+          "speaker": "hero",
+          "expression": "joy",
+          "direction": "小さく納得して笑う",
+          "targetSeconds": 2.3,
+          "carry": false,
+          "variants": {
+            "male": {
+              "text": "橋は横なのに、文字は縦なんだな。",
+              "reading": "はしはよこなのに、もじはたてなんだな。"
+            },
+            "female": {
+              "text": "橋の向きまで試験に出なくてよかった。",
+              "reading": "はしのむきまでしけんにでなくてよかった。"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "stage.sun",
+      "priority": 20,
+      "lines": [
+        {
+          "id": "sun.guide.horizontal",
+          "speaker": "guide",
+          "text": "太陽はsun。横の三文字を探そう。",
+          "reading": "たいようはサン。よこのさんもじをさがそう。",
+          "expression": "idle",
+          "direction": "明るく短い説明",
+          "targetSeconds": 2.8,
+          "carry": false
+        },
+        {
+          "id": "sun.enemy.radiance",
+          "speaker": "sun",
+          "text": "私の輝きに、目を奪われたか。",
+          "reading": "わたしのかがやきに、めをうばわれたか。",
+          "expression": "idle",
+          "direction": "少し芝居がかって",
+          "targetSeconds": 2.4,
+          "carry": false
+        },
+        {
+          "id": "sun.hero.focus",
+          "speaker": "hero",
+          "expression": "joy",
+          "direction": "落ち着いたツッコミ",
+          "targetSeconds": 2.0,
+          "carry": false,
+          "variants": {
+            "male": {
+              "text": "今、文字のほうを見てる！",
+              "reading": "いま、もじのほうをみてる！"
+            },
+            "female": {
+              "text": "ごめん、今は三文字に夢中。",
+              "reading": "ごめん、いまはさんもじにむちゅう。"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "stage.ant",
+      "priority": 20,
+      "lines": [
+        {
+          "id": "ant.enemy.bend",
+          "speaker": "ant",
+          "text": "根っこの道は、まっすぐとは限らん。",
+          "reading": "ねっこのみちは、まっすぐとはかぎらん。",
+          "expression": "idle",
+          "direction": "職人らしく簡潔",
+          "targetSeconds": 2.8,
+          "carry": false
+        },
+        {
+          "id": "ant.guide.turn",
+          "speaker": "guide",
+          "text": "アリはant。隣のマスへ進んで、途中で曲がろう。",
+          "reading": "ありはアント。となりのマスへすすんで、とちゅうでまがろう。",
+          "expression": "idle",
+          "direction": "曲がるを明瞭に",
+          "targetSeconds": 3.5,
+          "carry": false
+        },
+        {
+          "id": "ant.hero.turn",
+          "speaker": "hero",
+          "expression": "joy",
+          "direction": "自信がついた軽い冗談",
+          "targetSeconds": 2.3,
+          "carry": false,
+          "variants": {
+            "male": {
+              "text": "文字も冒険も、寄り道が大事だな。",
+              "reading": "もじもぼうけんも、よりみちがだいじだな。"
+            },
+            "female": {
+              "text": "文字の道も、まっすぐとは限らないね。",
+              "reading": "もじのみちも、まっすぐとはかぎらないね。"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "stage.animal",
+      "priority": 30,
+      "lines": [
+        {
+          "id": "animal.enemy.challenge",
+          "speaker": "animal",
+          "text": "よく来た。覚えた動物の言葉を示せ。",
+          "reading": "よくきた。おぼえたどうぶつのことばをしめせ。",
+          "expression": "idle",
+          "direction": "低く威厳、威圧しすぎない",
+          "targetSeconds": 2.8,
+          "carry": false
+        },
+        {
+          "id": "animal.guide.two",
+          "speaker": "guide",
+          "text": "cat・dog・antから、違う言葉を二つ。",
+          "reading": "キャット、ドッグ、アントから、ちがうことばをふたつ。",
+          "expression": "idle",
+          "direction": "三語を区切る。二つを明瞭に",
+          "targetSeconds": 3.3,
+          "carry": false
+        },
+        {
+          "id": "animal.hero.review",
+          "speaker": "hero",
+          "expression": "joy",
+          "direction": "少し緊張から安心へ",
+          "targetSeconds": 2.4,
+          "carry": false,
+          "variants": {
+            "male": {
+              "text": "強そうだけど、ちゃんと復習なんだな！",
+              "reading": "つよそうだけど、ちゃんとふくしゅうなんだな！"
+            },
+            "female": {
+              "text": "見た目は迫力満点。でも、ちゃんと復習なのね。",
+              "reading": "みためははくりょくまんてん。でも、ちゃんとふくしゅうなのね。"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "answer.wrong",
+      "priority": 5,
+      "lines": [
+        {
+          "id": "retry.guide",
+          "speaker": "guide",
+          "text": "大丈夫。最初の文字から、もう一度。",
+          "reading": "だいじょうぶ。さいしょのもじから、もういちど。",
+          "expression": "idle",
+          "direction": "安心させる。残念そうにしない",
+          "targetSeconds": 2.6,
+          "carry": false
+        }
+      ]
+    },
+    {
+      "event": "answer.duplicate",
+      "priority": 5,
+      "lines": [
+        {
+          "id": "duplicate.guide",
+          "speaker": "guide",
+          "text": "それは発見済み。違う言葉を探そう。",
+          "reading": "それははっけんずみ。ちがうことばをさがそう。",
+          "expression": "idle",
+          "direction": "責めず、簡潔",
+          "targetSeconds": 2.7,
+          "carry": false
+        }
+      ]
+    },
+    {
+      "event": "answer.found",
+      "priority": 5,
+      "lines": [
+        {
+          "id": "found.guide",
+          "speaker": "guide",
+          "text": "一つ見つけたね。あと一つ！",
+          "reading": "ひとつみつけたね。あとひとつ！",
+          "expression": "joy",
+          "direction": "小さく祝福",
+          "targetSeconds": 2.2,
+          "carry": false
+        }
+      ]
+    },
+    {
+      "event": "stage.clear",
+      "priority": 25,
+      "lines": [
+        {
+          "id": "clear.hero",
+          "speaker": "hero",
+          "expression": "joy",
+          "direction": "短い勝利の声",
+          "targetSeconds": 1.8,
+          "carry": true,
+          "variants": {
+            "male": {
+              "text": "よし、言葉で道が開いた！",
+              "reading": "よし、ことばでみちがひらいた！"
+            },
+            "female": {
+              "text": "見つけた！次の道が開くよ。",
+              "reading": "みつけた！つぎのみちがひらくよ。"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "boss.clear",
+      "priority": 30,
+      "lines": [
+        {
+          "id": "animal.enemy.approval",
+          "speaker": "animal",
+          "text": "見事だ。今日の試練は、これで終わりだ。",
+          "reading": "みごとだ。きょうのしれんは、これでおわりだ。",
+          "expression": "joy",
+          "direction": "誇らしく学びを認める。さらに奥へは誘導しない",
+          "targetSeconds": 2.6,
+          "carry": true
+        }
+      ]
+    },
+    {
+      "event": "boss.returning",
+      "priority": 40,
+      "lines": [
+        {
+          "id": "returning.guide.guild",
+          "speaker": "guide",
+          "text": "よし、ギルドに帰ろう。帰り道は、こっちだよ。",
+          "reading": "よし、ギルドにかえろう。かえりみちは、こっちだよ。",
+          "expression": "joy",
+          "direction": "落ち着いた女性声。冒険を終えてほっとした帰還の案内",
+          "targetSeconds": 2.8,
+          "carry": false
+        }
+      ]
+    },
+    {
+      "event": "boss.freezing",
+      "priority": 50,
+      "interrupt": true,
+      "lines": [
+        {
+          "id": "freezing.guide.terrain",
+          "speaker": "guide",
+          "text": "待って。道が…ゆがんでる！",
+          "reading": "まって。みちが、ゆがんでる！",
+          "expression": "worried",
+          "direction": "最初に気づいて息をのむ。道の変形に合わせる",
+          "targetSeconds": 2.6,
+          "carry": false
+        },
+        {
+          "id": "freezing.hero.ice",
+          "speaker": "hero",
+          "expression": "worried",
+          "direction": "足元を見て驚く。男女とも同じ状況と読み",
+          "targetSeconds": 2.1,
+          "carry": false,
+          "variants": {
+            "male": {
+              "text": "足元が凍ってきた…！",
+              "reading": "あしもとがこおってきた！"
+            },
+            "female": {
+              "text": "足元が凍ってきた…！",
+              "reading": "あしもとがこおってきた！"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "boss.bewildered",
+      "priority": 60,
+      "interrupt": true,
+      "lines": [
+        {
+          "id": "bewildered.guide.what",
+          "speaker": "guide",
+          "text": "何が起きてるの…！？",
+          "reading": "なにがおきてるの！？",
+          "expression": "action-2",
+          "direction": "困惑して周囲を見回す。ヒントや解説はしない",
+          "targetSeconds": 1.8,
+          "carry": false
+        },
+        {
+          "id": "bewildered.animal.garden",
+          "speaker": "animal",
+          "text": "なんだ、なんだ！？私の庭が凍っておるぞ！",
+          "reading": "なんだ、なんだ！？わたしのにわがこおっておるぞ！",
+          "expression": "worried",
+          "direction": "倒された番人も起き上がり困惑。威厳を忘れて慌てる",
+          "targetSeconds": 3.3,
+          "carry": false
+        }
+      ]
+    },
+    {
+      "event": "raid.enter",
+      "priority": 100,
+      "interrupt": true,
+      "lines": [
+        {
+          "id": "raid.guide.shock",
+          "speaker": "guide",
+          "text": "ええっ…！",
+          "reading": "ええっ！",
+          "expression": "action-2",
+          "direction": "息をのむ純粋な驚き。説明を足さない",
+          "targetSeconds": 1.2,
+          "carry": false
+        },
+        {
+          "id": "raid.enemy.threat",
+          "speaker": "final",
+          "text": "その小さな言葉で、私に届くと思うか。",
+          "reading": "そのちいさなことばで、わたしにとどくとおもうか。",
+          "expression": "action-1",
+          "direction": "低く静かに。長い笑いや追加アドリブなし",
+          "targetSeconds": 3.1,
+          "carry": false
+        },
+        {
+          "id": "raid.hero.alarm",
+          "speaker": "hero",
+          "expression": "worried",
+          "direction": "強がりに戸惑いが混じる",
+          "targetSeconds": 2.2,
+          "carry": false,
+          "variants": {
+            "male": {
+              "text": "書庫に、こんな客も来るのか…！",
+              "reading": "しょこに、こんなきゃくもくるのか！"
+            },
+            "female": {
+              "text": "この気配、番人とは違う…！",
+              "reading": "このけはい、ばんにんとはちがう！"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "defeat",
+      "priority": 110,
+      "interrupt": true,
+      "lines": []
+    },
+    {
+      "event": "rescue.start",
+      "priority": 120,
+      "interrupt": true,
+      "lines": [
+        {
+          "id": "rescue.guide.escape",
+          "speaker": "guide",
+          "expression": "action-1",
+          "direction": "女性しるべ。切迫した決断。HP0を表示してから最優先",
+          "targetSeconds": 1.8,
+          "carry": false,
+          "text": "ここから逃します！",
+          "reading": "ここからにがします！"
+        }
+      ]
+    },
+    {
+      "event": "rescue.heal",
+      "priority": 121,
+      "interrupt": true,
+      "lines": []
+    },
+    {
+      "event": "rescue.recovered",
+      "priority": 122,
+      "interrupt": true,
+      "lines": [
+        {
+          "id": "rescue.guide.landing",
+          "speaker": "guide",
+          "expression": "action-1",
+          "direction": "女性しるべ。HP10後、飛行前。語尾に気遣い",
+          "targetSeconds": 2.3,
+          "carry": false,
+          "text": "うまく着地してくださいね！",
+          "reading": "うまくちゃくちしてくださいね！"
+        }
+      ]
+    },
+    {
+      "event": "flight.launch",
+      "priority": 115,
+      "lines": [
+        {
+          "id": "flight.hero.launch",
+          "speaker": "hero",
+          "expression": "worried",
+          "direction": "うわああああああだけを一息で叫ぶ。飛行開始で一度。落下・着地で再開しない",
+          "targetSeconds": 3.4,
+          "carry": true,
+          "variants": {
+            "male": {
+              "text": "うわああああああ",
+              "reading": "うわああああああ"
+            },
+            "female": {
+              "text": "うわああああああ",
+              "reading": "うわああああああ"
+            }
+          }
+        }
+      ],
+      "interrupt": true
+    },
+    {
+      "event": "flight.fall",
+      "priority": 40,
+      "lines": []
+    },
+    {
+      "event": "flight.land",
+      "priority": 40,
+      "lines": []
+    },
+    {
+      "event": "guild.boss.arrive",
+      "priority": 125,
+      "interrupt": true,
+      "lines": [
+        {
+          "id": "return.animal.arrival",
+          "speaker": "animal",
+          "expression": "worried",
+          "direction": "主人公着地後にのみ開始。通常ボスの飛来・着地をまたぐ",
+          "targetSeconds": 2.8,
+          "carry": true,
+          "text": "おおっと！…ここがギルドか。",
+          "reading": "おおっと！ここがギルドか。"
+        }
+      ]
+    },
+    {
+      "event": "guild.boss.join",
+      "priority": 126,
+      "interrupt": true,
+      "lines": [
+        {
+          "id": "return.animal.join",
+          "speaker": "animal",
+          "expression": "joy",
+          "direction": "頼もしく気取らず。相棒交代を意味しない",
+          "targetSeconds": 4.0,
+          "carry": false,
+          "text": "私も仲間に加えてくれ。これからの案内は任せろ。",
+          "reading": "わたしもなかまにくわえてくれ。これからのあんないはまかせろ。"
+        }
+      ]
+    },
+    {
+      "event": "guild.return",
+      "priority": 130,
+      "interrupt": true,
+      "lines": [
+        {
+          "id": "return.animal.welcome",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 3.0,
+          "carry": false,
+          "text": "大変だったな。まずは、ここで休もう。",
+          "reading": "たいへんだったな。まずは、ここでやすもう。"
+        },
+        {
+          "id": "return.animal.hp",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 4.2,
+          "carry": false,
+          "text": "HPがゼロになると敗北だ。しるべが助けてくれたんだな。",
+          "reading": "エイチピーがゼロになるとはいぼくだ。しるべがたすけてくれたんだな。"
+        },
+        {
+          "id": "return.hero.guide",
+          "speaker": "hero",
+          "expression": "worried",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 1.5,
+          "carry": false,
+          "variants": {
+            "male": {
+              "text": "しるべは…？",
+              "reading": "しるべは？"
+            },
+            "female": {
+              "text": "しるべは…？",
+              "reading": "しるべは？"
+            }
+          }
+        },
+        {
+          "id": "return.animal.separation",
+          "speaker": "animal",
+          "expression": "worried",
+          "direction": "死・居場所・終盤の詳細は創作しない",
+          "targetSeconds": 4.0,
+          "carry": false,
+          "text": "今は会えない。次の冒険は、私が案内しよう。",
+          "reading": "いまはあえない。つぎのぼうけんは、わたしがあんないしよう。"
+        }
+      ]
+    },
+    {
+      "event": "companion.home",
+      "priority": 10,
+      "interrupt": true,
+      "lines": [
+        {
+          "id": "companion.animal.home",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 3.5,
+          "carry": false,
+          "text": "準備ができたら出発だ。次の案内も私に任せろ。",
+          "reading": "じゅんびができたらしゅっぱつだ。つぎのあんないもわたしにまかせろ。"
+        }
+      ]
+    },
+    {
+      "event": "companion.select",
+      "priority": 20,
+      "interrupt": false,
+      "lines": [
+        {
+          "id": "companion.animal.select",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 3.3,
+          "carry": false,
+          "text": "主人公と相棒を選ぼう。私は案内役だ。",
+          "reading": "しゅじんこうとあいぼうをえらぼう。わたしはあんないやくだ。"
+        }
+      ]
+    },
+    {
+      "event": "companion.stage.cat",
+      "priority": 20,
+      "interrupt": false,
+      "lines": [
+        {
+          "id": "companion.animal.cat",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 3.2,
+          "carry": false,
+          "text": "猫はcat。横になぞって、指を離そう。",
+          "reading": "ねこはキャット。よこになぞって、ゆびをはなそう。"
+        },
+        {
+          "id": "companion.animal.undo",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 3.0,
+          "carry": false,
+          "text": "行きすぎたら、一歩戻して取り消せるぞ。",
+          "reading": "いきすぎたら、いっぽもどしてとりけせるぞ。"
+        }
+      ]
+    },
+    {
+      "event": "companion.stage.dog",
+      "priority": 20,
+      "interrupt": false,
+      "lines": [
+        {
+          "id": "companion.animal.dog",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 2.7,
+          "carry": false,
+          "text": "犬はdog。今度は縦になぞろう。",
+          "reading": "いぬはドッグ。こんどはたてになぞろう。"
+        }
+      ]
+    },
+    {
+      "event": "companion.stage.sun",
+      "priority": 20,
+      "interrupt": false,
+      "lines": [
+        {
+          "id": "companion.animal.sun",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 2.8,
+          "carry": false,
+          "text": "太陽はsun。横の三文字を探そう。",
+          "reading": "たいようはサン。よこのさんもじをさがそう。"
+        }
+      ]
+    },
+    {
+      "event": "companion.stage.ant",
+      "priority": 20,
+      "interrupt": false,
+      "lines": [
+        {
+          "id": "companion.animal.ant",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 3.5,
+          "carry": false,
+          "text": "アリはant。隣のマスへ進んで、途中で曲がろう。",
+          "reading": "ありはアント。となりのマスへすすんで、とちゅうでまがろう。"
+        }
+      ]
+    },
+    {
+      "event": "companion.stage.animal",
+      "priority": 20,
+      "interrupt": false,
+      "lines": [
+        {
+          "id": "companion.animal.two",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 3.3,
+          "carry": false,
+          "text": "覚えた動物の言葉から、違う言葉を二つ探そう。",
+          "reading": "おぼえたどうぶつのことばから、ちがうことばをふたつさがそう。"
+        }
+      ]
+    },
+    {
+      "event": "companion.answer.wrong",
+      "priority": 5,
+      "interrupt": false,
+      "lines": [
+        {
+          "id": "companion.animal.retry",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 2.6,
+          "carry": false,
+          "text": "大丈夫。最初の文字から、もう一度。",
+          "reading": "だいじょうぶ。さいしょのもじから、もういちど。"
+        }
+      ]
+    },
+    {
+      "event": "companion.answer.duplicate",
+      "priority": 5,
+      "interrupt": false,
+      "lines": [
+        {
+          "id": "companion.animal.duplicate",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 2.7,
+          "carry": false,
+          "text": "それは発見済み。違う言葉を探そう。",
+          "reading": "それははっけんずみ。ちがうことばをさがそう。"
+        }
+      ]
+    },
+    {
+      "event": "companion.answer.found",
+      "priority": 5,
+      "interrupt": false,
+      "lines": [
+        {
+          "id": "companion.animal.found",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 2.2,
+          "carry": false,
+          "text": "一つ見つけたな。あと一つ！",
+          "reading": "ひとつみつけたな。あとひとつ！"
+        }
+      ]
+    },
+    {
+      "event": "companion.boss.returning",
+      "priority": 20,
+      "interrupt": false,
+      "lines": [
+        {
+          "id": "companion.animal.returning",
+          "speaker": "animal",
+          "expression": "idle",
+          "direction": "明瞭に短く。追加本文と演技は制作提案",
+          "targetSeconds": 2.8,
+          "carry": false,
+          "text": "よし、ギルドに帰ろう。帰り道はこっちだ。",
+          "reading": "よし、ギルドにかえろう。かえりみちはこっちだ。"
+        }
+      ]
+    }
+  ],
+  "authoring": {
+    "date": "2026-10-12",
+    "state": "rescue-recruitment-proposal",
+    "document": "products/word-guild/dialogue-script.json",
+    "eventCount": 37,
+    "lineCount": 54,
+    "voiceKeyCount": 66,
+    "adoptedExistingDraft": false,
+    "contentChanges": "HP0後の救出とHP10・送り出し・通常ボス到着加入を追加。帰還guide行を削除。加入後の進行役をanimalへ。直接名と出題分類を分離。",
+    "humanChecks": [
+      "男女の台詞の好み、キャラの声質、読みと英語の発音、漫才の間と聴き心地",
+      "敵の補助名・性格と声の配役は制作案として採用確認が必要",
+      "獅子／黒魔導士の名称は提案のまま未採用。表示は通常ボス／乱入ボス。指定2台詞と叫び以外の新台詞・演技・目標尺は制作提案。",
+      "新しいanimalの案内台詞を含む音声実尺・聴感とiPhone実機は未確認。"
+    ],
+    "handoffDocumentPending": "基本担当にquality/dialogue/SCRIPT.mdの更新を依頼。担当外なので旧稿は編集しない。",
+    "revisionDiff": {
+      "addedVoiceKeys": [
+        "companion.animal.ant",
+        "companion.animal.cat",
+        "companion.animal.dog",
+        "companion.animal.duplicate",
+        "companion.animal.found",
+        "companion.animal.home",
+        "companion.animal.retry",
+        "companion.animal.returning",
+        "companion.animal.select",
+        "companion.animal.sun",
+        "companion.animal.two",
+        "companion.animal.undo",
+        "rescue.guide.escape",
+        "rescue.guide.landing",
+        "return.animal.arrival",
+        "return.animal.hp",
+        "return.animal.join",
+        "return.animal.separation",
+        "return.animal.welcome",
+        "return.hero.guide.female",
+        "return.hero.guide.male"
+      ],
+      "retiredVoiceKeys": [
+        "defeat.guide.hp",
+        "return.guide.rest",
+        "return.guide.welcome",
+        "return.hero.lesson.female",
+        "return.hero.lesson.male"
+      ],
+      "changedVoiceKeys": []
+    },
+    "changedEnemyLabels": {
+      "cat": "猫",
+      "dog": "犬",
+      "sun": "太陽",
+      "ant": "アリ",
+      "animal": "通常ボス",
+      "final": "乱入ボス"
+    },
+    "timingReview": {
+      "escape": 3000,
+      "sendoff": 3800,
+      "bossArrivalPlusLand": 4000,
+      "recruited": 5200,
+      "status": "subtitle-targets-verified-recorded-voice-duration-pending"
+    }
+  }
+}
