@@ -141,6 +141,13 @@ export class Quest {
       quests: this.startProgress.quests + 1,
       lastDay: this.today,
     };
+    // 撤退したとき、出題済みで未回答の語を末尾に足す（採点も保存もしない）
+    if (retreated) {
+      const upto = this.isRevenge ? this.total : this.index + 1;
+      for (const word of this.groups.slice(0, upto).flat()) {
+        if (!this.results.has(word.id)) entries.push({word, result: 'missed', isNew: !this.startProgress.words[word.id], box: this.startProgress.words[word.id]?.box ?? 0});
+      }
+    }
     this.outcome = {retreated, entries};
     this.save(this.progress);
   }

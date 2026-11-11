@@ -5,7 +5,7 @@ export function validateWords(list) {
   if (!Array.isArray(list)) throw new Error('語彙データの形が違います');
   const words = list.filter(word => word && typeof word.id === 'string'
     && typeof word.w === 'string' && typeof word.ja === 'string'
-    && ['n', 'v', 'a', 'o'].includes(word.pos) && Number.isInteger(word.shelf));
+    && ['n', 'v', 'a', 'o'].includes(word.pos) && Number.isInteger(word.shelf) && Number.isInteger(word.ch));
   if (words.length < 12) throw new Error('語彙データが足りません');
   return words;
 }

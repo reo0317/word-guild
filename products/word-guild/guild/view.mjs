@@ -11,7 +11,7 @@ import {loadProgress, saveProgress} from './store.mjs';
 import {COLS} from './board.mjs';
 
 const POS_LABEL = {v: '動', n: '名', a: '形', o: '他'}; // 色の意味を文字でも示す
-const RESULT_LABEL = {known: '知ってた', correct: '正解', hint: 'ヒント', taught: '教わった'};
+const RESULT_LABEL = {known: '知ってた', correct: '正解', hint: 'ヒント', taught: '教わった', missed: '未回答'};
 const CRUMBLE_MS = 560; // 撃破 → 盤面が崩れる
 const ENTER_MS = 520;   // 次の盤面と敵が入る（合わせて 1.2 秒以内）
 const MAX_FRAME_MS = 250; // 長い停止の後に、まとめて攻撃されないための上限
@@ -160,7 +160,7 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
     message = '';
     view.className = 'gq gq-quest';
     view.innerHTML = `
-      <div class="gq-top"><span class="gq-hearts" id="gq-hearts"></span><b id="gq-label"></b><span class="gq-timer" aria-hidden="true"><i id="gq-timer"></i></span></div>
+      <div class="gq-top"><span class="gq-hearts" id="gq-hearts"></span><b id="gq-label"></b><span class="gq-timer" aria-hidden="true"><i id="gq-timer"></i></span><button type="button" class="gq-quit" id="gq-quit">やめる</button></div>
       <div class="gq-arena" id="gq-arena">
         <div class="gq-enemy" id="gq-enemy">${sprite(quest.enemy, 140, 'gq-sprite')}</div>
         <span class="gq-pips" id="gq-pips" role="img"></span>
@@ -170,6 +170,7 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
       <div class="gq-board entering" id="gq-board" aria-label="7列6行の盤面">${quest.letters.map(cellMarkup).join('')}<svg class="gq-claws" id="gq-claws" viewBox="0 0 700 600" preserveAspectRatio="none" aria-hidden="true"></svg></div>
       <div class="gq-actions"><button type="button" id="gq-hint">ヒント</button><button type="button" id="gq-teach">おしえて</button></div>`;
     $('#gq-label').textContent = topLabel();
+    $('#gq-quit').onclick = quitQuest;
     $('#gq-hint').onclick = () => chooseHelp('hint');
     $('#gq-teach').onclick = () => chooseHelp('teach');
     bindBoard();
@@ -184,6 +185,13 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
       paintAll();
       startClock();
     });
+  }
+
+  // やめる：ここまでの回答を保存して結果へ。
+  function quitQuest() {
+    if (!quest || quest.phase === 'finished') return;
+    quest.finish(true);
+    showResults();
   }
 
   function drawClaws() {
@@ -246,7 +254,7 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
     const {word, text} = slot;
     const reveal = slot.solved || slot.hint >= 2;
     const main = reveal
-      ? `<b class="gq-spell">${esc(text)}</b><small>${esc(word.ja)}</small>`
+      ? `<b class="gq-spell">${esc(word.w)}</b><small>${esc(word.ja)}</small>`
       : `<b>${esc(word.ja)}</b>`;
     const tail = slot.solved
       ? '<span class="gq-check" aria-label="解決済み">✓</span>'
@@ -389,8 +397,8 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
     }
     strikes.push({path, started: performance.now()});
     drawClaws();
-    speak(result.text);
-    message = `${result.text} · ${result.word.ja}`;
+    speak(result.word.w);
+    message = `${result.word.w} · ${result.word.ja}`;
     pulse($('#gq-board'), 'correct');
     pulse($('#gq-enemy'), 'flinch');
     paintAll();
@@ -431,7 +439,7 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
     frameId = 0;
     view.className = 'gq gq-result';
     view.innerHTML = `
-      <p class="eyebrow">${outcome.retreated ? 'ハートがなくなった' : 'クエスト'}</p>
+      <p class="eyebrow">${outcome.retreated ? (quest.hearts <= 0 ? 'ハートがなくなった' : 'クエストをやめた') : 'クエスト'}</p>
       <h2 class="gq-title">${outcome.retreated ? '撤退' : 'クリア！'}</h2>
       <ul class="gq-results" aria-label="今回の語">${outcome.entries.map(resultRow).join('') || '<li class="empty">答えた語はありません</li>'}</ul>
       <p class="gq-lit">${lit.length ? `✦ ${lit.join('・')} に灯りがともった！` : '今回灯った棚はありません'}</p>
@@ -463,6 +471,11 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
   document.addEventListener('visibilitychange', () => {
     trace?.cancel();
     if (quest && quest.phase === 'battle') { lastFrame = performance.now(); paintBoard(); paintInput(); }
+  });
+
+  // 画面を閉じるときも、戦闘中で回答済みの語があれば保存する。
+  window.addEventListener('pagehide', () => {
+    if (quest && quest.phase === 'battle' && quest.results.size > 0) quest.finish(true);
   });
 
   return {open};

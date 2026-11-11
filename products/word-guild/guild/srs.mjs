@@ -9,7 +9,9 @@ export const SESSION_SIZE = 12;
 export const MAX_DUE = 8;
 export const NEW_PER_SESSION = 4;
 export const GROUP_SIZE = 3;
-export const GROUP_LETTERS = 24;
+export const GROUP_LETTERS = 30;
+export const SOLO_LETTERS = 13; // この文字数以上の語は1語だけの盤面
+export const HEAVY_DUE = 20; // 期限の語がこれ以上たまったら新出を0にする
 export const LIT_BOX = 3; // 棚が灯る習熟度
 
 // 端末の現地時間での日番号。
@@ -21,6 +23,7 @@ export function todayNumber(now = Date.now(), offsetMinutes = new Date().getTime
 export function grade(state, result, today) {
   const seen = (state?.seen ?? 0) + 1;
   const isNew = !state || state.seen === 0;
+  if (result === 'clean' && state && state.due > today) return {...state, seen}; // 期限前の正解は習熟度を動かさない
   if (result === 'taught') return {box: 1, due: today, seen};
   if (result === 'hint') return {box: Math.max(1, state?.box ?? 0), due: today, seen};
   if (result !== 'clean') throw new Error(`未知の結果: ${result}`);
@@ -38,51 +41,63 @@ export function dueCount(words, progress, today) {
 
 const byShelfThenId = (a, b) => a.shelf - b.shelf || a.id.localeCompare(b.id);
 
-// 3語ずつに分ける。1組の合計は 24 文字以下。収まらない語は新しい組に入れる。
+// 3語ずつに分ける。1組の合計は 30 文字以下。13文字以上の語は1語だけの組。
+// 組の数を先に決めて長い語から配り、最後に文字数の少ない組を先頭にする。
 export function groupWords(words, rand = null) {
   const ordered = rand ? shuffle(words, rand) : [...words];
   ordered.sort((a, b) => spelling(b.w).length - spelling(a.w).length);
-  const groups = [];
-  for (const word of ordered) {
+  const solo = ordered.filter(word => spelling(word.w).length >= SOLO_LETTERS);
+  const rest = ordered.filter(word => spelling(word.w).length < SOLO_LETTERS);
+  const groups = Array.from({length: Math.ceil(rest.length / GROUP_SIZE)}, () => ({words: [], letters: 0}));
+  for (const word of rest) {
     const length = spelling(word.w).length;
-    const target = groups
+    let target = groups
       .filter(g => g.words.length < GROUP_SIZE && g.letters + length <= GROUP_LETTERS)
       .sort((a, b) => a.letters - b.letters)[0];
-    if (target) {
-      target.words.push(word);
-      target.letters += length;
-    } else {
-      groups.push({words: [word], letters: length});
+    if (!target) {
+      target = {words: [], letters: 0};
+      groups.push(target);
     }
+    target.words.push(word);
+    target.letters += length;
   }
-  return groups.map(g => g.words);
+  const all = [...groups.filter(g => g.words.length), ...solo.map(word => ({words: [word], letters: spelling(word.w).length}))];
+  return all.sort((a, b) => a.letters - b.letters).map(g => g.words);
 }
 
 // progress.words は {id: {box, due, seen}}。戻り値は 3語ずつの組の配列。
 export function pickSession(words, progress, today, size = SESSION_SIZE, rand = null) {
   const state = word => progress.words[word.id];
-  const due = words
+  const dueAll = words
     .filter(word => isDue(state(word), today))
-    .sort((a, b) => state(a).due - state(b).due || byShelfThenId(a, b))
-    .slice(0, MAX_DUE);
-  const fresh = words.filter(word => !state(word)).sort(byShelfThenId);
-  const picked = [...due, ...fresh.slice(0, NEW_PER_SESSION)];
-  const chosen = new Set(picked);
-  for (const word of fresh.slice(NEW_PER_SESSION)) {
-    if (picked.length >= size) break;
+    .sort((a, b) => state(a).due - state(b).due || byShelfThenId(a, b));
+  const heavy = dueAll.length >= HEAVY_DUE; // たまりすぎたら復習だけ
+  const picked = [];
+  const taken = new Set();
+  const spells = new Set(); // 盤面の綴りが同じ語は1クエストに1つだけ
+  const add = word => {
+    if (picked.length >= size || taken.has(word)) return false;
+    const text = spelling(word.w);
+    if (spells.has(text)) return false;
+    taken.add(word);
+    spells.add(text);
     picked.push(word);
-    chosen.add(word);
+    return true;
+  };
+  let dueTaken = 0;
+  for (const word of dueAll) {
+    if (dueTaken >= (heavy ? size : MAX_DUE)) break;
+    if (add(word)) dueTaken++;
   }
+  const fresh = words.filter(word => !state(word)).sort(byShelfThenId);
+  if (!heavy) fresh.forEach(add);
   if (picked.length < size) {
     const rest = words
-      .filter(word => state(word) && !chosen.has(word))
+      .filter(word => state(word) && !taken.has(word))
       .sort((a, b) => state(a).box - state(b).box || byShelfThenId(a, b));
-    for (const word of rest) {
-      if (picked.length >= size) break;
-      picked.push(word);
-    }
+    rest.forEach(add);
   }
-  return groupWords(picked.slice(0, size), rand);
+  return groupWords(picked, rand);
 }
 
 // 棚ごとの進み具合。全語が箱3以上で灯り、全語が箱5で金色。

@@ -236,6 +236,8 @@ header h1{font-size:10px}#music,#voice{padding:6px 7px;font-size:10px}header{gap
 .gq-results li b{font-family:Arial,system-ui,sans-serif;letter-spacing:.05em;color:#fff3d6;font-size:14px}.gq-results .gq-ja{color:#d5dcc0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .gq-stars{color:#f4c66c;font-size:10px;letter-spacing:0;white-space:nowrap}
 .gq-results em{font-style:normal;font-size:11px;font-weight:800;text-align:center;padding:2px 0;border-radius:6px;color:#213e3f;background:#cfe3b8}
+.gq-quit{min-height:26px;padding:0 10px;font-size:12px;border-radius:8px;flex-shrink:0}
+.gq-results .missed{opacity:.8}.gq-results .missed em{background:#c9c9c0}
 .gq-results .correct em{background:#f4c66c}.gq-results .hint em{background:#9fd0ec}.gq-results .taught em{background:#f0a98a}
 .gq-lit{text-align:center;color:#ffdf83;font-weight:800;font-size:14px;flex-shrink:0}.gq-back{text-align:center;color:#e8c580;font-size:13px;flex-shrink:0}.gq-back b{color:#fff3d6;font-size:16px}
 .gq-result-actions{display:grid;gap:6px;flex-shrink:0}.gq-result-actions button:not(.primary){min-height:42px}

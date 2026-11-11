@@ -91,7 +91,24 @@ test('ハート0で撤退し、回答済みの語だけが採点されて保存�
   assert.deepEqual(saved[0].words.w0, {box: 3, due: TODAY + 3, seen: 1});
   assert.equal(saved[0].quests, 1);
   assert.equal(saved[0].lastDay, TODAY);
-  assert.equal(quest.outcome.entries.length, 1);
+  assert.equal(quest.outcome.entries.length, 3, '出題済みの3語が並ぶ');
+  assert.deepEqual(quest.outcome.entries.map(e => e.result), ['clean', 'missed', 'missed'], '未回答は末尾に missed');
+  assert.deepEqual(quest.outcome.entries.slice(1).map(e => e.word.id), ['w1', 'w2']);
+});
+
+test('撤退の結果に、まだ出ていない盤面の語は含まれない', () => {
+  const {quest} = newQuest();
+  start(quest);
+  quest.finish(true);
+  assert.deepEqual(quest.outcome.entries.map(e => e.word.id), ['w0', 'w1', 'w2']);
+});
+
+test('撤退しない終了では missed を足さない', () => {
+  const {quest} = newQuest();
+  start(quest);
+  for (const w of ['book', 'tree', 'door']) quest.answer(w);
+  quest.finish(false);
+  assert.ok(quest.outcome.entries.every(e => e.result !== 'missed'));
 });
 
 test('一度の大きな advance でも、ハート0で止まり保存は1回だけ', () => {

@@ -87,4 +87,6 @@ test('Trace は生成した盤面の経路をなぞると語の綴りを返し�
 test('spelling は英字だけの小文字にする', () => {
   assert.equal(spelling('Ice-Cream'), 'icecream');
   assert.equal(spelling('a lot'), 'alot');
+  assert.equal(spelling('résumé'), 'resume');
+  assert.equal(spelling('café'), 'cafe');
 });

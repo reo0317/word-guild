@@ -40,4 +40,5 @@ test('validateWords は形の違うデータを拒否する', () => {
   assert.throws(() => validateWords({}));
   assert.throws(() => validateWords(words.slice(0, 5)));
   assert.equal(validateWords([...words, {id: 1}, null]).length, 60);
+  assert.equal(validateWords([...words, {...words[0], id: 'x', ch: '1'}, {...words[0], id: 'y', ch: 1.5}, {...words[0], id: 'z', ch: undefined}]).length, 60, 'ch が整数でない語は捨てる');
 });

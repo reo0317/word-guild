@@ -17,7 +17,7 @@ const LETTER_BAG = Object.entries(LETTER_WEIGHTS).flatMap(([letter, weight]) =>
 
 // 盤面に置く綴り。英字以外（ハイフン・空白）を除いた小文字。
 export function spelling(word) {
-  return String(word).replace(/[^a-zA-Z]/g, '').toLowerCase();
+  return String(word).normalize('NFD').replace(/[^a-zA-Z]/g, '').toLowerCase();
 }
 
 export function neighbors(index) {
