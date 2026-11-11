@@ -169,3 +169,102 @@ header h1{font-size:10px}#music,#voice{padding:6px 7px;font-size:10px}header{gap
 .state-returning .enemy-motion,.state-bewildered .enemy-motion{animation:none}
 .state-bewildered .arena{box-shadow:inset 0 0 28px #b8e9f699}
 @media(prefers-reduced-motion:reduce){.road-scene .walker{transform:none}.state-freezing .enemy-motion{transform:none}}
+
+/* ---- ギルド（M1）：guild/view.mjs の画面。品詞色は 動=火、名=草、形=水、他=無色 ---- */
+.gq{--pos-v:#e8794d;--pos-n:#6fae55;--pos-a:#4f9fd1;--pos-o:#a9a58f;--enemy-size:clamp(84px,16dvh,140px)}
+#view.gq{gap:8px;padding:12px}
+.gq button{touch-action:manipulation}
+.gq h2{text-align:center}
+.gq-warn,.gq-loading{text-align:center;color:#ffda85;font-size:12px}
+.gq-home .gq-scene{flex:1;min-height:90px;max-height:360px;margin:0 -12px}
+.gq-guide{min-height:0}
+.gq-shelves{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;flex-shrink:0}
+.gq-shelf{position:relative;display:grid;grid-template-columns:auto 1fr;align-items:center;column-gap:4px;padding:6px 8px 9px;border:1px solid #6c8474;border-radius:10px;background:#1e4a4a;font-size:12px;color:#d5dcc0}
+.gq-shelf b{color:#fff0d5;font-size:13px}
+.gq-shelf .gq-shelf-count{grid-column:1/-1;font-weight:800;font-size:14px;color:#fff3d6}
+.gq-shelf small{grid-column:1/-1;font-size:10px;letter-spacing:.08em}
+.gq-lamp{color:#4e7369;font-size:14px}
+.gq-shelf-bar{position:absolute;left:8px;right:8px;bottom:4px;height:3px;border-radius:2px;background:#10312e}.gq-shelf-bar i{display:block;height:100%;border-radius:2px;background:#7fb87c}
+.gq-shelf.lit{border-color:#f4c66c;background:#3a5a47}.gq-shelf.lit .gq-lamp{color:#ffdf83;text-shadow:0 0 8px #ffda69}.gq-shelf.lit .gq-shelf-bar i{background:#f4c66c}
+.gq-shelf.gold{border-color:#ffe39a;background:#5a5430;box-shadow:0 0 10px #f4c66c88}.gq-shelf.gold .gq-shelf-bar i{background:#ffe39a}
+.gq-collected{text-align:center;font-size:13px;color:#e8c580;flex-shrink:0}.gq-collected b{font-size:18px;color:#fff3d6}
+
+#view.gq-quest{overflow:hidden;padding:8px;gap:5px}
+.gq-top{display:flex;align-items:center;gap:8px;height:26px;flex-shrink:0}
+.gq-hearts{display:flex;gap:2px;font-size:20px;line-height:1}.gq-hearts i{font-style:normal;color:#ff7a7a;text-shadow:0 1px #5a1f2a}.gq-hearts i.off{color:#3d5651;text-shadow:none}
+.gq-top b{font-size:13px;color:#fff0d5;letter-spacing:.06em;white-space:nowrap;margin-left:auto}
+.gq-timer{flex:0 1 90px;height:6px;border-radius:3px;background:#0e2c31;overflow:hidden;margin-left:auto}.gq-timer i{display:block;height:100%;transform-origin:left;background:#9bd186}.gq-timer.warn i{background:#ff9d73}
+.gq-top{padding:0 6px}.gq-top b{margin-left:4px}
+.gq-arena{position:relative;flex-shrink:0;height:calc(var(--enemy-size) + 14px);border:1px solid #8f9b76;border-radius:12px;overflow:hidden;display:grid;place-items:center;background:url('assets/floor-0-display-v6.webp') center/cover,#183e40}
+.gq-enemy{display:block;filter:drop-shadow(0 5px 1px #1a323b66)}.gq-enemy .character{--size:var(--enemy-size)!important;display:block}
+.gq-pips{position:absolute;right:8px;top:8px;display:flex;gap:4px;padding:3px 6px;border-radius:10px;background:#0e2c3199}.gq-pips i{width:9px;height:9px;border-radius:50%;border:2px solid #f4c66c;background:transparent}.gq-pips i.on{background:#f4c66c}
+.gq-clues{list-style:none;margin:0;padding:0;display:grid;gap:4px;flex-shrink:0}
+.gq-clue{width:100%;display:flex;align-items:center;gap:8px;min-height:38px;padding:4px 10px 4px 6px;text-align:left;color:#213e3f;background:#fff3d6;border:1px solid #f2d493;border-left:5px solid var(--pos-o);border-radius:9px;box-shadow:0 2px 0 #0d2c2f;cursor:default;font-size:15px}
+.gq-clue.pos-v{border-left-color:var(--pos-v)}.gq-clue.pos-n{border-left-color:var(--pos-n)}.gq-clue.pos-a{border-left-color:var(--pos-a)}
+.gq-pos{flex:0 0 22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:850;color:#fff;background:var(--pos-o);text-shadow:0 1px #0005}
+.pos-v .gq-pos{background:var(--pos-v)}.pos-n .gq-pos{background:var(--pos-n)}.pos-a .gq-pos{background:var(--pos-a)}.pos-o .gq-pos{color:#213e3f;text-shadow:none}
+.gq-clue-main{flex:1;min-width:0;display:flex;align-items:baseline;gap:8px;white-space:nowrap;overflow:hidden}.gq-clue-main b{font-size:16px}.gq-clue-main small{font-size:12px;color:#5b6c60}
+.gq-spell{letter-spacing:.08em;font-family:Arial,system-ui,sans-serif}
+.gq-dots{display:flex;gap:3px;flex-shrink:0}.gq-dots i{width:8px;height:8px;border-radius:50%;background:#b9a46f}
+.gq-check{color:#3d7b3a;font-weight:900;font-size:17px}
+.gq-clue.solved{background:#d6e6c0;border-color:#a9c78d}
+.gq-clue.pickable{cursor:pointer;outline:3px solid #f4c66c;outline-offset:-1px;animation:gq-pick .8s ease-in-out infinite alternate}
+.gq-input{height:22px;flex-shrink:0;font-size:13px;font-weight:750;text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:#f5d491;letter-spacing:.05em}.gq-input.is-message{color:#d9c38b;font-weight:650}
+.gq-input.wrong{animation:wrong-note .4s}
+.gq-board{position:relative;flex:0 0 auto;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;width:100%;max-width:100%;margin:0 auto;padding:6px;background:#0e2c31;border:2px solid #758b77;border-radius:10px;box-shadow:inset 0 3px 10px #0005,0 3px 0 #092629;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;overflow:hidden}
+.gq-cell{position:relative;min-width:0;min-height:0;aspect-ratio:1;padding:0;color:#173b37;background:#eddfbd;border:1px solid #fff4d5;border-bottom:3px solid #a89771;border-radius:7px;font-weight:750;box-shadow:inset 1px 2px #fff8e399,0 2px 0 #061c2666;touch-action:none;transition:background .06s}
+.gq-cell:nth-child(3n){background:#e2d4b2}
+.gq-cell .letter{position:relative;z-index:2;display:block;font:750 clamp(18px,5.6vw,26px)/1 Arial,system-ui,sans-serif}
+.gq-cell.active{background:#f6cb6e;border-color:#ffe7a2;box-shadow:inset 0 0 0 1px #fff0a1,0 0 8px #f7d17488;transform:none}
+.gq-cell.hint-first{background:#fff3ad;border-color:#fff8d9;box-shadow:inset 0 0 0 2px #ffe391,0 0 12px #f4d373}
+.gq-cell.hint-route{animation:gq-route 1.8s ease-in-out infinite;animation-delay:calc(var(--n,0)*.15s)}
+.gq-claws{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);z-index:1;pointer-events:none;overflow:visible}
+.gq-board.entering .gq-cell{animation:gq-in .4s cubic-bezier(.2,.7,.3,1) var(--delay) both}
+.gq-board.crumbling .gq-cell{animation:gq-out .45s cubic-bezier(.55,.05,.9,.6) var(--delay) both}.gq-board.crumbling .gq-claws{animation:gq-fade .3s forwards}
+.gq-board.entering,.gq-board.crumbling{pointer-events:none}
+.gq-board.shake{animation:gq-shake .3s}.gq-board.correct{animation:correct-glow .65s}
+.gq-enemy.flinch{animation:gq-flinch .35s}.gq-enemy.flinch .portrait{animation:none;background-image:var(--worried)}
+.gq-enemy.lunge{animation:gq-lunge .4s}
+.gq-enemy.defeated{animation:gq-down .5s forwards}.gq-enemy.defeated .portrait{animation:none;background-image:var(--action-2)}
+.gq-hearts.lost{animation:gq-pop .4s}
+.gq-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;flex-shrink:0}.gq-actions button{min-height:42px;padding:6px}
+.gq-actions button[aria-pressed=true]{border-color:#f4c66c;background:#5a5430;color:#fff3d6}.gq-actions button:disabled{opacity:.5;cursor:default}
+
+.gq-result .gq-title{font-size:30px;color:#fff1ce;text-shadow:0 3px #0b292b;margin:0}
+.gq-results{list-style:none;margin:0;padding:0;flex:1;min-height:0;overflow:auto;display:grid;align-content:start;gap:4px;-webkit-overflow-scrolling:touch}
+.gq-results li{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr) auto 62px;align-items:center;gap:6px;padding:6px 8px;border-radius:8px;background:#1e4a4a;border:1px solid #3d6a62;font-size:13px}
+.gq-results li b{font-family:Arial,system-ui,sans-serif;letter-spacing:.05em;color:#fff3d6;font-size:14px}.gq-results .gq-ja{color:#d5dcc0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gq-stars{color:#f4c66c;font-size:10px;letter-spacing:0;white-space:nowrap}
+.gq-results em{font-style:normal;font-size:11px;font-weight:800;text-align:center;padding:2px 0;border-radius:6px;color:#213e3f;background:#cfe3b8}
+.gq-results .correct em{background:#f4c66c}.gq-results .hint em{background:#9fd0ec}.gq-results .taught em{background:#f0a98a}
+.gq-lit{text-align:center;color:#ffdf83;font-weight:800;font-size:14px;flex-shrink:0}.gq-back{text-align:center;color:#e8c580;font-size:13px;flex-shrink:0}.gq-back b{color:#fff3d6;font-size:16px}
+.gq-result-actions{display:grid;gap:6px;flex-shrink:0}.gq-result-actions button:not(.primary){min-height:42px}
+
+@keyframes gq-in{from{transform:translateY(-120px);opacity:0}70%{transform:translateY(3px);opacity:1}to{transform:none;opacity:1}}
+@keyframes gq-out{20%{transform:translateY(-3px)}to{transform:translateY(160px) rotate(10deg);opacity:0}}
+@keyframes gq-fade{to{opacity:0}}
+@keyframes gq-shake{20%{transform:translateX(-5px)}50%{transform:translateX(5px)}80%{transform:translateX(-3px)}}
+@keyframes gq-flinch{30%{transform:translate(6px,-4px)}60%{transform:translate(-4px,0)}}
+@keyframes gq-lunge{40%{transform:translateY(14px) scale(1.12)}}
+@keyframes gq-down{to{transform:translateY(40px) scale(.8);opacity:0}}
+@keyframes gq-pop{40%{transform:scale(1.25)}}
+@keyframes gq-pick{to{outline-color:#fff3bd}}
+@keyframes gq-route{0%,100%{background:#eddfbd;box-shadow:inset 1px 2px #fff8e399,0 2px 0 #061c2666}30%,50%{background:#fff3ad;box-shadow:inset 0 0 0 2px #ffe391,0 0 12px #f4d373}}
+@media(max-height:700px){
+ .gq{--enemy-size:clamp(64px,12dvh,100px)}
+ #view.gq{gap:5px;padding:8px}
+ .gq-top{height:22px}.gq-hearts{font-size:18px}
+ .gq-home .gq-scene{min-height:70px;margin:0 -8px}
+ .gq-clue{min-height:32px;font-size:14px}.gq-clue-main b{font-size:15px}
+ .gq-input{height:18px;font-size:12px}
+ .gq-actions button{min-height:36px}
+ .gq-shelf{padding:4px 6px 8px}
+ .gq-result .gq-title{font-size:24px}
+}
+@media(prefers-reduced-motion:reduce){
+ .gq-board.entering .gq-cell,.gq-board.crumbling .gq-cell{animation:gq-fade .25s both}
+ .gq-board.entering .gq-cell{animation-direction:reverse}
+ .gq-board.shake,.gq-board.correct,.gq-enemy.flinch,.gq-enemy.lunge,.gq-enemy.defeated,.gq-hearts.lost,.gq-clue.pickable,.gq-input.wrong{animation:none}
+ .gq-enemy.defeated{opacity:.4}
+ .gq-cell.hint-route{animation:none;background:#fff3ad;box-shadow:inset 0 0 0 2px #ffe391}
+}

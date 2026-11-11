@@ -3,6 +3,9 @@ export function resolveAudioPolicy({screen, stage, state} = {}) {
   if (screen === 'home' || screen === 'top' || screen === 'select') {
     return Object.freeze({musicScene: 'top', flightSound: false});
   }
+  // ギルド（M1）。帰還後の拠点はホームの曲、クエスト中は戦闘曲。
+  if (screen === 'guild') return Object.freeze({musicScene: 'top', flightSound: false});
+  if (screen === 'guild-quest') return Object.freeze({musicScene: 'battle', flightSound: false});
   if (screen !== 'game') return Object.freeze({musicScene: null, flightSound: false});
   if (['loss', 'launch', 'fall', 'land', 'home'].includes(state)) {
     return Object.freeze({musicScene: state === 'home' ? 'top' : null,
