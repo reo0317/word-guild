@@ -52,7 +52,7 @@ def name_of(p: int) -> str:
 QUALITIES = {
     "": (0, 4, 7), "m": (0, 3, 7), "7": (0, 4, 7, 10), "m7": (0, 3, 7, 10),
     "maj7": (0, 4, 7, 11), "sus4": (0, 5, 7), "7sus4": (0, 5, 7, 10),
-    "add9": (0, 4, 7, 2), "6": (0, 4, 7, 9), "m6": (0, 3, 7, 9),
+    "add9": (0, 4, 7, 2), "6": (0, 4, 7, 9), "m6": (0, 3, 7, 9), "dim": (0, 3, 6),
 }
 
 
@@ -71,7 +71,7 @@ class Chord:
 
 
 def chord(symbol: str) -> Chord:
-    m = re.fullmatch(r"([A-G][#b]?)(maj7|m7|m6|7sus4|sus4|add9|m|7|6)?(?:/([A-G][#b]?))?", symbol)
+    m = re.fullmatch(r"([A-G][#b]?)(maj7|m7|m6|7sus4|sus4|add9|dim|m|7|6)?(?:/([A-G][#b]?))?", symbol)
     if not m:
         raise ValueError(symbol)
     root = pc_of(m.group(1))
@@ -84,19 +84,23 @@ def chord(symbol: str) -> Chord:
     return Chord(symbol, root, pcs, bass, third, seventh)
 
 
-def parse_progression(bars: list[str], beats_per_bar: int):
+def parse_progression(bars: list[str], beats_per_bar, bar_lengths=None):
     """'A7sus4 A7' -> two chords splitting the bar evenly. Returns
-    list of (start_beat, dur_beats, Chord)."""
+    list of (start_beat, dur_beats, Chord).  `bar_lengths` (beats per bar,
+    e.g. 3.5 for 7/8) overrides the fixed meter when given."""
     out = []
+    t = 0.0
     for i, bar in enumerate(bars):
         syms = bar.split()
-        d = beats_per_bar / len(syms)
+        blen = bar_lengths[i] if bar_lengths else beats_per_bar
+        d = blen / len(syms)
         for k, s in enumerate(syms):
-            out.append((i * beats_per_bar + k * d, d, chord(s)))
+            out.append((t + k * d, d, chord(s)))
+        t += blen
     return out
 
 
-def parse_line(bars: list[str], beats_per_bar: int, transpose: int = 0):
+def parse_line(bars: list[str], beats_per_bar, transpose: int = 0, bar_lengths=None):
     """Melody notation: 'F#5:.5 A5:.5 D6:1 r:2' per bar.  A trailing '~' on a
     note ties it into the first note of the next bar (same pitch).
     Returns list of (start_beat, dur, pitch)."""
@@ -104,6 +108,7 @@ def parse_line(bars: list[str], beats_per_bar: int, transpose: int = 0):
     t = 0.0
     tie = False
     for bi, bar in enumerate(bars):
+        blen = bar_lengths[bi] if bar_lengths else beats_per_bar
         bar_t = 0.0
         for tok in bar.split():
             n, d = tok.split(":")
@@ -119,9 +124,9 @@ def parse_line(bars: list[str], beats_per_bar: int, transpose: int = 0):
                     notes.append((t + bar_t, d, p))
             tie = tied_next
             bar_t += d
-        if abs(bar_t - beats_per_bar) > 1e-6:
-            raise ValueError(f"bar {bi + 1} has {bar_t} beats: {bar}")
-        t += beats_per_bar
+        if abs(bar_t - blen) > 1e-6:
+            raise ValueError(f"bar {bi + 1} has {bar_t} beats (expected {blen}): {bar}")
+        t += blen
     return notes
 
 
@@ -220,10 +225,32 @@ class Song:
     tracks: list = field(default_factory=list)
     seed: int = 7
     sections: list = field(default_factory=list)  # (name, start_bar, n_bars)
+    bar_lengths: list | None = None   # beats per bar, for mixed meters (3.5 = 7/8)
 
     @property
     def loop_beats(self):
+        if self.bar_lengths:
+            return sum(self.bar_lengths)
         return self.bars * self.beats_per_bar
+
+    def bar_start(self, bar):
+        if self.bar_lengths:
+            return sum(self.bar_lengths[:bar])
+        return bar * self.beats_per_bar
+
+    def bar_len(self, bar):
+        return self.bar_lengths[bar] if self.bar_lengths else self.beats_per_bar
+
+    def bar_of(self, beat):
+        """(bar index, position in bar) of a loop-relative beat."""
+        b = 0
+        while b < self.bars - 1 and self.bar_start(b + 1) <= beat + 1e-9:
+            b += 1
+        return b, beat - self.bar_start(b)
+
+    @property
+    def loop_seconds(self):
+        return self.loop_beats * 60.0 / self.bpm
 
     @property
     def sec_per_beat(self):
@@ -257,9 +284,19 @@ class Song:
         mid.tracks.append(meta)
         meta.append(mido.MetaMessage("set_tempo", tempo=mido.bpm2tempo(self.bpm), time=0))
         meta.append(mido.MetaMessage("time_signature", numerator=self.beats_per_bar, denominator=4, time=0))
+        if self.bar_lengths:
+            for p in range(passes):
+                prev_len = self.beats_per_bar if (p == 0 and pre_beats) else None
+                for b in range(self.bars):
+                    blen = self.bar_lengths[b]
+                    if blen != prev_len:
+                        num, den = (int(blen), 4) if blen == int(blen) else (int(blen * 2), 8)
+                        t = int(round((pre_beats + p * self.loop_beats + self.bar_start(b)) * PPQ))
+                        meta.append(mido.MetaMessage("time_signature", numerator=num, denominator=den, time=t))
+                    prev_len = blen
         for name, b0, nb in self.sections:
             for p in range(passes):
-                t = int(round((pre_beats + p * self.loop_beats + b0 * self.beats_per_bar) * PPQ))
+                t = int(round((pre_beats + p * self.loop_beats + self.bar_start(b0)) * PPQ))
                 meta.append(mido.MetaMessage("marker", text=name, time=t))
         meta.sort(key=lambda m: m.time)
         end_tick = int(round((pre_beats + passes * self.loop_beats + tail_beats) * PPQ))
@@ -466,8 +503,9 @@ def midi_report(song: Song):
     others = [t for t in song.tracks if t.role not in ("drums",)]
     bad_mb, rubs, checked = [], [], 0
     for bar in range(song.bars):
-        for sb in strong:
-            beat = bar * bpb + sb
+        blen = song.bar_len(bar)
+        for sb in (strong if blen == 4 else [0]):
+            beat = song.bar_start(bar) + sb
             mel = [p for t in melodies for p in sounding(t, beat)]
             bs = [p for t in bass for p in sounding(t, beat)]
             for m in mel:
@@ -487,7 +525,7 @@ def midi_report(song: Song):
     lines.append(f"  melody vs other parts, semitone rubs on strong beats: {len(rubs)}")
     lines += ["    " + s for s in rubs[:12]]
     mel_beats = sum(n.dur for t in melodies for n in t.notes)
-    bars_with = len({int(n.start // bpb) for t in melodies for n in t.notes})
+    bars_with = len({song.bar_of(n.start)[0] for t in melodies for n in t.notes})
     lines.append(f"  melody present in {bars_with}/{song.bars} bars ({mel_beats / song.loop_beats:.0%} of time sounding)")
     return ok, "\n".join(lines)
 
@@ -539,7 +577,22 @@ def scale_step(pc_target: int, scale: list[int], from_below: bool) -> int:
     return (pc_target - 1) % 12 if from_below else (pc_target + 1) % 12
 
 
-def main(song: Song, keep_work: bool = False):
+def update_loops(key: str, song: Song, path=None):
+    """Record the exact musical loop length (seconds, AAC padding excluded)
+    that the game passes to WebAudio as loopEnd."""
+    path = path or os.path.join(OUT_DIR, "loops.json")
+    data = {}
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+    data[key] = {"file": song.name + ".m4a", "loopEnd": round(song.loop_seconds, 3)}
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    return data
+
+
+def main(song: Song, keep_work: bool = False, loop_key: str | None = None):
     """Check the MIDI, render, check the audio, remove intermediates."""
     import shutil
     ok, rep = midi_report(song)
@@ -551,4 +604,6 @@ def main(song: Song, keep_work: bool = False):
         print(" ", audio_report(f))
     if not keep_work:
         shutil.rmtree(info["work"], ignore_errors=True)
+    if loop_key:
+        print("loops.json:", update_loops(loop_key, song))
     return ok

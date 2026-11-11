@@ -1,0 +1,14 @@
+{
+  "post": {
+    "file": "base.m4a",
+    "loopEnd": 80.64
+  },
+  "delivery": {
+    "file": "quest.m4a",
+    "loopEnd": 80.0
+  },
+  "big": {
+    "file": "big.m4a",
+    "loopEnd": 53.76
+  }
+}

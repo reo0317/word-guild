@@ -265,4 +265,4 @@ def build():
 
 
 if __name__ == "__main__":
-    main(build(), keep_work="--keep" in sys.argv)
+    main(build(), keep_work="--keep" in sys.argv, loop_key="post")
