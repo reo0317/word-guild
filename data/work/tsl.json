@@ -1,0 +1,8752 @@
+[
+ {
+  "id": "t0001",
+  "w": "mister",
+  "rank": 1,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0002",
+  "w": "vacation",
+  "rank": 2,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0003",
+  "w": "client",
+  "rank": 3,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0004",
+  "w": "e-book",
+  "rank": 4,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0005",
+  "w": "airport",
+  "rank": 5,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0006",
+  "w": "memo",
+  "rank": 6,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0007",
+  "w": "reservation",
+  "rank": 7,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0008",
+  "w": "logical",
+  "rank": 8,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0009",
+  "w": "fax",
+  "rank": 9,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0010",
+  "w": "o'clock",
+  "rank": 10,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0011",
+  "w": "sincerely",
+  "rank": 11,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0012",
+  "w": "sometime",
+  "rank": 12,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0013",
+  "w": "supervisor",
+  "rank": 13,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0014",
+  "w": "refund",
+  "rank": 14,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0015",
+  "w": "goods",
+  "rank": 15,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0016",
+  "w": "workshop",
+  "rank": 16,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0017",
+  "w": "downtown",
+  "rank": 17,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0018",
+  "w": "deadline",
+  "rank": 18,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0019",
+  "w": "invoice",
+  "rank": 19,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0020",
+  "w": "brochure",
+  "rank": 20,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0021",
+  "w": "noon",
+  "rank": 21,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0022",
+  "w": "accountant",
+  "rank": 22,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0023",
+  "w": "clerk",
+  "rank": 23,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0024",
+  "w": "lobby",
+  "rank": 24,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0025",
+  "w": "publish",
+  "rank": 25,
+  "ch": 2,
+  "shelf": 7
+ },
+ {
+  "id": "t0026",
+  "w": "résumé",
+  "rank": 26,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0027",
+  "w": "enclose",
+  "rank": 27,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0028",
+  "w": "applicant",
+  "rank": 28,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0029",
+  "w": "seminar",
+  "rank": 29,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0030",
+  "w": "technician",
+  "rank": 30,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0031",
+  "w": "cloth",
+  "rank": 31,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0032",
+  "w": "fare",
+  "rank": 32,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0033",
+  "w": "receipt",
+  "rank": 33,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0034",
+  "w": "traveler",
+  "rank": 34,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0035",
+  "w": "caller",
+  "rank": 35,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0036",
+  "w": "subway",
+  "rank": 36,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0037",
+  "w": "luggage",
+  "rank": 37,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0038",
+  "w": "shipment",
+  "rank": 38,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0039",
+  "w": "infer",
+  "rank": 39,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0040",
+  "w": "waiter",
+  "rank": 40,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0041",
+  "w": "rental",
+  "rank": 41,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0042",
+  "w": "warranty",
+  "rank": 42,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0043",
+  "w": "cafeteria",
+  "rank": 43,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0044",
+  "w": "chef",
+  "rank": 44,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0045",
+  "w": "elevator",
+  "rank": 45,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0046",
+  "w": "reception",
+  "rank": 46,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0047",
+  "w": "correctly",
+  "rank": 47,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0048",
+  "w": "lease",
+  "rank": 48,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0049",
+  "w": "bicycle",
+  "rank": 49,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0050",
+  "w": "notify",
+  "rank": 50,
+  "ch": 2,
+  "shelf": 8
+ },
+ {
+  "id": "t0051",
+  "w": "preview",
+  "rank": 51,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0052",
+  "w": "attendant",
+  "rank": 52,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0053",
+  "w": "subscription",
+  "rank": 53,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0054",
+  "w": "convenient",
+  "rank": 54,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0055",
+  "w": "manual",
+  "rank": 55,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0056",
+  "w": "clue",
+  "rank": 56,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0057",
+  "w": "garage",
+  "rank": 57,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0058",
+  "w": "obtain",
+  "rank": 58,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0059",
+  "w": "oval",
+  "rank": 59,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0060",
+  "w": "inventory",
+  "rank": 60,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0061",
+  "w": "outdoor",
+  "rank": 61,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0062",
+  "w": "suitcase",
+  "rank": 62,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0063",
+  "w": "destination",
+  "rank": 63,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0064",
+  "w": "occupation",
+  "rank": 64,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0065",
+  "w": "postpone",
+  "rank": 65,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0066",
+  "w": "contradict",
+  "rank": 66,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0067",
+  "w": "umbrella",
+  "rank": 67,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0068",
+  "w": "inference",
+  "rank": 68,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0069",
+  "w": "cellphone",
+  "rank": 69,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0070",
+  "w": "compact",
+  "rank": 70,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0071",
+  "w": "merchandise",
+  "rank": 71,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0072",
+  "w": "receptionist",
+  "rank": 72,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0073",
+  "w": "dentist",
+  "rank": 73,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0074",
+  "w": "identification",
+  "rank": 74,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0075",
+  "w": "coupon",
+  "rank": 75,
+  "ch": 2,
+  "shelf": 9
+ },
+ {
+  "id": "t0076",
+  "w": "depart",
+  "rank": 76,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0077",
+  "w": "reschedule",
+  "rank": 77,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0078",
+  "w": "tactic",
+  "rank": 78,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0079",
+  "w": "renovation",
+  "rank": 79,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0080",
+  "w": "upgrade",
+  "rank": 80,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0081",
+  "w": "precede",
+  "rank": 81,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0082",
+  "w": "replacement",
+  "rank": 82,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0083",
+  "w": "dine",
+  "rank": 83,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0084",
+  "w": "passport",
+  "rank": 84,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0085",
+  "w": "coworker",
+  "rank": 85,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0086",
+  "w": "upcoming",
+  "rank": 86,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0087",
+  "w": "cabinet",
+  "rank": 87,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0088",
+  "w": "appliance",
+  "rank": 88,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0089",
+  "w": "explanatory",
+  "rank": 89,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0090",
+  "w": "instructor",
+  "rank": 90,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0091",
+  "w": "keyboard",
+  "rank": 91,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0092",
+  "w": "media",
+  "rank": 92,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0093",
+  "w": "supermarket",
+  "rank": 93,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0094",
+  "w": "valid",
+  "rank": 94,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0095",
+  "w": "admission",
+  "rank": 95,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0096",
+  "w": "laptop",
+  "rank": 96,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0097",
+  "w": "underline",
+  "rank": 97,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0098",
+  "w": "electrical",
+  "rank": 98,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0099",
+  "w": "airplane",
+  "rank": 99,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0100",
+  "w": "assignment",
+  "rank": 100,
+  "ch": 2,
+  "shelf": 10
+ },
+ {
+  "id": "t0101",
+  "w": "exit",
+  "rank": 101,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0102",
+  "w": "attendee",
+  "rank": 102,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0103",
+  "w": "cruise",
+  "rank": 103,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0104",
+  "w": "birthday",
+  "rank": 104,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0105",
+  "w": "café",
+  "rank": 105,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0106",
+  "w": "comprehension",
+  "rank": 106,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0107",
+  "w": "mall",
+  "rank": 107,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0108",
+  "w": "medication",
+  "rank": 108,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0109",
+  "w": "recycle",
+  "rank": 109,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0110",
+  "w": "renew",
+  "rank": 110,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0111",
+  "w": "tenant",
+  "rank": 111,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0112",
+  "w": "sandwich",
+  "rank": 112,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0113",
+  "w": "departure",
+  "rank": 113,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0114",
+  "w": "mini",
+  "rank": 114,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0115",
+  "w": "fitness",
+  "rank": 115,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0116",
+  "w": "inconvenience",
+  "rank": 116,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0117",
+  "w": "banquet",
+  "rank": 117,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0118",
+  "w": "closet",
+  "rank": 118,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0119",
+  "w": "unreal",
+  "rank": 119,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0120",
+  "w": "distractor",
+  "rank": 120,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0121",
+  "w": "expire",
+  "rank": 121,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0122",
+  "w": "folder",
+  "rank": 122,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0123",
+  "w": "photocopy",
+  "rank": 123,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0124",
+  "w": "renovate",
+  "rank": 124,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0125",
+  "w": "sunny",
+  "rank": 125,
+  "ch": 2,
+  "shelf": 11
+ },
+ {
+  "id": "t0126",
+  "w": "calendar",
+  "rank": 126,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0127",
+  "w": "donation",
+  "rank": 127,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0128",
+  "w": "feedback",
+  "rank": 128,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0129",
+  "w": "shortly",
+  "rank": 129,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0130",
+  "w": "snack",
+  "rank": 130,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0131",
+  "w": "warehouse",
+  "rank": 131,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0132",
+  "w": "copier",
+  "rank": 132,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0133",
+  "w": "provider",
+  "rank": 133,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0134",
+  "w": "beverage",
+  "rank": 134,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0135",
+  "w": "hungry",
+  "rank": 135,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0136",
+  "w": "inspection",
+  "rank": 136,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0137",
+  "w": "recipient",
+  "rank": 137,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0138",
+  "w": "aisle",
+  "rank": 138,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0139",
+  "w": "inspect",
+  "rank": 139,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0140",
+  "w": "mechanic",
+  "rank": 140,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0141",
+  "w": "merger",
+  "rank": 141,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0142",
+  "w": "soccer",
+  "rank": 142,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0143",
+  "w": "sweater",
+  "rank": 143,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0144",
+  "w": "ingredient",
+  "rank": 144,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0145",
+  "w": "rewrite",
+  "rank": 145,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0146",
+  "w": "itinerary",
+  "rank": 146,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0147",
+  "w": "workplace",
+  "rank": 147,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0148",
+  "w": "architect",
+  "rank": 148,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0149",
+  "w": "convenience",
+  "rank": 149,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0150",
+  "w": "eligible",
+  "rank": 150,
+  "ch": 2,
+  "shelf": 12
+ },
+ {
+  "id": "t0151",
+  "w": "indoor",
+  "rank": 151,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0152",
+  "w": "baggage",
+  "rank": 152,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0153",
+  "w": "dial",
+  "rank": 153,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0154",
+  "w": "container",
+  "rank": 154,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0155",
+  "w": "drawer",
+  "rank": 155,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0156",
+  "w": "lab",
+  "rank": 156,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0157",
+  "w": "submission",
+  "rank": 157,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0158",
+  "w": "bulletin",
+  "rank": 158,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0159",
+  "w": "certificate",
+  "rank": 159,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0160",
+  "w": "gym",
+  "rank": 160,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0161",
+  "w": "highway",
+  "rank": 161,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0162",
+  "w": "respondent",
+  "rank": 162,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0163",
+  "w": "jewelry",
+  "rank": 163,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0164",
+  "w": "overtime",
+  "rank": 164,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0165",
+  "w": "battery",
+  "rank": 165,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0166",
+  "w": "donate",
+  "rank": 166,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0167",
+  "w": "outstanding",
+  "rank": 167,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0168",
+  "w": "skim",
+  "rank": 168,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0169",
+  "w": "briefcase",
+  "rank": 169,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0170",
+  "w": "dessert",
+  "rank": 170,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0171",
+  "w": "impact",
+  "rank": 171,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0172",
+  "w": "innovative",
+  "rank": 172,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0173",
+  "w": "inquire",
+  "rank": 173,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0174",
+  "w": "overnight",
+  "rank": 174,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0175",
+  "w": "venue",
+  "rank": 175,
+  "ch": 2,
+  "shelf": 13
+ },
+ {
+  "id": "t0176",
+  "w": "commuter",
+  "rank": 176,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0177",
+  "w": "logo",
+  "rank": 177,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0178",
+  "w": "newsletter",
+  "rank": 178,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0179",
+  "w": "advisor",
+  "rank": 179,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0180",
+  "w": "cartridge",
+  "rank": 180,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0181",
+  "w": "cloudy",
+  "rank": 181,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0182",
+  "w": "photographer",
+  "rank": 182,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0183",
+  "w": "shopper",
+  "rank": 183,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0184",
+  "w": "tag",
+  "rank": 184,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0185",
+  "w": "announcer",
+  "rank": 185,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0186",
+  "w": "aspect",
+  "rank": 186,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0187",
+  "w": "audit",
+  "rank": 187,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0188",
+  "w": "contractor",
+  "rank": 188,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0189",
+  "w": "download",
+  "rank": 189,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0190",
+  "w": "password",
+  "rank": 190,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0191",
+  "w": "prohibit",
+  "rank": 191,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0192",
+  "w": "stadium",
+  "rank": 192,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0193",
+  "w": "terminal",
+  "rank": 193,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0194",
+  "w": "weekday",
+  "rank": 194,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0195",
+  "w": "bonus",
+  "rank": 195,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0196",
+  "w": "cart",
+  "rank": 196,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0197",
+  "w": "delicious",
+  "rank": 197,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0198",
+  "w": "ink",
+  "rank": 198,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0199",
+  "w": "supervise",
+  "rank": 199,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0200",
+  "w": "waitress",
+  "rank": 200,
+  "ch": 2,
+  "shelf": 14
+ },
+ {
+  "id": "t0201",
+  "w": "cleaner",
+  "rank": 201,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0202",
+  "w": "developer",
+  "rank": 202,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0203",
+  "w": "headquarter",
+  "rank": 203,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0204",
+  "w": "shuttle",
+  "rank": 204,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0205",
+  "w": "stationery",
+  "rank": 205,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0206",
+  "w": "subscribe",
+  "rank": 206,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0207",
+  "w": "alike",
+  "rank": 207,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0208",
+  "w": "flavor",
+  "rank": 208,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0209",
+  "w": "picnic",
+  "rank": 209,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0210",
+  "w": "recipe",
+  "rank": 210,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0211",
+  "w": "refreshment",
+  "rank": 211,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0212",
+  "w": "administrative",
+  "rank": 212,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0213",
+  "w": "authorize",
+  "rank": 213,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0214",
+  "w": "commonly",
+  "rank": 214,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0215",
+  "w": "distribution",
+  "rank": 215,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0216",
+  "w": "sofa",
+  "rank": 216,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0217",
+  "w": "accommodate",
+  "rank": 217,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0218",
+  "w": "affordable",
+  "rank": 218,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0219",
+  "w": "annoy",
+  "rank": 219,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0220",
+  "w": "commute",
+  "rank": 220,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0221",
+  "w": "coordinate",
+  "rank": 221,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0222",
+  "w": "paperwork",
+  "rank": 222,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0223",
+  "w": "quit",
+  "rank": 223,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0224",
+  "w": "authority",
+  "rank": 224,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0225",
+  "w": "flu",
+  "rank": 225,
+  "ch": 2,
+  "shelf": 15
+ },
+ {
+  "id": "t0226",
+  "w": "captain",
+  "rank": 226,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0227",
+  "w": "installation",
+  "rank": 227,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0228",
+  "w": "trainer",
+  "rank": 228,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0229",
+  "w": "availability",
+  "rank": 229,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0230",
+  "w": "bargain",
+  "rank": 230,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0231",
+  "w": "complimentary",
+  "rank": 231,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0232",
+  "w": "hike",
+  "rank": 232,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0233",
+  "w": "midnight",
+  "rank": 233,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0234",
+  "w": "productivity",
+  "rank": 234,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0235",
+  "w": "rainy",
+  "rank": 235,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0236",
+  "w": "relocate",
+  "rank": 236,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0237",
+  "w": "trainee",
+  "rank": 237,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0238",
+  "w": "transaction",
+  "rank": 238,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0239",
+  "w": "unhappy",
+  "rank": 239,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0240",
+  "w": "verify",
+  "rank": 240,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0241",
+  "w": "automobile",
+  "rank": 241,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0242",
+  "w": "courier",
+  "rank": 242,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0243",
+  "w": "incomplete",
+  "rank": 243,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0244",
+  "w": "questionnaire",
+  "rank": 244,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0245",
+  "w": "baseball",
+  "rank": 245,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0246",
+  "w": "dock",
+  "rank": 246,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0247",
+  "w": "lamp",
+  "rank": 247,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0248",
+  "w": "lately",
+  "rank": 248,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0249",
+  "w": "machinery",
+  "rank": 249,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0250",
+  "w": "presenter",
+  "rank": 250,
+  "ch": 2,
+  "shelf": 16
+ },
+ {
+  "id": "t0251",
+  "w": "seldom",
+  "rank": 251,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0252",
+  "w": "signature",
+  "rank": 252,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0253",
+  "w": "worldwide",
+  "rank": 253,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0254",
+  "w": "carrier",
+  "rank": 254,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0255",
+  "w": "designate",
+  "rank": 255,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0256",
+  "w": "exclusive",
+  "rank": 256,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0257",
+  "w": "grocery",
+  "rank": 257,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0258",
+  "w": "homework",
+  "rank": 258,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0259",
+  "w": "memorandum",
+  "rank": 259,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0260",
+  "w": "photocopier",
+  "rank": 260,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0261",
+  "w": "suite",
+  "rank": 261,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0262",
+  "w": "thorough",
+  "rank": 262,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0263",
+  "w": "bookstore",
+  "rank": 263,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0264",
+  "w": "cater",
+  "rank": 264,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0265",
+  "w": "dental",
+  "rank": 265,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0266",
+  "w": "duration",
+  "rank": 266,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0267",
+  "w": "lounge",
+  "rank": 267,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0268",
+  "w": "painter",
+  "rank": 268,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0269",
+  "w": "patron",
+  "rank": 269,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0270",
+  "w": "prescription",
+  "rank": 270,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0271",
+  "w": "productive",
+  "rank": 271,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0272",
+  "w": "salad",
+  "rank": 272,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0273",
+  "w": "stack",
+  "rank": 273,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0274",
+  "w": "delegate",
+  "rank": 274,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0275",
+  "w": "salesperson",
+  "rank": 275,
+  "ch": 3,
+  "shelf": 17
+ },
+ {
+  "id": "t0276",
+  "w": "calculator",
+  "rank": 276,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0277",
+  "w": "completion",
+  "rank": 277,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0278",
+  "w": "defect",
+  "rank": 278,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0279",
+  "w": "garbage",
+  "rank": 279,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0280",
+  "w": "omit",
+  "rank": 280,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0281",
+  "w": "spite",
+  "rank": 281,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0282",
+  "w": "bathroom",
+  "rank": 282,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0283",
+  "w": "cab",
+  "rank": 283,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0284",
+  "w": "correspondence",
+  "rank": 284,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0285",
+  "w": "ladder",
+  "rank": 285,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0286",
+  "w": "photography",
+  "rank": 286,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0287",
+  "w": "sculpture",
+  "rank": 287,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0288",
+  "w": "anniversary",
+  "rank": 288,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0289",
+  "w": "buffet",
+  "rank": 289,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0290",
+  "w": "defective",
+  "rank": 290,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0291",
+  "w": "ice cream",
+  "rank": 291,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0292",
+  "w": "leak",
+  "rank": 292,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0293",
+  "w": "occupancy",
+  "rank": 293,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0294",
+  "w": "proficiency",
+  "rank": 294,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0295",
+  "w": "renewal",
+  "rank": 295,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0296",
+  "w": "urgent",
+  "rank": 296,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0297",
+  "w": "annually",
+  "rank": 297,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0298",
+  "w": "basketball",
+  "rank": 298,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0299",
+  "w": "delete",
+  "rank": 299,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0300",
+  "w": "illogical",
+  "rank": 300,
+  "ch": 3,
+  "shelf": 18
+ },
+ {
+  "id": "t0301",
+  "w": "pet",
+  "rank": 301,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0302",
+  "w": "textbook",
+  "rank": 302,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0303",
+  "w": "accurately",
+  "rank": 303,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0304",
+  "w": "cabin",
+  "rank": 304,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0305",
+  "w": "conductor",
+  "rank": 305,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0306",
+  "w": "inspector",
+  "rank": 306,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0307",
+  "w": "intern",
+  "rank": 307,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0308",
+  "w": "semester",
+  "rank": 308,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0309",
+  "w": "confirmation",
+  "rank": 309,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0310",
+  "w": "congratulation",
+  "rank": 310,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0311",
+  "w": "expertise",
+  "rank": 311,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0312",
+  "w": "graph",
+  "rank": 312,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0313",
+  "w": "taker",
+  "rank": 313,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0314",
+  "w": "utility",
+  "rank": 314,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0315",
+  "w": "voucher",
+  "rank": 315,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0316",
+  "w": "banker",
+  "rank": 316,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0317",
+  "w": "behalf",
+  "rank": 317,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0318",
+  "w": "minimize",
+  "rank": 318,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0319",
+  "w": "optional",
+  "rank": 319,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0320",
+  "w": "paycheck",
+  "rank": 320,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0321",
+  "w": "polite",
+  "rank": 321,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0322",
+  "w": "protective",
+  "rank": 322,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0323",
+  "w": "seller",
+  "rank": 323,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0324",
+  "w": "sidewalk",
+  "rank": 324,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0325",
+  "w": "sightsee",
+  "rank": 325,
+  "ch": 3,
+  "shelf": 19
+ },
+ {
+  "id": "t0326",
+  "w": "soup",
+  "rank": 326,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0327",
+  "w": "transit",
+  "rank": 327,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0328",
+  "w": "wallet",
+  "rank": 328,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0329",
+  "w": "cashier",
+  "rank": 329,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0330",
+  "w": "casual",
+  "rank": 330,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0331",
+  "w": "drill",
+  "rank": 331,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0332",
+  "w": "fountain",
+  "rank": 332,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0333",
+  "w": "juice",
+  "rank": 333,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0334",
+  "w": "lane",
+  "rank": 334,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0335",
+  "w": "popularity",
+  "rank": 335,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0336",
+  "w": "poster",
+  "rank": 336,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0337",
+  "w": "promptly",
+  "rank": 337,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0338",
+  "w": "retailer",
+  "rank": 338,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0339",
+  "w": "vacancy",
+  "rank": 339,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0340",
+  "w": "bench",
+  "rank": 340,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0341",
+  "w": "cumulative",
+  "rank": 341,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0342",
+  "w": "directory",
+  "rank": 342,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0343",
+  "w": "disposal",
+  "rank": 343,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0344",
+  "w": "housekeeper",
+  "rank": 344,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0345",
+  "w": "internship",
+  "rank": 345,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0346",
+  "w": "knowledgeable",
+  "rank": 346,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0347",
+  "w": "organizer",
+  "rank": 347,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0348",
+  "w": "overdue",
+  "rank": 348,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0349",
+  "w": "prediction",
+  "rank": 349,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0350",
+  "w": "subscriber",
+  "rank": 350,
+  "ch": 3,
+  "shelf": 20
+ },
+ {
+  "id": "t0351",
+  "w": "booklet",
+  "rank": 351,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0352",
+  "w": "conditioner",
+  "rank": 352,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0353",
+  "w": "enroll",
+  "rank": 353,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0354",
+  "w": "frustrate",
+  "rank": 354,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0355",
+  "w": "garment",
+  "rank": 355,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0356",
+  "w": "orientation",
+  "rank": 356,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0357",
+  "w": "outlet",
+  "rank": 357,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0358",
+  "w": "packet",
+  "rank": 358,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0359",
+  "w": "plumber",
+  "rank": 359,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0360",
+  "w": "specification",
+  "rank": 360,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0361",
+  "w": "auto",
+  "rank": 361,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0362",
+  "w": "decorate",
+  "rank": 362,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0363",
+  "w": "deduction",
+  "rank": 363,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0364",
+  "w": "definite",
+  "rank": 364,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0365",
+  "w": "economical",
+  "rank": 365,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0366",
+  "w": "efficiently",
+  "rank": 366,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0367",
+  "w": "flyer",
+  "rank": 367,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0368",
+  "w": "franchise",
+  "rank": 368,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0369",
+  "w": "generous",
+  "rank": 369,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0370",
+  "w": "interrupt",
+  "rank": 370,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0371",
+  "w": "oven",
+  "rank": 371,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0372",
+  "w": "pant",
+  "rank": 372,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0373",
+  "w": "profitable",
+  "rank": 373,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0374",
+  "w": "refrigerator",
+  "rank": 374,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0375",
+  "w": "reimburse",
+  "rank": 375,
+  "ch": 3,
+  "shelf": 21
+ },
+ {
+  "id": "t0376",
+  "w": "showroom",
+  "rank": 376,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0377",
+  "w": "vegetarian",
+  "rank": 377,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0378",
+  "w": "administrator",
+  "rank": 378,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0379",
+  "w": "broker",
+  "rank": 379,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0380",
+  "w": "cancellation",
+  "rank": 380,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0381",
+  "w": "confidential",
+  "rank": 381,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0382",
+  "w": "jet",
+  "rank": 382,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0383",
+  "w": "realistic",
+  "rank": 383,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0384",
+  "w": "thoroughly",
+  "rank": 384,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0385",
+  "w": "trash",
+  "rank": 385,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0386",
+  "w": "usage",
+  "rank": 386,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0387",
+  "w": "windy",
+  "rank": 387,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0388",
+  "w": "automate",
+  "rank": 388,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0389",
+  "w": "ferry",
+  "rank": 389,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0390",
+  "w": "finalize",
+  "rank": 390,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0391",
+  "w": "incur",
+  "rank": 391,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0392",
+  "w": "instruct",
+  "rank": 392,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0393",
+  "w": "loyal",
+  "rank": 393,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0394",
+  "w": "luncheon",
+  "rank": 394,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0395",
+  "w": "microphone",
+  "rank": 395,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0396",
+  "w": "overview",
+  "rank": 396,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0397",
+  "w": "projector",
+  "rank": 397,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0398",
+  "w": "shortage",
+  "rank": 398,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0399",
+  "w": "spacious",
+  "rank": 399,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0400",
+  "w": "accomplishment",
+  "rank": 400,
+  "ch": 3,
+  "shelf": 22
+ },
+ {
+  "id": "t0401",
+  "w": "accustom",
+  "rank": 401,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0402",
+  "w": "clinic",
+  "rank": 402,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0403",
+  "w": "desktop",
+  "rank": 403,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0404",
+  "w": "jog",
+  "rank": 404,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0405",
+  "w": "leisure",
+  "rank": 405,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0406",
+  "w": "nap",
+  "rank": 406,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0407",
+  "w": "reinforce",
+  "rank": 407,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0408",
+  "w": "sender",
+  "rank": 408,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0409",
+  "w": "vacuum",
+  "rank": 409,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0410",
+  "w": "wireless",
+  "rank": 410,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0411",
+  "w": "yearly",
+  "rank": 411,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0412",
+  "w": "appreciation",
+  "rank": 412,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0413",
+  "w": "cargo",
+  "rank": 413,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0414",
+  "w": "cooperate",
+  "rank": 414,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0415",
+  "w": "distract",
+  "rank": 415,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0416",
+  "w": "dividend",
+  "rank": 416,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0417",
+  "w": "exemption",
+  "rank": 417,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0418",
+  "w": "furnish",
+  "rank": 418,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0419",
+  "w": "hourly",
+  "rank": 419,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0420",
+  "w": "laundry",
+  "rank": 420,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0421",
+  "w": "mandatory",
+  "rank": 421,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0422",
+  "w": "mechanical",
+  "rank": 422,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0423",
+  "w": "pharmacy",
+  "rank": 423,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0424",
+  "w": "promotional",
+  "rank": 424,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0425",
+  "w": "quarterly",
+  "rank": 425,
+  "ch": 3,
+  "shelf": 23
+ },
+ {
+  "id": "t0426",
+  "w": "residential",
+  "rank": 426,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0427",
+  "w": "scholarship",
+  "rank": 427,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0428",
+  "w": "seeker",
+  "rank": 428,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0429",
+  "w": "temporarily",
+  "rank": 429,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0430",
+  "w": "towel",
+  "rank": 430,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0431",
+  "w": "unattended",
+  "rank": 431,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0432",
+  "w": "accessible",
+  "rank": 432,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0433",
+  "w": "afterward",
+  "rank": 433,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0434",
+  "w": "apology",
+  "rank": 434,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0435",
+  "w": "assemble",
+  "rank": 435,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0436",
+  "w": "automatic",
+  "rank": 436,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0437",
+  "w": "boardroom",
+  "rank": 437,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0438",
+  "w": "carpenter",
+  "rank": 438,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0439",
+  "w": "caterer",
+  "rank": 439,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0440",
+  "w": "classify",
+  "rank": 440,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0441",
+  "w": "consultation",
+  "rank": 441,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0442",
+  "w": "durable",
+  "rank": 442,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0443",
+  "w": "glove",
+  "rank": 443,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0444",
+  "w": "hardware",
+  "rank": 444,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0445",
+  "w": "malfunction",
+  "rank": 445,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0446",
+  "w": "outdated",
+  "rank": 446,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0447",
+  "w": "patience",
+  "rank": 447,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0448",
+  "w": "postcard",
+  "rank": 448,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0449",
+  "w": "prospective",
+  "rank": 449,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0450",
+  "w": "revision",
+  "rank": 450,
+  "ch": 3,
+  "shelf": 24
+ },
+ {
+  "id": "t0451",
+  "w": "strictly",
+  "rank": 451,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0452",
+  "w": "tomato",
+  "rank": 452,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0453",
+  "w": "tray",
+  "rank": 453,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0454",
+  "w": "vendor",
+  "rank": 454,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0455",
+  "w": "withdrawal",
+  "rank": 455,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0456",
+  "w": "anytime",
+  "rank": 456,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0457",
+  "w": "badge",
+  "rank": 457,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0458",
+  "w": "brake",
+  "rank": 458,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0459",
+  "w": "calculation",
+  "rank": 459,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0460",
+  "w": "coordinator",
+  "rank": 460,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0461",
+  "w": "costly",
+  "rank": 461,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0462",
+  "w": "equip",
+  "rank": 462,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0463",
+  "w": "excursion",
+  "rank": 463,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0464",
+  "w": "graphic",
+  "rank": 464,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0465",
+  "w": "inexperience",
+  "rank": 465,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0466",
+  "w": "lengthy",
+  "rank": 466,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0467",
+  "w": "librarian",
+  "rank": 467,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0468",
+  "w": "meantime",
+  "rank": 468,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0469",
+  "w": "merge",
+  "rank": 469,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0470",
+  "w": "performer",
+  "rank": 470,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0471",
+  "w": "pharmacist",
+  "rank": 471,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0472",
+  "w": "pizza",
+  "rank": 472,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0473",
+  "w": "resignation",
+  "rank": 473,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0474",
+  "w": "reviewer",
+  "rank": 474,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0475",
+  "w": "terminate",
+  "rank": 475,
+  "ch": 3,
+  "shelf": 25
+ },
+ {
+  "id": "t0476",
+  "w": "translation",
+  "rank": 476,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0477",
+  "w": "unfamiliar",
+  "rank": 477,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0478",
+  "w": "actress",
+  "rank": 478,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0479",
+  "w": "adjacent",
+  "rank": 479,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0480",
+  "w": "alternate",
+  "rank": 480,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0481",
+  "w": "congratulate",
+  "rank": 481,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0482",
+  "w": "escort",
+  "rank": 482,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0483",
+  "w": "inexpensive",
+  "rank": 483,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0484",
+  "w": "mask",
+  "rank": 484,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0485",
+  "w": "purchaser",
+  "rank": 485,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0486",
+  "w": "purse",
+  "rank": 486,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0487",
+  "w": "realtor",
+  "rank": 487,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0488",
+  "w": "rearrange",
+  "rank": 488,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0489",
+  "w": "reopen",
+  "rank": 489,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0490",
+  "w": "soap",
+  "rank": 490,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0491",
+  "w": "spokesperson",
+  "rank": 491,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0492",
+  "w": "superior",
+  "rank": 492,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0493",
+  "w": "airfare",
+  "rank": 493,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0494",
+  "w": "bake",
+  "rank": 494,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0495",
+  "w": "businessperson",
+  "rank": 495,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0496",
+  "w": "considerably",
+  "rank": 496,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0497",
+  "w": "faulty",
+  "rank": 497,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0498",
+  "w": "hobby",
+  "rank": 498,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0499",
+  "w": "informal",
+  "rank": 499,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0500",
+  "w": "kilometer",
+  "rank": 500,
+  "ch": 3,
+  "shelf": 26
+ },
+ {
+  "id": "t0501",
+  "w": "lawn",
+  "rank": 501,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0502",
+  "w": "microscope",
+  "rank": 502,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0503",
+  "w": "mislead",
+  "rank": 503,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0504",
+  "w": "misplace",
+  "rank": 504,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0505",
+  "w": "newsstand",
+  "rank": 505,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0506",
+  "w": "overhead",
+  "rank": 506,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0507",
+  "w": "portfolio",
+  "rank": 507,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0508",
+  "w": "rack",
+  "rank": 508,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0509",
+  "w": "remodel",
+  "rank": 509,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0510",
+  "w": "statistics",
+  "rank": 510,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0511",
+  "w": "tunnel",
+  "rank": 511,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0512",
+  "w": "unlimited",
+  "rank": 512,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0513",
+  "w": "vitamin",
+  "rank": 513,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0514",
+  "w": "zoo",
+  "rank": 514,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0515",
+  "w": "alert",
+  "rank": 515,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0516",
+  "w": "auditorium",
+  "rank": 516,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0517",
+  "w": "celebrity",
+  "rank": 517,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0518",
+  "w": "deduct",
+  "rank": 518,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0519",
+  "w": "disruption",
+  "rank": 519,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0520",
+  "w": "electrician",
+  "rank": 520,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0521",
+  "w": "enthusiastic",
+  "rank": 521,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0522",
+  "w": "graduation",
+  "rank": 522,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0523",
+  "w": "icy",
+  "rank": 523,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0524",
+  "w": "irregular",
+  "rank": 524,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0525",
+  "w": "login",
+  "rank": 525,
+  "ch": 4,
+  "shelf": 27
+ },
+ {
+  "id": "t0526",
+  "w": "managerial",
+  "rank": 526,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0527",
+  "w": "mineral",
+  "rank": 527,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0528",
+  "w": "motorcycle",
+  "rank": 528,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0529",
+  "w": "necessity",
+  "rank": 529,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0530",
+  "w": "planner",
+  "rank": 530,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0531",
+  "w": "programmer",
+  "rank": 531,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0532",
+  "w": "proofread",
+  "rank": 532,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0533",
+  "w": "recruiter",
+  "rank": 533,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0534",
+  "w": "remainder",
+  "rank": 534,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0535",
+  "w": "statue",
+  "rank": 535,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0536",
+  "w": "steadily",
+  "rank": 536,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0537",
+  "w": "stockholder",
+  "rank": 537,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0538",
+  "w": "vacant",
+  "rank": 538,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0539",
+  "w": "accessory",
+  "rank": 539,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0540",
+  "w": "assembly",
+  "rank": 540,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0541",
+  "w": "basket",
+  "rank": 541,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0542",
+  "w": "certification",
+  "rank": 542,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0543",
+  "w": "closure",
+  "rank": 543,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0544",
+  "w": "dislike",
+  "rank": 544,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0545",
+  "w": "downstairs",
+  "rank": 545,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0546",
+  "w": "expiration",
+  "rank": 546,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0547",
+  "w": "headache",
+  "rank": 547,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0548",
+  "w": "jam",
+  "rank": 548,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0549",
+  "w": "nail",
+  "rank": 549,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0550",
+  "w": "optimistic",
+  "rank": 550,
+  "ch": 4,
+  "shelf": 28
+ },
+ {
+  "id": "t0551",
+  "w": "pedestrian",
+  "rank": 551,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0552",
+  "w": "projection",
+  "rank": 552,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0553",
+  "w": "sleeve",
+  "rank": 553,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0554",
+  "w": "suburb",
+  "rank": 554,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0555",
+  "w": "takeover",
+  "rank": 555,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0556",
+  "w": "unsure",
+  "rank": 556,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0557",
+  "w": "upstairs",
+  "rank": 557,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0558",
+  "w": "verbal",
+  "rank": 558,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0559",
+  "w": "visa",
+  "rank": 559,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0560",
+  "w": "wildlife",
+  "rank": 560,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0561",
+  "w": "workforce",
+  "rank": 561,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0562",
+  "w": "absent",
+  "rank": 562,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0563",
+  "w": "accumulate",
+  "rank": 563,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0564",
+  "w": "appraisal",
+  "rank": 564,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0565",
+  "w": "apprentice",
+  "rank": 565,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0566",
+  "w": "businessman",
+  "rank": 566,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0567",
+  "w": "ceiling",
+  "rank": 567,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0568",
+  "w": "colorful",
+  "rank": 568,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0569",
+  "w": "compensate",
+  "rank": 569,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0570",
+  "w": "costume",
+  "rank": 570,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0571",
+  "w": "editorial",
+  "rank": 571,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0572",
+  "w": "effectiveness",
+  "rank": 572,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0573",
+  "w": "facilitate",
+  "rank": 573,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0574",
+  "w": "firefighter",
+  "rank": 574,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0575",
+  "w": "gasoline",
+  "rank": 575,
+  "ch": 4,
+  "shelf": 29
+ },
+ {
+  "id": "t0576",
+  "w": "inappropriate",
+  "rank": 576,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0577",
+  "w": "internet",
+  "rank": 577,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0578",
+  "w": "landlord",
+  "rank": 578,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0579",
+  "w": "layout",
+  "rank": 579,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0580",
+  "w": "lunchtime",
+  "rank": 580,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0581",
+  "w": "payroll",
+  "rank": 581,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0582",
+  "w": "pharmaceutical",
+  "rank": 582,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0583",
+  "w": "plausible",
+  "rank": 583,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0584",
+  "w": "premium",
+  "rank": 584,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0585",
+  "w": "safely",
+  "rank": 585,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0586",
+  "w": "simplify",
+  "rank": 586,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0587",
+  "w": "specialty",
+  "rank": 587,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0588",
+  "w": "tech",
+  "rank": 588,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0589",
+  "w": "unexpected",
+  "rank": 589,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0590",
+  "w": "unspecified",
+  "rank": 590,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0591",
+  "w": "adhere",
+  "rank": 591,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0592",
+  "w": "bankrupt",
+  "rank": 592,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0593",
+  "w": "caution",
+  "rank": 593,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0594",
+  "w": "clip",
+  "rank": 594,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0595",
+  "w": "comply",
+  "rank": 595,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0596",
+  "w": "diner",
+  "rank": 596,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0597",
+  "w": "duplicate",
+  "rank": 597,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0598",
+  "w": "eager",
+  "rank": 598,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0599",
+  "w": "economist",
+  "rank": 599,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0600",
+  "w": "embassy",
+  "rank": 600,
+  "ch": 4,
+  "shelf": 30
+ },
+ {
+  "id": "t0601",
+  "w": "fasten",
+  "rank": 601,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0602",
+  "w": "harmful",
+  "rank": 602,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0603",
+  "w": "informative",
+  "rank": 603,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0604",
+  "w": "institute",
+  "rank": 604,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0605",
+  "w": "kit",
+  "rank": 605,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0606",
+  "w": "locally",
+  "rank": 606,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0607",
+  "w": "mentor",
+  "rank": 607,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0608",
+  "w": "nominate",
+  "rank": 608,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0609",
+  "w": "opt",
+  "rank": 609,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0610",
+  "w": "parade",
+  "rank": 610,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0611",
+  "w": "physician",
+  "rank": 611,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0612",
+  "w": "polish",
+  "rank": 612,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0613",
+  "w": "postage",
+  "rank": 613,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0614",
+  "w": "recreational",
+  "rank": 614,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0615",
+  "w": "rehearse",
+  "rank": 615,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0616",
+  "w": "removal",
+  "rank": 616,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0617",
+  "w": "satisfactory",
+  "rank": 617,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0618",
+  "w": "seasonal",
+  "rank": 618,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0619",
+  "w": "separately",
+  "rank": 619,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0620",
+  "w": "turnover",
+  "rank": 620,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0621",
+  "w": "unnecessary",
+  "rank": 621,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0622",
+  "w": "accordingly",
+  "rank": 622,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0623",
+  "w": "apple",
+  "rank": 623,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0624",
+  "w": "applicable",
+  "rank": 624,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0625",
+  "w": "auction",
+  "rank": 625,
+  "ch": 4,
+  "shelf": 31
+ },
+ {
+  "id": "t0626",
+  "w": "balcony",
+  "rank": 626,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0627",
+  "w": "basement",
+  "rank": 627,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0628",
+  "w": "beforehand",
+  "rank": 628,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0629",
+  "w": "culinary",
+  "rank": 629,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0630",
+  "w": "documentary",
+  "rank": 630,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0631",
+  "w": "downturn",
+  "rank": 631,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0632",
+  "w": "earthquake",
+  "rank": 632,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0633",
+  "w": "elegant",
+  "rank": 633,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0634",
+  "w": "excessive",
+  "rank": 634,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0635",
+  "w": "generic",
+  "rank": 635,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0636",
+  "w": "jazz",
+  "rank": 636,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0637",
+  "w": "lifetime",
+  "rank": 637,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0638",
+  "w": "massage",
+  "rank": 638,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0639",
+  "w": "maximize",
+  "rank": 639,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0640",
+  "w": "mild",
+  "rank": 640,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0641",
+  "w": "ongoing",
+  "rank": 641,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0642",
+  "w": "periodically",
+  "rank": 642,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0643",
+  "w": "pie",
+  "rank": 643,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0644",
+  "w": "plug",
+  "rank": 644,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0645",
+  "w": "recruitment",
+  "rank": 645,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0646",
+  "w": "referee",
+  "rank": 646,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0647",
+  "w": "referral",
+  "rank": 647,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0648",
+  "w": "renown",
+  "rank": 648,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0649",
+  "w": "runner",
+  "rank": 649,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0650",
+  "w": "sock",
+  "rank": 650,
+  "ch": 4,
+  "shelf": 32
+ },
+ {
+  "id": "t0651",
+  "w": "spam",
+  "rank": 651,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0652",
+  "w": "surf",
+  "rank": 652,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0653",
+  "w": "timetable",
+  "rank": 653,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0654",
+  "w": "vase",
+  "rank": 654,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0655",
+  "w": "aboard",
+  "rank": 655,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0656",
+  "w": "advancement",
+  "rank": 656,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0657",
+  "w": "advertiser",
+  "rank": 657,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0658",
+  "w": "alternatively",
+  "rank": 658,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0659",
+  "w": "amuse",
+  "rank": 659,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0660",
+  "w": "attorney",
+  "rank": 660,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0661",
+  "w": "authorization",
+  "rank": 661,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0662",
+  "w": "campus",
+  "rank": 662,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0663",
+  "w": "candy",
+  "rank": 663,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0664",
+  "w": "certify",
+  "rank": 664,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0665",
+  "w": "checkout",
+  "rank": 665,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0666",
+  "w": "chemistry",
+  "rank": 666,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0667",
+  "w": "circulation",
+  "rank": 667,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0668",
+  "w": "concierge",
+  "rank": 668,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0669",
+  "w": "consent",
+  "rank": 669,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0670",
+  "w": "consistently",
+  "rank": 670,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0671",
+  "w": "cookie",
+  "rank": 671,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0672",
+  "w": "deck",
+  "rank": 672,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0673",
+  "w": "descriptive",
+  "rank": 673,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0674",
+  "w": "detach",
+  "rank": 674,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0675",
+  "w": "documentation",
+  "rank": 675,
+  "ch": 4,
+  "shelf": 33
+ },
+ {
+  "id": "t0676",
+  "w": "entrepreneur",
+  "rank": 676,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0677",
+  "w": "exceptional",
+  "rank": 677,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0678",
+  "w": "familiarize",
+  "rank": 678,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0679",
+  "w": "hotline",
+  "rank": 679,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0680",
+  "w": "intonation",
+  "rank": 680,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0681",
+  "w": "invention",
+  "rank": 681,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0682",
+  "w": "irritate",
+  "rank": 682,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0683",
+  "w": "locker",
+  "rank": 683,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0684",
+  "w": "overlook",
+  "rank": 684,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0685",
+  "w": "patent",
+  "rank": 685,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0686",
+  "w": "payable",
+  "rank": 686,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0687",
+  "w": "preliminary",
+  "rank": 687,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0688",
+  "w": "salesman",
+  "rank": 688,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0689",
+  "w": "sauna",
+  "rank": 689,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0690",
+  "w": "smoothly",
+  "rank": 690,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0691",
+  "w": "sunshine",
+  "rank": 691,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0692",
+  "w": "tow",
+  "rank": 692,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0693",
+  "w": "translator",
+  "rank": 693,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0694",
+  "w": "tuition",
+  "rank": 694,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0695",
+  "w": "unavailable",
+  "rank": 695,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0696",
+  "w": "violation",
+  "rank": 696,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0697",
+  "w": "webpage",
+  "rank": 697,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0698",
+  "w": "acceptance",
+  "rank": 698,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0699",
+  "w": "allocate",
+  "rank": 699,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0700",
+  "w": "ambitious",
+  "rank": 700,
+  "ch": 4,
+  "shelf": 34
+ },
+ {
+  "id": "t0701",
+  "w": "appendix",
+  "rank": 701,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0702",
+  "w": "booth",
+  "rank": 702,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0703",
+  "w": "clarify",
+  "rank": 703,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0704",
+  "w": "classmate",
+  "rank": 704,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0705",
+  "w": "compile",
+  "rank": 705,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0706",
+  "w": "correction",
+  "rank": 706,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0707",
+  "w": "customize",
+  "rank": 707,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0708",
+  "w": "dedication",
+  "rank": 708,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0709",
+  "w": "diagnose",
+  "rank": 709,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0710",
+  "w": "discontinue",
+  "rank": 710,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0711",
+  "w": "dishwasher",
+  "rank": 711,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0712",
+  "w": "drought",
+  "rank": 712,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0713",
+  "w": "economize",
+  "rank": 713,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0714",
+  "w": "entrée",
+  "rank": 714,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0715",
+  "w": "firework",
+  "rank": 715,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0716",
+  "w": "freight",
+  "rank": 716,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0717",
+  "w": "fry",
+  "rank": 717,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0718",
+  "w": "gallon",
+  "rank": 718,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0719",
+  "w": "gardener",
+  "rank": 719,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0720",
+  "w": "ideally",
+  "rank": 720,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0721",
+  "w": "inclusive",
+  "rank": 721,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0722",
+  "w": "insufficient",
+  "rank": 722,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0723",
+  "w": "introductory",
+  "rank": 723,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0724",
+  "w": "junk",
+  "rank": 724,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0725",
+  "w": "ma'am",
+  "rank": 725,
+  "ch": 4,
+  "shelf": 35
+ },
+ {
+  "id": "t0726",
+  "w": "mileage",
+  "rank": 726,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0727",
+  "w": "noisy",
+  "rank": 727,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0728",
+  "w": "pan",
+  "rank": 728,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0729",
+  "w": "parcel",
+  "rank": 729,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0730",
+  "w": "pasta",
+  "rank": 730,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0731",
+  "w": "periodical",
+  "rank": 731,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0732",
+  "w": "pill",
+  "rank": 732,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0733",
+  "w": "portable",
+  "rank": 733,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0734",
+  "w": "punctual",
+  "rank": 734,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0735",
+  "w": "recreation",
+  "rank": 735,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0736",
+  "w": "relieve",
+  "rank": 736,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0737",
+  "w": "reminder",
+  "rank": 737,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0738",
+  "w": "rumor",
+  "rank": 738,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0739",
+  "w": "scarf",
+  "rank": 739,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0740",
+  "w": "seaside",
+  "rank": 740,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0741",
+  "w": "shorten",
+  "rank": 741,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0742",
+  "w": "specially",
+  "rank": 742,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0743",
+  "w": "spill",
+  "rank": 743,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0744",
+  "w": "spouse",
+  "rank": 744,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0745",
+  "w": "subtract",
+  "rank": 745,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0746",
+  "w": "tablet",
+  "rank": 746,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0747",
+  "w": "ton",
+  "rank": 747,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0748",
+  "w": "vend",
+  "rank": 748,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0749",
+  "w": "yoga",
+  "rank": 749,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0750",
+  "w": "accent",
+  "rank": 750,
+  "ch": 4,
+  "shelf": 36
+ },
+ {
+  "id": "t0751",
+  "w": "advisory",
+  "rank": 751,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0752",
+  "w": "asleep",
+  "rank": 752,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0753",
+  "w": "authentic",
+  "rank": 753,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0754",
+  "w": "bakery",
+  "rank": 754,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0755",
+  "w": "carton",
+  "rank": 755,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0756",
+  "w": "compartment",
+  "rank": 756,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0757",
+  "w": "compatible",
+  "rank": 757,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0758",
+  "w": "consumption",
+  "rank": 758,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0759",
+  "w": "conveniently",
+  "rank": 759,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0760",
+  "w": "cosmetic",
+  "rank": 760,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0761",
+  "w": "courtesy",
+  "rank": 761,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0762",
+  "w": "creativity",
+  "rank": 762,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0763",
+  "w": "disagreement",
+  "rank": 763,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0764",
+  "w": "disappointment",
+  "rank": 764,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0765",
+  "w": "dissatisfy",
+  "rank": 765,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0766",
+  "w": "enjoyable",
+  "rank": 766,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0767",
+  "w": "faculty",
+  "rank": 767,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0768",
+  "w": "favorable",
+  "rank": 768,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0769",
+  "w": "foreman",
+  "rank": 769,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0770",
+  "w": "forum",
+  "rank": 770,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0771",
+  "w": "founder",
+  "rank": 771,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0772",
+  "w": "fundraise",
+  "rank": 772,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0773",
+  "w": "graphics",
+  "rank": 773,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0774",
+  "w": "handy",
+  "rank": 774,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0775",
+  "w": "hazardous",
+  "rank": 775,
+  "ch": 5,
+  "shelf": 37
+ },
+ {
+  "id": "t0776",
+  "w": "healthcare",
+  "rank": 776,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0777",
+  "w": "humidity",
+  "rank": 777,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0778",
+  "w": "influential",
+  "rank": 778,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0779",
+  "w": "nationwide",
+  "rank": 779,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0780",
+  "w": "pad",
+  "rank": 780,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0781",
+  "w": "paraphrase",
+  "rank": 781,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0782",
+  "w": "placement",
+  "rank": 782,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0783",
+  "w": "postal",
+  "rank": 783,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0784",
+  "w": "publicity",
+  "rank": 784,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0785",
+  "w": "renter",
+  "rank": 785,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0786",
+  "w": "repairperson",
+  "rank": 786,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0787",
+  "w": "repeatedly",
+  "rank": 787,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0788",
+  "w": "restroom",
+  "rank": 788,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0789",
+  "w": "silently",
+  "rank": 789,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0790",
+  "w": "spa",
+  "rank": 790,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0791",
+  "w": "spreadsheet",
+  "rank": 791,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0792",
+  "w": "stapler",
+  "rank": 792,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0793",
+  "w": "streamline",
+  "rank": 793,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0794",
+  "w": "substantially",
+  "rank": 794,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0795",
+  "w": "teller",
+  "rank": 795,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0796",
+  "w": "tidy",
+  "rank": 796,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0797",
+  "w": "toll",
+  "rank": 797,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0798",
+  "w": "toner",
+  "rank": 798,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0799",
+  "w": "urgently",
+  "rank": 799,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0800",
+  "w": "walkway",
+  "rank": 800,
+  "ch": 5,
+  "shelf": 38
+ },
+ {
+  "id": "t0801",
+  "w": "absorb",
+  "rank": 801,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0802",
+  "w": "administer",
+  "rank": 802,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0803",
+  "w": "ample",
+  "rank": 803,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0804",
+  "w": "antique",
+  "rank": 804,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0805",
+  "w": "bean",
+  "rank": 805,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0806",
+  "w": "browse",
+  "rank": 806,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0807",
+  "w": "bye",
+  "rank": 807,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0808",
+  "w": "careless",
+  "rank": 808,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0809",
+  "w": "collector",
+  "rank": 809,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0810",
+  "w": "conform",
+  "rank": 810,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0811",
+  "w": "congestion",
+  "rank": 811,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0812",
+  "w": "contradiction",
+  "rank": 812,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0813",
+  "w": "contrary",
+  "rank": 813,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0814",
+  "w": "diploma",
+  "rank": 814,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0815",
+  "w": "distributor",
+  "rank": 815,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0816",
+  "w": "dive",
+  "rank": 816,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0817",
+  "w": "energetic",
+  "rank": 817,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0818",
+  "w": "environmentally",
+  "rank": 818,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0819",
+  "w": "escalator",
+  "rank": 819,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0820",
+  "w": "exotic",
+  "rank": 820,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0821",
+  "w": "fabric",
+  "rank": 821,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0822",
+  "w": "generalization",
+  "rank": 822,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0823",
+  "w": "guidance",
+  "rank": 823,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0824",
+  "w": "gum",
+  "rank": 824,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0825",
+  "w": "hesitant",
+  "rank": 825,
+  "ch": 5,
+  "shelf": 39
+ },
+ {
+  "id": "t0826",
+  "w": "indicator",
+  "rank": 826,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0827",
+  "w": "individually",
+  "rank": 827,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0828",
+  "w": "junior",
+  "rank": 828,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0829",
+  "w": "lifestyle",
+  "rank": 829,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0830",
+  "w": "likewise",
+  "rank": 830,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0831",
+  "w": "morale",
+  "rank": 831,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0832",
+  "w": "orchestra",
+  "rank": 832,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0833",
+  "w": "organizational",
+  "rank": 833,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0834",
+  "w": "outlook",
+  "rank": 834,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0835",
+  "w": "physics",
+  "rank": 835,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0836",
+  "w": "pole",
+  "rank": 836,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0837",
+  "w": "puzzle",
+  "rank": 837,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0838",
+  "w": "reflexive",
+  "rank": 838,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0839",
+  "w": "snowy",
+  "rank": 839,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0840",
+  "w": "steak",
+  "rank": 840,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0841",
+  "w": "sticker",
+  "rank": 841,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0842",
+  "w": "telecommunication",
+  "rank": 842,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0843",
+  "w": "timely",
+  "rank": 843,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0844",
+  "w": "uncomfortable",
+  "rank": 844,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0845",
+  "w": "amenity",
+  "rank": 845,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0846",
+  "w": "approximate",
+  "rank": 846,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0847",
+  "w": "await",
+  "rank": 847,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0848",
+  "w": "barbecue",
+  "rank": 848,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0849",
+  "w": "beginner",
+  "rank": 849,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0850",
+  "w": "biology",
+  "rank": 850,
+  "ch": 5,
+  "shelf": 40
+ },
+ {
+  "id": "t0851",
+  "w": "blanket",
+  "rank": 851,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0852",
+  "w": "chairperson",
+  "rank": 852,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0853",
+  "w": "charitable",
+  "rank": 853,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0854",
+  "w": "checkup",
+  "rank": 854,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0855",
+  "w": "cooler",
+  "rank": 855,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0856",
+  "w": "crane",
+  "rank": 856,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0857",
+  "w": "dealership",
+  "rank": 857,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0858",
+  "w": "dependable",
+  "rank": 858,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0859",
+  "w": "disconnect",
+  "rank": 859,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0860",
+  "w": "dispose",
+  "rank": 860,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0861",
+  "w": "disrupt",
+  "rank": 861,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0862",
+  "w": "dynamic",
+  "rank": 862,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0863",
+  "w": "enthusiastically",
+  "rank": 863,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0864",
+  "w": "freelance",
+  "rank": 864,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0865",
+  "w": "grill",
+  "rank": 865,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0866",
+  "w": "habitual",
+  "rank": 866,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0867",
+  "w": "internationally",
+  "rank": 867,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0868",
+  "w": "invaluable",
+  "rank": 868,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0869",
+  "w": "messenger",
+  "rank": 869,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0870",
+  "w": "paperback",
+  "rank": 870,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0871",
+  "w": "rebate",
+  "rank": 871,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0872",
+  "w": "recur",
+  "rank": 872,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0873",
+  "w": "reproduce",
+  "rank": 873,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0874",
+  "w": "spray",
+  "rank": 874,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0875",
+  "w": "staple",
+  "rank": 875,
+  "ch": 5,
+  "shelf": 41
+ },
+ {
+  "id": "t0876",
+  "w": "strategic",
+  "rank": 876,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0877",
+  "w": "stripe",
+  "rank": 877,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0878",
+  "w": "teen",
+  "rank": 878,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0879",
+  "w": "tempt",
+  "rank": 879,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0880",
+  "w": "timer",
+  "rank": 880,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0881",
+  "w": "unload",
+  "rank": 881,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0882",
+  "w": "unusually",
+  "rank": 882,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0883",
+  "w": "vacate",
+  "rank": 883,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0884",
+  "w": "whale",
+  "rank": 884,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0885",
+  "w": "wisely",
+  "rank": 885,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0886",
+  "w": "amateur",
+  "rank": 886,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0887",
+  "w": "ambassador",
+  "rank": 887,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0888",
+  "w": "anew",
+  "rank": 888,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0889",
+  "w": "architectural",
+  "rank": 889,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0890",
+  "w": "attain",
+  "rank": 890,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0891",
+  "w": "balloon",
+  "rank": 891,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0892",
+  "w": "blueprint",
+  "rank": 892,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0893",
+  "w": "bug",
+  "rank": 893,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0894",
+  "w": "cautious",
+  "rank": 894,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0895",
+  "w": "circuit",
+  "rank": 895,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0896",
+  "w": "clap",
+  "rank": 896,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0897",
+  "w": "commerce",
+  "rank": 897,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0898",
+  "w": "convey",
+  "rank": 898,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0899",
+  "w": "cord",
+  "rank": 899,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0900",
+  "w": "counselor",
+  "rank": 900,
+  "ch": 5,
+  "shelf": 42
+ },
+ {
+  "id": "t0901",
+  "w": "debit",
+  "rank": 901,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0902",
+  "w": "delicate",
+  "rank": 902,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0903",
+  "w": "dependence",
+  "rank": 903,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0904",
+  "w": "distraction",
+  "rank": 904,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0905",
+  "w": "downsize",
+  "rank": 905,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0906",
+  "w": "elephant",
+  "rank": 906,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0907",
+  "w": "enthusiasm",
+  "rank": 907,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0908",
+  "w": "enthusiast",
+  "rank": 908,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0909",
+  "w": "evident",
+  "rank": 909,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0910",
+  "w": "flexibility",
+  "rank": 910,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0911",
+  "w": "flextime",
+  "rank": 911,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0912",
+  "w": "fortunately",
+  "rank": 912,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0913",
+  "w": "freighter",
+  "rank": 913,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0914",
+  "w": "generator",
+  "rank": 914,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0915",
+  "w": "hallway",
+  "rank": 915,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0916",
+  "w": "hamburger",
+  "rank": 916,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0917",
+  "w": "hazard",
+  "rank": 917,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0918",
+  "w": "homeowner",
+  "rank": 918,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0919",
+  "w": "imperative",
+  "rank": 919,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0920",
+  "w": "inflate",
+  "rank": 920,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0921",
+  "w": "insert",
+  "rank": 921,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0922",
+  "w": "lecturer",
+  "rank": 922,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0923",
+  "w": "meaningful",
+  "rank": 923,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0924",
+  "w": "memorize",
+  "rank": 924,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0925",
+  "w": "merchant",
+  "rank": 925,
+  "ch": 5,
+  "shelf": 43
+ },
+ {
+  "id": "t0926",
+  "w": "modification",
+  "rank": 926,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0927",
+  "w": "occupant",
+  "rank": 927,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0928",
+  "w": "overcharge",
+  "rank": 928,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0929",
+  "w": "oversee",
+  "rank": 929,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0930",
+  "w": "petition",
+  "rank": 930,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0931",
+  "w": "pillow",
+  "rank": 931,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0932",
+  "w": "popcorn",
+  "rank": 932,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0933",
+  "w": "pottery",
+  "rank": 933,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0934",
+  "w": "professionally",
+  "rank": 934,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0935",
+  "w": "publicize",
+  "rank": 935,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0936",
+  "w": "ray",
+  "rank": 936,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0937",
+  "w": "redecorate",
+  "rank": 937,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0938",
+  "w": "refinery",
+  "rank": 938,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0939",
+  "w": "refresh",
+  "rank": 939,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0940",
+  "w": "refundable",
+  "rank": 940,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0941",
+  "w": "reimbursement",
+  "rank": 941,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0942",
+  "w": "reliability",
+  "rank": 942,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0943",
+  "w": "reluctant",
+  "rank": 943,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0944",
+  "w": "sewer",
+  "rank": 944,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0945",
+  "w": "skate",
+  "rank": 945,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0946",
+  "w": "skateboard",
+  "rank": 946,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0947",
+  "w": "sleepy",
+  "rank": 947,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0948",
+  "w": "tailor",
+  "rank": 948,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0949",
+  "w": "termination",
+  "rank": 949,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0950",
+  "w": "theft",
+  "rank": 950,
+  "ch": 5,
+  "shelf": 44
+ },
+ {
+  "id": "t0951",
+  "w": "thunderstorm",
+  "rank": 951,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0952",
+  "w": "transmission",
+  "rank": 952,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0953",
+  "w": "transmit",
+  "rank": 953,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0954",
+  "w": "unused",
+  "rank": 954,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0955",
+  "w": "waive",
+  "rank": 955,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0956",
+  "w": "yen",
+  "rank": 956,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0957",
+  "w": "activate",
+  "rank": 957,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0958",
+  "w": "additionally",
+  "rank": 958,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0959",
+  "w": "affirmative",
+  "rank": 959,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0960",
+  "w": "baker",
+  "rank": 960,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0961",
+  "w": "brainstorm",
+  "rank": 961,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0962",
+  "w": "cage",
+  "rank": 962,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0963",
+  "w": "cinema",
+  "rank": 963,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0964",
+  "w": "collaboration",
+  "rank": 964,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0965",
+  "w": "condominium",
+  "rank": 965,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0966",
+  "w": "consecutive",
+  "rank": 966,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0967",
+  "w": "cordless",
+  "rank": 967,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0968",
+  "w": "deluxe",
+  "rank": 968,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0969",
+  "w": "desirable",
+  "rank": 969,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0970",
+  "w": "discrepancy",
+  "rank": 970,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0971",
+  "w": "dispatch",
+  "rank": 971,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0972",
+  "w": "drawback",
+  "rank": 972,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0973",
+  "w": "dull",
+  "rank": 973,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0974",
+  "w": "economically",
+  "rank": 974,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0975",
+  "w": "evenly",
+  "rank": 975,
+  "ch": 5,
+  "shelf": 45
+ },
+ {
+  "id": "t0976",
+  "w": "excellence",
+  "rank": 976,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0977",
+  "w": "exclusively",
+  "rank": 977,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0978",
+  "w": "farewell",
+  "rank": 978,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0979",
+  "w": "fatigue",
+  "rank": 979,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0980",
+  "w": "fiscal",
+  "rank": 980,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0981",
+  "w": "fleet",
+  "rank": 981,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0982",
+  "w": "flour",
+  "rank": 982,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0983",
+  "w": "fog",
+  "rank": 983,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0984",
+  "w": "formally",
+  "rank": 984,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0985",
+  "w": "gram",
+  "rank": 985,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0986",
+  "w": "handbook",
+  "rank": 986,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0987",
+  "w": "headphone",
+  "rank": 987,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0988",
+  "w": "heater",
+  "rank": 988,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0989",
+  "w": "helmet",
+  "rank": 989,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0990",
+  "w": "hiker",
+  "rank": 990,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0991",
+  "w": "homeless",
+  "rank": 991,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0992",
+  "w": "lighter",
+  "rank": 992,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0993",
+  "w": "loudly",
+  "rank": 993,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0994",
+  "w": "loyalty",
+  "rank": 994,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0995",
+  "w": "microwave",
+  "rank": 995,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0996",
+  "w": "misidentify",
+  "rank": 996,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0997",
+  "w": "neat",
+  "rank": 997,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0998",
+  "w": "nomination",
+  "rank": 998,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t0999",
+  "w": "officially",
+  "rank": 999,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t1000",
+  "w": "outfit",
+  "rank": 1000,
+  "ch": 5,
+  "shelf": 46
+ },
+ {
+  "id": "t1001",
+  "w": "pastry",
+  "rank": 1001,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1002",
+  "w": "personalize",
+  "rank": 1002,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1003",
+  "w": "poorly",
+  "rank": 1003,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1004",
+  "w": "prestigious",
+  "rank": 1004,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1005",
+  "w": "purser",
+  "rank": 1005,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1006",
+  "w": "reassure",
+  "rank": 1006,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1007",
+  "w": "resume",
+  "rank": 1007,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1008",
+  "w": "reunion",
+  "rank": 1008,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1009",
+  "w": "revolutionize",
+  "rank": 1009,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1010",
+  "w": "seafood",
+  "rank": 1010,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1011",
+  "w": "signify",
+  "rank": 1011,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1012",
+  "w": "slot",
+  "rank": 1012,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1013",
+  "w": "steer",
+  "rank": 1013,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1014",
+  "w": "sue",
+  "rank": 1014,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1015",
+  "w": "superb",
+  "rank": 1015,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1016",
+  "w": "traditionally",
+  "rank": 1016,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1017",
+  "w": "tremendous",
+  "rank": 1017,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1018",
+  "w": "underway",
+  "rank": 1018,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1019",
+  "w": "unpleasant",
+  "rank": 1019,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1020",
+  "w": "violin",
+  "rank": 1020,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1021",
+  "w": "ward",
+  "rank": 1021,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1022",
+  "w": "worthwhile",
+  "rank": 1022,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1023",
+  "w": "adapter",
+  "rank": 1023,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1024",
+  "w": "advisable",
+  "rank": 1024,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1025",
+  "w": "archive",
+  "rank": 1025,
+  "ch": 6,
+  "shelf": 47
+ },
+ {
+  "id": "t1026",
+  "w": "artistic",
+  "rank": 1026,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1027",
+  "w": "assurance",
+  "rank": 1027,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1028",
+  "w": "athletic",
+  "rank": 1028,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1029",
+  "w": "attire",
+  "rank": 1029,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1030",
+  "w": "auditor",
+  "rank": 1030,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1031",
+  "w": "bankruptcy",
+  "rank": 1031,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1032",
+  "w": "bulk",
+  "rank": 1032,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1033",
+  "w": "butter",
+  "rank": 1033,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1034",
+  "w": "centimeter",
+  "rank": 1034,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1035",
+  "w": "circulate",
+  "rank": 1035,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1036",
+  "w": "comb",
+  "rank": 1036,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1037",
+  "w": "comfortably",
+  "rank": 1037,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1038",
+  "w": "compliance",
+  "rank": 1038,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1039",
+  "w": "contraction",
+  "rank": 1039,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1040",
+  "w": "cookbook",
+  "rank": 1040,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1041",
+  "w": "cushion",
+  "rank": 1041,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1042",
+  "w": "dose",
+  "rank": 1042,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1043",
+  "w": "drum",
+  "rank": 1043,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1044",
+  "w": "embed",
+  "rank": 1044,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1045",
+  "w": "evacuate",
+  "rank": 1045,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1046",
+  "w": "expedite",
+  "rank": 1046,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1047",
+  "w": "extinguisher",
+  "rank": 1047,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1048",
+  "w": "familiarity",
+  "rank": 1048,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1049",
+  "w": "flaw",
+  "rank": 1049,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1050",
+  "w": "fluctuate",
+  "rank": 1050,
+  "ch": 6,
+  "shelf": 48
+ },
+ {
+  "id": "t1051",
+  "w": "fluent",
+  "rank": 1051,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1052",
+  "w": "honestly",
+  "rank": 1052,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1053",
+  "w": "housekeep",
+  "rank": 1053,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1054",
+  "w": "hurricane",
+  "rank": 1054,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1055",
+  "w": "hygiene",
+  "rank": 1055,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1056",
+  "w": "integral",
+  "rank": 1056,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1057",
+  "w": "interactive",
+  "rank": 1057,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1058",
+  "w": "interfere",
+  "rank": 1058,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1059",
+  "w": "kilogram",
+  "rank": 1059,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1060",
+  "w": "layoff",
+  "rank": 1060,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1061",
+  "w": "lightweight",
+  "rank": 1061,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1062",
+  "w": "merit",
+  "rank": 1062,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1063",
+  "w": "necklace",
+  "rank": 1063,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1064",
+  "w": "needy",
+  "rank": 1064,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1065",
+  "w": "overpay",
+  "rank": 1065,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1066",
+  "w": "pamphlet",
+  "rank": 1066,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1067",
+  "w": "partial",
+  "rank": 1067,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1068",
+  "w": "penalize",
+  "rank": 1068,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1069",
+  "w": "pollute",
+  "rank": 1069,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1070",
+  "w": "prescribe",
+  "rank": 1070,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1071",
+  "w": "probable",
+  "rank": 1071,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1072",
+  "w": "prominent",
+  "rank": 1072,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1073",
+  "w": "rainfall",
+  "rank": 1073,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1074",
+  "w": "relocation",
+  "rank": 1074,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1075",
+  "w": "residence",
+  "rank": 1075,
+  "ch": 6,
+  "shelf": 49
+ },
+ {
+  "id": "t1076",
+  "w": "retrieve",
+  "rank": 1076,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1077",
+  "w": "rider",
+  "rank": 1077,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1078",
+  "w": "rubber",
+  "rank": 1078,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1079",
+  "w": "rug",
+  "rank": 1079,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1080",
+  "w": "salespeople",
+  "rank": 1080,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1081",
+  "w": "sharply",
+  "rank": 1081,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1082",
+  "w": "similarity",
+  "rank": 1082,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1083",
+  "w": "someday",
+  "rank": 1083,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1084",
+  "w": "spectator",
+  "rank": 1084,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1085",
+  "w": "stereo",
+  "rank": 1085,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1086",
+  "w": "storeroom",
+  "rank": 1086,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1087",
+  "w": "subsidize",
+  "rank": 1087,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1088",
+  "w": "suspicious",
+  "rank": 1088,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1089",
+  "w": "tasty",
+  "rank": 1089,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1090",
+  "w": "terrific",
+  "rank": 1090,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1091",
+  "w": "underground",
+  "rank": 1091,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1092",
+  "w": "unpaid",
+  "rank": 1092,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1093",
+  "w": "volleyball",
+  "rank": 1093,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1094",
+  "w": "wheelchair",
+  "rank": 1094,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1095",
+  "w": "whoever",
+  "rank": 1095,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1096",
+  "w": "wool",
+  "rank": 1096,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1097",
+  "w": "wrinkle",
+  "rank": 1097,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1098",
+  "w": "accuracy",
+  "rank": 1098,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1099",
+  "w": "anyhow",
+  "rank": 1099,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1100",
+  "w": "appetizer",
+  "rank": 1100,
+  "ch": 6,
+  "shelf": 50
+ },
+ {
+  "id": "t1101",
+  "w": "arc",
+  "rank": 1101,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1102",
+  "w": "audition",
+  "rank": 1102,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1103",
+  "w": "backpack",
+  "rank": 1103,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1104",
+  "w": "ballroom",
+  "rank": 1104,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1105",
+  "w": "beneficial",
+  "rank": 1105,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1106",
+  "w": "biography",
+  "rank": 1106,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1107",
+  "w": "bound",
+  "rank": 1107,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1108",
+  "w": "broom",
+  "rank": 1108,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1109",
+  "w": "cheeseburger",
+  "rank": 1109,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1110",
+  "w": "chilly",
+  "rank": 1110,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1111",
+  "w": "circus",
+  "rank": 1111,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1112",
+  "w": "compliment",
+  "rank": 1112,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1113",
+  "w": "consignment",
+  "rank": 1113,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1114",
+  "w": "continental",
+  "rank": 1114,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1115",
+  "w": "copyright",
+  "rank": 1115,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1116",
+  "w": "countryside",
+  "rank": 1116,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1117",
+  "w": "demolish",
+  "rank": 1117,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1118",
+  "w": "departmental",
+  "rank": 1118,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1119",
+  "w": "desperate",
+  "rank": 1119,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1120",
+  "w": "devastate",
+  "rank": 1120,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1121",
+  "w": "diagnostic",
+  "rank": 1121,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1122",
+  "w": "diagram",
+  "rank": 1122,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1123",
+  "w": "diamond",
+  "rank": 1123,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1124",
+  "w": "disable",
+  "rank": 1124,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1125",
+  "w": "disgust",
+  "rank": 1125,
+  "ch": 6,
+  "shelf": 51
+ },
+ {
+  "id": "t1126",
+  "w": "donut",
+  "rank": 1126,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1127",
+  "w": "doorman",
+  "rank": 1127,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1128",
+  "w": "electronically",
+  "rank": 1128,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1129",
+  "w": "elevate",
+  "rank": 1129,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1130",
+  "w": "engagement",
+  "rank": 1130,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1131",
+  "w": "enrollment",
+  "rank": 1131,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1132",
+  "w": "euro",
+  "rank": 1132,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1133",
+  "w": "forbid",
+  "rank": 1133,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1134",
+  "w": "fork",
+  "rank": 1134,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1135",
+  "w": "foster",
+  "rank": 1135,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1136",
+  "w": "getaway",
+  "rank": 1136,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1137",
+  "w": "gossip",
+  "rank": 1137,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1138",
+  "w": "hacker",
+  "rank": 1138,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1139",
+  "w": "hardworking",
+  "rank": 1139,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1140",
+  "w": "impatient",
+  "rank": 1140,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1141",
+  "w": "indirect",
+  "rank": 1141,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1142",
+  "w": "interpreter",
+  "rank": 1142,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1143",
+  "w": "intersection",
+  "rank": 1143,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1144",
+  "w": "irrelevant",
+  "rank": 1144,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1145",
+  "w": "jeans",
+  "rank": 1145,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1146",
+  "w": "journalism",
+  "rank": 1146,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1147",
+  "w": "letterhead",
+  "rank": 1147,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1148",
+  "w": "lifeguard",
+  "rank": 1148,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1149",
+  "w": "modem",
+  "rank": 1149,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1150",
+  "w": "monument",
+  "rank": 1150,
+  "ch": 6,
+  "shelf": 52
+ },
+ {
+  "id": "t1151",
+  "w": "mosquito",
+  "rank": 1151,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1152",
+  "w": "obligate",
+  "rank": 1152,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1153",
+  "w": "oblige",
+  "rank": 1153,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1154",
+  "w": "occurrence",
+  "rank": 1154,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1155",
+  "w": "operational",
+  "rank": 1155,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1156",
+  "w": "outage",
+  "rank": 1156,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1157",
+  "w": "overcrowd",
+  "rank": 1157,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1158",
+  "w": "paralegal",
+  "rank": 1158,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1159",
+  "w": "partially",
+  "rank": 1159,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1160",
+  "w": "pepper",
+  "rank": 1160,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1161",
+  "w": "permanently",
+  "rank": 1161,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1162",
+  "w": "plow",
+  "rank": 1162,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1163",
+  "w": "query",
+  "rank": 1163,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1164",
+  "w": "railway",
+  "rank": 1164,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1165",
+  "w": "raincoat",
+  "rank": 1165,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1166",
+  "w": "reconsider",
+  "rank": 1166,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1167",
+  "w": "redesign",
+  "rank": 1167,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1168",
+  "w": "rehearsal",
+  "rank": 1168,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1169",
+  "w": "relaxation",
+  "rank": 1169,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1170",
+  "w": "repetition",
+  "rank": 1170,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1171",
+  "w": "retreat",
+  "rank": 1171,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1172",
+  "w": "salon",
+  "rank": 1172,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1173",
+  "w": "satellite",
+  "rank": 1173,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1174",
+  "w": "scenery",
+  "rank": 1174,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1175",
+  "w": "serial",
+  "rank": 1175,
+  "ch": 6,
+  "shelf": 53
+ },
+ {
+  "id": "t1176",
+  "w": "sew",
+  "rank": 1176,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1177",
+  "w": "sketch",
+  "rank": 1177,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1178",
+  "w": "smartphone",
+  "rank": 1178,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1179",
+  "w": "soar",
+  "rank": 1179,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1180",
+  "w": "stimulus",
+  "rank": 1180,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1181",
+  "w": "stockbroker",
+  "rank": 1181,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1182",
+  "w": "tablecloth",
+  "rank": 1182,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1183",
+  "w": "thirsty",
+  "rank": 1183,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1184",
+  "w": "thrill",
+  "rank": 1184,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1185",
+  "w": "tile",
+  "rank": 1185,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1186",
+  "w": "toiletry",
+  "rank": 1186,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1187",
+  "w": "trademark",
+  "rank": 1187,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1188",
+  "w": "tropical",
+  "rank": 1188,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1189",
+  "w": "tuna",
+  "rank": 1189,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1190",
+  "w": "unemployed",
+  "rank": 1190,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1191",
+  "w": "validate",
+  "rank": 1191,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1192",
+  "w": "vanilla",
+  "rank": 1192,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1193",
+  "w": "willingness",
+  "rank": 1193,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1194",
+  "w": "wristwatch",
+  "rank": 1194,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1195",
+  "w": "abide",
+  "rank": 1195,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1196",
+  "w": "actively",
+  "rank": 1196,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1197",
+  "w": "allergy",
+  "rank": 1197,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1198",
+  "w": "apprehensive",
+  "rank": 1198,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1199",
+  "w": "automotive",
+  "rank": 1199,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1200",
+  "w": "bacteria",
+  "rank": 1200,
+  "ch": 6,
+  "shelf": 54
+ },
+ {
+  "id": "t1201",
+  "w": "broaden",
+  "rank": 1201,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1202",
+  "w": "bulb",
+  "rank": 1202,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1203",
+  "w": "by-law",
+  "rank": 1203,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1204",
+  "w": "cheer",
+  "rank": 1204,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1205",
+  "w": "complication",
+  "rank": 1205,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1206",
+  "w": "considerate",
+  "rank": 1206,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1207",
+  "w": "daytime",
+  "rank": 1207,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1208",
+  "w": "decoration",
+  "rank": 1208,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1209",
+  "w": "discard",
+  "rank": 1209,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1210",
+  "w": "drastically",
+  "rank": 1210,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1211",
+  "w": "erase",
+  "rank": 1211,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1212",
+  "w": "explorer",
+  "rank": 1212,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1213",
+  "w": "factual",
+  "rank": 1213,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1214",
+  "w": "fixture",
+  "rank": 1214,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1215",
+  "w": "footwear",
+  "rank": 1215,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1216",
+  "w": "genre",
+  "rank": 1216,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1217",
+  "w": "gymnasium",
+  "rank": 1217,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1218",
+  "w": "hereby",
+  "rank": 1218,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1219",
+  "w": "hesitation",
+  "rank": 1219,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1220",
+  "w": "homemade",
+  "rank": 1220,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1221",
+  "w": "hospitality",
+  "rank": 1221,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1222",
+  "w": "incoming",
+  "rank": 1222,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1223",
+  "w": "induction",
+  "rank": 1223,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1224",
+  "w": "inspiration",
+  "rank": 1224,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1225",
+  "w": "intently",
+  "rank": 1225,
+  "ch": 6,
+  "shelf": 55
+ },
+ {
+  "id": "t1226",
+  "w": "mower",
+  "rank": 1226,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1227",
+  "w": "nutrition",
+  "rank": 1227,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1228",
+  "w": "restatement",
+  "rank": 1228,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1229",
+  "w": "sedan",
+  "rank": 1229,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1230",
+  "w": "sunscreen",
+  "rank": 1230,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1231",
+  "w": "wellness",
+  "rank": 1231,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1232",
+  "w": "workbook",
+  "rank": 1232,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1233",
+  "w": "bookcase",
+  "rank": 1233,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1234",
+  "w": "cleanliness",
+  "rank": 1234,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1235",
+  "w": "contestant",
+  "rank": 1235,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1236",
+  "w": "ethics",
+  "rank": 1236,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1237",
+  "w": "healthful",
+  "rank": 1237,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1238",
+  "w": "inefficient",
+  "rank": 1238,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1239",
+  "w": "liter",
+  "rank": 1239,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1240",
+  "w": "recession",
+  "rank": 1240,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1241",
+  "w": "timeline",
+  "rank": 1241,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1242",
+  "w": "unreliable",
+  "rank": 1242,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1243",
+  "w": "acclaim",
+  "rank": 1243,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1244",
+  "w": "chronic",
+  "rank": 1244,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1245",
+  "w": "deteriorate",
+  "rank": 1245,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1246",
+  "w": "resemble",
+  "rank": 1246,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1247",
+  "w": "unauthorized",
+  "rank": 1247,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1248",
+  "w": "violate",
+  "rank": 1248,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1249",
+  "w": "unplug",
+  "rank": 1249,
+  "ch": 6,
+  "shelf": 56
+ },
+ {
+  "id": "t1250",
+  "w": "videoconference",
+  "rank": 1250,
+  "ch": 6,
+  "shelf": 56
+ }
+]

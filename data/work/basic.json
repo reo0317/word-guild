@@ -1,0 +1,1052 @@
+[
+ {
+  "id": "b0001",
+  "w": "say",
+  "rank": 30,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0002",
+  "w": "know",
+  "rank": 41,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0003",
+  "w": "think",
+  "rank": 47,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0004",
+  "w": "time",
+  "rank": 49,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0005",
+  "w": "see",
+  "rank": 50,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0006",
+  "w": "good",
+  "rank": 56,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0007",
+  "w": "people",
+  "rank": 57,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0008",
+  "w": "year",
+  "rank": 58,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0009",
+  "w": "come",
+  "rank": 65,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0010",
+  "w": "work",
+  "rank": 67,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0011",
+  "w": "use",
+  "rank": 68,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0012",
+  "w": "look",
+  "rank": 75,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0013",
+  "w": "want",
+  "rank": 76,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0014",
+  "w": "give",
+  "rank": 77,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0015",
+  "w": "new",
+  "rank": 79,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0016",
+  "w": "way",
+  "rank": 80,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0017",
+  "w": "find",
+  "rank": 81,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0018",
+  "w": "day",
+  "rank": 85,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0019",
+  "w": "need",
+  "rank": 90,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0020",
+  "w": "back",
+  "rank": 94,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0021",
+  "w": "mean",
+  "rank": 95,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0022",
+  "w": "last",
+  "rank": 101,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0023",
+  "w": "child",
+  "rank": 102,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0024",
+  "w": "tell",
+  "rank": 103,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0025",
+  "w": "call",
+  "rank": 105,
+  "ch": 1,
+  "shelf": 1
+ },
+ {
+  "id": "b0026",
+  "w": "show",
+  "rank": 110,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0027",
+  "w": "life",
+  "rank": 111,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0028",
+  "w": "man",
+  "rank": 112,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0029",
+  "w": "change",
+  "rank": 113,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0030",
+  "w": "place",
+  "rank": 114,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0031",
+  "w": "long",
+  "rank": 115,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0032",
+  "w": "feel",
+  "rank": 117,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0033",
+  "w": "write",
+  "rank": 121,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0034",
+  "w": "same",
+  "rank": 122,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0035",
+  "w": "great",
+  "rank": 124,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0036",
+  "w": "try",
+  "rank": 125,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0037",
+  "w": "leave",
+  "rank": 126,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0038",
+  "w": "number",
+  "rank": 127,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0039",
+  "w": "part",
+  "rank": 130,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0040",
+  "w": "point",
+  "rank": 131,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0041",
+  "w": "help",
+  "rank": 133,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0042",
+  "w": "ask",
+  "rank": 134,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0043",
+  "w": "meet",
+  "rank": 135,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0044",
+  "w": "start",
+  "rank": 136,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0045",
+  "w": "talk",
+  "rank": 137,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0046",
+  "w": "put",
+  "rank": 139,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0047",
+  "w": "become",
+  "rank": 141,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0048",
+  "w": "old",
+  "rank": 144,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0049",
+  "w": "school",
+  "rank": 146,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0050",
+  "w": "late",
+  "rank": 147,
+  "ch": 1,
+  "shelf": 2
+ },
+ {
+  "id": "b0051",
+  "w": "high",
+  "rank": 148,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0052",
+  "w": "next",
+  "rank": 151,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0053",
+  "w": "end",
+  "rank": 152,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0054",
+  "w": "live",
+  "rank": 153,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0055",
+  "w": "world",
+  "rank": 156,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0056",
+  "w": "week",
+  "rank": 157,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0057",
+  "w": "play",
+  "rank": 158,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0058",
+  "w": "home",
+  "rank": 161,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0059",
+  "w": "house",
+  "rank": 165,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0060",
+  "w": "report",
+  "rank": 166,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0061",
+  "w": "group",
+  "rank": 167,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0062",
+  "w": "case",
+  "rank": 168,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0063",
+  "w": "woman",
+  "rank": 169,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0064",
+  "w": "book",
+  "rank": 171,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0065",
+  "w": "family",
+  "rank": 172,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0066",
+  "w": "kind",
+  "rank": 176,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0067",
+  "w": "keep",
+  "rank": 177,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0068",
+  "w": "hear",
+  "rank": 178,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0069",
+  "w": "system",
+  "rank": 179,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0070",
+  "w": "big",
+  "rank": 184,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0071",
+  "w": "set",
+  "rank": 185,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0072",
+  "w": "small",
+  "rank": 186,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0073",
+  "w": "study",
+  "rank": 187,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0074",
+  "w": "follow",
+  "rank": 188,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0075",
+  "w": "begin",
+  "rank": 189,
+  "ch": 1,
+  "shelf": 3
+ },
+ {
+  "id": "b0076",
+  "w": "run",
+  "rank": 192,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0077",
+  "w": "turn",
+  "rank": 194,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0078",
+  "w": "bring",
+  "rank": 196,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0079",
+  "w": "early",
+  "rank": 197,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0080",
+  "w": "hand",
+  "rank": 198,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0081",
+  "w": "state",
+  "rank": 199,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0082",
+  "w": "move",
+  "rank": 200,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0083",
+  "w": "money",
+  "rank": 201,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0084",
+  "w": "fact",
+  "rank": 202,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0085",
+  "w": "area",
+  "rank": 204,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0086",
+  "w": "name",
+  "rank": 206,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0087",
+  "w": "read",
+  "rank": 207,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0088",
+  "w": "friend",
+  "rank": 208,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0089",
+  "w": "month",
+  "rank": 209,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0090",
+  "w": "large",
+  "rank": 210,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0091",
+  "w": "open",
+  "rank": 214,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0092",
+  "w": "order",
+  "rank": 215,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0093",
+  "w": "word",
+  "rank": 217,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0094",
+  "w": "issue",
+  "rank": 218,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0095",
+  "w": "market",
+  "rank": 219,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0096",
+  "w": "pay",
+  "rank": 220,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0097",
+  "w": "build",
+  "rank": 221,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0098",
+  "w": "hold",
+  "rank": 222,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0099",
+  "w": "love",
+  "rank": 229,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0100",
+  "w": "job",
+  "rank": 231,
+  "ch": 1,
+  "shelf": 4
+ },
+ {
+  "id": "b0101",
+  "w": "plan",
+  "rank": 232,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0102",
+  "w": "result",
+  "rank": 233,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0103",
+  "w": "happen",
+  "rank": 236,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0104",
+  "w": "offer",
+  "rank": 237,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0105",
+  "w": "young",
+  "rank": 238,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0106",
+  "w": "close",
+  "rank": 239,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0107",
+  "w": "lead",
+  "rank": 241,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0108",
+  "w": "buy",
+  "rank": 242,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0109",
+  "w": "thank",
+  "rank": 244,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0110",
+  "w": "far",
+  "rank": 245,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0111",
+  "w": "today",
+  "rank": 246,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0112",
+  "w": "hour",
+  "rank": 247,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0113",
+  "w": "face",
+  "rank": 249,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0114",
+  "w": "hope",
+  "rank": 250,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0115",
+  "w": "idea",
+  "rank": 251,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0116",
+  "w": "cost",
+  "rank": 252,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0117",
+  "w": "room",
+  "rank": 254,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0118",
+  "w": "reason",
+  "rank": 256,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0119",
+  "w": "form",
+  "rank": 257,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0120",
+  "w": "spend",
+  "rank": 258,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0121",
+  "w": "head",
+  "rank": 259,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0122",
+  "w": "car",
+  "rank": 260,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0123",
+  "w": "learn",
+  "rank": 261,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0124",
+  "w": "level",
+  "rank": 262,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0125",
+  "w": "person",
+  "rank": 263,
+  "ch": 1,
+  "shelf": 5
+ },
+ {
+  "id": "b0126",
+  "w": "member",
+  "rank": 266,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0127",
+  "w": "bad",
+  "rank": 268,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0128",
+  "w": "city",
+  "rank": 269,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0129",
+  "w": "night",
+  "rank": 270,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0130",
+  "w": "able",
+  "rank": 271,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0131",
+  "w": "line",
+  "rank": 274,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0132",
+  "w": "side",
+  "rank": 276,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0133",
+  "w": "sure",
+  "rank": 279,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0134",
+  "w": "term",
+  "rank": 280,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0135",
+  "w": "age",
+  "rank": 282,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0136",
+  "w": "low",
+  "rank": 283,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0137",
+  "w": "speak",
+  "rank": 284,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0138",
+  "w": "public",
+  "rank": 287,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0139",
+  "w": "train",
+  "rank": 289,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0140",
+  "w": "view",
+  "rank": 293,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0141",
+  "w": "price",
+  "rank": 296,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0142",
+  "w": "parent",
+  "rank": 297,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0143",
+  "w": "hard",
+  "rank": 298,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0144",
+  "w": "party",
+  "rank": 299,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0145",
+  "w": "local",
+  "rank": 300,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0146",
+  "w": "lose",
+  "rank": 305,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0147",
+  "w": "story",
+  "rank": 306,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0148",
+  "w": "stand",
+  "rank": 309,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0149",
+  "w": "whole",
+  "rank": 310,
+  "ch": 1,
+  "shelf": 6
+ },
+ {
+  "id": "b0150",
+  "w": "rate",
+  "rank": 312,
+  "ch": 1,
+  "shelf": 6
+ }
+]
