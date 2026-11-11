@@ -68,7 +68,7 @@ test('lazy context, exact loop, gains, same-scene reuse and decoded cache', asyn
   assert.equal(ctx.decodes, 2);
 });
 
-test('big 404 falls back to cached delivery; unknown duration uses buffer duration', async () => {
+test('big 404 falls back to cached delivery; big uses its own loop length', async () => {
   const {music, instances, urls} = setup(url => response(!url.endsWith('/big.m4a')));
   await assert.doesNotReject(music.play('big'));
   assert.equal(instances[0].sources[0].loopEnd, 80);
@@ -78,7 +78,7 @@ test('big 404 falls back to cached delivery; unknown duration uses buffer durati
   assert.equal(instances[0].sources.length, 1);
   const available = setup();
   await available.music.play('big');
-  assert.equal(available.instances[0].sources[0].loopEnd, 81);
+  assert.equal(available.instances[0].sources[0].loopEnd, 53.76);
 });
 
 test('only latest pending scene starts, including repeated pending requests', async () => {
