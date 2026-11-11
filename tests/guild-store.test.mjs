@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {loadProgress, saveProgress, validateProgress, emptyProgress, STORAGE_KEY} from '../products/word-guild/guild/store.mjs';
+import {loadProgress, saveProgress, validateProgress, emptyProgress, serializeProgress, exportText, importText, backupProgress, restoreBackup, hasBackup, STORAGE_KEY} from '../products/word-guild/guild/store.mjs';
 
 function memory(initial = {}) {
   const data = {...initial};
@@ -9,7 +9,7 @@ function memory(initial = {}) {
 
 test('保存したものを読み戻せる。キーは既存の保存と別', () => {
   const storage = memory();
-  const progress = {v: 1, words: {b0001: {box: 3, due: 20003, seen: 1}}, quests: 2, lastDay: 20000};
+  const progress = {...emptyProgress(), v: 1, words: {b0001: {box: 3, due: 20003, seen: 1}}, quests: 2, lastDay: 20000};
   assert.equal(STORAGE_KEY, 'wordGuild.progress.v1');
   assert.equal(saveProgress(storage, progress), true);
   assert.deepEqual(JSON.parse(storage.data[STORAGE_KEY]).words.b0001, [3, 20003, 1]);
