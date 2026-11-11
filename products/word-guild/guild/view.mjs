@@ -8,31 +8,16 @@ import {loadWords} from './words.mjs';
 import {Quest, HEARTS, IDLE_LIMIT} from './quest.mjs';
 import {pickSession, shelfStatus, dueCount, todayNumber, SESSION_SIZE} from './srs.mjs';
 import {loadProgress, saveProgress} from './store.mjs';
-import {COLS} from './board.mjs';
+import {COLS, spelling} from './board.mjs';
+import {chapterStatus, currentChapter} from './chapters.mjs';
+import {esc, speak, starsMarkup} from './dom.mjs';
+import {renderZukan, renderCredits} from './library.mjs';
 
 const POS_LABEL = {v: '動', n: '名', a: '形', o: '他'}; // 色の意味を文字でも示す
 const RESULT_LABEL = {known: '知ってた', correct: '正解', hint: 'ヒント', taught: '教わった', missed: '未回答'};
 const CRUMBLE_MS = 560; // 撃破 → 盤面が崩れる
 const ENTER_MS = 520;   // 次の盤面と敵が入る（合わせて 1.2 秒以内）
 const MAX_FRAME_MS = 250; // 長い停止の後に、まとめて攻撃されないための上限
-
-function esc(text) {
-  return String(text).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
-}
-
-function speak(text) {
-  try {
-    const synth = window.speechSynthesis;
-    if (!synth || typeof SpeechSynthesisUtterance === 'undefined') return;
-    synth.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
-    utterance.rate = 0.9;
-    synth.speak(utterance);
-  } catch {
-    // 発音できない端末では黙って省く
-  }
-}
 
 function pulse(element, className) {
   if (!element) return;
@@ -58,6 +43,7 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
   let saveFailed = false;
 
   let quest = null;
+  let questChapter = 1;     // クエストの背景と敵の色になる章
   let trace = null;
   let strikes = [];
   let picking = null;       // 'hint' | 'teach'：お題の選択待ち
@@ -112,23 +98,39 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
       <i class="gq-shelf-bar" aria-hidden="true"><i style="width:${Math.round(shelf.lit / shelf.total * 100)}%"></i></i></li>`;
   }
 
+  function otherChapterMarkup(chapter) {
+    const detail = chapter.isOpen ? `灯った棚 ${chapter.litShelves}/${chapter.shelves.length}` : '未開放';
+    return `<li class="${chapter.isOpen ? '' : 'locked'}"><b>章${chapter.ch}</b> ${esc(chapter.name)}<span>${detail}</span></li>`;
+  }
+
   function showGuild() {
     stopSession();
     setScreen('guild');
     const collected = words.filter(word => progress.words[word.id]).length;
+    const chapters = chapterStatus(words, progress);
+    const current = currentChapter(chapters);
+    const others = chapters.filter(chapter => chapter !== current);
     view.className = 'gq gq-home';
     view.innerHTML = `
       <p class="eyebrow">森の本のギルド</p>
       <div class="guild-scene gq-scene"><img class="guild-art" src="assets/guild-display-v6.webp" alt="森の本のギルド。木組みの書庫と光る窓" width="240" height="170"></div>
       <div class="guide gq-guide">${sprite('guide', 64, 'detail')}<p class="bubble"><small>しるべ</small>${esc(guildMessage())}</p></div>
-      <ul class="gq-shelves" aria-label="書庫の棚">${shelfStatus(words, progress).map(shelfMarkup).join('')}</ul>
+      <h3 class="gq-chapter">章${current.ch} ${esc(current.name)}<small>灯った棚 ${current.litShelves}/${current.shelves.length}</small></h3>
+      <ul class="gq-shelves ${current.shelves.length > 6 ? 'wide' : ''}" aria-label="書庫の棚">${current.shelves.map(shelfMarkup).join('')}</ul>
+      <ul class="gq-chapters" aria-label="ほかの章">${others.map(otherChapterMarkup).join('')}</ul>
       <p class="gq-collected">集めた語 <b>${collected}</b> / ${words.length}</p>
       ${saveFailed ? '<p class="gq-warn">保存できません。この起動中はプレイできます。</p>' : ''}
       <button class="primary" id="gq-go" type="button">クエストに出る <span aria-hidden="true">→</span></button>
-      <button class="text-button" id="gq-title" type="button">← タイトルへ</button>`;
+      <div class="gq-footer">
+        <button class="text-button" id="gq-title" type="button">← タイトルへ</button>
+        <button class="text-button" id="gq-zukan" type="button">図鑑</button>
+        <button class="text-button" id="gq-credits" type="button">クレジット</button>
+      </div>`;
     $('#gq-go').onclick = startQuest;
     $('#gq-title').onclick = () => { stopSession(); exit(); };
-    warmImages(['floor-0', 'cat-idle', 'dog-idle', 'sun-idle', 'ant-idle', 'animal-idle'], 'high');
+    $('#gq-zukan').onclick = () => renderZukan(view, {words, progress, onBack: showGuild});
+    $('#gq-credits').onclick = () => renderCredits(view, {onBack: showGuild});
+    warmImages([`floor-${current.ch - 1}`, 'cat-idle', 'dog-idle', 'sun-idle', 'ant-idle', 'animal-idle'], 'high');
   }
 
   // ---------- クエスト ----------
@@ -136,6 +138,7 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
   function startQuest() {
     const today = todayNumber();
     const groups = pickSession(words, progress, today, SESSION_SIZE, Math.random);
+    questChapter = currentChapter(chapterStatus(words, progress)).ch;
     stopSession();
     quest = new Quest(groups, {rand: Math.random, progress, today, save: persist});
     setScreen('guild-quest');
@@ -158,7 +161,7 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
     strikes = [];
     picking = null;
     message = '';
-    view.className = 'gq gq-quest';
+    view.className = `gq gq-quest gq-ch${questChapter}`;
     view.innerHTML = `
       <div class="gq-top"><span class="gq-hearts" id="gq-hearts"></span><b id="gq-label"></b><span class="gq-timer" aria-hidden="true"><i id="gq-timer"></i></span><button type="button" class="gq-quit" id="gq-quit">やめる</button></div>
       <div class="gq-arena" id="gq-arena">
@@ -419,8 +422,9 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
 
   function resultRow(entry) {
     const kind = resultKind(entry);
-    return `<li class="${kind}"><b>${esc(entry.word.w)}</b><span class="gq-ja">${esc(entry.word.ja)}</span>
-      <span class="gq-stars" aria-label="習熟度 ${entry.box}">${'★'.repeat(entry.box)}${'☆'.repeat(5 - entry.box)}</span>
+    const long = spelling(entry.word.w).length > 10 ? ' long' : ''; // 長い語は訳を次の行へ
+    return `<li class="${kind}${long}"><b>${esc(entry.word.w)}</b><span class="gq-ja">${esc(entry.word.ja)}</span>
+      <span class="gq-stars" aria-label="習熟度 ${entry.box}">${starsMarkup(entry.box)}</span>
       <em>${RESULT_LABEL[kind]}</em></li>`;
   }
 

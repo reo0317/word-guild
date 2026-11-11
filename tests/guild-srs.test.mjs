@@ -98,14 +98,14 @@ test('shelfStatus：全語が箱3以上で灯り、全語が箱5で金色', () =
   const shelf1 = words.filter(w => w.shelf === 1);
   shelf1.forEach(word => { progress.words[word.id] = {box: 3, due: TODAY, seen: 1}; });
   let [s1, s2] = shelfStatus(words, progress);
-  assert.deepEqual([s1.total, s1.lit, s1.isLit, s1.isGold, s2.isLit], [20, 20, true, false, false]);
+  assert.deepEqual([s1.total, s1.lit, s1.isLit, s1.isGold, s2.isLit], [25, 25, true, false, false]);
   shelf1.forEach(word => { progress.words[word.id].box = 5; });
   [s1] = shelfStatus(words, progress);
   assert.equal(s1.isGold, true);
   progress.words[shelf1[0].id].box = 2;
   [s1] = shelfStatus(words, progress);
-  assert.deepEqual([s1.isLit, s1.lit], [false, 19]);
-  assert.equal(dueCount(words, progress, TODAY), 20, '期限は due で決まり、習熟度とは別');
+  assert.deepEqual([s1.isLit, s1.lit], [false, 24]);
+  assert.equal(dueCount(words, progress, TODAY), 25, '期限は due で決まり、習熟度とは別');
 });
 
 test('期限前の clean は習熟度も期限も変えず、seen だけ増える', () => {
