@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 globalThis.window={};
-const {Conversation}=await import('../products/word-guild/conversation.mjs');
+const {Conversation}=await import('../conversation.mjs');
 
 test('同じ発話の復帰失敗を再試行すると、保持した位置からresumeする',async()=>{
  let resumes=0,starts=0,cleared=false;

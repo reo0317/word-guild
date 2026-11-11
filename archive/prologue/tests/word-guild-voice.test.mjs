@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {VoicePlayer} from '../products/word-guild/voice-player.mjs';
+import {VoicePlayer} from '../voice-player.mjs';
 
 const deferred = () => { let resolve, reject; const promise = new Promise((a,b) => {resolve=a;reject=b;}); return {promise,resolve,reject}; };
 const flush = async () => { for(let i=0;i<20;i++) await Promise.resolve(); };

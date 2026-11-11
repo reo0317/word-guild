@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {generateBoard, matchWord, spelling, CELLS} from '../products/word-guild/guild/board.mjs';
 import {mulberry32} from '../products/word-guild/guild/rng.mjs';
-import {Trace, adjacent} from '../products/word-guild/core.mjs';
+import {Trace, adjacent} from '../products/word-guild/guild/trace.mjs';
 
 function checkBoard(words, board) {
   assert.equal(board.letters.length, CELLS);

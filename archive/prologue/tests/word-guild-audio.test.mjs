@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {resolveAudioPolicy} from '../products/word-guild/audio-policy.mjs';
-import {FlightSound} from '../products/word-guild/sound-effects.mjs';
-import {Music} from '../products/word-guild/core.mjs';
-import {MUSIC_CUES} from '../products/word-guild/music-cues.mjs';
+import {resolveAudioPolicy} from '../audio-policy.mjs';
+import {FlightSound} from '../sound-effects.mjs';
+import {Music} from '../core.mjs';
+import {MUSIC_CUES} from '../music-cues.mjs';
 
 const response = {ok:true, arrayBuffer:async()=>new ArrayBuffer(0)};
 function context() {

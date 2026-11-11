@@ -2,14 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
-import {durations} from '../products/word-guild/transition.mjs';
-import {Game} from '../products/word-guild/core.mjs';
-import {DialogueDirector} from '../products/word-guild/dialogue.mjs';
+import {durations} from '../transition.mjs';
+import {Game} from '../core.mjs';
+import {DialogueDirector} from '../dialogue.mjs';
 
 // 実際の画面コードの遅延式とCSSを読み、双方の変更による不整合を検出する。
 async function animationDeadline(){
- const app=await readFile(new URL('../products/word-guild/app.mjs',import.meta.url),'utf8');
- const css=await readFile(new URL('../products/word-guild/style.css',import.meta.url),'utf8');
+ const app=await readFile(new URL('../app.mjs',import.meta.url),'utf8');
+ const css=await readFile(new URL('../style.css',import.meta.url),'utf8');
  const expression=app.match(/--delay:\$\{([^}]+)\}ms/);
  assert.ok(expression,'盤面の石の遅延式が存在する');
  const duration=css.match(/\.falling button\{animation:stone-in\s+([\d.]+)(ms|s)\b/);
@@ -51,7 +51,7 @@ test('実際の画面の時計で950msと1034msは入力停止、1100msで再開
 
 test('実画面の時計は音声終了に依存せず帰還相談→凍結→困惑→乱入、非表示中は停止',async()=>{
  const {app}=await animationDeadline();
- const script=JSON.parse(await readFile(new URL('../products/word-guild/dialogue-script.json',import.meta.url),'utf8'));
+ const script=JSON.parse(await readFile(new URL('../dialogue-script.json',import.meta.url),'utf8'));
  const director=new DialogueDirector(script),game=new Game('fire',()=>.5);
  game.stage=4;game.enter();game.answer('cat');game.answer('dog');
  const transitions=[],hp=game.hp;

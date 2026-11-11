@@ -1,11 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {DialogueDirector, dialogueEventFor, loadDialogueScript} from '../products/word-guild/dialogue.mjs';
-import {getStoryBeat, getDialogueStoryBeat} from '../products/word-guild/story.mjs';
-import {Game, Trace, PATHS} from '../products/word-guild/core.mjs';
+import {DialogueDirector, dialogueEventFor, loadDialogueScript} from '../dialogue.mjs';
+import {getStoryBeat, getDialogueStoryBeat} from '../story.mjs';
+import {Game, Trace, PATHS} from '../core.mjs';
 
-const script = JSON.parse(await readFile(new URL('../products/word-guild/dialogue-script.json', import.meta.url), 'utf8'));
+const script = JSON.parse(await readFile(new URL('../dialogue-script.json', import.meta.url), 'utf8'));
 const enter = (director, stage, extras = {}) => director.dispatch({
   eventId: `enter:${stage}`, screen: 'game', stage, state: 'battle', ...extras
 });

@@ -1,11 +1,9 @@
-// ギルド画面・クエスト画面・結果画面と、盤面の入力。
+// 局の画面・配達の画面・結果画面と、盤面の入力。
 // app.mjs からは mountGuild() だけを使う。ゲームの進行は quest.mjs に任せる。
-import {Trace} from '../core.mjs';
-import {renderClaws} from '../claws.mjs';
-import {sprite} from '../sprites.mjs';
-import {warmImages} from '../assets-loader.mjs';
+import {Trace} from './trace.mjs';
+import {artBox, ENEMY_ART} from './art.mjs';
 import {loadWords} from './words.mjs';
-import {Quest, HEARTS, IDLE_LIMIT} from './quest.mjs';
+import {Quest, HEARTS} from './quest.mjs';
 import {pickSession, shelfStatus, dueCount, todayNumber, SESSION_SIZE} from './srs.mjs';
 import {loadProgress, saveProgress} from './store.mjs';
 import {COLS, spelling} from './board.mjs';
@@ -32,8 +30,9 @@ function resultKind(entry) {
   return entry.result;
 }
 
-// deps: {view, dev, setScreen, exit}。storage は dev のとき使わない（保存しない）。
-export function mountGuild({view, dev = false, setScreen, exit}) {
+// deps: {view, dev, setScreen, exit, music}。storage は dev のとき使わない（保存しない）。
+// music は guild/music.mjs の createMusic()。なくても動く。
+export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   let storage = null;
   if (!dev) {
     try { storage = localStorage; } catch { storage = null; }
@@ -43,7 +42,8 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
   let saveFailed = false;
 
   let quest = null;
-  let questChapter = 1;     // クエストの背景と敵の色になる章
+  let questChapter = 1;     // 配達の背景と敵の色になる区
+  let tutorial = false;     // 最初の配達：1枚目にハトリ局長の説明とヒント1
   let trace = null;
   let strikes = [];
   let picking = null;       // 'hint' | 'teach'：お題の選択待ち
@@ -53,6 +53,8 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
   let lastFrame = 0;
   let observer = null;
   let sessionToken = 0;     // 画面を離れたあと、古いタイマーを無効にする
+  const sfx = name => { try { music?.sfx(name); } catch { /* 音は遊びを止めない */ } };
+  const bgm = scene => { try { music?.play(scene); } catch { /* 同上 */ } };
 
   const $ = selector => view.querySelector(selector);
 
@@ -80,27 +82,27 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
     if (!saveProgress(storage, next) && !dev) saveFailed = true;
   }
 
-  // ---------- ギルド画面 ----------
+  // ---------- 局の画面 ----------
 
   function guildMessage() {
     const due = dueCount(words, progress, todayNumber());
-    if (due > 0) return `戻ってきた敵が ${due} 体いるよ。やっつけに行こう！`;
-    if (progress.quests === 0) return `はじめまして！まずは ${SESSION_SIZE} 語、探しに行こう。`;
-    return '新しい言葉を探しに行こう。';
+    if (due > 0) return `戻ってきた紙魚（しみ）が ${due} 匹いるよ。配達ついでに追い払おう。`;
+    if (progress.quests === 0) return `新人さん、まずは ${SESSION_SIZE} 語、取り戻しに行こう。`;
+    return '消えた言葉を、取り戻しに行こう。';
   }
 
   function shelfMarkup(shelf) {
     const state = shelf.isGold ? 'gold' : shelf.isLit ? 'lit' : '';
-    const label = shelf.isGold ? '金色' : shelf.isLit ? 'ともった' : 'まだ';
+    const label = shelf.isGold ? '金の切手' : shelf.isLit ? 'ともった' : 'まだ';
     return `<li class="gq-shelf ${state}"><span class="gq-lamp" aria-hidden="true">✦</span>
-      <b>棚${shelf.shelf}</b><span class="gq-shelf-count">${shelf.lit}/${shelf.total}</span>
+      <b>街灯${shelf.shelf}</b><span class="gq-shelf-count">${shelf.lit}/${shelf.total}</span>
       <small>${label}</small>
       <i class="gq-shelf-bar" aria-hidden="true"><i style="width:${Math.round(shelf.lit / shelf.total * 100)}%"></i></i></li>`;
   }
 
   function otherChapterMarkup(chapter) {
-    const detail = chapter.isOpen ? `灯った棚 ${chapter.litShelves}/${chapter.shelves.length}` : '未開放';
-    return `<li class="${chapter.isOpen ? '' : 'locked'}"><b>章${chapter.ch}</b> ${esc(chapter.name)}<span>${detail}</span></li>`;
+    const detail = chapter.isOpen ? `ともった街灯 ${chapter.litShelves}/${chapter.shelves.length}` : '未開放';
+    return `<li class="${chapter.isOpen ? '' : 'locked'}"><b>${chapter.ch}区</b> ${esc(chapter.name)}<span>${detail}</span></li>`;
   }
 
   function showGuild() {
@@ -112,30 +114,31 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
     const others = chapters.filter(chapter => chapter !== current);
     view.className = 'gq gq-home';
     view.innerHTML = `
-      <p class="eyebrow">森の本のギルド</p>
-      <div class="guild-scene gq-scene"><img class="guild-art" src="assets/guild-display-v6.webp" alt="森の本のギルド。木組みの書庫と光る窓" width="240" height="170"></div>
-      <div class="guide gq-guide">${sprite('guide', 64, 'detail')}<p class="bubble"><small>しるべ</small>${esc(guildMessage())}</p></div>
-      <h3 class="gq-chapter">章${current.ch} ${esc(current.name)}<small>灯った棚 ${current.litShelves}/${current.shelves.length}</small></h3>
-      <ul class="gq-shelves ${current.shelves.length > 6 ? 'wide' : ''}" aria-label="書庫の棚">${current.shelves.map(shelfMarkup).join('')}</ul>
-      <ul class="gq-chapters" aria-label="ほかの章">${others.map(otherChapterMarkup).join('')}</ul>
+      <p class="eyebrow">霧晴れ郵便局</p>
+      <div class="gq-scene">${artBox('post', 'gq-scene-art')}</div>
+      <div class="gq-guide">${artBox('hatori', 'gq-face')}<p class="bubble"><small>ハトリ局長</small>${esc(guildMessage())}</p></div>
+      <h3 class="gq-chapter">${current.ch}区 ${esc(current.name)}<small>ともった街灯 ${current.litShelves}/${current.shelves.length}</small></h3>
+      <ul class="gq-shelves ${current.shelves.length > 6 ? 'wide' : ''}" aria-label="通りの街灯">${current.shelves.map(shelfMarkup).join('')}</ul>
+      <ul class="gq-chapters" aria-label="ほかの区">${others.map(otherChapterMarkup).join('')}</ul>
       <p class="gq-collected">集めた語 <b>${collected}</b> / ${words.length}</p>
       ${saveFailed ? '<p class="gq-warn">保存できません。この起動中はプレイできます。</p>' : ''}
-      <button class="primary" id="gq-go" type="button">クエストに出る <span aria-hidden="true">→</span></button>
+      <button class="primary" id="gq-go" type="button">配達に出る <span aria-hidden="true">→</span></button>
       <div class="gq-footer">
         <button class="text-button" id="gq-title" type="button">← タイトルへ</button>
-        <button class="text-button" id="gq-zukan" type="button">図鑑</button>
+        <button class="text-button" id="gq-zukan" type="button">ことば帳</button>
         <button class="text-button" id="gq-credits" type="button">クレジット</button>
       </div>`;
-    $('#gq-go').onclick = startQuest;
+    $('#gq-go').onclick = () => startQuest();
     $('#gq-title').onclick = () => { stopSession(); exit(); };
     $('#gq-zukan').onclick = () => renderZukan(view, {words, progress, onBack: showGuild});
     $('#gq-credits').onclick = () => renderCredits(view, {onBack: showGuild});
-    warmImages([`floor-${current.ch - 1}`, 'cat-idle', 'dog-idle', 'sun-idle', 'ant-idle', 'animal-idle'], 'high');
+    bgm('post');
   }
 
-  // ---------- クエスト ----------
+  // ---------- 配達 ----------
 
-  function startQuest() {
+  function startQuest(first = false) {
+    tutorial = first === true;
     const today = todayNumber();
     const groups = pickSession(words, progress, today, SESSION_SIZE, Math.random);
     questChapter = currentChapter(chapterStatus(words, progress)).ch;
@@ -161,16 +164,21 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
     strikes = [];
     picking = null;
     message = '';
-    view.className = `gq gq-quest gq-ch${questChapter}`;
+    const coach = tutorial && quest.index === 0
+      ? '<p class="gq-coach"><b>ハトリ局長</b>お題の日本語に合う英単語を、となりの文字へなぞってつなげよう</p>' : '';
+    view.className = `gq gq-quest gq-ch${questChapter}${coach ? ' gq-tutor' : ''}`;
     view.innerHTML = `
       <div class="gq-top"><span class="gq-hearts" id="gq-hearts"></span><b id="gq-label"></b><span class="gq-timer" aria-hidden="true"><i id="gq-timer"></i></span><button type="button" class="gq-quit" id="gq-quit">やめる</button></div>
       <div class="gq-arena" id="gq-arena">
-        <div class="gq-enemy" id="gq-enemy">${sprite(quest.enemy, 140, 'gq-sprite')}</div>
+        ${artBox(`ward${questChapter}`, 'gq-arena-bg')}
+        ${artBox('tsumugi', 'gq-hero')}
+        <div class="gq-enemy" id="gq-enemy">${artBox(ENEMY_ART[quest.enemy], 'gq-sprite')}</div>
         <span class="gq-pips" id="gq-pips" role="img"></span>
       </div>
       <ul class="gq-clues" id="gq-clues"></ul>
+      ${coach}
       <div class="gq-input" id="gq-text" aria-live="polite"></div>
-      <div class="gq-board entering" id="gq-board" aria-label="7列6行の盤面">${quest.letters.map(cellMarkup).join('')}<svg class="gq-claws" id="gq-claws" viewBox="0 0 700 600" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+      <div class="gq-board entering" id="gq-board" aria-label="7列6行の盤面">${quest.letters.map(cellMarkup).join('')}<svg class="gq-seals" id="gq-seals" aria-hidden="true"></svg></div>
       <div class="gq-actions"><button type="button" id="gq-hint">ヒント</button><button type="button" id="gq-teach">おしえて</button></div>`;
     $('#gq-label').textContent = topLabel();
     $('#gq-quit').onclick = quitQuest;
@@ -178,12 +186,14 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
     $('#gq-teach').onclick = () => chooseHelp('teach');
     bindBoard();
     paintAll();
-    const svg = $('#gq-claws');
+    bgm(quest.isBig ? 'big' : 'delivery');
+    const svg = $('#gq-seals');
     observer?.disconnect();
-    observer = new ResizeObserver(drawClaws);
+    observer = new ResizeObserver(drawSeals);
     observer.observe(svg);
     later(ENTER_MS, () => {
       quest.next(); // entering → battle
+      if (tutorial && quest.index === 0) quest.hint(quest.slots[0].word.id); // 最初の配達：1語目にヒント1
       $('#gq-board')?.classList.remove('entering');
       paintAll();
       startClock();
@@ -197,9 +207,28 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
     showResults();
   }
 
-  function drawClaws() {
-    const svg = $('#gq-claws');
-    if (svg) renderClaws(svg, strikes).catch(() => {});
+  // 正解の経路に朱の判を順に押し、最後に封蝋の判を1つ。盤面の実際のマスの位置から描く。
+  function drawSeals() {
+    const svg = $('#gq-seals');
+    if (!svg) return;
+    const box = svg.getBoundingClientRect();
+    if (!box.width || !box.height) return;
+    const cells = view.querySelectorAll('.gq-cell');
+    const now = performance.now();
+    svg.setAttribute('viewBox', `0 0 ${box.width} ${box.height}`);
+    svg.innerHTML = strikes.map(strike => {
+      const points = strike.path.map(index => {
+        const rect = cells[index].getBoundingClientRect();
+        return [rect.x + rect.width / 2 - box.x, rect.y + rect.height / 2 - box.y];
+      });
+      const fresh = now - strike.started < 700 ? ' fresh' : '';
+      const radius = Math.max(9, Math.min(box.width / 7, box.height / 6) * 0.3);
+      const marks = points.map(([x, y], i) =>
+        `<circle class="seal-dot${fresh}" style="--i:${i}" cx="${x}" cy="${y}" r="${radius * 0.55}"/>`).join('');
+      const [lastX, lastY] = points.at(-1);
+      return `<g class="seal-route"><polyline class="seal-line" points="${points.map(point => point.join(',')).join(' ')}" fill="none"/>${marks}
+        <g class="seal-wax${fresh}" style="--i:${points.length}" transform="translate(${lastX} ${lastY})"><circle r="${radius * 1.15}"/><circle class="seal-ring" r="${radius * 0.75}" fill="none"/></g></g>`;
+    }).join('');
   }
 
   function startClock() {
@@ -219,6 +248,7 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
   function handleEvents(events) {
     for (const event of events) {
       if (event.type === 'attack') {
+        sfx('attack');
         pulse($('#gq-enemy'), 'lunge');
         pulse($('#gq-board'), 'shake');
         pulse($('#gq-hearts'), 'lost');
@@ -311,7 +341,7 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
   function paintTimer() {
     const bar = $('#gq-timer');
     if (!bar) return;
-    const left = Math.max(0, 1 - quest.idle / IDLE_LIMIT);
+    const left = Math.max(0, 1 - quest.idle / quest.idleLimit);
     bar.style.transform = `scaleX(${left})`;
     bar.parentElement.classList.toggle('warn', quest.phase === 'battle' && left < 0.34);
   }
@@ -399,7 +429,8 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
       return;
     }
     strikes.push({path, started: performance.now()});
-    drawClaws();
+    drawSeals();
+    sfx('stamp');
     speak(result.word.w);
     message = `${result.word.w} · ${result.word.ja}`;
     pulse($('#gq-board'), 'correct');
@@ -411,6 +442,7 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
   function defeat() {
     $('#gq-enemy').classList.add('defeated');
     $('#gq-board').classList.add('crumbling');
+    sfx('crumble');
     later(CRUMBLE_MS, () => {
       quest.next();
       if (quest.phase === 'finished') showResults();
@@ -435,41 +467,47 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
     const before = shelfStatus(words, quest.startProgress);
     const lit = shelfStatus(words, quest.progress)
       .filter((shelf, i) => shelf.isLit && !before[i].isLit)
-      .map(shelf => `棚${shelf.shelf}`);
+      .map(shelf => `街灯${shelf.shelf}`);
     const back = dueCount(words, quest.progress, today);
     timers.forEach(clearTimeout);
     timers = [];
     cancelAnimationFrame(frameId);
     frameId = 0;
+    const first = tutorial;
+    tutorial = false;
+    if (lit.length) sfx('lamp');
+    bgm('post');
     view.className = 'gq gq-result';
     view.innerHTML = `
-      <p class="eyebrow">${outcome.retreated ? (quest.hearts <= 0 ? 'ハートがなくなった' : 'クエストをやめた') : 'クエスト'}</p>
-      <h2 class="gq-title">${outcome.retreated ? '撤退' : 'クリア！'}</h2>
+      <p class="eyebrow">${outcome.retreated ? (quest.hearts <= 0 ? 'ハートがなくなった' : '配達をやめた') : '配達'}</p>
+      <h2 class="gq-title">${outcome.retreated ? '局に戻る' : '配達完了！'}</h2>
       <ul class="gq-results" aria-label="今回の語">${outcome.entries.map(resultRow).join('') || '<li class="empty">答えた語はありません</li>'}</ul>
-      <p class="gq-lit">${lit.length ? `✦ ${lit.join('・')} に灯りがともった！` : '今回灯った棚はありません'}</p>
-      <p class="gq-back">次は <b>${back}</b> 語が戻ってくる</p>
+      <p class="gq-lit">${lit.length ? `✦ ${lit.join('・')} がともった！` : '今回ともった街灯はありません'}</p>
+      <p class="gq-back">戻ってくる紙魚（しみ）は <b>${back}</b> 匹</p>
       ${saveFailed ? '<p class="gq-warn">保存できません。この起動中はプレイできます。</p>' : ''}
-      <div class="gq-result-actions"><button class="primary" id="gq-again" type="button">もう一度</button><button type="button" id="gq-guild">ギルドへ</button></div>`;
-    $('#gq-again').onclick = startQuest;
+      <div class="gq-result-actions"><button class="primary" id="gq-again" type="button">もう一度</button><button type="button" id="gq-guild">局へ</button></div>`;
+    $('#gq-again').onclick = () => startQuest();
     $('#gq-guild').onclick = showGuild;
-    $('#gq-again').focus({preventScroll: true});
+    $(first ? '#gq-guild' : '#gq-again').focus({preventScroll: true});
   }
 
   // ---------- 入口 ----------
 
-  async function open() {
+  // first: 最初の配達（保存なしの最初だけ）。局を通らず配達から始め、終わると局へ。
+  async function open({first = false} = {}) {
     stopSession();
     setScreen('guild');
     view.className = 'gq gq-home';
-    view.innerHTML = '<p class="eyebrow">森の本のギルド</p><p class="gq-loading">ギルドの書庫を開いています…</p>';
+    view.innerHTML = '<p class="eyebrow">霧晴れ郵便局</p><p class="gq-loading">局の帳簿を開いています…</p>';
     try {
       words ??= await loadWords();
     } catch (error) {
-      view.innerHTML = `<p class="eyebrow">森の本のギルド</p><p class="gq-warn">${esc(error.message)}</p><button class="text-button" id="gq-title" type="button">← タイトルへ</button>`;
+      view.innerHTML = `<p class="eyebrow">霧晴れ郵便局</p><p class="gq-warn">${esc(error.message)}</p><button class="text-button" id="gq-title" type="button">← タイトルへ</button>`;
       $('#gq-title').onclick = exit;
       return;
     }
-    showGuild();
+    if (first) startQuest(true);
+    else showGuild();
   }
 
   document.addEventListener('visibilitychange', () => {
@@ -482,5 +520,5 @@ export function mountGuild({view, dev = false, setScreen, exit}) {
     if (quest && quest.phase === 'battle' && quest.results.size > 0) quest.finish(true);
   });
 
-  return {open};
+  return {open, hasProgress: () => progress.quests > 0 || Object.keys(progress.words).length > 0};
 }

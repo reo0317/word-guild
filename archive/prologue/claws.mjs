@@ -1,4 +1,4 @@
-import {clawGeometry} from '../../atelier-assets/illustrator/claw-route.mjs';
+import {clawGeometry} from '../../../atelier-assets/illustrator/claw-route.mjs';
 
 export const REVEAL_MS=240;
 export const CLAW_TEXTURE='assets/claw-strip-generated-v3.png';

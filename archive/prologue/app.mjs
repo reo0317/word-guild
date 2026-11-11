@@ -8,7 +8,7 @@ import {resolveAudioPolicy} from './audio-policy.mjs';
 import {FlightSound} from './sound-effects.mjs';
 import {Conversation} from './conversation.mjs';
 import {getStoryBeat} from './story.mjs';
-import {mountGuild} from './guild/view.mjs';
+import {mountGuild} from '../../products/word-guild/guild/view.mjs';
 const view=document.querySelector('#view'),status=document.querySelector('#status'),musicButton=document.querySelector('#music');
 const errors={save:'',music:'',material:'',voice:''};
 function setError(kind,message=''){errors[kind]=message;const messages=Object.values(errors).filter(Boolean);status.textContent=messages.join('\n');status.parentElement.classList.toggle('errors-multiple',messages.length>1);}

@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {BOSS_QUESTIONS} from '../products/word-guild/question-data.mjs';
-import {Game,Trace,ENEMIES,PATHS,FINAL_LIMIT,HINT_DELAY,makeBoard,adjacent,damage,loadSave,saveData,Music} from '../products/word-guild/core.mjs';
+import {BOSS_QUESTIONS} from '../question-data.mjs';
+import {Game,Trace,ENEMIES,PATHS,FINAL_LIMIT,HINT_DELAY,makeBoard,adjacent,damage,loadSave,saveData,Music} from '../core.mjs';
 function nextFloor(g){
  const boss=g.stage===4;
  g.next();
@@ -43,7 +43,7 @@ test('ボス撃破後は帰還相談・凍結・困惑・乱入。番人と盤�
  g.next();assert.equal(g.state,'battle');g.advance(9999);assert.equal(g.hp,hp);g.advance(1);
  assert.equal(g.state,'loss');assert.equal(g.hp,0);assert.deepEqual(g.events,[{kind:'damage',amount:hp}]);
 });
-test('盤面保持・爪痕・石演出の画面接続',async()=>{const app=await readFile(new URL('../products/word-guild/app.mjs',import.meta.url),'utf8'),css=await readFile(new URL('../products/word-guild/style.css',import.meta.url),'utf8');assert.ok(app.includes('${boardHTML()}'));assert.ok(app.includes('strikes.push({path:[...path],started:performance.now()})'));assert.ok(app.includes('const path=[...trace.path]'));assert.ok(app.includes('aria-disabled'));for(const term of ['.claw-reveal.fresh','@keyframes stone-out','@keyframes stone-in','touch-action:none'])assert.ok(css.includes(term));});
+test('盤面保持・爪痕・石演出の画面接続',async()=>{const app=await readFile(new URL('../app.mjs',import.meta.url),'utf8'),css=await readFile(new URL('../style.css',import.meta.url),'utf8');assert.ok(app.includes('${boardHTML()}'));assert.ok(app.includes('strikes.push({path:[...path],started:performance.now()})'));assert.ok(app.includes('const path=[...trace.path]'));assert.ok(app.includes('aria-disabled'));for(const term of ['.claw-reveal.fresh','@keyframes stone-out','@keyframes stone-in','touch-action:none'])assert.ok(css.includes(term));});
 
 test('同一道中曲の取得中は階層と移動の要求を共有し一度だけ開始',async()=>{const ctx=context(30),calls=[];let release;const m=new Music(()=>ctx,url=>{calls.push(url);return new Promise(r=>release=r);});const a=m.play('battle');await Promise.resolve();const b=m.play('battle'),c=m.play('battle');release({ok:true,arrayBuffer:async()=>new ArrayBuffer(0)});await Promise.all([a,b,c]);assert.equal(calls.length,1);assert.equal(ctx.sources.length,1);const source=m.source;await m.play('battle');assert.equal(m.source,source);assert.equal(source.stopped,undefined);m.stop();assert.equal(source.stopped,true);});
 
@@ -57,7 +57,7 @@ test('画像取得は共有・優先昇格・失敗再試行し、状態は読�
  globalThis.Image=ImageMock;globalThis.window={};
  const wait=()=>new Promise(resolve=>setTimeout(resolve,20));
  try{
-  const code=await readFile(new URL('../products/word-guild/assets-loader.mjs',import.meta.url),'utf8');
+  const code=await readFile(new URL('../assets-loader.mjs',import.meta.url),'utf8');
   const loader=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
   const a=loader.loadImage('a'),b=loader.loadImage('b'),high=loader.loadImage('visible','high');
   assert.equal(loader.loadImage('visible','high'),high);await wait();

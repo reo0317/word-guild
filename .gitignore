@@ -1,2 +1,3 @@
 tools/music/out/_work/
 *.f32
+__pycache__/
