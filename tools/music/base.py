@@ -1,7 +1,8 @@
 """Base / home BGM (progress screen, departing for the next quest).
 
-F major, 84 BPM, 4/4, 28 bars = 80.0 s per loop (84 BPM keeps the loop a whole
-number of milliseconds, which FluidSynth's MIDI player needs for an exact repeat).
+F major, 83 1/3 BPM (0.72 s per beat), 4/4, 28 bars = 80.64 s per loop.
+(This tempo makes the loop a whole number of microseconds, milliseconds,
+samples and 64-sample synth blocks, so every rendered pass is identical.)
 
 Form (bars):  A 8 | A' 8 | B 8 | Codetta 4  -> back to A
   A       F  Am7  Bbmaj7  C  Dm7  Bb  Gm7  C7sus4-C7
@@ -80,7 +81,7 @@ def section_of(bar):
 
 
 def build():
-    song = Song("base", bpm=84, bars=28, beats_per_bar=BPB, seed=5, sections=SECTIONS)
+    song = Song("base", bpm=250 / 3, bars=28, beats_per_bar=BPB, seed=5, sections=SECTIONS)
     piano = song.track("Piano", 0, 0, pan=60, reverb=58, role="melody", range=(21, 108))
     horn = song.track("Horn", 1, 60, pan=50, reverb=70, role="melody", range=(41, 77))
     vlns = song.track("Strings", 2, 48, pan=74, reverb=72, role="melody", range=(55, 96))

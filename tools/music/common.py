@@ -323,6 +323,11 @@ class Song:
         #    (reverb tails from pass 1) and its end (pass 3 follows) are
         #    exactly what the looped file will play.
         pre = self.beats_per_bar
+        tempo_us = 60e6 / self.bpm
+        loop_samples = self.loop_beats * tempo_us * SR / 1e6
+        if (abs(tempo_us - round(tempo_us)) > 1e-6 or abs(loop_samples - round(loop_samples)) > 1e-6
+                or round(loop_samples) % 64):
+            print("WARNING: tempo/loop length not sample- and block-exact; passes may differ slightly")
         render_mid = os.path.join(work, self.name + "_x3.mid")
         self.write_midi(render_mid, passes=3, pre_beats=pre, tail_beats=2 * self.beats_per_bar)
         raw_wav = os.path.join(work, self.name + "_x3.wav")
