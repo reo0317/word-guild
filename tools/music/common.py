@@ -158,6 +158,10 @@ def voice_lead(ch: Chord, prev: list[int] | None, n: int, lo: int, hi: int,
         if cost < best_cost:
             best, best_cost = list(combo), cost
     if best is None:
+        if top_max is not None:      # melody too low to stay under: allow overlap
+            return voice_lead(ch, prev, n, lo, hi, avoid)
+        if avoid:
+            return voice_lead(ch, prev, n, lo, hi)
         raise RuntimeError(f"no voicing for {ch.symbol}")
     return best
 

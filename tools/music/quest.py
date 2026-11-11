@@ -111,10 +111,10 @@ def build():
     mel_notes = []
     mel_notes += place(flute, A_MEL, 4, 76, lag=0.006)
     mel_notes += place(flute, B_FLUTE, 12, 64, lag=0.006)
-    mel_notes += place(oboe, B_OBOE, 12, 74, lag=0.004)
+    mel_notes += place(oboe, B_OBOE, 12, 80, lag=0.004)
     mel_notes += place(flute, A2_MEL, 28, 82, lag=0.006)
     mel_notes += place(oboe, TAG_OBOE, 36, 58, lag=0.004)
-    place(horn, BREAK_HORN, 20, 62, legato=0.98, contour=0.4, accent=6)
+    place(horn, BREAK_HORN, 20, 72, legato=0.98, contour=0.4, accent=6)
 
     # glockenspiel sparkle in A': doubles the first gesture of bars 1,3,5,7
     for bar in (28, 30, 32, 34):
@@ -197,7 +197,7 @@ def build():
             if ap % 12 == nxt.bass:
                 ap = nroot
             bass.note(start + dur - 0.5, 0.4, ap, 70 * k)
-    bass.cc(0, 11, 110)
+    bass.cc(0, 11, 100)
 
     # ---------------- pizzicato ostinato (8ths broken chord), Intro/A/A'/Tag
     prev = None
@@ -239,7 +239,7 @@ def build():
                 continue
             order = v if direction == "D" else v[::-1]
             for si, p in enumerate(order):
-                guitar.note(t0 + si * 0.022, 0.45, p, (40 + 28 * w) * k - si * 2, jitter=0.003)
+                guitar.note(t0 + si * 0.022, 0.45, p, (34 + 24 * w) * k - si * 2, jitter=0.003)
     guitar.cc(0, 11, 96)
 
     # ---------------- harp arpeggios in B (8ths, ascending per half bar)
@@ -268,7 +268,7 @@ def build():
         for j in range(int(dur * 2)):
             t = start + j * 0.5
             build = 1.0 + 0.04 * (bar - 20)
-            marimba.note(t, 0.45, shape[j % len(shape)], (54 + 14 * metric(t % BPB)) * build, jitter=0.005)
+            marimba.note(t, 0.45, shape[j % len(shape)], (46 + 12 * metric(t % BPB)) * build, jitter=0.005)
     marimba.cc(0, 11, 100)
 
     # ---------------- drums
@@ -293,10 +293,10 @@ def build():
                 d.note(b + 3.5, 0.2, RIM, 50)
         elif sec in ("A", "A'"):
             if first:
-                d.note(b, 1, CR, 72 if sec == "A" else 82)
-            d.note(b, 0.2, K, 90 * k)
+                d.note(b, 1, CR, 64 if sec == "A" else 72)
+            d.note(b, 0.2, K, 80 * k)
             d.note(b + 1.5, 0.2, K, 58 * k)
-            d.note(b + 2, 0.2, K, 82 * k)
+            d.note(b + 2, 0.2, K, 72 * k)
             for bt in (1, 3):
                 d.note(b + bt, 0.2, RIM if sec == "A" else SN, (72 if sec == "A" else 66) * k)
             hat = RD if sec == "A'" else HH
@@ -312,8 +312,8 @@ def build():
                 d.note(b + 3.5, 0.2, SN, 66)
                 d.note(b + 3.75, 0.2, SN, 58)
         elif sec == "B":
-            d.note(b, 0.2, K, 86)
-            d.note(b + 2, 0.2, K, 78)
+            d.note(b, 0.2, K, 76)
+            d.note(b + 2, 0.2, K, 68)
             d.note(b + 2.5, 0.2, K, 56)
             for bt in (1, 3):
                 d.note(b + bt, 0.2, SN, 64)
