@@ -24,7 +24,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (Song, add_line, audio_report, chord, metric, midi_report, nearest,  # noqa: E402
+from common import (Song, main, add_line, audio_report, chord, metric, midi_report, nearest,  # noqa: E402
                     parse_line, parse_progression, phrase_arcs, scale_step, voice_lead)
 
 BPB = 4
@@ -265,10 +265,4 @@ def build():
 
 
 if __name__ == "__main__":
-    song = build()
-    ok, rep = midi_report(song)
-    print("MIDI checks (base):\n" + rep)
-    info = song.render()
-    print("loop samples:", info["loop_samples"], "loudnorm:", info["loudnorm_type"], "seam:", info["seam"])
-    for f in info["files"][1:]:
-        print(audio_report(f))
+    main(build(), keep_work="--keep" in sys.argv)

@@ -357,7 +357,15 @@ class Song:
                                  f"alimiter=limit={lim:.4f}:attack=4:release=80:level=false:latency=true",
                                  "-f", "f32le", "-"], capture_output=True, check=True).stdout
         x = np.frombuffer(rawlim, dtype="<f4").reshape(-1, 2)
-        seg = x[s0:s0 + L]
+        seg = x[s0:s0 + L].copy()
+        # FluidSynth's reverb has slowly modulated delay lines, so pass 2 and
+        # pass 3 can differ by a tiny amount.  Make the seam exact anyway:
+        # the loop's first 1.5 s fade from "what follows pass 2's end"
+        # (start of pass 3) into pass 2's own start.  Both are the same
+        # music, so this is inaudible, and the wrap is sample-continuous.
+        nx = int(1.5 * SR)
+        w = (0.5 - 0.5 * np.cos(np.linspace(0, np.pi, nx)))[:, None]
+        seg[:nx] = x[s0 + L:s0 + L + nx] * (1 - w) + x[s0:s0 + nx] * w
         # seam continuity: the sample that would follow seg[-1] in the
         # through-composed render vs. seg[0] that the loop actually plays
         seam = {
@@ -375,14 +383,14 @@ class Song:
         flt2 = (f"{flt}:measured_I={meas['input_i']}:measured_TP={meas['input_tp']}:"
                 f"measured_LRA={meas['input_lra']}:measured_thresh={meas['input_thresh']}:"
                 f"offset={meas['target_offset']}:linear=true:print_format=json")
-        master = base + "_master.wav"
+        master = os.path.join(work, self.name + "_master.wav")
         res2 = _loudnorm_json(_run(["ffmpeg", "-hide_banner", "-nostats", "-y", *inp, "-af", flt2,
                                     "-ar", str(SR), "-c:a", "pcm_s16le", master]))
         _run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", master,
               "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", base + ".m4a"])
         _run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", master,
               "-c:a", "libmp3lame", "-b:a", "192k", base + ".mp3"])
-        return {"loop_samples": L, "seam": seam, "loudnorm_type": res2.get("normalization_type"),
+        return {"work": work, "loop_samples": L, "seam": seam, "loudnorm_type": res2.get("normalization_type"),
                 "files": [base + ".mid", master, base + ".m4a", base + ".mp3"]}
 
 
@@ -529,3 +537,18 @@ def scale_step(pc_target: int, scale: list[int], from_below: bool) -> int:
         i = s.index(pc_target)
         return s[(i - 1) % len(s)] if from_below else s[(i + 1) % len(s)]
     return (pc_target - 1) % 12 if from_below else (pc_target + 1) % 12
+
+
+def main(song: Song, keep_work: bool = False):
+    """Check the MIDI, render, check the audio, remove intermediates."""
+    import shutil
+    ok, rep = midi_report(song)
+    print(f"MIDI checks ({song.name}):\n" + rep)
+    info = song.render()
+    print(f"loop: {info['loop_samples']} samples ({info['loop_samples'] / SR:.3f} s), "
+          f"loudnorm: {info['loudnorm_type']}, {info['seam']}")
+    for f in info["files"][1:]:
+        print(" ", audio_report(f))
+    if not keep_work:
+        shutil.rmtree(info["work"], ignore_errors=True)
+    return ok
