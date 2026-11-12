@@ -85,10 +85,10 @@
   {
    "shelf": 38,
    "w": "apartment",
-   "ja": "集合住宅",
+   "ja": "アパートの一室",
    "pos": "n",
    "ex": "an apartment by the sea",
-   "exJa": "海辺の集合住宅",
+   "exJa": "海辺のアパートの一室",
    "rank": 2168
   },
   {
@@ -184,10 +184,10 @@
   {
    "shelf": 41,
    "w": "team",
-   "ja": "班",
+   "ja": "チーム",
    "pos": "n",
    "ex": "a small team",
-   "exJa": "小さな班",
+   "exJa": "小さなチーム",
    "rank": 407
   },
   {
@@ -196,7 +196,7 @@
    "ja": "慈善",
    "pos": "n",
    "ex": "a charity group",
-   "exJa": "慈善の団体",
+   "exJa": "慈善団体",
    "rank": 2354
   },
   {
@@ -220,7 +220,7 @@
   {
    "shelf": 41,
    "w": "vessel",
-   "ja": "大型船",
+   "ja": "船",
    "pos": "n",
    "ex": "an old vessel",
    "exJa": "古い船",
@@ -277,7 +277,7 @@
    "ja": "騒音",
    "pos": "n",
    "ex": "too much noise",
-   "exJa": "多すぎる騒音",
+   "exJa": "ひどい騒音",
    "rank": 1440
   },
   {
@@ -382,10 +382,10 @@
   {
    "shelf": 45,
    "w": "prison",
-   "ja": "牢",
+   "ja": "刑務所",
    "pos": "n",
    "ex": "a prison cell",
-   "exJa": "牢の独房",
+   "exJa": "刑務所の独房",
    "rank": 1462
   },
   {
@@ -393,8 +393,8 @@
    "w": "deny",
    "ja": "否定する",
    "pos": "v",
-   "ex": "deny the debt",
-   "exJa": "借金を否定する",
+   "ex": "Deny the accusation",
+   "exJa": "非難を否定する",
    "rank": 1429
   },
   {
@@ -402,8 +402,8 @@
    "w": "credit",
    "ja": "信用",
    "pos": "n",
-   "ex": "lose credit",
-   "exJa": "信用を失う",
+   "ex": "Buy on credit",
+   "exJa": "掛けで買う",
    "rank": 944
   },
   {

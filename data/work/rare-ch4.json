@@ -51,8 +51,8 @@
    "w": "executive",
    "ja": "重役",
    "pos": "n",
-   "ex": "an executive of the town",
-   "exJa": "町の重役",
+   "ex": "A company executive",
+   "exJa": "会社の重役",
    "rank": 1059
   },
   {
@@ -60,8 +60,8 @@
    "w": "secretary",
    "ja": "秘書",
    "pos": "n",
-   "ex": "the secretary of records",
-   "exJa": "記録係の秘書",
+   "ex": "The director's secretary",
+   "exJa": "取締役の秘書",
    "rank": 1193
   },
   {
@@ -141,8 +141,8 @@
    "w": "release",
    "ja": "解き放つ",
    "pos": "v",
-   "ex": "release the debt",
-   "exJa": "借金を免じる",
+   "ex": "Release the birds",
+   "exJa": "鳥を解き放つ",
    "rank": 786
   },
   {
@@ -285,8 +285,8 @@
    "w": "advertise",
    "ja": "宣伝する",
    "pos": "v",
-   "ex": "advertise the story",
-   "exJa": "話を宣伝する",
+   "ex": "Advertise the product",
+   "exJa": "製品を宣伝する",
    "rank": 1172
   },
   {
@@ -331,7 +331,7 @@
    "ja": "装置",
    "pos": "n",
    "ex": "a clever device",
-   "exJa": "うまい装置",
+   "exJa": "巧妙な装置",
    "rank": 1525
   },
   {
@@ -412,7 +412,7 @@
    "ja": "思い出させる",
    "pos": "v",
    "ex": "remind me of home",
-   "exJa": "故郷を思い出させる",
+   "exJa": "私に故郷を思い出させる",
    "rank": 1459
   },
   {
@@ -420,8 +420,8 @@
    "w": "journal",
    "ja": "日誌",
    "pos": "n",
-   "ex": "a weekly journal",
-   "exJa": "週ごとの日誌",
+   "ex": "Keep a journal",
+   "exJa": "日誌をつける",
    "rank": 2429
   },
   {

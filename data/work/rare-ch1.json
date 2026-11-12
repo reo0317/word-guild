@@ -51,8 +51,8 @@
    "w": "cheap",
    "ja": "安い",
    "pos": "a",
-   "ex": "A cheap price",
-   "exJa": "安い値段",
+   "ex": "A cheap ticket",
+   "exJa": "安い切符",
    "rank": 1095
   },
   {
@@ -124,7 +124,7 @@
    "ja": "客",
    "pos": "n",
    "ex": "A late guest",
-   "exJa": "遅い客",
+   "exJa": "遅れて来た客",
    "rank": 1430
   },
   {
@@ -133,7 +133,7 @@
    "ja": "チーズ",
    "pos": "n",
    "ex": "Cheese on toast",
-   "exJa": "トーストのチーズ",
+   "exJa": "チーズをのせたトースト",
    "rank": 2585
   },
   {
@@ -168,8 +168,8 @@
    "w": "bowl",
    "ja": "鉢",
    "pos": "n",
-   "ex": "A flour bowl",
-   "exJa": "粉の鉢",
+   "ex": "A soup bowl",
+   "exJa": "スープ用の鉢",
    "rank": 2291
   },
   {
@@ -214,16 +214,16 @@
    "ja": "岸",
    "pos": "n",
    "ex": "Walk along the shore",
-   "exJa": "岸を歩く",
+   "exJa": "岸に沿って歩く",
    "rank": 2737
   },
   {
    "shelf": 5,
    "w": "knife",
-   "ja": "包丁",
+   "ja": "ナイフ",
    "pos": "n",
    "ex": "A sharp knife",
-   "exJa": "鋭い包丁",
+   "exJa": "鋭いナイフ",
    "rank": 2657
   },
   {
@@ -265,10 +265,10 @@
   {
    "shelf": 6,
    "w": "rail",
-   "ja": "線路",
+   "ja": "レール",
    "pos": "n",
-   "ex": "Follow the rail",
-   "exJa": "線路をたどる",
+   "ex": "A steel rail",
+   "exJa": "鋼のレール",
    "rank": 2440
   }
  ]

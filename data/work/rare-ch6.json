@@ -6,8 +6,8 @@
    "w": "path",
    "ja": "小道",
    "pos": "n",
-   "ex": "a cape path",
-   "exJa": "岬の小道",
+   "ex": "A narrow path",
+   "exJa": "狭い小道",
    "rank": 1295
   },
   {
@@ -15,8 +15,8 @@
    "w": "danger",
    "ja": "危険",
    "pos": "n",
-   "ex": "a red sign of danger",
-   "exJa": "危険の赤い印",
+   "ex": "In great danger",
+   "exJa": "大きな危険にさらされて",
    "rank": 1416
   },
   {
@@ -67,19 +67,19 @@
   {
    "shelf": 48,
    "w": "account",
-   "ja": "帳簿",
+   "ja": "口座",
    "pos": "n",
-   "ex": "a ledger account",
-   "exJa": "台帳の帳簿",
+   "ex": "Open a bank account",
+   "exJa": "銀行口座を開く",
    "rank": 436
   },
   {
    "shelf": 48,
    "w": "assure",
-   "ja": "請け合う",
+   "ja": "安心させる",
    "pos": "v",
-   "ex": "assure the visitor",
-   "exJa": "訪問者を安心させる",
+   "ex": "Assure me you are safe",
+   "exJa": "無事だと言って私を安心させる",
    "rank": 2064
   },
   {
@@ -103,10 +103,10 @@
   {
    "shelf": 49,
    "w": "reward",
-   "ja": "報い",
+   "ja": "報酬",
    "pos": "n",
    "ex": "a small reward",
-   "exJa": "ささやかな報い",
+   "exJa": "ささやかな報酬",
    "rank": 1748
   },
   {
@@ -132,17 +132,17 @@
    "w": "tower",
    "ja": "塔",
    "pos": "n",
-   "ex": "the lamp tower",
-   "exJa": "灯の塔",
+   "ex": "A tall tower",
+   "exJa": "高い塔",
    "rank": 2324
   },
   {
    "shelf": 50,
    "w": "radio",
-   "ja": "無線",
+   "ja": "ラジオ",
    "pos": "n",
-   "ex": "a radio call",
-   "exJa": "無線の呼び出し",
+   "ex": "Listen to the radio",
+   "exJa": "ラジオを聞く",
    "rank": 1045
   },
   {
@@ -166,10 +166,10 @@
   {
    "shelf": 50,
    "w": "carpet",
-   "ja": "敷物",
+   "ja": "じゅうたん",
    "pos": "n",
    "ex": "a red carpet",
-   "exJa": "赤い敷物",
+   "exJa": "赤いじゅうたん",
    "rank": 2680
   },
   {
@@ -184,10 +184,10 @@
   {
    "shelf": 51,
    "w": "lazy",
-   "ja": "怠けた",
+   "ja": "怠け者の",
    "pos": "a",
-   "ex": "a lazy day",
-   "exJa": "怠けた一日",
+   "ex": "A lazy worker",
+   "exJa": "怠け者の労働者",
    "rank": 2802
   },
   {
@@ -231,8 +231,8 @@
    "w": "silver",
    "ja": "銀",
    "pos": "n",
-   "ex": "a silver bug",
-   "exJa": "銀色の虫",
+   "ex": "Made of silver",
+   "exJa": "銀でできている",
    "rank": 2033
   },
   {
@@ -240,8 +240,8 @@
    "w": "forever",
    "ja": "永遠に",
    "pos": "o",
-   "ex": "forever in ink",
-   "exJa": "永遠にインクで",
+   "ex": "Friends forever",
+   "exJa": "永遠に友達",
    "rank": 2507
   },
   {
@@ -256,19 +256,19 @@
   {
    "shelf": 52,
    "w": "digital",
-   "ja": "電子の",
+   "ja": "デジタルの",
    "pos": "a",
    "ex": "a digital clock",
-   "exJa": "電子時計",
+   "exJa": "デジタル時計",
    "rank": 2309
   },
   {
    "shelf": 52,
    "w": "ashamed",
-   "ja": "恥じた",
+   "ja": "恥じている",
    "pos": "a",
    "ex": "I felt ashamed",
-   "exJa": "私は恥ずかしかった",
+   "exJa": "私は恥ずかしく思った",
    "rank": 2806
   },
   {
@@ -277,7 +277,7 @@
    "ja": "義務",
    "pos": "n",
    "ex": "a sense of obligation",
-   "exJa": "義務の感覚",
+   "exJa": "義務感",
    "rank": 2137
   },
   {
@@ -285,8 +285,8 @@
    "w": "permanent",
    "ja": "永久の",
    "pos": "a",
-   "ex": "a permanent debt",
-   "exJa": "永久の借り",
+   "ex": "A permanent change",
+   "exJa": "永久的な変化",
    "rank": 1782
   },
   {
@@ -294,8 +294,8 @@
    "w": "victim",
    "ja": "被害者",
    "pos": "n",
-   "ex": "a victim of fog",
-   "exJa": "霧の被害者",
+   "ex": "A victim of crime",
+   "exJa": "犯罪の被害者",
    "rank": 1520
   },
   {
@@ -303,7 +303,7 @@
    "w": "signal",
    "ja": "合図",
    "pos": "n",
-   "ex": "a signal from sea",
+   "ex": "A signal from the sea",
    "exJa": "海からの合図",
    "rank": 1502
   },
@@ -319,10 +319,10 @@
   {
    "shelf": 54,
    "w": "thirst",
-   "ja": "渇き",
+   "ja": "喉の渇き",
    "pos": "n",
    "ex": "thirst in summer",
-   "exJa": "夏の渇き",
+   "exJa": "夏の喉の渇き",
    "rank": 2809
   },
   {
@@ -382,7 +382,7 @@
   {
    "shelf": 55,
    "w": "grateful",
-   "ja": "感謝した",
+   "ja": "感謝している",
    "pos": "a",
    "ex": "we are grateful",
    "exJa": "私たちは感謝している",
@@ -438,8 +438,8 @@
    "w": "language",
    "ja": "言語",
    "pos": "n",
-   "ex": "a plain language",
-   "exJa": "平易な言葉",
+   "ex": "Learn a foreign language",
+   "exJa": "外国語を学ぶ",
    "rank": 360
   },
   {

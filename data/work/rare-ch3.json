@@ -16,7 +16,7 @@
    "ja": "保管",
    "pos": "n",
    "ex": "Storage room",
-   "exJa": "保管の部屋",
+   "exJa": "保管室",
    "rank": 2707
   },
   {
@@ -79,7 +79,7 @@
    "ja": "輸入する",
    "pos": "v",
    "ex": "Import new lamps",
-   "exJa": "新しい灯を輸入する",
+   "exJa": "新しいランプを輸入する",
    "rank": 1613
   },
   {
@@ -94,10 +94,10 @@
   {
    "shelf": 19,
    "w": "border",
-   "ja": "境",
+   "ja": "国境",
    "pos": "n",
    "ex": "Cross the border",
-   "exJa": "境を越える",
+   "exJa": "国境を越える",
    "rank": 1473
   },
   {
@@ -130,10 +130,10 @@
   {
    "shelf": 19,
    "w": "declare",
-   "ja": "申告する",
+   "ja": "宣言する",
    "pos": "v",
-   "ex": "Declare the goods",
-   "exJa": "品を申告する",
+   "ex": "Declare independence",
+   "exJa": "独立を宣言する",
    "rank": 1634
   },
   {
@@ -141,8 +141,8 @@
    "w": "slip",
    "ja": "滑る",
    "pos": "v",
-   "ex": "Slip on soup",
-   "exJa": "汁で滑る",
+   "ex": "Slip on ice",
+   "exJa": "氷で滑る",
    "rank": 1810
   },
   {
@@ -231,8 +231,8 @@
    "w": "trust",
    "ja": "信用",
    "pos": "n",
-   "ex": "Lost our trust",
-   "exJa": "信用を失った",
+   "ex": "Win our trust",
+   "exJa": "私たちの信頼を得る",
    "rank": 1075
   },
   {
@@ -240,17 +240,17 @@
    "w": "honest",
    "ja": "正直な",
    "pos": "a",
-   "ex": "An honest keeper",
-   "exJa": "正直な灯台守",
+   "ex": "An honest person",
+   "exJa": "正直な人",
    "rank": 2035
   },
   {
    "shelf": 22,
    "w": "duty",
-   "ja": "務め",
+   "ja": "義務",
    "pos": "n",
-   "ex": "A keeper's duty",
-   "exJa": "灯台守の務め",
+   "ex": "Do your duty",
+   "exJa": "自分の義務を果たす",
    "rank": 1262
   },
   {
@@ -346,10 +346,10 @@
   {
    "shelf": 24,
    "w": "wheel",
-   "ja": "舵輪",
+   "ja": "車輪",
    "pos": "n",
-   "ex": "Hold the wheel",
-   "exJa": "舵輪を握る",
+   "ex": "A bicycle wheel",
+   "exJa": "自転車の車輪",
    "rank": 1985
   },
   {
@@ -438,8 +438,8 @@
    "w": "trap",
    "ja": "わな",
    "pos": "n",
-   "ex": "A quiet trap",
-   "exJa": "静かなわな",
+   "ex": "A hidden trap",
+   "exJa": "隠されたわな",
    "rank": 2184
   },
   {

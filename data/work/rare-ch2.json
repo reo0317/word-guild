@@ -69,8 +69,8 @@
    "w": "button",
    "ja": "ボタン",
    "pos": "n",
-   "ex": "Sew a button",
-   "exJa": "ボタンを縫う",
+   "ex": "Sew on a button",
+   "exJa": "ボタンを縫い付ける",
    "rank": 2285
   },
   {
@@ -78,7 +78,7 @@
    "w": "pocket",
    "ja": "ポケット",
    "pos": "n",
-   "ex": "Empty pocket",
+   "ex": "An empty pocket",
    "exJa": "空のポケット",
    "rank": 1865
   },
@@ -184,10 +184,10 @@
   {
    "shelf": 11,
    "w": "trick",
-   "ja": "たくらみ",
+   "ja": "いたずら",
    "pos": "n",
-   "ex": "A cheap trick",
-   "exJa": "安い手口",
+   "ex": "A cruel trick",
+   "exJa": "残酷ないたずら",
    "rank": 2617
   },
   {
@@ -204,8 +204,8 @@
    "w": "luxury",
    "ja": "ぜいたく",
    "pos": "n",
-   "ex": "Free luxury tempts",
-   "exJa": "ただの贅沢は誘う",
+   "ex": "Live in luxury",
+   "exJa": "ぜいたくに暮らす",
    "rank": 2660
   },
   {
@@ -330,8 +330,8 @@
    "w": "sweet",
    "ja": "甘い",
    "pos": "a",
-   "ex": "A sweet shop",
-   "exJa": "甘いお菓子の店",
+   "ex": "A sweet cake",
+   "exJa": "甘いケーキ",
    "rank": 1781
   },
   {
@@ -382,10 +382,10 @@
   {
    "shelf": 15,
    "w": "journalist",
-   "ja": "報道人",
+   "ja": "記者",
    "pos": "n",
    "ex": "A young journalist",
-   "exJa": "若い報道人",
+   "exJa": "若い記者",
    "rank": 1939
   },
   {
@@ -403,7 +403,7 @@
    "ja": "コラム",
    "pos": "n",
    "ex": "A weekly column",
-   "exJa": "週刊のコラム",
+   "exJa": "毎週掲載されるコラム",
    "rank": 1721
   },
   {
@@ -436,10 +436,10 @@
   {
    "shelf": 16,
    "w": "pilot",
-   "ja": "水先人",
+   "ja": "操縦士",
    "pos": "n",
-   "ex": "The harbor pilot",
-   "exJa": "港の水先人",
+   "ex": "An airline pilot",
+   "exJa": "航空会社の操縦士",
    "rank": 1796
   },
   {
