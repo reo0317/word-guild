@@ -1,6 +1,5 @@
 oil
 vote
-record
 storm
 duty
 prove

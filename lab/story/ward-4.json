@@ -43,7 +43,7 @@
     },
     {
      "en": "An {electrician} is in the {auditorium}, where the mayor meets a {celebrity} at two. We {deduct} no money for this {disruption}.",
-     "ja": "講堂では電気技師が作業中です。2時に町長が有名人の客と会う場所です。この混乱について、料金を差し引くことはありません。",
+     "ja": "講堂では電気技師が作業中です。2時に町長が有名人と会う場所です。この混乱について、料金を差し引くことはありません。",
      "ids": [
       "t0520",
       "t0516",
@@ -276,8 +276,8 @@
      ]
     },
     {
-     "en": "We {opt} to spend oil money {locally}, on the town {parade}. The mayor, his {mentor}, {nominated} Deputy Tobe to lead it.",
-     "ja": "油の予算は地元で、町のパレードに使うことを選ぶ。助役トベの師である町長が、トベをその責任者に指名した。",
+     "en": "We {opt} to spend oil money {locally}, on the town {parade}. The mayor, {mentor} to Deputy Tobe, {nominated} him to lead it.",
+     "ja": "油の予算は地元で、町のパレードに使うことを選ぶ。助役トベを指導してきた町長が、彼をその責任者に指名した。",
      "ids": [
       "t0609",
       "t0606",
@@ -317,6 +317,326 @@
       "t0621",
       "t0624",
       "t0623"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 32,
+   "ch": 4,
+   "kind": "form",
+   "from": "Deputy Mayor Tobe",
+   "to": "The town council",
+   "lines": [
+    {
+     "en": "Keep this in the {basement}, away from any {documentary}. From the {balcony} of the {culinary} school, I saw the cape dark, as planned {beforehand}.",
+     "ja": "この報告は地下室に保管し、ドキュメンタリーの目にふれさせないこと。私は料理学校のバルコニーから、事前の予定どおり岬が暗いのを見た。",
+     "ids": [
+      "t0627",
+      "t0630",
+      "t0626",
+      "t0629",
+      "t0628"
+     ]
+    },
+    {
+     "en": "The storm was {excessive}, like an {earthquake}. The Yosuga Maru lost its {elegant} goods and {generic} medicine; a {downturn} follows.",
+     "ja": "嵐は度を越しており、地震のようだった。ヨスガ丸は上品な品物とジェネリックの薬を失った。景気の落ち込みが続くだろう。",
+     "ids": [
+      "t0634",
+      "t0632",
+      "t0633",
+      "t0635",
+      "t0631"
+     ]
+    },
+    {
+     "en": "I heard no call over the {jazz}. To {maximize} the fire, the {mild} keeper used his hands, which need {massage} for a {lifetime}.",
+     "ja": "ジャズの音で、助けを呼ぶ声は聞こえなかった。温和な灯台守は火を最大にしようと素手を使い、その手は一生マッサージが要るだろう。",
+     "ids": [
+      "t0636",
+      "t0639",
+      "t0640",
+      "t0638",
+      "t0637"
+     ]
+    },
+    {
+     "en": "The lamp {plug} was out; he ate {pie} and did not look at it {periodically}. {Recruitment} of a new keeper is {ongoing}.",
+     "ja": "灯のプラグは抜けていた。彼はパイを食べており、定期的に確かめなかった。新しい灯台守の採用は進行中である。",
+     "ids": [
+      "t0644",
+      "t0643",
+      "t0642",
+      "t0645",
+      "t0641"
+     ]
+    },
+    {
+     "en": "A {runner} found his {sock} on the cape; it means little. As {referee}, I give no {referral}; his {renown} ends here.",
+     "ja": "走っていた人が岬で彼の靴下を見つけたが、大した意味はない。審判として、私は彼に紹介状を書かない。彼の名声はここで終わる。",
+     "ids": [
+      "t0649",
+      "t0650",
+      "t0646",
+      "t0647",
+      "t0648"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 33,
+   "ch": 4,
+   "kind": "letter",
+   "from": "Mr. Shirase",
+   "to": "The town council",
+   "lines": [
+    {
+     "en": "Ten men were {aboard}; the Yosuga Maru {timetable} is by my {vase}. People {surf} to read your report; my box holds only {spam}.",
+     "ja": "あの夜、10人が乗っていた。ヨスガ丸の時刻表は、私の花瓶のそばにある。人々はネットを見てあなたがたの報告を読み、私の郵便受けには迷惑メールしか来ない。",
+     "ids": [
+      "t0655",
+      "t0653",
+      "t0654",
+      "t0652",
+      "t0651"
+     ]
+    },
+    {
+     "en": "An {attorney} will help me; {alternatively}, an {advertiser} will buy my story to {amuse} people. I want no {advancement}.",
+     "ja": "弁護士は力になると言う。その代わりに、広告主は人を楽しませるために私の話を買うと言う。昇進など要らない。",
+     "ids": [
+      "t0660",
+      "t0658",
+      "t0657",
+      "t0659",
+      "t0656"
+     ]
+    },
+    {
+     "en": "At the {checkout} by the {campus}, a child said no to my {candy}. I made the fire without {authorization}; no one will {certify} it.",
+     "ja": "キャンパスのそばのレジで、子どもが私のあめを断った。私は認可なしに火をたいた。それを認定する人は誰もいない。",
+     "ids": [
+      "t0665",
+      "t0662",
+      "t0663",
+      "t0661",
+      "t0664"
+     ]
+    },
+    {
+     "en": "I know the {chemistry} of fire, not of words. Your report is in {circulation} without my {consent}; every {concierge} {consistently} tells it.",
+     "ja": "私は火の化学は知っているが、言葉のそれは知らない。あなたがたの報告は私の同意なしに広く出回り、どのコンシェルジュも一貫してそれを語る。",
+     "ids": [
+      "t0666",
+      "t0667",
+      "t0669",
+      "t0668",
+      "t0670"
+     ]
+    },
+    {
+     "en": "I {detach} my name from the {deck}; my {cookie} box stays. Your {descriptive} {documentation} made me the bad man; no more words.",
+     "ja": "灯台のデッキから、私の名前を切り離す。クッキーの箱は置いていく。あなたがたの説明的な書類が、私を悪者にした。言葉はもう要らない。",
+     "ids": [
+      "t0674",
+      "t0672",
+      "t0671",
+      "t0673",
+      "t0675"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 34,
+   "ch": 4,
+   "kind": "memo",
+   "from": "Mr. Kiri",
+   "to": "Tsumugi",
+   "lines": [
+    {
+     "en": "{Familiarize} yourself with these notes. On the {hotline} to the mayor, Mr. Blank, the {entrepreneur}, has an {exceptional} old port {intonation}.",
+     "ja": "このメモに目を通して慣れておいてください。町長へのホットラインで聞いた起業家ブランク氏の話し方には、昔の港の人の、並外れた抑揚があります。",
+     "ids": [
+      "t0678",
+      "t0679",
+      "t0676",
+      "t0677",
+      "t0680"
+     ]
+    },
+    {
+     "en": "My {locker} holds a {patent} for a hand lamp, an {invention} of Mr. Shirase. It will {irritate} the mayor; he won't {overlook} it.",
+     "ja": "私のロッカーには、手持ちの灯の特許があります。シラセ氏の発明です。町長はいら立つでしょうし、見落としてはくれません。",
+     "ids": [
+      "t0683",
+      "t0685",
+      "t0681",
+      "t0682",
+      "t0684"
+     ]
+    },
+    {
+     "en": "I post the {preliminary} notes. If it does not go {smoothly}, my last pay is {payable}, and I become a {sauna} {salesman}.",
+     "ja": "予備の記録を張り出します。円滑にいかなければ、最後の給料が支払われて、私はサウナの営業マンになります。",
+     "ids": [
+      "t0687",
+      "t0690",
+      "t0686",
+      "t0689",
+      "t0688"
+     ]
+    },
+    {
+     "en": "I pay {tuition} to be a {translator}. The mayor is {unavailable}; a car {tows} a cart of white boxes here in the {sunshine}.",
+     "ja": "翻訳者になるため、授業料を払っています。町長は不在です。日差しの中、車が白い箱を積んだ荷車をここまでけん引してきます。",
+     "ids": [
+      "t0694",
+      "t0693",
+      "t0695",
+      "t0692",
+      "t0691"
+     ]
+    },
+    {
+     "en": "Posting them is a {violation}; the {webpage} says {acceptance} is next week. It is {ambitious}, but please {allocate} an hour.",
+     "ja": "張り出すのは規則違反です。ウェブページには、受諾は来週とあります。野心的なのはわかっていますが、1時間を割り当ててください。",
+     "ids": [
+      "t0696",
+      "t0697",
+      "t0698",
+      "t0700",
+      "t0699"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 35,
+   "ch": 4,
+   "kind": "notice",
+   "from": "Mr. Kiri and the post office",
+   "to": "Every house in Yosuga Port",
+   "lines": [
+    {
+     "en": "Bring a {classmate} to the hearing, and we will {clarify} the contract. Mr. Kiri {compiled} the {appendix}; sign your name at the {booth}.",
+     "ja": "公聴会に同級生を連れてきてください。契約の中身を明確にします。付録はキリ氏が編集しました。ブースで名前を書いてください。",
+     "ids": [
+      "t0704",
+      "t0703",
+      "t0705",
+      "t0701",
+      "t0702"
+     ]
+    },
+    {
+     "en": "The contract would {discontinue} every record: no {correction}, no {customized} terms, no notes to {diagnose} you, no thanks for your {dedication}.",
+     "ja": "この契約は、すべての記録を廃止するものです。訂正も、特注の条件も、あなたを診断するための記録も、あなたの献身へのお礼も残りません。",
+     "ids": [
+      "t0710",
+      "t0706",
+      "t0707",
+      "t0709",
+      "t0708"
+     ]
+    },
+    {
+     "en": "We {economize}, but at what cost? We would lose {drought} plans, {firework} nights, {dishwasher} orders, even {entrée} prices.",
+     "ja": "節約はしています。でも、何を代わりに払うのでしょう。干ばつへの備えも、花火の夜も、食器洗い機の注文も、主菜の値段さえ失うのです。",
+     "ids": [
+      "t0713",
+      "t0712",
+      "t0715",
+      "t0711",
+      "t0714"
+     ]
+    },
+    {
+     "en": "{Ideally}, every house comes: the {gardener}, the {freight} worker, and the man who can {fry} fish in a {gallon} of oil.",
+     "ja": "理想的には、どの家からも来てください。庭師も、運送の働き手も、1ガロンの油で魚を揚げられる人も。",
+     "ids": [
+      "t0720",
+      "t0719",
+      "t0716",
+      "t0717",
+      "t0718"
+     ]
+    },
+    {
+     "en": "Please read the {introductory} part, {ma'am}; this is not {junk}. Room may be {insufficient}, so come early; it is free, all {inclusive}.",
+     "ja": "奥様、入門の部分を読んでください。これはがらくたではありません。場所が不十分かもしれないので、早めに来てください。すべて込みで無料です。",
+     "ids": [
+      "t0723",
+      "t0725",
+      "t0724",
+      "t0722",
+      "t0721"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 36,
+   "ch": 4,
+   "kind": "ledger",
+   "from": "Mr. Kiri",
+   "to": "The town records",
+   "lines": [
+    {
+     "en": "The room is {noisy}, and {pasta} comes in a {pan}. Tsumugi brings a {parcel} after a week of {mileage}.",
+     "ja": "部屋はうるさく、パスタが鍋ごと運ばれてくる。ツムギは一週間ぶんの走行距離のあとで、小包を持ってくる。",
+     "ids": [
+      "t0727",
+      "t0730",
+      "t0728",
+      "t0729",
+      "t0726"
+     ]
+    },
+    {
+     "en": "Mayor Tobe is {punctual} but has a {pill}. A {periodical} writer brings a {portable} lamp; benches come from the {recreation} room.",
+     "ja": "トベ町長は時間厳守で来たが、錠剤を飲む。定期刊行物の記者が持ち運べる灯を持ちこみ、長いすはレクリエーション室から運ばれる。",
+     "ids": [
+      "t0734",
+      "t0732",
+      "t0731",
+      "t0733",
+      "t0735"
+     ]
+    },
+    {
+     "en": "Tsumugi, in her {scarf}, speaks for the first time: 'These notes are a {reminder}, not a {rumor}. Blank paper won't {relieve} a {seaside} town.'",
+     "ja": "スカーフを巻いたツムギが、初めて発言する。「この記録はうわさではなく、思い出させるためのものです。白紙では、海辺の町は楽になりません。」",
+     "ids": [
+      "t0739",
+      "t0737",
+      "t0738",
+      "t0736",
+      "t0740"
+     ]
+    },
+    {
+     "en": "Goro, who came {specially}, {spills} his juice: 'Will you {subtract} my {spouse} too?' The mayor {shortens} the talk: 'Prove the keeper did his duty.'",
+     "ja": "わざわざ来たゴローが、ジュースをこぼす。「私の妻まで引き算して消すのか。」町長は話を短くする。「灯台守が務めを果たしたと証明しなさい。」",
+     "ids": [
+      "t0742",
+      "t0743",
+      "t0745",
+      "t0744",
+      "t0741"
+     ]
+    },
+    {
+     "en": "Vote: next week. Over his {tablet}, Tobe says in a quiet {accent}: 'Hope is for {yoga}; I {vend} a {ton} of stories.'",
+     "ja": "採決：来週。トベはタブレットごしに、静かな訛りで言う。「希望はヨガでやりなさい。話なら、私はトン単位で売っている。」",
+     "ids": [
+      "t0746",
+      "t0750",
+      "t0749",
+      "t0748",
+      "t0747"
      ]
     }
    ]
