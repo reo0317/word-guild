@@ -128,3 +128,19 @@ test('控えは元の文字列を保存し、読み戻せる。保存本体は�
   }
   assert.equal(restoreBackup(memory({[`${STORAGE_KEY}.backup`]: '{'})).ok, false);
 });
+
+test('門の保存は旧形式と互換で、壊れた配列は既定値になる', () => {
+  const old = serializeProgress(emptyProgress());
+  delete old.gates;
+  assert.deepEqual(validateProgress(old).gates, []);
+  const oldJson = JSON.stringify(old);
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < oldJson.length; i++) hash = Math.imul(hash ^ oldJson.charCodeAt(i), 0x01000193);
+  const oldExport = `WG1.${btoa(oldJson).replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '')}.${(hash >>> 0).toString(16).padStart(8, '0')}`;
+  assert.deepEqual(importText(oldExport).progress.gates, []);
+  for (const gates of [null, [0], [7], [1, 1], [1, '2'], [1.5]]) {
+    assert.deepEqual(validateProgress({...old, gates}).gates, []);
+  }
+  const progress = {...emptyProgress(), gates: [1, 6]};
+  assert.deepEqual(importText(exportText(progress)).progress.gates, [1, 6]);
+});

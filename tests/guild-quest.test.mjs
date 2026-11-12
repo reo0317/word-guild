@@ -286,3 +286,24 @@ test('リベンジ盤面の結果は依頼に数えない', () => {
   quest.next();
   assert.equal(saved[0].daily.count, 11, 'w0 は最初の結果 hint のまま');
 });
+
+test('門の配達は完了時だけ開き、通常どおり速達と連続日数に数える', () => {
+  const progress = {...emptyProgress(), gates: [1], daily: {day: TODAY, kind: 'finish', goal: 1, count: 0, done: false}};
+  const saved = [];
+  const quest = new Quest(groups, {rand: mulberry32(1), progress, today: TODAY, gate: 2, save: p => saved.push(p)});
+  while (quest.phase !== 'finished') {
+    if (quest.phase === 'battle') solve(quest);
+    else quest.next();
+  }
+  assert.deepEqual(saved[0].gates, [1, 2]);
+  assert.equal(saved[0].daily.done, true);
+  assert.equal(saved[0].streak.count, 1);
+  assert.deepEqual(progress.gates, [1]);
+  const retreat = new Quest(groups, {rand: mulberry32(1), progress, today: TODAY, gate: 2});
+  retreat.next();
+  retreat.advance(IDLE_LIMIT * HEARTS);
+  assert.deepEqual(retreat.progress.gates, [1]);
+  const repeat = new Quest(groups, {rand: mulberry32(1), progress, today: TODAY, gate: 1});
+  repeat.finish(false);
+  assert.deepEqual(repeat.progress.gates, [1]);
+});
