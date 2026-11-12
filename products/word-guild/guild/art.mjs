@@ -3,8 +3,8 @@
 import {esc} from './dom.mjs';
 
 export const ART = {
-  key:      {file: 'art/key-visual.webp',  tone: 'fog',   label: '霧の坂と郵便局'},
-  open1:    {file: 'art/key-visual.webp',  tone: 'fog',   label: '霧の坂と郵便局'},
+  key:      {file: 'art/key-visual.webp',  tone: 'fog',   label: '霧の坂と郵便局', ready: true},
+  open1:    {file: 'art/key-visual.webp',  tone: 'fog',   label: '霧の坂と郵便局', ready: true},
   open2:    {file: 'art/open-2.webp',      tone: 'ink',   label: '霧が手紙の文字を消す'},
   open3:    {file: 'art/open-3.webp',      tone: 'paper', label: 'ハトリ局長が鞄を渡す'},
   post:     {file: 'art/post-office.webp', tone: 'paper', label: '局の中'},
@@ -33,5 +33,10 @@ export const artFile = name => ART[name]?.file ?? null;
 export function artBox(name, extra = '') {
   const art = ART[name];
   if (!art) throw new Error(`未定義の絵: ${name}`);
+  // 絵が届いたもの（ready）は画像を敷き、届いていないものは仮の箱のまま。
+  if (art.ready) {
+    return `<div class="art art-ready tone-${art.tone} ${esc(extra)}" data-art="${esc(name)}" role="img" aria-label="${esc(art.label)}">`
+      + `<img src="${esc(art.file)}" alt="" decoding="async"></div>`;
+  }
   return `<div class="art tone-${art.tone} ${esc(extra)}" data-art="${esc(name)}" role="img" aria-label="${esc(art.label)}"></div>`;
 }

@@ -25,6 +25,7 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .tone-ink{background:var(--ink)}.tone-ink:after{color:var(--paper)}
 .tone-paper{background:var(--paper-2)}.tone-seal{background:var(--seal)}.tone-seal:after{color:var(--paper)}
 .tone-fog{background:var(--fog)}.tone-lamp{background:var(--lamp)}
+.art-ready:before,.art-ready:after{display:none}.art-ready>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom}
 
 /* 入口：タイトルとオープニング */
 #view.kp{padding:0;gap:0;overflow:hidden;border-color:var(--ink)}
