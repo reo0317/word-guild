@@ -157,3 +157,67 @@ Use the attached key-a4-1.png as the definitive visual style reference. Game bac
 ## 本番：ward-6.png
 
 Use the attached key-a4-1.png as the definitive visual style reference. Game background illustration of Yosuga harbor town: paper and letterpress ink print, bold navy outlines, flat colors only 3–4 colors per object, visible paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, lamplight #f2b84b. No text, letters, logo, signs with writing, symbols or numerals. No pixel art, anime shading, realism, or excessive gradients. No recognizable existing characters. Anatomically correct hands, limbs and wings, consistent orientation. Landscape 3:2 game battle background: lighthouse cape on the night before a storm, lighthouse beam, rocky coastline and waves. Keep the bottom 40 percent simple unobstructed ground for enemies. No people.
+
+## 紙魚の体：body-money.png
+
+Use the five attached monster illustrations as style references. Create one square full-body game character concept: an ink monster whose body is stacked coins melting together, with white coin eyes. Clearly a living creature, not an object. Thick navy outlines, flat distinct regions of navy #1f2a44, mist #9fb3bf, paper #f3ead8, a tiny amount of vermilion #c8462f; letterpress ink on textured paper, charmingly eerie. Centered large with margins. Background absolutely flat pure green #00ff00 everywhere, no shadow, ground, texture or pattern. No green in creature. No letters, numbers, symbols, logos, gradients or coin markings.
+
+## 紙魚の体：body-work.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: a squat ink-soaked briefcase creature with an open mouth and its handle forming horns. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-person.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: a very tall thin ink humanoid with a silk top hat and extremely long arms. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-time.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: a dripping pocket-watch ink creature with clock hands as limbs and no numerals. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-place.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: a crooked little house tower ink creature with window eyes and a flag. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-move.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: a traveling ink creature with wheels and wings holding a blank ticket in its mouth. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-food.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: an ink droplet creature overflowing from a soup bowl, with spoon hands. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-doc.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: a curled parchment scroll ink creature with a quill tail, not an envelope. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-goods.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: an ink paper shopping bag creature with a blank price tag. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-tool.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: an ink creature of interlocking gears with screw feet. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-nature.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: an ink cloud creature mixed with leaves and raindrops. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-body.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: an ink creature shaped like a large palm with a bandage. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-mind.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: a floating ink creature shaped like a speech bubble, empty of text. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-number.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: an ink creature made of a ruler and building blocks, ticks but no numbers. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-action.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: a swirling whirlwind ink creature with an arrow-shaped tail. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+## 紙魚の体：body-state.png
+
+Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: an ink star-shaped creature with spiky stars growing from its body. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.

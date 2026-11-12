@@ -17,6 +17,9 @@ OUT = ROOT / 'products' / 'word-guild' / 'art'
 SPRITES = ['tsumugi-normal', 'tsumugi-joy', 'fuurou-normal', 'fuurou-stamp',
            'hatori-normal', 'hatori-smile',
            'shimi', 'keshikasu', 'nijimi', 'hokoridama', 'atenashi', 'oshimi']
+# 紙魚の体（意味の分類16種）
+SPRITES += [f'body-{c}' for c in ('money', 'work', 'person', 'time', 'place', 'move', 'food', 'doc',
+                                    'goods', 'tool', 'nature', 'body', 'mind', 'number', 'action', 'state')]
 WIDE = ['post-office'] + [f'ward-{i}' for i in range(1, 7)]
 TALL = ['open-2', 'open-3']
 
