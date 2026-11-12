@@ -335,3 +335,73 @@ Square 1:1 game map asset. One single building centered large, viewed slightly f
 ナギ船長の住まい。曲線屋根とロープの装飾がある船乗りの家。
 
 共通指示：添付のキービジュアルに合わせた紙と活版インクの版画風。太めの紺線と平塗り。紺 #1f2a44、紙 #f3ead8、朱 #c8462f、霧 #9fb3bf、灯り #f2b84b。正方形に建物を1棟大きく中央配置し、少し斜めから描く。足元に小さな石だたみ。窓は暗く無灯火。人物、文字、数字、記号を入れない。背景は影や模様のない純粋な緑 #00ff00 一色。建物には緑を使わない。
+
+
+## 家：43
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 43: station hotel front desk building, tall narrow mansard roof, arched entrance and blank oval hanging sign.
+
+
+## 家：44
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 44: Mayor Tobe’s residence, stately townhouse with stepped gable roof, bay window and blank shield sign.
+
+
+## 家：45
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 45: Ms. Sora’s hotel, elegant rounded corner building with domed roof and blank fan-shaped sign.
+
+
+## 家：46
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 46: Tsumugi’s post office with upstairs room, red tiled gable, exterior stairs and red postbox.
+
+
+## 家：47
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 47: cape path walkers’ shelter, tiny open-sided stone rest house with hipped roof and blank rectangular sign.
+
+
+## 家：48
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 48: cape lighthouse containing the keeper’s log, white tapered stone tower with dark unlit lantern and conical roof.
+
+
+## 家：49
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 49: lighthouse keeper Shirase’s cottage containing his diary, low stone house with steep red gable roof and chimney.
+
+
+## 家：50
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 50: keeper Shirase’s diary cottage, compact timber cottage with saltbox roof and shuttered round attic window.
+
+
+## 家：51
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 51: keeper Shirase’s diary cottage, small stone cottage with curved roof and enclosed porch.
+
+
+## 家：52
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 52: town hall where Yosuga Port’s unsent letter is kept, modest civic building with square bell turret and broad steps.
+
+
+## 家：53
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 53: Blank & Co. office, narrow coastal business building with flat parapet and blank diamond sign.
+
+
+## 家：54
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 54: town community hall for the people, broad symmetrical building with triangular pediment and blank circular sign.
+
+
+## 家：55
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 55: cape light keeper’s dwelling, sturdy stone cottage with lean-to roof, chimney and coiled rope.
+
+
+## 家：56
+
+Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 56: Mr. Shirase’s lighthouse keeper cottage, asymmetrical cottage with red hipped roof, small porch and stone chimney.
