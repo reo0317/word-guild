@@ -121,3 +121,39 @@ Edit this square game character image: same Hatori postmaster, keep her face, wh
 
 ## 本番：icon.png
 Square game asset. Reference image is definitive style: paper and letterpress ink print, thick navy outlines, flat 3–4 colors per object and paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, light #f2b84b. No text, logo, symbols or numbers. Correct anatomy. App icon: close-up face of Fuurou, small white owl with rounded head and small vermilion feather ornament, with an envelope behind. Flat solid paper #f3ead8 background, no green. Thick outlines, large simple shapes readable at small sizes. Reference: key-a4-1.png.
+
+## 本番：open-2.png
+
+Use the attached key-a4-1.png as the definitive visual style reference. Game background illustration of Yosuga harbor town: paper and letterpress ink print, bold navy outlines, flat colors only 3–4 colors per object, visible paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, lamplight #f2b84b. No text, letters, logo, signs with writing, symbols or numerals. No pixel art, anime shading, realism, or excessive gradients. No recognizable existing characters. Anatomically correct hands, limbs and wings, consistent orientation. Portrait 9:16 opening illustration. A blank white letter lies open on a desk; its disappearing ink has become wisps of mist being drawn out through a window. The paper is completely blank, no letterforms anywhere. Keep the upper third open and uncluttered.
+
+## 本番：open-3.png
+
+Use the attached key-a4-1.png as the definitive visual style reference. Game background illustration of Yosuga harbor town: paper and letterpress ink print, bold navy outlines, flat colors only 3–4 colors per object, visible paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, lamplight #f2b84b. No text, letters, logo, signs with writing, symbols or numerals. No pixel art, anime shading, realism, or excessive gradients. No recognizable existing characters. Anatomically correct hands, limbs and wings, consistent orientation. Portrait 9:16 opening illustration. Across a post office counter, Hatori, an elderly woman postmaster with white hair gathered up and round glasses, extends a postal satchel with a red wax seal. Tsumugi receiving it is visible only as hands and sleeves. Correct natural hands. Keep the upper third open and uncluttered.
+
+## 本番：post-office.png
+
+Use the attached key-a4-1.png as the definitive visual style reference. Game background illustration of Yosuga harbor town: paper and letterpress ink print, bold navy outlines, flat colors only 3–4 colors per object, visible paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, lamplight #f2b84b. No text, letters, logo, signs with writing, symbols or numerals. No pixel art, anime shading, realism, or excessive gradients. No recognizable existing characters. Anatomically correct hands, limbs and wings, consistent orientation. Landscape 3:2 warm post office interior background: wooden sorting shelves, bundles of blank letters, counter, glowing lamp, misty harbor through window. No people.
+
+## 本番：ward-1.png
+
+Use the attached key-a4-1.png as the definitive visual style reference. Game background illustration of Yosuga harbor town: paper and letterpress ink print, bold navy outlines, flat colors only 3–4 colors per object, visible paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, lamplight #f2b84b. No text, letters, logo, signs with writing, symbols or numerals. No pixel art, anime shading, realism, or excessive gradients. No recognizable existing characters. Anatomically correct hands, limbs and wings, consistent orientation. Landscape 3:2 game battle background: morning market on a hill, cloth awnings and baskets of vegetables. Keep the bottom 40 percent simple unobstructed ground or cobblestones for enemies. No people.
+
+## 本番：ward-2.png
+
+Use the attached key-a4-1.png as the definitive visual style reference. Game background illustration of Yosuga harbor town: paper and letterpress ink print, bold navy outlines, flat colors only 3–4 colors per object, visible paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, lamplight #f2b84b. No text, letters, logo, signs with writing, symbols or numerals. No pixel art, anime shading, realism, or excessive gradients. No recognizable existing characters. Anatomically correct hands, limbs and wings, consistent orientation. Landscape 3:2 game battle background: cobblestone shopping street at midday, shop eaves and hanging blank signboards. Keep the bottom 40 percent simple unobstructed cobblestones for enemies. No people.
+
+## 本番：ward-3.png
+
+Use the attached key-a4-1.png as the definitive visual style reference. Game background illustration of Yosuga harbor town: paper and letterpress ink print, bold navy outlines, flat colors only 3–4 colors per object, visible paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, lamplight #f2b84b. No text, letters, logo, signs with writing, symbols or numerals. No pixel art, anime shading, realism, or excessive gradients. No recognizable existing characters. Anatomically correct hands, limbs and wings, consistent orientation. Landscape 3:2 game battle background: harbor warehouse district under overcast skies, wooden crates, crane and moored ship. Keep the bottom 40 percent simple unobstructed ground for enemies. No people.
+
+## 本番：ward-4.png
+
+Use the attached key-a4-1.png as the definitive visual style reference. Game background illustration of Yosuga harbor town: paper and letterpress ink print, bold navy outlines, flat colors only 3–4 colors per object, visible paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, lamplight #f2b84b. No text, letters, logo, signs with writing, symbols or numerals. No pixel art, anime shading, realism, or excessive gradients. No recognizable existing characters. Anatomically correct hands, limbs and wings, consistent orientation. Landscape 3:2 game battle background: town hall clock tower at dusk overlooking a plaza, clock face entirely blank with no numbers or marks. Keep the bottom 40 percent simple unobstructed paving for enemies. No people.
+
+## 本番：ward-5.png
+
+Use the attached key-a4-1.png as the definitive visual style reference. Game background illustration of Yosuga harbor town: paper and letterpress ink print, bold navy outlines, flat colors only 3–4 colors per object, visible paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, lamplight #f2b84b. No text, letters, logo, signs with writing, symbols or numerals. No pixel art, anime shading, realism, or excessive gradients. No recognizable existing characters. Anatomically correct hands, limbs and wings, consistent orientation. Landscape 3:2 game battle background: station-front hotel street at night, station building, illuminated hotel windows, a row of street lamps. Keep the bottom 40 percent simple unobstructed paving for enemies. No people.
+
+## 本番：ward-6.png
+
+Use the attached key-a4-1.png as the definitive visual style reference. Game background illustration of Yosuga harbor town: paper and letterpress ink print, bold navy outlines, flat colors only 3–4 colors per object, visible paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, lamplight #f2b84b. No text, letters, logo, signs with writing, symbols or numerals. No pixel art, anime shading, realism, or excessive gradients. No recognizable existing characters. Anatomically correct hands, limbs and wings, consistent orientation. Landscape 3:2 game battle background: lighthouse cape on the night before a storm, lighthouse beam, rocky coastline and waves. Keep the bottom 40 percent simple unobstructed ground for enemies. No people.
