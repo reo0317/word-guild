@@ -221,3 +221,73 @@ Use the image as a style reference for line weight, paper texture, white eyes an
 ## 紙魚の体：body-state.png
 
 Use the image as a style reference for line weight, paper texture, white eyes and palette, not as the subject. Create a distinct square full-body monster: an ink star-shaped creature with spiky stars growing from its body. It must read as a living ink monster. Thick navy outlines; flat distinct navy #1f2a44, mist #9fb3bf, paper #f3ead8 and a tiny vermilion #c8462f; printed ink on textured paper. Centered with margins. Background absolutely flat pure green #00ff00, no ground or shadows. No green on body, no text, numbers, logos or gradients.
+
+
+## 家：1
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: post office with Tsumugi’s upstairs little room, red tiled gable roof, exterior stairs and red postbox
+
+
+## 家：2
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: hill morning market entrance gate, one roofed gatehouse structure with striped awning and produce baskets
+
+
+## 家：3
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: Riku’s hilltop home, compact timber cottage with asymmetrical steep roof and fishing basket
+
+
+## 家：4
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: grandmother’s tiny house across the bay, low hipped roof, round attic window and potted plants
+
+
+## 家：5
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: post office for Tsumugi, narrow corner tower building with a projecting upper room and mail slot
+
+
+## 家：6
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: Tsumugi’s diary kept in her upstairs post office room, cozy post office building with dormer roof and small balcony
+
+
+## 家：7
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: Stone Street shops and staff, a single stone street merchant guild building with wide arcade and blank oval hanging sign
+
+
+## 家：8
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: Stone Street tailor, narrow two-story shop with mansard roof, fabric rolls and blank shield-shaped sign
+
+
+## 家：9
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: Stone Street pharmacy, one pale masonry shop with stepped gable, bottles and blank circular sign
+
+
+## 家：10
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: Sea Road Books, bookshop with tall gambrel roof, stacked books and blank open-book-shaped sign without markings
+
+
+## 家：11
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: town public notice office for everyone in Yosuga Port, small civic building with columned porch and blank rectangular noticeboard
+
+
+## 家：12
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: Corner Cafe, corner building with curved awning, outdoor empty chair and blank teapot-shaped sign
+
+
+## 家：13
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: Kumo Sweets, confectionery shop with scalloped roof trim, cake display and blank cloud-shaped sign
+
+
+## 家：14
+
+Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: post office for Tsumugi, broad hip roof post office with upper bay window, red mailbox and parcel stack
