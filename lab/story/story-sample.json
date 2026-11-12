@@ -1,0 +1,60 @@
+{"v":1,
+ "letters":[
+  {"shelf":1,"ch":1,"kind":"memo","tone":"gentle","from":"Chief Hatori","to":"Tsumugi",
+   "lines":[
+    {"en":"They {say} the fog eats words, and I {think} you {know} why. It is {time} to {see} for yourself.",
+     "ja":"霧が言葉を食べる、と町の人は言う。わけは君もわかっているだろう。そろそろ自分の目で確かめるときだ。",
+     "ids":["b0001","b0003","b0002","b0004","b0005"]},
+    {"en":"Every {year}, {good} {people} {come} to {work} at this office. Few of them stay.",
+     "ja":"毎年、いい人たちがこの局へ働きに来る。けれど、残る人は少ない。",
+     "ids":["b0008","b0006","b0007","b0009","b0010"]},
+    {"en":"{Use} the {new} bag on your desk, and {look} at each name twice. {Give} each family the words they {want}.",
+     "ja":"机の上の新しいかばんを使い、宛名は二度見ること。どの家にも、待っている言葉を届けなさい。",
+     "ids":["b0011","b0015","b0012","b0014","b0013"]},
+    {"en":"You will {find} your {way} in a {day}. All you {need} is on the {back} of the map.",
+     "ja":"道は一日で覚えられる。必要なことは、地図の裏に全部書いてある。",
+     "ids":["b0017","b0016","b0018","b0019","b0020"]},
+    {"en":"One {last} thing. If a {child} asks what the fog {means}, {tell} the truth. Then {call} me.",
+     "ja":"最後にひとつ。子どもに霧のわけを聞かれたら、本当のことを話しなさい。それから私に電話をくれ。",
+     "ids":["b0022","b0023","b0021","b0024","b0025"]}
+   ]},
+  {"shelf":2,"ch":1,"kind":"sign","from":"The Hill Market","to":"All sellers",
+   "lines":[
+    {"en":"A {change} to market {life}: fog eats printed prices. The gate {man} has chalk to {show} prices at each {place}.",
+     "ja":"朝市のきまりが変わる。霧が印刷の値段を食べてしまうからだ。門の係の人がチョークを持っているので、各自の場所で値段を示すこと。",
+     "ids":["b0029","b0027","b0028","b0026","b0030"]},
+    {"en":"{Write} prices in the {same} clear letters. It may {feel} slow, but {long} lines move faster, and that is {great}.",
+     "ja":"値段はみな同じ、はっきりした字で書くこと。手間に感じても、長い列が早く進む。それが何よりだ。",
+     "ids":["b0033","b0034","b0032","b0031","b0035"]},
+    {"en":"One more {point}: do not {leave} boxes on any {part} of the path. If a stall {number} fades, {try} chalk.",
+     "ja":"もう一点。通路のどこにも箱を置いたままにしないこと。店の番号が薄れたら、チョークを使ってみること。",
+     "ids":["b0040","b0037","b0039","b0038","b0036"]},
+    {"en":"We {meet} at five to {talk}, and the market {starts} at six. The post office will {help} if you {ask}.",
+     "ja":"私たちは5時に集まって話し合い、市は6時に始まる。困ったら郵便局に頼めば、手を貸してくれる。",
+     "ids":["b0043","b0045","b0044","b0041","b0042"]},
+    {"en":"{Late}? There is room by the {school}. {Put} your {old} tags in the gate box before they {become} blank.",
+     "ja":"遅れて来たら、学校のそばに場所がある。古い値札は、白紙になる前に門の箱へ入れること。",
+     "ids":["b0050","b0049","b0046","b0048","b0047"]}
+   ]}
+ ],
+ "variants":[
+  {"shelf":1,"ch":1,"kind":"memo","tone":"story","from":"Chief Hatori","to":"Tsumugi",
+   "lines":[
+    {"en":"Some {say} the fog is a gift. I {think} you will {know} the truth. It is {time} to {see} it.",
+     "ja":"霧は贈りものだ、と言う人もいる。君はいずれ本当のことを知るだろう。自分の目で見るときが来た。",
+     "ids":["b0001","b0003","b0002","b0004","b0005"]},
+    {"en":"Every {year}, {good} {people} {come} to {work} here. Few of them stay through the winter.",
+     "ja":"毎年、いい人たちがここへ働きに来る。冬を越して残る人は少ない。",
+     "ids":["b0008","b0006","b0007","b0009","b0010"]},
+    {"en":"{Use} the {new} bag and {look} at each name. Some will not {want} their words. {Give} them anyway.",
+     "ja":"新しいかばんを使い、宛名をよく見ること。言葉を返されたくない人もいる。それでも届けなさい。",
+     "ids":["b0011","b0015","b0012","b0013","b0014"]},
+    {"en":"With Furo, you will {find} your {way} in a {day}. All you {need} is at the {back} of the counter.",
+     "ja":"フウロウがいれば、一日で道は覚えられる。必要なものは全部、カウンターの奥にある。",
+     "ids":["b0017","b0016","b0018","b0019","b0020"]},
+    {"en":"If a {child} asks what the fog {means}, {tell} the truth. {Last} rule: never {call} me about the bottom drawer.",
+     "ja":"子どもに霧のわけを聞かれたら、本当のことを話しなさい。最後の決まり：一番下の引き出しのことで、私に電話はしないこと。",
+     "ids":["b0023","b0021","b0024","b0022","b0025"]}
+   ]}
+ ],
+ "blank":[{"ch":1,"en":"Words are heavy.","ja":"言葉は重い。"}]}
