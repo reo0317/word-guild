@@ -137,7 +137,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     if (updateReady) return {text: '新しい版があります　', label: '更新', act: 'update'};
     const collected = Object.keys(progress.words).length;
     if (collected >= 100 && today - progress.exportDay >= EXPORT_REMIND_DAYS) {
-      return {text: '進捗を書き出しておこう　', label: '設定へ', act: 'settings'};
+      return {text: '進捗を書き出しておこう　', label: '書き出し', act: 'settings'};
     }
     return null;
   }

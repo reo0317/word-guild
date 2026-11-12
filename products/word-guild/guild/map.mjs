@@ -248,6 +248,7 @@ export function renderMap(view, ctx) {
     el, y: Number(el.dataset.y), lat: Number(el.dataset.lat), shown: true,
     far: el.classList.contains('far'),
     scale: el.classList.contains('gq-bb-ward') ? 0.9 : 1,
+    panel: el.querySelector('.gq-here-panel'),
   }));
   const skyLayers = [...view.querySelectorAll('.gq-sky-art')];
   let Ws = 0, Hs = 0, frame = 0, lastWard = 0;
@@ -313,7 +314,9 @@ export function renderMap(view, ctx) {
       }
       if (!b.shown) { b.el.style.display = ''; b.shown = true; }
       const fade = Math.min(1, Math.max(0, (s - S_MIN) / 0.2)) * (b.far ? 0.55 : 1);
-      b.el.style.transform = `translate3d(${X(b.y, s).toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${(s * b.scale).toFixed(3)})`;
+      const sx = X(b.y, s);
+      if (b.panel) b.panel.className = `gq-here-panel ${sx > Ws / 2 ? 'left' : 'right'}`; // 道の広い側に出す
+      b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${(s * b.scale).toFixed(3)})`;
       b.el.style.opacity = fade.toFixed(2);
       b.el.style.zIndex = String(Math.round(s * 100));
     }

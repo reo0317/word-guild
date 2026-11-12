@@ -137,14 +137,14 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-arena.picking .gq-mon.pickable .gq-mon-body{animation:gq-sway .35s ease-in-out infinite alternate}
 .gq-clues{position:absolute;left:calc(var(--enemy-size)*.6);right:0;bottom:0;height:var(--plate-h);list-style:none;margin:0;padding:0 2px 3px;display:flex;justify-content:center}
 .gq-slot{flex:0 0 33.3%;min-width:0;padding:0 2px;display:flex}.gq-slot.big{flex-basis:66.6%}
-.gq-clue{position:relative;width:100%;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:3px 4px 2px;text-align:center;background:var(--paper-hi);border:2px solid var(--ink);border-top:6px solid var(--pos-o);border-radius:12px 12px 14px 14px;box-shadow:0 2px 0 var(--ink);cursor:default;font-size:12px;line-height:1.2}
+.gq-clue{position:relative;width:100%;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:3px 2px 2px;text-align:center;background:var(--paper-hi);border:2px solid var(--ink);border-top:6px solid var(--pos-o);border-radius:12px 12px 14px 14px;box-shadow:0 2px 0 var(--ink);cursor:default;font-size:12px;line-height:1.2}
 .gq-clue:active{transform:none;box-shadow:0 2px 0 var(--ink)}
 .gq-clue.pos-v{border-top-color:var(--pos-v)}.gq-clue.pos-n{border-top-color:var(--pos-n)}.gq-clue.pos-a{border-top-color:var(--pos-a)}
 .gq-pos{position:absolute;left:-6px;top:-12px;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;font-size:10px;font-weight:900;color:var(--paper-hi);background:var(--pos-o);border:1.5px solid var(--ink)}
 .pos-v .gq-pos{background:var(--pos-v)}.pos-n .gq-pos{background:var(--pos-n)}.pos-a .gq-pos{background:var(--pos-a)}
 .gq-clue-top{display:block;min-width:0;width:100%}
 .gq-clue-main{display:flex;flex-direction:column;align-items:center;min-width:0}
-.gq-clue-main b{font-size:13px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:anywhere}
+.gq-clue-main b{font-size:12px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:anywhere}
 .gq-clue-main small{font-size:10px;color:var(--pos-o);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .gq-spell{letter-spacing:0;font-family:Arial,system-ui,sans-serif;white-space:nowrap}
 .gq-clue-main b.gq-spell{display:block;-webkit-line-clamp:unset;font-size:12px;overflow-wrap:anywhere;white-space:normal}
@@ -156,9 +156,9 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 /* 盤面の左右に、丸いヒントとおしえて */
 .gq-boardrow{flex:1 1 auto;min-height:0;display:flex;align-items:center;justify-content:center;gap:2px}
 .gq-side{flex:0 0 50px;display:flex;align-items:center;justify-content:center}
-.gq-board{--bp:5px;position:relative;flex:1 1 0;min-width:0;align-self:center;max-height:100%;aspect-ratio:7/8.6;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:2px;padding:var(--bp);background:var(--ink);border:2px solid var(--ink);border-radius:10px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;overflow:hidden}
+.gq-board{--bp:5px;position:relative;flex:1 1 0;min-width:0;align-self:center;max-height:100%;aspect-ratio:7/10;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:2px;padding:var(--bp);background:var(--ink);border:2px solid var(--ink);border-radius:10px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;overflow:hidden}
 .gq-cell{position:relative;min-width:0;min-height:0;padding:0;color:var(--ink);background:var(--paper);border:0;border-bottom:3px solid var(--fog);border-radius:6px;box-shadow:none;touch-action:none;transition:background .06s}
-.gq-cell .letter{position:relative;z-index:2;display:block;font:800 clamp(16px,5vw,24px)/1 Arial,system-ui,sans-serif}
+.gq-cell .letter{position:relative;z-index:2;display:block;font:800 clamp(16px,5.4vw,24px)/1 Arial,system-ui,sans-serif}
 .gq-seals{position:absolute;inset:var(--bp);width:calc(100% - var(--bp)*2);height:calc(100% - var(--bp)*2);z-index:1;pointer-events:none;overflow:visible}
 
 /* 丸いボタン・封蝋のボタン・荷札。横長の四角は使わない。 */
