@@ -157,7 +157,7 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-clue.solved{background:var(--lamp-lt)}
 .gq-clue.pickable{cursor:pointer;outline:3px solid var(--lamp);outline-offset:1px;animation:gq-pick .8s ease-in-out infinite alternate}
 .gq-input{height:20px;flex-shrink:0;font-size:13px;font-weight:800;text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;letter-spacing:.05em}.gq-input.is-message{color:var(--pos-o);font-weight:600}
-/* 正方形のマス。余った高さは盤面の上下に配分する。 */
+/* 正方形のマス。配達画面の余った高さは紙魚の帯に渡す。 */
 .gq-boardrow{flex:1 1 auto;min-height:0;display:flex;align-items:center;justify-content:center;gap:2px;container-type:size}
 .gq-board{--bp:5px;position:relative;flex:0 0 auto;width:min(100%,calc(100cqh * 7 / 6));min-width:0;align-self:center;aspect-ratio:7/6;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:2px;padding:var(--bp) calc(var(--bp) + 1px);background:var(--ink);border:2px solid var(--ink);border-radius:10px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;overflow:hidden}
 .gq-cell{position:relative;min-width:0;min-height:0;padding:0;color:var(--ink);background:var(--paper);border:0;border-bottom:3px solid var(--fog);border-radius:6px;box-shadow:none;touch-action:none;transition:background .06s}
@@ -296,14 +296,20 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-help[aria-pressed=true]{background:var(--lamp-lt);outline:2px solid var(--seal);outline-offset:-2px}
 .gq-help:disabled{opacity:.45;cursor:default}
 /* 横の余白も紙魚に渡し、3体を大きく見せる。 */
-#view.gq-quest{--enemy-size:clamp(110px,17dvh,144px)}
+#view.gq-quest{--enemy-size:clamp(110px,24dvh,200px)}
+#view.gq-quest .gq-arena{flex:1 1 0;min-height:120px;height:auto;container-type:size}
+#view.gq-quest .gq-mons{bottom:calc(var(--plate-h) - 10px);padding-top:8px}
+#view.gq-quest .gq-mon-body{flex-shrink:0;width:min(var(--enemy-size),140%,calc(100cqh - var(--plate-h) - 6px))}
+#view.gq-quest .gq-mon.big .gq-mon-body{width:min(var(--enemy-size),90%,calc(100cqh - var(--plate-h) - 6px));transform:none}
+#view.gq-quest .gq-clues{z-index:1}
+#view.gq-quest .gq-boardrow{flex:0 0 auto;width:100%;aspect-ratio:7/6;min-height:252px}
+#view.gq-quest .gq-board{width:100%}
 .gq-mons{left:34px}.gq-clues{left:34px}
 .gq-hero{width:46px;height:58px}.gq-owl{left:20px;width:26px;height:30px}
 .gq-boardrow{min-height:252px}
 .gq-board{min-width:294px}
 @media(max-height:700px){
- #view.gq-quest{--enemy-size:94px;padding:6px;gap:4px}
- #view.gq-quest.gq-tutor{--enemy-size:80px}
+ #view.gq-quest{padding:6px;gap:4px}
  .gq-help{height:60px}.gq-help svg{width:46px;height:42px}
  .gq-coach{line-height:1.2}
 }
