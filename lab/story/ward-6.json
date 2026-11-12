@@ -1,0 +1,43 @@
+{"v":1,
+ "letters":[
+  {"shelf":47,"ch":6,"kind":"sign","from":"Yosuga Port Town Office","to":"Walkers on the cape path",
+   "lines":[
+    {"en":"Old maps were {poorly} printed, so the {pastry} shop owner, once {purser} of the {prestigious} Yosuga Maru, will {personalize} one for you.","ja":"古い地図は印刷がお粗末だった。そこで、かつて格式高いヨスガ丸のパーサーだったペストリー屋の店主が、名前入りの地図を作ってくれる。","ids":["t1003","t1001","t1005","t1004","t1002"]},
+    {"en":"The crew {reunion} will {resume} with a {seafood} party. New lamps won't {revolutionize} the path, but may {reassure} you.","ja":"乗組員の同窓会は、魚介のパーティーで再び始まる。新しい街灯で道が一変するわけではないが、少しは安心させてくれるだろう。","ids":["t1008","t1007","t1010","t1009","t1006"]},
+    {"en":"Red stones {signify} the end, and no one can {sue} the sea. Ships {steer} far out; the {superb} view has visit {slots}.","ja":"赤い石は道の終わりを示す。海を訴えることは、だれにもできない。船は沖へ大きくかじを取る。見事な眺めには、見学の枠がある。","ids":["t1011","t1014","t1013","t1015","t1012"]},
+    {"en":"{Traditionally} the lamp is on by six; no work is {underway}. Nights bring a {violin}, then a {tremendous}, {unpleasant} tearing of paper.","ja":"伝統的に、灯は6時までにともる。だが作業は何も始まっていない。夜にはバイオリンの音が聞こえ、そのあと紙を破る途方もなく不快な音がする。","ids":["t1016","t1018","t1020","t1017","t1019"]},
+    {"en":"A lamp is {advisable}, as no {adapter} works up there. The lighthouse {archive} is {worthwhile}, and the clinic {ward} is open all night.","ja":"明かりを持っていくのが賢明だ。上ではどのアダプターも使えない。灯台のアーカイブは見る価値がある。診療所の病棟は夜通しあいている。","ids":["t1024","t1023","t1025","t1022","t1021"]}
+   ]},
+  {"shelf":48,"ch":6,"kind":"ledger","from":"Mr. Shirase, keeper","to":"Cape Lighthouse log",
+   "lines":[
+    {"en":"The town {auditor} came up in office {attire} and {athletic} shoes. I gave my {assurance}: the {artistic} old lamp works.","ja":"町の監査人が、事務の服装に運動靴で上がってきた。私は確約した。芸術的な古い灯は、ちゃんと働く。","ids":["t1030","t1029","t1028","t1027","t1026"]},
+    {"en":"He talked of {bankruptcy} and will {circulate} a plan to buy oil in {bulk}. He even checked my {butter} to the {centimeter}.","ja":"彼は破産の話をして、油を大口で買う計画を回覧するという。私のバターまで、1センチ単位で確かめていった。","ids":["t1031","t1035","t1032","t1033","t1034"]},
+    {"en":"Metal: no {contraction} in winter; {compliance} with all rules. Room: a {comb}, a {cookbook}, and a bed; I live {comfortably}.","ja":"金属：冬でも縮小なし。すべての決まりを順守。部屋：くし、料理本、ベッド。快適に暮らしている。","ids":["t1039","t1038","t1036","t1040","t1037"]},
+    {"en":"In a fire, {evacuate} by the ladder {embedded} in the tower. At night: a {cushion}, a {dose} of cough medicine, the fog {drum}.","ja":"火事のときは、塔に埋め込んだはしごで避難すること。夜：クッション、せき止めの薬1回分、霧のときに打つ太鼓。","ids":["t1045","t1044","t1041","t1042","t1043"]},
+    {"en":"The {extinguisher} has a {flaw}; {expedite} a new one. Oil prices {fluctuate}, but my {familiarity} with this sea says the lamp stays on.","ja":"消火器に不具合あり。新しいものを急ぐこと。油の値段は変動する。だが、この海になじんだ私には、灯を消してはいけないとわかる。","ids":["t1047","t1049","t1046","t1050","t1048"]}
+   ]},
+  {"shelf":49,"ch":6,"kind":"diary","from":"Mr. Shirase","to":"My diary",
+   "lines":[
+    {"en":"My lamp is more {fluent} than I, even in a {hurricane}. {Honestly}, I {housekeep} its room and think of its {hygiene} before mine.","ja":"私の灯は、ハリケーンの中でさえ、私より流暢に話す。正直に言うと、灯の部屋を清掃管理していて、自分より先に灯の衛生を考えてしまう。","ids":["t1051","t1054","t1052","t1053","t1055"]},
+    {"en":"The lamp is {integral} to the port, and {interactive}: ships call back. No {layoff} will {interfere}; I bring up each {kilogram} of oil.","ja":"灯は港に欠かせない。そして双方向だ。船が光で呼びかけ返してくる。一時解雇の話にじゃまはさせない。油は1キロずつ私が運び上げる。","ids":["t1056","t1057","t1060","t1058","t1059"]},
+    {"en":"Big or {needy}, every ship sees my lamp: its {merit}. I {overpay} at the market, but Mom likes her {lightweight} new {necklace}.","ja":"大きな船にも困窮した船にも、私の灯は見える。それがこの灯の優れた点だ。市場ではつい払い過ぎるが、母は軽い新しいネックレスを気に入ってくれた。","ids":["t1064","t1062","t1065","t1061","t1063"]},
+    {"en":"My doctor {prescribes} medicine; a {pamphlet} plans a {partial} cut to the lamp. We {penalize} ships that {pollute}; who helps the others?","ja":"医者は薬を処方する。冊子は、灯の部分的な削減を予定している。汚染する船は罰するのに、ほかの船はだれが助けるのか。","ids":["t1070","t1066","t1067","t1068","t1069"]},
+    {"en":"Mr. Tobe, {prominent} at the town office, calls the {relocation} of my {residence} {probable}. Heavy {rainfall}; the lamp stays on.","ja":"役場で名の知られたトベ氏は、私の住居の移転は見込みが高いと言う。雨が多い。灯はつけたままだ。","ids":["t1072","t1074","t1075","t1071","t1073"]}
+   ]},
+  {"shelf":50,"ch":6,"kind":"diary","from":"Mr. Shirase","to":"My diary",
+   "lines":[
+    {"en":"A {rider} brought the midnight order; oil {salespeople} no longer come. In {rubber} gloves, I left the {rug} to {retrieve} oil.","ja":"真夜中の命令を、乗り手の使いが届けた。油の販売スタッフはもう来ない。私はゴム手袋をはめ、ラグから立って、油を取り出しに行った。","ids":["t1077","t1080","t1078","t1079","t1076"]},
+    {"en":"The wind changed {sharply}; a ship called on the {stereo}. A keeper has no {similarity} to a {spectator}; ask me {someday}.","ja":"風が急激に変わった。ステレオから船の呼びかけが聞こえた。灯台守と観客とでは、似たところなど何もない。わけは、いつか聞いてくれ。","ids":["t1081","t1085","t1082","t1084","t1083"]},
+    {"en":"The {storeroom} had tables, {tasty} bread, and two {suspicious} empty cans. No one would {subsidize} oil, but tables gave a {terrific} fire.","ja":"物置には、テーブルと、おいしいパンと、なぜか空っぽの缶が2つ。だれも油に助成してくれなかった。だが、テーブルは最高の火になった。","ids":["t1086","t1089","t1088","t1087","t1090"]},
+    {"en":"The {underground} room had {unpaid} oil. {Whoever} reads this: my {volleyball} years helped me bring it up, but a {wheelchair} may follow.","ja":"地下の部屋に、代金未払いの油があった。これを読む人がだれであれ、知ってほしい。バレーボールの日々のおかげで運び上げられた。だが、あとで車いすが要るかもしれない。","ids":["t1091","t1092","t1095","t1093","t1094"]},
+    {"en":"Fire ate my {wool} coat like an {appetizer}. {Anyhow}, I moved it with {accuracy}; the ship turned; by dawn the sea had no {wrinkle}.","ja":"火は私の羊毛の上着を前菜のように食べた。とにかく、私は正確に火を動かした。船は向きを変え、夜明けには海にしわ一つなかった。","ids":["t1096","t1100","t1099","t1098","t1097"]}
+   ]},
+  {"shelf":51,"ch":6,"kind":"diary","from":"Mr. Shirase","to":"My diary",
+   "lines":[
+    {"en":"In the {ballroom}, Mr. Tobe called the cut {beneficial}: an {audition} for mayor. No {arc} of light now; my {backpack} waits.","ja":"宴会場で、トベ氏は削減を有益だと言った。町長になるためのオーディションだ。光の弧はもうない。私のリュックが待っている。","ids":["t1104","t1105","t1102","t1101","t1103"]},
+    {"en":"My {biography} in the paper: lazy. My {broom} and {cheeseburger} stay in the {chilly} tower; my train is {bound} for the city.","ja":"新聞に載った私の伝記は「怠慢」の一語。ほうきとチーズバーガーは肌寒い塔に残し、私は街行きの列車に乗る。","ids":["t1106","t1108","t1109","t1110","t1107"]},
+    {"en":"I worked for a {continental} {consignment} shop, then a {circus}. No {compliment} came; the paper owned the {copyright} to my name.","ja":"大陸の委託販売の店で働き、そのあとサーカスで働いた。褒め言葉は来なかった。私の名前の著作権は、あの新聞が持っていた。","ids":["t1114","t1113","t1111","t1112","t1115"]},
+    {"en":"The {departmental} report followed me to the {countryside} to {devastate} me. On {desperate} nights, I wanted to {demolish} the town office.","ja":"部門の報告書は、私を打ちのめそうと、田園地帯まで追ってきた。必死な夜には、役場を取り壊したいと思った。","ids":["t1118","t1116","t1120","t1119","t1117"]},
+    {"en":"I tore its {diagnostic} {diagram}; its words were hard as a {diamond}. A silver bug came to {disable} each word that {disgusted} me.","ja":"報告書の診断の図表を破いた。その言葉は、ダイヤモンドのように硬かった。銀色の虫がやって来て、私をうんざりさせる言葉を一つずつ無効にしていった。","ids":["t1121","t1122","t1123","t1124","t1125"]}
+   ]}
+ ]}
