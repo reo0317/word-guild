@@ -71,8 +71,8 @@ export function charaDefs(base = '') {
     }
   }
   const nightTone = {dark: NIGHT.dark, mid: NIGHT.mid, tint: NIGHT.tint};
-  parts.push(toneFilter('cg-t-odd', nightTone), accentFilter('cg-a-odd', NIGHT.accent),
-    lineFilter('cg-l-odd', NIGHT.dark, 3), lineFilter('cg-p-odd', NIGHT.dark, 5));
+  parts.push(toneFilter('cg-t-rare', nightTone), accentFilter('cg-a-rare', NIGHT.accent),
+    lineFilter('cg-l-rare', NIGHT.dark, 3), lineFilter('cg-p-rare', NIGHT.dark, 5));
   parts.push(`<filter id="cg-shadow" ${FX}><feColorMatrix type="matrix" values="0 0 0 0 0.38  0 0 0 0 0.36  0 0 0 0 0.46  0 0 0 0.5 0"/></filter>`);
   parts.push(`<filter id="cg-white" ${FX}><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0"/></filter>`);
   // 模様と網点は、体の形でくりぬく
@@ -144,11 +144,11 @@ export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = tr
   const pose = inner => `<g transform="translate(256 490) rotate(${spec.tilt}) scale(${spec.scale}) translate(-256 -490)"><g${spec.flip ? ' transform="translate(512 0) scale(-1 1)"' : ''}>${inner}</g></g>`;
   if (state === 'shadow') return `${open}${pose(img('cg-shadow'))}</svg>`;
 
-  const odd = spec.kind === 'odd';
+  const rare = spec.kind === 'rare';
   const proof = state === 'proof';
   const ink = spec.ink % 3;
-  const p = odd ? {...NIGHT} : palette(w, ink);
-  const suffix = odd ? 'odd' : `${w}-${ink}`;
+  const p = rare ? {...NIGHT} : palette(w, ink);
+  const suffix = rare ? 'rare' : `${w}-${ink}`;
   const mono = {l: p.dark, a: PAPER, b: PAPER, c: PAPER};
   const props = {l: p.dark, a: p.accent, b: p.tint, c: PAPER};
   let body;
@@ -167,7 +167,7 @@ export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = tr
     over += `<rect width="512" height="512" fill="url(#cg-ht)" mask="${mask}" opacity="0.28"/>`;
   }
   let deco = '';
-  if (odd) deco += SPARK(70, 90, 1.1, NIGHT.tint) + SPARK(450, 120, 0.8, NIGHT.tint) + SPARK(110, 400, 0.7, NIGHT.tint) + SPARK(420, 60, 0.55, NIGHT.tint);
+  if (rare) deco += SPARK(70, 90, 1.1, NIGHT.tint) + SPARK(450, 120, 0.8, NIGHT.tint) + SPARK(110, 400, 0.7, NIGHT.tint) + SPARK(420, 60, 0.55, NIGHT.tint);
   if (state === 'gold') deco += SPARK(60, 440, 0.9, '#f0c23c') + SPARK(455, 90, 0.7, '#f0c23c');
   return `${open}${pose(body + over)}${propSvg(spec, proof ? mono : props)}${deco}</svg>`;
 }
@@ -177,8 +177,7 @@ export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = tr
 // 影のときは語と訳を「？」にする。大物（kind 'big'）は横2枚ぶん（class "big"）。
 export function stampHtml(word, spec, {state = 'print', ward = word.ch || 1, base = '', size = 'sm', unify = true} = {}) {
   const shadow = state === 'shadow';
-  const classes = ['stamp', `s-${state}`, size === 'lg' ? 'lg' : '', spec.kind === 'big' ? 'big' : ''].filter(Boolean).join(' ');
-  const oddMark = spec.kind === 'odd' ? `<i class="odd"${shadow ? ' style="color:#8c8672;text-shadow:none"' : ''}>✦</i>` : '';
+  const classes = ['stamp', `s-${state}`, size === 'lg' ? 'lg' : '', spec.kind === 'big' ? 'big' : '', spec.kind === 'rare' ? 'rare' : ''].filter(Boolean).join(' ');
   const label = shadow ? '？' : esc(word.w);
-  return `<button class="${classes}" data-id="${esc(word.id)}" aria-label="${label}"><div class="in"><span class="val">${word.w.replace(/[^a-zA-Z]/g, '').length}</span>${oddMark}<div class="pic">${charaSvg(spec, {state, ward, base, unify})}</div><div class="lbl">${label}</div>${size === 'lg' ? `<div class="ja">${shadow ? '？' : esc(word.ja)}</div>` : ''}</div></button>`;
+  return `<button class="${classes}" data-id="${esc(word.id)}" aria-label="${label}"><div class="in"><span class="val">${word.w.replace(/[^a-zA-Z]/g, '').length}</span><div class="pic">${charaSvg(spec, {state, ward, base, unify})}</div><div class="lbl">${label}</div>${size === 'lg' ? `<div class="ja">${shadow ? '？' : esc(word.ja)}</div>` : ''}</div></button>`;
 }

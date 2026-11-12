@@ -52,11 +52,11 @@ export function buildMap(words, progress, today) {
 // 同じ盤面に並ぶ紙魚の見分け。種族・区・インクがすべて同じ組ができたら、あとの方のインクを
 // まだ使っていないものへ替える（インクは区ごとに3色なので、1盤面の3体までは必ず分けられる）。
 // specs は盤面の順の紙魚の設計値、wards は同じ順の区の番号。入力は変えず、新しい配列を返す。
-// 変わり種（夜色）は、もともと他と見分けがつくので数えない。
+// まれびと（夜色）は、もともと他と見分けがつくので数えない。
 export function separateSpecs(specs, wards = [], inks = 3) {
   const used = new Set();
   return specs.map((spec, i) => {
-    if (spec.kind === 'odd') return spec;
+    if (spec.kind === 'rare') return spec;
     const key = ink => [spec.species, wards[i] ?? 0, ink].join('/');
     let next = spec;
     if (used.has(key(spec.ink % inks))) {

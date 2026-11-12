@@ -37,7 +37,6 @@
 .stamp .lbl{font:700 10px/1.2 system-ui;letter-spacing:-.2px;color:var(--ink);white-space:nowrap;overflow:hidden}
 .stamp.long .lbl{font-size:8.5px;letter-spacing:-.4px}
 .stamp .ja{font-size:9px;line-height:1.2;color:var(--sub);white-space:nowrap;overflow:hidden}
-.stamp .odd{position:absolute;right:3px;top:1px;font-size:11px;font-style:normal;color:#e7b22d;text-shadow:0 0 2px #1d2060,0 0 2px #1d2060;z-index:2}
 .stamp.s-shadow .in{background:#e2d8c0}
 .stamp.s-shadow{--fr:#d8ceb6;--ln:#9a937f}
 .stamp.s-shadow .lbl{color:#8c8672}

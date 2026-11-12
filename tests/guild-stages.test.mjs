@@ -87,10 +87,10 @@ test('同じ盤面の紙魚：種族と区が同じならインクを分ける�
   assert.equal(out[0].ink, 1);
   assert.deepEqual(out.map(s => s.pattern), [0, 1, 2]);
   assert.equal(same(0).ink, 1); // 入力は変えない
-  // 区が違う・種族が違う・変わり種は、そのまま
+  // 区が違う・種族が違う・まれびとは、そのまま
   assert.deepEqual(separateSpecs([same(0), same(1)], [1, 2]).map(s => s.ink), [1, 1]);
   assert.deepEqual(separateSpecs([same(0), {...same(1), species: 'work'}], [1, 1]).map(s => s.ink), [1, 1]);
-  assert.deepEqual(separateSpecs([{...same(0), kind: 'odd'}, same(1)], [1, 1]).map(s => s.ink), [1, 1]);
+  assert.deepEqual(separateSpecs([{...same(0), kind: 'rare'}, same(1)], [1, 1]).map(s => s.ink), [1, 1]);
   assert.deepEqual(separateSpecs([], []), []);
 });
 

@@ -58,7 +58,6 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 :is(.gq-arena,.gq-stamps) .stamp .pic svg{position:absolute;inset:0;width:100%;height:100%}
 :is(.gq-arena,.gq-stamps) .stamp .val{position:absolute;left:3px;top:2px;font:700 9px/1 system-ui;color:var(--ln);z-index:2}
 :is(.gq-arena,.gq-stamps) .stamp .lbl{font:700 9px/1.2 Arial,system-ui,sans-serif;color:var(--ink);white-space:nowrap;overflow:hidden}
-:is(.gq-arena,.gq-stamps) .stamp .odd{position:absolute;right:3px;top:1px;font-size:10px;color:#e7b22d;text-shadow:0 0 2px #1d2060;z-index:2}
 :is(.gq-arena,.gq-stamps) .stamp.s-shadow .in{background:#e2d8c0}
 :is(.gq-arena,.gq-stamps) .stamp.s-shadow{--fr:#d8ceb6;--ln:#9a937f}
 :is(.gq-arena,.gq-stamps) .stamp.s-gold::before{background:linear-gradient(135deg,#f3d366,#c9961c 55%,#f0cf5c)}
@@ -205,7 +204,7 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-stamp-cell .mk.up{background:var(--lamp);color:var(--ink)}.gq-stamp-cell .mk.gold{background:#f0c23c;color:var(--ink)}
 .gq-stamps.mini{grid-template-columns:repeat(12,minmax(0,1fr));gap:2px}
 .gq-stamps.mini .stamp{padding:3px}.gq-stamps.mini .stamp .in{padding:1px}
-.gq-stamps.mini .stamp .lbl,.gq-stamps.mini .stamp .val,.gq-stamps.mini .stamp .odd{display:none}
+.gq-stamps.mini .stamp .lbl,.gq-stamps.mini .stamp .val{display:none}
 .gq-stamps.mini .gq-stamp-cell.wide{grid-column:span 1}
 .gq-stamps.mini .stamp.big .pic{aspect-ratio:1}.gq-stamps.mini .stamp.big .pic svg{left:0;width:100%}
 .gq-stamps.mini .gq-stamp-cell .mk{min-width:11px;height:11px;padding:0 2px;top:-4px;right:-3px;font-size:7px;line-height:8px}
@@ -317,13 +316,13 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
  .gq-help{height:60px}.gq-help svg{width:46px;height:42px}
  .gq-coach{line-height:1.2}
 }
-/* 変わり種は夜空と金箔の額。切手帳・結果・拡大で共用。 */
-.stamp.stamp:has(.odd)::before{background:linear-gradient(135deg,#f6dc8c,#ac7d28 50%,#f6dc8c)}
-.stamp.stamp:has(.odd) .in{background:radial-gradient(circle at 18% 24%,#f6dc8c 0 1px,transparent 1.5px),radial-gradient(circle at 82% 62%,#f6dc8c 0 1px,transparent 1.5px),linear-gradient(145deg,#263c65,#111b36);outline:1px solid #edcd76;box-shadow:inset 0 0 0 3px #17223d,inset 0 0 0 4px #b58a3e}
-.stamp.stamp:has(.odd) .lbl,.stamp.stamp:has(.odd) .ja,.stamp.stamp:has(.odd) .val{color:#f6dc8c}
+/* まれびとは夜空と金箔の額。切手帳・結果・拡大で共用。 */
+.stamp.stamp.rare::before{background:linear-gradient(135deg,#f6dc8c,#ac7d28 50%,#f6dc8c)}
+.stamp.stamp.rare .in{background:radial-gradient(circle at 18% 24%,#f6dc8c 0 1px,transparent 1.5px),radial-gradient(circle at 82% 62%,#f6dc8c 0 1px,transparent 1.5px),linear-gradient(145deg,#263c65,#111b36);outline:1px solid #edcd76;box-shadow:inset 0 0 0 3px #17223d,inset 0 0 0 4px #b58a3e}
+.stamp.stamp.rare .lbl,.stamp.stamp.rare .ja,.stamp.stamp.rare .val{color:#f6dc8c}
 
 /* 月の円は SVG の背面。夜空とインクの輪郭をともに残す。 */
-.stamp.stamp:has(.odd) .pic::before{content:"";position:absolute;width:82%;aspect-ratio:1;left:9%;top:9%;border-radius:50%;background:radial-gradient(circle at 36% 30%,#fff9e8,#efda9b 65%,#b9914b);border:1px solid #fff3ce;box-shadow:0 0 10px #f3db9a55}
-.stamp.stamp.big:has(.odd) .pic::before{width:41%;left:29.5%}
+.stamp.stamp.rare .pic::before{content:"";position:absolute;width:82%;aspect-ratio:1;left:9%;top:9%;border-radius:50%;background:radial-gradient(circle at 36% 30%,#fff9e8,#efda9b 65%,#b9914b);border:1px solid #fff3ce;box-shadow:0 0 10px #f3db9a55}
+.stamp.stamp.big.rare .pic::before{width:41%;left:29.5%}
 
 @media(prefers-reduced-motion:reduce){.gq-mons.arriving .gq-mon-body,.gq-mons.arriving::after{animation:none}.gq-mons.arriving::after{display:none}}

@@ -60,7 +60,7 @@ export function charaSpec(word, tag = '') {
 const keyOf = spec => [spec.species, spec.prop, spec.ink, spec.pattern].join('/');
 
 // 同じページ（25語）で、種族・持ち物・インク・模様がすべて同じ組を作らない。
-// 重なったら、その語の乱数で持ち物・インク・模様を振り直す。1ページに1体だけ変わり種（夜色）にする。
+// 重なったら、その語の乱数で持ち物・インク・模様を振り直す。
 export function pageSpecs(words, tags = []) {
   const specs = words.map((word, i) => charaSpec(word, tags[i] ?? ''));
   const seen = new Set();
@@ -76,11 +76,6 @@ export function pageSpecs(words, tags = []) {
     }
     seen.add(keyOf(spec));
   });
-  const candidates = specs.map((spec, i) => i).filter(i => specs[i].kind === 'normal');
-  if (candidates.length) {
-    const at = candidates[hash('odd:' + words.map(word => word.id).join(',')) % candidates.length];
-    specs[at].kind = 'odd';
-  }
   return specs;
 }
 

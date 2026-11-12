@@ -70,7 +70,7 @@ test('持ち物は分類の小物と重ならない', () => {
   }
 });
 
-test('ページ（25語）の中で、種族・持ち物・インク・模様の組が重ならず、変わり種は1体だけ', () => {
+test('ページ（25語）の中で、種族・持ち物・インク・模様の組が重ならず、1,400語に odd と rare がない', () => {
   let pages = 0;
   for (let start = 0; start + 25 <= words.length; start += 25) {
     const page = words.slice(start, start + 25);
@@ -78,7 +78,7 @@ test('ページ（25語）の中で、種族・持ち物・インク・模様の
     assert.deepEqual(specs, pageSpecs(page, page.map(tagOf)));
     const keys = specs.map(spec => [spec.species, spec.prop, spec.ink, spec.pattern].join('/'));
     assert.equal(new Set(keys).size, 25, `ページ ${start / 25 + 1}`);
-    assert.equal(specs.filter(spec => spec.kind === 'odd').length, 1);
+    assert.ok(specs.every(spec => ['normal', 'big'].includes(spec.kind)));
     pages += 1;
   }
   assert.equal(pages, 56);
@@ -109,13 +109,15 @@ test('SVG：共有定義は1回、紙魚は状態ごとに作れて、目を重�
     assert.ok(!svg.includes('<circle') || state !== 'shadow');
   }
   assert.ok(!charaSvg(spec, {state: 'print'}).includes('stroke-width="5"/><circle'), '目の円を描かない');
-  assert.ok(charaSvg({...spec, kind: 'odd'}, {state: 'print'}).includes('cg-t-odd'));
+  assert.ok(charaSvg({...spec, kind: 'rare'}, {state: 'print'}).includes('cg-t-rare'));
+  assert.ok(stampHtml(word, {...spec, kind: 'rare'}, {state: 'print'}).includes(' rare\"'));
+  assert.ok(!stampHtml(word, {...spec, kind: 'rare'}, {state: 'shadow'}).includes('✦'));
   const html = stampHtml(word, spec, {state: 'shadow'});
   assert.ok(html.includes('？') && !html.includes(`>${word.w}<`));
   assert.ok(stampHtml(word, spec, {state: 'print', size: 'lg'}).includes(word.ja));
 });
 
-test('変わり種の仮刷りが参照するフィルターが共有定義にある', async () => {
+test('まれびとの仮刷りが参照するフィルターが共有定義にある', async () => {
   const {charaDefs} = await import('../products/word-guild/guild/chara-svg.mjs');
-  assert.ok(charaDefs().includes('id="cg-p-odd"'));
+  assert.ok(charaDefs().includes('id="cg-p-rare"'));
 });
