@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>切手帳の確認</title>
+<link rel="stylesheet" href="../products/word-guild/style.css"></head>
+<body><main><section id="view" aria-label="ゲーム画面"></section><div id="status" role="status"></div></main>
+<script type="module">
+// 確認用。進捗のある保存データを作り、切手帳と設定を開く。#album / #settings / #album-3（街灯3から）/ #empty（進捗なし）
+import {openAlbum} from '../products/word-guild/guild/album.mjs';
+import {openSettings} from '../products/word-guild/guild/settings.mjs';
+import {emptyProgress, loadProgress, saveProgress} from '../products/word-guild/guild/store.mjs';
+
+const words = await (await fetch('../products/word-guild/data/words.json')).json();
+const view = document.getElementById('view');
+const storage = window.localStorage;
+const hash = location.hash.slice(1);
+if (!storage.getItem('wordGuild.progress.v1') || hash === 'reset') {
+  const p = emptyProgress();
+  words.forEach((w, i) => {
+    const page = Math.floor(i / 25);
+    if (page > 9) return;
+    // ページ0は全部金、1は本刷り以上（完）、2は18枚、3は少し、4以降は一部
+    const box = page === 0 ? 5 : page === 1 ? 3 + (i % 3 === 0 ? 2 : 0) : page === 2 ? (i % 25 < 18 ? 1 + (i % 5) : 0) : (i % 25 < 8 ? 1 + (i % 4) : 0);
+    if (box) p.words[w.id] = {box: Math.min(5, box), due: 1, seen: 1};
+  });
+  p.quests = 14; p.streak = {count: 3, last: 1, best: 4}; p.gates = [1];
+  saveProgress(storage, p);
+}
+const progress = loadProgress(storage).progress;
+if (hash === 'empty') { Object.assign(progress, emptyProgress()); }
+const spoken = [];
+window.__spoken = spoken;
+const deps = {words, progress, storage, today: 20000, speak: t => spoken.push(t), music: {setEnabled(on) { window.__sound = on; }},
+  back() { view.className = ''; view.innerHTML = '<p>戻りました</p><button id="go-a">切手帳</button> <button id="go-s">設定</button>';
+    document.getElementById('go-a').onclick = () => openAlbum(view, deps); document.getElementById('go-s').onclick = () => openSettings(view, deps); }};
+window.__deps = deps;
+if (hash.startsWith('settings')) openSettings(view, deps);
+else openAlbum(view, {...deps, shelf: Number(hash.split('-')[1]) || undefined});
+</script></body></html>

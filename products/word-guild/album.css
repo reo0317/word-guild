@@ -1,0 +1,89 @@
+/* 切手帳と設定の画面。album.mjs / settings.mjs が <link> で読み込む。色は style.css の変数を使う。 */
+.gq-album,.gq-settings{--sub:#6b6657;gap:8px}
+.gq-album{overflow:hidden}
+.gq-album-top{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-shrink:0;font-size:13px}
+.gq-album-top b{font-size:17px;color:var(--seal)}
+.gq-album-total{flex:1;text-align:center}
+.gq-album-nav{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.gq-album-nav button{width:48px;min-height:44px;font-size:24px;line-height:1;padding:0}
+.gq-album-nav button:disabled{opacity:.35;cursor:default}
+.gq-album-title{flex:1;display:grid;justify-items:center;line-height:1.25;font-family:var(--serif)}
+.gq-album-title small{font-size:11px;color:var(--sub);font-weight:700}
+.gq-album-title b{font-size:20px;letter-spacing:.1em}
+.gq-album-title span{font-size:11px;color:var(--sub)}
+.gq-album-body{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:6px 4px 10px;border:2px solid var(--ink);border-radius:10px;background:var(--paper-hi,#fbf6ea)}
+.gq-album-body.lit-page{background:var(--lamp-lt,#fbe6b4)}
+.gq-album-body.gold-page{background:linear-gradient(135deg,#f6dd8a,#e4b948 55%,#f3d56e);border-color:#8a6410}
+.gq-page-count{text-align:center;font-size:13px;margin:0 0 6px}
+.gq-page-count b{font-size:18px;font-family:var(--serif)}
+.gq-seal{display:inline-block;margin-left:8px;padding:1px 8px;border:2px solid var(--seal);border-radius:50%;color:var(--seal);font-weight:900;font-size:13px;transform:rotate(-8deg)}
+.gq-seal.gold{border-color:#8a6410;color:#8a6410}
+.gq-sheet{display:grid;grid-auto-flow:dense;grid-template-columns:repeat(5,1fr);gap:5px;align-items:start}
+.gq-odd{margin:8px 0 0;text-align:center;font-size:12px;color:var(--sub)}
+.gq-odd .text-button{font-size:13px;font-weight:900;color:var(--ink)}
+.gq-album-gate,.gq-ward-gate{display:flex;justify-content:center;margin-bottom:8px}
+.gq-album-gate .stamp{width:60%}.gq-ward-gate .stamp{width:40%}
+
+/* 切手の枠。目打ちは外側の層の穴、中身は紙色の内側。 */
+.stamp{position:relative;padding:5px;filter:drop-shadow(0 1px 1px #0003);--fr:var(--paper);--ln:var(--ink);border:0;border-radius:0;background:none;box-shadow:none;font:inherit;color:inherit;text-align:center;cursor:pointer;width:100%;min-width:0}
+.stamp:active{transform:none;box-shadow:none}
+.stamp::before{content:"";position:absolute;inset:0;background:var(--fr);-webkit-mask:radial-gradient(circle 3px at 0 0,#0000 97%,#000) 0 0/10px 10px round;mask:radial-gradient(circle 3px at 0 0,#0000 97%,#000) 0 0/10px 10px round;-webkit-mask-repeat:round;mask-repeat:round}
+.stamp .in{position:relative;background:var(--paper);outline:1px solid var(--ln);outline-offset:-2px;padding:3px 2px 2px;overflow:hidden}
+.stamp .pic{position:relative;aspect-ratio:1/1}
+.stamp .pic svg{position:absolute;inset:0;width:100%;height:100%}
+.stamp .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stamp .val{position:absolute;left:4px;top:2px;font:700 10px/1 system-ui;color:var(--ln);z-index:2}
+.stamp .lbl{font:700 10px/1.2 system-ui;letter-spacing:-.2px;color:var(--ink);white-space:nowrap;overflow:hidden}
+.stamp.long .lbl{font-size:8.5px;letter-spacing:-.4px}
+.stamp .ja{font-size:9px;line-height:1.2;color:var(--sub);white-space:nowrap;overflow:hidden}
+.stamp .odd{position:absolute;right:3px;top:1px;font-size:11px;font-style:normal;color:#e7b22d;text-shadow:0 0 2px #1d2060,0 0 2px #1d2060;z-index:2}
+.stamp.s-shadow .in{background:#e2d8c0}
+.stamp.s-shadow{--fr:#d8ceb6;--ln:#9a937f}
+.stamp.s-shadow .lbl{color:#8c8672}
+.stamp.s-proof{--fr:#efe4cb}
+.stamp.s-gold{--ln:#b98512}
+.stamp.s-gold::before{background:linear-gradient(135deg,#f3d366,#c9961c 55%,#f0cf5c)}
+.stamp .pm{position:absolute;right:-2px;bottom:24%;width:40%;opacity:.5;z-index:3;pointer-events:none;transform:rotate(-14deg)}
+.stamp.big{grid-column:span 2}
+.stamp.big .pic{aspect-ratio:2/1}
+.stamp.big .pic svg{left:25%;width:50%}
+.stamp.memorial{cursor:default}
+.stamp.memorial .pic{aspect-ratio:2/1;background:#e2d8c0}
+.stamp.lg{width:auto}.stamp.lg .lbl{font-size:13px}.stamp.lg .ja{font-size:11px}.stamp.lg .val{font-size:13px;top:4px;left:6px}
+
+/* 目次 */
+.gq-ward{margin-bottom:12px}
+.gq-ward h3{margin:0 0 6px;font-family:var(--serif);font-size:15px;display:flex;justify-content:space-between;align-items:baseline}
+.gq-ward h3 small{font-size:11px;color:var(--sub)}
+.gq-lampgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.gq-lampcell{display:grid;gap:1px;padding:6px 2px;min-height:44px;background:var(--fog-lt);border-color:var(--fog);font-size:11px}
+.gq-lampcell b{font-size:15px}.gq-lampcell span{font-size:10px;color:var(--sub);font-weight:700}
+.gq-lampcell.lit{background:var(--lamp-lt);border-color:var(--lamp)}
+.gq-lampcell.gold{background:var(--lamp);border-color:var(--ink)}
+
+/* 拡大 */
+.gq-zoom{position:absolute;inset:0;z-index:20;display:grid;place-items:center;padding:12px;background:#1f2a44cc;overflow:auto}
+.gq-zoom-card{width:100%;max-width:340px;display:grid;gap:6px;justify-items:center;text-align:center;padding:14px 14px 12px;background:var(--paper);border:2px solid var(--ink);border-radius:12px;box-shadow:0 8px 30px #0006}
+.gq-zoom-stamp{width:min(62%,200px);pointer-events:none}
+.gq-zoom-stamp .stamp.big{width:100%;grid-column:auto}.gq-zoom-stamp .stamp:has(.pic):not(.big){width:100%}
+.gq-zoom-state{margin:0;font-size:11px;color:var(--sub);letter-spacing:.1em}
+.gq-zoom-card h2{margin:0;font-family:var(--serif);font-size:28px;letter-spacing:.06em;overflow-wrap:anywhere}
+.gq-zoom-ja{margin:0;font-size:16px;font-weight:700}.gq-zoom-ja small{font-size:11px;color:var(--sub)}
+.gq-zoom .gq-stars{color:var(--lamp);font-size:18px;letter-spacing:.1em;text-shadow:0 0 1px var(--ink)}
+.gq-ex{margin:0;font-size:14px;line-height:1.5;font-weight:700}.gq-ex small{display:block;font-size:12px;color:var(--sub);font-weight:500}
+.gq-zoom-actions{display:flex;gap:10px;margin-top:4px}.gq-zoom-actions button{min-width:96px;min-height:44px}
+
+/* 設定 */
+.gq-settings{overflow:auto}
+.gq-settings section{display:grid;gap:6px;padding:10px;border:2px solid var(--ink);border-radius:10px;background:var(--paper-hi,#fbf6ea);flex-shrink:0}
+.gq-settings h3{margin:0;font-family:var(--serif);font-size:15px}
+.gq-settings p{margin:0;font-size:12px;line-height:1.6}
+.gq-settings .note{color:var(--sub)}
+.gq-settings textarea{width:100%;min-height:84px;resize:vertical;font:12px/1.4 ui-monospace,monospace;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:8px;padding:6px;word-break:break-all;box-sizing:border-box}
+.gq-settings .row{display:flex;gap:8px;flex-wrap:wrap}.gq-settings .row button{min-height:44px;padding:8px 14px}
+.gq-settings button:disabled{opacity:.4}
+.gq-settings .msg{font-weight:700}.gq-settings .msg.err{color:var(--seal)}
+.gq-compare{width:100%;border-collapse:collapse;font-size:12px}
+.gq-compare th,.gq-compare td{border:1px solid var(--fog);padding:4px 6px;text-align:center}
+.gq-switch{display:flex;justify-content:space-between;align-items:center;gap:8px}.gq-switch button{min-width:96px;min-height:44px}
+.gq-album [hidden],.gq-settings [hidden]{display:none!important}
