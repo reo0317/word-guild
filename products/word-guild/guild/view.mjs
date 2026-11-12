@@ -13,7 +13,7 @@ import {pageSpecs, stampState} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {rollDaily} from './daily.mjs';
 import {onUpdateReady, applyUpdate} from './pwa.mjs';
-import {esc, speak, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, icon,
+import {esc, speak, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, helpButton, icon,
   ensureLetterCss, letterHtml, lineHtml, lineBody, lampRing, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
 import {showStampZoom, ensureCss as ensureAlbumCss} from './album.mjs';
 import {renderMap, dailyBrief} from './map.mjs';
@@ -392,8 +392,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         <div class="gq-board entering" id="gq-board" aria-label="7列6行の盤面">${quest.letters.map(cellMarkup).join('')}<svg class="gq-seals" id="gq-seals" aria-hidden="true"></svg></div>
       </div>
       <div class="gq-help-actions" aria-label="配達のお手伝い">
-        ${waxButton({label: 'ヒント', id: 'gq-hint', cls: 'gq-help'})}
-        ${waxButton({label: 'おしえて', id: 'gq-teach', cls: 'gq-help'})}
+        ${helpButton('hint')}
+        ${helpButton('teach')}
       </div>`;
     $('#gq-label').textContent = topLabel();
     $('#gq-quit').onclick = quitQuest;

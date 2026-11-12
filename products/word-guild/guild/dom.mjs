@@ -188,3 +188,12 @@ export function envelopeScene(furoSrc) {
     <circle class="sc-seal" cx="170" cy="144" r="13" fill="var(--seal)" stroke="var(--ink)" stroke-width="2.5"/></g></svg>
     <img class="furo" src="${esc(furoSrc)}" alt=""></div>`;
 }
+
+// お手伝いは、真鍮の虫めがねと革表紙の開いた本。
+export function helpButton(kind) {
+  const hint = kind === 'hint';
+  const art = hint
+    ? '<path class="help-material" d="M57 49l24 21q7 8-1 13t-13-2L47 57z"/><circle class="help-material" cx="37" cy="34" r="27"/><circle cx="37" cy="34" r="19" fill="var(--paper-hi)"/><path d="M24 32q0-12 13-12M29 43l5 3" fill="none"/>'
+    : '<path class="help-material" d="M5 17q21-9 40 3 19-12 40-3v58q-23-7-40 5-17-12-40-5z"/><path d="M12 23q17-5 33 4 16-9 33-4v43q-18-4-33 5-15-9-33-5z" fill="var(--paper-hi)"/><path d="M45 27v44M20 34l17 3m-17 8 17 3m16-11 17-3m-17 14 17-3" fill="none"/>';
+  return `<button type="button" class="gq-help help-${kind}" id="gq-${kind}" aria-pressed="false"><svg viewBox="0 0 90 90" aria-hidden="true" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">${art}</svg><span>${hint ? 'ヒント' : 'おしえて'}</span></button>`;
+}

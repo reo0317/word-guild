@@ -19,7 +19,7 @@ import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {letterView} from './story.mjs';
 import {CHAPTER_NAMES} from './chapters.mjs';
 import {emptyProgress} from './store.mjs';
-import {esc, speak as defaultSpeak, starsMarkup, fab, icon, ensureLetterCss, letterHtml, shadowLinesOf, wordLineHtml, handleLetterClick} from './dom.mjs';
+import {esc, speak as defaultSpeak, starsMarkup, fab, icon, ensureDefs, ensureLetterCss, letterHtml, shadowLinesOf, wordLineHtml, handleLetterClick} from './dom.mjs';
 import {todayNumber} from './srs.mjs';
 
 const POS = {v: '動詞', n: '名詞', a: '形容詞', o: 'その他'};
@@ -109,6 +109,8 @@ function stampWithMark(word, spec, state, base, size) {
 // opts: {word, spec, state, box, base, say, met（影でも語を見せるとき true）, lineHtml（その語を含む行。無ければ出さない）, onClose}
 export function showStampZoom(host, {word, spec, state, box = 0, base = BASE, say = defaultSpeak, met = state !== 'shadow', lineHtml = '', onClose}) {
   ensureCss();
+  // 画面内に同じ ID の defs を置くと、閉じた後も Safari が削除済み定義を参照する。
+  ensureDefs(charaDefs(base));
   const ex = met && word.ex ? `<p class="gq-ex">${esc(word.ex)}<small>${esc(word.exJa ?? '')}</small></p>` : '';
   const overlay = document.createElement('div');
   overlay.className = 'gq-zoom';
@@ -161,6 +163,8 @@ async function load(deps) {
 
 export function openAlbum(container, deps = {}) {
   ensureCss();
+  // 画面内に同じ ID の defs を置くと、閉じた後も Safari が削除済み定義を参照する。
+  ensureDefs(charaDefs(deps.base ?? BASE));
   let closed = false;
   const cleanups = [];
   const handle = {close() {
@@ -225,7 +229,7 @@ export function openAlbum(container, deps = {}) {
       };
       const paper = letter ? `<div class="gq-album-letter">${letterHtml(letter, {face, shadowLines: shadowLinesOf(letter), lit: pp.complete})}</div>` : '';
       const seal = pp.allGold ? '<span class="gq-seal gold">完・金</span>' : pp.complete ? '<span class="gq-seal">完</span>' : '';
-      container.innerHTML = `${charaDefs(base)}
+      container.innerHTML = `
         <div class="gq-album-top">${backButton}<span class="gq-album-total">集めた切手 <b>${collected}</b>/${words.length}</span><button class="text-button" data-act="index" type="button">目次</button></div>
         <div class="gq-album-nav">
           <button type="button" class="gq-round" data-act="prev" aria-label="前のページ" ${index === 0 ? 'disabled' : ''}>${icon('prev')}</button>
@@ -249,7 +253,7 @@ export function openAlbum(container, deps = {}) {
         return `<button type="button" class="gq-lampcell ${pp.allGold ? 'gold' : pp.complete ? 'lit' : ''}" data-shelf="${page.shelf}">
           <b>${page.shelf}</b><span>${pp.got}/${pp.total}</span></button>`;
       }).join('');
-      container.innerHTML = `${charaDefs(base)}
+      container.innerHTML = `
         <div class="gq-album-top">${backButton}<span class="gq-album-total">集めた切手 <b>${collected}</b>/${words.length}</span><button class="text-button" data-act="page" type="button">ページへ</button></div>
         <p class="eyebrow">切手帳の目次</p>
         <div class="gq-album-body">${groups.map(group => `<section class="gq-ward">

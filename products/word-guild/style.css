@@ -287,15 +287,31 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
  .gq-cell.hint-route{animation:none;background:var(--lamp-lt)}
 }
 
-/* 封蝋のお手伝い。SVG を含む祖先には filter を使わない。 */
-.gq-help-actions{display:flex;justify-content:center;gap:34px;flex-shrink:0;padding:2px 0 4px}
-.gq-help-actions .gq-help{width:64px;height:64px}
-.gq-help-actions .gq-help span{font-size:12px}
-.gq-help-actions .gq-help:last-child polygon{fill:#38617a}
-.gq-help-actions .gq-help[aria-pressed=true] polygon{fill:var(--lamp)}
-.gq-help-actions .gq-help[aria-pressed=true]{color:var(--ink)}
-.gq-help-actions .gq-help:disabled{opacity:.45;cursor:default}
+/* 真鍮の虫めがねと革の本。タップ範囲は絵と文字全体。 */
+.gq-help-actions{display:flex;justify-content:center;gap:32px;flex-shrink:0;padding:0 0 3px}
+.gq-help{width:78px;height:70px;min-height:44px;padding:0;display:grid;justify-items:center;align-content:center;gap:0;background:none;border:0;box-shadow:none;border-radius:8px;font-family:var(--serif)}
+.gq-help svg{width:54px;height:50px;overflow:visible}
+.gq-help span{font-size:12px;line-height:17px;color:var(--ink)}
+.help-hint .help-material{fill:#d9b45d}.help-teach .help-material{fill:#a95538}
+.gq-help[aria-pressed=true]{background:var(--lamp-lt);outline:2px solid var(--seal);outline-offset:-2px}
+.gq-help:disabled{opacity:.45;cursor:default}
+/* 横の余白も紙魚に渡し、3体を大きく見せる。 */
+#view.gq-quest{--enemy-size:clamp(110px,17dvh,144px)}
+.gq-mons{left:34px}.gq-clues{left:34px}
+.gq-hero{width:46px;height:58px}.gq-owl{left:20px;width:26px;height:30px}
+.gq-boardrow{min-height:252px}
+.gq-board{min-width:294px}
+@media(max-height:700px){
+ #view.gq-quest{--enemy-size:94px;padding:6px;gap:4px}
+ #view.gq-quest.gq-tutor{--enemy-size:80px}
+ .gq-help{height:60px}.gq-help svg{width:46px;height:42px}
+ .gq-coach{line-height:1.2}
+}
 /* 変わり種は夜空と金箔の額。切手帳・結果・拡大で共用。 */
 .stamp.stamp:has(.odd)::before{background:linear-gradient(135deg,#f6dc8c,#ac7d28 50%,#f6dc8c)}
 .stamp.stamp:has(.odd) .in{background:radial-gradient(circle at 18% 24%,#f6dc8c 0 1px,transparent 1.5px),radial-gradient(circle at 82% 62%,#f6dc8c 0 1px,transparent 1.5px),linear-gradient(145deg,#263c65,#111b36);outline:1px solid #edcd76;box-shadow:inset 0 0 0 3px #17223d,inset 0 0 0 4px #b58a3e}
 .stamp.stamp:has(.odd) .lbl,.stamp.stamp:has(.odd) .ja,.stamp.stamp:has(.odd) .val{color:#f6dc8c}
+
+/* 月の円は SVG の背面。夜空とインクの輪郭をともに残す。 */
+.stamp.stamp:has(.odd) .pic::before{content:"";position:absolute;width:82%;aspect-ratio:1;left:9%;top:9%;border-radius:50%;background:radial-gradient(circle at 36% 30%,#fff9e8,#efda9b 65%,#b9914b);border:1px solid #fff3ce;box-shadow:0 0 10px #f3db9a55}
+.stamp.stamp.big:has(.odd) .pic::before{width:41%;left:29.5%}
