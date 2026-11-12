@@ -95,3 +95,13 @@ export function clipFor(story, id, max = 17) {
   const clip = clipParts(story, id, max);
   return clip ? (clip.left + clip.word + clip.right).trim() : '';
 }
+
+// 場面は任意の追加データ。未配置・HTTP エラー・不正な内容でも配達を続ける。
+export async function loadScenes(fetcher = globalThis.fetch, url = new URL('../data/scenes.json', import.meta.url)) {
+  try {
+    const response = await fetcher(url);
+    if (!response.ok) return null;
+    const data = await response.json();
+    return data?.v === 1 && Array.isArray(data.scenes) ? data : null;
+  } catch { return null; }
+}

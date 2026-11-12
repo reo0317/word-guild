@@ -16,7 +16,7 @@
 // 画面は container.innerHTML に描く。album.css は <link> で一度だけ読み込む。
 import {stampState, pageSpecs} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
-import {letterView} from './story.mjs';
+import {letterView, loadScenes} from './story.mjs';
 import {CHAPTER_NAMES} from './chapters.mjs';
 import {emptyProgress} from './store.mjs';
 import {esc, speak as defaultSpeak, starsMarkup, fab, icon, ensureDefs, ensureLetterCss, letterHtml, shadowLinesOf, wordLineHtml, handleLetterClick} from './dom.mjs';
@@ -73,6 +73,74 @@ export function startIndex(pages, progress, shelf) {
 }
 
 export const clampIndex = (index, length) => Math.min(Math.max(0, index), Math.max(0, length - 1));
+
+// 任意データの探索と演出の切り替えは DOM なしでも確認する。
+export function sceneFor(scenes, shelf) {
+  return scenes?.scenes?.find(scene => scene?.shelf === shelf &&
+    typeof scene.title === 'string' && Array.isArray(scene.lines) &&
+    scene.lines.every(line => typeof line === 'string')) ?? null;
+}
+
+export function gateCard(story, gates = [], newWard) {
+  const lines = (story?.blank ?? []).filter(line => gates.includes(line.ch));
+  return {lines, newIndex: lines.findIndex(line => line.ch === newWard)};
+}
+
+export function newlyOpenedGate(before, after, ward) {
+  return Number.isInteger(ward) && !(before.gates ?? []).includes(ward) && (after.gates ?? []).includes(ward);
+}
+
+export async function playOptionalCinema(method, container, data, fallback,
+  loader = () => import('./cinema.mjs').catch(() => null), active = () => true) {
+  try {
+    const cinema = await loader();
+    if (!active()) return;
+    if (typeof cinema?.[method] === 'function') {
+      await cinema[method](container, data);
+      return;
+    }
+  } catch { /* 読み込み・再生の失敗時も紙で読める */ }
+  if (active()) await fallback();
+}
+
+export function sceneCardHtml(scene) {
+  return scene ? `<h2>${esc(scene.title)}</h2>${scene.lines.map(line => `<p>${esc(line)}</p>`).join('')}` : '';
+}
+
+export function blankCardHtml(story, gates = []) {
+  const byWard = new Map((story?.blank ?? []).map(line => [line.ch, line]));
+  return `<h2>白紙卿</h2>${Array.from({length: 6}, (_, i) => {
+    const line = byWard.get(i + 1);
+    return line && gates.includes(i + 1)
+      ? `<p lang="en">${esc(line.en)}<small lang="ja">${esc(line.ja)}</small></p>`
+      : '<p class="gq-card-mist" aria-label="霧に隠れた行"><span aria-hidden="true">──────────</span></p>';
+  }).join('')}`;
+}
+
+export function showPaperCard(host, html) {
+  ensureLetterCss();
+  const previous = document.activeElement;
+  const overlay = document.createElement('div');
+  overlay.className = 'gq-story-overlay';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', '物語');
+  overlay.innerHTML = `<article class="gq-story-card">${html}<button type="button" class="gq-round" aria-label="とじる">×</button></article>`;
+  let resolve;
+  const finished = new Promise(done => { resolve = done; });
+  const close = () => {
+    overlay.remove();
+    document.removeEventListener('keydown', onKey);
+    if (previous?.isConnected) previous.focus({preventScroll: true});
+    resolve();
+  };
+  const onKey = event => { if (event.key === 'Escape') close(); };
+  overlay.onclick = event => { event.stopPropagation(); close(); };
+  document.addEventListener('keydown', onKey);
+  host.append(overlay);
+  overlay.querySelector('button').focus({preventScroll: true});
+  return {close, finished};
+}
 
 // ---------- 画面 ----------
 const BASE = new URL('../', import.meta.url).href;
@@ -158,7 +226,8 @@ async function load(deps) {
       story = response.ok ? await response.json() : null;
     } catch { story = null; }
   }
-  return {words, tags, story: Array.isArray(story?.letters) ? story : null};
+  const scenes = deps.scenes === undefined ? await loadScenes() : deps.scenes;
+  return {words, tags, scenes, story: Array.isArray(story?.letters) ? story : null};
 }
 
 export function openAlbum(container, deps = {}) {
@@ -176,7 +245,7 @@ export function openAlbum(container, deps = {}) {
   }};
   container.className = 'gq gq-album';
   container.innerHTML = '<p class="gq-loading">切手帳をひらいています…</p>';
-  load(deps).then(({words, tags, story}) => { if (!closed) start(words, tags, story); }, () => {
+  load(deps).then(({words, tags, story, scenes}) => { if (!closed) start(words, tags, story, scenes); }, () => {
     if (closed) return;
     container.innerHTML = '<p class="gq-warn">切手帳を読み込めません。</p>';
     addBack();
@@ -193,7 +262,7 @@ export function openAlbum(container, deps = {}) {
     container.append(button);
   }
 
-  function start(words, tags, story) {
+  function start(words, tags, story, scenes) {
     const progress = deps.progress ?? emptyProgress();
     const say = deps.speak ?? defaultSpeak;
     const base = deps.base ?? BASE;
@@ -239,6 +308,7 @@ export function openAlbum(container, deps = {}) {
         <div class="gq-album-body ${pp.allGold ? 'gold-page' : pp.complete ? 'lit-page' : ''}">
           ${first ? `<div class="gq-album-gate">${memorialHtml(page.ch, gates.includes(page.ch), base)}</div>` : ''}
           ${paper}
+          ${letter?.readable && sceneFor(scenes, page.shelf) ? '<button type="button" class="gq-scene-tag" data-act="scene">場面</button>' : ''}
           <p class="gq-page-count"><b>${pp.got}/${pp.total}</b> ${seal}</p>
           <div class="gq-sheet">${stamps}</div>
         </div>`;
@@ -256,7 +326,7 @@ export function openAlbum(container, deps = {}) {
       container.innerHTML = `
         <div class="gq-album-top">${backButton}<span class="gq-album-total">集めた切手 <b>${collected}</b>/${words.length}</span><button class="text-button" data-act="page" type="button">ページへ</button></div>
         <p class="eyebrow">切手帳の目次</p>
-        <div class="gq-album-body">${groups.map(group => `<section class="gq-ward">
+        <div class="gq-album-body"><article class="gq-story-card gq-card-door">${blankCardHtml(story, gates)}</article>${groups.map(group => `<section class="gq-ward">
           <h3>${group.ch}区 ${esc(group.name)}<small>記念切手 ${gates.includes(group.ch) ? '済' : '未'}</small></h3>
           <div class="gq-ward-gate">${memorialHtml(group.ch, gates.includes(group.ch), base)}</div>
           <div class="gq-lampgrid">${cells(group)}</div></section>`).join('')}</div>`;
@@ -297,6 +367,16 @@ export function openAlbum(container, deps = {}) {
       if (closed) return;
       const target = event.target;
       const act = target.closest('[data-act]')?.dataset.act;
+      if (container.querySelector('.gq-story-overlay')) return;
+      if (act === 'scene') {
+        const scene = letterOf(pages[index].shelf)?.readable ? sceneFor(scenes, pages[index].shelf) : null;
+        if (scene) {
+          const card = showPaperCard(container, sceneCardHtml(scene));
+          cleanups.push(card.close);
+          card.finished.then(() => { const i = cleanups.indexOf(card.close); if (i >= 0) cleanups.splice(i, 1); });
+        }
+        return;
+      }
       if (act === 'back') return deps.back?.();
       if (act === 'prev') { index = clampIndex(index - 1, pages.length); return renderPage(); }
       if (act === 'next') { index = clampIndex(index + 1, pages.length); return renderPage(); }
