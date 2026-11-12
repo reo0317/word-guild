@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>切手キャラ試作</title>
+<style>
+:root{--paper:#f4ead5;--bg:#e9dfc8;--ink:#1f2340;--sub:#6b6552;--gold:#d9a826}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.6 "Hiragino Sans","Yu Gothic",system-ui,sans-serif;padding:0 12px 48px;overflow-x:hidden}
+h1{font-size:19px;margin:18px 0 4px}
+h2{font-size:16px;margin:30px 0 4px;padding-top:6px;border-top:2px solid var(--ink)}
+h3{font-size:13px;margin:16px 0 6px;display:flex;gap:6px;align-items:baseline;flex-wrap:wrap}
+h3 small{font-weight:400;color:var(--sub);font-size:11px}
+p.note{margin:2px 0 8px;color:var(--sub);font-size:12px}
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0;display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid #0002}
+.nav button,.seg button{font:inherit;font-size:12px;padding:5px 10px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);border-radius:14px}
+.nav button[aria-pressed=true],.seg button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.sheet{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin:6px 0 4px}
+.missing{padding:14px;border:2px dashed #0004;border-radius:8px;color:var(--sub);text-align:center;margin:6px 0}
+
+/* 切手の枠：目打ちは外側の層の穴、中身は紙色の内側 */
+.stamp{position:relative;padding:5px;filter:drop-shadow(0 1px 1px #0003);--fr:var(--paper);--ln:var(--ink);border:0;background:none;font:inherit;color:inherit;text-align:center;cursor:pointer;width:100%}
+.stamp::before{content:"";position:absolute;inset:0;background:var(--fr);-webkit-mask:radial-gradient(circle 3px at 0 0,#0000 97%,#000) 0 0/10px 10px round;mask:radial-gradient(circle 3px at 0 0,#0000 97%,#000) 0 0/10px 10px round;-webkit-mask-repeat:round;mask-repeat:round}
+.stamp .in{position:relative;background:var(--paper);outline:1px solid var(--ln);outline-offset:-2px;padding:3px 2px 2px;overflow:hidden}
+.stamp .pic{position:relative;aspect-ratio:1/1}
+.stamp .pic svg{position:absolute;inset:0;width:100%;height:100%}
+.stamp .val{position:absolute;left:4px;top:2px;font:700 10px/1 system-ui;color:var(--ln);z-index:2}
+.stamp .lbl{font:700 10px/1.2 system-ui;letter-spacing:-.2px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:clip}
+.stamp .ja{font-size:9px;line-height:1.2;color:var(--sub);white-space:nowrap;overflow:hidden}
+.stamp .odd{position:absolute;right:3px;top:1px;font-size:11px;color:#e7b22d;text-shadow:0 0 2px #1d2060,0 0 2px #1d2060;z-index:2}
+.stamp.s-shadow .in{background:#e2d8c0}
+.stamp.s-shadow{--fr:#d8ceb6;--ln:#9a937f}
+.stamp.s-shadow .lbl{color:#8c8672}
+.stamp.s-gold{--fr:linear-gradient(135deg,#f3d366,#c9961c 55%,#f0cf5c)}
+.stamp.s-gold::before{background:linear-gradient(135deg,#f3d366,#c9961c 55%,#f0cf5c)}
+.stamp.s-gold{--ln:#b98512}
+.stamp.s-proof{--fr:#efe4cb}
+.stamp .pm{position:absolute;right:-2px;bottom:24%;width:40%;opacity:.5;z-index:3;pointer-events:none;transform:rotate(-14deg)}
+.stamp.big{grid-column:span 2}
+.stamp.big .pic{aspect-ratio:2/1}
+.stamp.big .pic svg{left:25%;width:50%}
+.stamp.lg .lbl{font-size:13px}.stamp.lg .ja{font-size:11px}.stamp.lg .val{font-size:13px;top:4px;left:6px}
+
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:4px 0}
+.strip .cap{font-size:10px;color:var(--sub);text-align:center;margin-top:2px}
+.strip2{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+
+/* 配達の帯 */
+.band{position:relative;height:150px;border:2px solid var(--ink);border-radius:6px;overflow:hidden;background:#cdbf9c center/cover}
+.band .fg{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:space-around;padding:0 6px 4px}
+.band .fg>div{position:relative;width:34%;aspect-ratio:1/1;margin-bottom:-6px}
+.band .fg>div::after{content:"";position:absolute;left:14%;right:14%;bottom:8%;height:8%;background:#0003;border-radius:50%;z-index:0;filter:blur(2px)}
+.band svg{position:relative;z-index:1;width:100%;height:100%}
+.rows{margin-top:6px;display:grid;gap:4px}
+.rows .r{display:flex;align-items:center;gap:8px;background:var(--paper);border:1.5px solid var(--ink);border-radius:6px;padding:3px 8px;font-size:13px}
+.face{width:30px;height:30px;border-radius:50%;overflow:hidden;position:relative;flex:none;background:#e6dcc4;border:1.5px solid var(--ink)}
+.face svg{position:absolute;width:96px;height:96px;left:-33px;top:-33px}
+.rows .blank{margin-left:auto;letter-spacing:3px;color:var(--sub)}
+
+/* 拡大 */
+#zoom{position:fixed;inset:0;background:#000a;z-index:20;display:none;align-items:center;justify-content:center;padding:12px}
+#zoom.on{display:flex}
+#zoom .card{background:var(--bg);border:2px solid var(--ink);border-radius:10px;padding:12px;width:100%;max-width:380px}
+#zoom .card h4{margin:0 0 2px;font-size:16px}
+#zoom .card p{margin:0 0 8px;font-size:12px;color:var(--sub)}
+#zoom .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+#zoom .cols .cap{font-size:10px;text-align:center;color:var(--sub)}
+#zoom .close{margin-top:10px;width:100%;font:inherit;padding:7px;border:2px solid var(--ink);background:var(--paper);border-radius:8px}
+</style>
+</head>
+<body>
+<h1>切手キャラ試作（P1：方式A）</h1>
+<p class="note">1区・街灯1（b0001〜25）と2区・街灯1（t0001〜25）。各切手をタップすると A / A＋色そろえ / B を大きく並べます。✦ は各ページの変わり種。</p>
+
+<div class="nav" id="nav">
+  <span class="seg" id="stateSeg"></span>
+</div>
+
+<div id="app"></div>
+
+<div id="zoom"><div class="card"><h4 id="zw"></h4><p id="zi"></p><div class="cols" id="zc"></div><button class="close" id="zx">閉じる</button></div></div>
+
+<script type="module">
+import * as A from './a.mjs';
+
+const root = new URL('../../products/word-guild/', import.meta.url);
+const [words, sample] = await Promise.all([
+  fetch(new URL('data/words.json', root)).then((r) => r.json()),
+  fetch('./sample.json').then((r) => r.json()),
+]);
+let B = null;
+try { B = await import('./b.mjs'); if (typeof B.drawChara !== 'function') B = null; } catch (e) { B = null; }
+
+const odd = new Set(sample._odd || []);
+const byId = new Map(words.map((w) => [w.id, w]));
+const mk = (id) => ({ ...byId.get(id), cat: sample[id], odd: odd.has(id) });
+const ids = (p, n) => Array.from({ length: 25 }, (_, i) => p + String(i + 1).padStart(4, '0'));
+const PAGES = [
+  { ward: 1, title: '1区 街灯1', words: ids('b').map(mk) },
+  { ward: 2, title: '2区 街灯1', words: ids('t').map(mk) },
+];
+for (const pg of PAGES) A.prepare(pg.words);
+
+const METHODS = [
+  { key: 'a', name: 'A　既存の絵＋組み合わせ', draw: (w, o) => A.drawChara(w, o) },
+  { key: 'au', name: 'A＋色そろえ　インク刷り直し・網点・色ずれ', draw: (w, o) => A.drawChara(w, { ...o, unify: true }) },
+  { key: 'b', name: 'B　全部 SVG', draw: B ? (w, o) => B.drawChara(w, o) : null },
+];
+const STATES = [['shadow', '影'], ['proof', '仮刷り'], ['print', '本刷り'], ['gold', '金ぶち']];
+let state = 'print';
+
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const safe = (m, w, o) => { try { return m.draw(w, o); } catch (e) { console.warn('draw failed', m.key, w.id, e); return ''; } };
+const PM = '<svg class="pm" viewBox="0 0 60 60"><g fill="none" stroke="#1f2340" stroke-width="2.4"><circle cx="30" cy="30" r="25"/><circle cx="30" cy="30" r="19"/><path d="M5 22q8-5 16 0t16 0 16 0M5 31q8-5 16 0t16 0 16 0M5 40q8-5 16 0t16 0 16 0"/></g></svg>';
+
+function stamp(m, w, o = {}) {
+  const st = o.state || state;
+  const inkTone = o.ward || w.ch;
+  const art = m.draw ? safe(m, w, { state: st, inkTone }) : '';
+  const shadow = st === 'shadow';
+  const cls = ['stamp', 's-' + st, o.big ? 'big' : '', o.lg ? 'lg' : ''].join(' ');
+  return `<button class="${cls}" data-id="${w.id}" aria-label="${esc(shadow ? '？' : w.w)}">
+    <div class="in"><span class="val">${w.w.length}</span>${w.odd && !shadow ? '<i class="odd">✦</i>' : ''}${w.odd && shadow ? '<i class="odd" style="color:#8c8672;text-shadow:none">✦</i>' : ''}
+    <div class="pic">${art}</div>
+    <div class="lbl">${shadow ? '？' : esc(w.w)}</div>${o.lg ? `<div class="ja">${shadow ? '？' : esc(w.ja)}</div>` : ''}
+    ${st === 'gold' ? PM : ''}</div></button>`;
+}
+
+function missing() { return '<div class="missing">B は作成中（b.mjs がまだありません）</div>'; }
+
+function render() {
+  const out = [];
+  out.push('<h2 id="sec-sheets">切手シート</h2><p class="note">上の切り替えで、全ページの状態を変えられます。</p>');
+  for (const pg of PAGES) {
+    out.push(`<h2>${pg.title}（25語）</h2>`);
+    for (const m of METHODS) {
+      out.push(`<h3>${m.name}</h3>`);
+      out.push(m.draw ? `<div class="sheet">${pg.words.map((w) => stamp(m, w)).join('')}</div>` : missing());
+    }
+  }
+
+  // 配達の帯
+  out.push('<h2 id="sec-band">配達の帯（3体が並ぶ）</h2><p class="note">戦闘中は語を見せない。お題の行の左に小さな顔。</p>');
+  const trio = ['b0002', 'b0004', 'b0006'].map(mk).map((w) => ({ ...w, odd: false }));
+  for (const m of METHODS) {
+    out.push(`<h3>${m.name}</h3>`);
+    if (!m.draw) { out.push(missing()); continue; }
+    out.push(`<div class="band" style="background-image:url(../../products/word-guild/art/ward-1.webp)"><div class="fg">${trio.map((w) => `<div>${safe(m, w, { state: 'print', inkTone: 1 })}</div>`).join('')}</div></div>`);
+    out.push(`<div class="rows">${trio.map((w) => `<div class="r"><span class="face">${safe(m, w, { state: 'print', inkTone: 1 })}</span><span>${esc(w.ja)}</span><span class="blank">${'＿'.repeat(Math.min(w.w.length, 6))}</span></div>`).join('')}</div>`);
+  }
+
+  // 状態の見本
+  out.push('<h2 id="sec-state">切手の状態</h2><p class="note">影 → 仮刷り（1色の線）→ 本刷り（色つき）→ 金ぶち（金の枠と消印）。例は think。大判は13文字以上（identification）。</p>');
+  const sw = mk('b0003');
+  const big = { id: 'x-big', w: 'identification', ja: '身元の確認', pos: 'n', ch: 1, cat: 'doc', odd: false };
+  for (const m of METHODS) {
+    out.push(`<h3>${m.name}</h3>`);
+    if (!m.draw) { out.push(missing()); continue; }
+    out.push(`<div class="strip">${STATES.map(([s, n]) => `<div>${stamp(m, sw, { state: s, lg: true })}<div class="cap">${n}</div></div>`).join('')}</div>`);
+    if (m.key !== 'b') out.push(`<div class="strip" style="grid-template-columns:repeat(2,1fr)">${['print', 'gold'].map((s) => `<div>${stamp(m, big, { state: s, lg: true, big: false })}<div class="cap">大判 ${s === 'gold' ? '金ぶち' : '本刷り'}</div></div>`).join('')}</div>`);
+  }
+
+  // 変わり種
+  out.push('<h2 id="sec-odd">変わり種（各ページ1体）</h2><p class="note">同じ語の通常と変わり種を並べる。夜色の配色と ✦。</p>');
+  const oddPairs = PAGES.flatMap((pg) => { const w = pg.words.find((x) => x.odd); return [{ ...w, odd: false }, w]; });
+  for (const m of METHODS) {
+    out.push(`<h3>${m.name}</h3>`);
+    if (!m.draw) { out.push(missing()); continue; }
+    out.push(`<div class="strip">${oddPairs.map((w) => `<div>${stamp(m, w, { state: 'print', lg: true })}<div class="cap">${w.odd ? '変わり種' : '通常'}</div></div>`).join('')}</div>`);
+  }
+  document.getElementById('app').innerHTML = out.join('');
+}
+
+// 状態の切り替え
+const seg = document.getElementById('stateSeg');
+seg.innerHTML = STATES.map(([s, n]) => `<button data-s="${s}" aria-pressed="${s === state}">${n}</button>`).join('') +
+  [['sec-band', '配達の帯'], ['sec-state', '状態'], ['sec-odd', '変わり種']].map(([id, n]) => `<button data-j="${id}">${n}</button>`).join('');
+seg.addEventListener('click', (e) => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.j) { document.getElementById(b.dataset.j).scrollIntoView({ behavior: 'smooth' }); return; }
+  state = b.dataset.s;
+  seg.querySelectorAll('[data-s]').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.s === state)));
+  render();
+});
+
+// 拡大
+const zoom = document.getElementById('zoom');
+document.getElementById('app').addEventListener('click', (e) => {
+  const b = e.target.closest('.stamp'); if (!b || !b.dataset.id || b.dataset.id === 'x-big') return;
+  const w = mk(b.dataset.id);
+  const d = A.describe(w);
+  document.getElementById('zw').textContent = `${w.w}　${w.ja}`;
+  document.getElementById('zi').textContent = `${w.pos} / 分類 ${w.cat} / 種族 ${d.species} / 小物 ${d.prop} / 色 ${d.inkName} / 模様 ${d.patternName} / 表情 ${d.faceName}${w.odd ? ' / 変わり種' : ''}`;
+  document.getElementById('zc').innerHTML = METHODS.map((m) => `<div>${m.draw ? stamp(m, w, { lg: true }) : '<div class="missing" style="padding:30px 2px;font-size:10px">B 作成中</div>'}<div class="cap">${m.key === 'a' ? 'A' : m.key === 'au' ? 'A＋色そろえ' : 'B'}</div></div>`).join('');
+  zoom.classList.add('on');
+});
+const closeZoom = () => zoom.classList.remove('on');
+document.getElementById('zx').onclick = closeZoom;
+zoom.addEventListener('click', (e) => { if (e.target === zoom) closeZoom(); });
+
+render();
+window.__ready = true;
+</script>
+</body>
+</html>
