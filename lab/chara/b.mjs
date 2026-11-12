@@ -85,19 +85,19 @@ function polarBody(cx, cy, rx, ry, n, rf) {
 }
 
 function shimi(r) {
-  const wob = wobbler(r, 0.07);
-  const left = deg(-160 - r() * 25), right = deg(-20 + r() * 25);
-  const arms = [[left, 0.45 + r() * 0.25], [right, 0.45 + r() * 0.25]];
-  for (const a of [-125, -90, -55].filter(() => r() < 0.6)) arms.push([deg(a + (r() - 0.5) * 30), 0.25 + r() * 0.35]);
-  const legs = [deg(62 + r() * 10), deg(108 + r() * 10)];
-  const rf = t => 1 + wob(t) + arms.reduce((s, [a, l]) => s + l * bump(t, a, 0.17), 0) + legs.reduce((s, a) => s + 0.32 * bump(t, a, 0.13), 0);
-  const { pts, at } = polarBody(50, 50, 27, 24, 48, rf);
-  const dots = [];
-  for (let i = 0, n = 3 + ((r() * 4) | 0); i < n; i++) {
-    const a = r() * 2 * PI, k = rf(a) + 0.25 + r() * 0.3;
-    dots.push(`<circle cx="${f(min(95, max(5, 50 + cos(a) * 27 * k)))}" cy="${f(min(95, max(5, 50 + sin(a) * 24 * k)))}" r="${f(1 + r() * 2)}" fill="${NAVY}"/>`);
-  }
-  return { d: qpath(pts), front: dots.join(''), face: [50, 47, 1], hands: [at(left), at(right)], head: at(-PI / 2), mottle: 0.8 };
+  const wob = wobbler(r, 0.08);
+  const left = deg(150 + r() * 40), right = deg(30 - r() * 40);
+  const arms = [[left, 0.4 + r() * 0.3, 0.11], [right, 0.4 + r() * 0.3, 0.11]];
+  for (const a of [-120, -60].filter(() => r() < 0.5)) arms.push([deg(a + (r() - 0.5) * 30), 0.22 + r() * 0.2, 0.13]);
+  const drips = [];
+  for (let i = 0, m = 2 + ((r() * 2) | 0); i < m; i++) drips.push([deg(55 + (70 * i) / (m - 1) + (r() - 0.5) * 12), 0.2 + r() * 0.35]);
+  const rf = t => 1 + wob(t) + arms.reduce((s, [a, l, w]) => s + l * bump(t, a, w), 0) + drips.reduce((s, [a, l]) => s + l * bump(t, a, 0.09), 0);
+  const { pts, at } = polarBody(50, 50, 23 + r() * 5, 20 + r() * 6, 56, rf);
+  const dot = (p, rr) => `<circle cx="${f(min(96, max(4, p[0])))}" cy="${f(min(96, max(4, p[1])))}" r="${f(rr)}" fill="${NAVY}"/>`;
+  let front = '';
+  for (const [a] of arms.slice(0, 2)) { const p = at(a); front += dot([p[0] + cos(a) * 6, p[1] + sin(a) * 6 - 2], 1.4 + r() * 1.2); }
+  for (const [a, l] of drips) if (r() < 0.6) { const p = at(a); front += dot([p[0], p[1] + 5 + l * 6], 1.3 + r()); }
+  return { d: qpath(pts), front, face: [50, 47, 1.25], hands: [at(left), at(right)], head: at(-PI / 2), mottle: 0.8 };
 }
 
 function keshikasu(r) {
@@ -120,7 +120,7 @@ function keshikasu(r) {
   const ay = 56 + r() * 8;
   const back = `<path d="M24 ${f(ay)}L13 ${f(ay + 8)}M76 ${f(ay)}L87 ${f(ay + 8)}M42 70l-2 15h-5M58 70l2 15h5" fill="none" stroke-width="3.4"/>` +
     `<path d="M13 ${f(ay + 8)}l-4-3m4 3l-3 4m3-4l1 5M87 ${f(ay + 8)}l4-3m-4 3l3 4m-3-4l-1 5" fill="none" stroke-width="2"/>`;
-  return { d: lpath(pts), back, lumps, crumbs, face: [50, 50, 0.95], hands: [[13, ay + 8], [87, ay + 8]], head: [50, 30], mottle: 0.5 };
+  return { d: lpath(pts), back, lumps, crumbs, face: [50, 50, 1.2], hands: [[13, ay + 8], [87, ay + 8]], head: [50, 30], mottle: 0.5 };
 }
 
 function nijimi(r) {
@@ -135,7 +135,7 @@ function nijimi(r) {
   const lh = [12 + r() * 4, 40 + r() * 10], rh = [88 - r() * 4, 40 + r() * 10];
   const back = `<path d="M28 50Q18 ${f(lh[1] + 14)} ${xy(lh)}M72 50Q82 ${f(rh[1] + 14)} ${xy(rh)}" fill="none" stroke-width="3"/>` +
     `<path d="M${xy(lh)}l-3-4m3 4l-4 1M${xy(rh)}l3-4m-3 4l4 1" fill="none" stroke-width="2"/>`;
-  return { d: qpath(pts), back, halo: 1, face: [50, 42, 1], hands: [lh, rh], head: [50, 17], mottle: 0.7 };
+  return { d: qpath(pts), back, halo: 1, face: [50, 41, 1.2], hands: [lh, rh], head: [50, 17], mottle: 0.7 };
 }
 
 function hokoridama(r) {
@@ -145,7 +145,7 @@ function hokoridama(r) {
   const lh = [11 + r() * 4, 54 + r() * 8], rh = [89 - r() * 4, 54 + r() * 8], kx = (r() - 0.5) * 6;
   const back = `<path d="M30 52L${xy(lh)}M70 52L${xy(rh)}M44 64l${f(-4 + kx)} 10 1 10M56 64l${f(4 + kx)} 10-1 10" fill="none" stroke-width="2.4"/>` +
     `<path d="M${xy(lh)}l-4-2m4 2l-3 4m3-4l1 4M${xy(rh)}l4-2m-4 2l3 4m-3-4l-1 4M${f(41 + kx)} 84h-6M${f(59 + kx)} 84h6" fill="none" stroke-width="2"/>`;
-  return { d: qpath(pts), back, face: [50, 47, 0.95], hands: [lh, rh], head: [50, 21], mottle: 0.4 };
+  return { d: qpath(pts), back, face: [50, 46, 1.2], hands: [lh, rh], head: [50, 21], mottle: 0.4 };
 }
 
 function atenashi(r) {
@@ -167,7 +167,7 @@ function atenashi(r) {
   const back = `<path d="M26 46L${xy(lh)}M74 46L${xy(rh)}M42 62l-3 20M58 62l3 20" fill="none" stroke-width="2.4"/>` +
     `<path d="M${xy(lh)}l-4-2m4 2l-3 4m3-4l1 4M${xy(rh)}l4-2m-4 2l3 4m-3-4l-1 4" fill="none" stroke-width="2"/>` +
     `<path d="M33 85a6 3.4 0 0 1 8-4l1 3zM67 85a6 3.4 0 0 0-8-4l-1 3z" fill="${NAVY}"/>`;
-  return { d, back, flap, wax, face: [50, 53, 0.9], hands: [lh, rh], head: [50, y0], mottle: 0 };
+  return { d, back, flap, wax, face: [50, 53, 1.1], hands: [lh, rh], head: [50, y0], mottle: 0 };
 }
 
 function oshimi(r) {
@@ -176,7 +176,7 @@ function oshimi(r) {
   const claws = [deg(-178 + r() * 10), deg(-2 - r() * 10)];
   const rf = t => 1 + wob(t) + crown.reduce((s, a) => s + (0.36 + 0.14 * sin(a * 3 + 1)) * bump(t, a, 0.075), 0) +
     claws.reduce((s, a) => s + 0.16 * bump(t, a, 0.1), 0) + 0.08 * sin(t * 11) * (sin(t) > 0.3 ? 1 : 0);
-  const { pts, at } = polarBody(50, 62, 42, 27, 64, rf);
+  const { pts, at } = polarBody(50, 62, 42, 27, 54, rf);
   pts.forEach(p => { p[1] = min(p[1], 92); p[0] = min(97, max(3, p[0])); });
   const jewels = crown.map(a => { const p = at(a); return `<circle cx="${f(p[0])}" cy="${f(max(4, p[1]))}" r="2" fill="${LAMP}"/>`; }).join('');
   const eyes = [];
@@ -185,7 +185,7 @@ function oshimi(r) {
     if (Math.abs(p[0] - 50) < 17 && Math.abs(p[1] - 62) < 13) continue;
     eyes.push(`<g transform="translate(${xy(p)})"><circle r="3.2" fill="EYE"/><circle r="1.3" fill="${NAVY}" stroke="none"/></g>`);
   }
-  return { d: qpath(pts), front: jewels + eyes.join(''), face: [50, 60, 1.15], hands: [at(claws[0]), at(claws[1])], head: at(-PI / 2), mottle: 1 };
+  return { d: qpath(pts), front: jewels + eyes.join(''), face: [50, 60, 1.35], hands: [at(claws[0]), at(claws[1])], head: at(-PI / 2), mottle: 1 };
 }
 
 const BODY = { shimi, keshikasu, nijimi, hokoridama, atenashi, oshimi };
@@ -255,7 +255,7 @@ function placeProp(prop, sp, r, a, p) {
   else if (where === 'head') { [x, y] = sp.head; y -= prop === 'hat' ? 3 : 9; rot /= 2; s = prop === 'hat' ? 0.9 : 0.75; }
   else if (where === 'face') { x = sp.face[0] + sgn * 12; y = sp.face[1] - 10; s = 0.7; }
   else { x = sp.head[0] + sgn * 26; y = sp.head[1] + 4; rot /= 3; s = 0.85; }
-  x = min(88, max(12, x)); y = min(90, max(10, y));
+  x = min(83, max(17, x)); y = min(86, max(14, y));
   return `<g transform="translate(${f(x)} ${f(y)}) rotate(${f(rot)}) scale(${s})" stroke-width="2">${PROPS[prop](a, p)}</g>`;
 }
 
@@ -268,13 +268,13 @@ export function charaDefs() {
     // 手刷りの揺れ（輪郭が少しよれる）
     `<filter id="bk-rough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".09" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>` +
     // 色版のかすれ（インクの乗らない点）
-    `<filter id="bk-ink" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="2" seed="9" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -7 0 0 0 4.6" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in"/></filter>` +
+    `<filter id="bk-ink" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".4" numOctaves="2" seed="9" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 0 0 0 11.4" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in"/></filter>` +
     `<filter id="bk-glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3.2"/></filter>` +
     sil('bk-sn', NAVY) + sil('bk-sm', MIST) +
     pat('bk-ps', 7, '<rect width="3" height="7" fill="#fff"/>', 'rotate(40)') +
     pat('bk-pd', 8, '<circle cx="2" cy="2" r="1.7" fill="#fff"/><circle cx="6" cy="6" r="1.7" fill="#fff"/>') +
     pat('bk-pc', 10, '<path d="M0 0h5v5H0zM5 5h5v5H5z" fill="#fff"/>', 'rotate(8)') +
-    pat('bk-ph', 2.7, '<circle cx="1.35" cy="1.35" r=".8" fill="#fff"/>', 'rotate(30)') +
+    pat('bk-ph', 2.8, '<circle cx="1.4" cy="1.4" r=".95" fill="#fff"/>', 'rotate(30)') +
     mask('bk-ms', 'bk-ps') + mask('bk-md', 'bk-pd') + mask('bk-mc', 'bk-pc') + mask('bk-mh', 'bk-ph') +
     `</defs></svg>`;
 }
@@ -316,20 +316,20 @@ export function drawChara(word, { state = 'print', inkTone, odd } = {}) {
 
   // 色版のまだら（参考絵の朱と霧のまだら）
   let mottles = '';
-  if (!proof && r() < sp.mottle + (isOdd ? 0 : 0)) {
-    for (let i = 0, m = 1 + ((r() * 2) | 0); i < m; i++) {
-      const cx = 30 + r() * 40, cy = 34 + r() * 36, rr = 4 + r() * 5, pts = [];
-      for (let j = 0; j < 7; j++) { const a = (j / 7) * 2 * PI; pts.push([cx + cos(a) * rr * (0.6 + r() * 0.6), cy + sin(a) * rr * (0.6 + r() * 0.6)]); }
-      mottles += `<path d="${qpath(pts)}" fill="${acc}" opacity=".85"/>`;
-    }
+  for (let i = 0, m = r() < sp.mottle ? 1 + ((r() * 2) | 0) : 0; i < m; i++) {
+    const cx = 30 + r() * 40, cy = 34 + r() * 36, rr = 4 + r() * 5, pts = [];
+    for (let j = 0; j < 7; j++) { const a = (j / 7) * 2 * PI; pts.push([cx + cos(a) * rr * (0.6 + r() * 0.6), cy + sin(a) * rr * (0.6 + r() * 0.6)]); }
+    mottles += `<path d="${qpath(pts)}" fill="${acc}" opacity=".85"/>`;
   }
+  if (proof) mottles = '';
+  const shadow = state === 'shadow';
   const halo = sp.halo ? `<use href="#${k}" fill="${proof ? NAVY : MIST}" opacity="${proof ? 0.12 : 0.6}" transform="translate(50 50) scale(1.1) translate(-53 -52)"/>` : '';
   const lumps = sp.lumps ? `<path d="${sp.lumps}" fill="${ink}"/>` : '';
   const flapFill = sp.flap ? `<path d="${sp.flap}Z" fill="${PAPER}" opacity=".35"/>` : '';
   const color =
-    `<g filter="url(#bk-ink)" transform="translate(${mx} ${my})">${halo}${lumps}<use href="#${k}" fill="${ink}"/>` +
+    `<g${shadow ? '' : ' filter="url(#bk-ink)"'} transform="translate(${mx} ${my})">${isOdd && !proof ? `<use href="#${k}" fill="none" stroke="${LAMP}" stroke-width="8"/>` : ''}${halo}${lumps}<use href="#${k}" fill="${ink}"/>` +
     `<g clip-path="url(#${c})"><rect width="100" height="100" fill="${isOdd ? LAMP : NAVY}" mask="url(#bk-mh)" opacity="${isOdd ? 0.5 : 0.85}"/>` +
-    `<use href="#${k}" fill="${ink}" transform="translate(-5 -6)"/>${mottles}` +
+    `<use href="#${k}" fill="${ink}" transform="translate(-6 -7)"/>${mottles}` +
     (pat ? `<rect width="100" height="100" fill="${patFill}" opacity="${patOp}" mask="url(#${pat})"/>` : '') +
     `</g>${flapFill}${sp.wax && !proof ? sp.wax.replace('ACC', acc === NAVY ? RED : acc) : ''}</g>`;
   const key =
@@ -344,9 +344,9 @@ export function drawChara(word, { state = 'print', inkTone, odd } = {}) {
   const defs = `<defs><path id="${k}" d="${sp.d}"/><clipPath id="${c}"><use href="#${k}"/></clipPath></defs>`;
   const art = `<g stroke="${NAVY}" stroke-linejoin="round" stroke-linecap="round">${sp.back ?? ''}${color}${key}</g>`;
   const head = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="bk bk-${species}" data-state="${state}">`;
-  const turn = `transform="rotate(${tilt} 50 55)"`;
+  const turn = `transform="translate(50 55) rotate(${tilt}) scale(${species === 'oshimi' ? 1 : 1.04}) translate(-50 -55)"`;
 
-  if (state === 'shadow') {
+  if (shadow) {
     const s = `bk-s-${id}`;
     return `${head}<defs><path id="${k}" d="${sp.d}"/><clipPath id="${c}"><use href="#${k}"/></clipPath><g id="${s}">${art}</g></defs>` +
       `<g filter="url(#bk-rough)" ${turn}><use href="#${s}" filter="url(#bk-sm)" transform="translate(2.2 1.6)" opacity=".8"/><use href="#${s}" filter="url(#bk-sn)"/></g></svg>`;
