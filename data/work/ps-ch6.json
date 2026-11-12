@@ -1,0 +1,25 @@
+{
+ "ch": 6,
+ "ps": [
+  {"shelf": 47, "en": "In bad {weather}, the {path} is a {danger}. On the last {slope} of the {hill}, keep to the stones the keeper put by hand.",
+   "ja": "天気が悪いと、この小道は危険です。丘の最後の坂では、灯台守が手で置いた石の上を歩いてください。"},
+  {"shelf": 48, "en": "For the {account}: I fixed a {shoe} for the auditor with old {steel}. I {assure} you, no town {metal} was used.",
+   "ja": "帳簿のために記す。監査役の靴を、古い鋼で直してやった。請け合うが、町の金属は使っていない。"},
+  {"shelf": 49, "en": "No money, but no {poverty} either: the {wind}, a {calm} sea, and this {tower} are my {reward}.",
+   "ja": "お金は無いが、貧しさも無い。風と、穏やかな海と、この塔が、わたしへの報いだ。"},
+  {"shelf": 50, "en": "After a {sudden} {silence}, the {radio} gave me one word: thanks. I stayed on the {floor}, on my burned {carpet}, until dawn.",
+   "ja": "突然の静けさのあと、無線がひとことだけ届けた。「ありがとう」。わたしは焼けた敷物の上、床に座ったまま夜明けを迎えた。"},
+  {"shelf": 51, "en": "I saw a {drama} from the back {gallery}. The {audience} would {praise} a {lazy} man in a costume, but not a quiet keeper.",
+   "ja": "後ろの桟敷から劇を見たことがある。観客は、衣装を着た怠け者ならほめるのに、黙って働く灯台守はほめない。"},
+  {"shelf": 52, "en": "I will not send an {email} or a {digital} note. I am {ashamed} of the {silver} bugs, but I cannot hide {forever}.",
+   "ja": "電子メールも、電子の書きつけも送らない。銀の紙魚たちを恥じている。それでも、永遠に隠れてはいられない。"},
+  {"shelf": 53, "en": "No {victim} here: our thanks are a {permanent} {obligation}. A lamp at each door is our {signal}, and Mina brings bread for any {hunger}.",
+   "ja": "ここに被害者はいません。お礼は、ずっと残る義務です。戸口ごとのランプが合図で、空腹の人にはミナがパンを届けます。"},
+  {"shelf": 54, "en": "I blamed {inflation}, {unemployment}, and my {worry} for the town. The truth: my {thirst} for power, which is a {shock} to me too.",
+   "ja": "わたしは物価上昇と失業と、町への心配のせいにしてきた。本当は、力への渇きだった。それは、わたし自身にも衝撃だ。"},
+  {"shelf": 55, "en": "Every year on that night, we {remember} you with {respect}. {Bless} you, keeper; we are {grateful}, and our children send their {friendship} too.",
+   "ja": "毎年あの夜になると、わたしたちは敬意をこめてあなたを覚えている。灯台守よ、あなたに祝福を。心から感謝しています。子どもたちも友情を送ります。"},
+  {"shelf": 56, "en": "This is no {literature}; my {grammar} is slow. But thanks is a {language} you can read, so here is a {poem}: stay {healthy}, keeper.",
+   "ja": "これは文学ではありません。文法もまだおぼつかない。でも、お礼はあなたにも読める言語だから、詩をひとつ。灯台守さん、どうか健康で。"}
+ ]
+}
