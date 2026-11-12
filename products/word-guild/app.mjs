@@ -29,7 +29,7 @@ function unlockSound() {
 
 function title() {
   const returning = guild.hasProgress();
-  music.stop();
+  music.play('post');
   view.className = 'kp kp-title';
   view.innerHTML = `
     ${artBox('key', 'kp-key')}
@@ -55,11 +55,11 @@ function title() {
   };
 }
 
-// 仮の文。絵は3枚、文は2行ずつ。タップで送り、「とばす」で最初の配達へ。
+// オープニング。絵は3枚、文は2行ずつ。タップで送り、「とばす」で最初の配達へ。
 const OPENING = [
-  {art: 'open1', lines: ['海沿いの坂の町、ヨスガ港。', 'ある朝から白い霧が出て、手紙の言葉が消えはじめた。']},
-  {art: 'open2', lines: ['看板も、帳簿も、宛名も、霧に食べられていく。', '犯人は、紙とインクの小さな魔物たちだ。']},
-  {art: 'open3', lines: ['ハトリ局長は、新人のツムギに鞄を渡した。', '「消えた言葉を取り戻して、手紙を届けておいで」']},
+  {art: 'open1', lines: ['海沿いの坂の町、ヨスガ港。', 'ある朝、白い霧が出て、手紙の言葉が消えはじめた。']},
+  {art: 'open2', lines: ['看板も、帳簿も、宛名も、霧に消えていく。', '言葉を食べているのは、紙とインクの小さな魔物たち。']},
+  {art: 'open3', lines: ['新人のツムギは、局長から鞄を受け取った。', '「消えた言葉を取り戻して、手紙を届けておいで」']},
 ];
 
 function opening(step = 0) {

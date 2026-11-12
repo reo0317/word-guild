@@ -1,7 +1,7 @@
 // 局の画面・配達の画面・結果画面と、盤面の入力。
 // app.mjs からは mountGuild() だけを使う。ゲームの進行は quest.mjs に任せる。
 import {Trace} from './trace.mjs';
-import {artBox, ENEMY_ART} from './art.mjs';
+import {artBox, swapArt, ENEMY_ART, BIG_ENEMY_ART} from './art.mjs';
 import {loadWords} from './words.mjs';
 import {Quest, HEARTS} from './quest.mjs';
 import {pickSession, shelfStatus, dueCount, todayNumber, SESSION_SIZE} from './srs.mjs';
@@ -115,8 +115,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     view.className = 'gq gq-home';
     view.innerHTML = `
       <p class="eyebrow">霧晴れ郵便局</p>
-      <div class="gq-scene">${artBox('post', 'gq-scene-art')}</div>
-      <div class="gq-guide">${artBox('hatori', 'gq-face')}<p class="bubble"><small>ハトリ局長</small>${esc(guildMessage())}</p></div>
+      <div class="gq-scene">${artBox('post', 'gq-scene-art')}${artBox('tsumugi', 'gq-char gq-tsumugi')}${artBox('fuurou', 'gq-char gq-fuurou')}</div>
+      <div class="gq-guide">${artBox(progress.quests === 0 ? 'hatori' : 'hatoriSmile', 'gq-face')}<p class="bubble"><small>ハトリ局長</small>${esc(guildMessage())}</p></div>
       <h3 class="gq-chapter">${current.ch}区 ${esc(current.name)}<small>ともった街灯 ${current.litShelves}/${current.shelves.length}</small></h3>
       <ul class="gq-shelves ${current.shelves.length > 6 ? 'wide' : ''}" aria-label="通りの街灯">${current.shelves.map(shelfMarkup).join('')}</ul>
       <ul class="gq-chapters" aria-label="ほかの区">${others.map(otherChapterMarkup).join('')}</ul>
@@ -165,14 +165,15 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     picking = null;
     message = '';
     const coach = tutorial && quest.index === 0
-      ? '<p class="gq-coach"><b>ハトリ局長</b>お題の日本語に合う英単語を、となりの文字へなぞってつなげよう</p>' : '';
+      ? `<div class="gq-coach">${artBox('hatori', 'gq-coach-face')}<b>ハトリ局長</b>お題の日本語に合う英単語を、となりの文字へなぞってつなげよう</div>` : '';
     view.className = `gq gq-quest gq-ch${questChapter}${coach ? ' gq-tutor' : ''}`;
     view.innerHTML = `
       <div class="gq-top"><span class="gq-hearts" id="gq-hearts"></span><b id="gq-label"></b><span class="gq-timer" aria-hidden="true"><i id="gq-timer"></i></span><button type="button" class="gq-quit" id="gq-quit">やめる</button></div>
       <div class="gq-arena" id="gq-arena">
         ${artBox(`ward${questChapter}`, 'gq-arena-bg')}
-        ${artBox('tsumugi', 'gq-hero')}
-        <div class="gq-enemy" id="gq-enemy">${artBox(ENEMY_ART[quest.enemy], 'gq-sprite')}</div>
+        <i class="gq-tint" aria-hidden="true"></i>
+        ${artBox('tsumugi', 'gq-hero')}${artBox('fuurou', 'gq-owl')}
+        <div class="gq-enemy${quest.isBig ? ' big' : ''}" id="gq-enemy">${artBox(quest.isBig ? BIG_ENEMY_ART : ENEMY_ART[quest.enemy], 'gq-sprite')}</div>
         <span class="gq-pips" id="gq-pips" role="img"></span>
       </div>
       <ul class="gq-clues" id="gq-clues"></ul>
@@ -223,11 +224,21 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       });
       const fresh = now - strike.started < 700 ? ' fresh' : '';
       const radius = Math.max(9, Math.min(box.width / 7, box.height / 6) * 0.3);
+      // 経路の各マスに朱の判が順に押される。判は少しずつ傾け、版画の刷りむらを出す。
       const marks = points.map(([x, y], i) =>
-        `<circle class="seal-dot${fresh}" style="--i:${i}" cx="${x}" cy="${y}" r="${radius * 0.55}"/>`).join('');
+        `<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(i * 37) % 24 - 12})"><g class="seal-dot${fresh}" style="--i:${i}">`
+        + `<circle r="${radius * 0.62}"/><circle class="seal-ring" r="${radius * 0.38}"/></g></g>`).join('');
+      // 最後に封蝋の判：波打つ縁、内側の輪、封筒の折り目。
       const [lastX, lastY] = points.at(-1);
+      const wave = Array.from({length: 48}, (_, k) => {
+        const angle = k / 48 * Math.PI * 2;
+        const r = radius * 1.2 * (1 + 0.07 * Math.sin(angle * 9));
+        return `${(Math.cos(angle) * r).toFixed(1)},${(Math.sin(angle) * r).toFixed(1)}`;
+      }).join(' ');
+      const flap = radius * 0.42;
       return `<g class="seal-route"><polyline class="seal-line" points="${points.map(point => point.join(',')).join(' ')}" fill="none"/>${marks}
-        <g class="seal-wax${fresh}" style="--i:${points.length}" transform="translate(${lastX} ${lastY})"><circle r="${radius * 1.15}"/><circle class="seal-ring" r="${radius * 0.75}" fill="none"/></g></g>`;
+        <g transform="translate(${lastX.toFixed(1)} ${lastY.toFixed(1)})"><g class="seal-wax${fresh}" style="--i:${points.length}"><polygon points="${wave}"/>`
+        + `<circle class="seal-ring" r="${radius * 0.82}"/><path class="seal-mark" d="M${-flap} ${-flap * 0.5}L0 ${flap * 0.3}L${flap} ${-flap * 0.5}M${-flap} ${-flap * 0.5}V${flap * 0.6}H${flap}V${-flap * 0.5}" fill="none"/></g></g></g>`;
     }).join('');
   }
 
@@ -423,7 +434,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     if (text === null || !quest) return;
     const result = quest.answer(text);
     if (!result) {
-      if (text.length > 1) pulse($('#gq-text'), 'wrong');
+      if (text.length > 1) { pulse($('#gq-text'), 'wrong'); sfx('wrong'); }
       paintBoard();
       paintInput();
       return;
@@ -435,8 +446,18 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     message = `${result.word.w} · ${result.word.ja}`;
     pulse($('#gq-board'), 'correct');
     pulse($('#gq-enemy'), 'flinch');
+    react(result.cleared);
     paintAll();
     if (result.cleared) defeat();
+  }
+
+  // 正解のたびに、フウロウが判を押す。盤面を取り切ったらツムギが喜ぶ。
+  function react(cleared) {
+    const owl = $('.gq-owl');
+    swapArt(owl, 'fuurouStamp');
+    pulse(owl, 'stamped');
+    if (cleared) swapArt($('.gq-hero'), 'tsumugiJoy');
+    later(450, () => { swapArt(owl, 'fuurou'); if (!cleared) swapArt($('.gq-hero'), 'tsumugi'); });
   }
 
   function defeat() {
@@ -480,7 +501,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     view.className = 'gq gq-result';
     view.innerHTML = `
       <p class="eyebrow">${outcome.retreated ? (quest.hearts <= 0 ? 'ハートがなくなった' : '配達をやめた') : '配達'}</p>
-      <h2 class="gq-title">${outcome.retreated ? '局に戻る' : '配達完了！'}</h2>
+      <div class="gq-result-head">${artBox(outcome.retreated ? 'tsumugi' : 'tsumugiJoy')}<h2 class="gq-title">${outcome.retreated ? '局に戻る' : '配達完了！'}</h2>${artBox(outcome.retreated ? 'fuurou' : 'fuurouStamp', 'art-owl')}</div>
       <ul class="gq-results" aria-label="今回の語">${outcome.entries.map(resultRow).join('') || '<li class="empty">答えた語はありません</li>'}</ul>
       <p class="gq-lit">${lit.length ? `✦ ${lit.join('・')} がともった！` : '今回ともった街灯はありません'}</p>
       <p class="gq-back">戻ってくる紙魚（しみ）は <b>${back}</b> 匹</p>
