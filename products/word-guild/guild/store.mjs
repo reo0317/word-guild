@@ -4,8 +4,9 @@ const BACKUP_KEY = `${STORAGE_KEY}.backup`;
 
 export function emptyProgress() {
   return {v: 1, words: {}, quests: 0, lastDay: 0,
+    gates: Array.isArray(value.gates) && value.gates.every(gate => Number.isInteger(gate) && gate >= 1 && gate <= 6) && new Set(value.gates).size === value.gates.length ? [...value.gates] : [],
     settings: {fresh: 4}, streak: {count: 0, last: 0, best: 0},
-    daily: null, dailyDone: 0, exportDay: 0};
+    daily: null, dailyDone: 0, exportDay: 0, gates: []};
 }
 
 const isCount = value => Number.isInteger(value) && value >= 0;
@@ -14,6 +15,7 @@ function additionalFields(value) {
   const streak = value.streak;
   const daily = value.daily;
   return {
+    gates: Array.isArray(value.gates) && value.gates.every(gate => Number.isInteger(gate) && gate >= 1 && gate <= 6) && new Set(value.gates).size === value.gates.length ? [...value.gates] : [],
     settings: {fresh: [4, 6, 8].includes(value.settings?.fresh) ? value.settings.fresh : 4},
     streak: Object.fromEntries(['count', 'last', 'best'].map(key =>
       [key, isCount(streak?.[key]) ? streak[key] : 0])),

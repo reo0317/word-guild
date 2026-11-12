@@ -6,7 +6,7 @@ import {spelling} from './board.mjs';
 export const INTERVALS = [0, 0, 1, 3, 7, 21]; // 箱ごとの、次に出るまでの日数
 export const MAX_BOX = 5;
 export const SESSION_SIZE = 12;
-export const NEW_PER_SESSION = 4;
+export const NEW_PER_SESSION = 5;
 export const GROUP_SIZE = 3;
 export const GROUP_LETTERS = 30;
 export const SOLO_LETTERS = 13; // この文字数以上の語は1語だけの盤面

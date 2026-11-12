@@ -8,6 +8,7 @@ export const HEARTS = 5;
 export const IDLE_LIMIT = 15000;
 export const IDLE_LIMIT_BIG = 25000; // 大物は長い綴りをなぞるので猶予を延ばす
 export const MAX_REVENGE = 3;
+// 互換のため残す（非推奨）。画面の移行後に削除する。
 export const ENEMIES = ['cat', 'dog', 'sun', 'ant'];
 export const REVENGE_ENEMY = 'animal';
 const RESULT_BY_HINT = ['clean', 'hint', 'taught'];
@@ -16,13 +17,14 @@ const REVENGE_ORDER = {taught: 0, hint: 1};
 // phase: entering（入場中） / battle / defeated（撃破の演出中） / finished
 export class Quest {
   // groups は pickSession の戻り値（語オブジェクトの組の配列）。
-  constructor(groups, {rand = Math.random, progress = emptyProgress(), today = 0, save = () => {}} = {}) {
+  constructor(groups, {rand = Math.random, progress = emptyProgress(), today = 0, save = () => {}, gate = null} = {}) {
     this.groups = groups;
     this.rand = rand;
     this.startProgress = progress;
     this.progress = progress;
     this.today = today;
     this.save = save;
+    this.gate = Number.isInteger(gate) && gate >= 1 && gate <= 6 ? gate : null;
     this.hearts = HEARTS;
     this.results = new Map(); // id → 'clean' | 'hint' | 'taught'（最初の結果）
     this.retreated = false;
@@ -33,6 +35,7 @@ export class Quest {
 
   get total() { return this.groups.length; }
   get isRevenge() { return this.index >= this.total; }
+  // 互換のため残す（非推奨）。
   get enemy() { return this.isRevenge ? REVENGE_ENEMY : ENEMIES[Math.min(this.index, ENEMIES.length - 1)]; }
   get isBig() { return !this.isRevenge && this.slots.length === 1 && isBig(this.slots[0].word); }
   get idleLimit() { return this.isBig ? IDLE_LIMIT_BIG : IDLE_LIMIT; }
@@ -144,6 +147,9 @@ export class Quest {
       words,
       quests: this.startProgress.quests + 1,
       lastDay: this.today,
+      gates: !retreated && this.gate !== null
+        ? [...new Set([...(this.startProgress.gates ?? []), this.gate])]
+        : [...(this.startProgress.gates ?? [])],
     };
     // 撤退したとき、出題済みで未回答の語を末尾に足す（採点も保存もしない）
     if (retreated) {

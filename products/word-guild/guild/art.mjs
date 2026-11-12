@@ -29,6 +29,13 @@ export const ART = {
   oshimi:     {file: 'art/oshimi.webp',         kind: 'sprite', label: 'オオシミ', ready: true},
 };
 
+// 分類名から、後日届く紙魚の体の絵を引く。
+export const BODY_ART = Object.fromEntries(
+  ['money', 'work', 'person', 'time', 'place', 'move', 'food', 'doc',
+    'goods', 'tool', 'nature', 'body', 'mind', 'number', 'action', 'state']
+    .map(category => [category, `art/body-${category}.webp`])
+);
+
 // quest.mjs の敵の名前（変えない）→ 新しい敵の絵。大物の盤面は oshimi（view.mjs）。
 export const ENEMY_ART = {cat: 'shimi', dog: 'keshikasu', sun: 'nijimi', ant: 'hokoridama', animal: 'atenashi'};
 export const BIG_ENEMY_ART = 'oshimi';
