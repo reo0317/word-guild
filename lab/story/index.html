@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>物語の英文 試作</title>
+<style>
+:root{--ink:#1f2a44;--paper:#f3ead8;--seal:#c8462f;--fog:#9fb3bf;--lamp:#f2b84b;
+ --paper-2:#e6d9bd;--paper-hi:#fbf6ea;--fog-lt:#dde5e8;--lamp-lt:#fbe6b4;--bg:#2a3556;
+ --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Sans","Yu Gothic UI",system-ui,sans-serif;overflow-x:hidden}
+main{max-width:480px;margin:auto;padding:0 12px calc(40px + env(safe-area-inset-bottom))}
+.nav{position:sticky;top:0;z-index:20;background:var(--bg);padding:calc(env(safe-area-inset-top) + 8px) 0 8px;display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
+.nav a,.rb,.chip{width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--paper-2);color:var(--ink);font:900 15px/1 var(--serif);display:grid;place-items:center;text-decoration:none;box-shadow:0 2px 0 var(--ink);padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.nav .sep{width:2px;height:22px;background:var(--fog);opacity:.5}
+.chip[aria-pressed=true]{background:var(--lamp);box-shadow:0 2px 0 var(--ink)}
+.src{position:absolute;right:8px;top:6px;font-size:10px;color:var(--fog)}
+section{margin:14px 0 22px;position:relative}
+h2{margin:0 0 6px 4px;font:900 13px/1 var(--serif);letter-spacing:.14em;color:var(--lamp);display:flex;align-items:center;gap:8px}
+h2 i{font-style:normal;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--lamp);color:var(--ink)}
+.card{background:var(--paper);border:3px solid var(--paper);border-radius:14px;padding:12px;box-shadow:0 0 0 2px var(--ink);position:relative}
+.tools{display:flex;gap:10px;justify-content:center;margin-top:10px}
+.rb{width:44px;height:44px}
+.rb svg{width:22px;height:22px}
+.rb.go{background:var(--seal);color:var(--paper)}
+
+/* 紙 */
+.paper{background:var(--paper-hi);border:2px solid var(--ink);border-radius:6px;padding:10px 12px 8px;position:relative;font-family:Georgia,"Times New Roman",var(--serif);box-shadow:2px 3px 0 #0002}
+.paper.k-notice,.paper.k-sign{border-style:double;border-width:4px}
+.paper.k-news{background:#efe7d3}
+.paper.k-ledger{background-image:repeating-linear-gradient(transparent 0 27px,#9fb3bf33 27px 28px)}
+.ph{display:flex;align-items:center;gap:6px;font:700 12px/1.2 system-ui;color:var(--seal);padding:0 34px 8px 0;border-bottom:1.5px solid var(--ink);margin-bottom:6px;min-height:30px;flex-wrap:wrap}
+.ph .arr{width:22px;height:10px}
+.ph .lamp{position:absolute;right:8px;top:6px}
+.ln-wrap{position:relative;padding-left:14px}
+.ln{margin:0;font-size:17px;line-height:1.95;letter-spacing:.01em;color:var(--ink)}
+.ln .dot{position:absolute;left:0;top:.95em;width:7px;height:7px;border-radius:50%;background:var(--fog-lt);border:1.5px solid var(--fog)}
+.ln-wrap.read .dot{background:var(--ink);border-color:var(--ink)}
+.ln-wrap.read{cursor:pointer}
+.ja{margin:0 0 4px;padding:4px 8px;background:var(--lamp-lt);border-radius:6px;font:13px/1.6 "Hiragino Sans",system-ui;color:var(--ink)}
+
+/* 語の見え方：g 消えている t 薄いインク i 濃いインク w かすれ */
+.w{position:relative;display:inline-block;white-space:nowrap}
+.w .t{display:inline-block;transition:color .8s,opacity .8s}
+.w.s-g .t{color:transparent}
+.w.s-t .t{color:#6e88aa}
+.w.s-i .t,.w.s-w .t{color:var(--ink)}
+.w.s-i{border-bottom:2px dotted var(--ink);line-height:1.5}
+.w.s-w .t{opacity:.8;-webkit-mask-image:radial-gradient(circle at 22% 62%,#0000 1.8px,#000 2.8px),radial-gradient(circle at 63% 30%,#0000 1.5px,#000 2.5px),radial-gradient(circle at 85% 70%,#0000 2px,#000 3px);-webkit-mask-composite:source-in;mask-image:radial-gradient(circle at 22% 62%,#0000 1.8px,#000 2.8px),radial-gradient(circle at 63% 30%,#0000 1.5px,#000 2.5px),radial-gradient(circle at 85% 70%,#0000 2px,#000 3px);mask-composite:intersect}
+.fog{position:absolute;inset:3px -4px 2px;pointer-events:none;opacity:0;transition:opacity .8s;border-radius:50%;
+ background:radial-gradient(ellipse 52% 55% at var(--a) 50%,#c6d3d9 0,#c6d3d900 100%),radial-gradient(ellipse 48% 60% at var(--b) 44%,#dde5e8f0 0,#dde5e800 100%),radial-gradient(ellipse 70% 70% at 50% 55%,#dde5e8e6 30%,#dde5e800 100%)}
+.w.s-g .fog{opacity:1}
+.w .sh,.w .bug{position:absolute;z-index:2;pointer-events:none;line-height:0}
+.w .sh{left:50%;top:-.2em;width:1.55em;height:1.55em;margin-left:-.78em;transition:transform .55s,opacity .55s}
+.w .bug{right:-.5em;top:-.7em;width:1.15em;height:1.15em;transition:transform .55s,opacity .55s}
+.w .sh svg,.w .bug svg{width:100%;height:100%}
+.w .pop{transform:translateY(-1.4em) scale(1.6) rotate(25deg);opacity:0}
+.w.face{cursor:default}
+.w .face{position:absolute;left:50%;top:-.35em;width:1.7em;height:1.7em;margin-left:-.85em;z-index:2;line-height:0}
+.w .face svg{width:100%;height:100%}
+.w[data-id]:not(.s-g){cursor:pointer}
+.tap .w.s-g.act,.tap .w.s-w{cursor:pointer}
+.tap .w.s-g.act .fog{animation:breath 1.6s ease-in-out infinite}
+@keyframes breath{50%{opacity:.7}}
+
+/* 結果画面 */
+.res{background:var(--paper);border:3px solid var(--paper);border-radius:14px;box-shadow:0 0 0 2px var(--ink);padding:12px;display:flex;flex-direction:column;gap:12px}
+.row12{display:flex;gap:2px;justify-content:space-between}
+.mini{flex:1;max-width:30px;position:relative;background:var(--paper-hi);border:1px solid var(--ink);border-radius:3px;padding:1px;aspect-ratio:3/4;display:grid;place-items:center}
+.mini svg.chara{width:100%;height:auto;display:block}
+.mini em{position:absolute;right:-3px;bottom:-3px;width:11px;height:11px;border-radius:50%;background:var(--lamp);border:1.2px solid var(--ink)}
+.mini em.drop{background:var(--ink)}
+.mini em.drop::after{content:"";position:absolute;left:3px;top:2px;width:3px;height:5px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:var(--paper)}
+.acts{display:flex;align-items:center;justify-content:center;gap:16px}
+.pill{background:var(--seal);color:var(--paper);border:2px solid var(--ink);border-radius:26px;padding:12px 22px;font:900 17px/1 var(--serif);letter-spacing:.12em;box-shadow:0 3px 0 var(--ink);cursor:pointer;touch-action:manipulation}
+.acts .rb svg{width:22px;height:22px}
+
+/* 封筒 */
+.stage{position:relative;aspect-ratio:340/230;border-radius:8px;background:var(--fog-lt);border:2px solid var(--ink);overflow:hidden}
+.stage svg.scene{position:absolute;inset:0;width:100%;height:100%}
+.stage .furo{position:absolute;width:20%;left:41%;top:-30%;opacity:0;transition:top .35s cubic-bezier(.5,0,1,.6),opacity .2s}
+.stage .furo.on{top:18%;opacity:1}
+.stage .furo.off{top:-30%;opacity:0;transition:top .5s,opacity .5s}
+.sc-paper{transition:transform .8s,opacity .5s;transform-box:fill-box;transform-origin:center}
+.sc-env{opacity:0;transition:opacity .4s}
+.sc-flap{transform-box:fill-box;transform-origin:top center;transform:scaleY(-1);transition:transform .6s}
+.sc-seal{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(2.2);transition:transform .25s ease-in,opacity .2s}
+.sc-move{transition:transform 1s ease-in-out,opacity .6s;transform-box:view-box}
+.sc-win{fill:#46506f;transition:fill .6s}
+.sc-glow{opacity:0;transition:opacity .8s}
+.s1 .sc-paper{transform:translateY(34px) scaleY(.42)}
+.s2 .sc-env{opacity:1}
+.s3 .sc-flap{transform:scaleY(1)}
+.s4 .sc-seal{opacity:1;transform:scale(1)}
+.s5 .sc-move{transform:translate(110px,36px) scale(.28)}
+.s5 .sc-win{fill:var(--lamp)}
+.s5 .sc-glow{opacity:1}
+.next-env{display:flex;align-items:center;gap:8px;margin-top:10px;justify-content:center;opacity:0;transition:opacity .6s;font:700 12px system-ui;color:var(--ink)}
+.next-env.on{opacity:1}
+.next-env svg{width:54px;height:36px}
+.next-env .f{max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* 地図 */
+.map{background:var(--fog-lt);border:2px solid var(--ink);border-radius:10px;padding:10px 10px 14px;position:relative;overflow:hidden}
+.counts{display:flex;gap:16px;justify-content:center;margin-bottom:6px}
+.counts span{display:flex;align-items:center;gap:4px;font:900 15px/1 var(--serif)}
+.counts svg.chara{width:26px;height:26px}
+.road{position:relative;display:flex;flex-direction:column;gap:6px}
+.road::before{content:"";position:absolute;left:50%;top:10px;bottom:10px;border-left:3px dashed #7f93a0;transform:translateX(-50%)}
+.node{position:relative;display:flex;align-items:center;gap:6px;min-height:84px}
+.node.l{flex-direction:row;padding-right:55%}
+.node.r{flex-direction:row-reverse;padding-left:55%}
+.node .pole{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--fog-lt);border-radius:50%;padding:2px}
+.node .pp{background:none;border:0;padding:2px;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.node .pp:active{transform:translateY(1px)}
+.node.l .pp{margin-left:auto}
+.node.r .pp{margin-right:auto}
+.node .badge{display:flex;align-items:center;gap:2px;font:900 12px/1 var(--serif)}
+.node .badge svg{width:20px;height:20px}
+.node .win{width:14px;height:14px;border-radius:3px;background:var(--lamp);border:1.5px solid var(--ink);box-shadow:0 0 8px 2px #f2b84b99}
+.you{position:absolute;z-index:3;width:46px;pointer-events:none}
+.bubble{position:absolute;z-index:4;left:4px;right:4px;background:var(--paper-hi);border:2px solid var(--ink);border-radius:10px;padding:2px 8px 2px 4px;font-size:14px}
+.bubble:after{content:"";position:absolute;left:62%;bottom:-8px;width:12px;height:12px;background:var(--paper-hi);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg)}
+.bubble .ln{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px;line-height:1.9}
+.bubble .dot{display:none}
+.bubble .ln-wrap{padding-left:0}
+
+/* 窓 */
+#pop{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;padding:10px 12px calc(12px + env(safe-area-inset-bottom))}
+#pop.on{display:block}
+#pop .in{max-width:456px;margin:auto;background:var(--paper);border:3px solid var(--ink);border-radius:14px;padding:12px;box-shadow:0 8px 30px #000a;max-height:80dvh;overflow:auto;position:relative}
+#pop .x{position:absolute;right:8px;top:8px;width:32px;height:32px;box-shadow:none;z-index:3}
+.wordcard{display:flex;gap:12px;align-items:center;padding-right:36px}
+.wordcard .pic{width:84px;height:84px;flex-shrink:0;background:var(--paper-hi);border:2px solid var(--ink);border-radius:6px}
+.wordcard .pic svg{width:100%;height:100%}
+.wordcard b{font:900 22px/1.2 Georgia,serif;display:block}
+.wordcard span{font:14px system-ui}
+.wordcard small{display:block;font:12px system-ui;color:#6b6552;margin-top:2px}
+.msg{color:var(--fog);text-align:center;font-size:12px;padding:20px}
+</style>
+</head>
+<body>
+<main id="app"><p class="msg">…</p></main>
+<div id="pop"><div class="in"><button class="rb x" id="popx" aria-label="閉じる">✕</button><div id="popbody"></div></div></div>
+<script type="module">
+import {charaDefs} from '../../products/word-guild/guild/chara-svg.mjs';
+import {BASE, esc, loadStory, makeCtx, renderLetter, setWord, defeat, syncDots, readLines, lampSvg, miniPaper} from './story.mjs';
+
+const [words, tags] = await Promise.all([
+  fetch(BASE + 'data/words.json').then(r => r.json()),
+  fetch(BASE + 'data/chara.json').then(r => r.json()),
+]);
+const ctx = makeCtx(words, tags);
+const story = await loadStory(words);
+let vi = 0;
+const $ = (s, r = document) => r.querySelector(s);
+const letter = () => story.variants[vi];
+const G = rows => rows.map(r => r.split(''));
+const play = '<svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg>';
+const redo = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12a7 7 0 1 0 2.2-5.1M5 4v4h4"/></svg>';
+const home = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M3 11l9-7 9 7M6 10v10h12V10"/></svg>';
+const quiet = (id, st = 'print') => ctx.svg(id, st);
+
+const defs = document.createElement('div');
+defs.innerHTML = `<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>${charaDefs(BASE)}</defs></svg>`;
+document.body.prepend(defs.firstChild);
+
+// 窓
+function pop(html) { $('#popbody').innerHTML = html; $('#pop').classList.add('on'); }
+$('#popx').onclick = () => $('#pop').classList.remove('on');
+$('#pop').addEventListener('click', e => { if (e.target.id === 'pop') $('#pop').classList.remove('on'); });
+function wordCard(id) {
+  const w = ctx.byId.get(id); if (!w) return;
+  pop(`<div class="wordcard"><div class="pic">${quiet(id, 'print')}</div><div><b>${esc(w.w)}</b><span>${esc(w.ja)}</span><small>${esc(w.ex)}</small></div></div>`);
+}
+// 紙の共通の押し方：読めた語→切手、読めた行→訳
+function wirePaper(root, {onTap} = {}) {
+  root.addEventListener('click', e => {
+    const w = e.target.closest('.w');
+    if (w && onTap && onTap(w, e)) return;
+    if (w && !w.classList.contains('s-g') && w.dataset.id) { wordCard(w.dataset.id); return; }
+    const wr = e.target.closest('.ln-wrap.read');
+    if (wr) { const j = $('.ja', wr); j.hidden = !j.hidden; }
+  });
+}
+
+const sections = [];
+function build() {
+  const L = letter();
+  const l2 = story.second || L;
+  $('#app').innerHTML = `
+  <div class="nav">${[1, 2, 3, 4, 5, 6].map(n => `<a href="#s${n}">${n}</a>`).join('')}
+   ${story.variants.length > 1 ? `<span class="sep"></span>${story.variants.map((v, i) => `<button class="chip" data-v="${i}" aria-pressed="${i === vi}">${esc(v.variant || 'AB'[i])}</button>`).join('')}` : ''}</div>
+  <section id="s1"><h2><i>1</i>霧のかすれ</h2><div class="card"><span class="src">${esc(story.source)}</span><div id="p1"></div></div></section>
+  <section id="s2"><h2><i>2</i>語が戻る</h2><div class="card"><div id="p2" class="tap"></div><div class="tools"><button class="rb go" id="go2" aria-label="自動">${play}</button><button class="rb" id="re2" aria-label="もう一度">${redo}</button></div></div></section>
+  <section id="s3"><h2><i>3</i>結果画面</h2><div class="res"><div id="p3" class="tap"></div><div class="row12" id="stamps"></div><div class="acts"><button class="rb" aria-label="局へ">${home}</button><button class="pill">つぎの石段へ</button><button class="chip" id="esc3" aria-pressed="true" aria-label="逃げた">${quiet('b0003', 'print').replace('<svg ', '<svg style="width:26px;height:26px" ')}</button></div></div></section>
+  <section id="s4"><h2><i>4</i>かすれ</h2><div class="card"><div id="p4" class="tap"></div><div class="tools" id="legend"></div><div class="tools"><button class="rb" id="re4" aria-label="もう一度">${redo}</button></div></div></section>
+  <section id="s5"><h2><i>5</i>封筒</h2><div class="card"><div id="stage" class="stage"></div><div class="next-env" id="next"></div><div class="tools"><button class="rb go" id="go5" aria-label="再生">${play}</button></div></div></section>
+  <section id="s6"><h2><i>6</i>地図の街灯</h2><div class="map" id="map"></div></section>`;
+  document.querySelectorAll('[data-v]').forEach(b => b.onclick = () => { vi = +b.dataset.v; build(); });
+
+  // 1 霧の通：全部消えている。今の行と次の行に影
+  $('#p1').innerHTML = renderLetter(ctx, L, G(['ggggg', 'ggggg', 'ggggg', 'ggggg', 'ggggg']), {shadowRows: [0, 1], lamp: lampSvg(0)});
+  wirePaper($('#p1'));
+
+  // 2 戻る動き
+  const g2 = G(['ggggg', 'ggggg', 'ggggg', 'ggggg', 'ggggg']);
+  const p2 = $('#p2');
+  let timer = null;
+  function paint2() {
+    p2.innerHTML = renderLetter(ctx, L, g2.map(r => r.map(() => 'g')), {shadowRows: [0, 1], lamp: lampSvg(0)});
+    g2.forEach(r => r.fill('g'));
+    $$('.w', p2).forEach(w => { if (w.dataset.l === '0') w.classList.add('act'); });
+  }
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  function back(w) {
+    const l = +w.dataset.l, k = +w.dataset.k;
+    if (g2[l][k] !== 'g') return;
+    g2[l][k] = 't';
+    defeat(w); setWord(w, 't');
+    w.classList.remove('act');
+    const rest = $$(`.w[data-l="${l}"]`, p2).filter(x => g2[l][+x.dataset.k] === 'g');
+    if (!rest.length) { syncDots(p2, g2); $('.ph', p2).querySelector('.lamp').outerHTML = lampSvg(readLines(g2)); }
+    if (l === 0 && !rest.length) $$('.w[data-l="1"]', p2).forEach(x => x.classList.add('act'));
+  }
+  paint2();
+  wirePaper(p2, {onTap: w => { if (w.classList.contains('s-g')) { back(w); return true; } }});
+  $('#re2').onclick = () => { clearInterval(timer); paint2(); };
+  $('#go2').onclick = () => {
+    clearInterval(timer);
+    timer = setInterval(() => {
+      const nx = $$('.w.s-g', p2).find(w => w.dataset.l === '0') || $$('.w.s-g', p2).find(w => w.dataset.l === '1');
+      if (!nx) return clearInterval(timer);
+      back(nx);
+    }, 900);
+  };
+
+  // 3 結果画面
+  const esc3 = $('#esc3');
+  function paint3() {
+    const escaped = esc3.getAttribute('aria-pressed') === 'true';
+    const g = G(escaped ? ['tttgt', 'ggggg', 'ggggg', 'ggggg', 'ggggg'] : ['ttiti', 'ggggg', 'ggggg', 'ggggg', 'ggggg']);
+    const n = readLines(g);
+    $('#p3').innerHTML = renderLetter(ctx, L, g, {shadowRows: escaped ? [1] : [1], lamp: lampSvg(n)});
+    syncDots($('#p3'), g);
+    if (escaped) {
+      const w = $('.w[data-l="0"][data-k="3"]', $('#p3'));
+      w.insertAdjacentHTML('beforeend', `<b class="face">${quiet(w.dataset.id, 'print')}</b>`);
+    }
+    if (!escaped) $$('.w[data-l="1"]', $('#p3')).forEach(w => w.classList.add('act'));
+  }
+  esc3.onclick = () => { esc3.setAttribute('aria-pressed', esc3.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); paint3(); };
+  wirePaper($('#p3'));
+  paint3();
+  const ids12 = words.slice(0, 12).map(w => w.id);
+  $('#stamps').innerHTML = ids12.map((id, i) => `<div class="mini">${quiet(id, i < 5 || i % 3 ? 'print' : 'print')}${i >= 5 && i % 3 === 0 ? '<em class="drop"></em>' : i < 5 ? '<em></em>' : ''}</div>`).join('');
+
+  // 4 かすれ
+  const g4 = G(['iiiii', 'tiiti', 'iwiiw', 'iiiii', 'wiiii'].map(r => r));
+  // 行の中に t/w を混ぜる
+  g4[0] = 'iiwii'.split(''); g4[1] = 'tiiti'.split(''); g4[2] = 'iiiwi'.split('');
+  $('#p4').innerHTML = renderLetter(ctx, L, g4, {lamp: lampSvg(5, false)});
+  syncDots($('#p4'), g4);
+  const first4 = $('#p4').innerHTML;
+  wirePaper($('#p4'), {onTap: w => {
+    if (!w.classList.contains('s-w')) return false;
+    defeat(w); setWord(w, 'i'); return true;
+  }});
+  $('#re4').onclick = () => { $('#p4').innerHTML = first4; };
+  $('#legend').innerHTML = [['g', 'say'], ['t', 'say'], ['i', 'say'], ['w', 'say']].map(([s, t]) => `<span class="w s-${s}" style="--a:30%;--b:60%;font:17px Georgia,serif;margin:0 6px"><span class="t">${t}</span><i class="fog"></i>${s === 'w' ? `<b class="bug">${quiet('b0001')}</b>` : ''}</span>`).join('');
+
+  // 5 封筒
+  const lines = [30, 26, 32, 24, 28].map((w, i) => `<rect x="${92}" y="${46 + i * 16}" width="${w * 3.4}" height="5" rx="2.5" fill="var(--ink)"/>`).join('');
+  $('#stage').innerHTML = `<svg class="scene" viewBox="0 0 340 230">
+    <rect width="340" height="230" fill="#dde5e8"/>
+    <g id="house"><path d="M236 150l38-34 38 34v58H236z" fill="var(--paper-hi)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/><rect x="262" y="164" width="24" height="26" rx="3" class="sc-win" stroke="var(--ink)" stroke-width="2.5"/><circle class="sc-glow" cx="274" cy="177" r="26" fill="var(--lamp)" opacity=".5"/><rect x="258" y="188" width="32" height="20" fill="#0000"/></g>
+    <g class="sc-move"><g class="sc-paper"><rect x="80" y="26" width="180" height="116" rx="4" fill="var(--paper-hi)" stroke="var(--ink)" stroke-width="3"/><rect x="90" y="34" width="60" height="5" rx="2.5" fill="var(--seal)"/>${lines.replace(/x="92"/g, 'x="90"').replace(/y="(\d+)"/g, (m, y) => `y="${+y - 4}"`)}</g>
+    <g class="sc-env"><path d="M70 82h200v92a6 6 0 0 1-6 6H76a6 6 0 0 1-6-6z" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="3"/><path d="M72 176l98-58 98 58" fill="none" stroke="var(--ink)" stroke-width="2.2" opacity=".5"/><path class="sc-flap" d="M70 82h200l-100 62z" fill="var(--paper)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/></g>
+    <circle class="sc-seal" cx="170" cy="144" r="13" fill="var(--seal)" stroke="var(--ink)" stroke-width="2.5"/></g></svg>
+    <img class="furo" id="furo" src="${BASE}art/fuurou-stamp.webp" alt="">`;
+  $('#next').innerHTML = `<svg viewBox="0 0 54 36"><rect x="2" y="3" width="50" height="30" rx="3" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2"/><path d="M3 5l24 17L51 5" fill="none" stroke="var(--ink)" stroke-width="2"/></svg><span class="f">${esc((story.second || L).from || 'Mina')} → ${esc((story.second || L).to || 'Hatori')}</span>`;
+  let tm = [];
+  const reset5 = () => { tm.forEach(clearTimeout); tm = []; $('#stage').className = 'stage'; $('#furo').className = 'furo'; $('#next').classList.remove('on'); };
+  $('#go5').onclick = () => {
+    reset5();
+    const st = $('#stage'), at = (ms, f) => tm.push(setTimeout(f, ms));
+    at(100, () => st.classList.add('s1'));
+    at(1000, () => st.classList.add('s2'));
+    at(1500, () => st.classList.add('s3'));
+    at(2200, () => $('#furo').classList.add('on'));
+    at(2550, () => st.classList.add('s4'));
+    at(2900, () => $('#furo').classList.replace('on', 'off'));
+    at(3500, () => st.classList.add('s5'));
+    at(5000, () => $('#next').classList.add('on'));
+  };
+
+  // 6 地図
+  const m = $('#map');
+  const cur = (story.second || L).lines[1] || L.lines[1];
+  const bubbleLetter = {lines: [cur]};
+  const nodes = [
+    {s: 'l', grid: G(['iiiii', 'iiiii', 'iiiii', 'iiiii', 'iiiii']), lit: true, n: 5, bites: 2, win: true},
+    {s: 'r', grid: G(['iiiii', 'ttttt', 'ggggg', 'ggggg', 'ggggg']), n: 2, bites: 0, here: true},
+    {s: 'l', grid: G(['iiiii', 'iiwii', 'iiiii', 'wiiii', 'iiiii']), n: 5, fog: true, bites: 3},
+    {s: 'r', grid: G(['ggggg', 'ggggg', 'ggggg', 'ggggg', 'ggggg']), n: 0},
+  ];
+  m.innerHTML = `<div class="counts"><span>${quiet('b0001', 'print')}7</span><span>${quiet('b0002', 'shadow')}3</span></div>
+   <div class="road">${nodes.map((n, i) => `<div class="node ${n.s}">
+     <button class="pp" data-n="${i}" aria-label="通">${miniPaper(n.grid, {bites: n.bites, fog: n.fog})}</button>
+     <span class="pole">${lampSvg(n.n, !!n.lit, 38)}</span>
+     ${n.win ? '<span class="win"></span>' : ''}
+     ${n.here ? `<img class="you" src="${BASE}art/tsumugi-normal.webp" alt="" style="${n.s === 'r' ? 'left:calc(55% + 2px)' : 'right:calc(55% + 2px)'};top:-6px">` : ''}
+   </div>`).join('')}</div>`;
+  // ツムギの頭上の1行
+  const here = $('.node.r', m);
+  const bub = document.createElement('div');
+  bub.className = 'bubble tap';
+  bub.innerHTML = renderLetter(ctx, bubbleLetter, G(['ttggg']), {head: false}).replace('class="paper', 'class="').replace(/<div class="/, '<div class="x ');
+  m.querySelector('.road').appendChild(bub);
+  const pos = () => { const n1 = m.querySelectorAll('.node')[1]; bub.style.top = (n1.offsetTop - bub.offsetHeight - 6) + 'px'; };
+  requestAnimationFrame(pos);
+  m.querySelectorAll('.pp').forEach(b => b.onclick = () => {
+    const n = nodes[+b.dataset.n];
+    pop(`<div id="mp">${renderLetter(ctx, story.second && n.here ? story.second : L, n.grid, {lamp: lampSvg(n.n, !!n.lit)})}</div>`);
+    syncDots($('#mp'), n.grid);
+    wirePaper($('#mp'));
+  });
+}
+build();
+if (document.fonts) document.fonts.ready.then(() => {});
+window.__story = {source: story.source, variants: story.variants.map(v => v.variant), count: story.count};
+</script>
+</body>
+</html>

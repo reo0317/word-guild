@@ -1,5 +1,6 @@
-// 坂道の地図（局の画面）。下端が郵便局、上端が灯台。DOM は container.innerHTML に描くだけで、
-// ゲームの進行や保存には触らない。押されたものは ctx.on の関数に渡す。
+// 道の地図（トップの画面）。手前（下）から奥（上）へ、遠近のついた道が続く。
+// 手前が近くて大きく、奥へ行くほど小さく霧にかすむ。今いる石段は手前寄りに見える。
+// DOM は container.innerHTML に描くだけで、ゲームの進行や保存には触らない。押されたものは ctx.on の関数に渡す。
 //
 // renderMap(view, ctx)
 //   ctx.map       stages.mjs の buildMap の結果
@@ -7,16 +8,27 @@
 //   ctx.progress  進捗（streak・daily・words を読む）
 //   ctx.total     語の総数（1,400）
 //   ctx.face(id, state)   紙魚の小さな顔の SVG 文字列
-//   ctx.message   ハトリ局長の一言
-//   ctx.notice    {text, label, act} か null（条件つきの1行）
+//   ctx.tsumugi   ツムギの絵のファイル
+//   ctx.notice    {text, label, act} か null（条件つきの知らせ）
 //   ctx.warn      保存できないときの文
-//   ctx.on        {go, gate, lamp, album, settings, credits, title, notice}
-import {esc} from './dom.mjs';
+//   ctx.story     ステージの英文（後日）。今は渡さない。渡すと「.gq-story」に出る
+//   ctx.on        {go, gate, lamp, album, settings, title, notice}
+//
+// 遠近：スクロール量を「カメラの位置」にして、道の上の各地点（world の y）を毎回投影し直す。
+//   画面の y = 地平線 + (手前の基準線 - 地平線) × s、s = 1 / (1 + 距離 / F)
+import {esc, fab, waxButton} from './dom.mjs';
 import {artBox} from './art.mjs';
 import {streakNow} from './daily.mjs';
 import {WARDS} from './chara-svg.mjs';
 
-const H = {post: 200, ward: 58, step: 38, lamp: 80, gate: 96, top: 170, hereExtra: 100};
+const H = {post: 170, ward: 64, step: 54, lamp: 92, gate: 112, top: 180};
+const HORIZON = 0.14;  // 地平線の高さ（道の枠の高さに対する割合）
+const NEAR = 0.8;      // カメラの足もと（今いる石段）の高さ
+const ROAD_W = 0.13;   // 手前での道の半幅（枠の幅に対する割合）
+const SWING = 0.42;    // 手前での横の振れ幅（枠の幅に対する割合）
+const S_MIN = 0.07;    // これより遠いものは描かない
+
+const DAILY_SHORT = {revenge: ['↺', '戻ってきた紙魚'], fresh: ['✦', '新しい紙魚'], clean: ['✓', 'ヒントなし'], finish: ['▶', '配達']};
 
 export function dailyLine(daily) {
   if (!daily) return '';
@@ -27,6 +39,13 @@ export function dailyLine(daily) {
     finish: `配達を${daily.goal}回やりとげる`,
   }[daily.kind] ?? '';
   return `${body}　${Math.min(daily.count, daily.goal)}/${daily.goal}`;
+}
+
+// 速達の短い表示：{mark, name, count, goal}。説明の文章は出さず、印と数にする。
+export function dailyBrief(daily) {
+  if (!daily) return null;
+  const [mark, name] = DAILY_SHORT[daily.kind] ?? ['', ''];
+  return {mark, name, count: Math.min(daily.count, daily.goal), goal: daily.goal};
 }
 
 // 直近7日（左が6日前、右が今日）の消印。streak は {count, last, best}。
@@ -44,7 +63,7 @@ function postmark(day) {
   return `<span class="gq-pm ${day.on ? 'on' : ''}" title="${day.date}日"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="9.5"/><text x="15" y="19" text-anchor="middle">${day.date}</text></svg></span>`;
 }
 
-// 縦の配置を下から積んで決める。y は「下端からの高さ」。
+// 道の上の位置を下から積んで決める。y は「郵便局からの距離」。
 function layout(map) {
   const items = [];
   let y = 0;
@@ -53,62 +72,62 @@ function layout(map) {
     y += h;
   };
   const here = map.here;
-  add('post', H.post, {}, H.post - 40);
-  const lampSegments = [];
-  const wardSegments = [];
+  add('post', H.post, {}, H.post);
   let k = 0;
   map.wards.forEach((ward, wi) => {
-    const wardStart = y;
-    add('ward', H.ward, {ward, wi});
+    add('ward', H.ward, {ward, wi}, H.ward / 2);
     for (const lamp of ward.lamps) {
-      const lampStart = y;
       lamp.steps.forEach((step, si) => {
-        const isHere = here && here.ch === ward.ch && here.shelf === lamp.shelf && here.step === si + 1;
-        add('step', isHere ? H.step + H.hereExtra : H.step, {ward, lamp, step, si, isHere, k: k++}, H.step / 2);
+        const isHere = Boolean(here) && here.ch === ward.ch && here.shelf === lamp.shelf && here.step === si + 1;
+        add('step', H.step, {ward, lamp, step, si, isHere, k: k++});
       });
       add('lamp', H.lamp, {ward, lamp, k: k++});
-      lampSegments.push({ward, start: lampStart, end: y});
     }
     add('gate', H.gate, {ward, k: k++});
-    wardSegments.push({ward, wi, start: wardStart, end: y});
   });
-  add('top', H.top, {}, 56);
-  return {items, total: y, lampSegments, wardSegments};
+  add('top', H.top, {}, H.top - 70);
+  return {items, total: y};
 }
 
-const nodeX = k => 50 + 24 * Math.sin(k * 0.5);
+// 道の左右の振れ。ノードの番号で決める（-0.5〜0.5）。
+const latOf = k => Math.sin(k * 0.5) * 0.5;
 
 export function renderMap(view, ctx) {
   const {map, today, progress, on} = ctx;
-  const {items, total, lampSegments, wardSegments} = layout(map);
-  const top = y => (total - y).toFixed(1);
+  const {items, total} = layout(map);
   const hereWard = map.wards.findIndex(w => w.ch === map.here?.ch);
   const ink = ward => (WARDS[ward.ch] ?? WARDS[1]).inks[0][1];
 
-  // 道の点列。下から上へ。
-  const roadPoints = [[50, total - items[0].cy]];
+  // 道の中心線（ノードの点列）。なめらかにつなぐ。
+  const pts = [{y: 0, lat: 0}];
   let hereItem = null;
   for (const item of items) {
     if (item.type === 'step' || item.type === 'lamp' || item.type === 'gate') {
-      item.x = nodeX(item.k);
-      roadPoints.push([item.x, total - item.cy]);
+      item.lat = latOf(item.k);
+      pts.push({y: item.cy, lat: item.lat});
       if (item.isHere) hereItem = item;
     }
   }
-  roadPoints.push([50, total - (total - 56)]);
-  const herePointIndex = hereItem ? roadPoints.findIndex(p => p[0] === hereItem.x && p[1] === total - hereItem.cy) : 0;
-  const poly = points => points.map(p => `${p[0].toFixed(2)},${p[1].toFixed(1)}`).join(' ');
+  pts.push({y: total, lat: 0});
+  const latAt = y => {
+    if (y <= pts[0].y) return pts[0].lat;
+    if (y >= pts.at(-1).y) return pts.at(-1).lat;
+    let lo = 0, hi = pts.length - 1;
+    while (hi - lo > 1) { const mid = (lo + hi) >> 1; if (pts[mid].y <= y) lo = mid; else hi = mid; }
+    const t = (y - pts[lo].y) / (pts[hi].y - pts[lo].y);
+    const e = (1 - Math.cos(Math.PI * t)) / 2;
+    return pts[lo].lat + (pts[hi].lat - pts[lo].lat) * e;
+  };
+  const hereY = hereItem ? hereItem.cy : 0;
 
-  const bands = lampSegments.map(seg => {
-    const fogged = map.wards.indexOf(seg.ward) > hereWard + 1;
-    return `<i class="gq-band ${fogged ? 'far' : ''}" style="top:${top(seg.end)}px;height:${seg.end - seg.start}px">${artBox(`ward${seg.ward.ch}`, 'gq-band-art')}</i>`;
-  }).join('');
+  const bb = (cls, y, lat, inner) =>
+    `<div class="gq-bb ${cls}" data-y="${y.toFixed(1)}" data-lat="${lat.toFixed(3)}">${inner}</div>`;
 
   const nodes = items.map(item => {
-    const t = top(item.cy);
+    const far = hereWard >= 0 && map.wards.indexOf(item.ward) > hereWard + 1 ? ' far' : '';
     if (item.type === 'step') {
       const cls = item.isHere ? 'here' : item.step.passed ? 'done' : 'todo';
-      return `<i class="gq-step ${cls}" style="left:${item.x.toFixed(1)}%;top:${t}px;--wc:${ink(item.ward)}"></i>`;
+      return bb(`gq-bb-step${far}`, item.cy, item.lat, `<i class="gq-step ${cls}" style="--wc:${ink(item.ward)}"></i>`);
     }
     if (item.type === 'lamp') {
       const {lamp} = item;
@@ -116,92 +135,95 @@ export function renderMap(view, ctx) {
       const gold = lamp.gold === lamp.total;
       const isHereLamp = map.here && map.here.shelf === lamp.shelf;
       const remain = isHereLamp ? lamp.steps.length - map.here.step + 1 : 0;
-      return `<button type="button" class="gq-lamp-node ${gold ? 'gold' : lit ? 'lit' : ''}" data-shelf="${lamp.shelf}"
-        style="left:${item.x.toFixed(1)}%;top:${t}px;--p:${Math.round(lamp.got / lamp.total * 100)}%;--wc:${ink(item.ward)}"
+      return bb(`gq-bb-lamp${far}`, item.cy, item.lat,
+        `<button type="button" class="gq-lamp-node ${gold ? 'gold' : lit ? 'lit' : ''}" data-shelf="${lamp.shelf}"
+        style="--p:${Math.round(lamp.got / lamp.total * 100)}%;--wc:${ink(item.ward)}"
         aria-label="街灯${lamp.shelf}　切手 ${lamp.got}/${lamp.total}　切手帳を開く">
-        <b>${lamp.shelf}</b><small>${lamp.got}/${lamp.total}</small>${remain ? `<em>あと${remain}段</em>` : ''}</button>`;
+        <b>${lamp.shelf}</b><small>${lamp.got}/${lamp.total}</small>${remain ? `<em>↑${remain}</em>` : ''}</button>`);
     }
     if (item.type === 'gate') {
       const {ward} = item;
-      const label = {hidden: '霧の門', open: '区の門へ', cleared: '門が開いた'}[ward.gate];
+      const label = {hidden: '', open: `${ward.ch}区`, cleared: '✓'}[ward.gate];
       const tag = ward.gate === 'open' ? 'button' : 'div';
-      return `<${tag} ${tag === 'button' ? 'type="button" data-gate="' + ward.ch + '"' : ''} class="gq-gate ${ward.gate}" style="left:${item.x.toFixed(1)}%;top:${t}px"
-        ${ward.gate === 'open' ? `aria-label="${ward.ch}区の門へ。霧の主が待っている"` : ''}><i aria-hidden="true"></i><span>${label}</span></${tag}>`;
+      return bb(`gq-bb-gate${far}`, item.cy, item.lat,
+        `<${tag} ${tag === 'button' ? 'type="button" data-gate="' + ward.ch + '"' : ''} class="gq-gate ${ward.gate}"
+        ${ward.gate === 'open' ? `aria-label="${ward.ch}区の門へ"` : ''}><i aria-hidden="true"></i>${label ? `<span>${label}</span>` : ''}</${tag}>`);
     }
     if (item.type === 'ward') {
-      return `<div class="gq-ward-tag" style="top:${t}px"><b>${item.ward.ch}区</b> ${esc(item.ward.name)}</div>`;
+      return bb('gq-bb-ward', item.cy, -0.8, `<div class="gq-ward-tag"><b>${item.ward.ch}区</b> ${esc(item.ward.name)}</div>`);
     }
     return '';
   }).join('');
 
-  // 遠い区は霧で隠す（次の区まで見える）。
-  const fogs = wardSegments.filter(seg => seg.wi > hereWard + 1).map(seg =>
-    `<i class="gq-far-fog" style="top:${top(seg.end)}px;height:${seg.end - seg.start}px"></i>`).join('');
-
-  // 今いる石段のまわり：ツムギ、これから出会う紙魚の影、戻ってきた紙魚。
+  // 今いる石段のまわり：ツムギ、これから出会う紙魚の影、戻ってきた紙魚。文字は使わず、顔と数。
   let herePanel = '';
   if (hereItem) {
-    const side = hereItem.x > 50 ? 'left' : 'right';
+    const side = hereItem.lat > 0 ? 'left' : 'right';
     const shadows = map.next.map(id => `<span class="gq-face">${ctx.face(id, 'shadow')}</span>`).join('');
     const dues = map.due.map(id => `<span class="gq-face">${ctx.face(id, 'print')}</span>`).join('');
-    herePanel = `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}" style="left:${hereItem.x.toFixed(1)}%;top:${top(hereItem.cy)}px">
-      <div class="gq-here-panel ${side}" style="top:${top(hereItem.cy + 62)}px">
-        ${map.next.length ? `<p><small>この先の紙魚</small></p><div class="gq-faces">${shadows}</div>` : '<p><small>いちばん上まで来た</small></p>'}
-        ${map.dueCount ? `<p class="due"><small>戻ってきた紙魚 <b>${map.dueCount}</b> 匹</small></p><div class="gq-faces">${dues}</div>` : ''}
-      </div>`;
+    herePanel = bb('gq-bb-tsumugi', hereY, hereItem.lat, `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}">`)
+      + bb(`gq-bb-panel ${side}`, hereY + 70, hereItem.lat, `<div class="gq-here-panel ${side}">
+        ${map.next.length ? `<div class="gq-faces" aria-label="この先の紙魚"><span class="gq-arrow" aria-hidden="true">▸</span>${shadows}</div>` : '<p class="gq-top-mark" aria-label="いちばん上">★</p>'}
+        ${map.dueCount ? `<div class="gq-faces due" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b class="gq-due-n">${map.dueCount}</b>${dues}</div>` : ''}
+      </div>`);
   }
-  const fogDensity = Math.min(0.88, 0.3 + map.dueCount / 70);
-  const fog = map.fog && hereItem
-    ? `<i class="gq-here-fog" style="top:${top(hereItem.cy + 560)}px;height:560px;--d:${fogDensity.toFixed(2)}"></i>` : '';
 
-  const post = items[0];
-  const postBlock = `<div class="gq-post" style="top:${top(post.from + H.post)}px;height:${H.post}px">${artBox('post', 'gq-post-art')}
-    <div class="gq-guide">${artBox('hatoriSmile', 'gq-face-hatori')}<p class="bubble"><small>ハトリ局長</small>${esc(ctx.message)}</p></div></div>`;
-  const topItem = items.at(-1);
-  const lighthouse = `<div class="gq-top-block" style="top:0;height:${H.top}px"><svg viewBox="0 0 120 150" aria-hidden="true">
+  const post = bb('gq-bb-post', 14, 0, `<div class="gq-post">${artBox('post', 'gq-post-art')}
+    <div class="gq-guide">${artBox('hatoriSmile', 'gq-face-hatori')}${map.dueCount ? `<span class="gq-due-badge" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b>${map.dueCount}</b></span>` : ''}</div></div>`);
+  const lighthouse = bb('gq-bb-top', total - 40, 0, `<div class="gq-top-block"><svg viewBox="0 0 120 150" aria-hidden="true">
     <path d="M60 4l-46 40M60 4l46 40" class="beam"/><rect x="48" y="30" width="24" height="16" rx="3" class="lamp"/><path d="M44 46h32l8 100H36z" class="tower"/>
-    <path d="M42 80h36M39 112h42" class="band"/></svg><p><b>灯台</b><small>霧のむこうに、白紙の影</small></p></div>`;
+    <path d="M42 80h36M39 112h42" class="band"/></svg><b>灯台</b></div>`);
+
+  const skies = [...new Set(map.wards.map(w => w.ch))].map(ch => `<div class="gq-sky-art" data-ward="${ch}">${artBox(`ward${Math.min(ch, 6)}`, 'gq-sky-img')}</div>`).join('');
+  // カメラの先にある区を調べるための、区ごとの始まりの y
+  const wardStarts = items.filter(item => item.type === 'ward').map(item => ({ch: item.ward.ch, y: item.from}));
 
   const days = streakDays(progress.streak, today);
   const count = streakNow(progress.streak, today);
   const collected = Object.keys(progress.words).length;
-  const daily = progress.daily;
+  const brief = dailyBrief(progress.daily);
   const openGate = map.wards.find(w => w.gate === 'open');
   const tomorrow = map.tomorrow;
   const tomorrowFaces = tomorrow.slice(0, 3).map(id => `<span class="gq-face s">${ctx.face(id, 'print')}</span>`).join('');
-  const dailyText = daily ? (daily.done
-    ? `今日の速達　達成！　（累計 ${progress.dailyDone} 枚）` : `今日の速達　${dailyLine(daily)}`) : '';
+  const fogDensity = Math.min(0.88, 0.3 + map.dueCount / 70);
+  const noticeFab = ctx.notice
+    ? fab({icon: ctx.notice.act === 'update' ? 'info' : 'gear', label: ctx.notice.label, cls: 'notice', attrs: 'id="gq-notice"'}) : '';
 
   view.className = 'gq gq-map';
   view.innerHTML = `
     <div class="gq-map-top">
       <div class="gq-streak" role="img" aria-label="${count ? `連続 ${count} 日` : '今日から始めよう'}">
         <div class="gq-pms">${days.map(postmark).join('')}</div>
-        <small>${count ? `連続 <b>${count}</b> 日` : '今日から始めよう'}</small>
+        <b>${count}</b><small>日</small>
       </div>
-      <p class="gq-stampcount">集めた切手<br><b>${collected}</b> / ${ctx.total}</p>
+      <p class="gq-stampcount" aria-label="集めた切手 ${collected} / ${ctx.total}"><i class="gq-tally-icon" aria-hidden="true"></i><b>${collected}</b><small>/${ctx.total}</small></p>
     </div>
-    <div class="gq-road" id="gq-road"><div class="gq-road-in" style="height:${total}px">
-      ${bands}
-      <svg class="gq-road-svg" viewBox="0 0 100 ${total}" preserveAspectRatio="none" aria-hidden="true">
-        <polyline class="base" points="${poly(roadPoints)}"/>
-        <polyline class="walked" points="${poly(roadPoints.slice(0, herePointIndex + 1))}"/>
-        <polyline class="center" points="${poly(roadPoints)}"/>
-      </svg>
-      ${nodes}${fogs}${fog}${herePanel}${postBlock}${lighthouse}
+    <div class="gq-story" id="gq-story" ${ctx.story ? '' : 'hidden'}>${ctx.story ? esc(ctx.story) : ''}</div>
+    <div class="gq-road" id="gq-road"><div class="gq-road-in" id="gq-road-in">
+      <div class="gq-stage" id="gq-stage">
+        <div class="gq-sky" aria-hidden="true">${skies}</div>
+        <i class="gq-haze" aria-hidden="true"></i>
+        <svg class="gq-road-svg" id="gq-road-svg" aria-hidden="true">
+          <path class="base" id="gq-r-base"/><path class="lines" id="gq-r-lines"/><path class="walked" id="gq-r-walked"/>
+          <path class="edge" id="gq-r-edge"/><path class="center" id="gq-r-center"/>
+        </svg>
+        ${nodes}${herePanel}${post}${lighthouse}
+        ${map.fog ? `<i class="gq-fogband" aria-hidden="true" style="--d:${fogDensity.toFixed(2)}"></i>` : ''}
+      </div>
     </div></div>
     <div class="gq-map-foot">
       ${ctx.warn ? `<p class="gq-warn">${esc(ctx.warn)}</p>` : ''}
-      ${ctx.notice ? `<p class="gq-notice">${esc(ctx.notice.text)}<button type="button" class="text-button" id="gq-notice">${esc(ctx.notice.label)}</button></p>` : ''}
-      ${dailyText ? `<p class="gq-daily ${daily.done ? 'done' : ''}">${esc(dailyText)}</p>` : ''}
-      <p class="gq-tomorrow">明日戻ってくる紙魚 <b>${tomorrow.length}</b> 匹 <span class="gq-faces">${tomorrowFaces}</span></p>
-      <button class="primary" id="gq-go" type="button">${map.fog ? '霧を払う' : '配達に出る'} <span aria-hidden="true">→</span></button>
-      ${openGate ? `<button type="button" class="gq-gate-btn" id="gq-gate" data-gate="${openGate.ch}">霧の主が待っている　${openGate.ch}区の門へ</button>` : ''}
-      <div class="gq-footer">
-        <button class="text-button" id="gq-album" type="button">切手帳</button>
-        <button class="text-button" id="gq-settings" type="button">設定</button>
-        <button class="text-button" id="gq-credits" type="button">クレジット</button>
-        <button class="text-button" id="gq-title" type="button">タイトルへ</button>
+      <div class="gq-chips">
+        ${brief ? `<span class="gq-daily ${progress.daily.done ? 'done' : ''}" aria-label="今日の速達 ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>${esc(brief.name)}<b>${brief.count}/${brief.goal}</b></span>` : ''}
+        ${tomorrow.length ? `<span class="gq-tomorrow" aria-label="明日戻ってくる紙魚 ${tomorrow.length} 匹"><small>明日</small><span class="gq-faces">${tomorrowFaces}</span><b>${tomorrow.length}</b></span>` : ''}
+      </div>
+      <div class="gq-dock">
+        ${fab({icon: 'album', label: '切手帳', attrs: 'id="gq-album"'})}
+        ${fab({icon: 'gear', label: '設定', attrs: 'id="gq-settings"'})}
+        ${waxButton({label: map.fog ? '霧を<br>払う' : '配達に<br>出る', id: 'gq-go', cls: map.fog ? 'fog' : ''})}
+        ${openGate ? fab({icon: 'gate', label: `${openGate.ch}区の門`, cls: 'glow', attrs: `id="gq-gate" data-gate="${openGate.ch}"`}) : ''}
+        ${fab({icon: 'title', label: 'タイトル', attrs: 'id="gq-title"'})}
+        ${noticeFab}
       </div>
     </div>`;
 
@@ -209,19 +231,118 @@ export function renderMap(view, ctx) {
   $('#gq-go').onclick = () => on.go();
   $('#gq-album').onclick = () => on.album();
   $('#gq-settings').onclick = () => on.settings();
-  $('#gq-credits').onclick = () => on.credits();
   $('#gq-title').onclick = () => on.title();
   if ($('#gq-notice')) $('#gq-notice').onclick = () => on.notice(ctx.notice.act);
   view.querySelectorAll('[data-gate]').forEach(button => { button.onclick = () => on.gate(Number(button.dataset.gate)); });
   view.querySelectorAll('[data-shelf]').forEach(button => { button.onclick = () => on.lamp(Number(button.dataset.shelf)); });
 
-  // 今いる石段が画面の中ほどより少し下に来る位置へ。上（先の道と紙魚の影）を多めに見せる。
+  // ---------- 遠近の投影 ----------
   const road = $('#gq-road');
-  const place = () => {
-    if (!hereItem) { road.scrollTop = road.scrollHeight; return; }
-    const y = total - hereItem.cy;
-    road.scrollTop = Math.max(0, y - road.clientHeight * 0.62);
+  const inner = $('#gq-road-in');
+  const stage = $('#gq-stage');
+  const svg = $('#gq-road-svg');
+  const paths = {
+    base: $('#gq-r-base'), lines: $('#gq-r-lines'), walked: $('#gq-r-walked'), edge: $('#gq-r-edge'), center: $('#gq-r-center'),
   };
-  place();
-  requestAnimationFrame(place);
+  const boards = [...view.querySelectorAll('.gq-bb')].map(el => ({
+    el, y: Number(el.dataset.y), lat: Number(el.dataset.lat), shown: true,
+    far: el.classList.contains('far'),
+    scale: el.classList.contains('gq-bb-ward') ? 0.9 : 1,
+  }));
+  const skyLayers = [...view.querySelectorAll('.gq-sky-art')];
+  let Ws = 0, Hs = 0, frame = 0, lastWard = 0;
+
+  const update = () => {
+    frame = 0;
+    if (!Ws || !Hs) return;
+    const c = Math.min(total, Math.max(0, total - road.scrollTop)); // カメラの位置
+    const F = Hs * 0.8;
+    const yh = Hs * HORIZON;
+    const span = Hs * NEAR - yh;
+    const sOf = r => 1 / (1 + Math.max(r, -0.55 * F) / F);
+    const X = (y, s) => Ws / 2 + latAt(y) * Ws * SWING * s;
+    const Y = s => yh + span * s;
+    const rw = Ws * ROAD_W;
+
+    // 道の帯：画面の上では等間隔になるように、遠くほど間隔をあけて標本を取る。
+    const S_MAX = 1.6;
+    const N = 90;
+    const ribbon = (cap, width) => {
+      const left = [], right = [];
+      for (let i = 0; i <= N; i++) {
+        const s0 = S_MAX * Math.pow(S_MIN / S_MAX, i / N);
+        const y = Math.min(cap, Math.min(total, Math.max(0, c + F * (1 / s0 - 1))));
+        const s = sOf(y - c);
+        const x = X(y, s), sy = Y(s), w = rw * s * width;
+        left.push([x - w, sy]); right.push([x + w, sy]);
+      }
+      return {left, right};
+    };
+    const fmt = p => `${p[0].toFixed(1)} ${p[1].toFixed(1)}`;
+    const poly = ({left, right}) => `M${left.map(fmt).join('L')}L${right.reverse().map(fmt).join('L')}Z`;
+    const full = ribbon(total, 1);
+    paths.edge.setAttribute('d', `M${full.left.map(fmt).join('L')}M${full.right.map(fmt).join('L')}`);
+    paths.base.setAttribute('d', poly(full));
+    paths.walked.setAttribute('d', hereItem ? poly(ribbon(hereY, 0.5)) : '');
+
+    // 石だたみの横線と、中央の破線（距離に合わせて間隔が縮む）。
+    const yMax = Math.min(total, c + F * (1 / S_MIN - 1));
+    let lines = '', dashes = '';
+    for (let y = Math.max(0, Math.ceil((c - 0.5 * F) / 48) * 48); y <= yMax; y += 48) {
+      const s = sOf(y - c);
+      const x = X(y, s), sy = Y(s).toFixed(1), w = rw * s;
+      lines += `M${(x - w).toFixed(1)} ${sy}L${(x + w).toFixed(1)} ${sy}`;
+    }
+    for (let y = Math.max(0, Math.ceil((c - 0.5 * F) / 36) * 36); y <= yMax; y += 36) {
+      const y2 = y + 14;
+      const s1 = sOf(y - c), s2 = sOf(y2 - c);
+      const x1 = X(y, s1), x2 = X(y2, s2);
+      const w1 = 2.4 * s1, w2 = 2.4 * s2;
+      dashes += `M${(x1 - w1).toFixed(1)} ${Y(s1).toFixed(1)}L${(x1 + w1).toFixed(1)} ${Y(s1).toFixed(1)}L${(x2 + w2).toFixed(1)} ${Y(s2).toFixed(1)}L${(x2 - w2).toFixed(1)} ${Y(s2).toFixed(1)}Z`;
+    }
+    paths.lines.setAttribute('d', lines);
+    paths.center.setAttribute('d', dashes);
+
+    // 道の上の物：位置と大きさと霧のかかり方を決める。
+    for (const b of boards) {
+      const r = b.y - c;
+      const s = sOf(r);
+      if (r < -0.5 * F || s < S_MIN) {
+        if (b.shown) { b.el.style.display = 'none'; b.shown = false; }
+        continue;
+      }
+      if (!b.shown) { b.el.style.display = ''; b.shown = true; }
+      const fade = Math.min(1, Math.max(0, (s - S_MIN) / 0.2)) * (b.far ? 0.55 : 1);
+      b.el.style.transform = `translate3d(${X(b.y, s).toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${(s * b.scale).toFixed(3)})`;
+      b.el.style.opacity = fade.toFixed(2);
+      b.el.style.zIndex = String(Math.round(s * 100));
+    }
+
+    // カメラの少し先にある区の絵を、背景に出す。
+    let ward = wardStarts[0]?.ch ?? 1;
+    for (const w of wardStarts) if (w.y <= c + 500) ward = w.ch;
+    if (ward !== lastWard) {
+      lastWard = ward;
+      skyLayers.forEach(layer => layer.classList.toggle('on', Number(layer.dataset.ward) === ward));
+    }
+  };
+  const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
+
+  // 枠の大きさが決まったら、カメラを今いる石段に置く。大きさが変わっても、カメラの位置は保つ。
+  let cameraAt = hereY;
+  const measure = () => {
+    const w = road.clientWidth, h = road.clientHeight;
+    if (!w || !h) return;
+    if (Ws && Hs) cameraAt = Math.min(total, Math.max(0, total - road.scrollTop));
+    Ws = w; Hs = h;
+    inner.style.height = `${Hs + total}px`;
+    stage.style.height = `${Hs}px`;
+    svg.setAttribute('viewBox', `0 0 ${Ws} ${Hs}`);
+    road.scrollTop = total - cameraAt;
+    update();
+  };
+  road.addEventListener('scroll', schedule, {passive: true});
+  measure();
+  requestAnimationFrame(measure);
+  if (typeof ResizeObserver !== 'undefined') new ResizeObserver(measure).observe(road);
 }

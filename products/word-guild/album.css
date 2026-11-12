@@ -25,8 +25,9 @@
 .gq-album-gate .stamp{width:60%}.gq-ward-gate .stamp{width:40%}
 
 /* 切手の枠。目打ちは外側の層の穴、中身は紙色の内側。 */
-.stamp{position:relative;padding:5px;filter:drop-shadow(0 1px 1px #0003);--fr:var(--paper);--ln:var(--ink);border:0;border-radius:0;background:none;box-shadow:none;font:inherit;color:inherit;text-align:center;cursor:pointer;width:100%;min-width:0}
+.stamp{position:relative;padding:5px;isolation:isolate;--fr:var(--paper);--ln:var(--ink);border:0;border-radius:0;background:none;box-shadow:none;font:inherit;color:inherit;text-align:center;cursor:pointer;width:100%;min-width:0}
 .stamp:active{transform:none;box-shadow:none}
+.stamp::after{content:"";position:absolute;inset:0;transform:translate(1px,2px);background:#0003;z-index:-1;-webkit-mask:radial-gradient(circle 3px at 0 0,#0000 97%,#000) 0 0/10px 10px round;mask:radial-gradient(circle 3px at 0 0,#0000 97%,#000) 0 0/10px 10px round}
 .stamp::before{content:"";position:absolute;inset:0;background:var(--fr);-webkit-mask:radial-gradient(circle 3px at 0 0,#0000 97%,#000) 0 0/10px 10px round;mask:radial-gradient(circle 3px at 0 0,#0000 97%,#000) 0 0/10px 10px round;-webkit-mask-repeat:round;mask-repeat:round}
 .stamp .in{position:relative;background:var(--paper);outline:1px solid var(--ln);outline-offset:-2px;padding:3px 2px 2px;overflow:hidden}
 .stamp .pic{position:relative;aspect-ratio:1/1}

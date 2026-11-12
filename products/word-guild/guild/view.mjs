@@ -7,17 +7,18 @@ import {Quest, HEARTS} from './quest.mjs';
 import {pickSession, groupWords, todayNumber, SESSION_SIZE} from './srs.mjs';
 import {loadProgress, saveProgress} from './store.mjs';
 import {COLS, spelling} from './board.mjs';
-import {buildMap, nudge, gateWords} from './stages.mjs';
+import {buildMap, gateWords} from './stages.mjs';
 import {pageSpecs, stampState} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {rollDaily} from './daily.mjs';
 import {onUpdateReady, applyUpdate} from './pwa.mjs';
-import {esc, speak, starsMarkup, loadStyle, reducedMotion, ensureDefs} from './dom.mjs';
-import {renderCredits} from './library.mjs';
-import {renderMap, dailyLine} from './map.mjs';
+import {esc, speak, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, icon} from './dom.mjs';
+import {showStampZoom, ensureCss as ensureAlbumCss} from './album.mjs';
+import {renderMap, dailyBrief} from './map.mjs';
 
 const POS_LABEL = {v: '動', n: '名', a: '形', o: '他'}; // 色の意味を文字でも示す
 const RESULT_LABEL = {known: '知ってた', correct: '正解', hint: 'ヒント', taught: '教わった', missed: '未回答'};
+const COACH = 'ヒントなしで、日本語に合う英単語をなぞろう';
 const CRUMBLE_MS = 560; // 撃破 → 盤面が崩れる
 const ENTER_MS = 520;   // 次の盤面と紙魚が入る（合わせて 1.2 秒以内）
 const MAX_FRAME_MS = 250; // 長い停止の後に、まとめて攻撃されないための上限
@@ -65,6 +66,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   let lastFrame = 0;
   let observer = null;
   let lib = null;           // 切手帳・設定の handle。画面を移るとき close() する
+  let zoomClose = null;     // 結果画面の切手の拡大。画面を移るとき閉じる
   let hiddenFinish = false; // pagehide で終わらせた配達（bfcache から戻ったとき結果へ移す）
   let sessionToken = 0;     // 画面を離れたあと、古いタイマーを無効にする
   const sfx = name => { try { music?.sfx(name); } catch { /* 音は遊びを止めない */ } };
@@ -84,6 +86,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   function stopSession() {
     closeLib();
+    try { zoomClose?.(); } catch { /* 閉じ損ねても画面は移る */ }
+    zoomClose = null;
     hiddenFinish = false;
     sessionToken++;
     timers.forEach(clearTimeout);
@@ -129,12 +133,6 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   // ---------- 地図 ----------
 
-  function mapMessage(map) {
-    if (map.dueCount > 0) return `戻ってきた紙魚（しみ）が ${map.dueCount} 匹いるよ。配達ついでに追い払おう。`;
-    if (progress.quests === 0) return `新人さん、まずは ${SESSION_SIZE} 語、取り戻しに行こう。`;
-    return '消えた言葉を、取り戻しに行こう。';
-  }
-
   function mapNotice(today) {
     if (updateReady) return {text: '新しい版があります　', label: '更新', act: 'update'};
     const collected = Object.keys(progress.words).length;
@@ -177,7 +175,6 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     renderMap(view, {
       map, today, progress, total: words.length,
       face: faceOf, tsumugi: artFile('tsumugi'),
-      message: mapMessage(map),
       notice: mapNotice(today),
       warn: saveFailed ? '保存できません。この起動中はプレイできます。' : '',
       on: {
@@ -186,7 +183,6 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         lamp: openAlbumAt,
         album: () => openAlbumAt(map.here?.shelf),
         settings: openSettingsHere,
-        credits: () => { onMap = false; renderCredits(view, {onBack: showMap}); },
         title: () => { onMap = false; stopSession(); exit(); },
         notice: act => { if (act === 'update') applyUpdate(); else openSettingsHere(); },
       },
@@ -220,8 +216,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   }
 
   function topLabel() {
-    if (quest.isRevenge) return 'リベンジ';
-    return `盤面 ${quest.index + 1}/${quest.total}${quest.isBig ? ' ・大物' : ''}`;
+    if (quest.isRevenge) return '再戦';
+    return `${quest.index + 1}/${quest.total}${quest.isBig ? ' 大物' : ''}`;
   }
 
   // 1語＝1体。語を見せない（綴りも頭文字も出さない）。額面（文字数）だけ出す。
@@ -244,12 +240,13 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     trace = new Trace(quest.letters);
     strikes = [];
     picking = null;
-    message = quest.isBig ? '大物があらわれた' : '';
+    message = quest.isBig ? '大物！' : '';
     const coach = tutorial && quest.index === 0
-      ? `<div class="gq-coach">${artBox('hatori', 'gq-coach-face')}<b>ハトリ局長</b>お題の日本語に合う英単語を、となりの文字へなぞってつなげよう</div>` : '';
+      ? `<div class="gq-coach">${artBox('hatori', 'gq-coach-face')}<b>ハトリ局長</b>${COACH}</div>` : '';
     view.className = `gq gq-quest gq-ch${questWard}${coach ? ' gq-tutor' : ''}`;
     view.innerHTML = `
-      <div class="gq-top"><span class="gq-hearts" id="gq-hearts"></span><b id="gq-label"></b><span class="gq-timer" aria-hidden="true"><i id="gq-timer"></i></span><span class="gq-tally" id="gq-tally" role="img"></span><button type="button" class="gq-quit" id="gq-quit">やめる</button></div>
+      <div class="gq-top"><span class="gq-hearts" id="gq-hearts"></span><b id="gq-label"></b><span class="gq-timer" aria-hidden="true"><i id="gq-timer"></i></span><span class="gq-tally" id="gq-tally" role="img"></span><button type="button" class="gq-quit" id="gq-quit" aria-label="やめる"><span aria-hidden="true">✕</span></button></div>
+      <div class="gq-story" id="gq-story" hidden></div>
       <div class="gq-arena" id="gq-arena">
         <div class="gq-arena-clip">
           ${artBox(`ward${questWard}`, 'gq-arena-bg')}
@@ -257,16 +254,23 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
           ${artBox('tsumugi', 'gq-hero')}${artBox('fuurou', 'gq-owl')}
         </div>
         <div class="gq-mons" id="gq-mons">${quest.slots.map(monMarkup).join('')}</div>
+        <ul class="gq-clues" id="gq-clues"></ul>
       </div>
-      <ul class="gq-clues" id="gq-clues"></ul>
       ${coach}
       <div class="gq-input" id="gq-text" aria-live="polite"></div>
-      <div class="gq-board entering" id="gq-board" aria-label="7列6行の盤面">${quest.letters.map(cellMarkup).join('')}<svg class="gq-seals" id="gq-seals" aria-hidden="true"></svg></div>
-      <div class="gq-actions"><button type="button" id="gq-hint">ヒント</button><button type="button" id="gq-teach">おしえて</button></div>`;
+      <div class="gq-boardrow">
+        <div class="gq-side">${fab({icon: 'bulb', label: 'ヒント', cls: 'gq-help', attrs: 'id="gq-hint"'})}</div>
+        <div class="gq-board entering" id="gq-board" aria-label="7列6行の盤面">${quest.letters.map(cellMarkup).join('')}<svg class="gq-seals" id="gq-seals" aria-hidden="true"></svg></div>
+        <div class="gq-side">${fab({icon: 'book', label: 'おしえて', cls: 'gq-help', attrs: 'id="gq-teach"'})}</div>
+      </div>`;
     $('#gq-label').textContent = topLabel();
     $('#gq-quit').onclick = quitQuest;
     $('#gq-hint').onclick = () => chooseHelp('hint');
     $('#gq-teach').onclick = () => chooseHelp('teach');
+    $('#gq-arena').addEventListener('click', event => {
+      const target = event.target.closest('.gq-mon[data-id], .gq-clue[data-id]');
+      if (target && picking) pickClue(target.dataset.id);
+    });
     bindBoard();
     paintAll();
     bgm(quest.isBig ? 'big' : 'delivery');
@@ -348,7 +352,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         else view.querySelectorAll('.gq-mon:not(.solved)').forEach(mon => pulse(mon, 'lunge'));
         pulse($('#gq-board'), 'shake');
         pulse($('#gq-hearts'), 'lost');
-        message = event.word ? 'こうげき！ ハート −1 ・ ヒントが光ったよ' : 'こうげき！ ハート −1';
+        message = 'こうげき！ ♥ −1';
         later(2200, () => { message = ''; paintInput(); });
         paintAll();
       } else if (event.type === 'retreat') {
@@ -394,25 +398,27 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   function clueMarkup(slot) {
     const {word, text} = slot;
     const reveal = slot.solved || slot.hint >= 2;
+    const big = specOf(word).kind === 'big';
     const main = reveal
       ? `<b class="gq-spell">${esc(word.w)}</b><small>${esc(word.ja)}</small>`
       : `<b>${esc(word.ja)}</b>`;
     const tail = slot.solved
       ? '<span class="gq-check" aria-label="解決済み">✓</span>'
-      : `<span class="gq-dots" aria-label="${text.length}文字">${'<i></i>'.repeat(text.length)}</span>`;
-    const classes = ['gq-clue', `pos-${word.pos}`, slot.solved ? 'solved' : '', picking && !slot.solved ? 'pickable' : '']
+      : `<span class="gq-dots" aria-label="${text.length}文字">${'<i></i>'.repeat(Math.min(text.length, 12))}</span>`;
+    const pickable = picking && !slot.solved;
+    const classes = ['gq-clue', `pos-${word.pos}`, slot.solved ? 'solved' : '', pickable ? 'pickable' : '']
       .filter(Boolean).join(' ');
-    return `<li><button type="button" class="${classes}" data-id="${esc(word.id)}" ${picking && !slot.solved ? '' : 'tabindex="-1"'}>
-      <span class="gq-face-sm" aria-hidden="true">${faceOf(word.id)}</span>
-      <span class="gq-pos" aria-hidden="true">${POS_LABEL[word.pos]}</span>
-      <span class="gq-clue-main">${main}</span>${tail}</button></li>`;
+    return `<li class="gq-slot${big ? ' big' : ''}"><button type="button" class="${classes}" data-id="${esc(word.id)}" ${pickable ? '' : 'tabindex="-1"'}>
+      <span class="gq-clue-top"><span class="gq-pos" aria-hidden="true">${POS_LABEL[word.pos]}</span><span class="gq-clue-main">${main}</span></span>${tail}</button></li>`;
   }
 
   function paintClues() {
     const list = $('#gq-clues');
     list.innerHTML = quest.slots.map(clueMarkup).join('');
-    list.querySelectorAll('.gq-clue').forEach(button => {
-      button.onclick = () => pickClue(button.dataset.id);
+    $('#gq-arena').classList.toggle('picking', Boolean(picking));
+    view.querySelectorAll('.gq-mon').forEach(mon => {
+      const open = quest.unsolved.some(slot => slot.word.id === mon.dataset.id);
+      mon.classList.toggle('pickable', Boolean(picking) && open);
     });
   }
 
@@ -438,8 +444,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     if (!line) return;
     line.classList.toggle('is-message', !trace.text);
     if (trace.text) line.textContent = trace.text;
-    else if (picking) line.textContent = picking === 'hint' ? 'ヒントを出すお題を選んでね' : 'おしえるお題を選んでね';
-    else line.textContent = message || '上下左右になぞろう · 一歩戻って取り消し';
+    else if (picking) line.textContent = `${picking === 'hint' ? 'ヒント' : 'おしえて'} ▾ 紙魚をタップ`;
+    else line.textContent = message || '↑ ↓ ← →';
     $('#gq-hint').setAttribute('aria-pressed', picking === 'hint');
     $('#gq-teach').setAttribute('aria-pressed', picking === 'teach');
     const canHelp = quest.phase === 'battle' && quest.unsolved.length > 0;
@@ -470,7 +476,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   }
 
   function pickClue(id) {
-    if (picking) applyHelp(picking, id);
+    if (picking && quest?.unsolved.some(slot => slot.word.id === id)) applyHelp(picking, id);
   }
 
   function applyHelp(kind, id) {
@@ -621,16 +627,6 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     return list;
   }
 
-  function nudgeText(n) {
-    switch (n.kind) {
-      case 'page': return `あと ${n.count} 枚でこの通りがそろう`;
-      case 'lamp': return `つぎで街灯 ${n.count}`;
-      case 'light': return `あと ${n.count} 匹で街灯がともる`;
-      case 'daily': return `あと ${n.count} 匹で今日の速達`;
-      default: return `つぎの石段に ${n.count} 体`;
-    }
-  }
-
   // 道の小さな図：ツムギが石段を上る。
   function miniRoad(before, after) {
     const list = stepList(after);
@@ -660,11 +656,12 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const today = quest.today;
     const before = buildMap(words, quest.startProgress, today);
     const after = buildMap(words, quest.progress, today);
-    const line = nudge(before, after, quest.progress.daily);
     timers.forEach(clearTimeout);
     timers = [];
     cancelAnimationFrame(frameId);
     frameId = 0;
+    try { zoomClose?.(); } catch { /* 閉じ損ねても画面は移る */ }
+    zoomClose = null;
     const first = tutorial;
     tutorial = false;
     const lamps = map => new Map(map.wards.flatMap(w => w.lamps).map(l => [l.shelf, l]));
@@ -675,6 +672,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     // 切手：新しく入った／上がった／逃げた（影のまま）
     const state = (id, source) => stampState(source.words[id]);
     const changedByShelf = new Map();
+    const zoomInfo = [];
     const stamps = outcome.entries.map((entry, i) => {
       const fled = entry.result !== 'clean';
       const was = state(entry.word.id, quest.startProgress);
@@ -685,9 +683,9 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         else if (was !== now) mark = now === 'gold' ? '<span class="mk gold">金</span>' : '<span class="mk up">↑</span>';
         if (mark) changedByShelf.set(entry.word.shelf, (changedByShelf.get(entry.word.shelf) ?? 0) + 1);
       }
-      const html = stampHtml(entry.word, specOf(entry.word), {state: now, ward: entry.word.ch})
-        .replace('<button', '<button tabindex="-1"');
-      return `<li class="gq-stamp-cell${fled ? ' fled' : ''}${entry.big ? ' wide' : ''}" style="--i:${i}" data-say="${esc(entry.word.w)}" data-cap="${fled ? `${esc(entry.word.w)} · ${esc(entry.word.ja)}（また来る）` : `${esc(entry.word.w)} · ${esc(entry.word.ja)}`}">${html}${mark}${fled ? '<small class="again">また来る</small>' : ''}</li>`;
+      zoomInfo[i] = {word: entry.word, state: now, box: quest.progress.words[entry.word.id]?.box ?? 0};
+      const html = stampHtml(entry.word, specOf(entry.word), {state: now, ward: entry.word.ch});
+      return `<li class="gq-stamp-cell${fled ? ' fled' : ''}${entry.big ? ' wide' : ''}" style="--i:${i}" data-i="${i}">${html}${mark}${fled ? '<small class="again" aria-hidden="true">↺</small>' : ''}</li>`;
     });
 
     // そのページ（今回いちばん切手が入った街灯。なければ今いる街灯）の 5×5
@@ -705,41 +703,46 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
     const gateOpened = quest.gate !== null && !outcome.retreated;
     const nextGate = after.wards.find(w => w.gate === 'open');
-    const primary = after.fog ? '霧を払う' : nextGate ? '区の門へ' : 'つぎの石段へ';
+    const gateNext = !after.fog && nextGate;
+    const primary = after.fog ? '霧を<br>払う' : nextGate ? `${nextGate.ch}区の<br>門へ` : 'つぎの<br>石段へ';
     const daily = quest.progress.daily;
-    const dailyNote = outcome.dailyDone ? '速達達成！' : daily && !daily.done ? `今日の速達　${dailyLine(daily)}` : daily ? '今日の速達　達成ずみ' : '';
+    const brief = dailyBrief(daily);
     const tomorrow = after.tomorrow;
     const nextFaces = after.next.map(id => `<span class="gq-face">${faceOf(id, 'shadow')}</span>`).join('');
     const tomorrowFaces = tomorrow.slice(0, 3).map(id => `<span class="gq-face s">${faceOf(id)}</span>`).join('');
 
     view.className = 'gq gq-result';
     view.innerHTML = `
-      <div class="gq-result-head">${artBox(outcome.retreated ? 'tsumugi' : 'tsumugiJoy')}<h2 class="gq-title">${outcome.retreated ? '局に戻る' : '配達完了！'}</h2>${artBox(outcome.retreated ? 'fuurou' : 'fuurouStamp', 'art-owl')}</div>
+      <div class="gq-result-head">${artBox(outcome.retreated ? 'tsumugi' : 'tsumugiJoy')}<h2 class="gq-title">${outcome.retreated ? 'おつかれさま' : '配達完了！'}</h2>${artBox(outcome.retreated ? 'fuurou' : 'fuurouStamp', 'art-owl')}</div>
       <div class="gq-res-scroll" id="gq-res">
-        <section class="gq-res-sec" style="--d:.1s"><h3>今回の切手</h3>
-          <ul class="gq-stamps" aria-label="今回の切手">${stamps.join('') || '<li class="empty">答えた語はありません</li>'}</ul>
-          <p class="gq-cap" id="gq-cap" aria-live="polite">${outcome.entries.length ? '切手をたたくと、語と訳が出るよ' : ''}</p>
+        <section class="gq-res-sec" style="--d:.1s">
+          <ul class="gq-stamps" aria-label="今回の切手">${stamps.join('') || '<li class="empty" aria-label="答えた語はありません">－</li>'}</ul>
         </section>
-        <section class="gq-res-sec" style="--d:${0.1 + 0.07 * stamps.length + 0.5}s"><h3>この通りの切手　<b>${lampNow?.got ?? 0}/${lampNow?.total ?? 25}</b></h3>
+        <section class="gq-res-sec" style="--d:${0.1 + 0.07 * stamps.length + 0.5}s"><h3><span aria-hidden="true">${icon('album', 16)}</span> 街灯 ${shelf}　<b>${lampNow?.got ?? 0}/${lampNow?.total ?? 25}</b></h3>
           <div class="gq-page" style="--n:${changedIds.size}" role="img" aria-label="街灯${shelf}のページ ${lampNow?.got ?? 0}/${lampNow?.total ?? 25}">${cells}</div>
           ${litNow.length ? `<p class="gq-lit">✦ 街灯${litNow.join('・')} がともった！</p>` : ''}
         </section>
-        <section class="gq-res-sec" style="--d:${0.1 + 0.07 * stamps.length + 1.7}s"><h3>道をのぼる</h3>
+        <section class="gq-res-sec" style="--d:${0.1 + 0.07 * stamps.length + 1.7}s">
           ${miniRoad(before, after)}
-          <div class="gq-next-row"><small>つぎの石段の紙魚</small><span class="gq-faces">${nextFaces || '<small>いちばん上まで来た</small>'}</span></div>
+          <div class="gq-next-row">${nextFaces ? `<span class="gq-arrow" aria-label="つぎの石段の紙魚">▸</span><span class="gq-faces">${nextFaces}</span>` : '<span class="gq-top-mark" aria-label="いちばん上">★</span>'}</div>
         </section>
-        <section class="gq-res-sec" style="--d:${0.1 + 0.07 * stamps.length + 2.6}s">
-          <p class="gq-nudge">${esc(nudgeText(line))}</p>
+        <section class="gq-res-sec gq-res-last" style="--d:${0.1 + 0.07 * stamps.length + 2.6}s">
           ${gateOpened ? `<p class="gq-lit">${quest.gate}区の門が開いた！</p>` : ''}
-          ${dailyNote ? `<p class="gq-dailynote ${outcome.dailyDone ? 'done' : ''}">${esc(dailyNote)}</p>` : ''}
-          ${outcome.streakUp ? `<p class="gq-dailynote">連続 ${outcome.streak} 日目</p>` : ''}
-          <p class="gq-back">明日戻ってくる紙魚 <b>${tomorrow.length}</b> 匹 <span class="gq-faces">${tomorrowFaces}</span></p>
+          <div class="gq-chips">
+            ${outcome.dailyDone ? '<span class="gq-daily done"><i aria-hidden="true">✓</i>速達</span>' : brief && !daily.done ? `<span class="gq-daily" aria-label="今日の速達 ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>${esc(brief.name)}<b>${brief.count}/${brief.goal}</b></span>` : daily ? '<span class="gq-daily done"><i aria-hidden="true">✓</i>速達</span>' : ''}
+            ${outcome.streakUp ? `<span class="gq-daily"><b>${outcome.streak}</b>日連続</span>` : ''}
+            ${tomorrow.length ? `<span class="gq-tomorrow" aria-label="明日戻ってくる紙魚 ${tomorrow.length} 匹"><small>明日</small><span class="gq-faces">${tomorrowFaces}</span><b>${tomorrow.length}</b></span>` : ''}
+          </div>
           ${saveFailed ? '<p class="gq-warn">保存できません。この起動中はプレイできます。</p>' : ''}
-          <details class="gq-detail"><summary>今回の語を見る</summary><ul class="gq-results" aria-label="今回の語">${outcome.entries.map(resultRow).join('')}</ul></details>
+          <details class="gq-detail"><summary>語の一覧</summary><ul class="gq-results" aria-label="今回の語">${outcome.entries.map(resultRow).join('')}</ul></details>
         </section>
       </div>
-      <div class="gq-result-actions"><button class="primary" id="gq-again" type="button">${primary}</button>
-        <div class="gq-two"><button type="button" id="gq-guild">局へ</button><button type="button" id="gq-album">切手帳</button>${nextGate && primary !== '区の門へ' ? `<button type="button" id="gq-gate">${nextGate.ch}区の門へ</button>` : ''}</div></div>`;
+      <div class="gq-dock gq-result-dock">
+        ${fab({icon: 'home', label: 'トップへ', attrs: 'id="gq-guild"'})}
+        ${waxButton({label: primary, id: 'gq-again'})}
+        ${fab({icon: 'album', label: '切手帳', attrs: 'id="gq-album"'})}
+        ${nextGate && !gateNext ? fab({icon: 'gate', label: `${nextGate.ch}区の門`, cls: 'glow', attrs: 'id="gq-gate"'}) : ''}
+      </div>`;
     $('#gq-again').onclick = () => (after.fog || !nextGate ? startQuest() : startQuest({gate: nextGate.ch}));
     $('#gq-guild').onclick = showMap;
     $('#gq-album').onclick = () => openAlbumAt(after.here?.shelf);
@@ -747,8 +750,14 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     $('#gq-res').addEventListener('click', event => {
       const cell = event.target.closest('.gq-stamp-cell');
       if (!cell) { $('#gq-res').classList.add('skip'); return; }
-      $('#gq-cap').textContent = cell.dataset.cap;
-      speak(cell.dataset.say);
+      if (view.querySelector('.gq-zoom')) return;
+      const info = zoomInfo[Number(cell.dataset.i)];
+      if (!info) return;
+      // 切手帳と同じ拡大表示。逃げた語（影のまま）も、語と訳は見せる。
+      zoomClose = showStampZoom(view, {
+        word: info.word, spec: specOf(info.word), state: info.state, box: info.box,
+        base: '', met: true, say: speak, onClose: () => { zoomClose = null; },
+      });
     });
     $(first ? '#gq-guild' : '#gq-again').focus({preventScroll: true});
   }
@@ -769,6 +778,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         if (response.ok) tags = await response.json();
       } catch { /* 分類がなくても、紙魚は既存の5種で出る */ }
       ensureDefs(charaDefs());
+      ensureAlbumCss();
       await loadStyle(MAP_CSS);
     } catch (error) {
       view.innerHTML = `<p class="eyebrow">霧晴れ郵便局</p><p class="gq-warn">${esc(error.message)}</p><button class="text-button" id="gq-title" type="button">← タイトルへ</button>`;
