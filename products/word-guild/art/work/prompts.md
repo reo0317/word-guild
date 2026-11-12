@@ -291,3 +291,47 @@ Square 1:1 game map asset. One single building centered large, viewed slightly f
 ## 家：14
 
 Square 1:1 game map asset. One single building centered large, viewed slightly from an angle, only a small patch of cobblestones under its feet. Match key-a4-1.png as style reference: Japanese paper and letterpress ink print illustration, thick navy outlines, flat fills, paper texture on building, palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, warm gold #f2b84b. ALL windows dark and unlit. Background absolutely flat solid pure chroma green #00ff00 edge to edge, no sky, haze, texture or shadow in background; no green anywhere on building. No people, letters, numbers, symbols or writing. Blank signs. Building: post office for Tsumugi, broad hip roof post office with upper bay window, red mailbox and parcel stack
+
+## 家：29
+港の住民への掲示を置く、段状の切妻と楕円の無地掲示板を持つ小さな公共会館。
+
+## 家：30
+港町の役場。寄棟屋根と中央のアーチ入口を持つ四角い石造の行政庁舎。
+
+## 家：31
+役場の記録室。かまぼこ形の屋根を持つ細身の耐火書庫。
+
+## 家：32
+町議会の議場。低いドーム屋根を持つ半円形の会議堂。
+
+## 家：33
+町議会への手紙を届ける、急勾配の切妻屋根と出窓を持つ議会別館。
+
+## 家：34
+ツムギの部屋がある郵便局。屋根窓と赤い郵便ポスト。
+
+## 家：35
+町の家々を代表する、煙突とバルコニーのある非対称の小さな家。
+
+## 家：36
+町の記録を保管する書庫。のこぎり屋根と鉄張りの扉を持つ石造建築。
+
+## 家：37
+ソラの滞在する駅前ホテル。マンサード屋根とバルコニー。
+
+## 家：38
+ホテル従業員への手紙を届ける駅前ホテル。縞の日よけと無地の楕円看板。
+
+## 家：39
+ソラの滞在する駅前の角ホテル。細身の建物と小塔。
+
+## 家：40
+乗客への掲示を置く、ガラスのひさしがある横長の駅舎。
+
+## 家：41
+ハトリ局長の郵便局。切妻屋根と赤い郵便ポスト。
+
+## 家：42
+ナギ船長の住まい。曲線屋根とロープの装飾がある船乗りの家。
+
+共通指示：添付のキービジュアルに合わせた紙と活版インクの版画風。太めの紺線と平塗り。紺 #1f2a44、紙 #f3ead8、朱 #c8462f、霧 #9fb3bf、灯り #f2b84b。正方形に建物を1棟大きく中央配置し、少し斜めから描く。足元に小さな石だたみ。窓は暗く無灯火。人物、文字、数字、記号を入れない。背景は影や模様のない純粋な緑 #00ff00 一色。建物には緑を使わない。
