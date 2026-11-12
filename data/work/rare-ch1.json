@@ -1,0 +1,275 @@
+{
+ "ch": 1,
+ "words": [
+  {
+   "shelf": 1,
+   "w": "envelope",
+   "ja": "封筒",
+   "pos": "n",
+   "ex": "A blue envelope",
+   "exJa": "青い封筒",
+   "rank": 2656
+  },
+  {
+   "shelf": 1,
+   "w": "stamp",
+   "ja": "切手",
+   "pos": "n",
+   "ex": "Lick the stamp",
+   "exJa": "切手をなめる",
+   "rank": 2654
+  },
+  {
+   "shelf": 1,
+   "w": "deliver",
+   "ja": "届ける",
+   "pos": "v",
+   "ex": "Deliver it today",
+   "exJa": "今日それを届ける",
+   "rank": 1064
+  },
+  {
+   "shelf": 1,
+   "w": "mail",
+   "ja": "郵便",
+   "pos": "n",
+   "ex": "The mail came",
+   "exJa": "郵便が来た",
+   "rank": 1643
+  },
+  {
+   "shelf": 1,
+   "w": "secret",
+   "ja": "秘密",
+   "pos": "n",
+   "ex": "Keep the secret",
+   "exJa": "秘密を守る",
+   "rank": 1276
+  },
+  {
+   "shelf": 2,
+   "w": "cheap",
+   "ja": "安い",
+   "pos": "a",
+   "ex": "A cheap price",
+   "exJa": "安い値段",
+   "rank": 1095
+  },
+  {
+   "shelf": 2,
+   "w": "discount",
+   "ja": "値引き",
+   "pos": "n",
+   "ex": "A small discount",
+   "exJa": "わずかな値引き",
+   "rank": 1660
+  },
+  {
+   "shelf": 2,
+   "w": "expensive",
+   "ja": "高価な",
+   "pos": "a",
+   "ex": "Too expensive today",
+   "exJa": "今日は高すぎる",
+   "rank": 1061
+  },
+  {
+   "shelf": 2,
+   "w": "sample",
+   "ja": "見本",
+   "pos": "n",
+   "ex": "Take a sample",
+   "exJa": "見本を取る",
+   "rank": 1062
+  },
+  {
+   "shelf": 2,
+   "w": "label",
+   "ja": "札",
+   "pos": "n",
+   "ex": "A paper label",
+   "exJa": "紙の札",
+   "rank": 1528
+  },
+  {
+   "shelf": 3,
+   "w": "bread",
+   "ja": "パン",
+   "pos": "n",
+   "ex": "Fresh bread smells good",
+   "exJa": "焼きたてのパンはいい匂い",
+   "rank": 2262
+  },
+  {
+   "shelf": 3,
+   "w": "cake",
+   "ja": "ケーキ",
+   "pos": "n",
+   "ex": "A birthday cake",
+   "exJa": "誕生日のケーキ",
+   "rank": 2173
+  },
+  {
+   "shelf": 3,
+   "w": "kitchen",
+   "ja": "台所",
+   "pos": "n",
+   "ex": "The hotel kitchen",
+   "exJa": "ホテルの台所",
+   "rank": 1307
+  },
+  {
+   "shelf": 3,
+   "w": "guest",
+   "ja": "客",
+   "pos": "n",
+   "ex": "A late guest",
+   "exJa": "遅い客",
+   "rank": 1430
+  },
+  {
+   "shelf": 3,
+   "w": "cheese",
+   "ja": "チーズ",
+   "pos": "n",
+   "ex": "Cheese on toast",
+   "exJa": "トーストのチーズ",
+   "rank": 2585
+  },
+  {
+   "shelf": 4,
+   "w": "milk",
+   "ja": "牛乳",
+   "pos": "n",
+   "ex": "Warm milk",
+   "exJa": "温かい牛乳",
+   "rank": 1789
+  },
+  {
+   "shelf": 4,
+   "w": "sugar",
+   "ja": "砂糖",
+   "pos": "n",
+   "ex": "A little sugar",
+   "exJa": "少しの砂糖",
+   "rank": 2234
+  },
+  {
+   "shelf": 4,
+   "w": "breakfast",
+   "ja": "朝食",
+   "pos": "n",
+   "ex": "Early breakfast",
+   "exJa": "早い朝食",
+   "rank": 1819
+  },
+  {
+   "shelf": 4,
+   "w": "bowl",
+   "ja": "鉢",
+   "pos": "n",
+   "ex": "A flour bowl",
+   "exJa": "粉の鉢",
+   "rank": 2291
+  },
+  {
+   "shelf": 4,
+   "w": "salt",
+   "ja": "塩",
+   "pos": "n",
+   "ex": "Add some salt",
+   "exJa": "塩を足す",
+   "rank": 2459
+  },
+  {
+   "shelf": 5,
+   "w": "boat",
+   "ja": "小舟",
+   "pos": "n",
+   "ex": "A fishing boat",
+   "exJa": "漁の舟",
+   "rank": 1304
+  },
+  {
+   "shelf": 5,
+   "w": "ocean",
+   "ja": "大洋",
+   "pos": "n",
+   "ex": "Across the ocean",
+   "exJa": "大洋の向こうへ",
+   "rank": 2671
+  },
+  {
+   "shelf": 5,
+   "w": "wave",
+   "ja": "波",
+   "pos": "n",
+   "ex": "A big wave",
+   "exJa": "大きな波",
+   "rank": 1158
+  },
+  {
+   "shelf": 5,
+   "w": "shore",
+   "ja": "岸",
+   "pos": "n",
+   "ex": "Walk along the shore",
+   "exJa": "岸を歩く",
+   "rank": 2737
+  },
+  {
+   "shelf": 5,
+   "w": "knife",
+   "ja": "包丁",
+   "pos": "n",
+   "ex": "A sharp knife",
+   "exJa": "鋭い包丁",
+   "rank": 2657
+  },
+  {
+   "shelf": 6,
+   "w": "ticket",
+   "ja": "切符",
+   "pos": "n",
+   "ex": "Show your ticket",
+   "exJa": "切符を見せる",
+   "rank": 1249
+  },
+  {
+   "shelf": 6,
+   "w": "journey",
+   "ja": "旅",
+   "pos": "n",
+   "ex": "A long journey",
+   "exJa": "長い旅",
+   "rank": 1621
+  },
+  {
+   "shelf": 6,
+   "w": "platform",
+   "ja": "ホーム",
+   "pos": "n",
+   "ex": "The train platform",
+   "exJa": "駅のホーム",
+   "rank": 2171
+  },
+  {
+   "shelf": 6,
+   "w": "passenger",
+   "ja": "乗客",
+   "pos": "n",
+   "ex": "A tired passenger",
+   "exJa": "疲れた乗客",
+   "rank": 1695
+  },
+  {
+   "shelf": 6,
+   "w": "rail",
+   "ja": "線路",
+   "pos": "n",
+   "ex": "Follow the rail",
+   "exJa": "線路をたどる",
+   "rank": 2440
+  }
+ ]
+}

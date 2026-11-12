@@ -1,0 +1,455 @@
+{
+ "ch": 3,
+ "words": [
+  {
+   "shelf": 17,
+   "w": "package",
+   "ja": "荷物",
+   "pos": "n",
+   "ex": "A heavy package",
+   "exJa": "重い荷物",
+   "rank": 1319
+  },
+  {
+   "shelf": 17,
+   "w": "storage",
+   "ja": "保管",
+   "pos": "n",
+   "ex": "Storage room",
+   "exJa": "保管の部屋",
+   "rank": 2707
+  },
+  {
+   "shelf": 17,
+   "w": "load",
+   "ja": "積み荷",
+   "pos": "n",
+   "ex": "Check the load",
+   "exJa": "積み荷を調べる",
+   "rank": 1455
+  },
+  {
+   "shelf": 17,
+   "w": "transport",
+   "ja": "輸送する",
+   "pos": "v",
+   "ex": "Transport the boxes",
+   "exJa": "箱を輸送する",
+   "rank": 1210
+  },
+  {
+   "shelf": 17,
+   "w": "export",
+   "ja": "輸出する",
+   "pos": "v",
+   "ex": "Export fish daily",
+   "exJa": "魚を毎日輸出する",
+   "rank": 1543
+  },
+  {
+   "shelf": 18,
+   "w": "calculate",
+   "ja": "計算する",
+   "pos": "v",
+   "ex": "Calculate the cost",
+   "exJa": "費用を計算する",
+   "rank": 1925
+  },
+  {
+   "shelf": 18,
+   "w": "schedule",
+   "ja": "予定",
+   "pos": "n",
+   "ex": "The new schedule",
+   "exJa": "新しい予定",
+   "rank": 1240
+  },
+  {
+   "shelf": 18,
+   "w": "delay",
+   "ja": "遅れ",
+   "pos": "n",
+   "ex": "A long delay",
+   "exJa": "長い遅れ",
+   "rank": 1310
+  },
+  {
+   "shelf": 18,
+   "w": "import",
+   "ja": "輸入する",
+   "pos": "v",
+   "ex": "Import new lamps",
+   "exJa": "新しい灯を輸入する",
+   "rank": 1613
+  },
+  {
+   "shelf": 18,
+   "w": "hurry",
+   "ja": "急ぐ",
+   "pos": "v",
+   "ex": "Do not hurry",
+   "exJa": "急がないで",
+   "rank": 2683
+  },
+  {
+   "shelf": 19,
+   "w": "border",
+   "ja": "境",
+   "pos": "n",
+   "ex": "Cross the border",
+   "exJa": "境を越える",
+   "rank": 1473
+  },
+  {
+   "shelf": 19,
+   "w": "examine",
+   "ja": "調べる",
+   "pos": "v",
+   "ex": "Examine each box",
+   "exJa": "箱を一つずつ調べる",
+   "rank": 1104
+  },
+  {
+   "shelf": 19,
+   "w": "suspect",
+   "ja": "疑う",
+   "pos": "v",
+   "ex": "I suspect them",
+   "exJa": "彼らを疑う",
+   "rank": 1490
+  },
+  {
+   "shelf": 19,
+   "w": "permit",
+   "ja": "許可証",
+   "pos": "n",
+   "ex": "A dock permit",
+   "exJa": "港の許可証",
+   "rank": 1589
+  },
+  {
+   "shelf": 19,
+   "w": "declare",
+   "ja": "申告する",
+   "pos": "v",
+   "ex": "Declare the goods",
+   "exJa": "品を申告する",
+   "rank": 1634
+  },
+  {
+   "shelf": 20,
+   "w": "slip",
+   "ja": "滑る",
+   "pos": "v",
+   "ex": "Slip on soup",
+   "exJa": "汁で滑る",
+   "rank": 1810
+  },
+  {
+   "shelf": 20,
+   "w": "wash",
+   "ja": "洗う",
+   "pos": "v",
+   "ex": "Wash the floor",
+   "exJa": "床を洗う",
+   "rank": 1368
+  },
+  {
+   "shelf": 20,
+   "w": "dirty",
+   "ja": "汚れた",
+   "pos": "a",
+   "ex": "A dirty floor",
+   "exJa": "汚れた床",
+   "rank": 2255
+  },
+  {
+   "shelf": 20,
+   "w": "careful",
+   "ja": "慎重な",
+   "pos": "a",
+   "ex": "Be careful here",
+   "exJa": "ここは注意",
+   "rank": 1637
+  },
+  {
+   "shelf": 20,
+   "w": "warn",
+   "ja": "警告する",
+   "pos": "v",
+   "ex": "Warn the crew",
+   "exJa": "乗組員に警告する",
+   "rank": 1132
+  },
+  {
+   "shelf": 21,
+   "w": "salary",
+   "ja": "給料",
+   "pos": "n",
+   "ex": "Monthly salary",
+   "exJa": "月給",
+   "rank": 1816
+  },
+  {
+   "shelf": 21,
+   "w": "wage",
+   "ja": "賃金",
+   "pos": "n",
+   "ex": "A fair wage",
+   "exJa": "正当な賃金",
+   "rank": 1757
+  },
+  {
+   "shelf": 21,
+   "w": "cash",
+   "ja": "現金",
+   "pos": "n",
+   "ex": "Pay in cash",
+   "exJa": "現金で払う",
+   "rank": 1339
+  },
+  {
+   "shelf": 21,
+   "w": "expense",
+   "ja": "出費",
+   "pos": "n",
+   "ex": "Every expense counts",
+   "exJa": "出費は全部大事",
+   "rank": 1531
+  },
+  {
+   "shelf": 21,
+   "w": "payment",
+   "ja": "支払い",
+   "pos": "n",
+   "ex": "Late payment",
+   "exJa": "遅れた支払い",
+   "rank": 1268
+  },
+  {
+   "shelf": 22,
+   "w": "trust",
+   "ja": "信用",
+   "pos": "n",
+   "ex": "Lost our trust",
+   "exJa": "信用を失った",
+   "rank": 1075
+  },
+  {
+   "shelf": 22,
+   "w": "honest",
+   "ja": "正直な",
+   "pos": "a",
+   "ex": "An honest keeper",
+   "exJa": "正直な灯台守",
+   "rank": 2035
+  },
+  {
+   "shelf": 22,
+   "w": "duty",
+   "ja": "務め",
+   "pos": "n",
+   "ex": "A keeper's duty",
+   "exJa": "灯台守の務め",
+   "rank": 1262
+  },
+  {
+   "shelf": 22,
+   "w": "proud",
+   "ja": "誇らしい",
+   "pos": "a",
+   "ex": "Proud of the dock",
+   "exJa": "港が誇らしい",
+   "rank": 1890
+  },
+  {
+   "shelf": 22,
+   "w": "regret",
+   "ja": "悔やむ",
+   "pos": "v",
+   "ex": "I regret that night",
+   "exJa": "あの夜を悔やむ",
+   "rank": 2391
+  },
+  {
+   "shelf": 23,
+   "w": "insurance",
+   "ja": "保険",
+   "pos": "n",
+   "ex": "Ship insurance",
+   "exJa": "船の保険",
+   "rank": 1314
+  },
+  {
+   "shelf": 23,
+   "w": "accident",
+   "ja": "事故",
+   "pos": "n",
+   "ex": "A harbor accident",
+   "exJa": "港の事故",
+   "rank": 1349
+  },
+  {
+   "shelf": 23,
+   "w": "witness",
+   "ja": "目撃者",
+   "pos": "n",
+   "ex": "A silent witness",
+   "exJa": "無口な目撃者",
+   "rank": 1642
+  },
+  {
+   "shelf": 23,
+   "w": "smoke",
+   "ja": "煙",
+   "pos": "n",
+   "ex": "Smoke on the cape",
+   "exJa": "岬の煙",
+   "rank": 1230
+  },
+  {
+   "shelf": 23,
+   "w": "disaster",
+   "ja": "大災害",
+   "pos": "n",
+   "ex": "Avoid disaster",
+   "exJa": "大災害を避ける",
+   "rank": 2117
+  },
+  {
+   "shelf": 24,
+   "w": "crew",
+   "ja": "乗組員",
+   "pos": "n",
+   "ex": "The tired crew",
+   "exJa": "疲れた乗組員",
+   "rank": 2095
+  },
+  {
+   "shelf": 24,
+   "w": "storm",
+   "ja": "嵐",
+   "pos": "n",
+   "ex": "A night storm",
+   "exJa": "夜の嵐",
+   "rank": 1999
+  },
+  {
+   "shelf": 24,
+   "w": "rescue",
+   "ja": "救う",
+   "pos": "v",
+   "ex": "Rescue the ship",
+   "exJa": "船を救う",
+   "rank": 2381
+  },
+  {
+   "shelf": 24,
+   "w": "wheel",
+   "ja": "舵輪",
+   "pos": "n",
+   "ex": "Hold the wheel",
+   "exJa": "舵輪を握る",
+   "rank": 1985
+  },
+  {
+   "shelf": 24,
+   "w": "darkness",
+   "ja": "暗闇",
+   "pos": "n",
+   "ex": "Darkness at sea",
+   "exJa": "海の暗闇",
+   "rank": 2780
+  },
+  {
+   "shelf": 25,
+   "w": "withdraw",
+   "ja": "撤退する",
+   "pos": "v",
+   "ex": "Withdraw from port",
+   "exJa": "港から撤退する",
+   "rank": 2163
+  },
+  {
+   "shelf": 25,
+   "w": "resign",
+   "ja": "辞める",
+   "pos": "v",
+   "ex": "The keeper will resign",
+   "exJa": "灯台守は辞める",
+   "rank": 2566
+  },
+  {
+   "shelf": 25,
+   "w": "deficit",
+   "ja": "赤字",
+   "pos": "n",
+   "ex": "A large deficit",
+   "exJa": "大きな赤字",
+   "rank": 2483
+  },
+  {
+   "shelf": 25,
+   "w": "abandon",
+   "ja": "見捨てる",
+   "pos": "v",
+   "ex": "Abandon the port",
+   "exJa": "港を見捨てる",
+   "rank": 1965
+  },
+  {
+   "shelf": 25,
+   "w": "cancel",
+   "ja": "取り消す",
+   "pos": "v",
+   "ex": "Cancel the lease",
+   "exJa": "契約を取り消す",
+   "rank": 2390
+  },
+  {
+   "shelf": 26,
+   "w": "mayor",
+   "ja": "町長",
+   "pos": "n",
+   "ex": "The town mayor",
+   "exJa": "町長",
+   "rank": 2779
+  },
+  {
+   "shelf": 26,
+   "w": "gift",
+   "ja": "贈り物",
+   "pos": "n",
+   "ex": "A white gift",
+   "exJa": "白い贈り物",
+   "rank": 1427
+  },
+  {
+   "shelf": 26,
+   "w": "ceremony",
+   "ja": "式典",
+   "pos": "n",
+   "ex": "A short ceremony",
+   "exJa": "短い式典",
+   "rank": 2517
+  },
+  {
+   "shelf": 26,
+   "w": "trap",
+   "ja": "わな",
+   "pos": "n",
+   "ex": "A quiet trap",
+   "exJa": "静かなわな",
+   "rank": 2184
+  },
+  {
+   "shelf": 26,
+   "w": "greet",
+   "ja": "出迎える",
+   "pos": "v",
+   "ex": "Greet the mayor",
+   "exJa": "町長を出迎える",
+   "rank": 2614
+  }
+ ]
+}

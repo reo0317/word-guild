@@ -1,0 +1,455 @@
+{
+ "ch": 2,
+ "words": [
+  {
+   "shelf": 7,
+   "w": "printer",
+   "ja": "印刷機",
+   "pos": "n",
+   "ex": "The old printer",
+   "exJa": "古い印刷機",
+   "rank": 2664
+  },
+  {
+   "shelf": 7,
+   "w": "catalog",
+   "ja": "目録",
+   "pos": "n",
+   "ex": "A new catalog",
+   "exJa": "新しい目録",
+   "rank": 2651
+  },
+  {
+   "shelf": 7,
+   "w": "publisher",
+   "ja": "出版社",
+   "pos": "n",
+   "ex": "The publisher called",
+   "exJa": "出版社が電話した",
+   "rank": 2476
+  },
+  {
+   "shelf": 7,
+   "w": "edition",
+   "ja": "版",
+   "pos": "n",
+   "ex": "The first edition",
+   "exJa": "初版",
+   "rank": 2032
+  },
+  {
+   "shelf": 7,
+   "w": "reply",
+   "ja": "返事",
+   "pos": "n",
+   "ex": "Send a reply",
+   "exJa": "返事を出す",
+   "rank": 1108
+  },
+  {
+   "shelf": 8,
+   "w": "coat",
+   "ja": "上着",
+   "pos": "n",
+   "ex": "A white coat",
+   "exJa": "白い上着",
+   "rank": 1863
+  },
+  {
+   "shelf": 8,
+   "w": "jacket",
+   "ja": "ジャケット",
+   "pos": "n",
+   "ex": "Fix the jacket",
+   "exJa": "ジャケットを直す",
+   "rank": 2253
+  },
+  {
+   "shelf": 8,
+   "w": "button",
+   "ja": "ボタン",
+   "pos": "n",
+   "ex": "Sew a button",
+   "exJa": "ボタンを縫う",
+   "rank": 2285
+  },
+  {
+   "shelf": 8,
+   "w": "pocket",
+   "ja": "ポケット",
+   "pos": "n",
+   "ex": "Empty pocket",
+   "exJa": "空のポケット",
+   "rank": 1865
+  },
+  {
+   "shelf": 8,
+   "w": "skirt",
+   "ja": "スカート",
+   "pos": "n",
+   "ex": "A long skirt",
+   "exJa": "長いスカート",
+   "rank": 2451
+  },
+  {
+   "shelf": 9,
+   "w": "medicine",
+   "ja": "薬",
+   "pos": "n",
+   "ex": "Take the medicine",
+   "exJa": "薬を飲む",
+   "rank": 1761
+  },
+  {
+   "shelf": 9,
+   "w": "symptom",
+   "ja": "症状",
+   "pos": "n",
+   "ex": "A mild symptom",
+   "exJa": "軽い症状",
+   "rank": 2071
+  },
+  {
+   "shelf": 9,
+   "w": "cough",
+   "ja": "せき",
+   "pos": "n",
+   "ex": "A dry cough",
+   "exJa": "からせき",
+   "rank": 2774
+  },
+  {
+   "shelf": 9,
+   "w": "nurse",
+   "ja": "看護師",
+   "pos": "n",
+   "ex": "The kind nurse",
+   "exJa": "優しい看護師",
+   "rank": 1315
+  },
+  {
+   "shelf": 9,
+   "w": "pain",
+   "ja": "痛み",
+   "pos": "n",
+   "ex": "No pain today",
+   "exJa": "今日は痛みなし",
+   "rank": 1150
+  },
+  {
+   "shelf": 10,
+   "w": "novel",
+   "ja": "小説",
+   "pos": "n",
+   "ex": "A thick novel",
+   "exJa": "分厚い小説",
+   "rank": 1278
+  },
+  {
+   "shelf": 10,
+   "w": "chapter",
+   "ja": "章",
+   "pos": "n",
+   "ex": "The last chapter",
+   "exJa": "最後の章",
+   "rank": 1275
+  },
+  {
+   "shelf": 10,
+   "w": "poetry",
+   "ja": "詩歌",
+   "pos": "n",
+   "ex": "Read poetry aloud",
+   "exJa": "詩を朗読する",
+   "rank": 2533
+  },
+  {
+   "shelf": 10,
+   "w": "fiction",
+   "ja": "作り話",
+   "pos": "n",
+   "ex": "Fiction on shelves",
+   "exJa": "棚の小説",
+   "rank": 2679
+  },
+  {
+   "shelf": 10,
+   "w": "essay",
+   "ja": "随筆",
+   "pos": "n",
+   "ex": "A short essay",
+   "exJa": "短い随筆",
+   "rank": 2161
+  },
+  {
+   "shelf": 11,
+   "w": "trick",
+   "ja": "たくらみ",
+   "pos": "n",
+   "ex": "A cheap trick",
+   "exJa": "安い手口",
+   "rank": 2617
+  },
+  {
+   "shelf": 11,
+   "w": "charm",
+   "ja": "魅力",
+   "pos": "n",
+   "ex": "Smile with charm",
+   "exJa": "魅力的に笑う",
+   "rank": 2376
+  },
+  {
+   "shelf": 11,
+   "w": "luxury",
+   "ja": "ぜいたく",
+   "pos": "n",
+   "ex": "Free luxury tempts",
+   "exJa": "ただの贅沢は誘う",
+   "rank": 2660
+  },
+  {
+   "shelf": 11,
+   "w": "pretend",
+   "ja": "ふりをする",
+   "pos": "v",
+   "ex": "Pretend to smile",
+   "exJa": "笑うふりをする",
+   "rank": 2560
+  },
+  {
+   "shelf": 11,
+   "w": "fool",
+   "ja": "だます",
+   "pos": "v",
+   "ex": "Do not fool us",
+   "exJa": "私たちをだますな",
+   "rank": 2765
+  },
+  {
+   "shelf": 12,
+   "w": "coffee",
+   "ja": "コーヒー",
+   "pos": "n",
+   "ex": "Hot coffee",
+   "exJa": "熱いコーヒー",
+   "rank": 1395
+  },
+  {
+   "shelf": 12,
+   "w": "menu",
+   "ja": "品書き",
+   "pos": "n",
+   "ex": "The menu is blank",
+   "exJa": "品書きは白紙",
+   "rank": 2597
+  },
+  {
+   "shelf": 12,
+   "w": "cream",
+   "ja": "クリーム",
+   "pos": "n",
+   "ex": "Cream on top",
+   "exJa": "上にクリーム",
+   "rank": 2388
+  },
+  {
+   "shelf": 12,
+   "w": "chat",
+   "ja": "おしゃべり",
+   "pos": "n",
+   "ex": "A quick chat",
+   "exJa": "手短なおしゃべり",
+   "rank": 2534
+  },
+  {
+   "shelf": 12,
+   "w": "taste",
+   "ja": "味",
+   "pos": "n",
+   "ex": "Lost its taste",
+   "exJa": "味が消えた",
+   "rank": 1413
+  },
+  {
+   "shelf": 13,
+   "w": "flower",
+   "ja": "花",
+   "pos": "n",
+   "ex": "A yellow flower",
+   "exJa": "黄色い花",
+   "rank": 1301
+  },
+  {
+   "shelf": 13,
+   "w": "rose",
+   "ja": "バラ",
+   "pos": "n",
+   "ex": "One red rose",
+   "exJa": "赤いバラ1本",
+   "rank": 2798
+  },
+  {
+   "shelf": 13,
+   "w": "seed",
+   "ja": "種",
+   "pos": "n",
+   "ex": "Plant a seed",
+   "exJa": "種をまく",
+   "rank": 1815
+  },
+  {
+   "shelf": 13,
+   "w": "grass",
+   "ja": "草",
+   "pos": "n",
+   "ex": "Wet grass",
+   "exJa": "ぬれた草",
+   "rank": 2193
+  },
+  {
+   "shelf": 13,
+   "w": "pink",
+   "ja": "桃色の",
+   "pos": "a",
+   "ex": "A pink petal",
+   "exJa": "桃色の花びら",
+   "rank": 2238
+  },
+  {
+   "shelf": 14,
+   "w": "chocolate",
+   "ja": "チョコ",
+   "pos": "n",
+   "ex": "Dark chocolate",
+   "exJa": "ほろ苦いチョコ",
+   "rank": 2620
+  },
+  {
+   "shelf": 14,
+   "w": "sweet",
+   "ja": "甘い",
+   "pos": "a",
+   "ex": "A sweet shop",
+   "exJa": "甘いお菓子の店",
+   "rank": 1781
+  },
+  {
+   "shelf": 14,
+   "w": "delight",
+   "ja": "喜び",
+   "pos": "n",
+   "ex": "Pure delight",
+   "exJa": "純粋な喜び",
+   "rank": 1971
+  },
+  {
+   "shelf": 14,
+   "w": "photograph",
+   "ja": "写真",
+   "pos": "n",
+   "ex": "A clear photograph",
+   "exJa": "鮮明な写真",
+   "rank": 1182
+  },
+  {
+   "shelf": 14,
+   "w": "cloud",
+   "ja": "雲",
+   "pos": "n",
+   "ex": "A grey cloud",
+   "exJa": "灰色の雲",
+   "rank": 2090
+  },
+  {
+   "shelf": 15,
+   "w": "reporter",
+   "ja": "記者",
+   "pos": "n",
+   "ex": "The harbor reporter",
+   "exJa": "港の記者",
+   "rank": 1905
+  },
+  {
+   "shelf": 15,
+   "w": "editor",
+   "ja": "編集者",
+   "pos": "n",
+   "ex": "The editor smiled",
+   "exJa": "編集者は微笑んだ",
+   "rank": 1423
+  },
+  {
+   "shelf": 15,
+   "w": "journalist",
+   "ja": "報道人",
+   "pos": "n",
+   "ex": "A young journalist",
+   "exJa": "若い報道人",
+   "rank": 1939
+  },
+  {
+   "shelf": 15,
+   "w": "broadcast",
+   "ja": "放送する",
+   "pos": "v",
+   "ex": "Broadcast the news",
+   "exJa": "ニュースを放送する",
+   "rank": 2260
+  },
+  {
+   "shelf": 15,
+   "w": "column",
+   "ja": "コラム",
+   "pos": "n",
+   "ex": "A weekly column",
+   "exJa": "週刊のコラム",
+   "rank": 1721
+  },
+  {
+   "shelf": 16,
+   "w": "harbor",
+   "ja": "港",
+   "pos": "n",
+   "ex": "The quiet harbor",
+   "exJa": "静かな港",
+   "rank": 2704
+  },
+  {
+   "shelf": 16,
+   "w": "rain",
+   "ja": "雨",
+   "pos": "n",
+   "ex": "Cold rain fell",
+   "exJa": "冷たい雨が降った",
+   "rank": 1232
+  },
+  {
+   "shelf": 16,
+   "w": "moon",
+   "ja": "月",
+   "pos": "n",
+   "ex": "The midnight moon",
+   "exJa": "真夜中の月",
+   "rank": 2599
+  },
+  {
+   "shelf": 16,
+   "w": "pilot",
+   "ja": "水先人",
+   "pos": "n",
+   "ex": "The harbor pilot",
+   "exJa": "港の水先人",
+   "rank": 1796
+  },
+  {
+   "shelf": 16,
+   "w": "truck",
+   "ja": "トラック",
+   "pos": "n",
+   "ex": "A white truck",
+   "exJa": "白いトラック",
+   "rank": 2113
+  }
+ ]
+}
