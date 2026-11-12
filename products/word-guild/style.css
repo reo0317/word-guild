@@ -299,12 +299,12 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .help-hint .help-material{fill:#d9b45d}.help-teach .help-material{fill:#a95538}
 .gq-help[aria-pressed=true]{background:var(--lamp-lt);outline:2px solid var(--seal);outline-offset:-2px}
 .gq-help:disabled{opacity:.45;cursor:default}
-/* 横の余白も紙魚に渡し、3体を大きく見せる。 */
+/* 紙魚は切手と同じ幅・下端に収め、隣の枠へはみ出させない。 */
 #view.gq-quest{--enemy-size:clamp(110px,24dvh,200px)}
 #view.gq-quest .gq-arena{flex:1 1 0;min-height:120px;height:auto;container-type:size}
 #view.gq-quest .gq-mons{bottom:calc(var(--plate-h) + 4px);padding-top:8px;container-type:size}
-#view.gq-quest .gq-mon-body{flex-shrink:0;width:min(var(--enemy-size),140%,calc(100cqh - 6px))}
-#view.gq-quest .gq-mon.big .gq-mon-body{width:min(var(--enemy-size),90%,calc(100cqh - 6px));transform:none}
+#view.gq-quest .gq-mon-body{flex-shrink:0;width:min(82%,calc(100cqh - 26px),140px);margin-bottom:2px}
+#view.gq-quest .gq-mon.big .gq-mon-body{width:min(82%,calc(200cqh - 52px),220px);aspect-ratio:2/1;transform:none}
 #view.gq-quest .gq-clues{z-index:1}
 #view.gq-quest .gq-boardrow{flex:0 0 auto;width:100%;aspect-ratio:7/6;min-height:252px}
 #view.gq-quest .gq-board{width:100%}
