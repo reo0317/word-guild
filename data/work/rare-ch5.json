@@ -1,0 +1,455 @@
+{
+ "ch": 5,
+ "words": [
+  {
+   "shelf": 37,
+   "w": "bedroom",
+   "ja": "寝室",
+   "pos": "n",
+   "ex": "a small bedroom",
+   "exJa": "小さな寝室",
+   "rank": 1432
+  },
+  {
+   "shelf": 37,
+   "w": "breakfast",
+   "ja": "朝食",
+   "pos": "n",
+   "ex": "breakfast at seven",
+   "exJa": "七時の朝食",
+   "rank": 1819
+  },
+  {
+   "shelf": 37,
+   "w": "bread",
+   "ja": "パン",
+   "pos": "n",
+   "ex": "fresh bread",
+   "exJa": "焼きたてのパン",
+   "rank": 2262
+  },
+  {
+   "shelf": 37,
+   "w": "milk",
+   "ja": "牛乳",
+   "pos": "n",
+   "ex": "a carton of milk",
+   "exJa": "牛乳一パック",
+   "rank": 1789
+  },
+  {
+   "shelf": 37,
+   "w": "guest",
+   "ja": "客",
+   "pos": "n",
+   "ex": "a hotel guest",
+   "exJa": "ホテルの客",
+   "rank": 1430
+  },
+  {
+   "shelf": 38,
+   "w": "shower",
+   "ja": "シャワー",
+   "pos": "n",
+   "ex": "a hot shower",
+   "exJa": "熱いシャワー",
+   "rank": 2352
+  },
+  {
+   "shelf": 38,
+   "w": "bath",
+   "ja": "風呂",
+   "pos": "n",
+   "ex": "a bath at night",
+   "exJa": "夜の風呂",
+   "rank": 2294
+  },
+  {
+   "shelf": 38,
+   "w": "dinner",
+   "ja": "夕食",
+   "pos": "n",
+   "ex": "dinner for guests",
+   "exJa": "客のための夕食",
+   "rank": 1117
+  },
+  {
+   "shelf": 38,
+   "w": "repair",
+   "ja": "修理する",
+   "pos": "v",
+   "ex": "repair the sign",
+   "exJa": "看板を修理する",
+   "rank": 1878
+  },
+  {
+   "shelf": 38,
+   "w": "apartment",
+   "ja": "集合住宅",
+   "pos": "n",
+   "ex": "an apartment by the sea",
+   "exJa": "海辺の集合住宅",
+   "rank": 2168
+  },
+  {
+   "shelf": 39,
+   "w": "tourist",
+   "ja": "観光客",
+   "pos": "n",
+   "ex": "a tourist at the pier",
+   "exJa": "桟橋の観光客",
+   "rank": 1486
+  },
+  {
+   "shelf": 39,
+   "w": "coffee",
+   "ja": "コーヒー",
+   "pos": "n",
+   "ex": "a cup of coffee",
+   "exJa": "コーヒー一杯",
+   "rank": 1395
+  },
+  {
+   "shelf": 39,
+   "w": "ticket",
+   "ja": "切符",
+   "pos": "n",
+   "ex": "a ticket to the port",
+   "exJa": "港行きの切符",
+   "rank": 1249
+  },
+  {
+   "shelf": 39,
+   "w": "abroad",
+   "ja": "外国へ",
+   "pos": "o",
+   "ex": "travel abroad",
+   "exJa": "外国へ旅する",
+   "rank": 1883
+  },
+  {
+   "shelf": 39,
+   "w": "museum",
+   "ja": "博物館",
+   "pos": "n",
+   "ex": "a small museum",
+   "exJa": "小さな博物館",
+   "rank": 1397
+  },
+  {
+   "shelf": 40,
+   "w": "schedule",
+   "ja": "予定表",
+   "pos": "n",
+   "ex": "the train schedule",
+   "exJa": "列車の予定表",
+   "rank": 1240
+  },
+  {
+   "shelf": 40,
+   "w": "platform",
+   "ja": "ホーム",
+   "pos": "n",
+   "ex": "wait on the platform",
+   "exJa": "ホームで待つ",
+   "rank": 2171
+  },
+  {
+   "shelf": 40,
+   "w": "passenger",
+   "ja": "乗客",
+   "pos": "n",
+   "ex": "a tired passenger",
+   "exJa": "疲れた乗客",
+   "rank": 1695
+  },
+  {
+   "shelf": 40,
+   "w": "traffic",
+   "ja": "交通",
+   "pos": "n",
+   "ex": "morning traffic",
+   "exJa": "朝の交通",
+   "rank": 1225
+  },
+  {
+   "shelf": 40,
+   "w": "route",
+   "ja": "経路",
+   "pos": "n",
+   "ex": "the usual route",
+   "exJa": "いつもの道筋",
+   "rank": 1410
+  },
+  {
+   "shelf": 41,
+   "w": "crew",
+   "ja": "乗組員",
+   "pos": "n",
+   "ex": "the whole crew",
+   "exJa": "乗組員の全員",
+   "rank": 2095
+  },
+  {
+   "shelf": 41,
+   "w": "charity",
+   "ja": "慈善",
+   "pos": "n",
+   "ex": "a charity group",
+   "exJa": "慈善の団体",
+   "rank": 2354
+  },
+  {
+   "shelf": 41,
+   "w": "stranger",
+   "ja": "見知らぬ人",
+   "pos": "n",
+   "ex": "a stranger at the dock",
+   "exJa": "埠頭の見知らぬ人",
+   "rank": 2725
+  },
+  {
+   "shelf": 41,
+   "w": "cook",
+   "ja": "料理人",
+   "pos": "n",
+   "ex": "the ship's cook",
+   "exJa": "船の料理人",
+   "rank": 1196
+  },
+  {
+   "shelf": 41,
+   "w": "vessel",
+   "ja": "大型船",
+   "pos": "n",
+   "ex": "an old vessel",
+   "exJa": "古い船",
+   "rank": 2699
+  },
+  {
+   "shelf": 42,
+   "w": "sail",
+   "ja": "帆",
+   "pos": "n",
+   "ex": "a white sail",
+   "exJa": "白い帆",
+   "rank": 2116
+  },
+  {
+   "shelf": 42,
+   "w": "ocean",
+   "ja": "大洋",
+   "pos": "n",
+   "ex": "the wide ocean",
+   "exJa": "広い大洋",
+   "rank": 2671
+  },
+  {
+   "shelf": 42,
+   "w": "shore",
+   "ja": "岸",
+   "pos": "n",
+   "ex": "walk along the shore",
+   "exJa": "岸沿いを歩く",
+   "rank": 2737
+  },
+  {
+   "shelf": 42,
+   "w": "ship",
+   "ja": "船",
+   "pos": "n",
+   "ex": "a ship at night",
+   "exJa": "夜の船",
+   "rank": 1093
+  },
+  {
+   "shelf": 42,
+   "w": "adventure",
+   "ja": "冒険",
+   "pos": "n",
+   "ex": "a last adventure",
+   "exJa": "最後の冒険",
+   "rank": 2667
+  },
+  {
+   "shelf": 43,
+   "w": "noise",
+   "ja": "騒音",
+   "pos": "n",
+   "ex": "too much noise",
+   "exJa": "多すぎる騒音",
+   "rank": 1440
+  },
+  {
+   "shelf": 43,
+   "w": "hall",
+   "ja": "廊下",
+   "pos": "n",
+   "ex": "the long hall",
+   "exJa": "長い廊下",
+   "rank": 1480
+  },
+  {
+   "shelf": 43,
+   "w": "furniture",
+   "ja": "家具",
+   "pos": "n",
+   "ex": "old furniture",
+   "exJa": "古い家具",
+   "rank": 2166
+  },
+  {
+   "shelf": 43,
+   "w": "complaint",
+   "ja": "苦情",
+   "pos": "n",
+   "ex": "a complaint about noise",
+   "exJa": "騒音への苦情",
+   "rank": 1689
+  },
+  {
+   "shelf": 43,
+   "w": "quiet",
+   "ja": "静かな",
+   "pos": "a",
+   "ex": "a quiet room",
+   "exJa": "静かな部屋",
+   "rank": 1313
+  },
+  {
+   "shelf": 44,
+   "w": "witness",
+   "ja": "目撃者",
+   "pos": "n",
+   "ex": "a witness of the fire",
+   "exJa": "火の目撃者",
+   "rank": 1642
+  },
+  {
+   "shelf": 44,
+   "w": "protest",
+   "ja": "抗議",
+   "pos": "n",
+   "ex": "a calm protest",
+   "exJa": "穏やかな抗議",
+   "rank": 1708
+  },
+  {
+   "shelf": 44,
+   "w": "resident",
+   "ja": "住民",
+   "pos": "n",
+   "ex": "each resident",
+   "exJa": "各住民",
+   "rank": 1539
+  },
+  {
+   "shelf": 44,
+   "w": "gather",
+   "ja": "集まる",
+   "pos": "v",
+   "ex": "gather in the hall",
+   "exJa": "広間に集まる",
+   "rank": 1286
+  },
+  {
+   "shelf": 44,
+   "w": "ceremony",
+   "ja": "式典",
+   "pos": "n",
+   "ex": "a lamp ceremony",
+   "exJa": "灯の式典",
+   "rank": 2517
+  },
+  {
+   "shelf": 45,
+   "w": "currency",
+   "ja": "通貨",
+   "pos": "n",
+   "ex": "foreign currency",
+   "exJa": "外国の通貨",
+   "rank": 2144
+  },
+  {
+   "shelf": 45,
+   "w": "theater",
+   "ja": "劇場",
+   "pos": "n",
+   "ex": "an old theater",
+   "exJa": "古い劇場",
+   "rank": 1393
+  },
+  {
+   "shelf": 45,
+   "w": "prison",
+   "ja": "牢",
+   "pos": "n",
+   "ex": "a prison cell",
+   "exJa": "牢の独房",
+   "rank": 1462
+  },
+  {
+   "shelf": 45,
+   "w": "deny",
+   "ja": "否定する",
+   "pos": "v",
+   "ex": "deny the debt",
+   "exJa": "借金を否定する",
+   "rank": 1429
+  },
+  {
+   "shelf": 45,
+   "w": "cash",
+   "ja": "現金",
+   "pos": "n",
+   "ex": "pay in cash",
+   "exJa": "現金で払う",
+   "rank": 1339
+  },
+  {
+   "shelf": 46,
+   "w": "seal",
+   "ja": "封をする",
+   "pos": "v",
+   "ex": "seal the letter",
+   "exJa": "手紙に封をする",
+   "rank": 2322
+  },
+  {
+   "shelf": 46,
+   "w": "excellent",
+   "ja": "優れた",
+   "pos": "a",
+   "ex": "an excellent crew",
+   "exJa": "優れた乗組員",
+   "rank": 1163
+  },
+  {
+   "shelf": 46,
+   "w": "weigh",
+   "ja": "量る",
+   "pos": "v",
+   "ex": "weigh the bag",
+   "exJa": "袋を量る",
+   "rank": 2481
+  },
+  {
+   "shelf": 46,
+   "w": "envelope",
+   "ja": "封筒",
+   "pos": "n",
+   "ex": "a white envelope",
+   "exJa": "白い封筒",
+   "rank": 2656
+  },
+  {
+   "shelf": 46,
+   "w": "stamp",
+   "ja": "切手",
+   "pos": "n",
+   "ex": "a new stamp",
+   "exJa": "新しい切手",
+   "rank": 2654
+  }
+ ]
+}

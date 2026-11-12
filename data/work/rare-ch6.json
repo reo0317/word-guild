@@ -1,0 +1,455 @@
+{
+ "ch": 6,
+ "words": [
+  {
+   "shelf": 47,
+   "w": "path",
+   "ja": "小道",
+   "pos": "n",
+   "ex": "a cape path",
+   "exJa": "岬の小道",
+   "rank": 1295
+  },
+  {
+   "shelf": 47,
+   "w": "danger",
+   "ja": "危険",
+   "pos": "n",
+   "ex": "a red sign of danger",
+   "exJa": "危険の赤い印",
+   "rank": 1416
+  },
+  {
+   "shelf": 47,
+   "w": "weather",
+   "ja": "天気",
+   "pos": "n",
+   "ex": "bad weather",
+   "exJa": "悪い天気",
+   "rank": 1068
+  },
+  {
+   "shelf": 47,
+   "w": "slope",
+   "ja": "坂",
+   "pos": "n",
+   "ex": "a steep slope",
+   "exJa": "急な坂",
+   "rank": 2696
+  },
+  {
+   "shelf": 47,
+   "w": "hill",
+   "ja": "丘",
+   "pos": "n",
+   "ex": "a hill by the sea",
+   "exJa": "海辺の丘",
+   "rank": 1670
+  },
+  {
+   "shelf": 48,
+   "w": "shoe",
+   "ja": "靴",
+   "pos": "n",
+   "ex": "a wet shoe",
+   "exJa": "ぬれた靴",
+   "rank": 1476
+  },
+  {
+   "shelf": 48,
+   "w": "metal",
+   "ja": "金属",
+   "pos": "n",
+   "ex": "a metal door",
+   "exJa": "金属の扉",
+   "rank": 1834
+  },
+  {
+   "shelf": 48,
+   "w": "honest",
+   "ja": "正直な",
+   "pos": "a",
+   "ex": "an honest keeper",
+   "exJa": "正直な番人",
+   "rank": 2035
+  },
+  {
+   "shelf": 48,
+   "w": "assure",
+   "ja": "請け合う",
+   "pos": "v",
+   "ex": "assure the visitor",
+   "exJa": "訪問者を安心させる",
+   "rank": 2064
+  },
+  {
+   "shelf": 48,
+   "w": "steel",
+   "ja": "鋼",
+   "pos": "n",
+   "ex": "a steel rail",
+   "exJa": "鋼のレール",
+   "rank": 2172
+  },
+  {
+   "shelf": 49,
+   "w": "wind",
+   "ja": "風",
+   "pos": "n",
+   "ex": "a cold wind",
+   "exJa": "冷たい風",
+   "rank": 1013
+  },
+  {
+   "shelf": 49,
+   "w": "reward",
+   "ja": "報い",
+   "pos": "n",
+   "ex": "a small reward",
+   "exJa": "ささやかな報い",
+   "rank": 1748
+  },
+  {
+   "shelf": 49,
+   "w": "poverty",
+   "ja": "貧しさ",
+   "pos": "n",
+   "ex": "live in poverty",
+   "exJa": "貧しく暮らす",
+   "rank": 2275
+  },
+  {
+   "shelf": 49,
+   "w": "calm",
+   "ja": "穏やかな",
+   "pos": "a",
+   "ex": "a calm sea",
+   "exJa": "穏やかな海",
+   "rank": 1964
+  },
+  {
+   "shelf": 49,
+   "w": "tower",
+   "ja": "塔",
+   "pos": "n",
+   "ex": "the lamp tower",
+   "exJa": "灯の塔",
+   "rank": 2324
+  },
+  {
+   "shelf": 50,
+   "w": "radio",
+   "ja": "無線",
+   "pos": "n",
+   "ex": "a radio call",
+   "exJa": "無線の呼び出し",
+   "rank": 1045
+  },
+  {
+   "shelf": 50,
+   "w": "suspect",
+   "ja": "疑う",
+   "pos": "v",
+   "ex": "suspect a trick",
+   "exJa": "ごまかしを疑う",
+   "rank": 1490
+  },
+  {
+   "shelf": 50,
+   "w": "silence",
+   "ja": "静けさ",
+   "pos": "n",
+   "ex": "a long silence",
+   "exJa": "長い静けさ",
+   "rank": 1967
+  },
+  {
+   "shelf": 50,
+   "w": "carpet",
+   "ja": "敷物",
+   "pos": "n",
+   "ex": "a red carpet",
+   "exJa": "赤い敷物",
+   "rank": 2680
+  },
+  {
+   "shelf": 50,
+   "w": "sudden",
+   "ja": "突然の",
+   "pos": "a",
+   "ex": "a sudden change",
+   "exJa": "突然の変化",
+   "rank": 1940
+  },
+  {
+   "shelf": 51,
+   "w": "lazy",
+   "ja": "怠けた",
+   "pos": "a",
+   "ex": "a lazy day",
+   "exJa": "怠けた一日",
+   "rank": 2802
+  },
+  {
+   "shelf": 51,
+   "w": "praise",
+   "ja": "ほめる",
+   "pos": "v",
+   "ex": "praise the keeper",
+   "exJa": "番人をほめる",
+   "rank": 2473
+  },
+  {
+   "shelf": 51,
+   "w": "audience",
+   "ja": "観客",
+   "pos": "n",
+   "ex": "a large audience",
+   "exJa": "大勢の観客",
+   "rank": 1166
+  },
+  {
+   "shelf": 51,
+   "w": "drama",
+   "ja": "劇",
+   "pos": "n",
+   "ex": "a sea drama",
+   "exJa": "海の劇",
+   "rank": 1991
+  },
+  {
+   "shelf": 51,
+   "w": "gallery",
+   "ja": "画廊",
+   "pos": "n",
+   "ex": "a gallery in town",
+   "exJa": "町の画廊",
+   "rank": 2465
+  },
+  {
+   "shelf": 52,
+   "w": "silver",
+   "ja": "銀",
+   "pos": "n",
+   "ex": "a silver bug",
+   "exJa": "銀色の虫",
+   "rank": 2033
+  },
+  {
+   "shelf": 52,
+   "w": "forever",
+   "ja": "永遠に",
+   "pos": "o",
+   "ex": "forever in ink",
+   "exJa": "永遠にインクで",
+   "rank": 2507
+  },
+  {
+   "shelf": 52,
+   "w": "email",
+   "ja": "電子メール",
+   "pos": "n",
+   "ex": "send an email",
+   "exJa": "メールを送る",
+   "rank": 1169
+  },
+  {
+   "shelf": 52,
+   "w": "digital",
+   "ja": "電子の",
+   "pos": "a",
+   "ex": "a digital clock",
+   "exJa": "電子時計",
+   "rank": 2309
+  },
+  {
+   "shelf": 52,
+   "w": "ashamed",
+   "ja": "恥じた",
+   "pos": "a",
+   "ex": "I felt ashamed",
+   "exJa": "私は恥ずかしかった",
+   "rank": 2806
+  },
+  {
+   "shelf": 53,
+   "w": "obligation",
+   "ja": "義務",
+   "pos": "n",
+   "ex": "a sense of obligation",
+   "exJa": "義務の感覚",
+   "rank": 2137
+  },
+  {
+   "shelf": 53,
+   "w": "permanent",
+   "ja": "永久の",
+   "pos": "a",
+   "ex": "a permanent debt",
+   "exJa": "永久の借り",
+   "rank": 1782
+  },
+  {
+   "shelf": 53,
+   "w": "victim",
+   "ja": "被害者",
+   "pos": "n",
+   "ex": "a victim of fog",
+   "exJa": "霧の被害者",
+   "rank": 1520
+  },
+  {
+   "shelf": 53,
+   "w": "signal",
+   "ja": "合図",
+   "pos": "n",
+   "ex": "a signal from sea",
+   "exJa": "海からの合図",
+   "rank": 1502
+  },
+  {
+   "shelf": 53,
+   "w": "hunger",
+   "ja": "空腹",
+   "pos": "n",
+   "ex": "hunger after work",
+   "exJa": "仕事のあとの空腹",
+   "rank": 2804
+  },
+  {
+   "shelf": 54,
+   "w": "thirst",
+   "ja": "渇き",
+   "pos": "n",
+   "ex": "thirst in summer",
+   "exJa": "夏の渇き",
+   "rank": 2809
+  },
+  {
+   "shelf": 54,
+   "w": "regret",
+   "ja": "後悔",
+   "pos": "n",
+   "ex": "a deep regret",
+   "exJa": "深い後悔",
+   "rank": 2391
+  },
+  {
+   "shelf": 54,
+   "w": "inflation",
+   "ja": "物価上昇",
+   "pos": "n",
+   "ex": "rising inflation",
+   "exJa": "進む物価上昇",
+   "rank": 2494
+  },
+  {
+   "shelf": 54,
+   "w": "unemployment",
+   "ja": "失業",
+   "pos": "n",
+   "ex": "rising unemployment",
+   "exJa": "増える失業",
+   "rank": 1984
+  },
+  {
+   "shelf": 54,
+   "w": "shock",
+   "ja": "衝撃",
+   "pos": "n",
+   "ex": "a great shock",
+   "exJa": "大きな衝撃",
+   "rank": 1383
+  },
+  {
+   "shelf": 55,
+   "w": "gift",
+   "ja": "贈り物",
+   "pos": "n",
+   "ex": "a thoughtful gift",
+   "exJa": "思いやりの贈り物",
+   "rank": 1427
+  },
+  {
+   "shelf": 55,
+   "w": "friendship",
+   "ja": "友情",
+   "pos": "n",
+   "ex": "a long friendship",
+   "exJa": "長い友情",
+   "rank": 2486
+  },
+  {
+   "shelf": 55,
+   "w": "grateful",
+   "ja": "感謝した",
+   "pos": "a",
+   "ex": "we are grateful",
+   "exJa": "私たちは感謝している",
+   "rank": 1977
+  },
+  {
+   "shelf": 55,
+   "w": "duty",
+   "ja": "務め",
+   "pos": "n",
+   "ex": "the keeper's duty",
+   "exJa": "番人の務め",
+   "rank": 1262
+  },
+  {
+   "shelf": 55,
+   "w": "bless",
+   "ja": "祝福する",
+   "pos": "v",
+   "ex": "bless the keeper",
+   "exJa": "番人を祝福する",
+   "rank": 2601
+  },
+  {
+   "shelf": 56,
+   "w": "literature",
+   "ja": "文学",
+   "pos": "n",
+   "ex": "read literature",
+   "exJa": "文学を読む",
+   "rank": 1519
+  },
+  {
+   "shelf": 56,
+   "w": "grammar",
+   "ja": "文法",
+   "pos": "n",
+   "ex": "learn grammar",
+   "exJa": "文法を学ぶ",
+   "rank": 2687
+  },
+  {
+   "shelf": 56,
+   "w": "poem",
+   "ja": "詩",
+   "pos": "n",
+   "ex": "a short poem",
+   "exJa": "短い詩",
+   "rank": 2211
+  },
+  {
+   "shelf": 56,
+   "w": "essay",
+   "ja": "随筆",
+   "pos": "n",
+   "ex": "write an essay",
+   "exJa": "随筆を書く",
+   "rank": 2161
+  },
+  {
+   "shelf": 56,
+   "w": "healthy",
+   "ja": "健康な",
+   "pos": "a",
+   "ex": "a healthy life",
+   "exJa": "健康な暮らし",
+   "rank": 1362
+  }
+ ]
+}

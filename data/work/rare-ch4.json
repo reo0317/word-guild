@@ -1,0 +1,455 @@
+{
+ "ch": 4,
+ "words": [
+  {
+   "shelf": 27,
+   "w": "desk",
+   "ja": "机",
+   "pos": "n",
+   "ex": "a desk by the door",
+   "exJa": "戸口のそばの机",
+   "rank": 1588
+  },
+  {
+   "shelf": 27,
+   "w": "visitor",
+   "ja": "訪問者",
+   "pos": "n",
+   "ex": "a visitor at the counter",
+   "exJa": "窓口にいる訪問者",
+   "rank": 1398
+  },
+  {
+   "shelf": 27,
+   "w": "register",
+   "ja": "登録する",
+   "pos": "v",
+   "ex": "register at the counter",
+   "exJa": "窓口で登録する",
+   "rank": 1500
+  },
+  {
+   "shelf": 27,
+   "w": "announce",
+   "ja": "発表する",
+   "pos": "v",
+   "ex": "announce the new rules",
+   "exJa": "新しい規則を発表する",
+   "rank": 1004
+  },
+  {
+   "shelf": 27,
+   "w": "regulation",
+   "ja": "規則",
+   "pos": "n",
+   "ex": "a safety regulation",
+   "exJa": "安全の規則",
+   "rank": 1481
+  },
+  {
+   "shelf": 28,
+   "w": "executive",
+   "ja": "重役",
+   "pos": "n",
+   "ex": "an executive of the town",
+   "exJa": "町の重役",
+   "rank": 1059
+  },
+  {
+   "shelf": 28,
+   "w": "secretary",
+   "ja": "秘書",
+   "pos": "n",
+   "ex": "the secretary of records",
+   "exJa": "記録係の秘書",
+   "rank": 1193
+  },
+  {
+   "shelf": 28,
+   "w": "shareholder",
+   "ja": "株主",
+   "pos": "n",
+   "ex": "a shareholder of the firm",
+   "exJa": "会社の株主",
+   "rank": 2290
+  },
+  {
+   "shelf": 28,
+   "w": "commercial",
+   "ja": "商業の",
+   "pos": "a",
+   "ex": "a commercial building",
+   "exJa": "商業用の建物",
+   "rank": 1260
+  },
+  {
+   "shelf": 28,
+   "w": "request",
+   "ja": "頼む",
+   "pos": "v",
+   "ex": "request a vacant room",
+   "exJa": "空き部屋を頼む",
+   "rank": 1011
+  },
+  {
+   "shelf": 29,
+   "w": "mayor",
+   "ja": "町長",
+   "pos": "n",
+   "ex": "the mayor of the port",
+   "exJa": "港の町長",
+   "rank": 2779
+  },
+  {
+   "shelf": 29,
+   "w": "citizen",
+   "ja": "市民",
+   "pos": "n",
+   "ex": "every citizen of the town",
+   "exJa": "町のすべての市民",
+   "rank": 1451
+  },
+  {
+   "shelf": 29,
+   "w": "debt",
+   "ja": "借金",
+   "pos": "n",
+   "ex": "an old debt",
+   "exJa": "昔の借金",
+   "rank": 1624
+  },
+  {
+   "shelf": 29,
+   "w": "district",
+   "ja": "地区",
+   "pos": "n",
+   "ex": "a quiet district",
+   "exJa": "静かな地区",
+   "rank": 1329
+  },
+  {
+   "shelf": 29,
+   "w": "absence",
+   "ja": "不在",
+   "pos": "n",
+   "ex": "his long absence",
+   "exJa": "彼の長い不在",
+   "rank": 1758
+  },
+  {
+   "shelf": 30,
+   "w": "cancel",
+   "ja": "取り消す",
+   "pos": "v",
+   "ex": "cancel the contract",
+   "exJa": "契約を取り消す",
+   "rank": 2390
+  },
+  {
+   "shelf": 30,
+   "w": "insurance",
+   "ja": "保険",
+   "pos": "n",
+   "ex": "pay the insurance",
+   "exJa": "保険料を払う",
+   "rank": 1314
+  },
+  {
+   "shelf": 30,
+   "w": "payment",
+   "ja": "支払い",
+   "pos": "n",
+   "ex": "a late payment",
+   "exJa": "遅れた支払い",
+   "rank": 1268
+  },
+  {
+   "shelf": 30,
+   "w": "guarantee",
+   "ja": "保証する",
+   "pos": "v",
+   "ex": "guarantee a fair price",
+   "exJa": "適正な値を保証する",
+   "rank": 1570
+  },
+  {
+   "shelf": 30,
+   "w": "mortgage",
+   "ja": "住宅ローン",
+   "pos": "n",
+   "ex": "a mortgage on the house",
+   "exJa": "家のローン",
+   "rank": 2443
+  },
+  {
+   "shelf": 31,
+   "w": "budget",
+   "ja": "予算",
+   "pos": "n",
+   "ex": "the town budget",
+   "exJa": "町の予算",
+   "rank": 1016
+  },
+  {
+   "shelf": 31,
+   "w": "committee",
+   "ja": "委員会",
+   "pos": "n",
+   "ex": "a council committee",
+   "exJa": "議会の委員会",
+   "rank": 1038
+  },
+  {
+   "shelf": 31,
+   "w": "expense",
+   "ja": "費用",
+   "pos": "n",
+   "ex": "an oil expense",
+   "exJa": "油の費用",
+   "rank": 1531
+  },
+  {
+   "shelf": 31,
+   "w": "appoint",
+   "ja": "任命する",
+   "pos": "v",
+   "ex": "appoint a new leader",
+   "exJa": "新しい長を任命する",
+   "rank": 1788
+  },
+  {
+   "shelf": 31,
+   "w": "institution",
+   "ja": "機関",
+   "pos": "n",
+   "ex": "a research institution",
+   "exJa": "研究機関",
+   "rank": 1137
+  },
+  {
+   "shelf": 32,
+   "w": "storm",
+   "ja": "嵐",
+   "pos": "n",
+   "ex": "a night storm",
+   "exJa": "夜の嵐",
+   "rank": 1999
+  },
+  {
+   "shelf": 32,
+   "w": "disaster",
+   "ja": "災害",
+   "pos": "n",
+   "ex": "a sea disaster",
+   "exJa": "海の災害",
+   "rank": 2117
+  },
+  {
+   "shelf": 32,
+   "w": "darkness",
+   "ja": "暗闇",
+   "pos": "n",
+   "ex": "the darkness at sea",
+   "exJa": "海の暗闇",
+   "rank": 2780
+  },
+  {
+   "shelf": 32,
+   "w": "emergency",
+   "ja": "緊急事態",
+   "pos": "n",
+   "ex": "an emergency at night",
+   "exJa": "夜の緊急事態",
+   "rank": 1891
+  },
+  {
+   "shelf": 32,
+   "w": "burn",
+   "ja": "燃える",
+   "pos": "v",
+   "ex": "burn with a bright flame",
+   "exJa": "明るい炎で燃える",
+   "rank": 1280
+  },
+  {
+   "shelf": 33,
+   "w": "lawyer",
+   "ja": "弁護士",
+   "pos": "n",
+   "ex": "call a lawyer",
+   "exJa": "弁護士を呼ぶ",
+   "rank": 1489
+  },
+  {
+   "shelf": 33,
+   "w": "advertise",
+   "ja": "宣伝する",
+   "pos": "v",
+   "ex": "advertise the story",
+   "exJa": "話を宣伝する",
+   "rank": 1172
+  },
+  {
+   "shelf": 33,
+   "w": "permission",
+   "ja": "許可",
+   "pos": "n",
+   "ex": "without permission",
+   "exJa": "許可なしで",
+   "rank": 2414
+  },
+  {
+   "shelf": 33,
+   "w": "promotion",
+   "ja": "昇進",
+   "pos": "n",
+   "ex": "I want no promotion",
+   "exJa": "昇進はいらない",
+   "rank": 2444
+  },
+  {
+   "shelf": 33,
+   "w": "shout",
+   "ja": "叫ぶ",
+   "pos": "v",
+   "ex": "shout from the deck",
+   "exJa": "甲板から叫ぶ",
+   "rank": 1666
+  },
+  {
+   "shelf": 34,
+   "w": "invent",
+   "ja": "発明する",
+   "pos": "v",
+   "ex": "invent a hand lamp",
+   "exJa": "手持ちランプを発明する",
+   "rank": 2627
+  },
+  {
+   "shelf": 34,
+   "w": "device",
+   "ja": "装置",
+   "pos": "n",
+   "ex": "a clever device",
+   "exJa": "うまい装置",
+   "rank": 1525
+  },
+  {
+   "shelf": 34,
+   "w": "wage",
+   "ja": "賃金",
+   "pos": "n",
+   "ex": "my final wage",
+   "exJa": "私の最後の賃金",
+   "rank": 1757
+  },
+  {
+   "shelf": 34,
+   "w": "secret",
+   "ja": "秘密",
+   "pos": "n",
+   "ex": "a secret note",
+   "exJa": "秘密のメモ",
+   "rank": 1276
+  },
+  {
+   "shelf": 34,
+   "w": "familiar",
+   "ja": "なじみの",
+   "pos": "a",
+   "ex": "a familiar voice",
+   "exJa": "なじみの声",
+   "rank": 1445
+  },
+  {
+   "shelf": 35,
+   "w": "equipment",
+   "ja": "設備",
+   "pos": "n",
+   "ex": "office equipment",
+   "exJa": "事務用の設備",
+   "rank": 1055
+  },
+  {
+   "shelf": 35,
+   "w": "dedicate",
+   "ja": "捧げる",
+   "pos": "v",
+   "ex": "dedicate my life to work",
+   "exJa": "仕事に人生を捧げる",
+   "rank": 2449
+  },
+  {
+   "shelf": 35,
+   "w": "discount",
+   "ja": "割引",
+   "pos": "n",
+   "ex": "a postage discount",
+   "exJa": "郵便料金の割引",
+   "rank": 1660
+  },
+  {
+   "shelf": 35,
+   "w": "evaluate",
+   "ja": "評価する",
+   "pos": "v",
+   "ex": "evaluate each worker",
+   "exJa": "各職員を評価する",
+   "rank": 2139
+  },
+  {
+   "shelf": 35,
+   "w": "maintenance",
+   "ja": "保守",
+   "pos": "n",
+   "ex": "lamp maintenance",
+   "exJa": "ランプの保守",
+   "rank": 2548
+  },
+  {
+   "shelf": 36,
+   "w": "remind",
+   "ja": "思い出させる",
+   "pos": "v",
+   "ex": "remind me of home",
+   "exJa": "故郷を思い出させる",
+   "rank": 1459
+  },
+  {
+   "shelf": 36,
+   "w": "journal",
+   "ja": "日誌",
+   "pos": "n",
+   "ex": "a weekly journal",
+   "exJa": "週ごとの日誌",
+   "rank": 2429
+  },
+  {
+   "shelf": 36,
+   "w": "kitchen",
+   "ja": "台所",
+   "pos": "n",
+   "ex": "the old kitchen",
+   "exJa": "古い台所",
+   "rank": 1307
+  },
+  {
+   "shelf": 36,
+   "w": "meal",
+   "ja": "食事",
+   "pos": "n",
+   "ex": "a hot meal",
+   "exJa": "温かい食事",
+   "rank": 1250
+  },
+  {
+   "shelf": 36,
+   "w": "weekly",
+   "ja": "毎週の",
+   "pos": "a",
+   "ex": "a weekly report",
+   "exJa": "毎週の報告",
+   "rank": 2661
+  }
+ ]
+}
