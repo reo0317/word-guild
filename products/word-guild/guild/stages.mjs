@@ -2,6 +2,9 @@
 import {CHAPTER_NAMES} from './chapters.mjs';
 import {HEAVY_DUE, LIT_BOX, MAX_BOX, isDue} from './srs.mjs';
 
+// 公開する地図の形を増やさず、結果の一行に使う現在の石段の残数を保持する。
+const remaining = new WeakMap();
+
 // step は街灯内の1始まり。lit / gold は該当語数（total と同数で点灯）。
 // tomorrow は明日期限になる全ID（期限切れは含めない）。fog は真偽値。
 export function buildMap(words, progress, today) {
@@ -43,14 +46,16 @@ export function buildMap(words, progress, today) {
     .filter(id => !progress.words[id]).slice(0, 3);
   const dueWords = words.filter(w => isDue(state(w), today))
     .sort((a, b) => state(a).due - state(b).due || a.shelf - b.shelf || a.id.localeCompare(b.id));
-  return {wards, here, next, due: dueWords.slice(0, 3).map(w => w.id), dueCount: dueWords.length,
+  const result = {wards, here, next, due: dueWords.slice(0, 3).map(w => w.id), dueCount: dueWords.length,
     fog: dueWords.length >= HEAVY_DUE,
     tomorrow: words.filter(w => state(w)?.due === today + 1).map(w => w.id)};
+  remaining.set(result, position?.entry.ids.filter(id => !progress.words[id]).length ?? 0);
+  return result;
 }
 
 // before / after は buildMap の結果、daily は配達後の progress.daily。
 // kind: page（残り枚数）, lamp（次の街灯番号）, light（未点灯語数）,
-// daily（速達の残り）, next（次の石段の未遭遇語数）。完了済みの目標は出さない。
+// daily（速達の残り）, next（今いる石段の未遭遇語数）。完了済みの目標は出さない。
 export function nudge(before, after, daily) {
   const lamps = after.wards.flatMap(w => w.lamps);
   // 配達前にいたページを優先する。ページをまたいだ配達にも対応。
@@ -65,8 +70,7 @@ export function nudge(before, after, daily) {
   const light = candidates.find(l => l.total - l.lit > 0 && l.total - l.lit <= 5);
   if (light) return {kind: 'light', count: light.total - light.lit};
   if (daily && !daily.done && daily.goal > daily.count) return {kind: 'daily', count: daily.goal - daily.count};
-  const step = lamp?.steps[(after.here?.step ?? 0) - 1];
-  return {kind: 'next', count: step?.passed ? 0 : Math.min(5, lamp ? lamp.total - lamp.got : 0)};
+  return {kind: 'next', count: remaining.get(after) ?? after.next.length};
 }
 
 // 同順位は元の語順。入力配列・進捗は変更しない。戻り値は語オブジェクト。
