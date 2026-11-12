@@ -102,7 +102,7 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 /* 時間帯：区4は夕方（灯り色の薄い重ね）、区5は夜（紺の重ね。窓や街灯の灯りは残る程度）。 */
 .gq-ch4 .gq-tint{background:linear-gradient(#f2b84b55,#e8863a44);mix-blend-mode:multiply}
 .gq-ch5 .gq-tint{background:#34478a;mix-blend-mode:multiply;opacity:.7}
-.gq-ch5 .gq-arena-bg>img{filter:brightness(.88)}
+.gq-ch5 .gq-arena-bg>img{opacity:.85}
 .gq-coach{flex-shrink:0;display:flex;gap:6px;align-items:center;padding:4px 8px;font-size:12px;line-height:1.4;background:var(--lamp-lt);border:2px solid var(--ink);border-radius:8px}.gq-coach b{flex-shrink:0;color:var(--seal);font-size:11px}.gq-coach .art{flex:0 0 auto}.gq-coach .gq-coach-face{flex:0 0 30px;height:30px}
 .gq-input{height:22px;flex-shrink:0;font-size:13px;font-weight:800;text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;letter-spacing:.05em}.gq-input.is-message{color:var(--pos-o);font-weight:600}
 .gq-input.wrong{animation:gq-shake .4s}

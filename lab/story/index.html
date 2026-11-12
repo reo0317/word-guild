@@ -192,7 +192,7 @@ function build() {
   const l2 = story.second || L;
   $('#app').innerHTML = `
   <div class="nav">${[1, 2, 3, 4, 5, 6].map(n => `<a href="#s${n}">${n}</a>`).join('')}
-   ${story.variants.length > 1 ? `<span class="sep"></span>${story.variants.map((v, i) => `<button class="chip" data-v="${i}" aria-pressed="${i === vi}">${esc(v.variant || 'AB'[i])}</button>`).join('')}` : ''}</div>
+   ${story.variants.length > 1 ? `<span class="sep"></span>${story.variants.map((v, i) => `<button class="chip" data-v="${i}" aria-pressed="${i === vi}">${esc((v.variant || "AB"[i]).slice(0, 1))}</button>`).join('')}` : ''}</div>
   <section id="s1"><h2><i>1</i>霧のかすれ</h2><div class="card"><span class="src">${esc(story.source)}</span><div id="p1"></div></div></section>
   <section id="s2"><h2><i>2</i>語が戻る</h2><div class="card"><div id="p2" class="tap"></div><div class="tools"><button class="rb go" id="go2" aria-label="自動">${play}</button><button class="rb" id="re2" aria-label="もう一度">${redo}</button></div></div></section>
   <section id="s3"><h2><i>3</i>結果画面</h2><div class="res"><div id="p3" class="tap"></div><div class="row12" id="stamps"></div><div class="acts"><button class="rb" aria-label="局へ">${home}</button><button class="pill">つぎの石段へ</button><button class="chip" id="esc3" aria-pressed="true" aria-label="逃げた">${quiet('b0003', 'print').replace('<svg ', '<svg style="width:26px;height:26px" ')}</button></div></div></section>
