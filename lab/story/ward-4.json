@@ -95,8 +95,8 @@
      ]
     },
     {
-     "en": "A {stockholder} writes {steadily} for a {vacant} building for the {assembly} of each {accessory} he sells; its owner is blank.",
-     "ja": "ある株主が、売っているアクセサリーを組み立てるための空いた建物を求めて、着実に申請を出してきます。その建物の持ち主の名前は空白です。",
+     "en": "A {stockholder} with a {steadily} growing business requests a {vacant} building for the {assembly} of each {accessory}. The owner's name is missing.",
+     "ja": "ある株主がアクセサリーの組み立て用に空いた建物を求めています。事業は着実に伸びていますが、建物の持ち主の名前が消えています。",
      "ids": [
       "t0537",
       "t0536",
@@ -117,8 +117,8 @@
      ]
     },
     {
-     "en": "The {jam} of people gives me a {headache}; I am not {optimistic}. The mayor keeps their offer on a {nail}, with no {expiration}.",
-     "ja": "人の渋滞で頭痛がします。楽観はできません。町長は白紙商会の申し出を釘にかけています。期限切れはありません。",
+     "en": "The traffic {jam} gives me a {headache}; I am not {optimistic}. Their offer hangs on a {nail}, with no {expiration} date.",
+     "ja": "交通渋滞で頭痛がします。楽観はできません。白紙商会の提案書が釘に掛かっています。有効期限はありません。",
      "ids": [
       "t0548",
       "t0547",
@@ -138,7 +138,7 @@
    "lines": [
     {
      "en": "Our {projection} is good, and this is no {takeover}. Like any {pedestrian} from the {suburb}, I have old ink on my {sleeve}.",
-     "ja": "予測値は良好で、これは買収ではありません。郊外を歩くどの歩行者とも同じく、私の袖にも古いインクがついています。",
+     "ja": "予測値は良好で、これは買収ではありません。郊外から来る歩行者の皆さんと同じく、私の袖にも古いインクがついています。",
      "ids": [
       "t0552",
       "t0555",
@@ -159,8 +159,8 @@
      ]
     },
     {
-     "en": "Old papers {accumulate} here, from each {appraisal} to each debt. Half our {workforce} is {absent}, and the last {apprentice} quit.",
-     "ja": "ここには古い書類がたまる一方です。査定の一枚から借金の一枚まで。職員の半分は欠席し、最後の見習いも辞めました。",
+     "en": "Old papers {accumulate} here: every {appraisal}, every debt record. Half our {workforce} is {absent}, and the last {apprentice} quit.",
+     "ja": "査定も借金の記録も、古い書類がここにたまる一方です。職員の半分は欠勤し、最後の見習いも辞めました。",
      "ids": [
       "t0563",
       "t0564",
@@ -171,7 +171,7 @@
     },
     {
      "en": "Mr. Blank is a {businessman}, not a man in a {costume}. He will {compensate} every seller, and our {ceiling} will be {colorful} again.",
-     "ja": "ブランク氏はビジネスマンであって、衣装を着た怪しい人ではありません。すべての売り手に補償し、役場の天井もまた色鮮やかになります。",
+     "ja": "ブランク氏はビジネスマンであって、仮装した男ではありません。すべての売り手に補償し、役場の天井もまた色鮮やかになります。",
      "ids": [
       "t0566",
       "t0570",
@@ -181,8 +181,8 @@
      ]
     },
     {
-     "en": "The {editorial} can't see its {effectiveness}, but any {firefighter} knows old paper is like {gasoline}. We will {facilitate} a new start.",
-     "ja": "新聞の社説は、この案の有効性がわからないと言います。けれど消防士なら誰でも、古い紙がガソリンのようなものだと知っています。私たちは新しい出発を後押しします。",
+     "en": "The {editorial} questions our plan's {effectiveness}; any {firefighter} knows paper burns like {gasoline}. We will {facilitate} a new start.",
+     "ja": "社説はこの案の有効性を疑っていますが、消防士なら誰でも紙がガソリンのように燃えると知っています。私たちは新たな出発を容易にします。",
      "ids": [
       "t0571",
       "t0572",
@@ -212,8 +212,8 @@
      ]
     },
     {
-     "en": "We also {safely} clear the {payroll}, {pharmaceutical} labels, and any unpaid {premium}. We give each blank a {plausible} reason.",
-     "ja": "給与計算、製薬のラベル、未払いの保険料も安全に消す。白紙のひとつひとつに、もっともな理由をつける。",
+     "en": "We {safely} erase {payroll} calculations, {pharmaceutical} records, and unpaid {premium} notices. Each blank has a {plausible} reason.",
+     "ja": "給与計算の結果、製薬の記録、未払いの保険料の通知を安全に消す。空白の一つひとつには、もっともな理由がある。",
      "ids": [
       "t0585",
       "t0581",
@@ -245,8 +245,8 @@
      ]
     },
     {
-     "en": "Small print: every record, from the {diner} to the {embassy}. We are {eager} to begin; no {economist} may {duplicate} this paper.",
-     "ja": "小さな字：大衆食堂から大使館まで、すべての記録。当社は早く始めたい。どの経済学者も、この紙を複製してはならない。",
+     "en": "We erase all records without exception, from {diner} to {embassy}. We are {eager} to begin; no {economist} may {duplicate} this contract.",
+     "ja": "大衆食堂から大使館まで、すべての記録を例外なく消す。当社は開始を熱望している。どの経済学者もこの契約書を複製してはならない。",
      "ids": [
       "t0596",
       "t0600",
@@ -265,8 +265,8 @@
    "to": "The records room",
    "lines": [
     {
-     "en": "An {informative} report from the {institute}: lighthouse oil costs too much. Mr. Shirase {fastened} his {kit} and called the plan {harmful}.",
-     "ja": "機関から情報の多い報告があった。灯台の油は費用がかかりすぎる。シラセ氏は道具のキットを留め、この案は有害だと言った。",
+     "en": "The {informative} report from the {institute} questions oil costs. Shirase {fastened} his {kit} shut and called the cuts {harmful}.",
+     "ja": "機関からの情報豊富な報告は、油の費用を疑問視している。シラセ氏はキットを閉じてしっかり留め、この削減案は有害だと言った。",
      "ids": [
       "t0603",
       "t0604",
@@ -298,8 +298,8 @@
      ]
     },
     {
-     "en": "Nine to one, we vote for the {seasonal} {removal} of night oil; his no is kept {separately}. Tobe: keeper {turnover} is {satisfactory}.",
-     "ja": "9対1で、季節ごとに夜の油を取りやめることに決めた。シラセ氏の反対票は別に記録する。助役トベ：灯台守の離職率は満足できる範囲だ。",
+     "en": "Nine to one, we approve {seasonal} {removal} of oil after ten; record his objection {separately}. Tobe calls keeper {turnover} {satisfactory}.",
+     "ja": "9対1で、季節的な措置として夜10時以降の油の撤去を承認する。シラセ氏の反対意見は別に記録する。トベは、灯台守の離職率は満足できる範囲だと言う。",
      "ids": [
       "t0618",
       "t0616",
@@ -329,8 +329,8 @@
    "to": "The town council",
    "lines": [
     {
-     "en": "Keep this in the {basement}, away from any {documentary}. From the {balcony} of the {culinary} school, I saw the cape dark, as planned {beforehand}.",
-     "ja": "この報告は地下室に保管し、ドキュメンタリーの目にふれさせないこと。私は料理学校のバルコニーから、事前の予定どおり岬が暗いのを見た。",
+     "en": "Hide this in the {basement} from {documentary} crews. From the {balcony} of the {culinary} school, I saw darkness, as planned {beforehand}.",
+     "ja": "これは地下室に隠し、ドキュメンタリーの取材班には見せないこと。料理学校のバルコニーから、事前の計画どおり暗くなっているのを見た。",
      "ids": [
       "t0627",
       "t0630",
@@ -351,8 +351,8 @@
      ]
     },
     {
-     "en": "I heard no call over the {jazz}. To {maximize} the fire, the {mild} keeper used his hands, which need {massage} for a {lifetime}.",
-     "ja": "ジャズの音で、助けを呼ぶ声は聞こえなかった。温和な灯台守は火を最大にしようと素手を使い、その手は一生マッサージが要るだろう。",
+     "en": "I heard only {jazz}; to {maximize} light, the {mild} keeper burned his hands. He may need {massage} throughout his {lifetime}.",
+     "ja": "私にはジャズしか聞こえなかった。温和な灯台守は光を最大にしようとして手にやけどを負った。生涯にわたってマッサージが必要かもしれない。",
      "ids": [
       "t0636",
       "t0639",
@@ -362,8 +362,8 @@
      ]
     },
     {
-     "en": "The lamp {plug} was out; he ate {pie} and did not look at it {periodically}. {Recruitment} of a new keeper is {ongoing}.",
-     "ja": "灯のプラグは抜けていた。彼はパイを食べており、定期的に確かめなかった。新しい灯台守の採用は進行中である。",
+     "en": "The backup lamp's {plug} was out; he ate {pie} instead of checking oil {periodically}. {Recruitment} of a keeper is {ongoing}.",
+     "ja": "補助灯のプラグは抜けていた。彼は定期的に油を点検せず、パイを食べていた。灯台守の採用は進行中である。",
      "ids": [
       "t0644",
       "t0643",
@@ -393,8 +393,8 @@
    "to": "The town council",
    "lines": [
     {
-     "en": "Ten men were {aboard}; the Yosuga Maru {timetable} is by my {vase}. People {surf} to read your report; my box holds only {spam}.",
-     "ja": "あの夜、10人が乗っていた。ヨスガ丸の時刻表は、私の花瓶のそばにある。人々はネットを見てあなたがたの報告を読み、私の郵便受けには迷惑メールしか来ない。",
+     "en": "Ten men were {aboard}; the {timetable} is by my {vase}. People {surf} to read your report; my inbox holds only {spam}.",
+     "ja": "10人が乗っていた。時刻表は私の花瓶のそばにある。人々はネットであなたがたの報告を読み、私の受信箱には迷惑メールしか届かない。",
      "ids": [
       "t0655",
       "t0653",
@@ -405,7 +405,7 @@
     },
     {
      "en": "An {attorney} will help me; {alternatively}, an {advertiser} will buy my story to {amuse} people. I want no {advancement}.",
-     "ja": "弁護士は力になると言う。その代わりに、広告主は人を楽しませるために私の話を買うと言う。昇進など要らない。",
+     "ja": "弁護士が力を貸してくれるだろう。別の道として、広告主が人々を楽しませるために私の話を買ってくれるだろう。昇進など要らない。",
      "ids": [
       "t0660",
       "t0658",
@@ -426,8 +426,8 @@
      ]
     },
     {
-     "en": "I know the {chemistry} of fire, not of words. Your report is in {circulation} without my {consent}; every {concierge} {consistently} tells it.",
-     "ja": "私は火の化学は知っているが、言葉のそれは知らない。あなたがたの報告は私の同意なしに広く出回り、どのコンシェルジュも一貫してそれを語る。",
+     "en": "I understand {chemistry}. Your report has a large {circulation} without my {consent}; every {concierge} {consistently} repeats its claims.",
+     "ja": "化学ならわかる。あなたがたの報告は私の同意なしに大量に発行され、どのコンシェルジュも一貫してその主張を繰り返している。",
      "ids": [
       "t0666",
       "t0667",
@@ -437,8 +437,8 @@
      ]
     },
     {
-     "en": "I {detach} my name from the {deck}; my {cookie} box stays. Your {descriptive} {documentation} made me the bad man; no more words.",
-     "ja": "灯台のデッキから、私の名前を切り離す。クッキーの箱は置いていく。あなたがたの説明的な書類が、私を悪者にした。言葉はもう要らない。",
+     "en": "I resign and {detach} my nameplate from the {deck}; my {cookie} box stays. Your {descriptive} {documentation} blames me; no more words.",
+     "ja": "私は辞職し、デッキから自分の名札を外す。クッキーの箱は置いていく。あなたがたの説明的な関連書類は私を責める。言葉はもう要らない。",
      "ids": [
       "t0674",
       "t0672",
@@ -469,7 +469,7 @@
     },
     {
      "en": "My {locker} holds a {patent} for a hand lamp, an {invention} of Mr. Shirase. It will {irritate} the mayor; he won't {overlook} it.",
-     "ja": "私のロッカーには、手持ちの灯の特許があります。シラセ氏の発明です。町長はいら立つでしょうし、見落としてはくれません。",
+     "ja": "私のロッカーには、シラセ氏が発明した手持ちランプの特許があります。町長をいら立たせるでしょうし、見落とすこともないでしょう。",
      "ids": [
       "t0683",
       "t0685",
@@ -479,8 +479,8 @@
      ]
     },
     {
-     "en": "I post the {preliminary} notes. If it does not go {smoothly}, my last pay is {payable}, and I become a {sauna} {salesman}.",
-     "ja": "予備の記録を張り出します。円滑にいかなければ、最後の給料が支払われて、私はサウナの営業マンになります。",
+     "en": "Posting {preliminary} notes must go {smoothly}. Otherwise, my final wages become {payable}; I fear becoming a {sauna} {salesman}.",
+     "ja": "予備の記録の掲示は円滑に進めなくてはなりません。さもないと退職時の賃金が支払われることになります。サウナの営業マンになるのが怖いのです。",
      "ids": [
       "t0687",
       "t0690",
@@ -491,7 +491,7 @@
     },
     {
      "en": "I pay {tuition} to be a {translator}. The mayor is {unavailable}; a car {tows} a cart of white boxes here in the {sunshine}.",
-     "ja": "翻訳者になるため、授業料を払っています。町長は不在です。日差しの中、車が白い箱を積んだ荷車をここまでけん引してきます。",
+     "ja": "翻訳者になるため、授業料を払っています。町長とは連絡が取れません。日差しの中、車が白い箱を積んだ荷車をここまでけん引してきます。",
      "ids": [
       "t0694",
       "t0693",
@@ -501,8 +501,8 @@
      ]
     },
     {
-     "en": "Posting them is a {violation}; the {webpage} says {acceptance} is next week. It is {ambitious}, but please {allocate} an hour.",
-     "ja": "張り出すのは規則違反です。ウェブページには、受諾は来週とあります。野心的なのはわかっていますが、1時間を割り当ててください。",
+     "en": "Posting is a {violation}; the {webpage} schedules contract {acceptance} next week. Our {ambitious} challenge needs help; please {allocate} an hour.",
+     "ja": "掲示は規則違反です。ウェブページによれば、契約の受諾は来週の予定です。私たちの野心的な挑戦には助けが要ります。1時間を割り当ててください。",
      "ids": [
       "t0696",
       "t0697",
@@ -532,8 +532,8 @@
      ]
     },
     {
-     "en": "The contract would {discontinue} every record: no {correction}, no {customized} terms, no notes to {diagnose} you, no thanks for your {dedication}.",
-     "ja": "この契約は、すべての記録を廃止するものです。訂正も、特注の条件も、あなたを診断するための記録も、あなたの献身へのお礼も残りません。",
+     "en": "They would {discontinue} records: no {correction}, no orders to {customize} equipment. Notes to {diagnose} you and thanks for your {dedication} would vanish.",
+     "ja": "記録は廃止され、訂正も、機器を特注する注文もなくなります。あなたを診断するための記録も、あなたの献身へのお礼も消えてしまいます。",
      "ids": [
       "t0710",
       "t0706",
@@ -566,7 +566,7 @@
     },
     {
      "en": "Please read the {introductory} part, {ma'am}; this is not {junk}. Room may be {insufficient}, so come early; it is free, all {inclusive}.",
-     "ja": "奥様、入門の部分を読んでください。これはがらくたではありません。場所が不十分かもしれないので、早めに来てください。すべて込みで無料です。",
+     "ja": "奥様、まず導入部分を読んでください。これはがらくたではありません。会場が手狭かもしれないので、早めに来てください。すべて込みで無料です。",
      "ids": [
       "t0723",
       "t0725",
@@ -585,8 +585,8 @@
    "to": "The town records",
    "lines": [
     {
-     "en": "The room is {noisy}, and {pasta} comes in a {pan}. Tsumugi brings a {parcel} after a week of {mileage}.",
-     "ja": "部屋はうるさく、パスタが鍋ごと運ばれてくる。ツムギは一週間ぶんの走行距離のあとで、小包を持ってくる。",
+     "en": "The room is {noisy}; {pasta} arrives in a {pan}. Tsumugi delivers a {parcel}; bicycle {mileage} is high after a week of deliveries.",
+     "ja": "部屋は騒がしく、パスタが鍋ごと運ばれてくる。ツムギが小包を届ける。一週間の配達で、自転車の走行距離は大きく伸びている。",
      "ids": [
       "t0727",
       "t0730",
@@ -597,7 +597,7 @@
     },
     {
      "en": "Mayor Tobe is {punctual} but has a {pill}. A {periodical} writer brings a {portable} lamp; benches come from the {recreation} room.",
-     "ja": "トベ町長は時間厳守で来たが、錠剤を飲む。定期刊行物の記者が持ち運べる灯を持ちこみ、長いすはレクリエーション室から運ばれる。",
+     "ja": "トベ町長は時間どおりに来ているが、錠剤を持っている。定期刊行物の記者が持ち運べる灯を持ち込み、長いすはレクリエーション室から運ばれる。",
      "ids": [
       "t0734",
       "t0732",
@@ -619,7 +619,7 @@
     },
     {
      "en": "Goro, who came {specially}, {spills} his juice: 'Will you {subtract} my {spouse} too?' The mayor {shortens} the talk: 'Prove the keeper did his duty.'",
-     "ja": "わざわざ来たゴローが、ジュースをこぼす。「私の妻まで引き算して消すのか。」町長は話を短くする。「灯台守が務めを果たしたと証明しなさい。」",
+     "ja": "わざわざ来たゴローがジュースをこぼす。「私の配偶者まで引き算して消すのか。」町長は話を短く切り上げる。「灯台守が務めを果たしたと証明しなさい。」",
      "ids": [
       "t0742",
       "t0743",
@@ -629,8 +629,8 @@
      ]
     },
     {
-     "en": "Vote: next week. Over his {tablet}, Tobe says in a quiet {accent}: 'Hope is for {yoga}; I {vend} a {ton} of stories.'",
-     "ja": "採決：来週。トベはタブレットごしに、静かな訛りで言う。「希望はヨガでやりなさい。話なら、私はトン単位で売っている。」",
+     "en": "A {tablet} ad uses a local {accent}: '{Yoga} teachers {vend} a {ton} of books.' Voting waits until next week.",
+     "ja": "タブレットの広告が地元のアクセントで流れる。「ヨガの先生たちは本をトン単位で売っています。」採決は来週まで持ち越しとなる。",
      "ids": [
       "t0746",
       "t0750",
