@@ -23,9 +23,3 @@ export function renderCredits(view, {onBack}) {
   view.querySelector('#gq-back').onclick = onBack;
 }
 
-// 互換のための仮の入口（V1 の画面の作り直しで view.mjs から外したら消す）。
-// ことば帳は切手帳（album.mjs）に置き換わった。
-export async function renderZukan(view, {words, progress, onBack} = {}) {
-  const {openAlbum} = await import('./album.mjs');
-  return openAlbum(view, {words, progress, back: onBack});
-}
