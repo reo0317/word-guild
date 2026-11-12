@@ -113,7 +113,14 @@ async function load(deps) {
 export function openAlbum(container, deps = {}) {
   ensureCss();
   let closed = false;
-  const handle = {close() { closed = true; container.innerHTML = ''; }};
+  const cleanups = [];
+  const handle = {close() {
+    if (closed) return;
+    closed = true;
+    container.onclick = null; // 画面を離れたあと、古い処理が別の画面を拾わない
+    cleanups.splice(0).forEach(fn => fn());
+    container.innerHTML = '';
+  }};
   container.className = 'gq gq-album';
   container.innerHTML = '<p class="gq-loading">切手帳をひらいています…</p>';
   load(deps).then(({words, tags}) => { if (!closed) start(words, tags); }, () => {
@@ -216,9 +223,10 @@ export function openAlbum(container, deps = {}) {
           <p class="gq-stars" aria-label="習熟度 ${box}">${starsMarkup(box)}</p>${ex}`
           : '<h2>？</h2><p class="gq-zoom-ja">まだ出会っていません。</p>'}
         <div class="gq-zoom-actions">${met ? '<button type="button" data-act="say">発音</button>' : ''}<button type="button" data-act="close">とじる</button></div></div>`;
-      const close = () => { overlay.remove(); document.removeEventListener('keydown', onKey); };
+      const close = () => { overlay.remove(); document.removeEventListener('keydown', onKey); const i = cleanups.indexOf(close); if (i >= 0) cleanups.splice(i, 1); };
       const onKey = event => { if (event.key === 'Escape') close(); };
       document.addEventListener('keydown', onKey);
+      cleanups.push(close);
       overlay.onclick = event => {
         const act = event.target.closest('[data-act]')?.dataset.act;
         if (act === 'say') say(word.w);
@@ -230,6 +238,7 @@ export function openAlbum(container, deps = {}) {
     }
 
     container.onclick = event => {
+      if (closed) return;
       const target = event.target;
       const act = target.closest('[data-act]')?.dataset.act;
       if (act === 'back') return deps.back?.();

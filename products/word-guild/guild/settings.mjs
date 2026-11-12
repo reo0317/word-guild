@@ -14,7 +14,7 @@
 //   setSound(on)  音の切り替えを呼び出し側で保存するとき。無ければ localStorage に保存して music.setEnabled する
 //   onProgress(progress)  書き出しの日や読み込みで進捗が変わったとき
 // speak などは使わない。クレジットは library.mjs の renderCredits（戻ると設定に戻る）。
-import {exportText, importText, saveProgress, backupProgress, restoreBackup, hasBackup, emptyProgress} from './store.mjs';
+import {STORAGE_KEY, exportText, importText, saveProgress, backupProgress, restoreBackup, hasBackup, emptyProgress} from './store.mjs';
 import {todayNumber} from './srs.mjs';
 import {isStandalone, onUpdateReady, applyUpdate} from './pwa.mjs';
 import {renderCredits} from './library.mjs';
@@ -60,7 +60,9 @@ export function openSettings(container, deps = {}) {
   let exported = '';
   let updateReady = false;
   const off = onUpdateReady(() => { if (!closed && container.isConnected) { updateReady = true; paintUpdate(); } });
-  const handle = {close() { closed = true; off(); container.innerHTML = ''; }};
+  let child = null; // クレジットから戻って開き直した設定
+  const release = () => { closed = true; off(); };
+  const handle = {close() { handle.dead = true; release(); child?.close(); child = null; container.innerHTML = ''; }};
 
   const back = () => { handle.close(); deps.back?.(); };
   const $ = selector => container.querySelector(selector);
@@ -145,13 +147,21 @@ export function openSettings(container, deps = {}) {
       <p class="note">置きかえると、いまの進捗は控えに残ります。</p>
       <div class="row"><button type="button" id="gs-replace">この進捗に置きかえる</button></div>`;
     $('#gs-replace').onclick = () => {
-      backupProgress(storage);
+      // 控えと本保存の両方が成功してから置きかえる。失敗したら何も変えない
+      let hadSaved = false;
+      try { hadSaved = storage.getItem(STORAGE_KEY) != null; } catch { hadSaved = true; }
+      if (hadSaved && !backupProgress(storage)) { failSave('控えを保存できませんでした。進捗は置きかえていません。'); return; }
       replaceWith(imported);
     };
   };
 
+  function failSave(text) {
+    const box = $('#gs-result');
+    if (box) box.innerHTML = `<p class="msg err">${esc(text)}</p>`;
+  }
+
   function replaceWith(next) {
-    saveProgress(storage, next);
+    if (!saveProgress(storage, next)) { failSave('保存できませんでした（容量不足など）。進捗は置きかえていません。'); return; }
     for (const key of Object.keys(progress)) delete progress[key]; // 呼び出し側の参照を保ったまま中身を入れ替える
     Object.assign(progress, next);
     deps.onProgress?.(progress);
@@ -164,7 +174,10 @@ export function openSettings(container, deps = {}) {
   };
 
   $('#gs-apply').onclick = () => applyUpdate();
-  $('#gs-credits').onclick = () => renderCredits(container, {onBack: () => openSettings(container, deps)});
+  $('#gs-credits').onclick = () => {
+    release(); // 古い設定の更新通知の購読を解除してから移る
+    renderCredits(container, {onBack: () => { if (handle.dead) return; child = openSettings(container, deps); }});
+  };
   $('#gs-back').onclick = back;
   return handle;
 }

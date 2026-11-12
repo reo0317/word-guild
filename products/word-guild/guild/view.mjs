@@ -64,6 +64,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   let frameId = 0;
   let lastFrame = 0;
   let observer = null;
+  let lib = null;           // 切手帳・設定の handle。画面を移るとき close() する
+  let hiddenFinish = false; // pagehide で終わらせた配達（bfcache から戻ったとき結果へ移す）
   let sessionToken = 0;     // 画面を離れたあと、古いタイマーを無効にする
   const sfx = name => { try { music?.sfx(name); } catch { /* 音は遊びを止めない */ } };
   const bgm = scene => { try { music?.play(scene); } catch { /* 同上 */ } };
@@ -74,7 +76,15 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     onUpdateReady(() => { updateReady = true; if (onMap && words) showMap(); });
   } catch { /* 更新の通知がなくても遊べる */ }
 
+  function closeLib() {
+    const handle = lib;
+    lib = null;
+    try { handle?.close(); } catch { /* 閉じ損ねても画面は移る */ }
+  }
+
   function stopSession() {
+    closeLib();
+    hiddenFinish = false;
     sessionToken++;
     timers.forEach(clearTimeout);
     timers = [];
@@ -146,9 +156,11 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   // 切手帳と設定は別の担当のファイル。まだ無い・読めないときは何もしない。
   async function openOptional(load, name, extra) {
+    const token = sessionToken;
     try {
       const mod = await load();
-      if (typeof mod?.[name] === 'function') mod[name](view, libDeps(extra));
+      if (token !== sessionToken) return; // 読み込み中に別の画面へ移った
+      if (typeof mod?.[name] === 'function') { closeLib(); lib = mod[name](view, libDeps(extra)) ?? null; }
     } catch { /* 相手がいなくても、エラーは出さない */ }
   }
   const openAlbumAt = shelf => { onMap = false; openOptional(() => import('./album.mjs'), 'openAlbum', {shelf}); };
@@ -774,7 +786,14 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   // 画面を閉じるときも、戦闘中で回答済みの語があれば保存する。
   window.addEventListener('pagehide', () => {
-    if (quest && quest.phase === 'battle' && quest.results.size > 0) quest.finish(true);
+    if (quest && quest.phase === 'battle' && quest.results.size > 0) { quest.finish(true); hiddenFinish = true; }
+  });
+
+  // 戻る（bfcache）で復元されたとき、pagehide が終わらせた配達は結果へ移す。
+  window.addEventListener('pageshow', event => {
+    if (!event.persisted || !hiddenFinish) return;
+    hiddenFinish = false;
+    if (quest && quest.phase === 'finished') showResults();
   });
 
   return {open, hasProgress: () => progress.quests > 0 || Object.keys(progress.words).length > 0};

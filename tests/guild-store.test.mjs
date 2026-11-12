@@ -144,3 +144,37 @@ test('門の保存は旧形式と互換で、壊れた配列は既定値にな�
   const progress = {...emptyProgress(), gates: [1, 6]};
   assert.deepEqual(importText(exportText(progress)).progress.gates, [1, 6]);
 });
+
+// ---- 設定：保存に失敗したら進捗を置きかえない（DOM の代わりに最小の部品を使う） ----
+test('設定の置きかえ：本保存に失敗したら、メモリー上の進捗もそのまま', async () => {
+  const {openSettings} = await import('../products/word-guild/guild/settings.mjs');
+  const elements = new Map();
+  const el = () => ({onclick: null, textContent: '', innerHTML: '', value: '', hidden: false, disabled: false, className: '', setAttribute() {}, focus() {}, select() {}});
+  const container = {
+    isConnected: true, className: '', innerHTML: '',
+    querySelector(selector) { if (!elements.has(selector)) elements.set(selector, el()); return elements.get(selector); },
+  };
+  const old = {...emptyProgress(), quests: 3};
+  const stored = JSON.stringify(serializeProgress(old));
+  const data = new Map([[STORAGE_KEY, stored]]);
+  let failSet = false;
+  const storage = {
+    getItem: key => data.get(key) ?? null,
+    setItem(key, value) { if (failSet) throw new Error('quota'); data.set(key, value); },
+  };
+  const progress = old;
+  let backCalls = 0;
+  openSettings(container, {progress, storage, soundOn: true, today: 100, back: () => { backCalls++; }});
+  container.querySelector('#gs-in').value = exportText({...emptyProgress(), quests: 9});
+  container.querySelector('#gs-check').onclick();
+  failSet = true;
+  container.querySelector('#gs-replace').onclick();
+  assert.equal(progress.quests, 3);
+  assert.equal(backCalls, 0);
+  assert.match(container.querySelector('#gs-result').innerHTML, /err/);
+  assert.equal(data.get(STORAGE_KEY), stored);
+  failSet = false;
+  container.querySelector('#gs-replace').onclick();
+  assert.equal(progress.quests, 9);
+  assert.equal(backCalls, 1);
+});
