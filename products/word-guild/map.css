@@ -56,13 +56,25 @@
 .gq-here-panel .gq-faces{display:flex;align-items:center;gap:2px}.gq-here-panel .gq-face{width:34px;height:34px}
 .gq-due-n,.gq-due-badge b{display:grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:11px;background:var(--seal);color:var(--paper);font-size:13px;font-weight:900;border:1.5px solid var(--ink)}
 
+.gq-pin{position:absolute;top:-30px;display:flex;align-items:flex-end;gap:2px;width:max-content;padding:0;background:none;border:0;border-radius:0;box-shadow:none;line-height:0}
+.gq-pin.left{right:34px}.gq-pin.right{left:34px}.gq-pin.left.sealed{flex-direction:row-reverse}
+.gq-pin::after{content:"";position:absolute;inset:-6px}
+.gq-pin:active{transform:none;box-shadow:none}
+.gq-pin .mp{width:34px;height:43px;display:block}
+.gq-pin .house{width:24px;height:22px;display:block}
+.gq-pin.sealed .mp{width:36px;height:45px}
+
+/* ツムギの頭上：今の行（霧のかすれ入り）を1行で。画面の幅に収まるよう map.mjs が位置を決める。 */
+.gq-line-bubble{position:absolute;bottom:68px;padding:2px 8px;background:var(--paper-hi);border:2px solid var(--ink);border-radius:10px;box-shadow:0 2px 0 var(--ink);font-family:Georgia,"Times New Roman",var(--serif);font-size:14px;line-height:1.9;white-space:nowrap;overflow:visible;pointer-events:none}
+.gq-line-bubble .bug,.gq-line-bubble .sh{display:none}
+.gq-line-bubble .txt{display:block;overflow:hidden;text-overflow:ellipsis}
+.gq-line-bubble::after{content:"";position:absolute;left:var(--tail,50%);bottom:-7px;width:10px;height:10px;margin-left:-5px;background:var(--paper-hi);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg)}
 .gq-post{position:absolute;left:-120px;top:-130px;width:240px;height:130px;border:3px solid var(--ink);border-radius:14px;background:var(--fog)}
 .gq-post-art{position:absolute;inset:0;border:0;border-radius:11px}
 .gq-guide{position:absolute;left:8px;bottom:-6px;display:flex;align-items:flex-end;gap:4px}.gq-face-hatori{flex:0 0 72px;height:72px}
 .gq-top-block{position:absolute;left:-60px;top:-150px;width:120px;display:grid;justify-items:center;color:var(--ink);font-size:13px}
 .gq-top-block svg{width:80px;height:100px}.gq-top-block .beam{fill:none;stroke:var(--lamp);stroke-width:3;opacity:.7}.gq-top-block .lamp{fill:var(--lamp)}.gq-top-block .tower{fill:var(--paper);stroke:var(--ink);stroke-width:3}.gq-top-block .band{stroke:var(--seal);stroke-width:6}
 
-.gq-story{flex-shrink:0;font-family:var(--serif);font-size:13px;line-height:1.6;padding:3px 10px;background:var(--paper-hi);border-bottom:2px solid var(--ink)}.gq-story[hidden]{display:none}
 
 .gq-map-foot{flex-shrink:0;display:flex;flex-direction:column;gap:4px;padding:6px 8px calc(4px + env(safe-area-inset-bottom));background:var(--paper);border-top:2px solid var(--ink)}
 .gq-map-foot .gq-warn{margin:0}
@@ -74,3 +86,8 @@
  .gq-map-foot .gq-tomorrow{display:none}
 }
 @media(prefers-reduced-motion:reduce){.gq-gate.open i,.gq-fab.glow .gq-disc{animation:none}.gq-sky-art{transition:none}}
+
+/* 街灯の節を押して開く通の窓 */
+.gq-pop{position:absolute;inset:0;z-index:15;display:flex;padding:10px;background:#1f2a44cc;overflow:auto}
+.gq-pop-card{margin:auto;width:100%;max-width:420px;display:grid;gap:8px;padding:10px;background:var(--paper);border:2px solid var(--ink);border-radius:12px;box-shadow:0 8px 30px #0006}
+.gq-pop-acts{display:flex;justify-content:center;gap:22px}

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {parseLine, inflects, letterView, clipFor, wordToLine} from '../products/word-guild/guild/story.mjs';
+import {parseLine, inflects, letterView, clipFor, clipParts, wordToLine} from '../products/word-guild/guild/story.mjs';
 import {checkStory} from '../tools/story-check.mjs';
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
 const allow = JSON.parse(await readFile(new URL('../products/word-guild/data/story-allow.json', import.meta.url)));
@@ -78,3 +78,9 @@ try {
  const full=JSON.parse(await readFile(new URL('../products/word-guild/data/story.json',import.meta.url)));
  test('物語：本番データの全件検査',()=>assert.deepEqual(checkStory(full,words,allow).issues,[]));
 } catch(e) { if(e.code!=='ENOENT')throw e; }
+test('物語：clipParts は語を分けて返し、clipFor と同じ文になる',()=>{
+ const c=clipParts(story,'b0021',17);
+ assert.equal(c.word,'means');
+ assert.equal((c.left+c.word+c.right).trim(),clipFor(story,'b0021',17));
+ assert.equal(clipParts(story,'unknown'),null);
+});

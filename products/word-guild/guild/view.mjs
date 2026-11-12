@@ -7,12 +7,14 @@ import {Quest, HEARTS} from './quest.mjs';
 import {pickSession, groupWords, todayNumber, SESSION_SIZE} from './srs.mjs';
 import {loadProgress, saveProgress} from './store.mjs';
 import {COLS, spelling} from './board.mjs';
-import {buildMap, gateWords} from './stages.mjs';
+import {buildMap, gateWords, separateSpecs} from './stages.mjs';
+import {letterView, clipParts} from './story.mjs';
 import {pageSpecs, stampState} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {rollDaily} from './daily.mjs';
 import {onUpdateReady, applyUpdate} from './pwa.mjs';
-import {esc, speak, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, icon} from './dom.mjs';
+import {esc, speak, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, icon,
+  ensureLetterCss, letterHtml, lineHtml, lineBody, lampRing, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
 import {showStampZoom, ensureCss as ensureAlbumCss} from './album.mjs';
 import {renderMap, dailyBrief} from './map.mjs';
 
@@ -24,6 +26,7 @@ const ENTER_MS = 520;   // 次の盤面と紙魚が入る（合わせて 1.2 秒
 const MAX_FRAME_MS = 250; // 長い停止の後に、まとめて攻撃されないための上限
 const MAP_CSS = new URL('../map.css', import.meta.url).href;
 const TAGS_URL = new URL('../data/chara.json', import.meta.url);
+const STORY_URL = new URL('../data/story.json', import.meta.url);
 const EXPORT_REMIND_DAYS = 14;
 
 function pulse(element, className) {
@@ -49,6 +52,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   let words = null;
   let byId = null;
   let tags = {};
+  let story = {v: 1, letters: []}; // 物語の英文。data/story.json が無い・一部の街灯だけでも遊べる
+  let storyLoaded = false;
   let progress = loadProgress(storage).progress;
   let saveFailed = false;
   let updateReady = false;
@@ -67,6 +72,13 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   let observer = null;
   let lib = null;           // 切手帳・設定の handle。画面を移るとき close() する
   let zoomClose = null;     // 結果画面の切手の拡大。画面を移るとき閉じる
+  let popEl = null;         // 地図で開いた通の窓
+  let dealt = new Map();    // 今回の配達で、盤面ごとに見分けをつけた紙魚の設計値（id → spec）
+  let letterSteps = [];     // 結果画面の1通の動き（飛ばすとき残りをまとめて進める）
+  let clipSeq = 0;
+  let lastClip = null;
+  let eating = false;       // 配達前の動きの最中
+  let flushLetter = () => {}; // 結果の1通の動きを飛ばす
   let hiddenFinish = false; // pagehide で終わらせた配達（bfcache から戻ったとき結果へ移す）
   let sessionToken = 0;     // 画面を離れたあと、古いタイマーを無効にする
   const sfx = name => { try { music?.sfx(name); } catch { /* 音は遊びを止めない */ } };
@@ -88,6 +100,10 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     closeLib();
     try { zoomClose?.(); } catch { /* 閉じ損ねても画面は移る */ }
     zoomClose = null;
+    popEl?.remove();
+    popEl = null;
+    letterSteps = [];
+    eating = false;
     hiddenFinish = false;
     sessionToken++;
     timers.forEach(clearTimeout);
@@ -123,12 +139,73 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     return specCache.get(word.id);
   }
 
+  // 配達中・結果の紙魚の設計値。同じ盤面で見分けがつくよう、インクを振り直したものがあればそれを使う。
+  const specFor = word => dealt.get(word.id) ?? specOf(word);
+
   const faceCache = new Map();
   function faceOf(id, state = 'print') {
     const word = byId.get(id);
     const key = `${id}:${state}`;
     if (!faceCache.has(key)) faceCache.set(key, charaSvg(specOf(word), {state, ward: word.ch}));
     return faceCache.get(key);
+  }
+
+  // ---------- 物語の紙 ----------
+
+  // その街灯の通。英文が無い・壊れているときは null（英文なしで遊べる）。
+  function letterAt(shelf, prog = progress, today = todayNumber()) {
+    if (!story.letters.length) return null;
+    try { return letterView(story, words, prog, shelf, today); } catch { return null; }
+  }
+
+  const lampOf = (map, shelf) => map.wards.flatMap(w => w.lamps).find(l => l.shelf === shelf);
+
+  // 今の石段の行（地図でツムギの頭上に出す）。
+  function hereLine(map) {
+    if (!map.here) return null;
+    const letter = letterAt(map.here.shelf);
+    const lamp = lampOf(map, map.here.shelf);
+    const ids = lamp?.steps[map.here.step - 1]?.ids;
+    const index = letter && ids ? letter.lines.findIndex(line => line.ids.includes(ids[0])) : -1;
+    return index < 0 ? null : {html: lineBody(letter.lines[index], {})};
+  }
+
+  // 語を押したとき：切手の拡大に、その語を含む行を添える。
+  function zoomWord(host, letter, id, prog, onClose) {
+    const word = byId.get(id);
+    if (!word) return () => {};
+    return showStampZoom(host, {
+      word, spec: specFor(word), state: stampState(prog.words[id]), box: prog.words[id]?.box ?? 0,
+      base: '', met: true, say: speak, lineHtml: wordLineHtml(letter, id, {face: faceOf}), onClose,
+    });
+  }
+
+  // 地図で街灯の節を押したとき：その通を開く。下に切手帳のページへの入口。
+  function openLetterPop(map, shelf) {
+    const letter = letterAt(shelf);
+    if (!letter) { openAlbumAt(shelf); return; }
+    popEl?.remove();
+    const lamp = lampOf(map, shelf);
+    const pop = document.createElement('div');
+    pop.className = 'gq-pop';
+    pop.setAttribute('role', 'dialog');
+    pop.setAttribute('aria-modal', 'true');
+    pop.innerHTML = `<div class="gq-pop-card">${letterHtml(letter, {face: faceOf, shadowLines: shadowLinesOf(letter), lit: lamp?.lit === lamp?.total})}
+      <div class="gq-pop-acts">${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}${fab({icon: 'album', label: '切手帳', attrs: 'data-act="album"'})}</div></div>`;
+    const close = () => { pop.remove(); if (popEl === pop) popEl = null; };
+    pop.onclick = event => {
+      if (view.querySelector('.gq-zoom')) return;
+      const act = event.target.closest('[data-act]')?.dataset.act;
+      if (act === 'close' || event.target === pop) { close(); return; }
+      if (act === 'album') { close(); openAlbumAt(shelf); return; }
+      handleLetterClick(event, {onWord: id => {
+        const closeZoom = zoomWord(view, letter, id, progress, () => { if (zoomClose === closeZoom) zoomClose = null; });
+        zoomClose = closeZoom;
+      }});
+    };
+    view.append(pop);
+    popEl = pop;
+    pop.querySelector('[data-act="close"]').focus({preventScroll: true});
   }
 
   // ---------- 地図 ----------
@@ -145,7 +222,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   // 切手帳・設定が受け取る材料。戻るボタンは地図へ。
   function libDeps(extra = {}) {
     return {
-      words, tags, progress, storage, dev, music, today: todayNumber(),
+      words, tags, progress, storage, dev, music, today: todayNumber(), story: story.letters.length ? story : null,
       back: showMap, speak,
       onProgress: next => { persist(next); },
       ...extra,
@@ -175,12 +252,13 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     renderMap(view, {
       map, today, progress, total: words.length,
       face: faceOf, tsumugi: artFile('tsumugi'),
+      letterOf: shelf => letterAt(shelf, progress, today), hereLine: hereLine(map),
       notice: mapNotice(today),
       warn: saveFailed ? '保存できません。この起動中はプレイできます。' : '',
       on: {
         go: () => startQuest(),
         gate: ch => startQuest({gate: ch}),
-        lamp: openAlbumAt,
+        lamp: shelf => openLetterPop(map, shelf),
         album: () => openAlbumAt(map.here?.shelf),
         settings: openSettingsHere,
         title: () => { onMap = false; stopSession(); exit(); },
@@ -192,8 +270,48 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   // ---------- 配達 ----------
 
+  // 配達前の動き：今の行に紙魚が乗って、語を食べる。霧のかすれになる（1.2秒。押せば飛ばす）。
+  // 新しい語がない・英文がない・動きを減らす設定のときは、何も出さず null。
+  function eatingLine(groups) {
+    if (!story.letters.length || reducedMotion()) return null;
+    // いちばん手前（番号の小さい）新しい語の行。
+    const fresh = groups.flat().filter(word => !progress.words[word.id]).sort((a, b) => a.id.localeCompare(b.id))[0];
+    const letter = fresh ? letterAt(fresh.shelf) : null;
+    const index = letter ? letter.lines.findIndex(line => line.ids.includes(fresh.id)) : -1;
+    if (index < 0) return null;
+    const line = letter.lines[index];
+    // まだ出会っていない語は、いったん読める字で見せてから食べる。
+    const shown = {...line, readable: false, parts: line.parts.map(part =>
+      part.type === 'word' && part.state === 'gone' ? {...part, state: 'ink', preview: true} : part)};
+    return {html: `<div class="paper">${lineHtml(shown, 0, {face: faceOf})}</div>`, ids: line.ids.filter(id => !progress.words[id])};
+  }
+
+  function playEating(eat, proceed) {
+    eating = true;
+    const overlay = document.createElement('div');
+    overlay.className = 'gq-eat';
+    overlay.innerHTML = eat.html;
+    let done = false;
+    const go = () => {
+      if (done) return;
+      done = true;
+      overlay.remove();
+      proceed();
+    };
+    overlay.onclick = go;
+    view.append(overlay);
+    const words = eat.ids.map(id => overlay.querySelector(`.w[data-id="${id}"]`)).filter(Boolean);
+    words.forEach((word, k) => {
+      word.insertAdjacentHTML('beforeend', `<b class="bug">${faceOf(word.dataset.id, 'print')}</b>`);
+      later(k * 170 + 60, () => word.classList.add('bite'));
+      later(k * 170 + 300, () => { word.classList.add('eaten'); word.classList.replace('s-ink', 's-gone'); });
+    });
+    later(words.length * 170 + 420, go);
+  }
+
   // opts: {first: 最初の配達, gate: 区の番号（区の門の配達）}
   function startQuest(opts = {}) {
+    if (eating) return;
     tutorial = opts.first === true;
     onMap = false;
     const today = todayNumber();
@@ -203,11 +321,20 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const groups = gate !== null
       ? groupWords(gateWords(words, progress, gate), Math.random)
       : pickSession(words, progress, today, SESSION_SIZE, Math.random);
-    questWard = gate ?? buildMap(words, progress, today).here?.ch ?? 1;
-    stopSession();
-    quest = new Quest(groups, {rand: Math.random, progress, today, save: persist, gate});
-    setScreen('guild-quest');
-    renderBoard();
+    const ward = gate ?? buildMap(words, progress, today).here?.ch ?? 1;
+    const begin = () => {
+      eating = false;
+      questWard = ward;
+      stopSession();
+      dealt = new Map();
+      lastClip = null;
+      quest = new Quest(groups, {rand: Math.random, progress, today, save: persist, gate});
+      setScreen('guild-quest');
+      renderBoard();
+    };
+    const eat = eatingLine(groups);
+    if (eat) playEating(eat, begin);
+    else begin();
   }
 
   function cellMarkup(letter, index) {
@@ -222,7 +349,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   // 1語＝1体。語を見せない（綴りも頭文字も出さない）。額面（文字数）だけ出す。
   function monMarkup(slot) {
-    const spec = specOf(slot.word);
+    const spec = specFor(slot.word);
     const big = spec.kind === 'big';
     return `<div class="gq-mon${big ? ' big' : ''}${quest.isRevenge ? ' angry' : ''}" data-id="${esc(slot.word.id)}">
       <span class="gq-mon-val" aria-hidden="true">${spec.kind === 'big' ? '大' : slot.text.length}</span>
@@ -238,6 +365,9 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   function renderBoard() {
     trace?.cancel();
     trace = new Trace(quest.letters);
+    // 同じ盤面の紙魚は、インクか模様が重ならないようにする（種族と区が同じなら、インクを分ける）。
+    const dealtSpecs = separateSpecs(quest.slots.map(slot => specOf(slot.word)), quest.slots.map(slot => slot.word.ch));
+    quest.slots.forEach((slot, i) => dealt.set(slot.word.id, dealtSpecs[i]));
     strikes = [];
     picking = null;
     message = quest.isBig ? '大物！' : '';
@@ -246,7 +376,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     view.className = `gq gq-quest gq-ch${questWard}${coach ? ' gq-tutor' : ''}`;
     view.innerHTML = `
       <div class="gq-top"><span class="gq-hearts" id="gq-hearts"></span><b id="gq-label"></b><span class="gq-timer" aria-hidden="true"><i id="gq-timer"></i></span><span class="gq-tally" id="gq-tally" role="img"></span><button type="button" class="gq-quit" id="gq-quit" aria-label="やめる"><span aria-hidden="true">✕</span></button></div>
-      <div class="gq-story" id="gq-story" hidden></div>
+      <div class="gq-story" id="gq-story" hidden aria-hidden="true"></div>
       <div class="gq-arena" id="gq-arena">
         <div class="gq-arena-clip">
           ${artBox(`ward${questWard}`, 'gq-arena-bg')}
@@ -273,6 +403,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     });
     bindBoard();
     paintAll();
+    if (lastClip) { showClip(lastClip, true); lastClip = null; } // 盤面を取り切った語の行は、次の盤面でも少し残す
     bgm(quest.isBig ? 'big' : 'delivery');
     const svg = $('#gq-seals');
     observer?.disconnect();
@@ -398,7 +529,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   function clueMarkup(slot) {
     const {word, text} = slot;
     const reveal = slot.solved || slot.hint >= 2;
-    const big = specOf(word).kind === 'big';
+    const big = specFor(word).kind === 'big';
     const main = reveal
       ? `<b class="gq-spell">${esc(word.w)}</b><small>${esc(word.ja)}</small>`
       : `<b>${esc(word.ja)}</b>`;
@@ -544,7 +675,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       mon.classList.add('solved', 'fled');
       return;
     }
-    const spec = specOf(slot.word);
+    const spec = specFor(slot.word);
     const html = stampHtml(slot.word, spec, {state: quest.isRevenge ? 'proof' : 'print', ward: slot.word.ch})
       .replace('<button', '<button tabindex="-1"');
     mon.insertAdjacentHTML('beforeend', `<div class="gq-mon-stamp">${html}</div>`);
@@ -567,6 +698,23 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     });
   }
 
+  // 正解の一瞬：その語を含む行の一部が出て、霧のかすれに語がインクで戻る（0.8秒）。英文が無い語は何も出さない。
+  function showClip(id, keep = false) {
+    const band = $('#gq-story');
+    const clip = story.letters.length ? clipParts(story, id, 17) : null;
+    if (!band || !clip) return;
+    const seq = ++clipSeq;
+    const still = keep || reducedMotion();
+    band.innerHTML = `${esc(clip.left)}<span class="w s-${still ? 'ink' : 'gone'}" style="--a:30%;--b:62%"><span class="t">${esc(clip.word)}</span><i class="fog"></i></span>${esc(clip.right)}`;
+    band.classList.remove('out');
+    band.hidden = false;
+    if (!still) {
+      void band.offsetWidth;
+      band.querySelector('.w').classList.replace('s-gone', 's-ink');
+    }
+    later(keep ? 900 : 1900, () => { if (seq === clipSeq) band.classList.add('out'); });
+  }
+
   function submit(text, path) {
     if (text === null || !quest) return;
     const result = quest.answer(text);
@@ -583,6 +731,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     message = `${result.word.w} · ${result.word.ja}`;
     pulse($('#gq-board'), 'correct');
     resolveMon(quest.slots.find(slot => slot.word.id === result.word.id));
+    showClip(result.word.id);
+    if (result.cleared && clipParts(story, result.word.id, 17)) lastClip = result.word.id;
     react(result.cleared);
     paintAll();
     if (result.cleared) defeat();
@@ -650,6 +800,47 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       <img class="gq-mini-tsumugi" alt="" src="${esc(artFile('tsumugi'))}" style="--x0:${x0}%;--y0:${y0}%;--x1:${x1}%;--y1:${y1}%"></div>`;
   }
 
+  // 結果の1通：今回、読めるようになった通があればそれ。なければいちばん動いた通（新しい語を重く数える）。
+  // 英文のある通だけ。なければ null。
+  function pickLetterShelf(outcome, after, startProgress, endProgress, today) {
+    const weight = new Map();
+    for (const entry of outcome.entries) weight.set(entry.word.shelf, (weight.get(entry.word.shelf) ?? 0) + (entry.isNew ? 3 : 1));
+    let pick = null;
+    let best = 0;
+    for (const [shelf, n] of weight) {
+      const end = letterAt(shelf, endProgress, today);
+      if (!end) continue;
+      const score = n + (end.readable && !letterAt(shelf, startProgress, today)?.readable ? 100 : 0);
+      if (score > best) { best = score; pick = shelf; }
+    }
+    if (pick === null && after.here && letterAt(after.here.shelf)) pick = after.here.shelf;
+    return pick;
+  }
+
+  // 英文が無い通のときの、今までの結果（ページの 5×5 と道の図）。
+  function pageAndRoad(before, after, outcome, changedByShelf, stampsCount, lamps) {
+    let shelf = after.here?.shelf;
+    let most = 0;
+    for (const [s, n] of changedByShelf) if (n > most) { most = n; shelf = s; }
+    const lampNow = lamps(after).get(shelf);
+    const pageWords = words.filter(w => w.shelf === shelf);
+    const changedIds = new Set(outcome.entries.filter(e => e.result === 'clean').map(e => e.word.id));
+    const state = (id, source) => stampState(source.words[id]);
+    const cells = pageWords.map(word => {
+      const st = state(word.id, quest.progress);
+      const fresh = changedIds.has(word.id) && state(word.id, quest.startProgress) !== st;
+      return `<i class="s-${st}${fresh ? ' fresh' : ''}" style="--w:${word.ch}"></i>`;
+    }).join('');
+    const nextFaces = after.next.map(id => `<span class="gq-face">${faceOf(id, 'shadow')}</span>`).join('');
+    return `<section class="gq-res-sec" style="--d:${0.1 + 0.07 * stampsCount + 0.5}s"><h3><span aria-hidden="true">${icon('album', 16)}</span> ${shelf}　<b>${lampNow?.got ?? 0}/${lampNow?.total ?? 25}</b></h3>
+          <div class="gq-page" style="--n:${changedIds.size}" role="img" aria-label="街灯${shelf}のページ ${lampNow?.got ?? 0}/${lampNow?.total ?? 25}">${cells}</div>
+        </section>
+        <section class="gq-res-sec" style="--d:${0.1 + 0.07 * stampsCount + 1.7}s">
+          ${miniRoad(before, after)}
+          <div class="gq-next-row">${nextFaces ? `<span class="gq-arrow" aria-label="つぎの石段の紙魚">▸</span><span class="gq-faces">${nextFaces}</span>` : '<span class="gq-top-mark" aria-label="いちばん上">★</span>'}</div>
+        </section>`;
+  }
+
   function showResults() {
     if (!quest || !quest.outcome) return;
     const {outcome} = quest;
@@ -658,6 +849,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const after = buildMap(words, quest.progress, today);
     timers.forEach(clearTimeout);
     timers = [];
+    letterSteps = [];
     cancelAnimationFrame(frameId);
     frameId = 0;
     try { zoomClose?.(); } catch { /* 閉じ損ねても画面は移る */ }
@@ -684,22 +876,25 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         if (mark) changedByShelf.set(entry.word.shelf, (changedByShelf.get(entry.word.shelf) ?? 0) + 1);
       }
       zoomInfo[i] = {word: entry.word, state: now, box: quest.progress.words[entry.word.id]?.box ?? 0};
-      const html = stampHtml(entry.word, specOf(entry.word), {state: now, ward: entry.word.ch});
+      const html = stampHtml(entry.word, specFor(entry.word), {state: now, ward: entry.word.ch});
       return `<li class="gq-stamp-cell${fled ? ' fled' : ''}${entry.big ? ' wide' : ''}" style="--i:${i}" data-i="${i}">${html}${mark}${fled ? '<small class="again" aria-hidden="true">↺</small>' : ''}</li>`;
     });
 
-    // そのページ（今回いちばん切手が入った街灯。なければ今いる街灯）の 5×5
-    let shelf = after.here?.shelf;
-    let most = 0;
-    for (const [s, n] of changedByShelf) if (n > most) { most = n; shelf = s; }
-    const lampNow = lamps(after).get(shelf);
-    const pageWords = words.filter(w => w.shelf === shelf);
-    const changedIds = new Set(outcome.entries.filter(e => e.result === 'clean').map(e => e.word.id));
-    const cells = pageWords.map(word => {
-      const st = state(word.id, quest.progress);
-      const fresh = changedIds.has(word.id) && state(word.id, quest.startProgress) !== st;
-      return `<i class="s-${st}${fresh ? ' fresh' : ''}" style="--w:${word.ch}"></i>`;
-    }).join('');
+    // 今の1通。逃げた語は、配達の前の状態のまま（新しい語なら霧のまま）で、紙魚の顔が乗る。
+    const fledIds = new Set(outcome.entries.filter(e => e.result !== 'clean').map(e => e.word.id));
+    const endProgress = {...quest.progress, words: {...quest.progress.words}};
+    for (const id of fledIds) {
+      if (quest.startProgress.words[id]) endProgress.words[id] = quest.startProgress.words[id];
+      else delete endProgress.words[id];
+    }
+    const shelf = pickLetterShelf(outcome, after, quest.startProgress, endProgress, today);
+    const lvStart = shelf === null ? null : letterAt(shelf, quest.startProgress, today);
+    const lvEnd = shelf === null ? null : letterAt(shelf, endProgress, today);
+    const lampNow = shelf === null ? null : lamps(after).get(shelf);
+    const litLetter = lampNow ? lampNow.lit === lampNow.total : false;
+    const newlyRead = Boolean(lvStart && lvEnd && lvEnd.readable && !lvStart.readable);
+    const nextLetter = newlyRead ? letterAt(shelf + 1, endProgress, today) : null;
+    const paperOpts = lv => ({face: faceOf, shadowLines: shadowLinesOf(lv), lit: litLetter});
 
     const gateOpened = quest.gate !== null && !outcome.retreated;
     const nextGate = after.wards.find(w => w.gate === 'open');
@@ -708,26 +903,24 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const daily = quest.progress.daily;
     const brief = dailyBrief(daily);
     const tomorrow = after.tomorrow;
-    const nextFaces = after.next.map(id => `<span class="gq-face">${faceOf(id, 'shadow')}</span>`).join('');
     const tomorrowFaces = tomorrow.slice(0, 3).map(id => `<span class="gq-face s">${faceOf(id)}</span>`).join('');
+    const stampDelay = lvEnd ? 0.35 : 0.1;
 
     view.className = 'gq gq-result';
     view.innerHTML = `
       <div class="gq-result-head">${artBox(outcome.retreated ? 'tsumugi' : 'tsumugiJoy')}<h2 class="gq-title">${outcome.retreated ? 'おつかれさま' : '配達完了！'}</h2>${artBox(outcome.retreated ? 'fuurou' : 'fuurouStamp', 'art-owl')}</div>
       <div class="gq-res-scroll" id="gq-res">
-        <section class="gq-res-sec" style="--d:.1s">
-          <ul class="gq-stamps" aria-label="今回の切手">${stamps.join('') || '<li class="empty" aria-label="答えた語はありません">－</li>'}</ul>
+        ${lvStart ? `<section class="gq-res-sec gq-letter-sec" style="--d:.05s">
+          <div id="gq-paper">${letterHtml(lvStart, paperOpts(lvStart))}</div>
+          <div id="gq-env-sec" hidden></div>
+        </section>` : ''}
+        <section class="gq-res-sec" style="--d:${stampDelay}s">
+          <ul class="gq-stamps${lvStart ? ' mini' : ''}" aria-label="今回の切手">${stamps.join('') || '<li class="empty" aria-label="答えた語はありません">－</li>'}</ul>
         </section>
-        <section class="gq-res-sec" style="--d:${0.1 + 0.07 * stamps.length + 0.5}s"><h3><span aria-hidden="true">${icon('album', 16)}</span> 街灯 ${shelf}　<b>${lampNow?.got ?? 0}/${lampNow?.total ?? 25}</b></h3>
-          <div class="gq-page" style="--n:${changedIds.size}" role="img" aria-label="街灯${shelf}のページ ${lampNow?.got ?? 0}/${lampNow?.total ?? 25}">${cells}</div>
-          ${litNow.length ? `<p class="gq-lit">✦ 街灯${litNow.join('・')} がともった！</p>` : ''}
-        </section>
-        <section class="gq-res-sec" style="--d:${0.1 + 0.07 * stamps.length + 1.7}s">
-          ${miniRoad(before, after)}
-          <div class="gq-next-row">${nextFaces ? `<span class="gq-arrow" aria-label="つぎの石段の紙魚">▸</span><span class="gq-faces">${nextFaces}</span>` : '<span class="gq-top-mark" aria-label="いちばん上">★</span>'}</div>
-        </section>
-        <section class="gq-res-sec gq-res-last" style="--d:${0.1 + 0.07 * stamps.length + 2.6}s">
-          ${gateOpened ? `<p class="gq-lit">${quest.gate}区の門が開いた！</p>` : ''}
+        ${lvStart ? '' : pageAndRoad(before, after, outcome, changedByShelf, stamps.length, lamps)}
+        <section class="gq-res-sec gq-res-last" style="--d:${lvStart ? 0.6 : 0.1 + 0.07 * stamps.length + 2.6}s">
+          ${litNow.length ? `<p class="gq-lit" aria-label="街灯${litNow.join('・')}がともった">✦ ${litNow.join('・')}</p>` : ''}
+          ${gateOpened ? `<p class="gq-lit" aria-label="${quest.gate}区の門が開いた"><span aria-hidden="true">${icon('gate', 16)}</span> ${quest.gate}区</p>` : ''}
           <div class="gq-chips">
             ${outcome.dailyDone ? '<span class="gq-daily done"><i aria-hidden="true">✓</i>速達</span>' : brief && !daily.done ? `<span class="gq-daily" aria-label="今日の速達 ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>${esc(brief.name)}<b>${brief.count}/${brief.goal}</b></span>` : daily ? '<span class="gq-daily done"><i aria-hidden="true">✓</i>速達</span>' : ''}
             ${outcome.streakUp ? `<span class="gq-daily"><b>${outcome.streak}</b>日連続</span>` : ''}
@@ -745,21 +938,103 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       </div>`;
     $('#gq-again').onclick = () => (after.fog || !nextGate ? startQuest() : startQuest({gate: nextGate.ch}));
     $('#gq-guild').onclick = showMap;
-    $('#gq-album').onclick = () => openAlbumAt(after.here?.shelf);
+    $('#gq-album').onclick = () => openAlbumAt(lvEnd ? shelf : after.here?.shelf);
     if ($('#gq-gate')) $('#gq-gate').onclick = () => startQuest({gate: nextGate.ch});
-    $('#gq-res').addEventListener('click', event => {
-      const cell = event.target.closest('.gq-stamp-cell');
-      if (!cell) { $('#gq-res').classList.add('skip'); return; }
+
+    const res = $('#gq-res');
+    const openZoom = info => {
       if (view.querySelector('.gq-zoom')) return;
-      const info = zoomInfo[Number(cell.dataset.i)];
-      if (!info) return;
       // 切手帳と同じ拡大表示。逃げた語（影のまま）も、語と訳は見せる。
       zoomClose = showStampZoom(view, {
-        word: info.word, spec: specOf(info.word), state: info.state, box: info.box,
-        base: '', met: true, say: speak, onClose: () => { zoomClose = null; },
+        word: info.word, spec: specFor(info.word), state: info.state, box: info.box,
+        base: '', met: true, say: speak, lineHtml: info.lineHtml ?? '', onClose: () => { zoomClose = null; },
       });
+    };
+
+    if (lvStart) playLetter({lvStart, lvEnd, endProgress, fledIds, newlyRead, nextLetter, shelf, paperOpts});
+
+    res.addEventListener('click', event => {
+      if (letterSteps.length) { flushLetter(); return; } // 動きの最中の押しは、飛ばすだけ
+      res.classList.add('skip');
+      if (event.target.closest('.paper')) {
+        handleLetterClick(event, {onWord: id => {
+          const word = byId.get(id);
+          if (word) openZoom({word, state: state(id, endProgress), box: endProgress.words[id]?.box ?? 0,
+            lineHtml: wordLineHtml(lvEnd, id, {face: faceOf})});
+        }});
+        return;
+      }
+      const cell = event.target.closest('.gq-stamp-cell');
+      if (!cell) return;
+      const info = zoomInfo[Number(cell.dataset.i)];
+      if (info) openZoom({...info, lineHtml: lvEnd ? wordLineHtml(lvEnd, info.word.id, {face: faceOf}) : ''});
     });
     $(first ? '#gq-guild' : '#gq-again').focus({preventScroll: true});
+  }
+
+  // 結果の1通：戻った語が1語ずつ濃くなる。読めた通は封筒になり、次の通の封筒が見える。
+  // 押すか、動きを減らす設定のときは、残りをまとめて進める。
+  function playLetter({lvStart, lvEnd, endProgress, fledIds, newlyRead, nextLetter, shelf, paperOpts}) {
+    const paper = $('#gq-paper');
+    const changes = [];
+    lvEnd.lines.forEach((line, li) => line.parts.forEach((part, wi) => {
+      if (part.type !== 'word') return;
+      const was = lvStart.lines[li].parts[wi].state;
+      if (was !== part.state) changes.push({id: part.id, li, was, now: part.state});
+    }));
+    const faceFor = id => `<b class="face">${faceOf(id, 'print')}</b>`;
+    const settle = () => { // 最後の姿に描き直す（読めた行の訳・読みあげのボタンも出る）。逃げた語は紙魚の顔つき。
+      paper.innerHTML = letterHtml(lvEnd, paperOpts(lvEnd));
+      for (const id of fledIds) {
+        const el = paper.querySelector(`.w[data-id="${id}"]`);
+        if (el && el.classList.contains('s-gone')) el.insertAdjacentHTML('beforeend', faceFor(id));
+      }
+    };
+    const steps = changes.map(change => () => {
+      const el = paper.querySelector(`.w[data-id="${change.id}"]`);
+      if (!el) return;
+      el.querySelectorAll('.sh,.bug').forEach(b => { b.classList.add('pop'); setTimeout(() => b.remove(), 600); });
+      el.classList.replace(`s-${change.was}`, `s-${change.now}`);
+      const row = el.closest('.ln-wrap');
+      const line = lvEnd.lines[change.li];
+      const done = [...row.querySelectorAll('.w')].every(w => !w.classList.contains('s-gone'));
+      row.classList.toggle('read', done && line.readable);
+      const read = [...paper.querySelectorAll('.ln-wrap')].filter(r => r.querySelectorAll('.w.s-gone').length === 0).length;
+      const ring = paper.querySelector('.ring');
+      if (ring) ring.innerHTML = lampRing(read, false);
+    });
+    steps.push(settle);
+    const env = $('#gq-env-sec');
+    if (newlyRead) {
+      steps.push(() => {
+        const furo = artFile('fuurouStamp');
+        env.hidden = false;
+        env.innerHTML = `${envelopeScene(furo)}${nextLetter ? `<div class="gq-next-env"><svg viewBox="0 0 54 36" aria-hidden="true"><rect x="2" y="3" width="50" height="30" rx="3" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2"/><path d="M3 5l24 17L51 5" fill="none" stroke="var(--ink)" stroke-width="2"/></svg><span>${esc(nextLetter.from ?? '')} → ${esc(nextLetter.to ?? '')}</span></div>` : ''}`;
+        const scene = env.querySelector('.gq-env');
+        const stages = [[100, 's1'], [1000, 's2'], [1500, 's3'], [2200, 'f-on'], [2550, 's4'], [2900, 'f-off'], [3500, 's5']];
+        if (reducedMotion()) scene.classList.add('s1', 's2', 's3', 's4', 's5');
+        else stages.forEach(([ms, cls]) => later(ms, () => scene.classList.add(cls)));
+        sfx('lamp');
+        env.scrollIntoView({block: 'center', behavior: reducedMotion() ? 'auto' : 'smooth'});
+      });
+    }
+    letterSteps = steps.map(run => ({run, done: false}));
+    const exec = step => { if (!step.done) { step.done = true; step.run(); } };
+    flushLetter = () => {
+      const pending = letterSteps;
+      letterSteps = [];
+      pending.forEach(exec);
+    };
+    const finish = () => { letterSteps = letterSteps.filter(step => !step.done); };
+    if (reducedMotion() || changes.length === 0) {
+      // 動かす語がない（または動きを減らす）ときは、すぐ最後の姿にする。封筒は動かさず見せる。
+      flushLetter();
+      return;
+    }
+    letterSteps.forEach((step, i) => {
+      const at = 700 + (i < changes.length ? i * 230 : changes.length * 230 + 500 + (i - changes.length - 1) * 600);
+      later(at, () => { exec(step); finish(); });
+    });
   }
 
   // ---------- 入口 ----------
@@ -777,9 +1052,18 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         const response = await fetch(TAGS_URL);
         if (response.ok) tags = await response.json();
       } catch { /* 分類がなくても、紙魚は既存の5種で出る */ }
+      if (!storyLoaded) {
+        storyLoaded = true;
+        // 英文が無い・壊れているときは、英文なしで遊ぶ。一部の街灯だけでもよい。
+        try {
+          const response = await fetch(STORY_URL);
+          const data = response.ok ? await response.json() : null;
+          if (Array.isArray(data?.letters)) story = {v: 1, letters: data.letters.filter(l => Array.isArray(l?.lines)), blank: data.blank ?? []};
+        } catch { /* 英文なしで続ける */ }
+      }
       ensureDefs(charaDefs());
       ensureAlbumCss();
-      await loadStyle(MAP_CSS);
+      await Promise.all([loadStyle(MAP_CSS), ensureLetterCss()]);
     } catch (error) {
       view.innerHTML = `<p class="eyebrow">霧晴れ郵便局</p><p class="gq-warn">${esc(error.message)}</p><button class="text-button" id="gq-title" type="button">← タイトルへ</button>`;
       $('#gq-title').onclick = exit;

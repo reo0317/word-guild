@@ -9,15 +9,18 @@
 //   today     日番号（今は使わない）
 //   back()    戻るボタンで呼ぶ。無ければ戻るボタンを出さない
 //   speak(text) 発音。無ければ dom.mjs の speak
+//   story     物語の英文（data/story.json）。無ければ読みにいき、読めなければ通なしで開く
 //   shelf     最初に開く街灯の番号（1〜56）。無ければ「今いるページ」（最初の未完のページ）
 //   base      絵の置き場の前置き。無ければ このファイルから見た products/word-guild/
 //   music, storage は使わない
 // 画面は container.innerHTML に描く。album.css は <link> で一度だけ読み込む。
 import {stampState, pageSpecs} from './chara.mjs';
-import {charaDefs, stampHtml} from './chara-svg.mjs';
+import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
+import {letterView} from './story.mjs';
 import {CHAPTER_NAMES} from './chapters.mjs';
 import {emptyProgress} from './store.mjs';
-import {esc, speak as defaultSpeak, starsMarkup, fab, icon} from './dom.mjs';
+import {esc, speak as defaultSpeak, starsMarkup, fab, icon, ensureLetterCss, letterHtml, shadowLinesOf, wordLineHtml, handleLetterClick} from './dom.mjs';
+import {todayNumber} from './srs.mjs';
 
 const POS = {v: '動詞', n: '名詞', a: '形容詞', o: 'その他'};
 const STATE_NAME = {shadow: '影', proof: '仮刷り', print: '本刷り', gold: '金ぶち'};
@@ -82,6 +85,7 @@ export function ensureCss() {
   link.rel = 'stylesheet';
   link.href = CSS_URL;
   document.head.append(link);
+  ensureLetterCss();
 }
 
 const PM = '<svg class="pm" viewBox="0 0 60 60" aria-hidden="true"><g fill="none" stroke="#1f2340" stroke-width="2.4"><circle cx="30" cy="30" r="25"/><circle cx="30" cy="30" r="19"/><path d="M5 22q8-5 16 0t16 0 16 0M5 31q8-5 16 0t16 0 16 0M5 40q8-5 16 0t16 0 16 0"/></g></svg>';
@@ -102,8 +106,8 @@ function stampWithMark(word, spec, state, base, size) {
 }
 
 // 切手の拡大表示（切手帳と結果画面で共通）。host の中に重ねて出し、閉じる関数を返す。
-// opts: {word, spec, state, box, base, say, met（影でも語を見せるとき true）, onClose}
-export function showStampZoom(host, {word, spec, state, box = 0, base = BASE, say = defaultSpeak, met = state !== 'shadow', onClose}) {
+// opts: {word, spec, state, box, base, say, met（影でも語を見せるとき true）, lineHtml（その語を含む行。無ければ出さない）, onClose}
+export function showStampZoom(host, {word, spec, state, box = 0, base = BASE, say = defaultSpeak, met = state !== 'shadow', lineHtml = '', onClose}) {
   ensureCss();
   const ex = met && word.ex ? `<p class="gq-ex">${esc(word.ex)}<small>${esc(word.exJa ?? '')}</small></p>` : '';
   const overlay = document.createElement('div');
@@ -114,7 +118,7 @@ export function showStampZoom(host, {word, spec, state, box = 0, base = BASE, sa
     <div class="gq-zoom-stamp">${stampWithMark(word, spec, state, base, 'lg')}</div>
     <p class="gq-zoom-state">${STATE_NAME[state]}${spec.kind === 'odd' ? '　✦ 変わり種' : ''}</p>
     ${met ? `<h2>${esc(word.w)}</h2><p class="gq-zoom-ja">${esc(word.ja)}　<small>${POS[word.pos] ?? ''}</small></p>
-      <p class="gq-stars" aria-label="習熟度 ${box}">${starsMarkup(box)}</p>${ex}`
+      <p class="gq-stars" aria-label="習熟度 ${box}">${starsMarkup(box)}</p>${ex}${lineHtml}`
       : '<h2>？</h2>'}
     <div class="gq-zoom-actions">${met ? fab({icon: 'speaker', label: '発音', caption: false, attrs: 'data-act="say"'}) : ''}${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}</div></div>`;
   let open = true;
@@ -128,6 +132,7 @@ export function showStampZoom(host, {word, spec, state, box = 0, base = BASE, sa
   const onKey = event => { if (event.key === 'Escape') close(); };
   document.addEventListener('keydown', onKey);
   overlay.onclick = event => {
+    if (event.target.closest('.paper') && handleLetterClick(event, {say})) return;
     const act = event.target.closest('[data-act]')?.dataset.act;
     if (act === 'say') say(word.w);
     else if (act === 'close' || event.target === overlay) close();
@@ -144,7 +149,14 @@ async function load(deps) {
   if (!tags) {
     try { tags = await (await fetch(new URL('data/chara.json', BASE))).json(); } catch { tags = {}; }
   }
-  return {words, tags};
+  let story = deps.story;
+  if (story === undefined) {
+    try {
+      const response = await fetch(new URL('data/story.json', BASE));
+      story = response.ok ? await response.json() : null;
+    } catch { story = null; }
+  }
+  return {words, tags, story: Array.isArray(story?.letters) ? story : null};
 }
 
 export function openAlbum(container, deps = {}) {
@@ -160,7 +172,7 @@ export function openAlbum(container, deps = {}) {
   }};
   container.className = 'gq gq-album';
   container.innerHTML = '<p class="gq-loading">切手帳をひらいています…</p>';
-  load(deps).then(({words, tags}) => { if (!closed) start(words, tags); }, () => {
+  load(deps).then(({words, tags, story}) => { if (!closed) start(words, tags, story); }, () => {
     if (closed) return;
     container.innerHTML = '<p class="gq-warn">切手帳を読み込めません。</p>';
     addBack();
@@ -177,7 +189,7 @@ export function openAlbum(container, deps = {}) {
     container.append(button);
   }
 
-  function start(words, tags) {
+  function start(words, tags, story) {
     const progress = deps.progress ?? emptyProgress();
     const say = deps.speak ?? defaultSpeak;
     const base = deps.base ?? BASE;
@@ -188,6 +200,9 @@ export function openAlbum(container, deps = {}) {
       if (!specCache.has(page.shelf)) specCache.set(page.shelf, pageSpecs(page.words, page.words.map(w => tags[w.id] ?? '')));
       return specCache.get(page.shelf);
     };
+    const today = deps.today ?? todayNumber();
+    // その街灯の通（英文が無ければ null）。壊れた英文があっても切手帳は開く。
+    const letterOf = shelf => { try { return story ? letterView(story, words, progress, shelf, today) : null; } catch { return null; } };
     const gates = progress.gates ?? [];
     const collected = words.filter(w => stampState(progress.words?.[w.id]) !== 'shadow').length;
     let index = startIndex(pages, progress, deps.shelf);
@@ -206,6 +221,12 @@ export function openAlbum(container, deps = {}) {
       const oddAt = specs.findIndex(s => s.kind === 'odd');
       const odd = oddAt >= 0 ? page.words[oddAt] : null;
       const oddState = odd ? stampState(progress.words?.[odd.id]) : 'shadow';
+      const letter = letterOf(page.shelf);
+      const face = (id, state) => {
+        const at = page.words.findIndex(w => w.id === id);
+        return at < 0 ? '' : charaSvg(specs[at], {state, ward: page.ch, base});
+      };
+      const paper = letter ? `<div class="gq-album-letter">${letterHtml(letter, {face, shadowLines: shadowLinesOf(letter), lit: pp.complete})}</div>` : '';
       const seal = pp.allGold ? '<span class="gq-seal gold">完・金</span>' : pp.complete ? '<span class="gq-seal">完</span>' : '';
       container.innerHTML = `${charaDefs(base)}
         <div class="gq-album-top">${backButton}<span class="gq-album-total">集めた切手 <b>${collected}</b>/${words.length}</span><button class="text-button" data-act="index" type="button">目次</button></div>
@@ -216,6 +237,7 @@ export function openAlbum(container, deps = {}) {
         </div>
         <div class="gq-album-body ${pp.allGold ? 'gold-page' : pp.complete ? 'lit-page' : ''}">
           ${first ? `<div class="gq-album-gate">${memorialHtml(page.ch, gates.includes(page.ch), base)}</div>` : ''}
+          ${paper}
           <p class="gq-page-count"><b>${pp.got}/${pp.total}</b> ${seal}</p>
           <div class="gq-sheet">${stamps}</div>
           ${odd ? `<p class="gq-odd">✦ 変わり種 <button type="button" class="text-button" data-id="${esc(odd.id)}">${oddState === 'shadow' ? '？' : esc(odd.w)}</button></p>` : ''}
@@ -240,16 +262,33 @@ export function openAlbum(container, deps = {}) {
           <div class="gq-lampgrid">${cells(group)}</div></section>`).join('')}</div>`;
     }
 
+    // 切手を見たあと、通の中のその語を光らせる（通がある、見えている語だけ）。
+    function glow(id) {
+      const word = container.querySelector(`.gq-album-letter .w[data-id="${id}"]:not(.s-gone)`);
+      if (!word) return;
+      word.classList.remove('hit');
+      void word.offsetWidth;
+      word.classList.add('hit');
+      word.scrollIntoView({block: 'nearest', behavior: 'smooth'});
+    }
+
     function zoom(id) {
       const word = words.find(w => w.id === id);
       if (!word) return;
       const page = pages.find(p => p.shelf === word.shelf);
-      const spec = specsOf(page)[page.words.indexOf(word)];
+      const specs = specsOf(page);
+      const spec = specs[page.words.indexOf(word)];
+      const letter = letterOf(page.shelf);
+      const face = (fid, state) => {
+        const at = page.words.findIndex(w => w.id === fid);
+        return at < 0 ? '' : charaSvg(specs[at], {state, ward: page.ch, base});
+      };
       const close = showStampZoom(container, {
         word, spec, base, say,
         state: stampState(progress.words?.[word.id]),
         box: progress.words?.[word.id]?.box ?? 0,
-        onClose: () => { const i = cleanups.indexOf(close); if (i >= 0) cleanups.splice(i, 1); },
+        lineHtml: wordLineHtml(letter, id, {face}),
+        onClose: () => { const i = cleanups.indexOf(close); if (i >= 0) cleanups.splice(i, 1); glow(id); },
       });
       cleanups.push(close);
     }
@@ -266,6 +305,10 @@ export function openAlbum(container, deps = {}) {
       const cell = target.closest('[data-shelf]');
       if (cell) { index = clampIndex(pages.findIndex(p => p.shelf === Number(cell.dataset.shelf)), pages.length); return renderPage(); }
       if (container.querySelector('.gq-zoom')) return;
+      if (target.closest('.gq-album-letter')) {
+        handleLetterClick(event, {say, onWord: zoom});
+        return;
+      }
       const stamp = target.closest('.stamp[data-id], [data-id]');
       if (stamp && view === 'page') zoom(stamp.dataset.id);
     };

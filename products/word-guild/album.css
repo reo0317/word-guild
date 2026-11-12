@@ -91,3 +91,7 @@
 .gq-compare th,.gq-compare td{border:1px solid var(--fog);padding:4px 6px;text-align:center}
 .gq-switch{display:flex;justify-content:space-between;align-items:center;gap:8px}.gq-switch button{width:58px;height:58px;padding:0;border-radius:50%;font-size:14px}.gq-switch button[aria-pressed=true]{background:var(--lamp)}
 .gq-album [hidden],.gq-settings [hidden]{display:none!important}
+
+/* 通（物語の紙）。見た目の本体は letter.css */
+.gq-album-letter{margin:0 2px 10px}
+.gq-zoom-card .paper{width:100%}

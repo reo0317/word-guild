@@ -2,9 +2,6 @@
 import {CHAPTER_NAMES} from './chapters.mjs';
 import {HEAVY_DUE, LIT_BOX, MAX_BOX, isDue} from './srs.mjs';
 
-// 公開する地図の形を増やさず、結果の一行に使う現在の石段の残数を保持する。
-const remaining = new WeakMap();
-
 // step は街灯内の1始まり。lit / gold は該当語数（total と同数で点灯）。
 // tomorrow は明日期限になる全ID（期限切れは含めない）。fog は真偽値。
 export function buildMap(words, progress, today) {
@@ -49,28 +46,26 @@ export function buildMap(words, progress, today) {
   const result = {wards, here, next, due: dueWords.slice(0, 3).map(w => w.id), dueCount: dueWords.length,
     fog: dueWords.length >= HEAVY_DUE,
     tomorrow: words.filter(w => state(w)?.due === today + 1).map(w => w.id)};
-  remaining.set(result, position?.entry.ids.filter(id => !progress.words[id]).length ?? 0);
   return result;
 }
 
-// before / after は buildMap の結果、daily は配達後の progress.daily。
-// kind: page（残り枚数）, lamp（次の街灯番号）, light（未点灯語数）,
-// daily（速達の残り）, next（今いる石段の未遭遇語数）。完了済みの目標は出さない。
-export function nudge(before, after, daily) {
-  const lamps = after.wards.flatMap(w => w.lamps);
-  // 配達前にいたページを優先する。ページをまたいだ配達にも対応。
-  const oldLamp = lamps.find(l => l.shelf === before.here?.shelf);
-  const lamp = lamps.find(l => l.shelf === after.here?.shelf);
-  const candidates = [...new Set([oldLamp, lamp].filter(Boolean))];
-  const page = candidates.find(l => l.total - l.got > 0 && l.total - l.got <= 5);
-  if (page) return {kind: 'page', count: page.total - page.got};
-  if (lamp && lamp.steps.length - after.here.step + 1 === 1 && !lamp.steps.at(-1).passed) {
-    return {kind: 'lamp', count: lamp.shelf};
-  }
-  const light = candidates.find(l => l.total - l.lit > 0 && l.total - l.lit <= 5);
-  if (light) return {kind: 'light', count: light.total - light.lit};
-  if (daily && !daily.done && daily.goal > daily.count) return {kind: 'daily', count: daily.goal - daily.count};
-  return {kind: 'next', count: remaining.get(after) ?? after.next.length};
+// 同じ盤面に並ぶ紙魚の見分け。種族・区・インクがすべて同じ組ができたら、あとの方のインクを
+// まだ使っていないものへ替える（インクは区ごとに3色なので、1盤面の3体までは必ず分けられる）。
+// specs は盤面の順の紙魚の設計値、wards は同じ順の区の番号。入力は変えず、新しい配列を返す。
+// 変わり種（夜色）は、もともと他と見分けがつくので数えない。
+export function separateSpecs(specs, wards = [], inks = 3) {
+  const used = new Set();
+  return specs.map((spec, i) => {
+    if (spec.kind === 'odd') return spec;
+    const key = ink => [spec.species, wards[i] ?? 0, ink].join('/');
+    let next = spec;
+    if (used.has(key(spec.ink % inks))) {
+      const free = Array.from({length: inks}, (_, k) => (spec.ink + k) % inks).find(ink => !used.has(key(ink)));
+      if (free !== undefined) next = {...spec, ink: free};
+    }
+    used.add(key(next.ink % inks));
+    return next;
+  });
 }
 
 // 同順位は元の語順。入力配列・進捗は変更しない。戻り値は語オブジェクト。

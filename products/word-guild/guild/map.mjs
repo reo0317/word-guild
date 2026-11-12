@@ -11,12 +11,13 @@
 //   ctx.tsumugi   ツムギの絵のファイル
 //   ctx.notice    {text, label, act} か null（条件つきの知らせ）
 //   ctx.warn      保存できないときの文
-//   ctx.story     ステージの英文（後日）。今は渡さない。渡すと「.gq-story」に出る
+//   ctx.letterOf(shelf)   その街灯の通（letterView の結果）か null。英文が無い街灯は null で、紙の絵を出さない
+//   ctx.hereLine  ツムギの頭上に出す今の行 {html} か null
 //   ctx.on        {go, gate, lamp, album, settings, title, notice}
 //
 // 遠近：スクロール量を「カメラの位置」にして、道の上の各地点（world の y）を毎回投影し直す。
 //   画面の y = 地平線 + (手前の基準線 - 地平線) × s、s = 1 / (1 + 距離 / F)
-import {esc, fab, waxButton} from './dom.mjs';
+import {esc, fab, waxButton, miniPaper, miniEnvelope, miniHouse} from './dom.mjs';
 import {artBox} from './art.mjs';
 import {streakNow} from './daily.mjs';
 import {WARDS} from './chara-svg.mjs';
@@ -135,11 +136,16 @@ export function renderMap(view, ctx) {
       const gold = lamp.gold === lamp.total;
       const isHereLamp = map.here && map.here.shelf === lamp.shelf;
       const remain = isHereLamp ? lamp.steps.length - map.here.step + 1 : 0;
+      // その通の紙の小さな絵。読めた通は封筒と、窓に灯のともった家。道の広い側に置く。
+      const letter = ctx.letterOf?.(lamp.shelf) ?? null;
+      const worn = letter ? letter.lines.reduce((n, line) => n + line.parts.filter(p => p.state === 'worn').length, 0) : 0;
+      const pin = letter ? `<button type="button" class="gq-pin ${item.lat > 0 ? 'left' : 'right'}${letter.readable ? ' sealed' : ''}" data-shelf="${lamp.shelf}"
+        aria-label="街灯${lamp.shelf}の手紙">${letter.readable ? `${miniEnvelope()}${miniHouse()}` : miniPaper(letter, {fog: map.fog && worn >= 5})}</button>` : '';
       return bb(`gq-bb-lamp${far}`, item.cy, item.lat,
         `<button type="button" class="gq-lamp-node ${gold ? 'gold' : lit ? 'lit' : ''}" data-shelf="${lamp.shelf}"
         style="--p:${Math.round(lamp.got / lamp.total * 100)}%;--wc:${ink(item.ward)}"
-        aria-label="街灯${lamp.shelf}　切手 ${lamp.got}/${lamp.total}　切手帳を開く">
-        <b>${lamp.shelf}</b><small>${lamp.got}/${lamp.total}</small>${remain ? `<em>↑${remain}</em>` : ''}</button>`);
+        aria-label="街灯${lamp.shelf}　切手 ${lamp.got}/${lamp.total}　${letter ? '手紙を開く' : '切手帳を開く'}">
+        <b>${lamp.shelf}</b><small>${lamp.got}/${lamp.total}</small>${remain ? `<em>↑${remain}</em>` : ''}</button>${pin}`);
     }
     if (item.type === 'gate') {
       const {ward} = item;
@@ -161,8 +167,8 @@ export function renderMap(view, ctx) {
     const side = hereItem.lat > 0 ? 'left' : 'right';
     const shadows = map.next.map(id => `<span class="gq-face">${ctx.face(id, 'shadow')}</span>`).join('');
     const dues = map.due.map(id => `<span class="gq-face">${ctx.face(id, 'print')}</span>`).join('');
-    herePanel = bb('gq-bb-tsumugi', hereY, hereItem.lat, `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}">`)
-      + bb(`gq-bb-panel ${side}`, hereY + 70, hereItem.lat, `<div class="gq-here-panel ${side}">
+    herePanel = bb('gq-bb-tsumugi', hereY, hereItem.lat, `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}">${ctx.hereLine ? `<div class="gq-line-bubble" aria-hidden="true"><span class="txt">${ctx.hereLine.html}</span></div>` : ''}`)
+      + bb(`gq-bb-panel ${side}`, hereY + 22, hereItem.lat, `<div class="gq-here-panel ${side}">
         ${map.next.length ? `<div class="gq-faces" aria-label="この先の紙魚"><span class="gq-arrow" aria-hidden="true">▸</span>${shadows}</div>` : '<p class="gq-top-mark" aria-label="いちばん上">★</p>'}
         ${map.dueCount ? `<div class="gq-faces due" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b class="gq-due-n">${map.dueCount}</b>${dues}</div>` : ''}
       </div>`);
@@ -187,7 +193,7 @@ export function renderMap(view, ctx) {
   const tomorrowFaces = tomorrow.slice(0, 3).map(id => `<span class="gq-face s">${ctx.face(id, 'print')}</span>`).join('');
   const fogDensity = Math.min(0.88, 0.3 + map.dueCount / 70);
   const noticeFab = ctx.notice
-    ? fab({icon: ctx.notice.act === 'update' ? 'info' : 'gear', label: ctx.notice.label, cls: 'notice', attrs: 'id="gq-notice"'}) : '';
+    ? fab({icon: ctx.notice.act === 'update' ? 'info' : 'export', label: ctx.notice.label, cls: 'notice', attrs: 'id="gq-notice"'}) : '';
 
   view.className = 'gq gq-map';
   view.innerHTML = `
@@ -198,7 +204,6 @@ export function renderMap(view, ctx) {
       </div>
       <p class="gq-stampcount" aria-label="集めた切手 ${collected} / ${ctx.total}"><i class="gq-tally-icon" aria-hidden="true"></i><b>${collected}</b><small>/${ctx.total}</small></p>
     </div>
-    <div class="gq-story" id="gq-story" ${ctx.story ? '' : 'hidden'}>${ctx.story ? esc(ctx.story) : ''}</div>
     <div class="gq-road" id="gq-road"><div class="gq-road-in" id="gq-road-in">
       <div class="gq-stage" id="gq-stage">
         <div class="gq-sky" aria-hidden="true">${skies}</div>
@@ -234,7 +239,7 @@ export function renderMap(view, ctx) {
   $('#gq-title').onclick = () => on.title();
   if ($('#gq-notice')) $('#gq-notice').onclick = () => on.notice(ctx.notice.act);
   view.querySelectorAll('[data-gate]').forEach(button => { button.onclick = () => on.gate(Number(button.dataset.gate)); });
-  view.querySelectorAll('[data-shelf]').forEach(button => { button.onclick = () => on.lamp(Number(button.dataset.shelf)); });
+  view.querySelectorAll('button[data-shelf]').forEach(button => { button.onclick = () => on.lamp(Number(button.dataset.shelf)); });
 
   // ---------- 遠近の投影 ----------
   const road = $('#gq-road');
@@ -249,6 +254,7 @@ export function renderMap(view, ctx) {
     far: el.classList.contains('far'),
     scale: el.classList.contains('gq-bb-ward') ? 0.9 : 1,
     panel: el.querySelector('.gq-here-panel'),
+    bubble: el.querySelector('.gq-line-bubble'),
   }));
   const skyLayers = [...view.querySelectorAll('.gq-sky-art')];
   let Ws = 0, Hs = 0, frame = 0, lastWard = 0;
@@ -315,6 +321,12 @@ export function renderMap(view, ctx) {
       if (!b.shown) { b.el.style.display = ''; b.shown = true; }
       const fade = Math.min(1, Math.max(0, (s - S_MIN) / 0.2)) * (b.far ? 0.55 : 1);
       const sx = X(b.y, s);
+      if (b.bubble) { // 吹き出しは、画面の幅に収まる位置へ。しっぽはツムギの上
+        const k = s * b.scale;
+        b.bubble.style.left = `${((8 - sx) / k).toFixed(1)}px`;
+        b.bubble.style.width = `${((Ws - 16) / k).toFixed(1)}px`;
+        b.bubble.style.setProperty('--tail', `${((sx - 8) / k).toFixed(1)}px`);
+      }
       if (b.panel) b.panel.className = `gq-here-panel ${sx > Ws / 2 ? 'left' : 'right'}`; // 道の広い側に出す
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${(s * b.scale).toFixed(3)})`;
       b.el.style.opacity = fade.toFixed(2);

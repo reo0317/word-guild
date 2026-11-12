@@ -119,9 +119,13 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-board.shake{animation:gq-shake .3s}.gq-board.correct{animation:gq-glow .65s}
 .gq-hearts.lost{animation:gq-pop .4s}.gq-owl.stamped{animation:gq-stamp .35s}
 
-/* お題の紙魚の下に、その紙魚の1語（札）。3体＝3列。大物は1体で横に広い。後日の英文は .gq-story に置く。 */
+/* お題の紙魚の下に、その紙魚の1語（札）。3体＝3列。大物は1体で横に広い。配達中に語が戻る一瞬の行は .gq-story（盤面を動かさない重ね）。 */
 .gq{--plate-h:62px}
-.gq-story{flex-shrink:0;font-family:var(--serif);font-size:13px;line-height:1.6;padding:2px 6px}.gq-story[hidden]{display:none}
+/* 正解の一瞬：その語を含む行の一部が、アリーナの上に重なる。場所をとらない（盤面は狭くならない）。 */
+.gq-story{position:absolute;left:14px;right:14px;top:46px;z-index:8;pointer-events:none;padding:1px 10px;border:2px solid var(--ink);border-radius:12px;background:var(--paper-hi);box-shadow:0 2px 0 var(--ink);font:15px/1.8 Georgia,"Times New Roman",var(--serif);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity .35s,transform .35s}
+.gq-story[hidden]{display:none}.gq-story.out{opacity:0;transform:translateY(-4px)}
+.gq-story .w .t,.gq-story .w .fog{transition-duration:.5s}
+.gq-story .w.s-ink{border-bottom-style:solid}
 .gq-top{display:flex;align-items:center;gap:8px;height:30px;flex-shrink:0;padding:0 4px}
 .gq-quit{position:relative;flex:0 0 28px;width:28px;height:28px;min-height:0;padding:0;border-radius:50%;font-size:12px;line-height:1;box-shadow:0 2px 0 var(--ink)}
 .gq-quit::after{content:"";position:absolute;inset:-9px}
@@ -196,6 +200,13 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-stamp-cell{position:relative;opacity:0;animation:gq-slam .4s calc(var(--i)*70ms + .2s) cubic-bezier(.2,1.5,.4,1) both}.gq-stamp-cell.wide{grid-column:span 2}
 .gq-stamp-cell .mk{position:absolute;right:-1px;top:-3px;z-index:4;min-width:16px;height:16px;padding:0 3px;border-radius:8px;border:1.5px solid var(--ink);background:var(--seal);color:var(--paper);font:900 10px/13px system-ui;text-align:center}
 .gq-stamp-cell .mk.up{background:var(--lamp);color:var(--ink)}.gq-stamp-cell .mk.gold{background:#f0c23c;color:var(--ink)}
+.gq-stamps.mini{grid-template-columns:repeat(12,minmax(0,1fr));gap:2px}
+.gq-stamps.mini .stamp{padding:3px}.gq-stamps.mini .stamp .in{padding:1px}
+.gq-stamps.mini .stamp .lbl,.gq-stamps.mini .stamp .val,.gq-stamps.mini .stamp .odd{display:none}
+.gq-stamps.mini .gq-stamp-cell.wide{grid-column:span 1}
+.gq-stamps.mini .stamp.big .pic{aspect-ratio:1}.gq-stamps.mini .stamp.big .pic svg{left:0;width:100%}
+.gq-stamps.mini .gq-stamp-cell .mk{min-width:11px;height:11px;padding:0 2px;top:-4px;right:-3px;font-size:7px;line-height:8px}
+.gq-stamps.mini .again{font-size:9px}
 .gq-stamp-cell.fled{opacity:.75}.gq-stamp-cell .again{display:block;font-size:11px;font-weight:900;color:var(--pos-o);text-align:center;margin-top:1px;line-height:1}.gq-stamp-cell .stamp{cursor:pointer}.gq-stamps .empty{grid-column:1/-1;text-align:center;color:var(--pos-o)}
 .gq-cap{min-height:18px;margin-top:2px;font-size:12px;font-weight:700;text-align:center;color:var(--ink)}
 .gq-page{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;width:min(150px,50%);margin:0 auto}
@@ -258,7 +269,7 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
  main{gap:4px;padding-top:calc(env(safe-area-inset-top) + 5px);padding-bottom:calc(env(safe-area-inset-bottom) + 5px)}
  .gq{--enemy-size:clamp(64px,12dvh,100px)}
  #view.gq{gap:5px;padding:8px}
- .gq-top{height:22px}.gq-hearts{font-size:18px}
+ .gq-top{height:22px}.gq-hearts{font-size:18px}.gq-story{top:34px}
  .gq-result-head .art{flex-basis:44px;height:44px}.gq-result-head .art-owl{flex-basis:34px;height:34px}
  .gq-input{height:18px;font-size:12px}
  .gq-fab{min-width:44px}.gq-disc{width:42px;height:42px}.gq-wax{width:76px;height:76px}.gq-wax span{font-size:14px}

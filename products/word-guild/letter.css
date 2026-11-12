@@ -1,0 +1,93 @@
+/* 物語の紙（結果・地図・切手帳・配達前の動き）。dom.mjs の letterHtml が作る要素の見た目。
+   紙魚の SVG の祖先に CSS の filter は置かない（iOS Safari で SVG の filter・mask が消える）。 */
+.paper{position:relative;padding:8px 12px 6px;background:var(--paper-hi);border:2px solid var(--ink);border-radius:6px;box-shadow:2px 3px 0 #0002;font-family:Georgia,"Times New Roman",var(--serif);color:var(--ink);text-align:left}
+.paper.k-notice,.paper.k-sign{border-style:double;border-width:4px}
+.paper.k-news{background:#efe7d3}
+.paper.k-ledger{background-image:repeating-linear-gradient(transparent 0 27px,#9fb3bf33 27px 28px)}
+.paper.k-diary,.paper.k-letter{background-image:linear-gradient(90deg,#c8462f22 0 2px,transparent 2px);background-position:22px 0;background-repeat:no-repeat}
+.paper .ph{display:flex;align-items:center;gap:6px;min-height:30px;padding:0 38px 6px 0;margin-bottom:4px;border-bottom:1.5px solid var(--ink);font:700 12px/1.2 system-ui,sans-serif;color:var(--seal);flex-wrap:wrap}
+.paper .ph .arr{width:22px;height:10px;flex:0 0 auto}
+.paper .ph .ring{position:absolute;right:8px;top:5px;line-height:0}
+.paper .ph .ln-say.all{margin-left:2px}
+
+.paper .ln-wrap{position:relative;padding-left:14px}
+.paper .ln{margin:0;font-size:clamp(15px,4.4vw,17px);line-height:1.95;letter-spacing:.01em}
+.paper .ln .dot{position:absolute;left:0;top:.95em;width:7px;height:7px;border-radius:50%;background:var(--fog-lt);border:1.5px solid var(--fog);box-sizing:border-box}
+.paper .ln-wrap.read .dot{background:var(--ink);border-color:var(--ink)}
+.paper .ln-wrap.read{cursor:pointer}
+.paper .ja{display:flex;align-items:center;gap:6px;margin:0 0 4px;padding:4px 8px;background:var(--lamp-lt);border-radius:6px;font:13px/1.6 "Hiragino Sans","Yu Gothic UI",system-ui,sans-serif;color:var(--ink)}
+.paper .ja[hidden]{display:none}
+.ln-say{flex:0 0 auto;width:30px;height:30px;min-height:0;padding:0;display:inline-grid;place-items:center;margin-left:auto;border-radius:50%;background:var(--paper-2);box-shadow:0 2px 0 var(--ink)}
+.ln-say:active{transform:none;box-shadow:none}
+.ln-say .ic{width:16px;height:16px}
+
+/* 語：s-gone 霧（文字は出さない。幅が長さの手がかり）／s-thin 薄いインク／s-ink 濃いインク／s-worn かすれ（読める） */
+.w{position:relative;display:inline-block;white-space:nowrap}
+.w .t{display:inline-block;transition:color .8s,opacity .8s}
+.w.s-gone .t{color:transparent;-webkit-user-select:none;user-select:none}
+.w.s-thin .t{color:#6e88aa}
+.w.s-ink .t,.w.s-worn .t{color:var(--ink)}
+.w.s-ink{border-bottom:2px dotted var(--ink);line-height:1.5}
+.w.s-worn .t{opacity:.8;-webkit-mask-image:radial-gradient(circle at 22% 62%,#0000 1.8px,#000 2.8px),radial-gradient(circle at 63% 30%,#0000 1.5px,#000 2.5px),radial-gradient(circle at 85% 70%,#0000 2px,#000 3px);-webkit-mask-composite:source-in;mask-image:radial-gradient(circle at 22% 62%,#0000 1.8px,#000 2.8px),radial-gradient(circle at 63% 30%,#0000 1.5px,#000 2.5px),radial-gradient(circle at 85% 70%,#0000 2px,#000 3px);mask-composite:intersect}
+.w .fog{position:absolute;inset:3px -4px 2px;pointer-events:none;opacity:0;transition:opacity .8s;border-radius:50%;
+ background:radial-gradient(ellipse 52% 55% at var(--a) 50%,#c6d3d9 0,#c6d3d900 100%),radial-gradient(ellipse 48% 60% at var(--b) 44%,#dde5e8f0 0,#dde5e800 100%),radial-gradient(ellipse 70% 70% at 50% 55%,#dde5e8e6 30%,#dde5e800 100%)}
+.w.s-gone .fog{opacity:1}
+.w .sh,.w .bug{position:absolute;z-index:2;pointer-events:none;line-height:0;transition:transform .55s,opacity .55s}
+.w .sh{left:50%;top:-.2em;width:1.55em;height:1.55em;margin-left:-.78em}
+.w .bug{right:-.45em;top:-.65em;width:1.05em;height:1.05em}
+.w .sh svg,.w .bug svg{width:100%;height:100%;display:block}
+.w .pop{transform:translateY(-1.4em) scale(1.6) rotate(25deg);opacity:0}
+.w .face{position:absolute;left:50%;top:-.35em;width:1.7em;height:1.7em;margin-left:-.85em;z-index:2;line-height:0;pointer-events:none}
+.w .face svg{width:100%;height:100%}
+.w:not(.s-gone)[data-id]{cursor:pointer}
+.w.now .t{background:var(--lamp-lt);border-radius:3px;box-shadow:0 0 0 2px var(--lamp-lt)}
+.w.hit .t{background:var(--lamp);border-radius:3px;box-shadow:0 0 0 3px var(--lamp);animation:gq-hit 1.6s ease-out both}
+@keyframes gq-hit{to{background:transparent;box-shadow:0 0 0 3px transparent}}
+.zl{margin-top:4px;box-shadow:none;width:100%}.zl .ln{font-size:15px;line-height:1.8}.zl .ja{text-align:left}
+
+/* 結果画面の1通 */
+.gq-letter-sec{position:relative}
+.gq-letter-sec .paper{padding-top:6px}
+.gq-letter-sec .w.s-gone.act{cursor:default}
+.gq-res-row{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px}
+.gq-next-env{display:flex;align-items:center;justify-content:center;gap:8px;font:700 12px/1.2 system-ui,sans-serif;color:var(--ink)}
+.gq-next-env svg{width:44px;height:30px}
+.gq-next-env span{max-width:60%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* 1通が読めたとき：封筒 */
+.gq-env{position:relative;aspect-ratio:340/230;border-radius:8px;background:var(--fog-lt);border:2px solid var(--ink);overflow:hidden}
+.gq-env .scene{position:absolute;inset:0;width:100%;height:100%}
+.gq-env .furo{position:absolute;width:20%;left:41%;top:-30%;opacity:0;transition:top .35s cubic-bezier(.5,0,1,.6),opacity .2s;object-fit:contain}
+.gq-env.f-on .furo{top:18%;opacity:1}
+.gq-env.f-off .furo{top:-30%;opacity:0;transition:top .5s,opacity .5s}
+.gq-env .sc-paper{transition:transform .8s,opacity .5s;transform-box:fill-box;transform-origin:center}
+.gq-env .sc-env{opacity:0;transition:opacity .4s}
+.gq-env .sc-flap{transform-box:fill-box;transform-origin:top center;transform:scaleY(-1);transition:transform .6s}
+.gq-env .sc-seal{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(2.2);transition:transform .25s ease-in,opacity .2s}
+.gq-env .sc-move{transition:transform 1s ease-in-out,opacity .6s;transform-box:view-box}
+.gq-env .sc-win{fill:#46506f;transition:fill .6s}
+.gq-env .sc-glow{opacity:0;transition:opacity .8s}
+.gq-env.s1 .sc-paper{transform:translateY(34px) scaleY(.42)}
+.gq-env.s2 .sc-env{opacity:1}
+.gq-env.s3 .sc-flap{transform:scaleY(1)}
+.gq-env.s4 .sc-seal{opacity:1;transform:scale(1)}
+.gq-env.s5 .sc-move{transform:translate(110px,36px) scale(.28)}
+.gq-env.s5 .sc-win{fill:var(--lamp)}
+.gq-env.s5 .sc-glow{opacity:1}
+
+/* 配達前：紙魚が今の行の語を食べる */
+.gq-eat{position:absolute;inset:0;z-index:30;display:grid;place-items:center;padding:14px;background:#1f2a44f2;border-radius:inherit;cursor:pointer}
+.gq-eat .paper{width:100%;max-width:420px}
+.gq-eat .w .t{transition:color .35s,opacity .35s}
+.gq-eat .w.s-ink{border-bottom:0}
+.gq-eat .w .bug{right:auto;left:50%;top:-.55em;width:1.5em;height:1.5em;margin-left:-.75em;opacity:0;transform:translateY(-1.2em) scale(1.5)}
+.gq-eat .w.bite .bug{opacity:1;transform:none}
+.gq-eat .w.eaten .bug{opacity:0;transform:translateY(.6em) scale(.5)}
+
+@media(max-height:700px){
+ .paper .ln{line-height:1.8}
+}
+@media(prefers-reduced-motion:reduce){
+ .w .t,.w .fog,.w .sh,.w .bug,.gq-env *{transition:none!important}
+ .w.hit .t{animation:none}
+}

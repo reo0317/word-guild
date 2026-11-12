@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {buildMap, nudge, gateWords} from '../products/word-guild/guild/stages.mjs';
+import {buildMap, gateWords, separateSpecs} from '../products/word-guild/guild/stages.mjs';
 import {emptyProgress} from '../products/word-guild/guild/store.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url), 'utf8'));
@@ -28,7 +28,6 @@ test('地図：280石段・56街灯、語順を保ち各街灯内で5語ずつ',
   }
   assert.deepEqual(m.here, {ch: 1, shelf: 1, step: 1});
   assert.deepEqual(m.next, words.slice(0, 3).map(w => w.id));
-  assert.deepEqual(nudge(m, m, null), {kind: 'next', count: 5});
 });
 
 test('今いる場所：部分通過、穴、街灯・区の境目、全通過', () => {
@@ -81,31 +80,18 @@ test('門：全石段通過で出現、点灯不要、開門しなくても次�
   assert.ok(map(progressFor(words)).wards.every(w => w.gate === 'open'));
 });
 
-test('あと少し：ページ → 次の街灯 → 点灯 → 速達 → 次の影。0件は出さない', () => {
-  const before = map(emptyProgress());
-  const after = structuredClone(before);
-  const lamp = after.wards[0].lamps[0];
-  const daily = {goal: 10, count: 7, done: false};
-  lamp.got = 21; lamp.lit = 22; after.here.step = 5;
-  assert.deepEqual(nudge(before, after, daily), {kind: 'page', count: 4});
-  lamp.got = 19;
-  assert.deepEqual(nudge(before, after, daily), {kind: 'lamp', count: 1});
-  after.here.step = 4;
-  assert.deepEqual(nudge(before, after, daily), {kind: 'light', count: 3});
-  lamp.lit = 19;
-  assert.deepEqual(nudge(before, after, daily), {kind: 'daily', count: 3});
-  assert.deepEqual(nudge(before, after, {...daily, done: true}), {kind: 'next', count: 3});
-  lamp.got = 25; lamp.lit = 25;
-  assert.deepEqual(nudge(before, after, {goal: 10, count: 10}), {kind: 'next', count: 3});
-  const complete = map(progressFor(words, 5));
-  assert.deepEqual(nudge(complete, complete, null), {kind: 'next', count: 0});
-});
-
-test('あと少し：ページをまたいだら前の街灯の点灯残りも伝える', () => {
-  const before = map(progressFor(words.slice(0, 24), 3));
-  const p = progressFor(words.slice(0, 25), 3);
-  p.words[words[24].id].box = 1;
-  assert.deepEqual(nudge(before, map(p), null), {kind: 'light', count: 1});
+test('同じ盤面の紙魚：種族と区が同じならインクを分ける。他は変えない', () => {
+  const same = i => ({species: 'time', ink: 1, pattern: i, kind: 'normal'});
+  const out = separateSpecs([same(0), same(1), same(2)], [1, 1, 1]);
+  assert.deepEqual(out.map(s => s.ink).sort(), [0, 1, 2]);
+  assert.equal(out[0].ink, 1);
+  assert.deepEqual(out.map(s => s.pattern), [0, 1, 2]);
+  assert.equal(same(0).ink, 1); // 入力は変えない
+  // 区が違う・種族が違う・変わり種は、そのまま
+  assert.deepEqual(separateSpecs([same(0), same(1)], [1, 2]).map(s => s.ink), [1, 1]);
+  assert.deepEqual(separateSpecs([same(0), {...same(1), species: 'work'}], [1, 1]).map(s => s.ink), [1, 1]);
+  assert.deepEqual(separateSpecs([{...same(0), kind: 'odd'}, same(1)], [1, 1]).map(s => s.ink), [1, 1]);
+  assert.deepEqual(separateSpecs([], []), []);
 });
 
 test('門の12語：対象区だけ、習熟度→期限→元の順。入力を変更しない', () => {
@@ -123,5 +109,4 @@ test('門の12語：対象区だけ、習熟度→期限→元の順。入力を
 test('空の語データも扱える', () => {
   const m = buildMap([], emptyProgress(), today);
   assert.deepEqual(m, {wards: [], here: null, next: [], due: [], dueCount: 0, fog: false, tomorrow: []});
-  assert.deepEqual(nudge(m, m, null), {kind: 'next', count: 0});
 });

@@ -65,23 +65,33 @@ export function letterView(story, words, progress, shelf, today) {
 }
 
 // max は全角文字の幅（ASCII は半角）。対象語を中心に切り、対象語そのものは分断しない。
-export function clipFor(story, id, max = 17) {
+// {left, word, right}。画面は word だけを色づけできる。無いときは null。
+export function clipParts(story, id, max = 17) {
   const found = wordToLine(story).get(id);
-  if (!found || !Number.isFinite(max) || max <= 0) return '';
+  if (!found || !Number.isFinite(max) || max <= 0) return null;
   const parts = parseLine(found.line.en);
   let n = 0;
   const target = parts.findIndex(p => p.type === 'word' && n++ === found.wordIndex);
   const before = Array.from(parts.slice(0, target).map(p => p.text).join(''));
   const after = Array.from(parts.slice(target + 1).map(p => p.text).join(''));
-  let clip = parts[target].text;
+  const word = parts[target].text;
   const width = s => Array.from(s).reduce((sum, c) => sum + (c.codePointAt(0) < 128 ? 0.5 : 1), 0);
   let left = '', right = '';
   while (before.length || after.length) {
     const side = before.length && (!after.length || width(left) <= width(right)) ? 'left' : 'right';
     const c = side === 'left' ? before.at(-1) : after[0];
-    if (width(left + clip + right + c) > max) break;
+    if (width(left + word + right + c) > max) break;
     if (side === 'left') left = before.pop() + left;
     else right += after.shift();
   }
-  return (left + clip + right).trim();
+  // 切り口が語の途中なら、その語は落として「…」にする。
+  const letter = c => /[A-Za-z']/u.test(c ?? '');
+  if (before.length) left = '…' + (letter(before.at(-1)) && letter(left[0]) ? left.replace(/^[A-Za-z']+/u, '') : left).trimStart();
+  if (after.length) right = (letter(after[0]) && letter(right.at(-1)) ? right.replace(/[A-Za-z']+$/u, '') : right).trimEnd() + '…';
+  return {left, word, right};
+}
+
+export function clipFor(story, id, max = 17) {
+  const clip = clipParts(story, id, max);
+  return clip ? (clip.left + clip.word + clip.right).trim() : '';
 }
