@@ -93,12 +93,12 @@
   },
   {
    "shelf": 29,
-   "w": "mayor",
-   "ja": "町長",
+   "w": "leader",
+   "ja": "指導者",
    "pos": "n",
-   "ex": "the mayor of the port",
-   "exJa": "港の町長",
-   "rank": 2779
+   "ex": "the town leader",
+   "exJa": "町の指導者",
+   "rank": 596
   },
   {
    "shelf": 29,
@@ -138,30 +138,30 @@
   },
   {
    "shelf": 30,
-   "w": "cancel",
-   "ja": "取り消す",
+   "w": "release",
+   "ja": "解き放つ",
    "pos": "v",
-   "ex": "cancel the contract",
-   "exJa": "契約を取り消す",
-   "rank": 2390
+   "ex": "release the debt",
+   "exJa": "借金を免じる",
+   "rank": 786
   },
   {
    "shelf": 30,
-   "w": "insurance",
-   "ja": "保険",
-   "pos": "n",
-   "ex": "pay the insurance",
-   "exJa": "保険料を払う",
-   "rank": 1314
+   "w": "private",
+   "ja": "私的な",
+   "pos": "a",
+   "ex": "a private matter",
+   "exJa": "私的なこと",
+   "rank": 648
   },
   {
    "shelf": 30,
-   "w": "payment",
-   "ja": "支払い",
+   "w": "agreement",
+   "ja": "合意",
    "pos": "n",
-   "ex": "a late payment",
-   "exJa": "遅れた支払い",
-   "rank": 1268
+   "ex": "a written agreement",
+   "exJa": "書面の合意",
+   "rank": 785
   },
   {
    "shelf": 30,
@@ -201,12 +201,12 @@
   },
   {
    "shelf": 31,
-   "w": "expense",
-   "ja": "費用",
+   "w": "policy",
+   "ja": "方針",
    "pos": "n",
-   "ex": "an oil expense",
-   "exJa": "油の費用",
-   "rank": 1531
+   "ex": "a new policy",
+   "exJa": "新しい方針",
+   "rank": 399
   },
   {
    "shelf": 31,
@@ -228,30 +228,30 @@
   },
   {
    "shelf": 32,
-   "w": "storm",
-   "ja": "嵐",
+   "w": "damage",
+   "ja": "損害",
    "pos": "n",
-   "ex": "a night storm",
-   "exJa": "夜の嵐",
-   "rank": 1999
+   "ex": "storm damage",
+   "exJa": "嵐の損害",
+   "rank": 908
   },
   {
    "shelf": 32,
-   "w": "disaster",
-   "ja": "災害",
+   "w": "fire",
+   "ja": "火事",
    "pos": "n",
-   "ex": "a sea disaster",
-   "exJa": "海の災害",
-   "rank": 2117
+   "ex": "a fire at night",
+   "exJa": "夜の火事",
+   "rank": 613
   },
   {
    "shelf": 32,
-   "w": "darkness",
-   "ja": "暗闇",
-   "pos": "n",
-   "ex": "the darkness at sea",
-   "exJa": "海の暗闇",
-   "rank": 2780
+   "w": "dark",
+   "ja": "暗い",
+   "pos": "a",
+   "ex": "a dark room",
+   "exJa": "暗い部屋",
+   "rank": 923
   },
   {
    "shelf": 32,
@@ -336,21 +336,21 @@
   },
   {
    "shelf": 34,
-   "w": "wage",
-   "ja": "賃金",
+   "w": "office",
+   "ja": "事務所",
    "pos": "n",
-   "ex": "my final wage",
-   "exJa": "私の最後の賃金",
-   "rank": 1757
+   "ex": "the town office",
+   "exJa": "町の事務所",
+   "rank": 343
   },
   {
    "shelf": 34,
-   "w": "secret",
-   "ja": "秘密",
+   "w": "record",
+   "ja": "記録",
    "pos": "n",
-   "ex": "a secret note",
-   "exJa": "秘密のメモ",
-   "rank": 1276
+   "ex": "a town record",
+   "exJa": "町の記録",
+   "rank": 344
   },
   {
    "shelf": 34,
@@ -381,12 +381,12 @@
   },
   {
    "shelf": 35,
-   "w": "discount",
-   "ja": "割引",
+   "w": "contract",
+   "ja": "契約",
    "pos": "n",
-   "ex": "a postage discount",
-   "exJa": "郵便料金の割引",
-   "rank": 1660
+   "ex": "sign the contract",
+   "exJa": "契約に署名する",
+   "rank": 714
   },
   {
    "shelf": 35,
@@ -426,12 +426,12 @@
   },
   {
    "shelf": 36,
-   "w": "kitchen",
-   "ja": "台所",
+   "w": "food",
+   "ja": "食べ物",
    "pos": "n",
-   "ex": "the old kitchen",
-   "exJa": "古い台所",
-   "rank": 1307
+   "ex": "hot food",
+   "exJa": "温かい食べ物",
+   "rank": 367
   },
   {
    "shelf": 36,

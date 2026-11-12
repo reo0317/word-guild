@@ -66,12 +66,12 @@
   },
   {
    "shelf": 48,
-   "w": "honest",
-   "ja": "正直な",
-   "pos": "a",
-   "ex": "an honest keeper",
-   "exJa": "正直な番人",
-   "rank": 2035
+   "w": "account",
+   "ja": "帳簿",
+   "pos": "n",
+   "ex": "a ledger account",
+   "exJa": "台帳の帳簿",
+   "rank": 436
   },
   {
    "shelf": 48,
@@ -147,12 +147,12 @@
   },
   {
    "shelf": 50,
-   "w": "suspect",
-   "ja": "疑う",
-   "pos": "v",
-   "ex": "suspect a trick",
-   "exJa": "ごまかしを疑う",
-   "rank": 1490
+   "w": "floor",
+   "ja": "床",
+   "pos": "n",
+   "ex": "a wooden floor",
+   "exJa": "木の床",
+   "rank": 751
   },
   {
    "shelf": 50,
@@ -327,12 +327,12 @@
   },
   {
    "shelf": 54,
-   "w": "regret",
-   "ja": "後悔",
+   "w": "worry",
+   "ja": "心配",
    "pos": "n",
-   "ex": "a deep regret",
-   "exJa": "深い後悔",
-   "rank": 2391
+   "ex": "a deep worry",
+   "exJa": "深い心配",
+   "rank": 653
   },
   {
    "shelf": 54,
@@ -363,12 +363,12 @@
   },
   {
    "shelf": 55,
-   "w": "gift",
-   "ja": "贈り物",
-   "pos": "n",
-   "ex": "a thoughtful gift",
-   "exJa": "思いやりの贈り物",
-   "rank": 1427
+   "w": "remember",
+   "ja": "覚えている",
+   "pos": "v",
+   "ex": "remember the gift",
+   "exJa": "贈り物を覚えている",
+   "rank": 351
   },
   {
    "shelf": 55,
@@ -390,12 +390,12 @@
   },
   {
    "shelf": 55,
-   "w": "duty",
-   "ja": "務め",
+   "w": "respect",
+   "ja": "敬意",
    "pos": "n",
-   "ex": "the keeper's duty",
-   "exJa": "番人の務め",
-   "rank": 1262
+   "ex": "show respect",
+   "exJa": "敬意を示す",
+   "rank": 681
   },
   {
    "shelf": 55,
@@ -435,12 +435,12 @@
   },
   {
    "shelf": 56,
-   "w": "essay",
-   "ja": "随筆",
+   "w": "language",
+   "ja": "言語",
    "pos": "n",
-   "ex": "write an essay",
-   "exJa": "随筆を書く",
-   "rank": 2161
+   "ex": "a plain language",
+   "exJa": "平易な言葉",
+   "rank": 360
   },
   {
    "shelf": 56,

@@ -12,39 +12,39 @@
   },
   {
    "shelf": 37,
-   "w": "breakfast",
-   "ja": "朝食",
+   "w": "evening",
+   "ja": "夕方",
    "pos": "n",
-   "ex": "breakfast at seven",
-   "exJa": "七時の朝食",
-   "rank": 1819
+   "ex": "a quiet evening",
+   "exJa": "静かな夕方",
+   "rank": 679
   },
   {
    "shelf": 37,
-   "w": "bread",
-   "ja": "パン",
+   "w": "hotel",
+   "ja": "ホテル",
    "pos": "n",
-   "ex": "fresh bread",
-   "exJa": "焼きたてのパン",
-   "rank": 2262
+   "ex": "a hotel by the station",
+   "exJa": "駅そばのホテル",
+   "rank": 759
   },
   {
    "shelf": 37,
-   "w": "milk",
-   "ja": "牛乳",
+   "w": "morning",
+   "ja": "朝",
    "pos": "n",
-   "ex": "a carton of milk",
-   "exJa": "牛乳一パック",
-   "rank": 1789
+   "ex": "a foggy morning",
+   "exJa": "霧の朝",
+   "rank": 434
   },
   {
    "shelf": 37,
-   "w": "guest",
-   "ja": "客",
-   "pos": "n",
-   "ex": "a hotel guest",
-   "exJa": "ホテルの客",
-   "rank": 1430
+   "w": "sleep",
+   "ja": "眠る",
+   "pos": "v",
+   "ex": "sleep until noon",
+   "exJa": "昼まで眠る",
+   "rank": 827
   },
   {
    "shelf": 38,
@@ -102,21 +102,21 @@
   },
   {
    "shelf": 39,
-   "w": "coffee",
-   "ja": "コーヒー",
+   "w": "restaurant",
+   "ja": "食堂",
    "pos": "n",
-   "ex": "a cup of coffee",
-   "exJa": "コーヒー一杯",
-   "rank": 1395
+   "ex": "a small restaurant",
+   "exJa": "小さな食堂",
+   "rank": 919
   },
   {
    "shelf": 39,
-   "w": "ticket",
-   "ja": "切符",
-   "pos": "n",
-   "ex": "a ticket to the port",
-   "exJa": "港行きの切符",
-   "rank": 1249
+   "w": "travel",
+   "ja": "旅する",
+   "pos": "v",
+   "ex": "travel by sea",
+   "exJa": "海路で旅する",
+   "rank": 503
   },
   {
    "shelf": 39,
@@ -138,30 +138,30 @@
   },
   {
    "shelf": 40,
-   "w": "schedule",
-   "ja": "予定表",
+   "w": "minute",
+   "ja": "分",
    "pos": "n",
-   "ex": "the train schedule",
-   "exJa": "列車の予定表",
-   "rank": 1240
+   "ex": "wait a minute",
+   "exJa": "少し待つ",
+   "rank": 366
   },
   {
    "shelf": 40,
-   "w": "platform",
-   "ja": "ホーム",
+   "w": "station",
+   "ja": "駅",
    "pos": "n",
-   "ex": "wait on the platform",
-   "exJa": "ホームで待つ",
-   "rank": 2171
+   "ex": "the old station",
+   "exJa": "古い駅",
+   "rank": 709
   },
   {
    "shelf": 40,
-   "w": "passenger",
-   "ja": "乗客",
+   "w": "clock",
+   "ja": "時計",
    "pos": "n",
-   "ex": "a tired passenger",
-   "exJa": "疲れた乗客",
-   "rank": 1695
+   "ex": "the station clock",
+   "exJa": "駅の時計",
+   "rank": 932
   },
   {
    "shelf": 40,
@@ -183,12 +183,12 @@
   },
   {
    "shelf": 41,
-   "w": "crew",
-   "ja": "乗組員",
+   "w": "team",
+   "ja": "班",
    "pos": "n",
-   "ex": "the whole crew",
-   "exJa": "乗組員の全員",
-   "rank": 2095
+   "ex": "a small team",
+   "exJa": "小さな班",
+   "rank": 407
   },
   {
    "shelf": 41,
@@ -237,21 +237,21 @@
   },
   {
    "shelf": 42,
-   "w": "ocean",
-   "ja": "大洋",
+   "w": "memory",
+   "ja": "記憶",
    "pos": "n",
-   "ex": "the wide ocean",
-   "exJa": "広い大洋",
-   "rank": 2671
+   "ex": "a clear memory",
+   "exJa": "はっきりした記憶",
+   "rank": 939
   },
   {
    "shelf": 42,
-   "w": "shore",
-   "ja": "岸",
+   "w": "dream",
+   "ja": "夢",
    "pos": "n",
-   "ex": "walk along the shore",
-   "exJa": "岸沿いを歩く",
-   "rank": 2737
+   "ex": "a dream of the sea",
+   "exJa": "海の夢",
+   "rank": 966
   },
   {
    "shelf": 42,
@@ -318,12 +318,12 @@
   },
   {
    "shelf": 44,
-   "w": "witness",
-   "ja": "目撃者",
+   "w": "evidence",
+   "ja": "証拠",
    "pos": "n",
-   "ex": "a witness of the fire",
-   "exJa": "火の目撃者",
-   "rank": 1642
+   "ex": "clear evidence",
+   "exJa": "明白な証拠",
+   "rank": 592
   },
   {
    "shelf": 44,
@@ -354,12 +354,12 @@
   },
   {
    "shelf": 44,
-   "w": "ceremony",
-   "ja": "式典",
+   "w": "community",
+   "ja": "地域社会",
    "pos": "n",
-   "ex": "a lamp ceremony",
-   "exJa": "灯の式典",
-   "rank": 2517
+   "ex": "a small community",
+   "exJa": "小さな地域社会",
+   "rank": 465
   },
   {
    "shelf": 45,
@@ -399,12 +399,12 @@
   },
   {
    "shelf": 45,
-   "w": "cash",
-   "ja": "現金",
+   "w": "credit",
+   "ja": "信用",
    "pos": "n",
-   "ex": "pay in cash",
-   "exJa": "現金で払う",
-   "rank": 1339
+   "ex": "lose credit",
+   "exJa": "信用を失う",
+   "rank": 944
   },
   {
    "shelf": 46,
@@ -435,21 +435,21 @@
   },
   {
    "shelf": 46,
-   "w": "envelope",
-   "ja": "封筒",
+   "w": "document",
+   "ja": "書類",
    "pos": "n",
-   "ex": "a white envelope",
-   "exJa": "白い封筒",
-   "rank": 2656
+   "ex": "a sealed document",
+   "exJa": "封をした書類",
+   "rank": 882
   },
   {
    "shelf": 46,
-   "w": "stamp",
-   "ja": "切手",
+   "w": "paper",
+   "ja": "紙",
    "pos": "n",
-   "ex": "a new stamp",
-   "exJa": "新しい切手",
-   "rank": 2654
+   "ex": "a sheet of paper",
+   "exJa": "一枚の紙",
+   "rank": 425
   }
  ]
 }
