@@ -405,3 +405,47 @@ Square 1:1 game map asset. One single building centered large, seen from a sligh
 ## 家：56
 
 Square 1:1 game map asset. One single building centered large, seen from a slight three-quarter angle, only a small patch of cobblestones at its feet. Match the attached key visual’s Japanese storybook paper and letterpress print aesthetic: bold navy outlines, flat ink colors, subtle paper texture. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, amber #f2b84b. All windows dark and unlit. Background absolutely flat pure chroma green #00ff00 edge to edge, no sky, fog, shadow or texture in background. No green on building. No text, letters, numbers, symbols or people. No other buildings. Subject: 56: Mr. Shirase’s lighthouse keeper cottage, asymmetrical cottage with red hipped roof, small porch and stone chimney.
+
+## 家：15
+新聞の読者が集う閲覧室。階段状の切妻、大きな展示窓、無地の紙形の吊り看板。
+
+## 家：16
+ツムギの郵便局2階の小部屋。朱色の寄棟屋根、ドーマー窓、赤い郵便受け。
+
+## 家：17
+入荷帳を置く港の倉庫事務所。のこぎり屋根、無地の帳簿形看板、木箱。
+
+## 家：18
+荷主のための港の海運代理店。細長いマンサード屋根、無地の楕円看板、荷物。
+
+## 家：19
+税関からの届け先である倉庫。幅広い腰折れ屋根、大きな両開き荷役扉、ロープ。
+
+## 家：20
+波止場のみんなの共同小屋。低い曲線屋根、無地の丸い吊り看板、係船柱。
+
+## 家：21
+波止場の作業員の事務所。片流れ屋根、屋根付き玄関、無地の長方形掲示板。
+
+## 家：22
+ツムギの郵便局2階の小部屋。塔のように細い建物、急勾配の朱屋根、張り出し窓。
+
+## 家：23
+よすが丸のファイルを保管する港の保険資料館。頑丈な煉瓦造り、平らな胸壁、無地の盾形看板。
+
+## 家：24
+航海日誌を置く港の船長の記録小屋。船形の屋根、丸窓、外に錨。
+
+## 家：25
+海運会社の取引先の港の商館。高い双子の切妻、日よけ、無地の菱形看板。
+
+## 家：26
+書類の届け先である町役場。正面の破風と階段がある格式ある石造建築、時計なし。
+
+## 家：27
+来訪者のための町役場入口。時計塔、アーチ状の玄関、文字も針もない時計面。
+
+## 家：28
+記録係の責任者の執務室。細い独立した役場資料館、八角屋根、無地の書類棚形看板。
+
+各画像共通：1:1、建物1棟を中央に大きく少し斜めから、足元だけ小さな石だたみ。添付キービジュアルの紙と活版インクの版画風、太めの紺線、平塗り。紺 #1f2a44、紙 #f3ead8、朱 #c8462f、霧 #9fb3bf、灯り #f2b84b。窓は暗く消灯。背景は影や模様のない純緑 #00ff00 一色、建物には緑を使わない。文字・数字・記号・人物なし。建物の形、屋根、無地の看板、小物を描き分ける。
