@@ -37,7 +37,47 @@
     {"en":"In the {ballroom}, Mr. Tobe called the cut {beneficial}: an {audition} for mayor. No {arc} of light now; my {backpack} waits.","ja":"宴会場で、トベ氏は削減を有益だと言った。町長になるためのオーディションだ。光の弧はもうない。私のリュックが待っている。","ids":["t1104","t1105","t1102","t1101","t1103"]},
     {"en":"My {biography} in the paper: lazy. My {broom} and {cheeseburger} stay in the {chilly} tower; my train is {bound} for the city.","ja":"新聞に載った私の伝記は「怠慢」の一語。ほうきとチーズバーガーは肌寒い塔に残し、私は街行きの列車に乗る。","ids":["t1106","t1108","t1109","t1110","t1107"]},
     {"en":"I worked for a {continental} {consignment} shop, then a {circus}. No {compliment} came; the paper owned the {copyright} to my name.","ja":"大陸の委託販売の店で働き、そのあとサーカスで働いた。褒め言葉は来なかった。私の名前の著作権は、あの新聞が持っていた。","ids":["t1114","t1113","t1111","t1112","t1115"]},
-    {"en":"The {departmental} report followed me to the {countryside} to {devastate} me. On {desperate} nights, I wanted to {demolish} the town office.","ja":"部門の報告書は、私を打ちのめそうと、田園地帯まで追ってきた。必死な夜には、役場を取り壊したいと思った。","ids":["t1118","t1116","t1120","t1119","t1117"]},
+    {"en":"The {departmental} report followed me to the {countryside} to {devastate} me. On {desperate} nights, I wanted to {demolish} the town office.","ja":"部門の報告書は、私を壊滅させようと、田園地帯まで追ってきた。必死な夜には、役場を取り壊したいと思った。","ids":["t1118","t1116","t1120","t1119","t1117"]},
     {"en":"I tore its {diagnostic} {diagram}; its words were hard as a {diamond}. A silver bug came to {disable} each word that {disgusted} me.","ja":"報告書の診断の図表を破いた。その言葉は、ダイヤモンドのように硬かった。銀色の虫がやって来て、私をうんざりさせる言葉を一つずつ無効にしていった。","ids":["t1121","t1122","t1123","t1124","t1125"]}
+   ]},
+  {"shelf":52,"ch":6,"kind":"letter","from":"Mr. Shirase","to":"Yosuga Port (never sent)",
+   "lines":[
+    {"en":"Dear town, the {doorman} says paper will {elevate} this more than sending it {electronically}. I keep this {engagement} over a {donut}.","ja":"町のみなさんへ。ドアマンが言うには、電子的に送るより紙のほうが、この手紙の値打ちを高めるそうだ。ドーナツを前に、この約束を守っている。","ids":["t1127","t1129","t1128","t1130","t1126"]},
+    {"en":"I {foster} silver bugs; they eat words without a {fork}. {Enrollment} in Blank & Co. costs not one {euro}, and no one can {forbid} it.","ja":"今の私は銀色の虫を育んでいる。虫たちはフォークも使わずに言葉を食べる。白紙商会への登録には1ユーロもかからず、だれにも禁じることはできない。","ids":["t1135","t1134","t1131","t1132","t1133"]},
+    {"en":"Start again: I was {hardworking}, not a {hacker} in your system. Twenty years away were no {getaway}; your {gossip} made me {impatient}.","ja":"書き直す。私は勤勉だった。君たちの仕組みに入りこむハッカーではなかった。離れていた20年は、息抜き旅行などではなかった。君たちの噂話が、私をせっかちにした。","ids":["t1139","t1138","t1136","t1137","t1140"]},
+    {"en":"No {indirect} words, no {interpreter}; my reasons are {irrelevant}. A child in {jeans} at the {intersection} asked my name.","ja":"遠回しな言葉も、通訳者もいらない。私の理由など無関係だ。交差点で、ジーンズの子どもに名前を聞かれた。","ids":["t1141","t1142","t1144","t1145","t1143"]},
+    {"en":"Your {journalism} made a {monument} of one word; I was your {lifeguard}. I tear up the {letterhead}, and the {modem} goes dark.","ja":"君たちの報道は、一つの言葉を記念碑にした。私は君たちの監視員だったのに。社用便箋を破り捨てると、モデムの明かりが消える。","ids":["t1146","t1150","t1148","t1147","t1149"]}
+   ]},
+  {"shelf":53,"ch":6,"kind":"form","from":"Mina, Ms. Aoi, Goro, and 210 others","to":"Blank & Co.",
+   "lines":[
+    {"en":"Please {oblige}: this form will {obligate} you to end our contracts. Each small {occurrence} was like a {mosquito}; then the town was not {operational}.","ja":"どうか応じてほしい。この用紙により、あなたには私たちの契約を終える義務が生じる。小さな出来事の一つ一つは、蚊のようなものだった。そのうち、町は運用できなくなった。","ids":["t1153","t1152","t1154","t1151","t1155"]},
+    {"en":"A {paralegal} checked this form in the {outage}. Blank papers {overcrowd} our tables; even {pepper} cans are {partially} blank.","ja":"停電のあいだに、弁護士助手がこの用紙を確かめてくれた。白紙がテーブルの上を過密にしている。こしょうの缶まで、一部は白紙だ。","ids":["t1158","t1156","t1157","t1160","t1159"]},
+    {"en":"We keep our debts and our thanks {permanently}. People who {plow}, {railway} men, and Riku in a {raincoat} signed; send any {query} here.","ja":"私たちは、つけもお礼も恒久的に残す。畑を耕す人も、鉄道の人も、レインコートのリクも署名した。質問はこちらへ。","ids":["t1161","t1162","t1164","t1165","t1163"]},
+    {"en":"A white page was a {relaxation}, but we will not {reconsider}. We will {redesign} our signs by hand, with {repetition} and {rehearsal}.","ja":"白い紙は、くつろぎだった。それでも、考え直しはしない。看板は手で再設計する。何度も繰り返し、リハーサルをして。","ids":["t1169","t1166","t1167","t1170","t1168"]},
+    {"en":"Form {serial} number one; we signed at the {salon}. No {retreat} at the cape; the {satellite} view shows our {scenery} again.","ja":"用紙の通し番号は1番。美容院で署名した。岬での合宿研修はお断りする。衛星からの眺めに、私たちの景色がまた見えている。","ids":["t1175","t1172","t1171","t1173","t1174"]}
+   ]},
+  {"shelf":54,"ch":6,"kind":"notice","from":"Mayor Tobe","to":"The people of Yosuga Port",
+   "lines":[
+    {"en":"Prices started to {soar}; I cut the light for a {stimulus} plan. A {smartphone} {sketch} cannot help me {sew} up what I tore.","ja":"物価が急騰しはじめ、私は刺激策のために灯を削った。スマホのスケッチくらいでは、自分が破ったものを縫い合わせることはできない。","ids":["t1179","t1180","t1178","t1177","t1176"]},
+    {"en":"Once a {stockbroker}, I loved the {thrill} of cuts. I signed it, {thirsty}, on a {tablecloth} in the {tile} lobby.","ja":"株式仲買人だった私は、削減のスリルが好きだった。のどが渇いたまま、タイル張りのロビーで、テーブルクロスの上で報告書に署名した。","ids":["t1181","t1184","t1183","t1182","t1185"]},
+    {"en":"I hear Mr. Shirase moved {toiletry} sets and {tuna} through a {tropical} port. I left him {unemployed}, and now Blank is his {trademark}.","ja":"シラセ氏は熱帯の港で、洗面用品のセットやマグロを扱っていたと聞く。私が彼を失業させた。そして今、「白紙」が彼の商標になっている。","ids":["t1186","t1189","t1188","t1190","t1187"]},
+    {"en":"A broken {wristwatch} will {validate} the story of Captain Nagi. I {abide} by your vote and show {willingness} with {vanilla} bread for all.","ja":"壊れた腕時計が、ナギ船長の話を検証してくれるだろう。私は皆さんの採決を守る。その意欲のしるしに、全員にバニラのパンを用意する。","ids":["t1194","t1191","t1195","t1193","t1192"]},
+    {"en":"Blank cards erased {automotive} records, {allergy} notes, and {bacteria} tests. I am {apprehensive} but will {actively} fix every record.","ja":"白いカードは、自動車関連の記録も、アレルギーのメモも、細菌の検査も消した。懸念はあるが、すべての記録を積極的に正していく。","ids":["t1199","t1197","t1200","t1198","t1196"]}
+   ]},
+  {"shelf":55,"ch":6,"kind":"letter","from":"The crew of the Yosuga Maru","to":"The keeper of the cape light",
+   "lines":[
+    {"en":"Keeper, a {by-law} put out your {bulb}, not your fire. Twenty men {cheer} you; in this {complication}, you {broaden} our idea of duty.","ja":"灯台守さま。細則はあなたの電球を消したが、あなたの火は消せなかった。20人があなたを応援している。この厄介な事態の中で、あなたは私たちの務めの考えを広げてくれた。","ids":["t1203","t1202","t1204","t1205","t1201"]},
+    {"en":"No {decoration} here: in {daytime}, we saw how close we came. Our lives changed {drastically}; we will never {discard} your {considerate} gift.","ja":"飾りは要らない。昼になって、どれほど危なかったかがわかった。私たちの暮らしは劇的に変わった。それでも、あなたの思いやりのある贈りものを捨てはしない。","ids":["t1208","t1207","t1210","t1209","t1206"]},
+    {"en":"No one may {erase} this {factual} note. Our cook, an old {explorer}, lost his {footwear}, but your fire stayed like a {fixture}.","ja":"この事実に基づく手紙は、だれにも消させない。探検家だった年寄りのコックは履物をなくしたが、あなたの火は固定設備のように動かなかった。","ids":["t1211","t1213","t1212","t1215","t1214"]},
+    {"en":"We {hereby} thank you without {hesitation}, from the school {gymnasium}, over {homemade} soup. No story {genre} is big enough for you.","ja":"私たちはここに、ためらいなく感謝します。学校の体育館で、手作りのスープを前にして。あなたにふさわしい物語のジャンルは、どこにもない。","ids":["t1218","t1219","t1217","t1220","t1216"]},
+    {"en":"Our captain had an {inspiration}: your story at each {induction}. We read {incoming} letters {intently} and thank the town for its {hospitality}.","ja":"船長がひらめいた。導入研修のたびに、あなたの話をしよう。私たちは届く手紙を一通ずつじっと読んでいます。この町のもてなしにも感謝を。","ids":["t1224","t1223","t1222","t1225","t1221"]}
+   ]},
+  {"shelf":56,"ch":6,"kind":"letter","from":"Tsumugi","to":"Mr. Shirase",
+   "lines":[
+    {"en":"Dear Mr. Shirase: I hear a {mower} and a {sedan}; Riku wears {sunscreen}. {Nutrition} labels are clear; my letter is no {restatement}.","ja":"シラセさんへ。芝刈り機とセダンの音が聞こえ、リクは日焼け止めをぬっています。栄養の表示もはっきり読めます。この手紙は、だれかの言い直しではありません。","ids":["t1226","t1229","t1230","t1227","t1228"]},
+    {"en":"Riku uses his {workbook}; he is a {contestant} on the school stage. Ms. Aoi has {wellness} books on {cleanliness} in her {bookcase}.","ja":"リクは練習帳を使っていて、学校の舞台の出場者です。アオイさんの本棚には、清潔さについての健康増進の本があります。","ids":["t1232","t1235","t1231","t1234","t1233"]},
+    {"en":"Writing is {inefficient}: one page needs a {liter} of ink. Mina sends {healthful} bread; she says {ethics} matter more than a {recession}.","ja":"書くことは非効率です。1ページに、インクが1リットル要ります。ミナさんが体によいパンを送ってくれました。不況より倫理のほうが大事だそうです。","ids":["t1238","t1239","t1237","t1236","t1240"]},
+    {"en":"The old report is {unreliable}, and you never asked for {acclaim}. Your {chronic} cough may {deteriorate}, so my {timeline} is one day.","ja":"あの古い報告書は当てになりません。あなたは称賛を求めたことなどなかった。慢性的なせきが悪化するかもしれないので、私の工程表は一日だけです。","ids":["t1242","t1243","t1244","t1245","t1241"]},
+    {"en":"I {resemble} you; I will {violate} an {unauthorized} order and bring this to your door. Please {unplug} your {videoconference} and read it.","ja":"私はあなたに似ています。許可のない命令に違反して、これを戸口まで届けます。ビデオ会議の機械のコンセントを抜いて、読んでください。","ids":["t1246","t1248","t1247","t1249","t1250"]}
    ]}
  ]}
