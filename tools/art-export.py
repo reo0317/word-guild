@@ -20,6 +20,7 @@ SPRITES = ['tsumugi-normal', 'tsumugi-joy', 'fuurou-normal', 'fuurou-stamp',
 # 紙魚の体（意味の分類16種）
 SPRITES += [f'body-{c}' for c in ('money', 'work', 'person', 'time', 'place', 'move', 'food', 'doc',
                                     'goods', 'tool', 'nature', 'body', 'mind', 'number', 'action', 'state')]
+HOUSES = [f'house-{i}' for i in range(1, 57)]  # 地図の家（手紙の宛先）。192px の透過 webp
 WIDE = ['post-office'] + [f'ward-{i}' for i in range(1, 7)]
 TALL = ['open-2', 'open-3']
 
@@ -62,6 +63,9 @@ def main():
     for name in SPRITES:
         im = to_square(key_out_green(Image.open(WORK / f'{name}.png')))
         report.append((name, save_webp(im, OUT / f'{name}.webp', 60)))
+    for name in HOUSES:
+        im = to_square(key_out_green(Image.open(WORK / f'{name}.png')), size=192, margin=0.02)
+        report.append((name, save_webp(im, OUT / f'{name}.webp', 20)))
     for name in WIDE:
         im = Image.open(WORK / f'{name}.png').convert('RGB').resize((1200, 800), Image.LANCZOS)
         report.append((name, save_webp(im, OUT / f'{name}.webp', 200)))

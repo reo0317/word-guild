@@ -1,0 +1,25 @@
+{
+ "ch": 4,
+ "ps": [
+  {"shelf": 27, "en": "Each {visitor} may {register} at this {desk}, even without a number card. We {announce} one new {regulation}: owls may wait inside.",
+   "ja": "番号札が無くても、訪問者はどなたでもこの机で登録できます。新しい規則をひとつ発表します。フクロウは中で待ってかまいません。"},
+  {"shelf": 28, "en": "I {request} an hour downstairs. The old {secretary} says the town notes are under the {commercial} papers of every {executive} and {shareholder}.",
+   "ja": "下の階で1時間ください。古くからいる秘書によれば、町の古い記録は、重役と株主の商業書類の山の下にあるそうです。"},
+  {"shelf": 29, "en": "Every {citizen} in each {district} may lose a {debt}. As your {leader}, I hope no one notices the {absence} of one old report.",
+   "ja": "どの地区の市民も、借金をひとつ消せます。指導者として願うのは、古い報告書がひとつ不在であることに、誰も気づかないことです。"},
+  {"shelf": 30, "en": "We {guarantee} to {release} every {mortgage} and every {private} debt. This {agreement} also takes every note of thanks, without exception.",
+   "ja": "住宅ローンも私的な借金も、すべて解き放つことを保証します。なお、この合意は、お礼の言葉もひとつ残らず持っていきます。"},
+  {"shelf": 31, "en": "Note from the clerk: the {committee} will {appoint} no new keeper. This {policy} saves the {budget}, but no {institution} will save the next ship.",
+   "ja": "書記の付記。委員会は新しい灯台守を任命しない。この方針で予算は守られるが、次の船を守ってくれる機関はどこにも無い。"},
+  {"shelf": 32, "en": "I saw his {fire} from the {dark} balcony. He let his hands {burn} in an {emergency} to keep the {damage} small.",
+   "ja": "わたしは暗いバルコニーから、彼の火を見ていた。緊急事態の中、彼は手を燃やしてまで、損害を小さくとどめた。"},
+  {"shelf": 33, "en": "I will not {shout}, {advertise}, or ask a {lawyer}. I asked no {permission} to save them, and I want no {promotion} for it.",
+   "ja": "叫びもしないし、宣伝もしないし、弁護士も頼まない。彼らを救うのに許可は求めなかった。そのことで昇進も望まない。"},
+  {"shelf": 34, "en": "Does the {device} look {familiar}? The lamp in your post {office} is the one he {invented}; no {record} says who gave it to Hatori.",
+   "ja": "その装置に見覚えはありませんか。郵便局の事務所にあるランプは、彼が発明したものです。それをハトリさんに贈ったのが誰か、どの記録にもありません。"},
+  {"shelf": 35, "en": "Before you sign a {contract}, {evaluate} it with us. Our {maintenance} team brings play {equipment} for children; Tsumugi will {dedicate} her day to you.",
+   "ja": "契約に署名する前に、わたしたちと一緒に評価してください。保守の係が子どもの遊ぶ設備を運びます。ツムギはこの日を、皆さんのために捧げます。"},
+  {"shelf": 36, "en": "For my {journal}: after the hearing, Mina brought {food}, and the whole room ate one {meal}. {Remind} me to hold it {weekly}.",
+   "ja": "日誌に書いておく。公聴会のあと、ミナが食べ物を持ってきて、部屋じゅうで同じ食事をした。毎週の集まりにするよう、思い出させてほしい。"}
+ ]
+}

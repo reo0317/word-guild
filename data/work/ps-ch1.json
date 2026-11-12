@@ -1,16 +1,16 @@
 {
  "ch": 1,
  "ps": [
-  {"shelf": 1, "en": "A {secret}: my first {stamp} went on the wrong {envelope}. {Deliver} the {mail} anyway.",
-   "ja": "ひとつ秘密を。わたしの最初の切手は、違う封筒に貼ってしまった。それでも郵便は届けなさい。"},
-  {"shelf": 2, "en": "A {cheap} {label} in chalk is fine. With a {discount} or a {sample}, nothing feels {expensive}.",
-   "ja": "チョークで書いた安い札で十分です。値引きか見本をつければ、高く感じるものはありません。"},
+  {"shelf": 1, "en": "A {secret}: on my first day, I put a {stamp} on an empty {envelope}. Just {deliver} the {mail}.",
+   "ja": "ひとつ秘密を。初日のわたしは、空っぽの封筒に切手を貼った。とにかく郵便を届けなさい。"},
+  {"shelf": 2, "en": "A {cheap} {label} in chalk is enough. With a {discount} or a {sample}, no price feels {expensive}.",
+   "ja": "チョークで書いた安い札で十分です。値引きか見本をつければ、高く感じる値段はありません。"},
   {"shelf": 3, "en": "The {cake} in the {kitchen} is for you, not the {guest}. I put {cheese} in your {bread} too.",
    "ja": "台所のケーキはお客さんのじゃなくて、あなたの分。パンにはチーズもこっそり入れておいたよ。"},
   {"shelf": 4, "en": "I made {breakfast} for Mom today. Do not tell her I put {salt}, not {sugar}, in her {bowl} of {milk}.",
    "ja": "今日はママに朝ごはんを作ったよ。牛乳の鉢に、砂糖じゃなくて塩を入れたことは、ママには内緒にしてね。"},
-  {"shelf": 5, "en": "My son gave the card to a {wave} on the {shore}. Now he wants a {boat}, a {knife}, and the {ocean}.",
-   "ja": "息子は岸で、あのカードを波にくれてやった。今は小舟と包丁と、大洋がほしいそうだ。"},
+  {"shelf": 5, "en": "My son gave a {wave} the card from the {shore}. Now he wants a {boat}, a {knife}, and the {ocean}.",
+   "ja": "息子は岸から、あのカードを波にくれてやった。今は小舟と包丁と、大洋がほしいそうだ。"},
   {"shelf": 6, "en": "I keep a {ticket} home. The last {passenger} leaves the {platform} by {rail}, but my {journey} is here.",
    "ja": "帰りの切符は、まだ取ってある。最後の乗客がホームを離れて線路の向こうへ去っても、わたしの旅はここにある。"}
  ]

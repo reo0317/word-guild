@@ -1,0 +1,25 @@
+{
+ "ch": 3,
+ "ps": [
+  {"shelf": 17, "en": "Under the white {load} in {storage} was one old {package} of wooden boats. We once {exported} them; I will {transport} these to the school.",
+   "ja": "倉庫の白い積み荷の下に、木の船がつまった古い荷物がひとつあった。昔は輸出していたものだ。これは学校へ運んでやる。"},
+  {"shelf": 18, "en": "Good news: I {calculate} only two more days of {delay}. We {import} on {schedule} again, so you need not {hurry}.",
+   "ja": "よい知らせです。計算では、遅れはあと2日だけ。輸入も予定どおりに戻ったので、急がなくてかまいません。"},
+  {"shelf": 19, "en": "I {suspect} more. They {declare} paper at the {border}, but we {examine} it and find no {permit} for the cape.",
+   "ja": "わたしはまだ疑っている。彼らは境で紙だと申告するが、調べてみると、岬へ行く許可証がどこにも無い。"},
+  {"shelf": 20, "en": "We {warn} you again: {wash} {dirty} gloves, be {careful}, and do not {slip}. Good news: a fish boat found her wallet.",
+   "ja": "もう一度注意します。汚れた手袋は洗うこと、慎重に動くこと、滑らないこと。よい知らせ：漁船が彼女の財布を見つけました。"},
+  {"shelf": 21, "en": "Until the books return, each {wage} comes in {cash}. Goro pays the {expense} from his own {salary}; he wants no {payment} back.",
+   "ja": "帳簿が戻るまで、賃金は現金で渡します。その出費はゴローが自分の給料から払っています。返してもらう支払いは要らないそうです。"},
+  {"shelf": 22, "en": "I {regret} that I kept quiet. The keeper was {honest} and {proud} of his {duty}; I {trust} you to say it for us both.",
+   "ja": "黙っていたことを悔やんでいる。灯台守は正直で、自分の務めを誇りにしていた。おれたちふたりの分まで、それを言ってくれると信じている。"},
+  {"shelf": 23, "en": "Note: the keeper is not to blame for this {accident}. Each {witness} saw his {smoke}; without it, this {insurance} report would describe a {disaster}.",
+   "ja": "付記。この事故は灯台守のせいではない。目撃者は皆、彼の煙を見ている。それが無ければ、この保険の報告書は大災害を記すことになっていた。"},
+  {"shelf": 24, "en": "I never told the {crew}: at the {wheel} in that {storm}, I lost hope. One small fire in the {darkness} came to {rescue} us.",
+   "ja": "乗組員には言わなかったが、あの嵐の中、舵輪を握りながら、わたしは望みを失っていた。暗闇の小さな火が、わたしたちを救いに来てくれた。"},
+  {"shelf": 25, "en": "Our {deficit}, not the keeper, made us {withdraw}. I could not {cancel} the plan, so I {resign}; I will not {abandon} the truth.",
+   "ja": "撤退するのは、灯台守のせいではなく、わが社の赤字のためです。計画を取り消せなかったので、わたしは辞めます。本当のことを見捨てはしません。"},
+  {"shelf": 26, "en": "The {mayor} will {greet} us with a {ceremony}. He does not know the {gift} is a {trap} he set himself, twenty years ago.",
+   "ja": "町長は式典でわれわれを出迎えるだろう。この贈り物が、20年前に自分で仕掛けたわなだとも知らずに。"}
+ ]
+}

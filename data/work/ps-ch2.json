@@ -1,0 +1,25 @@
+{
+ "ch": 2,
+ "ps": [
+  {"shelf": 7, "en": "A {reply} came from the {publisher}: our {catalog} goes to the {printer} again, in a new {edition}.",
+   "ja": "出版社から返事が来ました。うちの目録が新しい版になって、もう一度印刷機にかかります。"},
+  {"shelf": 8, "en": "I put a blue {button} in his {coat} {pocket}. With the remaining cloth, I made a {jacket} for Riku and a {skirt} for Mina.",
+   "ja": "あの白い上着のポケットに、青いボタンをひとつ入れておいた。余った布で、リクにはジャケットを、ミナにはスカートを作った。"},
+  {"shelf": 9, "en": "Our {nurse} needs no label. She knows the {medicine} for every {cough}, every {pain}, and every {symptom}.",
+   "ja": "うちの看護師に札は要りません。どのせきにも、どの痛みにも、どの症状にも効く薬を、彼女は知っています。"},
+  {"shelf": 10, "en": "Please do not send back the blue {novel}. It is my own {fiction}: one {chapter}, some {poetry}, and an {essay} I never finished.",
+   "ja": "青い小説だけは返さないでください。あれはわたしの書いた作り話です。章がひとつと、少しの詩歌と、書きかけの随筆。"},
+  {"shelf": 11, "en": "Smaller print: there is no {trick} and no {charm}. We do not {pretend}; the {luxury} of forgetting will {fool} only you.",
+   "ja": "もっと小さな字で。たくらみも魅力もありません。ふりはしません。忘れるというぜいたくがだますのは、あなた自身だけです。"},
+  {"shelf": 12, "en": "One old review came back in ink. 'Good {coffee} and {cream}, a kind {taste}, and a {chat} that is not on the {menu}.'",
+   "ja": "古いレビューがひとつ、インクで戻ってきました。「おいしいコーヒーとクリーム、やさしい味、それに品書きに無いおしゃべり」"},
+  {"shelf": 13, "en": "No bill for the {pink} {rose}. Put this {seed} in the {grass} by your door; its {flower} will be for both shops.",
+   "ja": "桃色のバラのお代は要りません。この種を、戸口の草の中にまいてください。咲いた花は、両方の店のものです。"},
+  {"shelf": 14, "en": "Your {photograph} with Furo is above our counter. To our {delight}, he pecked a {sweet} {chocolate} {cloud}.",
+   "ja": "フウロウと一緒の写真は、店の帳場の上に飾りました。うれしいことに、あの子は甘いチョコの雲をつついていきました。"},
+  {"shelf": 15, "en": "Our {editor} did not sign, and no {reporter} or {journalist} here will. We will {broadcast} the truth in this {column} each week.",
+   "ja": "うちの編集者は契約しなかったし、ここの記者も報道人も、誰も契約しない。毎週このコラムで本当のことを伝えていく。"},
+  {"shelf": 16, "en": "That night, an old {pilot} took me to the {harbor} in his {truck}. After the {rain}, we looked up at the {moon}.",
+   "ja": "あの夜、年老いた水先人がトラックで港まで連れていってくれたの。雨のあと、ふたりで月を見ました。"}
+ ]
+}
