@@ -14,7 +14,7 @@ import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {rollDaily} from './daily.mjs';
 import {onUpdateReady, applyUpdate} from './pwa.mjs';
 import {esc, speak, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, helpButton, icon,
-  ensureLetterCss, letterHtml, lineHtml, lineBody, lampRing, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
+  ensureLetterCss, letterHtml, lineBody, lampRing, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
 import {showStampZoom, ensureCss as ensureAlbumCss, sceneFor, gateCard, newlyOpenedGate, playOptionalCinema, showPaperCard, sceneCardHtml, blankCardHtml} from './album.mjs';
 import {renderMap, dailyBrief} from './map.mjs';
 
@@ -22,7 +22,7 @@ const POS_LABEL = {v: '動', n: '名', a: '形', o: '他'}; // 色の意味を�
 const RESULT_LABEL = {known: '知ってた', correct: '正解', hint: 'ヒント', taught: '教わった', missed: '未回答'};
 const COACH = 'ヒントなしで、日本語に合う英単語をなぞろう';
 const CRUMBLE_MS = 560; // 撃破 → 盤面が崩れる
-const ENTER_MS = 520;   // 次の盤面と紙魚が入る（合わせて 1.2 秒以内）
+const ENTER_MS = 1000;  // 霧から紙魚が現れてから、配達の時計を始める
 const MAX_FRAME_MS = 250; // 長い停止の後に、まとめて攻撃されないための上限
 const MAP_CSS = new URL('../map.css', import.meta.url).href;
 const TAGS_URL = new URL('../data/chara.json', import.meta.url);
@@ -79,7 +79,6 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   let letterSteps = [];     // 結果画面の1通の動き（飛ばすとき残りをまとめて進める）
   let clipSeq = 0;
   let lastClip = null;
-  let eating = false;       // 配達前の動きの最中
   let flushLetter = () => {}; // 結果の1通の動きを飛ばす
   let hiddenFinish = false; // pagehide で終わらせた配達（bfcache から戻ったとき結果へ移す）
   let sessionToken = 0;     // 画面を離れたあと、古いタイマーを無効にする
@@ -107,7 +106,6 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     popEl?.remove();
     popEl = null;
     letterSteps = [];
-    eating = false;
     hiddenFinish = false;
     sessionToken++;
     timers.forEach(clearTimeout);
@@ -274,48 +272,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   // ---------- 配達 ----------
 
-  // 配達前の動き：今の行に紙魚が乗って、語を食べる。霧のかすれになる（1.2秒。押せば飛ばす）。
-  // 新しい語がない・英文がない・動きを減らす設定のときは、何も出さず null。
-  function eatingLine(groups) {
-    if (!story.letters.length || reducedMotion()) return null;
-    // いちばん手前（番号の小さい）新しい語の行。
-    const fresh = groups.flat().filter(word => !progress.words[word.id]).sort((a, b) => a.id.localeCompare(b.id))[0];
-    const letter = fresh ? letterAt(fresh.shelf) : null;
-    const index = letter ? letter.lines.findIndex(line => line.ids.includes(fresh.id)) : -1;
-    if (index < 0) return null;
-    const line = letter.lines[index];
-    // まだ出会っていない語は、いったん読める字で見せてから食べる。
-    const shown = {...line, readable: false, parts: line.parts.map(part =>
-      part.type === 'word' && part.state === 'gone' ? {...part, state: 'ink', preview: true} : part)};
-    return {html: `<div class="paper">${lineHtml(shown, 0, {face: faceOf})}</div>`, ids: line.ids.filter(id => !progress.words[id])};
-  }
-
-  function playEating(eat, proceed) {
-    eating = true;
-    const overlay = document.createElement('div');
-    overlay.className = 'gq-eat';
-    overlay.innerHTML = eat.html;
-    let done = false;
-    const go = () => {
-      if (done) return;
-      done = true;
-      overlay.remove();
-      proceed();
-    };
-    overlay.onclick = go;
-    view.append(overlay);
-    const words = eat.ids.map(id => overlay.querySelector(`.w[data-id="${id}"]`)).filter(Boolean);
-    words.forEach((word, k) => {
-      word.insertAdjacentHTML('beforeend', `<b class="bug">${faceOf(word.dataset.id, 'print')}</b>`);
-      later(k * 170 + 60, () => word.classList.add('bite'));
-      later(k * 170 + 300, () => { word.classList.add('eaten'); word.classList.replace('s-ink', 's-gone'); });
-    });
-    later(words.length * 170 + 420, go);
-  }
-
   // opts: {first: 最初の配達, gate: 区の番号（区の門の配達）}
   function startQuest(opts = {}) {
-    if (eating) return;
     tutorial = opts.first === true;
     onMap = false;
     const today = todayNumber();
@@ -326,19 +284,13 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       ? groupWords(gateWords(words, progress, gate), Math.random)
       : pickSession(words, progress, today, SESSION_SIZE, Math.random);
     const ward = gate ?? buildMap(words, progress, today).here?.ch ?? 1;
-    const begin = () => {
-      eating = false;
-      questWard = ward;
-      stopSession();
-      dealt = new Map();
-      lastClip = null;
-      quest = new Quest(groups, {rand: Math.random, progress, today, save: persist, gate});
-      setScreen('guild-quest');
-      renderBoard();
-    };
-    const eat = eatingLine(groups);
-    if (eat) playEating(eat, begin);
-    else begin();
+    questWard = ward;
+    stopSession();
+    dealt = new Map();
+    lastClip = null;
+    quest = new Quest(groups, {rand: Math.random, progress, today, save: persist, gate});
+    setScreen('guild-quest');
+    renderBoard();
   }
 
   function cellMarkup(letter, index) {
@@ -385,9 +337,9 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         <div class="gq-arena-clip">
           ${artBox(`ward${questWard}`, 'gq-arena-bg')}
           <i class="gq-tint" aria-hidden="true"></i>
-          ${artBox('tsumugi', 'gq-hero')}${artBox('fuurou', 'gq-owl')}
+          ${artBox('fuurou', 'gq-owl')}
         </div>
-        <div class="gq-mons" id="gq-mons">${quest.slots.map(monMarkup).join('')}</div>
+        <div class="gq-mons arriving" id="gq-mons">${quest.slots.map(monMarkup).join('')}</div>
         <ul class="gq-clues" id="gq-clues"></ul>
       </div>
       ${coach}
@@ -420,6 +372,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       quest.next(); // entering → battle
       if (tutorial && quest.index === 0) quest.hint(quest.slots[0].word.id); // 最初の配達：1語目にヒント1
       $('#gq-board')?.classList.remove('entering');
+      $('#gq-mons')?.classList.remove('arriving');
       paintAll();
       startClock();
     });
@@ -739,18 +692,17 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     resolveMon(quest.slots.find(slot => slot.word.id === result.word.id));
     showClip(result.word.id);
     if (result.cleared && clipParts(story, result.word.id, 17)) lastClip = result.word.id;
-    react(result.cleared);
+    react();
     paintAll();
     if (result.cleared) defeat();
   }
 
-  // 正解のたびに、フウロウが判を押す。盤面を取り切ったらツムギが喜ぶ。
-  function react(cleared) {
+  // 正解のたびに、フウロウが判を押す。
+  function react() {
     const owl = $('.gq-owl');
     swapArt(owl, 'fuurouStamp');
     pulse(owl, 'stamped');
-    if (cleared) swapArt($('.gq-hero'), 'tsumugiJoy');
-    later(450, () => { swapArt(owl, 'fuurou'); if (!cleared) swapArt($('.gq-hero'), 'tsumugi'); });
+    later(450, () => { swapArt(owl, 'fuurou'); });
   }
 
   function defeat() {

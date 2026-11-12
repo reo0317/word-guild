@@ -77,7 +77,6 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-arena-clip{position:absolute;inset:0;overflow:hidden;border-radius:8px}
 .gq-arena-bg{position:absolute;inset:0;border:0;border-radius:0}.gq-arena-bg>img{object-position:center 62%}
 .gq-tint{position:absolute;inset:0;pointer-events:none}
-.gq-hero{position:absolute;left:2px;bottom:-2px;width:calc(var(--enemy-size)*.62);height:calc(var(--enemy-size)*.62)}
 .gq-owl{position:absolute;left:calc(var(--enemy-size)*.5);bottom:-2px;width:calc(var(--enemy-size)*.3);height:calc(var(--enemy-size)*.3)}
 /* 1語＝1体。3体が横に並ぶ。大物は横2体ぶん。 */
 .gq-mon{position:relative;flex:0 0 33.3%;height:100%;display:flex;justify-content:center;align-items:flex-end}.gq-mon.big{flex-basis:66.6%}
@@ -88,14 +87,19 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-mon.hinted::after{content:"";position:absolute;right:calc(50% - var(--enemy-size)*.5);top:10%;width:9px;height:13px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:#6fb3d8;border:1.5px solid var(--ink)}
 .gq-mon.angry::before{content:"!";position:absolute;right:calc(50% - var(--enemy-size)*.55);top:2px;width:18px;height:18px;border-radius:50%;background:var(--seal);color:var(--paper);font:900 13px/18px Arial,sans-serif;text-align:center;border:1.5px solid var(--ink);z-index:2}
 .gq-mon-seal{position:absolute;left:50%;top:50%;width:calc(var(--enemy-size)*.62);height:calc(var(--enemy-size)*.62);margin:calc(var(--enemy-size)*-.31) 0 0 calc(var(--enemy-size)*-.31);border-radius:50%;border:4px solid var(--seal);box-shadow:inset 0 0 0 3px var(--paper),inset 0 0 0 5px var(--seal);opacity:0;pointer-events:none;z-index:4}
-.gq-mon-stamp{position:absolute;left:50%;bottom:2px;width:calc(var(--enemy-size)*.74);margin-left:calc(var(--enemy-size)*-.37);z-index:3;pointer-events:none}
-.gq-mon.big .gq-mon-stamp{width:calc(var(--enemy-size)*1.5);margin-left:calc(var(--enemy-size)*-.75)}
+.gq-mon-stamp{position:absolute;left:50%;bottom:2px;width:min(82%,calc(100cqh - 26px),140px);translate:-50% 0;transform-origin:50% 100%;z-index:3;pointer-events:none}
+.gq-mon.big .gq-mon-stamp{width:min(82%,calc(200cqh - 52px),220px)}
 .gq-mon-stamp .stamp{width:100%}
+.gq-mons.arriving .gq-mon-body{animation:gq-emerge 1s ease-out both}
+.gq-mons.arriving::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 30% 70%,#edf2f3,transparent 75%),radial-gradient(ellipse at 80% 40%,#d7e2e7,transparent 75%);animation:gq-fog-clear 1s ease-out both}
+@keyframes gq-emerge{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
+@keyframes gq-fog-clear{from{opacity:1}to{opacity:0}}
 .gq-mon-gone{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);padding:1px 6px;border:1.5px dashed var(--ink);border-radius:8px;background:var(--paper);font-size:10px;font-weight:800;white-space:nowrap;opacity:0}
 .gq-mon.solved .gq-mon-body{animation:gq-melt .35s .12s ease-in forwards}
 .gq-mon.solved .gq-mon-val,.gq-mon.solved::after,.gq-mon.solved::before{display:none}
 .gq-mon.stamped .gq-mon-seal{animation:gq-seal-hit .5s ease-out both}
-.gq-mon.stamped .gq-mon-stamp{animation:gq-slam .45s .2s cubic-bezier(.2,1.5,.4,1) both}
+.gq-mon.stamped .gq-mon-stamp{animation:gq-print .45s .2s ease-out both}
+@keyframes gq-print{from{opacity:0;transform:translateY(-6px) scale(.8)}to{opacity:1;transform:none}}
 .gq-mon.fled .gq-mon-body{animation:gq-flee .6s ease-in forwards}
 .gq-mon.fled .gq-mon-gone{animation:fade .01s .5s reverse forwards}
 .gq-mon.lunge .gq-mon-body{animation:gq-lunge .4s}
@@ -298,14 +302,14 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 /* 横の余白も紙魚に渡し、3体を大きく見せる。 */
 #view.gq-quest{--enemy-size:clamp(110px,24dvh,200px)}
 #view.gq-quest .gq-arena{flex:1 1 0;min-height:120px;height:auto;container-type:size}
-#view.gq-quest .gq-mons{bottom:calc(var(--plate-h) - 10px);padding-top:8px}
-#view.gq-quest .gq-mon-body{flex-shrink:0;width:min(var(--enemy-size),140%,calc(100cqh - var(--plate-h) - 6px))}
-#view.gq-quest .gq-mon.big .gq-mon-body{width:min(var(--enemy-size),90%,calc(100cqh - var(--plate-h) - 6px));transform:none}
+#view.gq-quest .gq-mons{bottom:calc(var(--plate-h) + 4px);padding-top:8px;container-type:size}
+#view.gq-quest .gq-mon-body{flex-shrink:0;width:min(var(--enemy-size),140%,calc(100cqh - 6px))}
+#view.gq-quest .gq-mon.big .gq-mon-body{width:min(var(--enemy-size),90%,calc(100cqh - 6px));transform:none}
 #view.gq-quest .gq-clues{z-index:1}
 #view.gq-quest .gq-boardrow{flex:0 0 auto;width:100%;aspect-ratio:7/6;min-height:252px}
 #view.gq-quest .gq-board{width:100%}
-.gq-mons{left:34px}.gq-clues{left:34px}
-.gq-hero{width:46px;height:58px}.gq-owl{left:20px;width:26px;height:30px}
+.gq-mons{left:0}.gq-clues{left:0}
+.gq-owl{left:20px;width:26px;height:30px}
 .gq-boardrow{min-height:252px}
 .gq-board{min-width:294px}
 @media(max-height:700px){
@@ -321,3 +325,5 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 /* 月の円は SVG の背面。夜空とインクの輪郭をともに残す。 */
 .stamp.stamp:has(.odd) .pic::before{content:"";position:absolute;width:82%;aspect-ratio:1;left:9%;top:9%;border-radius:50%;background:radial-gradient(circle at 36% 30%,#fff9e8,#efda9b 65%,#b9914b);border:1px solid #fff3ce;box-shadow:0 0 10px #f3db9a55}
 .stamp.stamp.big:has(.odd) .pic::before{width:41%;left:29.5%}
+
+@media(prefers-reduced-motion:reduce){.gq-mons.arriving .gq-mon-body,.gq-mons.arriving::after{animation:none}.gq-mons.arriving::after{display:none}}

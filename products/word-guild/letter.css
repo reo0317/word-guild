@@ -75,15 +75,6 @@
 .gq-env.s5 .sc-win{fill:var(--lamp)}
 .gq-env.s5 .sc-glow{opacity:1}
 
-/* 配達前：紙魚が今の行の語を食べる */
-.gq-eat{position:absolute;inset:0;z-index:30;display:grid;place-items:center;padding:14px;background:#1f2a44f2;border-radius:inherit;cursor:pointer}
-.gq-eat .paper{width:100%;max-width:420px}
-.gq-eat .w .t{transition:color .35s,opacity .35s}
-.gq-eat .w.s-ink{border-bottom:0}
-.gq-eat .w .bug{right:auto;left:50%;top:-.55em;width:1.5em;height:1.5em;margin-left:-.75em;opacity:0;transform:translateY(-1.2em) scale(1.5)}
-.gq-eat .w.bite .bug{opacity:1;transform:none}
-.gq-eat .w.eaten .bug{opacity:0;transform:translateY(.6em) scale(.5)}
-
 @media(max-height:700px){
  .paper .ln{line-height:1.8}
 }

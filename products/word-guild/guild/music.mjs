@@ -8,6 +8,9 @@ export function createMusic(options = {}) {
   const fetchAudio = options.fetch === undefined ? globalThis.fetch : options.fetch;
   let ctx, master, musicGain, effectsGain;
   let enabled = true, requested = null, revision = 0, current = null;
+  const doc = options.document ?? globalThis.document;
+  const win = options.window ?? globalThis.window;
+  let unlocked = false;
   const cache = new Map();
   const voices = new Set();
 
@@ -25,6 +28,13 @@ export function createMusic(options = {}) {
       musicGain.connect(master);
       effectsGain.connect(master);
       master.connect(ctx.destination);
+      ctx.onstatechange = () => {
+        if (ctx.state === 'suspended' || ctx.state === 'interrupted') {
+          ++revision;
+          halt();
+          resume();
+        } else if (ctx.state === 'running' && enabled && requested) void play(requested);
+      };
       return true;
     } catch { ctx = null; return false; }
   }
@@ -71,12 +81,12 @@ export function createMusic(options = {}) {
     if (!Object.hasOwn(LOOP_END, scene)) return;
     const same = requested === scene;
     requested = scene;
-    if (!enabled || !initialize()) return;
+    if (!enabled || !ctx) return;
     const ticket = ++revision;
     if (same && current?.requested === scene) return;
     try {
       const loaded = await load(scene);
-      if (!loaded || ticket !== revision || !enabled) return;
+      if (!loaded || ticket !== revision || !enabled || (ctx.state && ctx.state !== 'running')) return;
       if (current?.scene === loaded.scene && !current.retiring) {
         current.requested = scene;
         return;
@@ -95,6 +105,7 @@ export function createMusic(options = {}) {
       const voice = {source, gain, scene: loaded.scene, requested: scene, started: now};
       source.onended = () => {
         voices.delete(voice);
+        if (current === voice) current = null;
         source.disconnect();
         gain.disconnect();
       };
@@ -110,12 +121,34 @@ export function createMusic(options = {}) {
     enabled = Boolean(on);
     if (master) master.gain.value = enabled ? 1 : 0;
     if (!enabled) stop();
-    else if (requested) void play(requested);
+    else { if (ctx) resume(); if (requested) void play(requested); }
   }
   function resume() {
-    if (!initialize()) return;
-    try { Promise.resolve(ctx.resume()).catch(() => {}); } catch { /* Safari may refuse. */ }
+    if (!enabled || !initialize()) return;
+    // Call resume and start the silent buffer in the gesture's synchronous stack.
+    try {
+      const resumed = ctx.resume();
+      if (!unlocked) {
+        const source = ctx.createBufferSource();
+        source.buffer = ctx.createBuffer(1, 1, ctx.sampleRate);
+        source.connect(master);
+        source.onended = () => source.disconnect();
+        source.start(0);
+        unlocked = true;
+      }
+      const ticket = revision;
+      Promise.resolve(resumed).then(() => {
+        if (ticket === revision && enabled && requested && (!ctx.state || ctx.state === 'running')) void play(requested);
+      }).catch(() => {});
+    } catch { /* Retry on the next gesture if Safari refuses. */ }
   }
+
+  for (const event of ['pointerdown', 'touchend']) doc?.addEventListener(event, resume, {capture: true});
+  const recover = () => {
+    if (ctx && (ctx.state === 'suspended' || ctx.state === 'interrupted')) resume();
+  };
+  doc?.addEventListener('visibilitychange', () => { if (!doc.hidden) recover(); });
+  for (const event of ['pageshow', 'focus']) win?.addEventListener(event, recover);
 
   function sfx(name) {
     if (!enabled || !ctx || !['stamp', 'attack', 'crumble', 'lamp', 'wrong'].includes(name)) return;

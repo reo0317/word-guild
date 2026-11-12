@@ -14,13 +14,6 @@ music.setEnabled(soundOn);
 
 const guild = mountGuild({view, dev: params.get('dev') === '1', music, exit: title, setScreen() {}});
 
-// 裏から戻った後の最初のタップで、止まった音を再開する。
-let wasHidden = false;
-document.addEventListener('visibilitychange', () => { if (document.hidden) wasHidden = true; });
-document.addEventListener('pointerdown', () => {
-  if (wasHidden) { wasHidden = false; music.resume(); }
-}, {capture: true});
-
 // 開始ボタンの処理の中で音を鳴らし始める（Safari の自動再生の制限）。
 function unlockSound() {
   music.setEnabled(soundOn);
@@ -45,6 +38,7 @@ function title() {
     soundOn = !soundOn;
     try { localStorage.setItem(SOUND_KEY, soundOn ? 'on' : 'off'); } catch { /* 同上 */ }
     music.setEnabled(soundOn);
+    if (soundOn) music.resume();
     if (!soundOn) music.stop();
     paintSound();
   };
