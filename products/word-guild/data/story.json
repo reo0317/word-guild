@@ -1,111 +1,1029 @@
-{"v":1,
- "letters":[
-  {"shelf":1,"ch":1,"kind":"memo","from":"Chief Hatori","to":"Tsumugi",
-   "lines":[
-    {"en":"Some {say} the fog is a gift, but I {think} you {know} the truth. It is {time} to {see} it.",
-     "ja":"霧は贈りものだ、と言う人もいる。だが君は、本当のことを知っていると思う。それを自分の目で見るときが来た。",
-     "ids":["b0001","b0003","b0002","b0004","b0005"]},
-    {"en":"Every {year}, {good} {people} {come} to {work} here. Few of them stay through the winter.",
-     "ja":"毎年、いい人たちがここへ働きに来る。冬を越して残る人は少ない。",
-     "ids":["b0008","b0006","b0007","b0009","b0010"]},
-    {"en":"{Use} the {new} bag and {look} at each name. Some will not {want} their words, but {give} them anyway.",
-     "ja":"新しいかばんを使い、宛名をよく見ること。言葉を返されたくない人もいる。それでも届けなさい。",
-     "ids":["b0011","b0015","b0012","b0013","b0014"]},
-    {"en":"In a {day}, you will {find} a {way} to do it. Furo and all you {need} are at the {back}.",
-     "ja":"一日もすれば、やり方は見つかる。フウロウと必要なものは全部、奥にある。",
-     "ids":["b0018","b0017","b0016","b0019","b0020"]},
-    {"en":"If a {child} asks what the fog {means}, {tell} the truth. {Last} rule: never {call} me about the bottom drawer.",
-     "ja":"子どもに霧のわけを聞かれたら、本当のことを話しなさい。最後の決まり：一番下の引き出しのことで、私に電話はしないこと。",
-     "ids":["b0023","b0021","b0024","b0022","b0025"]}
-   ]},
-  {"shelf":2,"ch":1,"kind":"sign","from":"The Hill Market","to":"All sellers",
-   "lines":[
-    {"en":"Fog brings a {change} to market {life}. The {man} at the gate has chalk, so {show} prices at your {place}.",
-     "ja":"霧のせいで、朝市の暮らしが変わる。門の係の人がチョークを持っているので、自分の売り場で値段を示すこと。",
-     "ids":["b0029","b0027","b0028","b0026","b0030"]},
-    {"en":"{Write} prices in the {same} clear style. It may {feel} slow, but {long} lines move faster, and that is {great}.",
-     "ja":"値段は、みな同じはっきりした書き方で書くこと。手間に感じても、長い列が早く進む。それが何よりだ。",
-     "ids":["b0033","b0034","b0032","b0031","b0035"]},
-    {"en":"One more {point}: when you {leave}, clear every {part} of the path. If a stall {number} fades, {try} chalk.",
-     "ja":"もう一点。帰るときは、通路をすみずみまで片づけること。店の番号が薄れたら、チョークを使ってみること。",
-     "ids":["b0040","b0037","b0039","b0038","b0036"]},
-    {"en":"We {meet} at five to {talk}, and the market {starts} at six. The post office will {help} if you {ask}.",
-     "ja":"私たちは5時に集まって話し合い、市は6時に始まる。困ったら郵便局に頼めば、手を貸してくれる。",
-     "ids":["b0043","b0045","b0044","b0041","b0042"]},
-    {"en":"{Late} sellers use the area by the {school}. {Put} your {old} tags in the gate box before they {become} blank.",
-     "ja":"遅れて来た人は、学校のそばの場所を使うこと。古い値札は、白紙になる前に門の箱へ入れること。",
-     "ids":["b0050","b0049","b0046","b0048","b0047"]}
-   ]},
-  {"shelf":3,"ch":1,"kind":"memo","from":"Mina","to":"Riku",
-   "lines":[
-    {"en":"A guest from the {end} of the {world} took the {highest} hotel room. He will still {live} there {next} year.",
-     "ja":"世界の果てから来たお客が、ホテルのいちばん上の部屋を取った。来年もまだ、そこに住むつもりらしい。",
-     "ids":["b0053","b0055","b0051","b0054","b0052"]},
-    {"en":"The hotel {report} shows no {home} and no {house} number for him. No {playing} near his door this {week}.",
-     "ja":"ホテルの報告書には、あの人の自宅も番地も書かれていない。今週は、あの人の部屋の前で遊ばないこと。",
-     "ids":["b0060","b0058","b0059","b0057","b0056"]},
-    {"en":"A {woman} at the hotel {booked} deliveries for his {group}. Just in {case}, I'll bake for a {family} of ten.",
-     "ja":"ホテルの女の人が、あの人の一行のために配達を予約した。念のため、十人家族ぶんを焼いておこう。",
-     "ids":["b0063","b0064","b0061","b0062","b0065"]},
-    {"en":"I {hear} the fog ate the debt {system}, with our {big} debts. Can I {keep} this {kind} of gift?",
-     "ja":"霧がつけの仕組みを、うちの大きな借金ごと食べたそうだ。こういう贈りものを、取っておいていいのだろうか。",
-     "ids":["b0068","b0069","b0070","b0067","b0066"]},
-    {"en":"{Set} the clock and {begin} to {study}. If a {small} word goes blank, {follow} what your teacher says.",
-     "ja":"時計を合わせて、勉強を始めなさい。小さな単語ひとつでも白くなったら、先生の言うとおりにすること。",
-     "ids":["b0071","b0075","b0073","b0072","b0074"]}
-   ]},
-  {"shelf":4,"ch":1,"kind":"letter","from":"Riku","to":"Grandma, across the bay",
-   "lines":[
-    {"en":"Mom {runs} the bakery, and I {bring} the {early} bread. Bag in {hand}, I {turn} toward the hotel.",
-     "ja":"ママがパン屋をやっているので、ぼくが朝いちばんのパンを運びます。袋を手に、ホテルのほうへ曲がります。",
-     "ids":["b0076","b0078","b0079","b0080","b0077"]},
-    {"en":"The fog {moved} into our {area}. In {fact}, my book is in a bad {state}, and {money} can't fix it.",
-     "ja":"霧がぼくたちの地区に移ってきました。じつは、ぼくの教科書がひどいことになっていて、お金では直せません。",
-     "ids":["b0082","b0085","b0084","b0081","b0083"]},
-    {"en":"Last {month}, my {friend} could not {read} his own {name}. A {large} group of letters left our books like birds.",
-     "ja":"先月、友だちは自分の名前が読めませんでした。たくさんの字が、鳥みたいに教科書から出ていったんです。",
-     "ids":["b0089","b0088","b0087","b0086","b0090"]},
-    {"en":"When I {open} my book, every {word} is gone. The {market} has another {issue}: no {order} shows who bought it.",
-     "ja":"教科書を開くと、単語が全部消えています。朝市にも別の問題があって、どの注文にも、だれが買ったのかが書いてありません。",
-     "ids":["b0091","b0093","b0095","b0094","b0092"]},
-    {"en":"The market will {hold} a party and {build} a stage. I {love} my {job}, but who {pays} for the bread?",
-     "ja":"朝市でパーティーをひらき、舞台を建てるそうです。ぼくは自分の仕事が大好きだけど、パンのお金はだれがはらうんだろう。",
-     "ids":["b0098","b0097","b0099","b0100","b0096"]}
-   ]},
-  {"shelf":5,"ch":1,"kind":"memo","from":"The fish stall","to":"Tsumugi",
-   "lines":[
-    {"en":"Our chalk {plan} worked until this {happened}. A man {offered} my {young} son a white card, with a strange {result}.",
-     "ja":"チョークで値段を書く案は、うまくいっていた。あることが起きるまでは。ある男が幼い息子に白いカードを差し出し、妙なことになった。",
-     "ids":["b0101","b0103","b0104","b0105","b0102"]},
-    {"en":"He did not {buy}, but {thanked} me as I {closed}. He asked me to {lead} him to the {far} cape.",
-     "ja":"男は何も買わなかったのに、店を閉めるとき私に礼を言った。そして、遠くの岬まで案内してくれと頼んだ。",
-     "ids":["b0108","b0109","b0106","b0107","b0110"]},
-    {"en":"{Today} was hard to {face}: my son looked at the card for an {hour}. I {hope} you have an {idea}.",
-     "ja":"今日はつらかった。息子がそのカードを1時間も見つめていたのだ。君に何か心当たりがあるといいのだが。",
-     "ids":["b0111","b0113","b0112","b0114","b0115"]},
-    {"en":"The man said, 'No {cost}, no {form} to sign, no {reason} to {spend} money. Ask for the highest {room}.'",
-     "ja":"男は言った。「お代はいらない。署名する用紙もない。金を使うわけもない。いちばん上の部屋を訪ねなさい」",
-     "ids":["b0116","b0119","b0118","b0120","b0117"]},
-    {"en":"He left in a white {car}, and the fog came up to {head} {level}. Please {learn} more about this {person}.",
-     "ja":"男は白い車で去り、霧が頭の高さまで上がってきた。この人のことを、もっとよく知ってほしい。",
-     "ids":["b0122","b0121","b0124","b0123","b0125"]}
-   ]},
-  {"shelf":6,"ch":1,"kind":"diary","from":"Tsumugi","to":"My diary",
-   "lines":[
-    {"en":"Day seven: not {bad} for a new {member} from the {city}. I am {able} to find any door at {night}.",
-     "ja":"7日目。街から来た新人の局員にしては、悪くない。夜でも、どの戸口でも見つけられるようになった。",
-     "ids":["b0127","b0126","b0128","b0130","b0129"]},
-    {"en":"People of every {age} were in {line}. I am {sure} I can finish my {term} with Furo at my {side}.",
-     "ja":"いろんな年齢の人が列に並んだ。フウロウがそばにいれば、任期をきっと務めあげられる。",
-     "ids":["b0135","b0131","b0133","b0134","b0132"]},
-    {"en":"The dark lighthouse comes into {view} from the {train}. In {public} places, people {speak} of it in {low} voices.",
-     "ja":"電車から、暗いままの灯台が見えてくる。人の集まる場所では、みんな声をひそめてその話をする。",
-     "ids":["b0140","b0139","b0138","b0137","b0136"]},
-    {"en":"Blank & Co. on the stone street pays for the {local} {party}. {Parents} find a zero {price} {hard} to refuse.",
-     "ja":"石だたみ通りの白紙商会が、地元のパーティーの費用を払うという。値段がゼロでは、親たちも断りにくい。",
-     "ids":["b0145","b0144","b0142","b0141","b0143"]},
-    {"en":"Furo {stands} in the drawer and pecks a letter. If it fades at this {rate}, we {lose} the {whole} {story}.",
-     "ja":"フウロウが引き出しの中に立ち、一通の手紙をつついている。この速さで字が薄れていけば、話がまるごと失われてしまう。",
-     "ids":["b0148","b0150","b0146","b0149","b0147"]}
-   ]}
- ]}
+{
+ "v": 1,
+ "letters": [
+  {
+   "shelf": 1,
+   "ch": 1,
+   "kind": "memo",
+   "from": "Chief Hatori",
+   "to": "Tsumugi",
+   "lines": [
+    {
+     "en": "Some {say} the fog is a gift, but I {think} you {know} the truth. It is {time} to {see} it.",
+     "ja": "霧は贈りものだ、と言う人もいる。だが君は、本当のことを知っていると思う。それを自分の目で見るときが来た。",
+     "ids": [
+      "b0001",
+      "b0003",
+      "b0002",
+      "b0004",
+      "b0005"
+     ]
+    },
+    {
+     "en": "Every {year}, {good} {people} {come} to {work} here. Few of them stay through the winter.",
+     "ja": "毎年、いい人たちがここへ働きに来る。冬を越して残る人は少ない。",
+     "ids": [
+      "b0008",
+      "b0006",
+      "b0007",
+      "b0009",
+      "b0010"
+     ]
+    },
+    {
+     "en": "{Use} the {new} bag and {look} at each name. Some will not {want} their words, but {give} them anyway.",
+     "ja": "新しいかばんを使い、宛名をよく見ること。言葉を返されたくない人もいる。それでも届けなさい。",
+     "ids": [
+      "b0011",
+      "b0015",
+      "b0012",
+      "b0013",
+      "b0014"
+     ]
+    },
+    {
+     "en": "In a {day}, you will {find} a {way} to do it. Furo and all you {need} are at the {back}.",
+     "ja": "一日もすれば、やり方は見つかる。フウロウと必要なものは全部、奥にある。",
+     "ids": [
+      "b0018",
+      "b0017",
+      "b0016",
+      "b0019",
+      "b0020"
+     ]
+    },
+    {
+     "en": "If a {child} asks what the fog {means}, {tell} the truth. {Last} rule: never {call} me about the bottom drawer.",
+     "ja": "子どもに霧のわけを聞かれたら、本当のことを話しなさい。最後の決まり：一番下の引き出しのことで、私に電話はしないこと。",
+     "ids": [
+      "b0023",
+      "b0021",
+      "b0024",
+      "b0022",
+      "b0025"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 2,
+   "ch": 1,
+   "kind": "sign",
+   "from": "The Hill Market",
+   "to": "All sellers",
+   "lines": [
+    {
+     "en": "Fog brings a {change} to market {life}. The {man} at the gate has chalk, so {show} prices at your {place}.",
+     "ja": "霧のせいで、朝市の暮らしが変わる。門の係の人がチョークを持っているので、自分の売り場で値段を示すこと。",
+     "ids": [
+      "b0029",
+      "b0027",
+      "b0028",
+      "b0026",
+      "b0030"
+     ]
+    },
+    {
+     "en": "{Write} prices in the {same} clear style. It may {feel} slow, but {long} lines move faster, and that is {great}.",
+     "ja": "値段は、みな同じはっきりした書き方で書くこと。手間に感じても、長い列が早く進む。それが何よりだ。",
+     "ids": [
+      "b0033",
+      "b0034",
+      "b0032",
+      "b0031",
+      "b0035"
+     ]
+    },
+    {
+     "en": "One more {point}: when you {leave}, clear every {part} of the path. If a stall {number} fades, {try} chalk.",
+     "ja": "もう一点。帰るときは、通路をすみずみまで片づけること。店の番号が薄れたら、チョークを使ってみること。",
+     "ids": [
+      "b0040",
+      "b0037",
+      "b0039",
+      "b0038",
+      "b0036"
+     ]
+    },
+    {
+     "en": "We {meet} at five to {talk}, and the market {starts} at six. The post office will {help} if you {ask}.",
+     "ja": "私たちは5時に集まって話し合い、市は6時に始まる。困ったら郵便局に頼めば、手を貸してくれる。",
+     "ids": [
+      "b0043",
+      "b0045",
+      "b0044",
+      "b0041",
+      "b0042"
+     ]
+    },
+    {
+     "en": "{Late} sellers use the area by the {school}. {Put} your {old} tags in the gate box before they {become} blank.",
+     "ja": "遅れて来た人は、学校のそばの場所を使うこと。古い値札は、白紙になる前に門の箱へ入れること。",
+     "ids": [
+      "b0050",
+      "b0049",
+      "b0046",
+      "b0048",
+      "b0047"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 3,
+   "ch": 1,
+   "kind": "memo",
+   "from": "Mina",
+   "to": "Riku",
+   "lines": [
+    {
+     "en": "A guest from the {end} of the {world} took the {highest} hotel room. He will still {live} there {next} year.",
+     "ja": "世界の果てから来たお客が、ホテルのいちばん上の部屋を取った。来年もまだ、そこに住むつもりらしい。",
+     "ids": [
+      "b0053",
+      "b0055",
+      "b0051",
+      "b0054",
+      "b0052"
+     ]
+    },
+    {
+     "en": "The hotel {report} shows no {home} and no {house} number for him. No {playing} near his door this {week}.",
+     "ja": "ホテルの報告書には、あの人の自宅も番地も書かれていない。今週は、あの人の部屋の前で遊ばないこと。",
+     "ids": [
+      "b0060",
+      "b0058",
+      "b0059",
+      "b0057",
+      "b0056"
+     ]
+    },
+    {
+     "en": "A {woman} at the hotel {booked} deliveries for his {group}. Just in {case}, I'll bake for a {family} of ten.",
+     "ja": "ホテルの女の人が、あの人の一行のために配達を予約した。念のため、十人家族ぶんを焼いておこう。",
+     "ids": [
+      "b0063",
+      "b0064",
+      "b0061",
+      "b0062",
+      "b0065"
+     ]
+    },
+    {
+     "en": "I {hear} the fog ate the debt {system}, with our {big} debts. Can I {keep} this {kind} of gift?",
+     "ja": "霧がつけの仕組みを、うちの大きな借金ごと食べたそうだ。こういう贈りものを、取っておいていいのだろうか。",
+     "ids": [
+      "b0068",
+      "b0069",
+      "b0070",
+      "b0067",
+      "b0066"
+     ]
+    },
+    {
+     "en": "{Set} the clock and {begin} to {study}. If a {small} word goes blank, {follow} what your teacher says.",
+     "ja": "時計を合わせて、勉強を始めなさい。小さな単語ひとつでも白くなったら、先生の言うとおりにすること。",
+     "ids": [
+      "b0071",
+      "b0075",
+      "b0073",
+      "b0072",
+      "b0074"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 4,
+   "ch": 1,
+   "kind": "letter",
+   "from": "Riku",
+   "to": "Grandma, across the bay",
+   "lines": [
+    {
+     "en": "Mom {runs} the bakery, and I {bring} the {early} bread. Bag in {hand}, I {turn} toward the hotel.",
+     "ja": "ママがパン屋をやっているので、ぼくが朝いちばんのパンを運びます。袋を手に、ホテルのほうへ曲がります。",
+     "ids": [
+      "b0076",
+      "b0078",
+      "b0079",
+      "b0080",
+      "b0077"
+     ]
+    },
+    {
+     "en": "The fog {moved} into our {area}. In {fact}, my book is in a bad {state}, and {money} can't fix it.",
+     "ja": "霧がぼくたちの地区に移ってきました。じつは、ぼくの教科書がひどいことになっていて、お金では直せません。",
+     "ids": [
+      "b0082",
+      "b0085",
+      "b0084",
+      "b0081",
+      "b0083"
+     ]
+    },
+    {
+     "en": "Last {month}, my {friend} could not {read} his own {name}. A {large} group of letters left our books like birds.",
+     "ja": "先月、友だちは自分の名前が読めませんでした。たくさんの字が、鳥みたいに教科書から出ていったんです。",
+     "ids": [
+      "b0089",
+      "b0088",
+      "b0087",
+      "b0086",
+      "b0090"
+     ]
+    },
+    {
+     "en": "When I {open} my book, every {word} is gone. The {market} has another {issue}: no {order} shows who bought it.",
+     "ja": "教科書を開くと、単語が全部消えています。朝市にも別の問題があって、どの注文にも、だれが買ったのかが書いてありません。",
+     "ids": [
+      "b0091",
+      "b0093",
+      "b0095",
+      "b0094",
+      "b0092"
+     ]
+    },
+    {
+     "en": "The market will {hold} a party and {build} a stage. I {love} my {job}, but who {pays} for the bread?",
+     "ja": "朝市でパーティーをひらき、舞台を建てるそうです。ぼくは自分の仕事が大好きだけど、パンのお金はだれがはらうんだろう。",
+     "ids": [
+      "b0098",
+      "b0097",
+      "b0099",
+      "b0100",
+      "b0096"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 5,
+   "ch": 1,
+   "kind": "memo",
+   "from": "The fish stall",
+   "to": "Tsumugi",
+   "lines": [
+    {
+     "en": "Our chalk {plan} worked until this {happened}. A man {offered} my {young} son a white card, with a strange {result}.",
+     "ja": "チョークで値段を書く案は、うまくいっていた。あることが起きるまでは。ある男が幼い息子に白いカードを差し出し、妙なことになった。",
+     "ids": [
+      "b0101",
+      "b0103",
+      "b0104",
+      "b0105",
+      "b0102"
+     ]
+    },
+    {
+     "en": "He did not {buy}, but {thanked} me as I {closed}. He asked me to {lead} him to the {far} cape.",
+     "ja": "男は何も買わなかったのに、店を閉めるとき私に礼を言った。そして、遠くの岬まで案内してくれと頼んだ。",
+     "ids": [
+      "b0108",
+      "b0109",
+      "b0106",
+      "b0107",
+      "b0110"
+     ]
+    },
+    {
+     "en": "{Today} was hard to {face}: my son looked at the card for an {hour}. I {hope} you have an {idea}.",
+     "ja": "今日はつらかった。息子がそのカードを1時間も見つめていたのだ。君に何か心当たりがあるといいのだが。",
+     "ids": [
+      "b0111",
+      "b0113",
+      "b0112",
+      "b0114",
+      "b0115"
+     ]
+    },
+    {
+     "en": "The man said, 'No {cost}, no {form} to sign, no {reason} to {spend} money. Ask for the highest {room}.'",
+     "ja": "男は言った。「お代はいらない。署名する用紙もない。金を使うわけもない。いちばん上の部屋を訪ねなさい」",
+     "ids": [
+      "b0116",
+      "b0119",
+      "b0118",
+      "b0120",
+      "b0117"
+     ]
+    },
+    {
+     "en": "He left in a white {car}, and the fog came up to {head} {level}. Please {learn} more about this {person}.",
+     "ja": "男は白い車で去り、霧が頭の高さまで上がってきた。この人のことを、もっとよく知ってほしい。",
+     "ids": [
+      "b0122",
+      "b0121",
+      "b0124",
+      "b0123",
+      "b0125"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 6,
+   "ch": 1,
+   "kind": "diary",
+   "from": "Tsumugi",
+   "to": "My diary",
+   "lines": [
+    {
+     "en": "Day seven: not {bad} for a new {member} from the {city}. I am {able} to find any door at {night}.",
+     "ja": "7日目。街から来た新人の局員にしては、悪くない。夜でも、どの戸口でも見つけられるようになった。",
+     "ids": [
+      "b0127",
+      "b0126",
+      "b0128",
+      "b0130",
+      "b0129"
+     ]
+    },
+    {
+     "en": "People of every {age} were in {line}. I am {sure} I can finish my {term} with Furo at my {side}.",
+     "ja": "いろんな年齢の人が列に並んだ。フウロウがそばにいれば、任期をきっと務めあげられる。",
+     "ids": [
+      "b0135",
+      "b0131",
+      "b0133",
+      "b0134",
+      "b0132"
+     ]
+    },
+    {
+     "en": "The dark lighthouse comes into {view} from the {train}. In {public} places, people {speak} of it in {low} voices.",
+     "ja": "電車から、暗いままの灯台が見えてくる。人の集まる場所では、みんな声をひそめてその話をする。",
+     "ids": [
+      "b0140",
+      "b0139",
+      "b0138",
+      "b0137",
+      "b0136"
+     ]
+    },
+    {
+     "en": "Blank & Co. on the stone street pays for the {local} {party}. {Parents} find a zero {price} {hard} to refuse.",
+     "ja": "石だたみ通りの白紙商会が、地元のパーティーの費用を払うという。値段がゼロでは、親たちも断りにくい。",
+     "ids": [
+      "b0145",
+      "b0144",
+      "b0142",
+      "b0141",
+      "b0143"
+     ]
+    },
+    {
+     "en": "Furo {stands} in the drawer and pecks a letter. If it fades at this {rate}, we {lose} the {whole} {story}.",
+     "ja": "フウロウが引き出しの中に立ち、一通の手紙をつついている。この速さで字が薄れていけば、話がまるごと失われてしまう。",
+     "ids": [
+      "b0148",
+      "b0150",
+      "b0146",
+      "b0149",
+      "b0147"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 7,
+   "ch": 2,
+   "kind": "letter",
+   "from": "Ms. Aoi",
+   "to": "Stone Street shops and staff",
+   "lines": [
+    {
+     "en": "Our signs went white when {Mister} Blank came here on {vacation}. No {client} from the {airport} can find us, and every {e-book} is blank.",
+     "ja": "ミスター・ブランクという人が休暇でこの町に来たころ、通りの看板が白くなりました。空港から来るお客さまは店を見つけられず、電子書籍もすべて白紙です。",
+     "ids": [
+      "t0001",
+      "t0002",
+      "t0003",
+      "t0005",
+      "t0004"
+     ]
+    },
+    {
+     "en": "No one wrote back to my {fax} or my {memo}. A meeting is {logical}, so I made a {reservation} for ten {o'clock}.",
+     "ja": "わたしが送ったファックスにもメモにも、返事はありませんでした。集まって話すのが筋なので、10時に予約を取りました。",
+     "ids": [
+      "t0009",
+      "t0006",
+      "t0008",
+      "t0007",
+      "t0010"
+     ]
+    },
+    {
+     "en": "Tell your {supervisor} to keep blank {goods}; I will ask for a {refund} {sometime} this week. {Sincerely}, Aoi",
+     "ja": "白くなった品物は取っておくよう、上司に伝えてください。今週中に、わたしが返金を頼んでみます。敬具　アオイ",
+     "ids": [
+      "t0013",
+      "t0015",
+      "t0014",
+      "t0012",
+      "t0011"
+     ]
+    },
+    {
+     "en": "Our {downtown} printing {workshop} needs a new {brochure}. The {invoice} went blank before the payment {deadline}.",
+     "ja": "中心街で開く印刷ワークショップには、新しいパンフレットが必要です。支払いの締め切りを前に、請求書が白くなりました。",
+     "ids": [
+      "t0017",
+      "t0016",
+      "t0020",
+      "t0019",
+      "t0018"
+     ]
+    },
+    {
+     "en": "At {noon}, our {accountant} found a white card in the hotel {lobby}: Blank & Co. will {publish} good news. The {clerk} said no more.",
+     "ja": "昼の12時、会計士さんがホテルのロビーで白いカードを見つけました。「白紙商会が、良い知らせを出版します」。事務員は、それ以上何も言いませんでした。",
+     "ids": [
+      "t0021",
+      "t0022",
+      "t0024",
+      "t0025",
+      "t0023"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 8,
+   "ch": 2,
+   "kind": "form",
+   "from": "Stone Street Tailor",
+   "to": "Order book",
+   "lines": [
+    {
+     "en": "One white coat; buyer: blank. Like an {applicant}, he {enclosed} a {résumé}, but only one line is left: {technician}, {seminar} on lamps.",
+     "ja": "白い上着1着。買い手の名前は空白。応募者のように履歴書を同封してきたが、残っているのは1行だけ。「技術者。ランプについてのセミナー」",
+     "ids": [
+      "t0028",
+      "t0027",
+      "t0026",
+      "t0030",
+      "t0029"
+     ]
+    },
+    {
+     "en": "He gave money for the {cloth} and my {fare}, but took no {receipt}. A hotel {caller} says this {traveler} has lived there a year.",
+     "ja": "布の代金と、わたしの運賃までお金を出したのに、領収書は受け取らなかった。ホテルから電話してきた人によると、この旅行者はもう1年もそこに住んでいるという。",
+     "ids": [
+      "t0031",
+      "t0032",
+      "t0033",
+      "t0035",
+      "t0034"
+     ]
+    },
+    {
+     "en": "A {waiter} saw his paper samples on the {subway}, but no {luggage}. I {infer} his next {shipment} is paper.",
+     "ja": "ウェイターが地下鉄で、あの人の紙の見本を見たが、荷物は見なかった。次の出荷品は紙だろうと推測する。",
+     "ids": [
+      "t0040",
+      "t0036",
+      "t0037",
+      "t0039",
+      "t0038"
+     ]
+    },
+    {
+     "en": "He arranged the {rental} of rooms above the {cafeteria}, without an {elevator}. The {chef} found his {warranty} blank afterward.",
+     "ja": "あの人は、エレベーターのない食堂の上の部屋を借りる手配をした。そのあと、料理長は自分の保証書が白紙になっているのを見つけた。",
+     "ids": [
+      "t0041",
+      "t0043",
+      "t0045",
+      "t0044",
+      "t0042"
+     ]
+    },
+    {
+     "en": "If I heard {correctly}, he wants to {lease} every empty house. I will go by {bicycle} to {notify} Ms. Aoi, not the hotel {reception}.",
+     "ja": "聞きまちがいでなければ、あの人は空き家を全部借りるつもりだ。ホテルの受付ではなく、アオイさんに、自転車で知らせに行く。",
+     "ids": [
+      "t0047",
+      "t0048",
+      "t0049",
+      "t0050",
+      "t0046"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 9,
+   "ch": 2,
+   "kind": "sign",
+   "from": "Stone Street Pharmacy",
+   "to": "Our customers",
+   "lines": [
+    {
+     "en": "Open nine to six; visit when {convenient}. Our medicine {manual} and {preview} of a {subscription} newsletter are blank; ask the {attendant}.",
+     "ja": "営業は9時から6時です。ご都合のよいときにどうぞ。薬のマニュアルも、定期購読ニュースレターのプレビューも白紙です。係員におたずねください。",
+     "ids": [
+      "t0054",
+      "t0055",
+      "t0051",
+      "t0053",
+      "t0052"
+     ]
+    },
+    {
+     "en": "Bring old {oval} labels from your {garage}. Each is a {clue}; we must {obtain} names for our {inventory}.",
+     "ja": "車庫にある古い楕円形のラベルをお持ちください。1枚1枚が手がかりです。在庫の名前を、もう一度手に入れなければなりません。",
+     "ids": [
+      "t0059",
+      "t0057",
+      "t0056",
+      "t0058",
+      "t0060"
+     ]
+    },
+    {
+     "en": "To the man who said to {postpone} this: no. Your {suitcase} is on our {outdoor} bench, and its tag has no {occupation} or {destination}.",
+     "ja": "これを延期しろと言った方へ。お断りします。あなたのスーツケースは店の外のベンチにあります。荷札には、職業も行き先もありません。",
+     "ids": [
+      "t0065",
+      "t0062",
+      "t0061",
+      "t0064",
+      "t0063"
+     ]
+    },
+    {
+     "en": "She reports a {compact} {umbrella} and a {cellphone} inside. Others {contradict} her; our {inference} is that it holds blank cards.",
+     "ja": "女性は、中には小型の傘と携帯電話があると言っています。ほかの人はその話を否定しています。わたしたちは、中身は白いカードだと推論しています。",
+     "ids": [
+      "t0070",
+      "t0067",
+      "t0069",
+      "t0066",
+      "t0068"
+     ]
+    },
+    {
+     "en": "We give a {coupon} for any {merchandise} for each old label. The {receptionist} at the {dentist} next door will help, but asks for {identification}.",
+     "ja": "古いラベル1枚ごとに、どの商品にも使えるクーポンを1枚さしあげます。隣の歯医者さんの受付係も手伝ってくれますが、身分証明書を求められます。",
+     "ids": [
+      "t0075",
+      "t0071",
+      "t0072",
+      "t0073",
+      "t0074"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 10,
+   "ch": 2,
+   "kind": "letter",
+   "from": "Ms. Aoi",
+   "to": "Sea Road Books",
+   "lines": [
+    {
+     "en": "No {tactic} saved our books; I {rescheduled} the {renovation}. Drivers {depart} with our returns today; please {upgrade} delivery to air service.",
+     "ja": "どんな策でも本を救えず、改装の日程を再調整しました。運転手たちが今日、返品する本を運んで出発します。配送を航空便に格上げしてください。",
+     "ids": [
+      "t0078",
+      "t0077",
+      "t0079",
+      "t0076",
+      "t0080"
+     ]
+    },
+    {
+     "en": "Send a {replacement} or refund us. My {coworker} says cards {precede} fog; she {dined} beside one and her {passport} went blank.",
+     "ja": "交換品を送るか、返金をお願いします。同僚は、カードが霧より先に来ると言っています。カードのそばで食事をしたら、パスポートが白紙になったそうです。",
+     "ids": [
+      "t0082",
+      "t0085",
+      "t0081",
+      "t0083",
+      "t0084"
+     ]
+    },
+    {
+     "en": "This {upcoming} term, an {instructor} needs books with {explanatory} notes. Each {appliance} in my {cabinet} lost its words.",
+     "ja": "来たる学期に向けて、ある講師が解説の注釈つきの本を必要としています。わたしの戸棚の家電製品も、どれも字が消えました。",
+     "ids": [
+      "t0086",
+      "t0090",
+      "t0089",
+      "t0088",
+      "t0087"
+     ]
+    },
+    {
+     "en": "My {keyboard} lost its letters, so no order form is {valid}. The {media} love Blank & Co. talks at the {supermarket}, with no {admission} price.",
+     "ja": "キーボードの文字が消えたので、どの注文書も有効ではありません。スーパーで開かれる白紙商会の説明会は入場料がなく、メディアは大喜びです。",
+     "ids": [
+      "t0091",
+      "t0094",
+      "t0092",
+      "t0093",
+      "t0095"
+     ]
+    },
+    {
+     "en": "Confirm our book {assignment}; send by {airplane} and {underline} titles. My {laptop} is blank, though its {electrical} parts work.",
+     "ja": "当店への本の割り当てを確認し、航空便で送って、書名に下線を引いてください。ノートパソコンは電気の部分は動くのに、真っ白です。",
+     "ids": [
+      "t0100",
+      "t0099",
+      "t0097",
+      "t0096",
+      "t0098"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 11,
+   "ch": 2,
+   "kind": "notice",
+   "from": "Blank & Co.",
+   "to": "Everyone in Yosuga Port",
+   "lines": [
+    {
+     "en": "Let your past leave by the {exit}! We give every {attendee} at our {café} talk a {cruise}, {birthday} or not.",
+     "ja": "過去には出口から出ていってもらいましょう。カフェでの説明会の出席者には、誕生日であってもなくても、クルーズを差しあげます。",
+     "ids": [
+      "t0101",
+      "t0102",
+      "t0105",
+      "t0103",
+      "t0104"
+     ]
+    },
+    {
+     "en": "We {recycle} debts, bills for {medication}, and receipts from the {mall} into white paper. No {comprehension} needed, and no need to {renew}.",
+     "ja": "借金も、薬の請求書も、モールの領収書も、白い紙に作り直します。理解の必要はなく、更新の必要もありません。",
+     "ids": [
+      "t0109",
+      "t0108",
+      "t0107",
+      "t0106",
+      "t0110"
+     ]
+    },
+    {
+     "en": "Sign our {mini} contract for a free {sandwich} in our {fitness} room. Any {tenant} may sign before our {departure}.",
+     "ja": "ミニ契約にご署名いただくと、フィットネスルームでサンドイッチを無料で差しあげます。わたしたちの出発までなら、どの入居者の方もご署名いただけます。",
+     "ids": [
+      "t0114",
+      "t0112",
+      "t0115",
+      "t0111",
+      "t0113"
+     ]
+    },
+    {
+     "en": "Empty your {closet} of the past and dine at our {banquet}; it is not {unreal}. Small print is a {distractor}, not an {inconvenience}.",
+     "ja": "過去をクローゼットから出して空にし、わたしたちの宴会で食事をどうぞ。夢物語ではありません。小さな字は紛らわしいだけのもので、不便なものではありません。",
+     "ids": [
+      "t0118",
+      "t0117",
+      "t0119",
+      "t0120",
+      "t0116"
+     ]
+    },
+    {
+     "en": "Bring bills in a {folder}; do not {photocopy} them. We {renovate} homes for free until the offer {expires} on the first {sunny} day.",
+     "ja": "請求書はフォルダーに入れてお持ちください。コピーはしないでください。最初の晴れの日にこの申し出の期限が切れるまで、家の改装も無料です。",
+     "ids": [
+      "t0122",
+      "t0123",
+      "t0124",
+      "t0121",
+      "t0125"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 12,
+   "ch": 2,
+   "kind": "mail",
+   "from": "Corner Cafe",
+   "to": "Our review page",
+   "lines": [
+    {
+     "en": "Bad {feedback} is gone, thanks to Blank & Co.! {Shortly}, our {calendar} will show a {donation} day with a free {snack}.",
+     "ja": "悪いフィードバックが消えた。白紙商会のおかげだ。まもなく、カレンダーに寄付の日をのせる。その日は軽食が無料だ。",
+     "ids": [
+      "t0128",
+      "t0129",
+      "t0126",
+      "t0127",
+      "t0130"
+     ]
+    },
+    {
+     "en": "Review: 'Came in {hungry} from the {warehouse}; the {beverage} was --' and then white. The {provider} of our {copier} kept no copy.",
+     "ja": "レビュー：「倉庫からおなかをすかせて来た。飲み物は――」そこから先は白い。コピー機の提供業者にも、写しは残っていなかった。",
+     "ids": [
+      "t0135",
+      "t0131",
+      "t0134",
+      "t0133",
+      "t0132"
+     ]
+    },
+    {
+     "en": "A {mechanic} wrote: 'You need an {inspection}, but no one let me {inspect} a thing. My bread went to a {recipient} across the {aisle}.'",
+     "ja": "整備士さんの投稿：「検査が必要なのに、だれも何ひとつ点検させてくれなかった。わたしのパンは、通路の向こうの受取人に行ってしまった」",
+     "ids": [
+      "t0140",
+      "t0136",
+      "t0139",
+      "t0137",
+      "t0138"
+     ]
+    },
+    {
+     "en": "Since the {merger}, every {ingredient} list is blank; I must {rewrite} them. The {soccer} team left a {sweater}; their praise vanished too.",
+     "ja": "合併してから、材料の一覧がすべて白紙になり、書き直さなければならない。サッカーチームがセーターを忘れていった。あの子たちの褒め言葉まで消えてしまった。",
+     "ids": [
+      "t0141",
+      "t0144",
+      "t0145",
+      "t0142",
+      "t0143"
+     ]
+    },
+    {
+     "en": "For your {convenience}, all guests are {eligible} for free bread. Our {architect} listed this café on her {itinerary} as her {workplace}.",
+     "ja": "お客さまの便宜のため、どなたにも無料のパンをご用意しています。あの建築家さんは、旅程にこのカフェを自分の職場として記していました。",
+     "ids": [
+      "t0149",
+      "t0150",
+      "t0148",
+      "t0146",
+      "t0147"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 13,
+   "ch": 2,
+   "kind": "ledger",
+   "from": "Hana Flowers",
+   "to": "Kumo Sweets",
+   "lines": [
+    {
+     "en": "Invoice: ten {indoor} flowers, one {container}, and help with your {baggage}. My copy in the {drawer} has no numbers; please {dial} me.",
+     "ja": "請求書：屋内用の花10鉢、容器1つ、手荷物運びの手伝い。引き出しの控えには数字がないので、電話をください。",
+     "ids": [
+      "t0151",
+      "t0154",
+      "t0152",
+      "t0155",
+      "t0153"
+     ]
+    },
+    {
+     "en": "Sweets: Your flowers reached the {gym} and {lab}. My payment {certificate} awaits {submission} to the {bulletin}, but every word has vanished.",
+     "ja": "クモ菓子店：お宅の花はジムと実験室に届きました。支払い証明書は会報への提出待ちですが、文字がすべて消えてしまいました。",
+     "ids": [
+      "t0160",
+      "t0156",
+      "t0159",
+      "t0157",
+      "t0158"
+     ]
+    },
+    {
+     "en": "Flowers: After {highway} deliveries and {overtime}, my {battery} died. My only {respondent}, a {jewelry} seller, says you never paid.",
+     "ja": "ハナ花店：高速道路を使った配達と残業のあと、電池が切れました。問い合わせへの唯一の回答者である宝飾品の売り手は、お宅は払っていないと言っています。",
+     "ids": [
+      "t0161",
+      "t0164",
+      "t0165",
+      "t0162",
+      "t0163"
+     ]
+    },
+    {
+     "en": "Sweets: You {skim} my letters; that {outstanding} {dessert} is what I {donate} to school. Your receipt is in your {briefcase}.",
+     "ja": "クモ菓子店：手紙をざっと読んでいますね。あの見事なデザートは学校に寄付しているものです。お宅の領収書は、お宅のブリーフケースにあります。",
+     "ids": [
+      "t0168",
+      "t0167",
+      "t0170",
+      "t0166",
+      "t0169"
+     ]
+    },
+    {
+     "en": "This had an {impact}: we lost the party {venue}. Blank & Co. offers an {innovative} {overnight} fix, but I will {inquire} at the post office.",
+     "ja": "これが響いて、パーティーの会場を失った。白紙商会は一晩で済む革新的な解決を持ちかけてくるが、わたしは郵便局に問い合わせることにする。",
+     "ids": [
+      "t0171",
+      "t0175",
+      "t0172",
+      "t0174",
+      "t0173"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 14,
+   "ch": 2,
+   "kind": "letter",
+   "from": "Kumo Sweets",
+   "to": "Tsumugi",
+   "lines": [
+    {
+     "en": "Thanks for restoring our receipt and {logo}; we copied it with a new {cartridge}. Our {advisor} offers every {commuter} a {newsletter}.",
+     "ja": "領収書とロゴを戻してくれて、ありがとう。新しいカートリッジで写しを印刷しました。顧問は、通勤するみなさんにニュースレターを渡しています。",
+     "ids": [
+      "t0177",
+      "t0180",
+      "t0179",
+      "t0176",
+      "t0178"
+     ]
+    },
+    {
+     "en": "That {cloudy} day, a {photographer} came to see you and Furo. An {announcer} told the story, and each {shopper} now reads every {tag}.",
+     "ja": "あの曇りの日、写真家があなたとフウロウに会いに来ました。アナウンサーがこの話を伝え、今では買い物客がみんな、値札を1枚ずつ読んでいます。",
+     "ids": [
+      "t0181",
+      "t0182",
+      "t0185",
+      "t0183",
+      "t0184"
+     ]
+    },
+    {
+     "en": "One {aspect} is still strange. A {contractor} from Blank & Co. asked for our {password} to {download} our last {audit}.",
+     "ja": "ひとつ、まだ妙な面があります。白紙商会の請負業者が、前回の監査をダウンロードしたいから、うちのパスワードを教えてくれと言ってきたのです。",
+     "ids": [
+      "t0186",
+      "t0188",
+      "t0190",
+      "t0189",
+      "t0187"
+     ]
+    },
+    {
+     "en": "I said no; our rules {prohibit} it, {bonus} or not. He went to the {terminal} by the {stadium}, as on every {weekday}.",
+     "ja": "断りました。賞与があろうとなかろうと、うちの決まりで禁止されています。あの人は、平日はいつもそうするように、競技場のそばのターミナルへ行きました。",
+     "ids": [
+      "t0191",
+      "t0195",
+      "t0193",
+      "t0192",
+      "t0194"
+     ]
+    },
+    {
+     "en": "Our {waitress} brings a {cart} of {delicious} bread. I will {supervise} staff as they write receipts in permanent {ink}.",
+     "ja": "うちのウェイトレスが、おいしいパンをカートに載せて届けます。これからは消えないインクで領収書を書くスタッフを、わたしが監督します。",
+     "ids": [
+      "t0200",
+      "t0196",
+      "t0197",
+      "t0199",
+      "t0198"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 15,
+   "ch": 2,
+   "kind": "news",
+   "from": "Yosuga Harbor News",
+   "to": "Readers",
+   "lines": [
+    {
+     "en": "The {cleaner} and the seller of {stationery} have signed. Blank & Co., the {developer}, is {headquartered} at the cape, where no {shuttle} goes.",
+     "ja": "清掃員も、文房具の売り手も契約した。開発者である白紙商会は、シャトルバスの通わない岬に本社を置いている。",
+     "ids": [
+      "t0201",
+      "t0205",
+      "t0202",
+      "t0203",
+      "t0204"
+     ]
+    },
+    {
+     "en": "White shops look {alike}. Readers who {subscribe} find our {recipe} for {picnic} bread blank; even the bread has no {flavor}.",
+     "ja": "白い店はそっくりだ。購読している読者が目にするピクニック用パンのレシピは白紙で、パンにさえ風味がない。",
+     "ids": [
+      "t0207",
+      "t0206",
+      "t0210",
+      "t0209",
+      "t0208"
+     ]
+    },
+    {
+     "en": "An {administrative} worker says no one {authorized} the {distribution} of white cards. Still, they {commonly} come with free {refreshments}.",
+     "ja": "事務の職員によれば、白いカードの流通はだれも承認していない。それでもカードには、一般に無料の飲食物がついてくる。",
+     "ids": [
+      "t0212",
+      "t0213",
+      "t0215",
+      "t0214",
+      "t0211"
+     ]
+    },
+    {
+     "en": "Blank & Co. people {commute} from the hotel, which can {accommodate} twenty more. Some are {annoyed} by the {affordable} white {sofa} in every office.",
+     "ja": "白紙商会の人たちはホテルから通勤していて、ホテルにはあと20人を収容できる。どの事務所にもある、手頃な白いソファーにいらだつ人もいる。",
+     "ids": [
+      "t0220",
+      "t0217",
+      "t0219",
+      "t0218",
+      "t0216"
+     ]
+    },
+    {
+     "en": "Ms. Aoi has the {flu} but will not sign or {quit}. She asks the {authorities} to {coordinate} a look at their {paperwork}.",
+     "ja": "アオイさんはインフルエンザにかかったが、契約もしないし、やめもしない。商会の事務書類を調べられるよう、当局に調整を求めている。",
+     "ids": [
+      "t0225",
+      "t0223",
+      "t0224",
+      "t0221",
+      "t0222"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 16,
+   "ch": 2,
+   "kind": "letter",
+   "from": "Ms. Aoi",
+   "to": "Tsumugi",
+   "lines": [
+    {
+     "en": "Dear Tsumugi, I did not sign, {bargain} or not. An old airplane {captain}, now their {trainer}, asked about {availability} for an {installation} here.",
+     "ja": "ツムギさんへ。お買い得品だろうと、わたしは契約しませんでした。年配の飛行機の機長で、いまは商会の指導員をしている人が、ここに設置をしたいと空き状況をたずねてきました。",
+     "ids": [
+      "t0230",
+      "t0226",
+      "t0228",
+      "t0229",
+      "t0227"
+     ]
+    },
+    {
+     "en": "He offered {complimentary} paper, no price {hike}, and high {productivity}. But one {rainy} {midnight}, I followed a white cart to the port.",
+     "ja": "無料の紙、値上げなし、高い生産性を持ちかけられました。でもある雨の真夜中、わたしは白いカートのあとをつけて港へ行きました。",
+     "ids": [
+      "t0231",
+      "t0232",
+      "t0234",
+      "t0235",
+      "t0233"
+     ]
+    },
+    {
+     "en": "A {trainee} looked {unhappy}; Blank & Co. will {relocate} here next month. No {transaction} is recorded; I cannot {verify} the move.",
+     "ja": "研修生は不満そうでした。白紙商会は来月ここへ移転するそうです。取引の記録が何もなく、その移転を確かめられません。",
+     "ids": [
+      "t0237",
+      "t0239",
+      "t0236",
+      "t0238",
+      "t0240"
+     ]
+    },
+    {
+     "en": "A {courier} who loves {baseball} brings boxes of white paper from Warehouse Nine by {automobile}. Their {questionnaire} is {incomplete}: only regrets matter.",
+     "ja": "野球好きの宅配業者が、9番倉庫から自動車で白い紙の箱を運んできます。商会のアンケートは不完全で、後悔だけを問題にしています。",
+     "ids": [
+      "t0242",
+      "t0245",
+      "t0241",
+      "t0244",
+      "t0243"
+     ]
+    },
+    {
+     "en": "{Lately}, the {lamp} by the {dock} has flickered. Ask Goro, who runs the {machinery}; he refused an offer from their {presenter}.",
+     "ja": "最近、埠頭のそばのランプがちらついています。機械類を動かしているゴローさんを訪ねてください。商会の発表者からの申し出を断った人です。",
+     "ids": [
+      "t0248",
+      "t0247",
+      "t0246",
+      "t0249",
+      "t0250"
+     ]
+    }
+   ]
+  }
+ ]
+}
