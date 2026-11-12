@@ -64,3 +64,60 @@ Use case: precise-object-edit. Edit the provided image as the exact target, port
 3. 足元を隠す：後ろ足をスカートと閉じた鞄、または手前の柵と段の縁に自然に隠し、膝から下をほぼ見せない。上の段の前足は明瞭に残す。
 
 生成：組み込み imagegen により元画像から各案を個別に編集。
+
+## 本番：shimi.png
+
+参照画像：key-a4-1.png（画風）
+
+Use case: illustration-story. Square 1:1 game enemy cutout, one centered large subject with small margin on all sides. Use the provided key visual as the style reference: paper and letterpress ink print, bold navy outlines, flat 3–4 colors per object, paper grain on the subject. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, light #f2b84b. A slightly cute but scary living stain that erases words in the misty port town. Background must be a perfectly uniform solid pure green #00ff00, no texture, shadows, ground, fog, objects or gradients anywhere in background. No green on subject. No text, logos, signs, symbols, numbers, existing characters, pixel art, anime rendering, realism, or excessive gradients. Anatomically coherent limbs and consistent orientation. Subject: A small navy ink stain creature, wobbly gelatinous silhouette, white eyes.
+
+## 本番：keshikasu.png
+
+参照画像：key-a4-1.png（画風）
+
+Use case: illustration-story. Square 1:1 game enemy cutout, one centered large subject with small margin on all sides. Use the provided key visual as the style reference: paper and letterpress ink print, bold navy outlines, flat 3–4 colors per object, paper grain on the subject. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, light #f2b84b. A slightly cute but scary living stain that erases words in the misty port town. Background must be a perfectly uniform solid pure green #00ff00, no texture, shadows, ground, fog, objects or gradients anywhere in background. No green on subject. No text, logos, signs, symbols, numbers, existing characters, pixel art, anime rendering, realism, or excessive gradients. Anatomically coherent limbs and consistent orientation. Subject: A rolling cluster of gray eraser crumbs, a cohesive cute scary creature.
+
+## 本番：nijimi.png
+
+参照画像：key-a4-1.png（画風）
+
+Use case: illustration-story. Square 1:1 game enemy cutout, one centered large subject with small margin on all sides. Use the provided key visual as the style reference: paper and letterpress ink print, bold navy outlines, flat 3–4 colors per object, paper grain on the subject. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, light #f2b84b. A slightly cute but scary living stain that erases words in the misty port town. Background must be a perfectly uniform solid pure green #00ff00, no texture, shadows, ground, fog, objects or gradients anywhere in background. No green on subject. No text, logos, signs, symbols, numbers, existing characters, pixel art, anime rendering, realism, or excessive gradients. Anatomically coherent limbs and consistent orientation. Subject: A ghostlike creature made of water-bleeding ink, indistinct outline represented by discrete flat printed color bands, not gradients.
+
+## 本番：hokoridama.png
+
+参照画像：key-a4-1.png（画風）
+
+Use case: illustration-story. Square 1:1 game enemy cutout, one centered large subject with small margin on all sides. Use the provided key visual as the style reference: paper and letterpress ink print, bold navy outlines, flat 3–4 colors per object, paper grain on the subject. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, light #f2b84b. A slightly cute but scary living stain that erases words in the misty port town. Background must be a perfectly uniform solid pure green #00ff00, no texture, shadows, ground, fog, objects or gradients anywhere in background. No green on subject. No text, logos, signs, symbols, numbers, existing characters, pixel art, anime rendering, realism, or excessive gradients. Anatomically coherent limbs and consistent orientation. Subject: A ball of mist-colored cotton dust with thin arms and legs.
+
+## 本番：atenashi.png
+
+参照画像：key-a4-1.png（画風）
+
+Use case: illustration-story. Square 1:1 game enemy cutout, one centered large subject with small margin on all sides. Use the provided key visual as the style reference: paper and letterpress ink print, bold navy outlines, flat 3–4 colors per object, paper grain on the subject. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, light #f2b84b. A slightly cute but scary living stain that erases words in the misty port town. Background must be a perfectly uniform solid pure green #00ff00, no texture, shadows, ground, fog, objects or gradients anywhere in background. No green on subject. No text, logos, signs, symbols, numbers, existing characters, pixel art, anime rendering, realism, or excessive gradients. Anatomically coherent limbs and consistent orientation. Subject: A sad one-eyed envelope whose address has disappeared, with thin arms and legs, blank envelope with no marks.
+
+## 本番：oshimi.png
+
+参照画像：key-a4-1.png（画風）
+
+Use case: illustration-story. Square 1:1 game enemy cutout, one centered large subject with small margin on all sides. Use the provided key visual as the style reference: paper and letterpress ink print, bold navy outlines, flat 3–4 colors per object, paper grain on the subject. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, light #f2b84b. A slightly cute but scary living stain that erases words in the misty port town. Background must be a perfectly uniform solid pure green #00ff00, no texture, shadows, ground, fog, objects or gradients anywhere in background. No green on subject. No text, logos, signs, symbols, numbers, existing characters, pixel art, anime rendering, realism, or excessive gradients. Anatomically coherent limbs and consistent orientation. Subject: A powerful enormous navy ink blot monster, crown-like splashes on top and many small eyes.
+
+## 本番：tsumugi-normal.png
+Square game asset. Reference image is definitive style: paper and letterpress ink print, thick navy outlines, flat 3–4 colors per object and paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, light #f2b84b. No text, logo, symbols or numbers. Correct anatomy. Full body centered large with margin. Background perfectly flat solid pure chroma green #00ff00 everywhere outside character, no shadows, ground, texture or gradient; no green in character. Tsumugi, the young postal delivery girl from reference, facing forward standing cheerfully: vermilion cap and coat, white scarf, black braid with vermilion ribbon, navy skirt, boots, closed postal satchel. Reference: key-a4-1.png.
+
+## 本番：tsumugi-joy.png
+Edit the provided character image into a matching square game sprite. Keep the same Tsumugi face, black braid, red cap and coat, white scarf, navy skirt, boots, closed postal bag, proportions, colors, printmaking style and flat solid pure #00ff00 background. Change her pose to joyfully raise one hand, with anatomically correct fingers. Full body with margin. No text, symbols, shadows or background texture. Reference: tsumugi-normal.png.
+
+## 本番：fuurou-normal.png
+Square game asset. Reference image is definitive style: paper and letterpress ink print, thick navy outlines, flat 3–4 colors per object and paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, light #f2b84b. No text, logo, symbols or numbers. Correct anatomy. Full body centered large with margin. Background perfectly flat solid pure chroma green #00ff00 everywhere outside character, no shadows, ground, texture or gradient; no green in character. Fuurou, small white owl born from sealing wax, facing forward perching: round plump body, large round head, rounded wings, small vermilion feather ornament on top of head, vermilion wax seal on chest. Reference: key-a4-1.png.
+
+## 本番：fuurou-stamp.png
+Edit this square game character image: the exact same Fuurou owl, keeping face, plumage, ornament, chest wax seal, colors, proportions and paper letterpress print style. Show the owl pressing a vermilion stamp with one rounded wing; stamp face has no writing or symbols. Full body centered with margin, anatomically correct wings. Background completely flat solid pure green #00ff00, no ground, shadow or pattern, no text. Reference: fuurou-normal.png.
+
+## 本番：hatori-normal.png
+Square game asset. Reference image is definitive style: paper and letterpress ink print, thick navy outlines, flat 3–4 colors per object and paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, light #f2b84b. No text, logo, symbols or numbers. Correct anatomy. Full body centered large with margin. Background perfectly flat solid pure chroma green #00ff00 everywhere outside character, no shadows, ground, texture or gradient; no green in character. Hatori, elderly woman postmaster, facing forward calmly: white hair gathered up, round glasses, navy uniform and apron. Reference: key-a4-1.png.
+
+## 本番：hatori-smile.png
+Edit this square game character image: same Hatori postmaster, keep her face, white hair, round glasses, navy uniform, apron, hat, bag, proportions, colors and paper letterpress print style exactly. Change expression only: eyes gently narrowed and smiling warmly. Full body centered with margin. Background perfectly flat pure green #00ff00, no shadows, ground or texture. No text, logos, symbols or numbers. Reference: hatori-normal.png.
+
+## 本番：icon.png
+Square game asset. Reference image is definitive style: paper and letterpress ink print, thick navy outlines, flat 3–4 colors per object and paper grain. Palette navy #1f2a44, paper #f3ead8, vermilion #c8462f, mist #9fb3bf, light #f2b84b. No text, logo, symbols or numbers. Correct anatomy. App icon: close-up face of Fuurou, small white owl with rounded head and small vermilion feather ornament, with an envelope behind. Flat solid paper #f3ead8 background, no green. Thick outlines, large simple shapes readable at small sizes. Reference: key-a4-1.png.
