@@ -76,7 +76,9 @@ test('物語：allow 初版の上限と見本5行の検査が実行できる',()
 // 本番データが届いた場合は、件数・全語一回・語彙を同じ検査で保証する。
 try {
  const full=JSON.parse(await readFile(new URL('../products/word-guild/data/story.json',import.meta.url)));
- test('物語：本番データの全件検査',()=>assert.deepEqual(checkStory(full,words,allow).issues,[]));
+ // 56通そろうまでは、届いた区だけを部分検査する（全件検査は56通そろった時点で自動的に有効になる）。
+ const partial=full.letters?.length!==56;
+ test(`物語：本番データの${partial?'部分':'全件'}検査`,()=>assert.deepEqual(checkStory(full,words,allow,{partial}).issues,[]));
 } catch(e) { if(e.code!=='ENOENT')throw e; }
 test('物語：clipParts は語を分けて返し、clipFor と同じ文になる',()=>{
  const c=clipParts(story,'b0021',17);
