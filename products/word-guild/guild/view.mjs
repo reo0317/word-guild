@@ -8,14 +8,14 @@ import {pickSession, groupWords, todayNumber, SESSION_SIZE} from './srs.mjs';
 import {loadProgress, saveProgress} from './store.mjs';
 import {COLS, spelling} from './board.mjs';
 import {buildMap, gateWords, separateSpecs} from './stages.mjs';
-import {letterView, clipParts} from './story.mjs';
+import {letterView, clipParts, loadScenes} from './story.mjs';
 import {pageSpecs, stampState} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {rollDaily} from './daily.mjs';
 import {onUpdateReady, applyUpdate} from './pwa.mjs';
 import {esc, speak, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, helpButton, icon,
   ensureLetterCss, letterHtml, lineHtml, lineBody, lampRing, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
-import {showStampZoom, ensureCss as ensureAlbumCss} from './album.mjs';
+import {showStampZoom, ensureCss as ensureAlbumCss, sceneFor, gateCard, newlyOpenedGate, playOptionalCinema, showPaperCard, sceneCardHtml, blankCardHtml} from './album.mjs';
 import {renderMap, dailyBrief} from './map.mjs';
 
 const POS_LABEL = {v: '動', n: '名', a: '形', o: '他'}; // 色の意味を文字でも示す
@@ -54,6 +54,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   let tags = {};
   let story = {v: 1, letters: []}; // 物語の英文。data/story.json が無い・一部の街灯だけでも遊べる
   let storyLoaded = false;
+  let scenes = null;
+  let presentationClose = null;
   let progress = loadProgress(storage).progress;
   let saveFailed = false;
   let updateReady = false;
@@ -97,6 +99,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   }
 
   function stopSession() {
+    presentationClose?.();
+    presentationClose = null;
     closeLib();
     try { zoomClose?.(); } catch { /* 閉じ損ねても画面は移る */ }
     zoomClose = null;
@@ -222,7 +226,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   // 切手帳・設定が受け取る材料。戻るボタンは地図へ。
   function libDeps(extra = {}) {
     return {
-      words, tags, progress, storage, dev, music, today: todayNumber(), story: story.letters.length ? story : null,
+      words, tags, progress, storage, dev, music, today: todayNumber(), story: story.letters.length ? story : null, scenes,
       back: showMap, speak,
       onProgress: next => { persist(next); },
       ...extra,
@@ -802,6 +806,31 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       <img class="gq-mini-tsumugi" alt="" src="${esc(artFile('tsumugi'))}" style="--x0:${x0}%;--y0:${y0}%;--x1:${x1}%;--y1:${y1}%"></div>`;
   }
 
+  async function paperPresentation(html) {
+    const card = showPaperCard(view, html);
+    presentationClose = card.close;
+    await card.finished;
+    if (presentationClose === card.close) presentationClose = null;
+  }
+
+  async function presentCinema(method, data, fallback) {
+    const token = sessionToken;
+    const container = document.createElement('div');
+    container.className = 'gq-cinema-host';
+    view.append(container);
+    const close = () => container.remove();
+    presentationClose = close;
+    try {
+      await playOptionalCinema(method, container, data, async () => {
+        container.remove();
+        await fallback();
+      }, undefined, () => token === sessionToken);
+    } finally {
+      container.remove();
+      if (presentationClose === close) presentationClose = null;
+    }
+  }
+
   // 結果の1通：今回、読めるようになった通があればそれ。なければいちばん動いた通（新しい語を重く数える）。
   // 英文のある通だけ。なければ null。
   function pickLetterShelf(outcome, after, startProgress, endProgress, today) {
@@ -898,7 +927,11 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const nextLetter = newlyRead ? letterAt(shelf + 1, endProgress, today) : null;
     const paperOpts = lv => ({face: faceOf, shadowLines: shadowLinesOf(lv), lit: litLetter});
 
-    const gateOpened = quest.gate !== null && !outcome.retreated;
+    const gateOpened = newlyOpenedGate(quest.startProgress, quest.progress, quest.gate);
+    const openedWard = quest.gate;
+    const resultProgress = quest.progress;
+    const showGate = () => gateOpened ? presentCinema('playGateCard', gateCard(story, resultProgress.gates, openedWard),
+      () => paperPresentation(blankCardHtml(story, resultProgress.gates))) : Promise.resolve();
     const nextGate = after.wards.find(w => w.gate === 'open');
     const gateNext = !after.fog && nextGate;
     const primary = after.fog ? '霧を<br>払う' : nextGate ? `${nextGate.ch}区の<br>門へ` : 'つぎの<br>石段へ';
@@ -953,7 +986,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       });
     };
 
-    if (lvStart) playLetter({lvStart, lvEnd, endProgress, fledIds, newlyRead, nextLetter, shelf, paperOpts});
+    if (lvStart) playLetter({lvStart, lvEnd, endProgress, fledIds, newlyRead, nextLetter, shelf, paperOpts, onComplete: showGate});
+    else void showGate();
 
     res.addEventListener('click', event => {
       if (letterSteps.length) { flushLetter(); return; } // 動きの最中の押しは、飛ばすだけ
@@ -976,7 +1010,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   // 結果の1通：戻った語が1語ずつ濃くなる。読めた通は封筒になり、次の通の封筒が見える。
   // 押すか、動きを減らす設定のときは、残りをまとめて進める。
-  function playLetter({lvStart, lvEnd, endProgress, fledIds, newlyRead, nextLetter, shelf, paperOpts}) {
+  function playLetter({lvStart, lvEnd, endProgress, fledIds, newlyRead, nextLetter, shelf, paperOpts, onComplete}) {
     const paper = $('#gq-paper');
     const changes = [];
     lvEnd.lines.forEach((line, li) => line.parts.forEach((part, wi) => {
@@ -1009,17 +1043,26 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const env = $('#gq-env-sec');
     if (newlyRead) {
       steps.push(() => {
-        const furo = artFile('fuurouStamp');
-        env.hidden = false;
-        env.innerHTML = `${envelopeScene(furo)}${nextLetter ? `<div class="gq-next-env"><svg viewBox="0 0 54 36" aria-hidden="true"><rect x="2" y="3" width="50" height="30" rx="3" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2"/><path d="M3 5l24 17L51 5" fill="none" stroke="var(--ink)" stroke-width="2"/></svg><span>${esc(nextLetter.from ?? '')} → ${esc(nextLetter.to ?? '')}</span></div>` : ''}`;
-        const scene = env.querySelector('.gq-env');
-        const stages = [[100, 's1'], [1000, 's2'], [1500, 's3'], [2200, 'f-on'], [2550, 's4'], [2900, 'f-off'], [3500, 's5']];
-        if (reducedMotion()) scene.classList.add('s1', 's2', 's3', 's4', 's5');
-        else stages.forEach(([ms, cls]) => later(ms, () => scene.classList.add(cls)));
-        sfx('lamp');
-        env.scrollIntoView({block: 'center', behavior: reducedMotion() ? 'auto' : 'smooth'});
+        const token = sessionToken;
+        const scene = sceneFor(scenes, shelf);
+        void presentCinema('playLetterComplete', {
+          letter: lvEnd, scene, ward: byId.get(lvEnd.lines[0]?.ids[0])?.ch ?? 1, base: '',
+        }, async () => {
+          const furo = artFile('fuurouStamp');
+          env.hidden = false;
+          env.innerHTML = `${envelopeScene(furo)}${nextLetter ? `<div class="gq-next-env"><svg viewBox="0 0 54 36" aria-hidden="true"><rect x="2" y="3" width="50" height="30" rx="3" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2"/><path d="M3 5l24 17L51 5" fill="none" stroke="var(--ink)" stroke-width="2"/></svg><span>${esc(nextLetter.from ?? '')} → ${esc(nextLetter.to ?? '')}</span></div>` : ''}`;
+          const envelope = env.querySelector('.gq-env');
+          const stages = [[100, 's1'], [1000, 's2'], [1500, 's3'], [2200, 'f-on'], [2550, 's4'], [2900, 'f-off'], [3500, 's5']];
+          if (reducedMotion()) envelope.classList.add('s1', 's2', 's3', 's4', 's5');
+          else stages.forEach(([ms, cls]) => later(ms, () => envelope.classList.add(cls)));
+          sfx('lamp');
+          env.scrollIntoView({block: 'center', behavior: reducedMotion() ? 'auto' : 'smooth'});
+          await new Promise(resolve => setTimeout(resolve, reducedMotion() ? 0 : 4400));
+          if (token === sessionToken && scene) await paperPresentation(sceneCardHtml(scene));
+        }).then(() => { if (token === sessionToken) return onComplete?.(); });
       });
-    }
+    } else steps.push(() => { void onComplete?.(); });
+
     letterSteps = steps.map(run => ({run, done: false}));
     const exec = step => { if (!step.done) { step.done = true; step.run(); } };
     flushLetter = () => {
@@ -1056,6 +1099,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       } catch { /* 分類がなくても、紙魚は既存の5種で出る */ }
       if (!storyLoaded) {
         storyLoaded = true;
+        scenes = await loadScenes();
         // 英文が無い・壊れているときは、英文なしで遊ぶ。一部の街灯だけでもよい。
         try {
           const response = await fetch(STORY_URL);

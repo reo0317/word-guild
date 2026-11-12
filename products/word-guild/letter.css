@@ -91,3 +91,15 @@
  .w .t,.w .fog,.w .sh,.w .bug,.gq-env *{transition:none!important}
  .w.hit .t{animation:none}
 }
+
+/* 完成した手紙の場面と白紙卿のカード。紙魚の祖先には filter を使わない。 */
+.gq-cinema-host,.gq-story-overlay{position:fixed;inset:0;z-index:1000;background:#1f2340ed;overflow:auto;overscroll-behavior:contain}
+.gq-story-overlay{display:grid;place-items:center;padding:max(18px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));box-sizing:border-box}
+.gq-story-card{box-sizing:border-box;width:100%;max-width:420px;margin:auto;padding:22px 20px;background:var(--paper-hi,#faf1da);color:var(--ink,#1f2340);border:2px solid currentColor;border-radius:5px;box-shadow:3px 4px 0 #0003;font-family:var(--serif,serif);overflow-wrap:anywhere}
+.gq-story-card h2{font-size:19px;margin:0 0 18px}
+.gq-story-card p{font-size:16px;line-height:1.9;margin:12px 0;white-space:pre-line}
+.gq-story-card small{display:block;font-size:12px;line-height:1.7}
+.gq-story-card .gq-round{display:block;margin:18px 0 0 auto;width:44px;height:44px;border-radius:50%}
+.gq-card-mist{opacity:.32;letter-spacing:.14em;background:radial-gradient(ellipse,#b9c7cf99,transparent);user-select:none}
+.gq-card-door{margin:14px auto 24px}
+.gq-scene-tag{display:block;width:48px;min-height:44px;margin:8px 0 8px auto;padding:5px;border-radius:3px;border:1px solid var(--ink);background:var(--paper-hi);color:var(--ink);font:14px var(--serif,serif);box-shadow:2px 2px 0 #0002}
