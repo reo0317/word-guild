@@ -116,7 +116,7 @@ export function showStampZoom(host, {word, spec, state, box = 0, base = BASE, sa
   overlay.setAttribute('aria-modal', 'true');
   overlay.innerHTML = `<div class="gq-zoom-card">
     <div class="gq-zoom-stamp">${stampWithMark(word, spec, state, base, 'lg')}</div>
-    <p class="gq-zoom-state">${STATE_NAME[state]}${spec.kind === 'odd' ? '　✦ 変わり種' : ''}</p>
+    <p class="gq-zoom-state">${STATE_NAME[state]}</p>
     ${met ? `<h2>${esc(word.w)}</h2><p class="gq-zoom-ja">${esc(word.ja)}　<small>${POS[word.pos] ?? ''}</small></p>
       <p class="gq-stars" aria-label="習熟度 ${box}">${starsMarkup(box)}</p>${ex}${lineHtml}`
       : '<h2>？</h2>'}
@@ -218,9 +218,6 @@ export function openAlbum(container, deps = {}) {
       const first = pages.findIndex(p => p.ch === page.ch) === index;
       const wardName = CHAPTER_NAMES[page.ch - 1] ?? `${page.ch}区`;
       const stamps = page.words.map((word, i) => stampWithMark(word, specs[i], stampState(progress.words?.[word.id]), base, 'sm')).join('');
-      const oddAt = specs.findIndex(s => s.kind === 'odd');
-      const odd = oddAt >= 0 ? page.words[oddAt] : null;
-      const oddState = odd ? stampState(progress.words?.[odd.id]) : 'shadow';
       const letter = letterOf(page.shelf);
       const face = (id, state) => {
         const at = page.words.findIndex(w => w.id === id);
@@ -240,7 +237,6 @@ export function openAlbum(container, deps = {}) {
           ${paper}
           <p class="gq-page-count"><b>${pp.got}/${pp.total}</b> ${seal}</p>
           <div class="gq-sheet">${stamps}</div>
-          ${odd ? `<p class="gq-odd">✦ 変わり種 <button type="button" class="text-button" data-id="${esc(odd.id)}">${oddState === 'shadow' ? '？' : esc(odd.w)}</button></p>` : ''}
         </div>`;
       const body = container.querySelector('.gq-album-body');
       if (body) body.scrollTop = 0;

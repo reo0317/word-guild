@@ -65,10 +65,6 @@
 .gq-pin.sealed .mp{width:36px;height:45px}
 
 /* ツムギの頭上：今の行（霧のかすれ入り）を1行で。画面の幅に収まるよう map.mjs が位置を決める。 */
-.gq-line-bubble{position:absolute;bottom:68px;padding:2px 8px;background:var(--paper-hi);border:2px solid var(--ink);border-radius:10px;box-shadow:0 2px 0 var(--ink);font-family:Georgia,"Times New Roman",var(--serif);font-size:14px;line-height:1.9;white-space:nowrap;overflow:visible;pointer-events:none}
-.gq-line-bubble .bug,.gq-line-bubble .sh{display:none}
-.gq-line-bubble .txt{display:block;overflow:hidden;text-overflow:ellipsis}
-.gq-line-bubble::after{content:"";position:absolute;left:var(--tail,50%);bottom:-7px;width:10px;height:10px;margin-left:-5px;background:var(--paper-hi);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg)}
 .gq-post{position:absolute;left:-120px;top:-130px;width:240px;height:130px;border:3px solid var(--ink);border-radius:14px;background:var(--fog)}
 .gq-post-art{position:absolute;inset:0;border:0;border-radius:11px}
 .gq-guide{position:absolute;left:8px;bottom:-6px;display:flex;align-items:flex-end;gap:4px}.gq-face-hatori{flex:0 0 72px;height:72px}

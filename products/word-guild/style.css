@@ -157,10 +157,9 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-clue.solved{background:var(--lamp-lt)}
 .gq-clue.pickable{cursor:pointer;outline:3px solid var(--lamp);outline-offset:1px;animation:gq-pick .8s ease-in-out infinite alternate}
 .gq-input{height:20px;flex-shrink:0;font-size:13px;font-weight:800;text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;letter-spacing:.05em}.gq-input.is-message{color:var(--pos-o);font-weight:600}
-/* 盤面の左右に、丸いヒントとおしえて */
-.gq-boardrow{flex:1 1 auto;min-height:0;display:flex;align-items:center;justify-content:center;gap:2px}
-.gq-side{flex:0 0 50px;display:flex;align-items:center;justify-content:center}
-.gq-board{--bp:5px;position:relative;flex:1 1 0;min-width:0;align-self:center;max-height:100%;aspect-ratio:7/10;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:2px;padding:var(--bp);background:var(--ink);border:2px solid var(--ink);border-radius:10px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;overflow:hidden}
+/* 正方形のマス。余った高さは盤面の上下に配分する。 */
+.gq-boardrow{flex:1 1 auto;min-height:0;display:flex;align-items:center;justify-content:center;gap:2px;container-type:size}
+.gq-board{--bp:5px;position:relative;flex:0 0 auto;width:min(100%,calc(100cqh * 7 / 6));min-width:0;align-self:center;aspect-ratio:7/6;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:2px;padding:var(--bp) calc(var(--bp) + 1px);background:var(--ink);border:2px solid var(--ink);border-radius:10px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;overflow:hidden}
 .gq-cell{position:relative;min-width:0;min-height:0;padding:0;color:var(--ink);background:var(--paper);border:0;border-bottom:3px solid var(--fog);border-radius:6px;box-shadow:none;touch-action:none;transition:background .06s}
 .gq-cell .letter{position:relative;z-index:2;display:block;font:800 clamp(16px,5.4vw,24px)/1 Arial,system-ui,sans-serif}
 .gq-seals{position:absolute;inset:var(--bp);width:calc(100% - var(--bp)*2);height:calc(100% - var(--bp)*2);z-index:1;pointer-events:none;overflow:visible}
@@ -287,3 +286,16 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
  .gq-res-sec,.gq-stamp-cell{opacity:1}.gq-mini-tsumugi{left:var(--x1);top:var(--y1)}
  .gq-cell.hint-route{animation:none;background:var(--lamp-lt)}
 }
+
+/* 封蝋のお手伝い。SVG を含む祖先には filter を使わない。 */
+.gq-help-actions{display:flex;justify-content:center;gap:34px;flex-shrink:0;padding:2px 0 4px}
+.gq-help-actions .gq-help{width:64px;height:64px}
+.gq-help-actions .gq-help span{font-size:12px}
+.gq-help-actions .gq-help:last-child polygon{fill:#38617a}
+.gq-help-actions .gq-help[aria-pressed=true] polygon{fill:var(--lamp)}
+.gq-help-actions .gq-help[aria-pressed=true]{color:var(--ink)}
+.gq-help-actions .gq-help:disabled{opacity:.45;cursor:default}
+/* 変わり種は夜空と金箔の額。切手帳・結果・拡大で共用。 */
+.stamp.stamp:has(.odd)::before{background:linear-gradient(135deg,#f6dc8c,#ac7d28 50%,#f6dc8c)}
+.stamp.stamp:has(.odd) .in{background:radial-gradient(circle at 18% 24%,#f6dc8c 0 1px,transparent 1.5px),radial-gradient(circle at 82% 62%,#f6dc8c 0 1px,transparent 1.5px),linear-gradient(145deg,#263c65,#111b36);outline:1px solid #edcd76;box-shadow:inset 0 0 0 3px #17223d,inset 0 0 0 4px #b58a3e}
+.stamp.stamp:has(.odd) .lbl,.stamp.stamp:has(.odd) .ja,.stamp.stamp:has(.odd) .val{color:#f6dc8c}

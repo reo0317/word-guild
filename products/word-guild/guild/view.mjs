@@ -389,9 +389,11 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       ${coach}
       <div class="gq-input" id="gq-text" aria-live="polite"></div>
       <div class="gq-boardrow">
-        <div class="gq-side">${fab({icon: 'bulb', label: 'ヒント', cls: 'gq-help', attrs: 'id="gq-hint"'})}</div>
         <div class="gq-board entering" id="gq-board" aria-label="7列6行の盤面">${quest.letters.map(cellMarkup).join('')}<svg class="gq-seals" id="gq-seals" aria-hidden="true"></svg></div>
-        <div class="gq-side">${fab({icon: 'book', label: 'おしえて', cls: 'gq-help', attrs: 'id="gq-teach"'})}</div>
+      </div>
+      <div class="gq-help-actions" aria-label="配達のお手伝い">
+        ${waxButton({label: 'ヒント', id: 'gq-hint', cls: 'gq-help'})}
+        ${waxButton({label: 'おしえて', id: 'gq-teach', cls: 'gq-help'})}
       </div>`;
     $('#gq-label').textContent = topLabel();
     $('#gq-quit').onclick = quitQuest;

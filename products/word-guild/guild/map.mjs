@@ -12,7 +12,6 @@
 //   ctx.notice    {text, label, act} か null（条件つきの知らせ）
 //   ctx.warn      保存できないときの文
 //   ctx.letterOf(shelf)   その街灯の通（letterView の結果）か null。英文が無い街灯は null で、紙の絵を出さない
-//   ctx.hereLine  ツムギの頭上に出す今の行 {html} か null
 //   ctx.on        {go, gate, lamp, album, settings, title, notice}
 //
 // 遠近：スクロール量を「カメラの位置」にして、道の上の各地点（world の y）を毎回投影し直す。
@@ -167,7 +166,7 @@ export function renderMap(view, ctx) {
     const side = hereItem.lat > 0 ? 'left' : 'right';
     const shadows = map.next.map(id => `<span class="gq-face">${ctx.face(id, 'shadow')}</span>`).join('');
     const dues = map.due.map(id => `<span class="gq-face">${ctx.face(id, 'print')}</span>`).join('');
-    herePanel = bb('gq-bb-tsumugi', hereY, hereItem.lat, `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}">${ctx.hereLine ? `<div class="gq-line-bubble" aria-hidden="true"><span class="txt">${ctx.hereLine.html}</span></div>` : ''}`)
+    herePanel = bb('gq-bb-tsumugi', hereY, hereItem.lat, `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}">`)
       + bb(`gq-bb-panel ${side}`, hereY + 22, hereItem.lat, `<div class="gq-here-panel ${side}">
         ${map.next.length ? `<div class="gq-faces" aria-label="この先の紙魚"><span class="gq-arrow" aria-hidden="true">▸</span>${shadows}</div>` : '<p class="gq-top-mark" aria-label="いちばん上">★</p>'}
         ${map.dueCount ? `<div class="gq-faces due" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b class="gq-due-n">${map.dueCount}</b>${dues}</div>` : ''}
@@ -254,7 +253,6 @@ export function renderMap(view, ctx) {
     far: el.classList.contains('far'),
     scale: el.classList.contains('gq-bb-ward') ? 0.9 : 1,
     panel: el.querySelector('.gq-here-panel'),
-    bubble: el.querySelector('.gq-line-bubble'),
   }));
   const skyLayers = [...view.querySelectorAll('.gq-sky-art')];
   let Ws = 0, Hs = 0, frame = 0, lastWard = 0;
@@ -321,12 +319,6 @@ export function renderMap(view, ctx) {
       if (!b.shown) { b.el.style.display = ''; b.shown = true; }
       const fade = Math.min(1, Math.max(0, (s - S_MIN) / 0.2)) * (b.far ? 0.55 : 1);
       const sx = X(b.y, s);
-      if (b.bubble) { // 吹き出しは、画面の幅に収まる位置へ。しっぽはツムギの上
-        const k = s * b.scale;
-        b.bubble.style.left = `${((8 - sx) / k).toFixed(1)}px`;
-        b.bubble.style.width = `${((Ws - 16) / k).toFixed(1)}px`;
-        b.bubble.style.setProperty('--tail', `${((sx - 8) / k).toFixed(1)}px`);
-      }
       if (b.panel) b.panel.className = `gq-here-panel ${sx > Ws / 2 ? 'left' : 'right'}`; // 道の広い側に出す
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${(s * b.scale).toFixed(3)})`;
       b.el.style.opacity = fade.toFixed(2);
