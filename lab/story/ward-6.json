@@ -74,10 +74,10 @@
    ]},
   {"shelf":56,"ch":6,"kind":"letter","from":"Tsumugi","to":"Mr. Shirase",
    "lines":[
-    {"en":"Dear Mr. Shirase: I hear a {mower} and a {sedan}; Riku wears {sunscreen}. {Nutrition} labels are clear; my letter is no {restatement}.","ja":"シラセさんへ。芝刈り機とセダンの音が聞こえ、リクは日焼け止めをぬっています。栄養の表示もはっきり読めます。この手紙は、言い直しではありません。","ids":["t1226","t1229","t1230","t1227","t1228"]},
-    {"en":"Riku uses his {workbook}; he is a {contestant} on the school stage. Ms. Aoi has {wellness} books on {cleanliness} in her {bookcase}.","ja":"リクは練習帳を使っていて、学校の舞台の出場者です。アオイさんの本棚には、清潔さについての健康増進の本があります。","ids":["t1232","t1235","t1231","t1234","t1233"]},
-    {"en":"My writing is {inefficient}; drafts waste ink by the {liter}. Mina sends {healthful} bread; she says {ethics} matter even during a {recession}.","ja":"私の書き方は非効率で、下書きに何リットルもインクを無駄にします。ミナさんが体によいパンを送ってくれます。不況の最中でも倫理は大切だそうです。","ids":["t1238","t1239","t1237","t1236","t1240"]},
-    {"en":"The report is {unreliable}, and you never asked for {acclaim}. Your {chronic} cough may {deteriorate}, so my {timeline} allows one day.","ja":"あの報告書は当てになりません。あなたは称賛を求めたことなどなかった。慢性的なせきが悪化するかもしれないので、配達の工程表では一日で終えることにしています。","ids":["t1242","t1243","t1244","t1245","t1241"]},
-    {"en":"I {resemble} you: I'll {violate} an {unauthorized} order to deliver both letters. Please {unplug} your computer after the {videoconference} and read them.","ja":"私はあなたに似ています。許可のない命令に違反して、2通とも届けます。ビデオ会議が終わったらパソコンのコンセントを抜いて、読んでください。","ids":["t1246","t1248","t1247","t1249","t1250"]}
+    {"en":"The {mower} and {sedan} manuals, {sunscreen} and {nutrition} labels: words return. This is no {restatement} of that report, Mr. Shirase.","ja":"芝刈り機とセダンの説明書、日焼け止めと栄養の表示に、言葉が戻っています。シラセさん、これはあの報告書の言い直しではありません。","ids":["t1226","t1229","t1230","t1227","t1228"]},
+    {"en":"Riku reads his {workbook} as a {contestant} again. Aoi reads about {wellness} and {cleanliness}; her {bookcase} holds more than blank pages.","ja":"リクはまた出場者として練習帳を読んでいます。アオイさんは健康増進や清潔さについて読んでいます。本棚にあるのは、もう白紙ばかりではありません。","ids":["t1232","t1235","t1231","t1234","t1233"]},
+    {"en":"My {inefficient} drafts use ink by the {liter}. But I can write again: {healthful} bread, {ethics}, our town in {recession}.","ja":"私の非効率な下書きは、インクを何リットルも使います。それでも、また書けるのです。体によいパンのこと、倫理のこと、不況の中にいる私たちの町のことを。","ids":["t1238","t1239","t1237","t1236","t1240"]},
+    {"en":"The {unreliable} report cannot erase survivors' {acclaim}: you never failed. Your {chronic} cough may {deteriorate}; my {timeline} sets delivery for tomorrow.","ja":"あの当てにならない報告書でも、あなたが救った人々の称賛は消せません。あなたは失敗していません。慢性的なせきが悪化するかもしれないから、私の配達工程表では明日、届けることにしています。","ids":["t1242","t1243","t1244","t1245","t1241"]},
+    {"en":"I {resemble} you: I'll {violate} {unauthorized} orders. {Unplug} after the {videoconference}; I'll deliver both letters, theirs and mine, to the light.","ja":"私はあなたに似ています。無許可の命令には背きます。ビデオ会議が終わったらコンセントを抜いてください。乗組員のお礼状と私の手紙、その二通を灯りのもとへ届けます。","ids":["t1246","t1248","t1247","t1249","t1250"]}
    ]}
  ]}
