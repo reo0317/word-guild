@@ -1,0 +1,2 @@
+t1020 violin mind → tool 楽器は機械・道具の仲間。
+t1043 drum mind → tool 楽器は機械・道具の仲間。
