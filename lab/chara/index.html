@@ -69,15 +69,21 @@ p.note{margin:2px 0 8px;color:var(--sub);font-size:12px}
 #zoom .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 #zoom .cols .cap{font-size:10px;text-align:center;color:var(--sub)}
 #zoom .close{margin-top:10px;width:100%;font:inherit;padding:7px;border:2px solid var(--ink);background:var(--paper);border-radius:8px}
+.prod-seg{margin:6px 0 4px}
+.band.prod .fg>div{width:36%}
+.face.full svg{position:static;width:100%;height:100%}
+.stamp.big .pic svg{left:25%;width:50%}
 </style>
 </head>
 <body>
-<h1>切手キャラ試作（P1：方式A）</h1>
+<h1>切手キャラ試作</h1>
 <p class="note">1区・街灯1（b0001〜25）と2区・街灯1（t0001〜25）。各切手をタップすると A / A＋色そろえ / B を大きく並べます。✦ は各ページの変わり種。</p>
 
 <div class="nav" id="nav">
-  <span class="seg" id="stateSeg"></span>
+  <span class="seg" id="stateSeg"></span><button onclick="document.getElementById('sec-prod').scrollIntoView()">本番（分類16種）</button>
 </div>
+
+<div id="prod"></div>
 
 <div id="app"></div>
 
@@ -203,6 +209,70 @@ zoom.addEventListener('click', (e) => { if (e.target === zoom) closeZoom(); });
 
 render();
 window.__ready = true;
+</script>
+
+<script type="module">
+import {charaSpec, pageSpecs, stampState} from '../../products/word-guild/guild/chara.mjs';
+import {charaDefs, charaSvg, stampHtml} from '../../products/word-guild/guild/chara-svg.mjs';
+
+const BASE = '../../products/word-guild/';
+const [words, tags] = await Promise.all([
+  fetch(BASE + 'data/words.json').then((r) => r.json()),
+  fetch('../../products/word-guild/data/chara.json').then((r) => r.json()),
+]);
+const byId = new Map(words.map((w) => [w.id, w]));
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const ids = (p) => Array.from({ length: 25 }, (_, i) => p + String(i + 1).padStart(4, '0'));
+const PAGES = [{ ward: 1, title: '1区 街灯1', ids: ids('b') }, { ward: 2, title: '2区 街灯1', ids: ids('t') }].map((pg) => {
+  const ws = pg.ids.map((id) => byId.get(id));
+  return { ...pg, words: ws, specs: pageSpecs(ws, ws.map((w) => tags[w.id] ?? '')) };
+});
+const STATES = [['shadow', '影'], ['proof', '仮刷り'], ['print', '本刷り'], ['gold', '金ぶち']];
+let state = 'print';
+const PM = '<svg class="pm" viewBox="0 0 60 60"><g fill="none" stroke="#1f2340" stroke-width="2.4"><circle cx="30" cy="30" r="25"/><circle cx="30" cy="30" r="19"/><path d="M5 22q8-5 16 0t16 0 16 0M5 31q8-5 16 0t16 0 16 0M5 40q8-5 16 0t16 0 16 0"/></g></svg>';
+const opt = (o = {}) => ({ base: BASE, ...o });
+const stamp = (w, spec, o = {}) => {
+  const html = stampHtml(w, spec, opt({ state, ...o }));
+  return (o.state || state) === 'gold' ? html.replace(/<\/div><\/button>$/, PM + '</div></button>') : html;
+};
+const specOf = (w, extra = {}) => ({ ...charaSpec(w, tags[w.id] ?? ''), ...extra });
+const pick = (id, extra) => { const w = byId.get(id); return [w, specOf(w, extra)]; };
+
+function render() {
+  const out = [charaDefs(BASE)];
+  out.push('<h2 id="sec-prod">本番（分類16種）</h2><p class="note">`guild/chara.mjs` と `chara-svg.mjs` をそのまま使った版。体は分類16種ごとの絵、色そろえあり。目は重ねていません（表情は体の絵のまま）。1体ごとの違いは、インク・模様・持ち物・左右反転・傾き・大きさ。✦ は各ページの変わり種。</p>');
+  out.push(`<div class="seg prod-seg" id="prodSeg">${STATES.map(([s, n]) => `<button data-s="${s}" aria-pressed="${s === state}">${n}</button>`).join('')}</div>`);
+  for (const pg of PAGES) {
+    out.push(`<h3>${pg.title}（25語）<small>タップなし。同じページの中で組み合わせは重なりません</small></h3>`);
+    out.push(`<div class="sheet">${pg.words.map((w, i) => stamp(w, pg.specs[i], { ward: pg.ward })).join('')}</div>`);
+  }
+  // 配達の帯
+  out.push('<h3>配達の帯（3体が並ぶ）<small>戦闘中は語を見せない</small></h3>');
+  const trio = ['b0002', 'b0004', 'b0006'].map((id) => pick(id));
+  out.push(`<div class="band prod" style="background-image:url(${BASE}art/ward-1.webp)"><div class="fg">${trio.map(([w, s]) => `<div>${charaSvg(s, opt({ state: 'print', ward: 1 }))}</div>`).join('')}</div></div>`);
+  out.push(`<div class="rows">${trio.map(([w, s]) => `<div class="r"><span class="face full">${charaSvg(s, opt({ state: 'print', ward: 1 }))}</span><span>${esc(w.ja)}</span><span class="blank">${'＿'.repeat(Math.min(w.w.length, 6))}</span></div>`).join('')}</div>`);
+  // 状態
+  out.push('<h3>切手の状態<small>習熟度 0 → 影、1〜2 → 仮刷り、3〜4 → 本刷り、5 → 金ぶち（stampState）</small></h3>');
+  const [tw, ts] = pick('b0003');
+  out.push(`<div class="strip">${STATES.map(([s, n]) => `<div>${stamp(tw, ts, { state: s, size: 'lg', ward: 1 })}<div class="cap">${n}</div></div>`).join('')}</div>`);
+  const big = { id: 'x-big', w: 'identification', ja: '身元の確認', pos: 'n', ch: 1 };
+  const bigSpec = charaSpec(big, 'doc');
+  out.push(`<div class="strip" style="grid-template-columns:repeat(2,1fr)">${['print', 'gold'].map((s) => `<div>${stamp(big, bigSpec, { state: s, size: 'lg', ward: 1 })}<div class="cap">大判（oshimi）${s === 'gold' ? '金ぶち' : '本刷り'}</div></div>`).join('')}</div>`);
+  out.push(`<div class="strip" style="grid-template-columns:repeat(4,1fr)">${[0, 1, 3, 5].map((box) => `<div class="cap">box ${box} → ${stampState({ box })}</div>`).join('')}</div>`);
+  // 変わり種
+  out.push('<h3>変わり種（各ページ1体）<small>同じ語の通常と変わり種</small></h3>');
+  const odds = PAGES.flatMap((pg) => { const i = pg.specs.findIndex((s) => s.kind === 'odd'); return [[pg, pg.words[i], pg.specs[i]]]; });
+  out.push(`<div class="strip">${odds.flatMap(([pg, w, s]) => [
+    `<div>${stamp(w, { ...s, kind: 'normal' }, { state: 'print', size: 'lg', ward: pg.ward })}<div class="cap">通常</div></div>`,
+    `<div>${stamp(w, s, { state: 'print', size: 'lg', ward: pg.ward })}<div class="cap">変わり種</div></div>`]).join('')}</div>`);
+  document.getElementById('prod').innerHTML = out.join('');
+}
+document.getElementById('prod').addEventListener('click', (e) => {
+  const b = e.target.closest('#prodSeg button'); if (!b) return;
+  state = b.dataset.s; render();
+});
+render();
+window.__prodReady = true;
 </script>
 </body>
 </html>
