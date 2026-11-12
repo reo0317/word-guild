@@ -1,0 +1,25 @@
+{
+ "ch": 5,
+ "ps": [
+  {"shelf": 37, "en": "Mr. Blank cannot {sleep} in a dark {bedroom}. He wants a lamp each {evening} and looks at the cape each {morning} from the {hotel}.",
+   "ja": "ブランク氏は、暗い寝室では眠れない。夕方になるとランプを欲しがり、朝になるとホテルから岬を見ている。"},
+  {"shelf": 38, "en": "Give each old crew member a free {dinner}, a {bath}, and a {shower}. I will {repair} my old {apartment} myself for Captain Nagi.",
+   "ja": "乗組員の皆さんには、夕食と風呂とシャワーを無料で。ナギ船長のために、わたしの古い集合住宅の部屋を自分で修理します。"},
+  {"shelf": 39, "en": "One {tourist} will {travel} from {abroad}: a man from the old crew. We will show him the {museum} and pay for his {restaurant} dinner.",
+   "ja": "それでも外国から旅してくる観光客がひとりいます。あの乗組員のひとりです。博物館を案内し、食堂での夕食はこちらで払います。"},
+  {"shelf": 40, "en": "The last train will wait ten {minutes} on crew party night. Our {station} {clock} will go slow, and no {traffic} will stop this {route}.",
+   "ja": "乗組員の集まりの夜、最終列車は10分待ちます。駅の時計はゆっくり進み、どんな交通もこの経路を止めません。"},
+  {"shelf": 41, "en": "Our {team} wants no {charity}. A {stranger} kept a fire for our {vessel}, and our {cook} still sets a place for him.",
+   "ja": "おれたちの班は慈善など要らない。見知らぬ人が、この大型船のために火を守ってくれた。料理人は今も、その人の席を用意している。"},
+  {"shelf": 42, "en": "In my {dream}, the {ship} still has every {sail} up and a small fire on the cape. This last {adventure} is for that {memory}.",
+   "ja": "夢の中では、船は今も帆をすべて張っていて、岬には小さな火が見える。この最後の冒険は、その記憶のためにある。"},
+  {"shelf": 43, "en": "Last {complaint}: the {noise} in the {hall} is a child reading. Do not stop her or move the {furniture}; my room is too {quiet}.",
+   "ja": "最後の苦情をひとつ。廊下の騒音は、子どもが本を読む声だ。止めるな。家具も動かすな。わたしの部屋は静かすぎる。"},
+  {"shelf": 44, "en": "This is not a {protest}. Every {resident} we could {gather} signed as one {community}, and more {evidence} is in the bottom drawer.",
+   "ja": "これは抗議ではありません。集まれた住民が皆、ひとつの地域社会として署名しました。それに、もっと確かな証拠が一番下の引き出しにあります。"},
+  {"shelf": 45, "en": "For your staff: old {currency} and {theater} tickets, under the lamp. I {deny} I left them; a man in his {prison} has no {credit}.",
+   "ja": "従業員へ。ランプの下に、古い通貨と劇場の切符を置いた。わたしが置いたことは否定する。自分の牢にいる男に、信用など無いのだから。"},
+  {"shelf": 46, "en": "I {seal} this with the same wax as theirs. No {document} I own {weighs} more than this {paper}; you will be an {excellent} carrier.",
+   "ja": "この手紙も、あの手紙と同じ蝋で封をします。わたしの持つどの書類よりも、この紙は重い。あなたなら、優れた運び手になれる。"}
+ ]
+}
