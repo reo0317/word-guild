@@ -54,3 +54,13 @@ Use case: precise-object-edit. Edit the provided image as the exact target, port
 
 ### A5-2
 Use case: precise-object-edit. Edit the provided image as the exact target, portrait 9:16. Correct ONLY Tsumugi's rear left leg and boot at lower left, with a subtly more bent knee and raised heel just after pushing off: the boot toe points uphill to upper right toward the post office, only a small portion of the heel side of its sole visible, natural anatomy. Keep her leading right foot on its step. Preserve every other pixel as closely as possible: composition, rest of pose, clothes, scarf, braids, closed bag, owl facing away, streetlight, railings, steps, post office, harbor, lighthouse, foggy sky, colors, textures and illustration style. No other changes.
+
+## A6（後ろ足の描き直し）
+
+元画像 `key-a4-1.png` を編集対象とし、縦9:16。画面左下のツムギの後ろ足だけを変更し、前足、閉じた鞄、マフラー、三つ編み、フウロウ、石段、背景、構図、質感、色はできるだけ維持する。カメラは低い位置からの斜め後ろで、右上へ上る腰・膝・足首・つま先を自然にそろえる。ふくらはぎや足首をねじらず、靴底を大きく正面に見せない。
+
+1. 歩いて上る：後ろ足のほぼ足裏全体を下の段に乗せ、かかとが浮き始め、つま先を右上へ。膝を軽く曲げ、両足を接地。かかとを後ろから見せる。
+2. 踏み出す直前：後ろ足のつま先だけを段の縁に乗せて右上に向け、かかとを上げる。かかとと靴底の後ろ半分だけを斜めに見せ、膝を自然に曲げる。
+3. 足元を隠す：後ろ足をスカートと閉じた鞄、または手前の柵と段の縁に自然に隠し、膝から下をほぼ見せない。上の段の前足は明瞭に残す。
+
+生成：組み込み imagegen により元画像から各案を個別に編集。
