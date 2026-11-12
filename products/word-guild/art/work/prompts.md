@@ -44,3 +44,13 @@ Edit the attached key visual as an illustration-story game key art, vertical 9:1
 
 - A4-1 の `[wing angle]`: `angled upward in a strong flap`
 - A4-2 の `[wing angle]`: `held nearly horizontal in a strong flap`
+
+## A5（左足の修正）
+
+組み込み画像生成ツールで `key-a4-1.png` を編集対象として、それぞれ次の指示を使用。
+
+### A5-1
+Use case: precise-object-edit. Edit the provided image as the exact target, portrait 9:16. Change ONLY Tsumugi's trailing left leg and boot at lower left: immediately after pushing off the stair, anatomically natural knee and ankle, toe pointing uphill toward upper right and post office, with only a little of the lifted heel side of the sole visible. Keep her leading right foot on its step. Preserve every other pixel as closely as possible: composition, rest of pose, clothes, scarf, braids, closed bag, owl facing away, streetlight, railings, steps, post office, harbor, lighthouse, foggy sky, colors, textures and illustration style. No other changes.
+
+### A5-2
+Use case: precise-object-edit. Edit the provided image as the exact target, portrait 9:16. Correct ONLY Tsumugi's rear left leg and boot at lower left, with a subtly more bent knee and raised heel just after pushing off: the boot toe points uphill to upper right toward the post office, only a small portion of the heel side of its sole visible, natural anatomy. Keep her leading right foot on its step. Preserve every other pixel as closely as possible: composition, rest of pose, clothes, scarf, braids, closed bag, owl facing away, streetlight, railings, steps, post office, harbor, lighthouse, foggy sky, colors, textures and illustration style. No other changes.
