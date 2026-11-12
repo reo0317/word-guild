@@ -2304,6 +2304,646 @@
      ]
     }
    ]
+  },
+  {
+   "shelf": 37,
+   "ch": 5,
+   "kind": "ledger",
+   "from": "Station Hotel, front desk",
+   "to": "Ms. Sora",
+   "lines": [
+    {
+     "en": "Fog {advisory}; guest {asleep} at noon. {Authentic} bread from the {bakery} and a {carton} of milk wait outside.",
+     "ja": "霧の勧告あり。客は昼になっても眠っている。パン屋から届いた本格的なパンと牛乳の紙パックが、戸口で待っている。",
+     "ids": [
+      "t0751",
+      "t0752",
+      "t0753",
+      "t0754",
+      "t0755"
+     ]
+    },
+    {
+     "en": "Paper {consumption}: high; storage {compartment}: {conveniently} beside bed. {Cosmetic} kit refused; card not {compatible} with reader.",
+     "ja": "紙の消費量：多い。収納区画：ベッド脇の便利な場所にあり。美容用品のセットは断られた。カードは読み取り機と互換性がない。",
+     "ids": [
+      "t0758",
+      "t0756",
+      "t0759",
+      "t0760",
+      "t0757"
+     ]
+    },
+    {
+     "en": "Each {disagreement} with him is blank by the next day, to our {disappointment}. Our {courtesy} and {creativity} only {dissatisfy} him.",
+     "ja": "彼ともめた件は、次の日には白紙になっている。残念だ。こちらの厚意も工夫も、彼を不満にさせるだけだ。",
+     "ids": [
+      "t0763",
+      "t0764",
+      "t0761",
+      "t0762",
+      "t0765"
+     ]
+    },
+    {
+     "en": "School {faculty} found their stay {enjoyable}; their {favorable} comments vanished. Tsumugi and the {foreman} copied remaining records for the {forum}.",
+     "ja": "学校の教職員は滞在を楽しんだが、好意的な感想は消えた。ツムギと現場監督は、フォーラムのために残った記録を写した。",
+     "ids": [
+      "t0767",
+      "t0766",
+      "t0768",
+      "t0769",
+      "t0770"
+     ]
+    },
+    {
+     "en": "As {founder} of Blank & Co., he never needs to {fundraise}, he says. He calls poster {graphics} {hazardous}; keep a {handy} lamp.",
+     "ja": "白紙商会の創業者なので、募金を集める必要はないそうだ。ポスターのグラフィックを「危険」と呼ぶ。手軽なランプを置いておくこと。",
+     "ids": [
+      "t0771",
+      "t0772",
+      "t0773",
+      "t0775",
+      "t0774"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 38,
+   "ch": 5,
+   "kind": "letter",
+   "from": "Ms. Sora",
+   "to": "All hotel workers",
+   "lines": [
+    {
+     "en": "Our booking {pad} is blank, and a {nationwide} group in {healthcare} came without a word. Their {influential} leader says it is the {humidity}.",
+     "ja": "予約のメモ帳が白紙になり、医療に携わる全国規模の団体が、何の知らせもなく着きました。影響力のある団長は、湿気のせいだと言っています。",
+     "ids": [
+      "t0780",
+      "t0779",
+      "t0776",
+      "t0778",
+      "t0777"
+     ]
+    },
+    {
+     "en": "To {paraphrase} Hatori: read it or lose it. Send each room {placement} by {postal} letter; keep our {renter} Mr. Blank out of the {publicity}.",
+     "ja": "ハトリさんの言葉を言い換えるなら、「読まなければ、失う」。部屋の割り振りは、一つずつ郵便の手紙で知らせること。借り主のミスター・ブランクは、当館の宣伝に出さないこと。",
+     "ids": [
+      "t0781",
+      "t0782",
+      "t0783",
+      "t0785",
+      "t0784"
+     ]
+    },
+    {
+     "en": "The {repairperson} has {repeatedly} fixed the signs on the {restroom} by the {spa}, but the words leave {silently} each night.",
+     "ja": "修理の人が、スパのそばの化粧室の表示を何度も直してくれましたが、言葉は毎晩、音もなく消えていきます。",
+     "ids": [
+      "t0786",
+      "t0787",
+      "t0788",
+      "t0790",
+      "t0789"
+     ]
+    },
+    {
+     "en": "To {streamline} the desk, print the {spreadsheet} and use a {stapler}. The bank {teller} says white paper money is up {substantially}.",
+     "ja": "フロント業務を合理化するため、表計算シートを印刷して、ホッチキスで留めること。銀行の窓口係によると、白い紙のお金が大幅に増えているそうです。",
+     "ids": [
+      "t0793",
+      "t0791",
+      "t0792",
+      "t0795",
+      "t0794"
+     ]
+    },
+    {
+     "en": "Keep the {walkway} {tidy}. We need {toner} {urgently} to print the old crew names, and I will pay each {toll} for them.",
+     "ja": "通路はきれいにしておくこと。昔の乗組員の名前を印刷するため、トナーが至急必要です。あの人たちの通行料は、すべて私が払います。",
+     "ids": [
+      "t0800",
+      "t0796",
+      "t0798",
+      "t0799",
+      "t0797"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 39,
+   "ch": 5,
+   "kind": "mail",
+   "from": "Harbor Travel",
+   "to": "Ms. Sora",
+   "lines": [
+    {
+     "en": "We {absorb} costs for tours featuring {antiques} and coffee {beans}. We will {administer} refunds; funds are {ample}.",
+     "ja": "骨董品とコーヒー豆を扱うツアーの費用は当社が負担します。返金を実施します。資金は十分にあります。",
+     "ids": [
+      "t0801",
+      "t0804",
+      "t0805",
+      "t0802",
+      "t0803"
+     ]
+    },
+    {
+     "en": "A {careless} {collector} signed a white card that does not {conform} to our rules. He said {bye} to his debts and went to {browse}.",
+     "ja": "不注意な収集家が一人、当社の規則に合わない白いカードに署名しました。借金にさよならを言って、店をざっと見に行ってしまいました。",
+     "ids": [
+      "t0808",
+      "t0809",
+      "t0810",
+      "t0807",
+      "t0806"
+     ]
+    },
+    {
+     "en": "{Contrary} to reports, {congestion} continues: another {contradiction}. Our ticket {distributor} found her {diploma} blank too.",
+     "ja": "報告に反して、混雑は続いています。また一つ矛盾が見つかりました。当社の切符の流通業者は、自分の卒業証書も白紙になっていたそうです。",
+     "ids": [
+      "t0813",
+      "t0811",
+      "t0812",
+      "t0815",
+      "t0814"
+     ]
+    },
+    {
+     "en": "Our {environmentally} friendly tour lets guests {dive} from boats toward {exotic} fish. After cancellation, our {energetic} guide checks the {escalator}.",
+     "ja": "環境にやさしい当社のツアーでは、客が船から異国情緒あふれる魚たちに向かって飛び込みます。中止後、精力的なガイドはエスカレーターを点検しています。",
+     "ids": [
+      "t0818",
+      "t0816",
+      "t0820",
+      "t0817",
+      "t0819"
+     ]
+    },
+    {
+     "en": "Our {guidance}: we are {hesitant} to offer a {generalization}. Each card had {gum} on it, from a man in paper, not {fabric}.",
+     "ja": "当社からの助言です。一般論を言うのはためらわれます。けれど、どのカードにもガムがついていて、布ではなく紙をまとった男から来ていました。",
+     "ids": [
+      "t0823",
+      "t0825",
+      "t0822",
+      "t0824",
+      "t0821"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 40,
+   "ch": 5,
+   "kind": "notice",
+   "from": "Yosuga Station",
+   "to": "All passengers",
+   "lines": [
+    {
+     "en": "Delays are an {indicator} of disruption; a {junior} clerk helps passengers {individually}. {Likewise}, our {lifestyle} here has changed.",
+     "ja": "遅延は混乱の指標です。若手の駅員が乗客を個別にお手伝いします。同じように、ここでの私たちの暮らしも変わりました。",
+     "ids": [
+      "t0826",
+      "t0828",
+      "t0827",
+      "t0830",
+      "t0829"
+     ]
+    },
+    {
+     "en": "An {organizational} issue put the city {orchestra} and a teacher of {physics} on one train. Our {morale} is low; the {outlook} is good.",
+     "ja": "組織上の問題で、市のオーケストラと物理の先生が、同じ列車に乗っています。私たちの士気は下がっていますが、見通しは明るいです。",
+     "ids": [
+      "t0833",
+      "t0832",
+      "t0835",
+      "t0831",
+      "t0834"
+     ]
+    },
+    {
+     "en": "People give the timetable on the {pole} a {reflexive} look, like a {puzzle}. Have a {steak} at the hotel; {snowy} trains are late.",
+     "ja": "柱の時刻表を、みんなパズルでも見るように、反射的に見てしまいます。雪をかぶった列車は遅れています。ホテルでステーキでもどうぞ。",
+     "ids": [
+      "t0836",
+      "t0838",
+      "t0837",
+      "t0840",
+      "t0839"
+     ]
+    },
+    {
+     "en": "With {telecommunication} down, red {stickers} show late trains. This is {uncomfortable}, so a quiet room is a free {amenity}; we post {timely} news.",
+     "ja": "通信が止まっているため、遅れている列車を赤いステッカーで示しています。居心地の悪い状況なので、静かな部屋を無料の快適設備として用意しました。必要な知らせは適切な時に掲示します。",
+     "ids": [
+      "t0842",
+      "t0841",
+      "t0844",
+      "t0845",
+      "t0843"
+     ]
+    },
+    {
+     "en": "Yosuga Maru crew: a {barbecue} will {await} you at the hotel, {approximate} time eight. {Beginners} in {biology}: meet at the gate.",
+     "ja": "ヨスガ丸の乗組員の皆さま：ホテルでバーベキューがお待ちしています。開始はおよそ8時。生物学の初心者の皆さんは、門に集まってください。",
+     "ids": [
+      "t0848",
+      "t0847",
+      "t0846",
+      "t0849",
+      "t0850"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 41,
+   "ch": 5,
+   "kind": "letter",
+   "from": "Captain Nagi",
+   "to": "Chief Hatori",
+   "lines": [
+    {
+     "en": "Hatori, as {chairperson} of our {charitable} crew group, I need help. My {checkup} went well; I have my {blanket} and {cooler}.",
+     "ja": "ハトリへ。慈善活動をしている乗組員の会の議長として、助けがほしい。健康診断は問題なかった。毛布もクーラーボックスも手元にある。",
+     "ids": [
+      "t0852",
+      "t0853",
+      "t0854",
+      "t0851",
+      "t0855"
+     ]
+    },
+    {
+     "en": "My car {dealership} stands by the {crane}. A stranger told my {dependable} crew to {dispose} of letters and {disconnect} their phones.",
+     "ja": "私の自動車販売店はクレーンのそばにある。見知らぬ男が、信頼できる乗組員たちに手紙を処分し、電話の接続を切るよう言った。",
+     "ids": [
+      "t0857",
+      "t0856",
+      "t0858",
+      "t0860",
+      "t0859"
+     ]
+    },
+    {
+     "en": "I will not let him {disrupt} us. Our cook, now {freelance} but still {dynamic}, will {grill} fish; the men said yes {enthusiastically}.",
+     "ja": "あの男に乱させはしない。料理番は今はフリーランスだが相変わらず元気で、魚を焼いてくれる。皆も大喜びで賛成した。",
+     "ids": [
+      "t0861",
+      "t0864",
+      "t0862",
+      "t0865",
+      "t0863"
+     ]
+    },
+    {
+     "en": "My men work {internationally}, so a {messenger} like Tsumugi is {invaluable}. My {habitual} place for crew names is a {paperback}.",
+     "ja": "皆いまは世界各地で働いているから、ツムギのような配達員は何より貴重だ。乗組員の名前は、いつものように、ペーパーバックにはさんである。",
+     "ids": [
+      "t0867",
+      "t0869",
+      "t0868",
+      "t0866",
+      "t0870"
+     ]
+    },
+    {
+     "en": "{Reproduce} vanished invitations; {staple} names onto copies; my {rebate} covers costs. {Spray} them with wax before the damage {recurs}.",
+     "ja": "消えた招待状を複製し、名前を書いた紙を写しにホチキスで留めてほしい。費用は私の割戻金で払う。被害が再発する前に、蝋を吹きつけてくれ。",
+     "ids": [
+      "t0873",
+      "t0875",
+      "t0871",
+      "t0874",
+      "t0872"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 42,
+   "ch": 5,
+   "kind": "letter",
+   "from": "The old crew of the Yosuga Maru",
+   "to": "Captain Nagi",
+   "lines": [
+    {
+     "en": "I was a {teen} that night; I still see the lighthouse {stripe}. No {strategic} offer can {tempt} me; my {timer} is set.",
+     "ja": "あの夜、私は十代だった。灯台のしま模様が、今も目に浮かぶ。どんな戦略的な誘いにも乗らない。タイマーはもう合わせてある。",
+     "ids": [
+      "t0878",
+      "t0877",
+      "t0876",
+      "t0879",
+      "t0880"
+     ]
+    },
+    {
+     "en": "I will {vacate} my room for a week and {wisely} bring little to {unload}. A {whale} came {unusually} near.",
+     "ja": "一週間、部屋を空ける。荷降ろしが少なくて済むよう、持ち物は賢く絞っていく。クジラがいつになく近くまで来た。",
+     "ids": [
+      "t0883",
+      "t0885",
+      "t0881",
+      "t0884",
+      "t0882"
+     ]
+    },
+    {
+     "en": "Once an {amateur}, I now work on {architectural} plans for an {ambassador}. I hope to {attain} one last thing: to begin {anew}.",
+     "ja": "素人だった私も、今は大使のために建築の設計図を手がけている。最後に一つだけ果たしたい。新たに始めることだ。",
+     "ids": [
+      "t0886",
+      "t0889",
+      "t0887",
+      "t0890",
+      "t0888"
+     ]
+    },
+    {
+     "en": "I have the {blueprint} of our deck light {circuit}, with one {bug}. Be {cautious}: a man in white gave my son a {balloon}.",
+     "ja": "甲板の灯りの回路の設計図を持っている。バグが一つあるものだ。気をつけて。白い服の男が、うちの息子に風船を渡した。",
+     "ids": [
+      "t0892",
+      "t0895",
+      "t0893",
+      "t0894",
+      "t0891"
+     ]
+    },
+    {
+     "en": "As a {counselor}, I {convey} hope: that broken power {cord} never stopped him. {Commerce} declined, but I will {clap} at our gathering.",
+     "ja": "カウンセラーとして、希望を伝えたい。あの切れた電源コードも、灯台守を止められなかった。商取引は衰えたが、集まりでは拍手を送るつもりだ。",
+     "ids": [
+      "t0900",
+      "t0898",
+      "t0899",
+      "t0897",
+      "t0896"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 43,
+   "ch": 5,
+   "kind": "form",
+   "from": "The highest room",
+   "to": "Front desk",
+   "lines": [
+    {
+     "en": "Take payment by direct {debit}; fix your {delicate} doors. Your {dependence} on words is a {distraction}; {downsize} your staff.",
+     "ja": "支払いは口座からの引き落としで。壊れやすい戸を直せ。君たちの言葉への依存は、気を散らすだけだ。人員を削減したまえ。",
+     "ids": [
+      "t0901",
+      "t0902",
+      "t0903",
+      "t0904",
+      "t0905"
+     ]
+    },
+    {
+     "en": "The crew downstairs have feet like an {elephant} and too much {enthusiasm}. A boat {enthusiast} comes to my door; your {flexibility} is {evident}.",
+     "ja": "階下の乗組員たちは象のような足で、熱意がありすぎる。船の愛好家が、私の戸口まで来る。君たちの柔軟さは、よくわかった。",
+     "ids": [
+      "t0906",
+      "t0907",
+      "t0908",
+      "t0910",
+      "t0909"
+     ]
+    },
+    {
+     "en": "People on {flextime} use the {hallway}, and the {generator} runs all night. {Fortunately}, I can stand that, but not talk of a {freighter}.",
+     "ja": "フレックス制の人たちが廊下を使い、発電機が夜通し動いている。幸い、それには耐えられる。だが、貨物船の話には耐えられない。",
+     "ids": [
+      "t0911",
+      "t0915",
+      "t0914",
+      "t0912",
+      "t0913"
+     ]
+    },
+    {
+     "en": "No {hamburger}. Every {homeowner} holds my card, so it is {imperative} guests do not {inflate} an old story into a {hazard}.",
+     "ja": "ハンバーガーは要らない。家の持ち主はみな私のカードを持っている。だから、客たちが古い話を膨らませて危険なものにしないことが、絶対に必要だ。",
+     "ids": [
+      "t0916",
+      "t0918",
+      "t0919",
+      "t0920",
+      "t0917"
+     ]
+    },
+    {
+     "en": "I once had to {memorize} a report about myself. No {lecturer} or {merchant} can {insert} truth into it, so words are not {meaningful}.",
+     "ja": "私はかつて、自分について書かれた報告書を暗記させられた。講演者にも商店主にも、そこへ真実を差し込むことはできない。だから、言葉に意味などない。",
+     "ids": [
+      "t0924",
+      "t0922",
+      "t0925",
+      "t0921",
+      "t0923"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 44,
+   "ch": 5,
+   "kind": "ledger",
+   "from": "Tsumugi",
+   "to": "Mayor Tobe",
+   "lines": [
+    {
+     "en": "Our {petition} needs no {modification}: each {occupant} heard Nagi describe carrying oil uphill. I helped {oversee} the meeting; Sora did not {overcharge}.",
+     "ja": "請願に修正は不要です。滞在者は皆、油を丘の上へ運んだ話をナギ船長から聞きました。私は会の統括を手伝い、ソラさんは高額な料金を取りませんでした。",
+     "ids": [
+      "t0930",
+      "t0926",
+      "t0927",
+      "t0929",
+      "t0928"
+     ]
+    },
+    {
+     "en": "Children ate {popcorn} on {pillows} beside {pottery} lamps. Aoi will {publicize} the testimony; Kiri recorded it {professionally}: the keeper lit the fire.",
+     "ja": "子どもたちは陶器のランプのそばで、枕に座ってポップコーンを食べました。アオイさんが証言を広めます。キリさんはプロらしい手際で記録しました。火をたいたのは灯台守だったのです。",
+     "ids": [
+      "t0932",
+      "t0931",
+      "t0933",
+      "t0935",
+      "t0934"
+     ]
+    },
+    {
+     "en": "\"To {redecorate} parade floats, officials cut {refinery} orders; no {ray} remained.\" Kiri clicked to {refresh} the record; his {refundable} ticket could wait.",
+     "ja": "「パレードの山車を模様替えするため、役人たちは製油所への注文を減らした。光は一筋も残らなかった」。キリさんは記録を再読み込みしようとクリックしました。払い戻し可能な切符のことは、後回しでよかったのです。",
+     "ids": [
+      "t0937",
+      "t0938",
+      "t0936",
+      "t0939",
+      "t0940"
+     ]
+    },
+    {
+     "en": "\"Water from each {sewer} froze; {reluctant} children learned to {skate}. His {reliability} never failed: he carried oil himself without {reimbursement}.\"",
+     "ja": "「下水道からあふれた水は凍り、気乗りしない子どもたちもスケートを覚えた。灯台守への信頼は揺るがなかった。費用の払い戻しも受けず、自分で油を運んだのだ」。",
+     "ids": [
+      "t0944",
+      "t0943",
+      "t0945",
+      "t0942",
+      "t0941"
+     ]
+    },
+    {
+     "en": "The report claimed {theft} and demanded contract {termination}. A {sleepy} child beside a {skateboard} saw Blank leave in his {tailored} coat.",
+     "ja": "報告書は盗難があったと主張し、契約の解約を求めていました。スケートボードのそばにいた眠そうな子どもが、仕立てた上着を着たブランクが出ていくのを見ました。",
+     "ids": [
+      "t0950",
+      "t0949",
+      "t0947",
+      "t0946",
+      "t0948"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 45,
+   "ch": 5,
+   "kind": "memo",
+   "from": "Mr. Blank",
+   "to": "Ms. Sora",
+   "lines": [
+    {
+     "en": "Before the {thunderstorm}, {waive} my bill or accept {unused} paper. Do not {transmit} my name; no {transmission} is safe.",
+     "ja": "雷雨の前に、勘定を免除するか、未使用の紙を受け取ってくれ。私の名前を送信しないこと。安全な伝送手段などない。",
+     "ids": [
+      "t0951",
+      "t0955",
+      "t0954",
+      "t0953",
+      "t0952"
+     ]
+    },
+    {
+     "en": "Give the {baker} these {yen} for her bread. {Additionally}, you gave me no {affirmative} word, so I will not {activate} your card.",
+     "ja": "このお金をパン屋に渡してくれ。パンの代金だ。それから、君は私に一度も「はい」と言わなかった。だから、君のカードは有効にしない。",
+     "ids": [
+      "t0960",
+      "t0956",
+      "t0958",
+      "t0959",
+      "t0957"
+     ]
+    },
+    {
+     "en": "You {brainstorm} with the post office, but that {collaboration} will not open my {cage}. Then the {cinema} and each {condominium} go blank.",
+     "ja": "君たちは郵便局と知恵を出し合っているが、その協働で私の檻は開かない。そうして、映画館も、どのマンションも白紙になる。",
+     "ids": [
+      "t0961",
+      "t0964",
+      "t0962",
+      "t0963",
+      "t0965"
+     ]
+    },
+    {
+     "en": "Nine {consecutive} weeks, one {cordless} phone, one {deluxe} room: no {discrepancy}. Forgetting seems {desirable}, but thanks vanish with debts: my price.",
+     "ja": "連続した九週間、コードレス電話一台、デラックスな部屋一室。食い違いはない。忘れるのは望ましく思えるが、お礼も借金と一緒に消える。それが私の代価だ。",
+     "ids": [
+      "t0966",
+      "t0967",
+      "t0968",
+      "t0970",
+      "t0969"
+     ]
+    },
+    {
+     "en": "Do not {dispatch} anyone to the cape; the {drawback} is a {dull} life without gratitude. Divide bread {evenly} and live {economically}.",
+     "ja": "岬へは誰も派遣するな。欠点は、感謝のない退屈な暮らしになることだ。パンは均等に分け、経済的に暮らすがいい。",
+     "ids": [
+      "t0971",
+      "t0972",
+      "t0973",
+      "t0975",
+      "t0974"
+     ]
+    }
+   ]
+  },
+  {
+   "shelf": 46,
+   "ch": 5,
+   "kind": "letter",
+   "from": "Chief Hatori",
+   "to": "Tsumugi",
+   "lines": [
+    {
+     "en": "{Exclusively} for you: no {farewell}, despite my {fatigue}. Twenty {fiscal} years ago, the crew wrote thanks; your {excellence} recalled that letter.",
+     "ja": "もっぱら君に宛てて書く。疲れてはいるが、別れの手紙ではない。二十会計年度前、乗組員たちがお礼を書いた。君の見事な働きが、あの手紙を思い出させてくれた。",
+     "ids": [
+      "t0977",
+      "t0978",
+      "t0979",
+      "t0980",
+      "t0976"
+     ]
+    },
+    {
+     "en": "Their {flour} bag letter weighs nine {grams}; our car {fleet} departed. I sealed it {formally}, but the keeper had already vanished into {fog}.",
+     "ja": "小麦粉の袋に書かれたその手紙は九グラムある。私たちの保有車両は出発した。私は正式に封をしたが、灯台守はすでに霧の中へ姿を消していた。",
+     "ids": [
+      "t0982",
+      "t0985",
+      "t0981",
+      "t0984",
+      "t0983"
+     ]
+    },
+    {
+     "en": "Under the {handbook}, bottom drawer beside the {heater}: his letter. Bring a {helmet}, no {headphones}; follow signs for {hikers} to the cape.",
+     "ja": "ヒーターのそばの一番下の引き出し、ハンドブックの下に、彼への手紙がある。ヘルメットを持ち、ヘッドホンは持たず、ハイキング客向けの標識に沿って岬へ行きなさい。",
+     "ids": [
+      "t0986",
+      "t0988",
+      "t0989",
+      "t0987",
+      "t0990"
+     ]
+    },
+    {
+     "en": "{Loyalty} to Shirase kept me silent. Furo hatched {loudly} from that wax under my {lighter}, a {homeless} bird beside our {microwave}.",
+     "ja": "シラセへの忠誠心から、私は黙っていた。フウロウは私のライターの火の下で、あの蝋から大声を上げて生まれた。局の電子レンジのそばにいる、家のない鳥だ。",
+     "ids": [
+      "t0994",
+      "t0993",
+      "t0992",
+      "t0991",
+      "t0995"
+     ]
+    },
+    {
+     "en": "Let no one {misidentify} him again. Put on a {neat} {outfit}; by my {nomination}, you {officially} bring the letter to the cape.",
+     "ja": "もう誰にも、あの人を見誤らせてはいけない。こぎれいな身なりをしなさい。私の推薦により、君が正式にあの手紙を岬へ届ける。",
+     "ids": [
+      "t0996",
+      "t0997",
+      "t1000",
+      "t0998",
+      "t0999"
+     ]
+    }
+   ]
   }
  ]
 }
