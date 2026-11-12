@@ -5,8 +5,8 @@
 .gq-album-top b{font-size:17px;color:var(--seal)}
 .gq-album-total{flex:1;text-align:center}
 .gq-album-nav{display:flex;align-items:center;gap:8px;flex-shrink:0}
-.gq-album-nav button{width:48px;min-height:44px;font-size:24px;line-height:1;padding:0}
-.gq-album-nav button:disabled{opacity:.35;cursor:default}
+.gq-album-nav .gq-round{flex:0 0 46px;width:46px;height:46px;padding:0;border-radius:50%;display:grid;place-items:center}
+.gq-album-nav .gq-round:disabled{opacity:.35;cursor:default;box-shadow:none}
 .gq-album-title{flex:1;display:grid;justify-items:center;line-height:1.25;font-family:var(--serif)}
 .gq-album-title small{font-size:11px;color:var(--sub);font-weight:700}
 .gq-album-title b{font-size:20px;letter-spacing:.1em}
@@ -71,7 +71,7 @@
 .gq-zoom-ja{margin:0;font-size:16px;font-weight:700}.gq-zoom-ja small{font-size:11px;color:var(--sub)}
 .gq-zoom .gq-stars{color:var(--lamp);font-size:18px;letter-spacing:.1em;text-shadow:0 0 1px var(--ink)}
 .gq-ex{margin:0;font-size:14px;line-height:1.5;font-weight:700}.gq-ex small{display:block;font-size:12px;color:var(--sub);font-weight:500}
-.gq-zoom-actions{display:flex;gap:10px;margin-top:4px}.gq-zoom-actions button{min-width:96px;min-height:44px}
+.gq-zoom-actions{display:flex;gap:22px;margin-top:6px}
 
 /* 設定 */
 .gq-settings{overflow:auto}
@@ -80,10 +80,13 @@
 .gq-settings p{margin:0;font-size:12px;line-height:1.6}
 .gq-settings .note{color:var(--sub)}
 .gq-settings textarea{width:100%;min-height:84px;resize:vertical;font:12px/1.4 ui-monospace,monospace;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:8px;padding:6px;word-break:break-all;box-sizing:border-box}
-.gq-settings .row{display:flex;gap:8px;flex-wrap:wrap}.gq-settings .row button{min-height:44px;padding:8px 14px}
+.gq-settings .row{display:flex;gap:10px;flex-wrap:wrap}
+/* 荷札の形（左が丸く、紐の穴つき）。横長の四角にしない。 */
+.gq-settings .row button:not(.text-button){position:relative;min-height:46px;min-width:76px;padding:8px 14px 8px 28px;border-radius:23px 8px 8px 23px;background:var(--lamp-lt)}
+.gq-settings .row button:not(.text-button)::before{content:"";position:absolute;left:12px;top:50%;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;border:2px solid var(--ink);background:var(--paper-hi)}
 .gq-settings button:disabled{opacity:.4}
 .gq-settings .msg{font-weight:700}.gq-settings .msg.err{color:var(--seal)}
 .gq-compare{width:100%;border-collapse:collapse;font-size:12px}
 .gq-compare th,.gq-compare td{border:1px solid var(--fog);padding:4px 6px;text-align:center}
-.gq-switch{display:flex;justify-content:space-between;align-items:center;gap:8px}.gq-switch button{min-width:96px;min-height:44px}
+.gq-switch{display:flex;justify-content:space-between;align-items:center;gap:8px}.gq-switch button{width:58px;height:58px;padding:0;border-radius:50%;font-size:14px}.gq-switch button[aria-pressed=true]{background:var(--lamp)}
 .gq-album [hidden],.gq-settings [hidden]{display:none!important}

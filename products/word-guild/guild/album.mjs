@@ -17,7 +17,7 @@ import {stampState, pageSpecs} from './chara.mjs';
 import {charaDefs, stampHtml} from './chara-svg.mjs';
 import {CHAPTER_NAMES} from './chapters.mjs';
 import {emptyProgress} from './store.mjs';
-import {esc, speak as defaultSpeak, starsMarkup} from './dom.mjs';
+import {esc, speak as defaultSpeak, starsMarkup, fab, icon} from './dom.mjs';
 
 const POS = {v: '動詞', n: '名詞', a: '形容詞', o: 'その他'};
 const STATE_NAME = {shadow: '影', proof: '仮刷り', print: '本刷り', gold: '金ぶち'};
@@ -75,7 +75,7 @@ export const clampIndex = (index, length) => Math.min(Math.max(0, index), Math.m
 const BASE = new URL('../', import.meta.url).href;
 const CSS_URL = new URL('../album.css', import.meta.url).href;
 
-function ensureCss() {
+export function ensureCss() {
   if (typeof document === 'undefined' || document.getElementById('gq-album-css')) return;
   const link = document.createElement('link');
   link.id = 'gq-album-css';
@@ -99,6 +99,43 @@ function stampWithMark(word, spec, state, base, size) {
   let html = stampHtml(word, spec, {state, ward: word.ch, base, size});
   if (size === 'sm' && spec.kind !== 'big' && word.w.length > 9) html = html.replace('class="stamp ', 'class="stamp long ');
   return state === 'gold' ? html.replace(/<\/div><\/button>$/, `${PM}</div></button>`) : html;
+}
+
+// 切手の拡大表示（切手帳と結果画面で共通）。host の中に重ねて出し、閉じる関数を返す。
+// opts: {word, spec, state, box, base, say, met（影でも語を見せるとき true）, onClose}
+export function showStampZoom(host, {word, spec, state, box = 0, base = BASE, say = defaultSpeak, met = state !== 'shadow', onClose}) {
+  ensureCss();
+  const ex = met && word.ex ? `<p class="gq-ex">${esc(word.ex)}<small>${esc(word.exJa ?? '')}</small></p>` : '';
+  const overlay = document.createElement('div');
+  overlay.className = 'gq-zoom';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.innerHTML = `<div class="gq-zoom-card">
+    <div class="gq-zoom-stamp">${stampWithMark(word, spec, state, base, 'lg')}</div>
+    <p class="gq-zoom-state">${STATE_NAME[state]}${spec.kind === 'odd' ? '　✦ 変わり種' : ''}</p>
+    ${met ? `<h2>${esc(word.w)}</h2><p class="gq-zoom-ja">${esc(word.ja)}　<small>${POS[word.pos] ?? ''}</small></p>
+      <p class="gq-stars" aria-label="習熟度 ${box}">${starsMarkup(box)}</p>${ex}`
+      : '<h2>？</h2>'}
+    <div class="gq-zoom-actions">${met ? fab({icon: 'speaker', label: '発音', caption: false, attrs: 'data-act="say"'}) : ''}${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}</div></div>`;
+  let open = true;
+  const close = () => {
+    if (!open) return;
+    open = false;
+    overlay.remove();
+    document.removeEventListener('keydown', onKey);
+    onClose?.();
+  };
+  const onKey = event => { if (event.key === 'Escape') close(); };
+  document.addEventListener('keydown', onKey);
+  overlay.onclick = event => {
+    const act = event.target.closest('[data-act]')?.dataset.act;
+    if (act === 'say') say(word.w);
+    else if (act === 'close' || event.target === overlay) close();
+  };
+  host.append(overlay);
+  if (met) say(word.w); // 利用者のタップの処理の中で呼ぶ（Safari の自動再生の制限）
+  overlay.querySelector('[data-act="close"]').focus({preventScroll: true});
+  return close;
 }
 
 async function load(deps) {
@@ -135,7 +172,7 @@ export function openAlbum(container, deps = {}) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'text-button';
-    button.textContent = '← 戻る';
+    button.textContent = '← トップへ';
     button.onclick = () => deps.back();
     container.append(button);
   }
@@ -156,7 +193,7 @@ export function openAlbum(container, deps = {}) {
     let index = startIndex(pages, progress, deps.shelf);
     let view = 'page'; // 'page' | 'index'
 
-    const backButton = deps.back ? '<button class="text-button gq-album-back" data-act="back" type="button">← 戻る</button>' : '';
+    const backButton = deps.back ? '<button class="text-button gq-album-back" data-act="back" type="button">← トップへ</button>' : '';
 
     function renderPage() {
       view = 'page';
@@ -173,15 +210,15 @@ export function openAlbum(container, deps = {}) {
       container.innerHTML = `${charaDefs(base)}
         <div class="gq-album-top">${backButton}<span class="gq-album-total">集めた切手 <b>${collected}</b>/${words.length}</span><button class="text-button" data-act="index" type="button">目次</button></div>
         <div class="gq-album-nav">
-          <button type="button" data-act="prev" aria-label="前のページ" ${index === 0 ? 'disabled' : ''}>‹</button>
+          <button type="button" class="gq-round" data-act="prev" aria-label="前のページ" ${index === 0 ? 'disabled' : ''}>${icon('prev')}</button>
           <div class="gq-album-title"><small>${page.ch}区 ${esc(wardName)}</small><b>街灯 ${page.shelf}</b><span>${index + 1} / ${pages.length}</span></div>
-          <button type="button" data-act="next" aria-label="次のページ" ${index === pages.length - 1 ? 'disabled' : ''}>›</button>
+          <button type="button" class="gq-round" data-act="next" aria-label="次のページ" ${index === pages.length - 1 ? 'disabled' : ''}>${icon('next')}</button>
         </div>
         <div class="gq-album-body ${pp.allGold ? 'gold-page' : pp.complete ? 'lit-page' : ''}">
           ${first ? `<div class="gq-album-gate">${memorialHtml(page.ch, gates.includes(page.ch), base)}</div>` : ''}
           <p class="gq-page-count"><b>${pp.got}/${pp.total}</b> ${seal}</p>
           <div class="gq-sheet">${stamps}</div>
-          ${odd ? `<p class="gq-odd">✦ このページの変わり種：<button type="button" class="text-button" data-id="${esc(odd.id)}">${oddState === 'shadow' ? '？' : esc(odd.w)}</button></p>` : ''}
+          ${odd ? `<p class="gq-odd">✦ 変わり種 <button type="button" class="text-button" data-id="${esc(odd.id)}">${oddState === 'shadow' ? '？' : esc(odd.w)}</button></p>` : ''}
         </div>`;
       const body = container.querySelector('.gq-album-body');
       if (body) body.scrollTop = 0;
@@ -208,33 +245,13 @@ export function openAlbum(container, deps = {}) {
       if (!word) return;
       const page = pages.find(p => p.shelf === word.shelf);
       const spec = specsOf(page)[page.words.indexOf(word)];
-      const state = stampState(progress.words?.[word.id]);
-      const met = state !== 'shadow';
-      const box = progress.words?.[word.id]?.box ?? 0;
-      const ex = met && word.ex ? `<p class="gq-ex">${esc(word.ex)}<small>${esc(word.exJa ?? '')}</small></p>` : '';
-      const overlay = document.createElement('div');
-      overlay.className = 'gq-zoom';
-      overlay.setAttribute('role', 'dialog');
-      overlay.setAttribute('aria-modal', 'true');
-      overlay.innerHTML = `<div class="gq-zoom-card">
-        <div class="gq-zoom-stamp">${stampWithMark(word, spec, state, base, 'lg')}</div>
-        <p class="gq-zoom-state">${STATE_NAME[state]}${spec.kind === 'odd' ? '　✦ 変わり種' : ''}</p>
-        ${met ? `<h2>${esc(word.w)}</h2><p class="gq-zoom-ja">${esc(word.ja)}　<small>${POS[word.pos] ?? ''}</small></p>
-          <p class="gq-stars" aria-label="習熟度 ${box}">${starsMarkup(box)}</p>${ex}`
-          : '<h2>？</h2><p class="gq-zoom-ja">まだ出会っていません。</p>'}
-        <div class="gq-zoom-actions">${met ? '<button type="button" data-act="say">発音</button>' : ''}<button type="button" data-act="close">とじる</button></div></div>`;
-      const close = () => { overlay.remove(); document.removeEventListener('keydown', onKey); const i = cleanups.indexOf(close); if (i >= 0) cleanups.splice(i, 1); };
-      const onKey = event => { if (event.key === 'Escape') close(); };
-      document.addEventListener('keydown', onKey);
+      const close = showStampZoom(container, {
+        word, spec, base, say,
+        state: stampState(progress.words?.[word.id]),
+        box: progress.words?.[word.id]?.box ?? 0,
+        onClose: () => { const i = cleanups.indexOf(close); if (i >= 0) cleanups.splice(i, 1); },
+      });
       cleanups.push(close);
-      overlay.onclick = event => {
-        const act = event.target.closest('[data-act]')?.dataset.act;
-        if (act === 'say') say(word.w);
-        else if (act === 'close' || event.target === overlay) close();
-      };
-      container.append(overlay);
-      if (met) say(word.w); // 利用者のタップの処理の中で呼ぶ（Safari の自動再生の制限）
-      overlay.querySelector('[data-act="close"]').focus({preventScroll: true});
     }
 
     container.onclick = event => {

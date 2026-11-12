@@ -75,7 +75,7 @@ export function openSettings(container, deps = {}) {
     <p class="eyebrow">設定</p>
     <section><div class="gq-switch"><h3>音</h3><button type="button" id="gs-sound" aria-pressed="${soundOn}"></button></div></section>
     <section><h3>保存の書き出し</h3>
-      <p class="note">進捗を文字列にして、メモなどに控えておけます。最後に書き出した日：<span id="gs-exday">${esc(exportDay())}</span></p>
+      <p class="note">最後に書き出した日：<span id="gs-exday">${esc(exportDay())}</span></p>
       <textarea id="gs-out" readonly rows="3" aria-label="書き出した文字列" hidden></textarea>
       <div class="row"><button type="button" id="gs-export" ${deps.dev ? 'disabled' : ''}>書き出す</button><button type="button" id="gs-copy" disabled>コピー</button></div>
       <p class="msg" id="gs-exmsg" role="status"></p></section>
@@ -85,11 +85,11 @@ export function openSettings(container, deps = {}) {
       <div id="gs-result" role="status"></div>
       <div class="row"><button type="button" id="gs-restore" ${writable && storage && hasBackup(storage) ? '' : 'hidden'}>読み込む前の進捗に戻す</button></div></section>
     <section><h3>Safari とホーム画面アプリ</h3>
-      <p>Safari で遊んだ進捗と、ホーム画面に追加したアプリの進捗は、別々に保存されます。引き継ぐには、Safari で「書き出す」→ ホーム画面に追加 → アプリで「読み込み」の順に行います。</p>
-      ${isStandalone() ? '' : '<p>ホーム画面への追加：共有ボタン →「ホーム画面に追加」。追加したあとのアプリには進捗が引き継がれないので、読み込みが要ります。Safari のタブだけで遊ぶと、7日間開かないと保存が消えることがあります。</p>'}
+      <p>Safari とホーム画面アプリの進捗は別々です。引き継ぐには：Safari で「書き出す」→ ホーム画面に追加 → アプリで読み込み。</p>
+      ${isStandalone() ? '' : '<p>追加：共有ボタン →「ホーム画面に追加」。Safari のタブだけだと、7日間開かないと保存が消えることがあります。</p>'}
       ${deps.dev ? '<p class="note">いまは保存しないモードなので、書き出しと読み込みは使えません。</p>' : ''}</section>
     <section id="gs-update" hidden><p>新しい版があります。</p><div class="row"><button type="button" id="gs-apply">更新</button></div></section>
-    <div class="row"><button class="text-button" type="button" id="gs-credits">クレジット</button><button class="text-button" type="button" id="gs-back">← 戻る</button></div>`;
+    <div class="row"><button class="text-button" type="button" id="gs-credits">クレジット</button><button class="text-button" type="button" id="gs-back">← トップへ</button></div>`;
 
   const paintSound = () => { const b = $('#gs-sound'); if (b) { b.textContent = soundOn ? 'オン' : 'オフ'; b.setAttribute('aria-pressed', soundOn); } };
   function paintUpdate() { const s = $('#gs-update'); if (s) s.hidden = !updateReady; }
@@ -144,7 +144,7 @@ export function openSettings(container, deps = {}) {
       <tr><th>集めた切手</th><td>${now.stamps}</td><td>${next.stamps}</td></tr>
       <tr><th>クエスト</th><td>${now.quests}回</td><td>${next.quests}回</td></tr>
       <tr><th>連続</th><td>${now.streak}日</td><td>${next.streak}日</td></tr></table>
-      <p class="note">置きかえると、いまの進捗は控えに残ります。</p>
+      
       <div class="row"><button type="button" id="gs-replace">この進捗に置きかえる</button></div>`;
     $('#gs-replace').onclick = () => {
       // 控えと本保存の両方が成功してから置きかえる。失敗したら何も変えない
