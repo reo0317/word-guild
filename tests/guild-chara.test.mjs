@@ -114,3 +114,8 @@ test('SVG：共有定義は1回、紙魚は状態ごとに作れて、目を重�
   assert.ok(html.includes('？') && !html.includes(`>${word.w}<`));
   assert.ok(stampHtml(word, spec, {state: 'print', size: 'lg'}).includes(word.ja));
 });
+
+test('変わり種の仮刷りが参照するフィルターが共有定義にある', async () => {
+  const {charaDefs} = await import('../products/word-guild/guild/chara-svg.mjs');
+  assert.ok(charaDefs().includes('id="cg-p-odd"'));
+});

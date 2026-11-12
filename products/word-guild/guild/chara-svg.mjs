@@ -72,7 +72,7 @@ export function charaDefs(base = '') {
   }
   const nightTone = {dark: NIGHT.dark, mid: NIGHT.mid, tint: NIGHT.tint};
   parts.push(toneFilter('cg-t-odd', nightTone), accentFilter('cg-a-odd', NIGHT.accent),
-    lineFilter('cg-l-odd', NIGHT.dark, 3));
+    lineFilter('cg-l-odd', NIGHT.dark, 3), lineFilter('cg-p-odd', NIGHT.dark, 5));
   parts.push(`<filter id="cg-shadow" ${FX}><feColorMatrix type="matrix" values="0 0 0 0 0.38  0 0 0 0 0.36  0 0 0 0 0.46  0 0 0 0.5 0"/></filter>`);
   parts.push(`<filter id="cg-white" ${FX}><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0"/></filter>`);
   // 模様と網点は、体の形でくりぬく

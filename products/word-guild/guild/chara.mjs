@@ -66,8 +66,9 @@ export function pageSpecs(words, tags = []) {
   const seen = new Set();
   specs.forEach((spec, i) => {
     const rand = rngOf('page:', words[i].id);
-    const own = PROP_OF[spec.species];
-    const props = PROPS.filter(prop => prop !== own);
+    // 大物（oshimi）は種族から分類が分からないので、語の分類（tags）の小物も除く。
+    const own = new Set([PROP_OF[spec.species], PROP_OF[tags[i] ?? '']]);
+    const props = PROPS.filter(prop => !own.has(prop));
     for (let guard = 0; seen.has(keyOf(spec)) && guard < 200; guard++) {
       spec.prop = pick(props, rand);
       spec.ink = Math.floor(rand() * INKS);
