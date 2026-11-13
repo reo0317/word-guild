@@ -151,3 +151,17 @@
 /* 絵とそのシルエットだけを反転し、星・光・火花はそのままにする。 */
 .gq-house-image{position:absolute;inset:0}
 .gq-house.door-flipped .gq-house-image{transform:scaleX(-1)}
+
+/* G0: Canvasは既存の道の上、家・人物の下。2区以外は透明。 */
+.gq-road-cv{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.gq-gate.gq-gate-art{display:block;width:232px;height:232px;margin:-187px 0 0 -116px;font-size:0}
+.gq-gate-art img{position:absolute;display:block;pointer-events:none}
+.gq-gate-frame{inset:0;width:100%;height:100%}
+.gq-gate-art .gq-gate-door{top:45.572917%;width:17.447917%;height:31.901042%}
+.gq-gate-door-l{left:32.552083%;transform-origin:left center}
+.gq-gate-door-r{left:50%;transform-origin:right center}
+.gq-gate-art.cleared .gq-gate-door-l{transform:scaleX(-.16)}
+.gq-gate-art.cleared .gq-gate-door-r{transform:scaleX(-.16)}
+.gq-gate-art.hidden{opacity:.8}
+.gq-gate-art.hidden::after{content:"";position:absolute;inset:45% 0 0;background:radial-gradient(ellipse,var(--fog-lt),transparent 75%);opacity:.8}
+.gq-gate-card{position:absolute;left:48%;top:60%;width:10px;height:14px;background:var(--paper-hi);color:var(--seal);font-size:12px;line-height:14px;transform:rotate(4deg)}

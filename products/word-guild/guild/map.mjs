@@ -105,6 +105,25 @@ export function projectRoad(width, height, worldZ, camera = 0) {
     half: width * scale * W / 2, scale, z};
 }
 
+// 画面の1行が受け持つ地面の奥行き。投影と同じカメラを使う。
+export function roadRow(width, height, y, camera = 0) {
+  const scale = (y / height - HORIZON) / H_CAMERA;
+  if (scale <= 0) return null;
+  const z = f / scale;
+  const worldZ = camera + z - Z_NEAR;
+  return {...projectRoad(width, height, worldZ, camera), worldZ,
+    dz: z * z / (height * H_CAMERA * f)};
+}
+export function mipLevel(dz) {
+  return Math.max(0, Math.min(5, Math.ceil(Math.log2(Math.max(1, dz * 512 / 280 / 2)))));
+}
+export function wardAt(ranges, worldZ) {
+  return ranges.find(r => worldZ >= r.start && worldZ < r.end)?.ch ?? null;
+}
+export function gateDoorRect(ch) {
+  return ch === 2 ? {x: 500/1536, y: 700/1536, width: 536/1536, height: 490/1536} : null;
+}
+
 // side は道に対する家の位置。中央の玄関は向きを変えない。
 export function houseFlipped(shelf, side) {
   const door = HOUSE_DOORS[shelf];
@@ -189,12 +208,18 @@ function layout(map) {
     add('gate', H.gate, {ward, k: k++});
   });
   add('top', H.top, {}, H.top - 70);
-  return {items, total: y};
+  let start = 0;
+  const ranges = items.filter(i => i.type === 'gate').map(i => {
+    const range = {ch: i.ward.ch, start, end: i.cy};
+    start = i.cy;
+    return range;
+  });
+  return {items, total: y, ranges};
 }
 
 export function renderMap(view, ctx) {
   const {map, today, progress, on} = ctx;
-  const {items, total} = layout(map);
+  const {items, total, ranges} = layout(map);
   const roadEnd = total - 40; // 灯台の足元が道の終点。
   const night = rareStatus(ctx.rares ?? [], progress);
   const visiting = new Set(visitors(map, ctx.rares ?? [], progress, today).filter(shelf => progress.rare?.day !== today || !progress.rare.met.includes(shelf)));
@@ -248,6 +273,15 @@ export function renderMap(view, ctx) {
     }
     if (item.type === 'gate') {
       const {ward} = item;
+      if (ward.ch === 2) {
+        const tag = ward.gate === 'open' ? 'button' : 'div';
+        return bb(`gq-bb-gate${far}`, item.cy, item.lat,
+          `<${tag} class="gq-gate gq-gate-art ${ward.gate}" aria-label="2区の門${ward.gate === 'cleared' ? '（通過済み）' : ''}" ${tag === 'button' ? 'type="button" data-gate="2"' : ''}>
+          <img class="gq-gate-frame" src="art/gate-2.webp" alt="" width="512" height="512">
+          <img class="gq-gate-door gq-gate-door-l" src="art/gate-2-door-l.webp" alt="">
+          <img class="gq-gate-door gq-gate-door-r" src="art/gate-2-door-r.webp" alt="">
+          ${ward.gate === 'open' ? '<b class="gq-gate-card" aria-hidden="true">•</b>' : ''}</${tag}>`);
+      }
       const label = {hidden: '', open: `${ward.ch}区`, cleared: '✓'}[ward.gate];
       const tag = ward.gate === 'open' ? 'button' : 'div';
       return bb(`gq-bb-gate${far}`, item.cy, item.lat,
@@ -305,6 +339,7 @@ export function renderMap(view, ctx) {
       <div class="gq-stage" id="gq-stage">
         <div class="gq-sky" aria-hidden="true">${skies}</div>
         <i class="gq-haze" aria-hidden="true"></i>
+        <canvas class="gq-road-cv" id="gq-road-cv" aria-hidden="true"></canvas>
         <svg class="gq-road-svg" id="gq-road-svg" aria-hidden="true">
           <defs>${[['paper', 'var(--paper-hi)'], ['ink', 'var(--ink)'], ['lamp', 'var(--lamp)']].map(([id, color]) =>
             `<linearGradient id="gq-road-${id}" gradientUnits="userSpaceOnUse" x1="0" x2="0"><stop offset="0" stop-color="${color}" stop-opacity="0"/><stop offset="1" stop-color="${color}" stop-opacity="1"/></linearGradient>`).join('')}</defs>
@@ -345,6 +380,8 @@ export function renderMap(view, ctx) {
   const inner = $('#gq-road-in');
   const stage = $('#gq-stage');
   const svg = $('#gq-road-svg');
+  const canvas = $('#gq-road-cv');
+  let mips = null, textureRequested = false;
   const paths = {
     base: $('#gq-r-base'), lines: $('#gq-r-lines'), walked: $('#gq-r-walked'), edge: $('#gq-r-edge'), center: $('#gq-r-center'),
   };
@@ -404,17 +441,30 @@ export function renderMap(view, ctx) {
     const full = ribbon(roadEnd, 1);
     paths.edge.setAttribute('d', `M${full.left.map(fmt).join('L')}M${full.right.map(fmt).join('L')}`);
     paths.base.setAttribute('d', poly(full));
-    paths.walked.setAttribute('d', hereItem ? poly(ribbon(Math.min(hereY, roadEnd), 0.5)) : '');
+    const walked = roadPoints(Ws, Hs, Math.min(hereY, visibleEnd), c);
+    let walkedPath = '', run = [];
+    const flushWalked = () => {
+      if (run.length > 1) walkedPath += poly({left: run.map(p => [p.x-p.half*.5,p.y]), right: run.map(p => [p.x+p.half*.5,p.y])});
+      run = [];
+    };
+    for (const p of walked) {
+      if (mips && wardAt(ranges, p.worldZ) === 2) flushWalked();
+      else run.push(p);
+    }
+    flushWalked();
+    paths.walked.setAttribute('d', hereItem ? walkedPath : '');
 
     // 石だたみの横線と、中央の破線（距離に合わせて間隔が縮む）。
     const yMax = visibleEnd;
     let lines = '', dashes = '';
     for (let y = Math.max(0, Math.ceil((c) / 48) * 48); y <= yMax; y += 48) {
+      if (mips && wardAt(ranges, y) === 2) continue;
       const s = sOf(y - c);
       const x = X(y, s), sy = Y(s).toFixed(1), w = halfAt(y, s);
       lines += `M${(x - w).toFixed(1)} ${sy}L${(x + w).toFixed(1)} ${sy}`;
     }
     for (let y = Math.max(0, Math.ceil((c) / 36) * 36); y <= yMax; y += 36) {
+      if (mips && wardAt(ranges, y) === 2) continue;
       const y2 = Math.min(y + 14, yMax);
       const s1 = sOf(y - c), s2 = sOf(y2 - c);
       const x1 = X(y, s1), x2 = X(y2, s2);
@@ -423,6 +473,62 @@ export function renderMap(view, ctx) {
     }
     paths.lines.setAttribute('d', lines);
     paths.center.setAttribute('d', dashes);
+
+    // G0: 2区だけ既存の道の上へ石畳を貼る。読込失敗時は下のSVGが残る。
+    const paint = canvas.getContext?.('2d');
+    if (paint) {
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      if (canvas.width !== Math.round(Ws * ratio) || canvas.height !== Math.round(Hs * ratio)) {
+        canvas.width = Math.round(Ws * ratio); canvas.height = Math.round(Hs * ratio);
+      }
+      paint.setTransform(ratio, 0, 0, ratio, 0, 0);
+      paint.clearRect(0, 0, Ws, Hs);
+      if (mips) {
+        const fog = getComputedStyle(stage).getPropertyValue('--fog-lt').trim() || '#dce4e5';
+        for (let y = Math.ceil(project(visibleEnd).y); y < Hs; y++) {
+          const row = roadRow(Ws, Hs, y, c);
+          if (!row || wardAt(ranges, row.worldZ) !== 2) continue;
+          const tex = mips[mipLevel(row.dz)];
+          const k = tex.height / 280;
+          let v = ((row.worldZ * k) % tex.height + tex.height) % tex.height;
+          let remaining = Math.min(tex.height, Math.max(1, row.dz * k));
+          let destY = y;
+          const sample = remaining;
+          paint.globalAlpha = roadOpacity(row.worldZ - c);
+          paint.fillStyle = '#24394b';
+          paint.globalAlpha *= .16;
+          paint.fillRect(row.x-row.half*1.1, y, row.half*2.2, 1.05);
+          paint.globalAlpha = roadOpacity(row.worldZ - c);
+          // タイルをまたぐ標本も折り返す。画像外を読む空白を作らない。
+          while (remaining > .00001) {
+            const count = Math.min(remaining, tex.height - v);
+            const dh = count / sample;
+            paint.drawImage(tex, 0, v, tex.width, count, row.x-row.half, destY, row.half*2, dh+.05);
+            remaining -= count; destY += dh; v = 0;
+          }
+          if (row.worldZ > hereY) {
+            paint.globalAlpha *= .45; paint.fillStyle = fog;
+            paint.fillRect(row.x-row.half, y, row.half*2, 1.05);
+          }
+        }
+        paint.globalAlpha = 1;
+      }
+    }
+    if (paint && !textureRequested && ranges.some(r => r.ch === 2 && r.end > c && r.start < visibleEnd)) {
+      textureRequested = true;
+      const texture = new Image();
+      texture.onload = () => {
+        if (!stage.isConnected) return;
+        mips = Array.from({length: 6}, (_, level) => {
+          const tile = document.createElement('canvas');
+          tile.width = 256 >> level; tile.height = 512 >> level;
+          tile.getContext('2d').drawImage(texture, 0, 0, tile.width, tile.height);
+          return tile;
+        });
+        schedule();
+      };
+      texture.src = 'art/road/road-2.webp';
+    }
 
     // 道の上の物：位置と大きさと霧のかかり方を決める。
     for (const b of boards) {

@@ -72,10 +72,80 @@ def export_words():
     print(f'word: {len(paths)} 枚、{total} bytes ({total / 1024:.1f} KB)')
 
 
+# 原画1536pxに対する扉の四角。町とアーチは枠に残す。
+GATE_DOOR = {2: (500, 700, 1036, 1190)}
+
+
+def remove_alpha_specks(im, minimum=48):
+    """アルファがある連結成分のうち、孤立した小さな点だけを消す。"""
+    im = im.convert('RGBA')
+    alpha = im.getchannel('A')
+    pixels = bytearray(alpha.tobytes())
+    w, h = im.size
+    seen = bytearray(w * h)
+    for start, value in enumerate(pixels):
+        if not value or seen[start]:
+            continue
+        stack, component = [start], []
+        seen[start] = 1
+        while stack:
+            i = stack.pop()
+            component.append(i)
+            x, y = i % w, i // w
+            for j in ((i-1 if x else -1), (i+1 if x+1<w else -1),
+                      (i-w if y else -1), (i+w if y+1<h else -1)):
+                if j >= 0 and pixels[j] and not seen[j]:
+                    seen[j] = 1
+                    stack.append(j)
+        if len(component) < minimum:
+            for i in component:
+                pixels[i] = 0
+    im.putalpha(Image.frombytes('L', im.size, bytes(pixels)))
+    return im
+
+
+def export_map2():
+    dest = OUT / 'road'
+    dest.mkdir(parents=True, exist_ok=True)
+    with Image.open(WORK / 'road-2.webp') as source:
+        road = source.convert('RGBA').crop((0, 0, 256, 558)).resize((256, 512), Image.LANCZOS)
+    # 両端の16行を同じ中間色へ連続的に寄せる（端の行は完全に一致）。
+    original = road.copy()
+    for y in range(16):
+        blend = Image.blend(original.crop((0, y, 256, y+1)),
+                            original.crop((0, 511-y, 256, 512-y)), .5)
+        strength = (1-y/16) ** 2
+        for row in (y, 511-y):
+            road.paste(Image.blend(original.crop((0, row, 256, row+1)), blend, strength), (0, row))
+    # 可逆WebPで最初と最後の行の一致を保つ。版画の限られた色を量子化する。
+    target = dest / 'road-2.webp'
+    for colors in (128, 64, 32, 16):
+        road.quantize(colors).convert('RGBA').save(target, 'WEBP', lossless=True, method=6)
+        if target.stat().st_size <= 45 * 1024:
+            break
+    with Image.open(target) as check:
+        assert check.crop((0, 0, 256, 1)).tobytes() == check.crop((0, 511, 256, 512)).tobytes()
+    print('road-2', target.stat().st_size // 1024, 'KB（上下端の一致を確認）')
+    with Image.open(WORK / 'gate-2.png') as source:
+        gate = remove_alpha_specks(source)
+    x0, y0, x1, y1 = GATE_DOOR[2]
+    middle = (x0+x1)//2
+    for name, box in [('door-l', (x0,y0,middle,y1)), ('door-r', (middle,y0,x1,y1))]:
+        leaf = gate.crop(box)
+        leaf = leaf.resize((round(leaf.width/3), round(leaf.height/3)), Image.LANCZOS)
+        print(name, save_webp(leaf, OUT / f'gate-2-{name}.webp', 40), 'KB')
+    gate.paste((0,0,0,0), (x0,y0,x1,y1))
+    print('gate-2', save_webp(gate.resize((512,512), Image.LANCZOS), OUT / 'gate-2.webp', 70), 'KB')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--word', action='store_true', help='単語の意味の絵だけを書き出す')
+    parser.add_argument('--map2', action='store_true', help='2区の道と門だけを書き出す')
     args = parser.parse_args()
+    if args.map2:
+        export_map2()
+        return
     if args.word:
         export_words()
         return
