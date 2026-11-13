@@ -155,7 +155,7 @@ export function renderMap(view, ctx) {
         style="--reveal:${100 - reveal}%" aria-label="街灯${lamp.shelf}の${letter ? '手紙' : '切手帳'}を開く">
         <span class="gq-house-fallback" aria-hidden="true">${miniHouse()}</span>
         <span class="gq-house-art" aria-hidden="true"><i class="gq-house-halo"></i><i class="gq-house-shadow"></i>
-        <img class="gq-house-color" alt="" width="192" height="192" loading="lazy" decoding="async">
+        <img class="gq-house-color" alt="" width="192" height="192" decoding="async">
         <i class="gq-house-warm"></i><i class="gq-house-sparks"></i></span>
         ${gold ? '<svg class="gq-house-vane" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 30V3M3 12h26M3 12l7-5v10zM22 12l7-5v10z"/></svg>' : ''}</button>`;
       return bb(`gq-bb-lamp${far}`, item.cy, item.lat,
