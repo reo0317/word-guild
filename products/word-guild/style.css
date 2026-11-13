@@ -370,3 +370,16 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 @media (prefers-reduced-motion:reduce) { .gq-opening-arch i { animation:none; transform:rotateY(85deg); } }
 
 .gq-speech-loading { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000; padding: 8px 16px; border-radius: 24px; background: #fff5de; color: #63452e; font-size: 13px; box-shadow: 0 2px 12px #38231830; }
+
+#view.gq-quest.gq-night{background:#151f39;color:#f8e7b6}
+#kp-start{width:140px;height:140px;border-radius:48% 52% 47% 53%;border:5px double #e8bb80;box-shadow:0 5px 0 #713d30;white-space:normal}
+#kp-sound,#kp-speech,.gq-switch button{border-radius:50%;min-width:88px;min-height:64px}
+#gs-export,#gs-copy,#gs-check{border-radius:50%;width:88px;height:88px;padding:8px}
+.gq-fog-count{position:absolute;top:8px;left:12px;z-index:205;background:#fff9eb;color:var(--ink);padding:5px 10px;border-radius:16px;font-size:12px;pointer-events:none}
+
+.kp-foot{grid-template-columns:1fr 1fr;justify-items:center;align-items:center}
+#kp-start{grid-column:1/-1}
+.kp-foot #kp-sound,.kp-foot #kp-speech{border:2px solid var(--ink);border-radius:50%;width:112px;height:64px;font-size:12px;padding:6px;background:var(--paper)}
+.paper .ln-wrap.read .dot{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;background:var(--paper-hi);border:1px solid currentColor;font-size:16px;cursor:pointer}
+
+.gq-fog-count i{display:inline-block;width:12px;height:6px;border-radius:50%;background:var(--fog);margin-right:2px;vertical-align:middle}

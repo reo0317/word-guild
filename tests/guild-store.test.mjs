@@ -52,7 +52,7 @@ test('M1・M2 の保存に追加項目の既定値を補う', () => {
 });
 
 test('追加項目を個別に検証し、使える値を残す', () => {
-  const valid = {...emptyProgress(), settings: {fresh: 8}, streak: {count: 3, last: 20, best: 5},
+  const valid = {...emptyProgress(), settings: {fresh: 8, speech: true}, streak: {count: 3, last: 20, best: 5},
     daily: {day: 20, kind: 'fresh', goal: 16, count: 2, done: false}, dailyDone: 7, exportDay: 19};
   assert.deepEqual(validateProgress(serializeProgress(valid)), valid);
   for (const fresh of [4, 6, 8]) {
@@ -75,7 +75,7 @@ test('追加項目を個別に検証し、使える値を残す', () => {
 });
 
 test('1,400語と全追加項目を書き出し・読み込みでき、空白と改行を許す', () => {
-  const progress = {...emptyProgress(), quests: 100, lastDay: 20000, settings: {fresh: 6},
+  const progress = {...emptyProgress(), quests: 100, lastDay: 20000, settings: {fresh: 6, speech: true},
     streak: {count: 4, last: 20000, best: 12},
     daily: {day: 20000, kind: 'clean', goal: 10, count: 10, done: true}, dailyDone: 15, exportDay: 20000};
   for (let i = 0; i < 1400; i++) progress.words[`b${String(i).padStart(4, '0')}`] = {box: i % 6, due: 20001, seen: 10};
@@ -152,6 +152,7 @@ test('設定の置きかえ：本保存に失敗したら、メモリー上の�
   const el = () => ({onclick: null, textContent: '', innerHTML: '', value: '', hidden: false, disabled: false, className: '', setAttribute() {}, focus() {}, select() {}});
   const container = {
     isConnected: true, className: '', innerHTML: '',
+    querySelectorAll() { return []; },
     querySelector(selector) { if (!elements.has(selector)) elements.set(selector, el()); return elements.get(selector); },
   };
   const old = {...emptyProgress(), quests: 3};
@@ -177,4 +178,11 @@ test('設定の置きかえ：本保存に失敗したら、メモリー上の�
   container.querySelector('#gs-replace').onclick();
   assert.equal(progress.quests, 9);
   assert.equal(backCalls, 1);
+});
+
+test('読みあげ設定は旧保存ではオン、オフは書出し・読込みで保つ', () => {
+  assert.equal(validateProgress({v:1,words:{}}).settings.speech,true);
+  const progress = emptyProgress();
+  progress.settings.speech = false;
+  assert.equal(importText(exportText(progress)).progress.settings.speech,false);
 });

@@ -92,17 +92,19 @@ export function createSpeaker({synth, Utterance, later = setTimeout, clear = cle
     }
     attempt();
   }
-  return {speak, unlock, prepare};
+  return {speak, unlock, prepare, cancel() { generation++; clear(timer); clear(watchdog); synth?.cancel(); }};
 }
+let speechOn = true;
+export function setSpeechEnabled(on) { speechOn = on; if (!on) speaker?.cancel(); }
 let speaker;
 function deviceSpeaker() {
   return speaker ??= createSpeaker({synth: globalThis.window?.speechSynthesis, Utterance: globalThis.SpeechSynthesisUtterance});
 }
-export const prepareSpeech = () => deviceSpeaker().prepare();
-export const speak = text => deviceSpeaker().speak(text);
+export const prepareSpeech = () => speechOn ? deviceSpeaker().prepare() : Promise.resolve(false);
+export const speak = text => { if (speechOn) deviceSpeaker().speak(text); };
 if (typeof document !== 'undefined') {
   for (const event of ['pointerdown', 'touchstart', 'keydown']) {
-    document.addEventListener(event, () => deviceSpeaker().unlock(), {capture: true, passive: true});
+    document.addEventListener(event, () => { if (speechOn) deviceSpeaker().unlock(); }, {capture: true, passive: true});
   }
 }
 
@@ -215,7 +217,7 @@ export function lineBody(line, {face = () => '', shadow = false, hit = ''} = {})
 // 1行。読めた行は押すと訳が出る（スピーカーつき）。
 export function lineHtml(line, li, opts = {}) {
   const say = line.readable ? `<button type="button" class="ln-say" data-say="${esc(plainLine(line))}" aria-label="読みあげ">${icon('speaker', 16)}</button>` : '';
-  return `<div class="ln-wrap${line.readable ? ' read' : ''}" data-l="${li}"><p class="ln"><span class="dot"></span><span class="txt">${lineBody(line, opts)}</span></p><p class="ja" hidden>${esc(line.ja ?? '')}${say}</p></div>`;
+  return `<div class="ln-wrap${line.readable ? ' read' : ''}" data-l="${li}"><p class="ln"><span class="dot">${line.readable ? '▱' : ''}</span><span class="txt">${lineBody(line, opts)}</span></p><p class="ja" hidden>${esc(line.ja ?? '')}${say}</p></div>`;
 }
 
 // 切手の拡大に添える、その語を含む行（語を光らせる）。通が無ければ空。
@@ -225,11 +227,14 @@ export function wordLineHtml(lv, id, opts = {}) {
 }
 
 // 1通。lv は letterView の結果。opts: {face, shadowLines: 影を乗せる行の番号の Set, lit: 街灯がともっているか}
+let introducedLine = false;
 export function letterHtml(lv, {face = () => '', shadowLines = new Set(), lit = false, hit = ''} = {}) {
   const read = lv.lines.filter(line => line.readable).length;
   const all = lv.readable ? `<button type="button" class="ln-say all" data-say="${esc(lv.lines.map(plainLine).join(' '))}" aria-label="読みあげ">${icon('speaker', 16)}</button>` : '';
+  const intro = !introducedLine ? lv.lines.findIndex(l => l.readable) : -1;
+  if (intro >= 0) introducedLine = true;
   const head = `<div class="ph"><span class="from">${esc(lv.from ?? '')}</span><svg class="arr" viewBox="0 0 24 10" aria-hidden="true"><path d="M1 5h20M16 1l5 4-5 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="to">${esc(lv.to ?? '')}</span>${all}<span class="ring">${lampRing(read, lit)}</span></div>`;
-  return `<div class="paper k-${esc(lv.kind ?? 'memo')}" data-shelf="${lv.shelf}">${head}${lv.lines.map((line, i) => lineHtml(line, i, {face, shadow: shadowLines.has(i), hit})).join('')}</div>`;
+  return `<div class="paper k-${esc(lv.kind ?? 'memo')}" data-shelf="${lv.shelf}">${head}${lv.lines.map((line, i) => lineHtml(line, i, {face, shadow: shadowLines.has(i), hit}).replace('<p class="ja" hidden>', i === intro ? '<p class="ja">' : '<p class="ja" hidden>')).join('')}</div>`;
 }
 
 // 影を乗せる行：まだ霧のある行のうち、先頭の2行（今の石段と次の石段）。

@@ -86,3 +86,9 @@ test('物語：clipParts は語を分けて返し、clipFor と同じ文にな�
  assert.equal((c.left+c.word+c.right).trim(),clipFor(story,'b0021',17));
  assert.equal(clipParts(story,'unknown'),null);
 });
+
+test('結果の手紙は未回答の新出を数えない', async () => {
+  const {letterWeights} = await import('../products/word-guild/guild/story.mjs');
+  const result = letterWeights([{word:{shelf:2}, result:'clean', isNew:false}, {word:{shelf:4}, result:'missed', isNew:true}]);
+  assert.deepEqual([...result], [[2,1]]);
+});

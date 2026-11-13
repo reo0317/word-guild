@@ -307,13 +307,13 @@ test('打ち切り地点まで世界座標の sin の振幅を保つ', () => {
 });
 
 
-test('家との重なりによらず中央に向かう側へ出し、小さいツムギでは隠す', () => {
+test('家と門に重ならない位置へ出し、小さいツムギでは隠す', () => {
   const left = {left:0, right:150, top:280, bottom:400};
   const right = {left:260, right:390, top:280, bottom:400};
-  assert.deepEqual(panelGeometry(390,680,190,400,130,80,[left,right]), {left:246,top:300});
-  assert.deepEqual(panelGeometry(390,680,190,400,130,80,[{...left,right:50},right]), {left:246,top:300});
+  assert.deepEqual(panelGeometry(390,680,190,400,130,80,[left,right]), {left:246,top:412});
+  assert.deepEqual(panelGeometry(390,680,190,400,130,80,[{...left,right:50},right]), {left:246,top:412});
   assert.ok(panelGeometry(390,680,190,400,130,80,[left,right],70));
-  assert.deepEqual(panelGeometry(390,680,210,400,130,80,[left,right]), {left:24,top:300});
+  assert.deepEqual(panelGeometry(390,680,210,400,130,80,[left,right]), {left:24,top:412});
   for (const width of [320, 375, 390, 430]) {
     for (const x of [0, width / 2 - 1, width / 2, width]) {
       for (const feet of [0, 400, 680]) {
@@ -330,13 +330,13 @@ test('トップの速達ラベルは依頼の種類によらず今日の速達�
   const old = globalThis.requestAnimationFrame;
   globalThis.requestAnimationFrame = () => 1;
   try {
-    for (const [kind, mark] of [['revenge', '↺'], ['fresh', '✦'], ['clean', '✓'], ['finish', '▶']]) {
+    for (const [kind, mark] of [['revenge', '↺'], ['fresh', '✦'], ['clean', '◇'], ['finish', '▶']]) {
       for (const done of [false, true]) {
         const progress = {words: {}, gates: [], daily: {kind, goal: 10, count: done ? 10 : 0, done}};
         const node = {style: {}, clientWidth: 390, addEventListener() {}, setAttribute() {}};
         const view = {innerHTML: '', querySelector: () => ({...node}), querySelectorAll: () => []};
         renderMap(view, {map: buildMap(words, progress, 20000), today: 20000, progress, total: 1400, face: () => '', tsumugi: '', letterOf: () => ({}), on: {}});
-        assert.ok(view.innerHTML.includes(`<i aria-hidden="true">${mark}</i>今日の速達<b>${done ? 10 : 0}/10</b>`));
+        assert.ok(view.innerHTML.includes(`<i aria-hidden="true">${mark}</i>今日の速達・${({revenge:'戻ってきた紙魚', fresh:'新しい紙魚', clean:'ヒントなし', finish:'配達'})[kind]}<b>${done ? 10 : 0}/10</b>`));
         assert.ok(view.innerHTML.includes(`class="gq-daily ${done ? 'done' : ''}"`));
       }
     }
@@ -369,4 +369,20 @@ test('56軒の玄関を道側へ向け、中央の玄関と飾りは反転しな
     assert.equal(lighthouseVisible(remainingSteps(items, current * 900) * (LIGHTHOUSE_DISTANCE / 10)), visible);
   }
   assert.equal(lighthouseVisible(remainingSteps(items, 0, true)), true);
+});
+
+test('門が開いた地図の封蝋から門の配達へ進む', () => {
+  const old = globalThis.requestAnimationFrame;
+  globalThis.requestAnimationFrame = () => 1;
+  try {
+    const nodes = new Map(); let chosen = null;
+    const view = {innerHTML:'', querySelector(s) { if (!nodes.has(s)) nodes.set(s,{style:{},addEventListener(){},setAttribute(){}}); return nodes.get(s); }, querySelectorAll:()=>[]};
+    const progress = {words:{},gates:[]};
+    const map = buildMap(words,progress,20000);
+    map.wards[0].gate = 'open';
+    renderMap(view,{map,progress,today:20000,total:1400,face:()=>'',tsumugi:'',letterOf:()=>null,on:{gate:n=>chosen=n,go:()=>assert.fail('通常配達へ進んだ')}});
+    assert.match(view.innerHTML,/1区の<br>門へ/);
+    nodes.get('#gq-go').onclick();
+    assert.equal(chosen,1);
+  } finally { globalThis.requestAnimationFrame = old; }
 });

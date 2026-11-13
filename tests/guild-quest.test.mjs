@@ -321,3 +321,15 @@ test('門の先の1回戦は通常採点で保存し、ヒントでも再戦し�
   assert.equal(q.progress.quests, 1);
   assert.ok(q.outcome.entries.every(e => q.progress.words[e.word.id]));
 });
+
+test('初回の説明ヒントは採点に含めず、最初の正解まで時計を止める', () => {
+  const quest = new Quest(groups, {tutorial: true, rand: mulberry32(1)});
+  quest.next();
+  quest.slots[0].tutorialHint = true;
+  assert.deepEqual(quest.advance(IDLE_LIMIT * 10), []);
+  assert.equal(quest.idle, 0);
+  quest.answer(quest.slots[0].text);
+  assert.equal(quest.results.get(words[0].id), 'clean');
+  assert.ok(quest.restoredIds.has(words[0].id));
+  assert.equal(quest.advance(IDLE_LIMIT)[0].type, 'attack');
+});

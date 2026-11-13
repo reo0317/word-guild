@@ -8,13 +8,13 @@ import {Quest, HEARTS} from './quest.mjs';
 import {pickSession, pickReturn, groupWords, todayNumber, SESSION_SIZE} from './srs.mjs';
 import {loadProgress, saveProgress} from './store.mjs';
 import {COLS, spelling} from './board.mjs';
-import {buildMap, gateWords, gateArrivalWords, separateSpecs} from './stages.mjs';
-import {letterView, clipParts, loadScenes} from './story.mjs';
+import {buildMap, accessibleWords, gateWords, gateArrivalWords, separateSpecs} from './stages.mjs';
+import {letterView, clipParts, loadScenes, letterWeights} from './story.mjs';
 import {charaSpec, pageSpecs, stampState as rawStampState} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {rollDaily} from './daily.mjs';
 import {onUpdateReady, applyUpdate} from './pwa.mjs';
-import {esc, speak, prepareSpeech, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, helpButton, icon,
+import {esc, speak, prepareSpeech, setSpeechEnabled, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, helpButton, icon,
   ensureLetterCss, letterHtml, lineBody, lampRing, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
 import {showStampZoom, ensureCss as ensureAlbumCss, sceneFor, gateCard, newlyOpenedGate, playOptionalCinema, showPaperCard, sceneCardHtml, blankCardHtml, postscriptHtml, handlePostscriptClick} from './album.mjs';
 import {renderMap, dailyBrief} from './map.mjs';
@@ -60,6 +60,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   let scenes = null;
   let presentationClose = null;
   let progress = loadProgress(storage).progress;
+  setSpeechEnabled(progress.settings.speech !== false);
   let saveFailed = false;
   let updateReady = false;
   let onMap = false;
@@ -130,6 +131,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   function persist(next) {
     progress = next;
+    setSpeechEnabled(progress.settings.speech !== false);
     if (!saveProgress(storage, next) && !dev) saveFailed = true;
   }
 
@@ -319,13 +321,13 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     if (returning && !lampOf(map, opts.shelf)?.done) return;
     const groups = opts.arrival ? [opts.arrival] : returning ? pickReturn(words, progress, today, opts.shelf, Math.random) : gate !== null
       ? groupWords(gateWords(words, progress, gate), Math.random)
-      : pickSession(words, progress, today, SESSION_SIZE, Math.random);
+      : pickSession(accessibleWords(words, map), progress, today, SESSION_SIZE, Math.random, progress.settings.fresh);
     const ward = opts.arrival ? opts.arrival[0].ch : returning ? words.find(word => word.shelf === opts.shelf)?.ch ?? 1 : gate ?? map.here?.ch ?? 1;
     questWard = ward;
     stopSession();
     dealt = new Map();
     lastClip = null;
-    quest = new Quest(groups, {rand: Math.random, progress, today, save: persist, gate, mode: opts.arrival ? 'arrival' : returning ? 'return' : 'normal', shelf: opts.shelf, rares, map});
+    quest = new Quest(groups, {rand: Math.random, progress, today, save: persist, gate, mode: opts.arrival ? 'arrival' : returning ? 'return' : 'normal', shelf: opts.shelf, rares, map, tutorial});
     setScreen('guild-quest');
     renderBoard();
   }
@@ -410,7 +412,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     if (quest.isBig) later(800, () => { message = ''; paintInput(); });
     later(ENTER_MS, () => {
       quest.next(); // entering → battle
-      if (tutorial && quest.index === 0) quest.hint(quest.slots[0].word.id); // 最初の配達：1語目にヒント1
+      if (tutorial && quest.index === 0) quest.slots[0].tutorialHint = true; // 最初の配達：1語目にヒント1
       $('#gq-board')?.classList.remove('entering');
       $('#gq-mons')?.classList.remove('arriving');
       paintAll();
@@ -534,7 +536,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const big = specFor(word).kind === 'big';
     const main = reveal
       ? `<b class="gq-spell">${esc(word.w)}</b><small>${esc(word.ja)}</small>`
-      : `<b>${esc(word.ja)}</b>`;
+      : `<b>${esc(word.ja)}${words.some(other => other.id !== word.id && other.ja === word.ja) ? ` · ${esc(text[0].toUpperCase())}…` : ''}</b>`;
     const tail = slot.solved
       ? '<span class="gq-check" aria-label="解決済み">✓</span>'
       : `<span class="gq-dots" aria-label="${text.length}文字">${'<i></i>'.repeat(Math.min(text.length, 12))}</span>`;
@@ -561,7 +563,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const route = new Map();
     for (const slot of quest.unsolved) {
       const path = quest.paths[slot.text];
-      if (slot.hint === 1) first.add(path[0]);
+      if (slot.hint === 1 || slot.tutorialHint) first.add(path[0]);
       if (slot.hint >= 2) path.forEach((cell, i) => route.set(cell, i));
     }
     cells.forEach((button, i) => {
@@ -830,8 +832,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   // 結果の1通：今回、読めるようになった通があればそれ。なければいちばん動いた通（新しい語を重く数える）。
   // 英文のある通だけ。なければ null。
   function pickLetterShelf(outcome, after, startProgress, endProgress, today) {
-    const weight = new Map();
-    for (const entry of outcome.entries) weight.set(entry.word.shelf, (weight.get(entry.word.shelf) ?? 0) + (entry.isNew ? 3 : 1));
+    const weight = letterWeights(outcome.entries);
     let pick = null;
     let best = 0;
     for (const [shelf, n] of weight) {
@@ -971,7 +972,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
           ${litNow.length ? `<p class="gq-lit" aria-label="街灯${litNow.join('・')}がともった">✦ ${litNow.join('・')}</p>` : ''}
           ${gateOpened ? `<p class="gq-lit" aria-label="${quest.gate}区の門が開いた"><span aria-hidden="true">${icon('gate', 16)}</span> ${quest.gate}区</p>` : ''}
           <div class="gq-chips">
-            ${outcome.dailyDone ? '<span class="gq-daily done"><i aria-hidden="true">✓</i>速達</span>' : brief && !daily.done ? `<span class="gq-daily" aria-label="今日の速達 ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>${esc(brief.name)}<b>${brief.count}/${brief.goal}</b></span>` : daily ? '<span class="gq-daily done"><i aria-hidden="true">✓</i>速達</span>' : ''}
+            ${brief ? `<span class="gq-daily ${daily.done ? 'done' : ''}" aria-label="今日の速達 ${esc(brief.name)} ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>今日の速達・${esc(brief.name)}<b>${brief.count}/${brief.goal}</b></span>` : ''}
             ${outcome.streakUp ? `<span class="gq-daily"><b>${outcome.streak}</b>日連続</span>` : ''}
             ${tomorrow.length ? `<span class="gq-tomorrow" aria-label="明日戻ってくる紙魚 ${tomorrow.length} 匹"><small>明日</small><span class="gq-faces">${tomorrowFaces}</span><b>${tomorrow.length}</b></span>` : ''}
           </div>
@@ -1155,7 +1156,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     if (quest && quest.phase === 'finished') showResults();
   });
 
-  return {open, hasProgress: () => progress.quests > 0 || Object.keys(progress.words).length > 0};
+  return {open, speechEnabled: () => progress.settings.speech !== false, setSpeech(on) { persist({...progress, settings: {...progress.settings, speech: on}}); }, hasProgress: () => progress.quests > 0 || Object.keys(progress.words).length > 0};
 }
 
 function stampState(state) { return isRestored(state) ? rawStampState(state) : 'shadow'; }

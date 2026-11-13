@@ -18,7 +18,7 @@ import {STORAGE_KEY, exportText, importText, saveProgress, backupProgress, resto
 import {todayNumber} from './srs.mjs';
 import {isStandalone, onUpdateReady, applyUpdate} from './pwa.mjs';
 import {renderCredits} from './library.mjs';
-import {esc} from './dom.mjs';
+import {esc, setSpeechEnabled} from './dom.mjs';
 
 const SOUND_KEY = 'kiriharePost.sound';
 const CSS_URL = new URL('../album.css', import.meta.url).href;
@@ -73,7 +73,9 @@ export function openSettings(container, deps = {}) {
   container.className = 'gq gq-settings';
   container.innerHTML = `
     <p class="eyebrow">設定</p>
-    <section><div class="gq-switch"><h3>音</h3><button type="button" id="gs-sound" aria-pressed="${soundOn}"></button></div></section>
+    <section><div class="gq-switch"><h3>曲と効果音</h3><button type="button" id="gs-sound" aria-pressed="${soundOn}"></button></div></section>
+    <section><div class="gq-switch"><h3>読みあげ</h3><button type="button" id="gs-speech" aria-pressed="${progress.settings.speech !== false}">${progress.settings.speech !== false ? 'オン' : 'オフ'}</button></div></section>
+    <section><h3>新出語数</h3><div class="row">${[[4,'🌱 ゆっくり'],[6,'🌿 ふつう'],[8,'🌳 たくさん']].map(([n,label]) => `<button type="button" data-fresh="${n}" aria-pressed="${progress.settings.fresh === n}">${label}</button>`).join('')}</div></section>
     <section><h3>保存の書き出し</h3>
       <p class="note">最後に書き出した日：<span id="gs-exday">${esc(exportDay())}</span></p>
       <textarea id="gs-out" readonly rows="3" aria-label="書き出した文字列" hidden></textarea>
@@ -106,6 +108,20 @@ export function openSettings(container, deps = {}) {
     paintSound();
   };
 
+  $('#gs-speech').onclick = () => {
+    progress.settings.speech = progress.settings.speech === false;
+    setSpeechEnabled(progress.settings.speech);
+    if (writable) saveProgress(storage, progress);
+    deps.onProgress?.(progress);
+    $('#gs-speech').textContent = progress.settings.speech ? 'オン' : 'オフ';
+    $('#gs-speech').setAttribute('aria-pressed', progress.settings.speech);
+  };
+  container.querySelectorAll('[data-fresh]').forEach(button => { button.onclick = () => {
+    progress.settings.fresh = Number(button.dataset.fresh);
+    if (writable) saveProgress(storage, progress);
+    deps.onProgress?.(progress);
+    container.querySelectorAll('[data-fresh]').forEach(b => b.setAttribute('aria-pressed', b === button));
+  }; });
   const say = (selector, text, error = false) => { const el = $(selector); if (el) { el.textContent = text; el.className = `msg${error ? ' err' : ''}`; } };
 
   $('#gs-export').onclick = () => {

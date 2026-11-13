@@ -119,16 +119,18 @@ export function houseGeometry(width, projection, current = false) {
   return {x, size, offset: half + 8, side};
 }
 
-// 大きく映る間は画面中央に向かう側へ。家との重なりは許し、画面内に収める。
+// 家の札と門を避け、空きがないときは吹き出しを隠す。
 export function panelGeometry(width, height, x, feet, pw, ph, objects, tsumugiSize = 100) {
   if (tsumugiSize < 70) return null;
   const top = Math.max(8, Math.min(height - ph - 8, feet - tsumugiSize));
   const gap = tsumugiSize / 2 + 6;
   const beside = x < width / 2 ? x + gap : x - gap - pw;
-  return {left: Math.max(8, Math.min(width - pw - 8, beside)), top};
+  const left = Math.max(8, Math.min(width - pw - 8, beside));
+  const candidates = [{left, top}, {left: 8, top}, {left: width - pw - 8, top}, {left, top: Math.min(height - ph - 8, feet + 12)}];
+  return candidates.find(c => !objects.some(r => c.left < r.right + 8 && c.left + pw > r.left - 8 && c.top < r.bottom + 8 && c.top + ph > r.top - 8)) ?? null;
 }
 
-const DAILY_SHORT = {revenge: ['↺', '戻ってきた紙魚'], fresh: ['✦', '新しい紙魚'], clean: ['✓', 'ヒントなし'], finish: ['▶', '配達']};
+const DAILY_SHORT = {revenge: ['↺', '戻ってきた紙魚'], fresh: ['✦', '新しい紙魚'], clean: ['◇', 'ヒントなし'], finish: ['▶', '配達']};
 
 export function dailyLine(daily) {
   if (!daily) return '';
@@ -264,7 +266,7 @@ export function renderMap(view, ctx) {
     const side = hereItem.lat > 0 ? 'left' : 'right';
     const shadows = map.next.map(id => `<span class="gq-face">${ctx.face(id, 'shadow')}</span>`).join('');
     const dues = map.due.map(id => `<span class="gq-face">${ctx.face(id, 'print')}</span>`).join('');
-    herePanel = bb('gq-bb-tsumugi', hereY, hereItem.lat, `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}">`)
+    herePanel = bb('gq-bb-tsumugi', hereY - 100, 0, `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}">`)
       + bb(`gq-bb-panel ${side}`, hereY, hereItem.lat, `<div class="gq-here-panel ${side}">
         ${map.next.length ? `<div class="gq-faces" aria-label="この先の紙魚"><span class="gq-arrow" aria-hidden="true">▸</span>${shadows}</div>` : '<p class="gq-top-mark" aria-label="いちばん上">★</p>'}
         ${map.dueCount ? `<div class="gq-faces due" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b class="gq-due-n">${map.dueCount}</b>${dues}</div>` : ''}
@@ -310,19 +312,19 @@ export function renderMap(view, ctx) {
           <path class="edge" id="gq-r-edge"/><path class="center" id="gq-r-center"/>
         </svg>
         ${nodes}${herePanel}${post}${lighthouse}
-        ${map.fog ? `<i class="gq-fogband" aria-hidden="true" style="--d:${fogDensity.toFixed(2)}"></i>` : ''}
+        ${map.fog ? `<span class="gq-fog-count">${'<i></i>'.repeat(Math.min(6, Math.ceil(map.dueCount / 9)))}霧の配達 あと${Math.ceil(map.dueCount / 9)}回（目安）</span><i class="gq-fogband" aria-hidden="true" style="--d:${fogDensity.toFixed(2)}"></i>` : ''}
       </div>
     </div></div>
     <div class="gq-map-foot">
       ${ctx.warn ? `<p class="gq-warn">${esc(ctx.warn)}</p>` : ''}
       <div class="gq-chips">
-        ${brief ? `<span class="gq-daily ${progress.daily.done ? 'done' : ''}" aria-label="今日の速達 ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>今日の速達<b>${brief.count}/${brief.goal}</b></span>` : ''}
+        ${brief ? `<span class="gq-daily ${progress.daily.done ? 'done' : ''}" aria-label="今日の速達 ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>今日の速達・${esc(brief.name)}<b>${brief.count}/${brief.goal}</b></span>` : ''}
         ${tomorrow.length ? `<span class="gq-tomorrow" aria-label="明日戻ってくる紙魚 ${tomorrow.length} 匹"><small>明日</small><span class="gq-faces">${tomorrowFaces}</span><b>${tomorrow.length}</b></span>` : ''}
       </div>
       <div class="gq-dock">
         ${fab({icon: 'album', label: '切手帳', attrs: 'id="gq-album"'})}
         ${fab({icon: 'gear', label: '設定', attrs: 'id="gq-settings"'})}
-        ${waxButton({label: map.fog ? '霧を<br>払う' : '配達に<br>出る', id: 'gq-go', cls: map.fog ? 'fog' : ''})}
+        ${waxButton({label: openGate ? `${openGate.ch}区の<br>門へ` : map.fog ? '霧を<br>払う' : '配達に<br>出る', id: 'gq-go', cls: map.fog ? 'fog' : ''})}
         ${openGate ? fab({icon: 'gate', label: `${openGate.ch}区の門`, cls: 'glow', attrs: `id="gq-gate" data-gate="${openGate.ch}"`}) : ''}
         ${fab({icon: 'title', label: 'タイトル', attrs: 'id="gq-title"'})}
         ${noticeFab}
@@ -330,7 +332,7 @@ export function renderMap(view, ctx) {
     </div>`;
 
   const $ = s => view.querySelector(s);
-  $('#gq-go').onclick = () => on.go();
+  $('#gq-go').onclick = () => openGate ? on.gate(openGate.ch) : on.go();
   $('#gq-album').onclick = () => on.album();
   $('#gq-settings').onclick = () => on.settings();
   $('#gq-title').onclick = () => on.title();
@@ -454,11 +456,26 @@ export function renderMap(view, ctx) {
     // レイアウトの測定は初期表示・リサイズ・スクロール停止時だけ。
     placePanel = () => {
     if (!stage.isConnected) return;
+    const obstacles = boards.filter(b => b.shown && (b.house || b.el.classList.contains('gq-bb-gate')))
+      .map(b => (b.house ?? b.el.querySelector('.gq-gate') ?? b.el).getBoundingClientRect());
+    const pinBoard = boards.find(b => b.shown && b.el.classList.contains('gq-bb-tsumugi'));
+    const pinImage = pinBoard?.el.querySelector('.gq-tsumugi-pin');
+    if (pinImage) {
+      pinImage.style.transform = '';
+      const r = pinImage.getBoundingClientRect();
+      const host = stage.getBoundingClientRect();
+      const candidates = [{x:0,y:0}, {x:0,y:100}, {x:0,y:150}, {x:100,y:80}, {x:-100,y:80}];
+      const spot = candidates.find(({x,y}) => r.left+x >= host.left && r.right+x <= host.right && r.top+y >= host.top && r.bottom+y <= host.bottom
+        && !obstacles.some(o => r.left+x < o.right+8 && r.right+x > o.left-8 && r.top+y < o.bottom+8 && r.bottom+y > o.top-8));
+      pinImage.style.visibility = spot ? '' : 'hidden';
+      if (spot) pinImage.style.transform = `translate(${spot.x}px,${spot.y}px)`;
+    }
     const panelBoard = boards.find(b => b.panel && b.shown);
     if (panelBoard) {
       const p = project(panelBoard.y);
       const placement = panelGeometry(Ws, Hs, p.x, p.y,
-        panelBoard.panel.offsetWidth, panelBoard.panel.offsetHeight, [],
+        panelBoard.panel.offsetWidth, panelBoard.panel.offsetHeight,
+        boards.filter(b => b.shown && (b.house || b.el.classList.contains('gq-bb-gate'))).map(b => (b.house ?? b.el.querySelector('.gq-gate') ?? b.el).getBoundingClientRect()).map(r => { const host = stage.getBoundingClientRect(); return {left:r.left-host.left, right:r.right-host.left, top:r.top-host.top, bottom:r.bottom-host.top}; }),
         100 * tsumugiScale(p.scale, initialTsumugiScale));
       panelBoard.panel.style.visibility = placement ? '' : 'hidden';
       if (!placement) return;
@@ -501,7 +518,7 @@ export function renderMap(view, ctx) {
     svg.setAttribute('viewBox', `0 0 ${Ws} ${Hs}`);
     road.scrollTop = total - cameraAt;
     if (initialTsumugiScale === null) {
-      initialTsumugiScale = projectRoad(Ws, Hs, hereY,
+      initialTsumugiScale = projectRoad(Ws, Hs, hereY - 100,
         Math.min(total, Math.max(-1400, total - road.scrollTop))).scale;
     }
     update();

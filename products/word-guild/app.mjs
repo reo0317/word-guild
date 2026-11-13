@@ -21,6 +21,7 @@ function unlockSound() {
 }
 
 function title() {
+  try { soundOn = localStorage.getItem(SOUND_KEY) !== 'off'; } catch {}
   const returning = guild.hasProgress();
   music.play('post');
   view.className = 'kp kp-title';
@@ -31,8 +32,14 @@ function title() {
       <button class="primary" id="kp-start" type="button">${returning ? 'つづきから' : 'はじめる'}</button>
       <button class="text-button" id="kp-sound" type="button" aria-pressed="${soundOn}"></button>
     </div>`;
+  view.querySelector('#kp-sound').insertAdjacentHTML('afterend', `<button type="button" class="kp-switch" id="kp-speech" aria-pressed="${guild.speechEnabled()}">読みあげ ${guild.speechEnabled() ? 'オン' : 'オフ'}</button>`);
+  view.querySelector('#kp-speech').onclick = event => {
+    guild.setSpeech(!guild.speechEnabled());
+    event.currentTarget.textContent = `読みあげ ${guild.speechEnabled() ? 'オン' : 'オフ'}`;
+    event.currentTarget.setAttribute('aria-pressed', guild.speechEnabled());
+  };
   const sound = view.querySelector('#kp-sound');
-  const paintSound = () => { sound.textContent = soundOn ? '音　オン' : '音　オフ'; sound.setAttribute('aria-pressed', soundOn); };
+  const paintSound = () => { sound.textContent = soundOn ? '曲と効果音 オン' : '曲と効果音 オフ'; sound.setAttribute('aria-pressed', soundOn); };
   paintSound();
   sound.onclick = () => {
     soundOn = !soundOn;

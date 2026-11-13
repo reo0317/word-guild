@@ -122,3 +122,22 @@ test('開門後は次区の最初の石段の新出3語だけ', () => {
   assert.deepEqual(gateArrivalWords(words, p, 1), next.slice(1, 4));
   assert.deepEqual(gateArrivalWords(words, p, 6), []);
 });
+
+test('門を通るまで次の区の語を配達に入れない', async () => {
+  const {accessibleWords} = await import('../products/word-guild/guild/stages.mjs');
+  const progress = progressFor(words.filter(w => w.ch === 1));
+  const before = buildMap(words,progress,today);
+  assert.equal(before.here.ch,1);
+  assert.ok(accessibleWords(words,before).every(w=>w.ch===1));
+  progress.gates = [1];
+  const after = buildMap(words,progress,today);
+  assert.equal(after.here.ch,2);
+  assert.ok(accessibleWords(words,after).some(w=>w.ch===2));
+  assert.ok(accessibleWords(words,after).every(w=>w.ch<=2));
+});
+
+test('門でも同じ訳の語は同じ配達に入れない', () => {
+  const list = [{id:'a',w:'stockholder',ja:'株主',ch:1}, {id:'b',w:'shareholder',ja:'株主',ch:1}, {id:'c',w:'hall',ja:'広間',ch:1}];
+  const picked = gateWords(list,emptyProgress(),1);
+  assert.deepEqual(picked.map(w=>w.id),['a','c']);
+});

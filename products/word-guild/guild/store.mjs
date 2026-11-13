@@ -4,7 +4,7 @@ const BACKUP_KEY = `${STORAGE_KEY}.backup`;
 
 export function emptyProgress() {
   return {v: 1, words: {}, quests: 0, lastDay: 0,
-    settings: {fresh: 4}, streak: {count: 0, last: 0, best: 0},
+    settings: {fresh: 4, speech: true}, streak: {count: 0, last: 0, best: 0},
     daily: null, dailyDone: 0, exportDay: 0, gates: [],
     rares: {}, rare: {miss: 0, day: 0, met: []}, seals: []};
 }
@@ -37,7 +37,7 @@ function additionalFields(value) {
     rare: {miss: Number.isInteger(value.rare?.miss) && value.rare.miss >= 0 && value.rare.miss <= 3 ? value.rare.miss : 0,
       day: isCount(value.rare?.day) ? value.rare.day : 0, met: shelves(value.rare?.met)},
     gates: Array.isArray(value.gates) && value.gates.every(gate => Number.isInteger(gate) && gate >= 1 && gate <= 6) && new Set(value.gates).size === value.gates.length ? [...value.gates] : [],
-    settings: {fresh: [4, 6, 8].includes(value.settings?.fresh) ? value.settings.fresh : 4},
+    settings: {fresh: [4, 6, 8].includes(value.settings?.fresh) ? value.settings.fresh : 4, speech: value.settings?.speech !== false},
     streak: Object.fromEntries(['count', 'last', 'best'].map(key =>
       [key, isCount(streak?.[key]) ? streak[key] : 0])),
     daily: daily && isCount(daily.day) && isCount(daily.goal) && isCount(daily.count)

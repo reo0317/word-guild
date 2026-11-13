@@ -10,7 +10,7 @@ export const NEW_PER_SESSION = 5;
 export const GROUP_SIZE = 3;
 export const GROUP_LETTERS = 30;
 export const SOLO_LETTERS = 13; // この文字数以上の語は1語だけの盤面
-export const HEAVY_DUE = 20; // 期限の語がこれ以上たまったら新出を0にする
+export const HEAVY_DUE = 20; // 期限の語がこれ以上たまったら新出を3語残す
 export const LIT_BOX = 3; // 棚が灯る習熟度
 
 // 盤面用の綴りが SOLO_LETTERS 以上の語。1クエストに1語まで。
@@ -77,31 +77,33 @@ export function pickSession(words, progress, today, size = SESSION_SIZE, rand = 
   const dueAll = words
     .filter(word => isDue(state(word), today))
     .sort((a, b) => state(a).due - state(b).due || byShelfThenId(a, b));
-  const heavy = dueAll.length >= HEAVY_DUE; // たまりすぎたら復習だけ
+  const heavy = dueAll.length >= HEAVY_DUE; // 期限が多いときも新出3語を残す
   const picked = [];
   const taken = new Set();
+  const meanings = new Set();
   const spells = new Set(); // 盤面の綴りが同じ語は1クエストに1つだけ
   let bigTaken = false; // 大物は1クエストに1語まで
   const add = word => {
     if (picked.length >= size || taken.has(word)) return false;
     const text = spelling(word.w);
-    if (spells.has(text)) return false;
+    if (spells.has(text) || (word.ja && meanings.has(word.ja))) return false;
     if (isBig(word)) {
       if (bigTaken) return false;
       bigTaken = true;
     }
     taken.add(word);
     spells.add(text);
+    if (word.ja) meanings.add(word.ja);
     picked.push(word);
     return true;
   };
   let dueTaken = 0;
   for (const word of dueAll) {
-    if (dueTaken >= (heavy ? size : maxDue)) break;
+    if (dueTaken >= (heavy ? Math.max(0, size - 3) : maxDue)) break;
     if (add(word)) dueTaken++;
   }
   const unseen = words.filter(word => !state(word)).sort(byShelfThenId);
-  if (!heavy) unseen.forEach(add);
+  unseen.forEach(add);
   if (picked.length < size) {
     const rest = words
       .filter(word => state(word) && !taken.has(word))
@@ -138,10 +140,12 @@ export function pickReturn(words, progress, today, shelf, rand = null) {
     .sort((a, b) => Number(isDue(state(b), today)) - Number(isDue(state(a), today))
       || state(a).box - state(b).box || last(a) - last(b) || a.id.localeCompare(b.id));
   const spells = new Set();
+  const meanings = new Set();
   const picked = candidates.filter(word => {
     const text = spelling(word.w);
-    if (spells.has(text)) return false;
+    if (spells.has(text) || (word.ja && meanings.has(word.ja))) return false;
     spells.add(text);
+    if (word.ja) meanings.add(word.ja);
     return true;
   }).slice(0, SESSION_SIZE);
   return groupWords(picked, rand);

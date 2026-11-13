@@ -18,8 +18,9 @@ const REVENGE_ORDER = {taught: 0, hint: 1};
 // phase: entering（入場中） / battle / defeated（撃破の演出中） / finished
 export class Quest {
   // groups は pickSession の戻り値（語オブジェクトの組の配列）。
-  constructor(groups, {rand = Math.random, progress = emptyProgress(), today = 0, save = () => {}, gate = null, mode = 'normal', shelf = null, rares = [], map = null} = {}) {
+  constructor(groups, {rand = Math.random, progress = emptyProgress(), today = 0, save = () => {}, gate = null, mode = 'normal', shelf = null, rares = [], map = null, tutorial = false} = {}) {
     this.groups = groups;
+    this.tutorial = tutorial;
     this.mode = mode;
     this.shelf = shelf;
     this.rares = rares;
@@ -142,7 +143,7 @@ export class Quest {
   // 戻り値は起きたことの配列：{type:'attack', word} / {type:'retreat'}
   advance(ms) {
     const events = [];
-    if (this.phase !== 'battle' || !(ms > 0)) return events;
+    if ((this.tutorial && this.results.size === 0) || this.phase !== 'battle' || !(ms > 0)) return events;
     this.idle += ms;
     if (this.isNight) {
       if (this.idle >= this.idleLimit) {

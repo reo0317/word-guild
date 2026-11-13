@@ -72,16 +72,29 @@ export function separateSpecs(specs, wards = [], inks = 3) {
 }
 
 // 同順位は元の語順。入力配列・進捗は変更しない。戻り値は語オブジェクト。
+const distinctPrompts = words => {
+  const seen = new Set();
+  return words.filter(word => {
+    if (seen.has(word.ja)) return false;
+    seen.add(word.ja);
+    return true;
+  });
+};
+
 export function gateWords(words, progress, ch) {
-  return words.filter(w => w.ch === ch).sort((a, b) =>
+  return distinctPrompts(words.filter(w => w.ch === ch).sort((a, b) =>
     (progress.words[a.id]?.box ?? 0) - (progress.words[b.id]?.box ?? 0)
-    || (progress.words[a.id]?.due ?? 0) - (progress.words[b.id]?.due ?? 0)).slice(0, 12);
+    || (progress.words[a.id]?.due ?? 0) - (progress.words[b.id]?.due ?? 0))).slice(0, 12);
 }
 
 // 次区の最初の石段から、新出の通常語を1盤面分選ぶ。
 export function gateArrivalWords(words, progress, ch) {
   const next = words.find(w => w.ch > ch);
   if (!next) return [];
-  return words.filter(w => w.ch === next.ch && w.shelf === next.shelf).slice(0, 5)
-    .filter(w => !progress.words[w.id]).slice(0, 3);
+  return distinctPrompts(words.filter(w => w.ch === next.ch && w.shelf === next.shelf).slice(0, 5)
+    .filter(w => !progress.words[w.id])).slice(0, 3);
+}
+
+export function accessibleWords(words, map) {
+  return words.filter(word => word.ch <= (map.here?.ch ?? 6));
 }

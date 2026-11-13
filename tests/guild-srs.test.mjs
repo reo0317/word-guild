@@ -145,14 +145,14 @@ test('groupWords：先に ceil(語数/3) 組を作って配る（短い語は4�
   assert.ok(groups.every(g => g.length === 3));
 });
 
-test('pickSession：期限語が20語以上なら新出0で12語すべて復習', () => {
+test('pickSession：期限語が20語以上でも新出を3語残し、不足は復習で埋める', () => {
   const many = Array.from({length: 24}, (_, i) => ({id: `d${i}`, w: `w${String.fromCharCode(97 + i)}x`, ja: `d${i}`, pos: 'n', ch: 1, shelf: 1}));
   const fresh = mk(['newone', 'newtwo']);
   const progress = emptyProgress();
   many.forEach((w, i) => { progress.words[w.id] = {box: 2, due: TODAY - i, seen: 2}; });
   const picked = pickSession([...many, ...fresh], progress, TODAY).flat();
   assert.equal(picked.length, 12);
-  assert.ok(picked.every(w => progress.words[w.id]), '新出なし');
+  assert.equal(picked.filter(w => !progress.words[w.id]).length, 2);
   const few = emptyProgress();
   many.slice(0, 19).forEach((w, i) => { few.words[w.id] = {box: 2, due: TODAY - i, seen: 2}; });
   const normal = pickSession([...many.slice(0, 19), ...fresh], few, TODAY).flat();
@@ -171,9 +171,9 @@ test('pickSession：盤面の綴りが同じ語は1クエストに2つ入れな�
   assert.ok(picked.some(w => w.id === 'a1') && !picked.some(w => w.id === 'a2'), '後の方を次回へ');
 });
 
-const dueWords = n => Array.from({length: n}, (_, i) => ({id: `u${i}`, w: `due${String.fromCharCode(97 + i)}x`, ja: 'x', pos: 'n', shelf: 1}));
-const freshWords = n => Array.from({length: n}, (_, i) => ({id: `f${i}`, w: `new${String.fromCharCode(97 + i)}y`, ja: 'x', pos: 'n', shelf: 2}));
-const bigWords = n => Array.from({length: n}, (_, i) => ({id: `b${i}`, w: `internationa${String.fromCharCode(97 + i)}`, ja: 'x', pos: 'n', shelf: 3}));
+const dueWords = n => Array.from({length: n}, (_, i) => ({id: `u${i}`, w: `due${String.fromCharCode(97 + i)}x`, ja: `due${i}`, pos: 'n', shelf: 1}));
+const freshWords = n => Array.from({length: n}, (_, i) => ({id: `f${i}`, w: `new${String.fromCharCode(97 + i)}y`, ja: `fresh${i}`, pos: 'n', shelf: 2}));
+const bigWords = n => Array.from({length: n}, (_, i) => ({id: `b${i}`, w: `internationa${String.fromCharCode(97 + i)}`, ja: `big${i}`, pos: 'n', shelf: 3}));
 
 test('pickSession：fresh が 4／6／8 のとき期限語の上限は 6／6／4', () => {
   const due = dueWords(12);
@@ -215,4 +215,15 @@ test('groupWords：大物の組がいちばん最後', () => {
   // 小さい組どうしは文字数の少ない順のまま
   const sums = groups.slice(0, -1).map(g => g.reduce((n, w) => n + spelling(w.w).length, 0));
   assert.deepEqual(sums, [...sums].sort((a, b) => a - b));
+});
+
+test('同じ訳の語は同じ配達に入らず、霧でも新出3語を含む', () => {
+  const due = dueWords(24), fresh = freshWords(5);
+  fresh[1].ja = fresh[0].ja;
+  const progress = emptyProgress();
+  due.forEach(w => progress.words[w.id] = {box:3,due:TODAY,seen:1});
+  const picked = pickSession([...due,...fresh], progress,TODAY).flat();
+  assert.equal(picked.length,12);
+  assert.equal(picked.filter(w => !progress.words[w.id]).length,3);
+  assert.equal(new Set(picked.map(w=>w.ja)).size,12);
 });

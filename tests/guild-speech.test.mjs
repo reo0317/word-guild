@@ -61,3 +61,11 @@ test('声がない・解錠が無反応でも3秒で先へ進む', async () => {
   }
   assert.equal(await createSpeaker().prepare(), false);
 });
+
+test('読みあげ停止は待機中の発話も取り消す', () => {
+  const {speaker,calls} = setup();
+  speaker.speak('cat');
+  speaker.cancel();
+  assert.equal(calls.at(-1), 'cancel');
+  assert.equal(calls.filter(c => c.text === 'cat').length, 0);
+});

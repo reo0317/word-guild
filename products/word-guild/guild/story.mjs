@@ -105,3 +105,13 @@ export async function loadScenes(fetcher = globalThis.fetch, url = new URL('../d
     return data?.v === 1 && Array.isArray(data.scenes) ? data : null;
   } catch { return null; }
 }
+
+// 回答した通だけを、結果の候補にする。
+export function letterWeights(entries) {
+  const weight = new Map();
+  for (const entry of entries) {
+    if (entry.result === 'missed') continue;
+    weight.set(entry.word.shelf, (weight.get(entry.word.shelf) ?? 0) + (entry.isNew ? 3 : 1));
+  }
+  return weight;
+}
