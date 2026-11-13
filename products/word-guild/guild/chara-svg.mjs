@@ -31,8 +31,10 @@ const inkPalette = hex => ({dark: mix(hex, '#12102a', 0.55), mid: hex, tint: mix
 
 function palette(ward, ink) {
   const inks = WARDS[wardNo(ward)].inks;
-  const base = inkPalette(inks[ink % inks.length][1]);
-  return {...base, accent: inks[(ink + 1) % inks.length][1]};
+  // tint 0 は区の標準色、1・2 は別の版、3 は標準色と第3色の混色。
+  const color = ink === 3 ? mix(inks[0][1], inks[2][1], 0.5) : inks[ink % inks.length][1];
+  const base = inkPalette(color);
+  return {...base, accent: inks[(ink === 3 ? 2 : ink + 1) % inks.length][1]};
 }
 
 // ---------- フィルター ----------
@@ -64,7 +66,7 @@ export function charaDefs(base = '') {
   if (defsCache && defsCache.base === base) return defsCache.html;
   const parts = [];
   for (let w = 1; w <= 6; w++) {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
       const p = palette(w, i);
       parts.push(toneFilter(`cg-t-${w}-${i}`, p), accentFilter(`cg-a-${w}-${i}`, p.accent),
         lineFilter(`cg-l-${w}-${i}`, p.dark, 3), lineFilter(`cg-p-${w}-${i}`, p.dark, 5));
@@ -138,7 +140,7 @@ const SPARK = (x, y, s, c) => `<path transform="translate(${x} ${y}) scale(${s})
 //       unify false で色そろえなし（体の絵の元の色）。
 export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = true} = {}) {
   const w = wardNo(ward);
-  const href = esc(base + bodyFile(spec.species));
+  const href = esc(base + (spec.wordart ? `art/word/${spec.wordart.g}.webp` : bodyFile(spec.species)));
   const img = filter => `<image href="${href}" width="512" height="512"${filter ? ` filter="url(#${filter})"` : ''}/>`;
   const open = '<svg class="chara" viewBox="-24 -24 560 560" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">';
   const pose = inner => `<g transform="translate(256 490) rotate(${spec.tilt}) scale(${spec.scale}) translate(-256 -490)"><g${spec.flip ? ' transform="translate(512 0) scale(-1 1)"' : ''}>${inner}</g></g>`;
@@ -146,7 +148,7 @@ export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = tr
 
   const rare = spec.kind === 'rare';
   const proof = state === 'proof';
-  const ink = spec.ink % 3;
+  const ink = spec.wordart ? spec.wordart.tint : spec.ink % 3;
   const p = rare ? {...NIGHT} : palette(w, ink);
   const suffix = rare ? 'rare' : `${w}-${ink}`;
   const mono = {l: p.dark, a: PAPER, b: PAPER, c: PAPER};
@@ -160,7 +162,7 @@ export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = tr
     body = `<g transform="translate(4 3)">${img(`cg-t-${suffix}`)}${img(`cg-a-${suffix}`)}</g>${img(`cg-l-${suffix}`)}`;
   }
   let over = '';
-  if (!proof && unify) {
+  if (!spec.wordart && !proof && unify) {
     const pattern = PATTERNS[spec.pattern];
     const mask = `url(#cg-m-${spec.species})`;
     if (pattern && pattern !== 'plain') over += `<rect width="512" height="512" fill="url(#cg-pt-${pattern})" mask="${mask}" opacity="0.26"/>`;
@@ -169,7 +171,7 @@ export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = tr
   let deco = '';
   if (rare) deco += SPARK(70, 90, 1.1, NIGHT.tint) + SPARK(450, 120, 0.8, NIGHT.tint) + SPARK(110, 400, 0.7, NIGHT.tint) + SPARK(420, 60, 0.55, NIGHT.tint);
   if (state === 'gold') deco += SPARK(60, 440, 0.9, '#f0c23c') + SPARK(455, 90, 0.7, '#f0c23c');
-  return `${open}${pose(body + over)}${propSvg(spec, proof ? mono : props)}${deco}</svg>`;
+  return `${open}${pose(body + over)}${spec.wordart ? '' : propSvg(spec, proof ? mono : props)}${deco}</svg>`;
 }
 
 // ---------- 切手の HTML ----------

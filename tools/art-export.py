@@ -1,11 +1,13 @@
 """原画（products/word-guild/art/work/*.png）を、ゲーム用の絵（products/word-guild/art/）に書き出す。
 
-使い方: python3 tools/art-export.py
+使い方: python3 tools/art-export.py [--word]
+- --word は単語の意味の絵だけを緑抜き・正方 256px の webp にする。
 - 緑背景（#00ff00 付近）のキャラクターと敵は、緑を抜いて透過にし、正方 512px の webp にする。
 - 背景は横 1200×800、オープニングは縦のまま、webp にする。
 - アイコンは 512・192・180 の png にする。
 Pillow を使う（ゲーム本体には入れない）。
 """
+import argparse
 from pathlib import Path
 
 from PIL import Image, ImageChops
@@ -57,7 +59,26 @@ def save_webp(im, path, limit_kb):
     return path.stat().st_size // 1024
 
 
+def export_words():
+    dest = OUT / 'word'
+    dest.mkdir(parents=True, exist_ok=True)
+    paths = sorted((WORK / 'word').glob('*.png'))
+    for path in paths:
+        with Image.open(path) as source:
+            im = to_square(key_out_green(source), size=256)
+        kb = save_webp(im, dest / f'{path.stem}.webp', 30)
+        print(f'{path.stem:16s} {kb:4d} KB')
+    total = sum((dest / f'{path.stem}.webp').stat().st_size for path in paths)
+    print(f'word: {len(paths)} 枚、{total} bytes ({total / 1024:.1f} KB)')
+
+
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--word', action='store_true', help='単語の意味の絵だけを書き出す')
+    args = parser.parse_args()
+    if args.word:
+        export_words()
+        return
     OUT.mkdir(exist_ok=True)
     report = []
     for name in SPRITES:
@@ -82,6 +103,7 @@ def main():
     for name, kb in report:
         print(f'{name:16s} {kb:4d} KB')
     print(f'art/ 合計 {total} KB')
+    export_words()
 
 
 if __name__ == '__main__':
