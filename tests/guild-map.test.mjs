@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {HOUSE_ART} from '../products/word-guild/guild/art.mjs';
-import {renderMap, houseGeometry, projectRoad, A, L, W, f} from '../products/word-guild/guild/map.mjs';
+import {renderMap, panelGeometry, houseGeometry, projectRoad, A, L, W, f} from '../products/word-guild/guild/map.mjs';
 import {buildMap} from '../products/word-guild/guild/stages.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
@@ -101,4 +101,25 @@ test('家の境目は24%のグラデーションで、未配達と全着色は�
   assert.match(css, /\[data-reveal="100"\] .gq-house-color\{-webkit-mask-image:none;mask-image:none\}/);
   assert.doesNotMatch(css, /(?:^|[;{])\s*filter\s*:/);
   assert.match(css, /\.gq-road-svg path\{animation:none;transition:none;transform:none\}/);
+});
+
+
+test('390×844・360×640で吹き出しは左右の家とツムギを避け、画面内に収まる', () => {
+  for (const [width, height] of [[390, 680], [360, 480]]) {
+    for (let camera = -500; camera < 2500; camera += 137) {
+      const here = projectRoad(width, height, camera + 450, camera);
+      const houses = [];
+      for (let y = 300; y < 6000; y += 362) {
+        if (y < camera) continue;
+        const p = projectRoad(width, height, y, camera);
+        const h = houseGeometry(width, p, true);
+        const left = h.side === 'left' ? p.x - h.offset - h.size : p.x + h.offset;
+        houses.push({left, right:left + h.size, top:p.y - h.size * .85, bottom:p.y + h.size * .15});
+      }
+      const panel = panelGeometry(width, height, here.x, here.y, 150, 88, houses);
+      assert.ok(panel.left >= 8 && panel.left + 150 <= width - 8);
+      assert.ok(panel.top >= 8 && panel.top + 88 <= height - 8);
+      for (const h of houses) assert.ok(panel.left >= h.right || panel.left + 150 <= h.left || panel.top >= h.bottom || panel.top + 88 <= h.top);
+    }
+  }
 });

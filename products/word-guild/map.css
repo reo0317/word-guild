@@ -51,9 +51,9 @@
 .gq-gate.cleared i{background:var(--paper-hi)}.gq-gate.cleared i::after{content:"";display:block;margin:8px auto 0;width:20px;height:38px;border-radius:10px 10px 0 0;background:var(--ink)}
 .gq-gate:active{transform:none;box-shadow:none}
 
-.gq-tsumugi-pin{position:absolute;left:0;top:0;width:62px;height:62px;margin:-60px 0 0 -31px;object-fit:contain;object-position:center bottom;pointer-events:none}
+.gq-tsumugi-pin{position:absolute;left:0;top:0;width:100px;height:100px;margin:-100px 0 0 -50px;object-fit:contain;object-position:center bottom;pointer-events:none}
 .gq-here-panel{position:absolute;top:-34px;display:grid;gap:4px;width:max-content;max-width:170px;padding:5px 8px;border:2px solid var(--ink);border-radius:18px;background:var(--paper-hi);box-shadow:0 3px 0 var(--ink)}
-.gq-here-panel.left{right:40px}.gq-here-panel.right{left:40px}
+.gq-here-panel.left,.gq-here-panel.right{right:auto}
 .gq-here-panel .gq-faces{display:flex;align-items:center;gap:2px}.gq-here-panel .gq-face{width:34px;height:34px}
 .gq-due-n,.gq-due-badge b{display:grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:11px;background:var(--seal);color:var(--paper);font-size:13px;font-weight:900;border:1.5px solid var(--ink)}
 

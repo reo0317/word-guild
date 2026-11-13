@@ -53,6 +53,22 @@ export function houseGeometry(width, projection, current = false) {
   return {x, size, offset: half + 8, side};
 }
 
+// 頭上に近い空き位置を選ぶ。画面端・家・ツムギ自身を避ける。
+export function panelGeometry(width, height, x, feet, pw, ph, houses) {
+  const preferred = {left: Math.max(8, Math.min(width - pw - 8, x - pw / 2)), top: feet - 112 - ph};
+  const obstacles = [...houses, {left:x - 50, right:x + 50, top:feet - 100, bottom:feet}];
+  const xs = [preferred.left, 8, width - pw - 8, ...obstacles.flatMap(h => [h.left - pw - 6, h.right + 6])];
+  const ys = [preferred.top, 8, ...obstacles.flatMap(h => [h.top - ph - 6, h.bottom + 6])];
+  let best = preferred, score = Infinity;
+  for (const left of xs) for (const top of ys) {
+    if (left < 8 || left + pw > width - 8 || top < 8 || top + ph > height - 8) continue;
+    if (obstacles.some(h => left < h.right + 5 && left + pw > h.left - 5 && top < h.bottom + 5 && top + ph > h.top - 5)) continue;
+    const distance = (left - preferred.left) ** 2 + (top - preferred.top) ** 2;
+    if (distance < score) { best = {left, top}; score = distance; }
+  }
+  return best;
+}
+
 const DAILY_SHORT = {revenge: ['↺', '戻ってきた紙魚'], fresh: ['✦', '新しい紙魚'], clean: ['✓', 'ヒントなし'], finish: ['▶', '配達']};
 
 export function dailyLine(daily) {
@@ -187,7 +203,7 @@ export function renderMap(view, ctx) {
     const shadows = map.next.map(id => `<span class="gq-face">${ctx.face(id, 'shadow')}</span>`).join('');
     const dues = map.due.map(id => `<span class="gq-face">${ctx.face(id, 'print')}</span>`).join('');
     herePanel = bb('gq-bb-tsumugi', hereY, hereItem.lat, `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}">`)
-      + bb(`gq-bb-panel ${side}`, hereY + 22, hereItem.lat, `<div class="gq-here-panel ${side}">
+      + bb(`gq-bb-panel ${side}`, hereY, hereItem.lat, `<div class="gq-here-panel ${side}">
         ${map.next.length ? `<div class="gq-faces" aria-label="この先の紙魚"><span class="gq-arrow" aria-hidden="true">▸</span>${shadows}</div>` : '<p class="gq-top-mark" aria-label="いちばん上">★</p>'}
         ${map.dueCount ? `<div class="gq-faces due" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b class="gq-due-n">${map.dueCount}</b>${dues}</div>` : ''}
       </div>`);
@@ -296,7 +312,7 @@ export function renderMap(view, ctx) {
   const update = () => {
     frame = 0;
     if (!Ws || !Hs) return;
-    const c = Math.min(total, Math.max(0, total - road.scrollTop)); // カメラの位置
+    const c = Math.min(total, Math.max(-1400, total - road.scrollTop)); // カメラの位置
     const F = Z_NEAR;
     const project = y => projectRoad(Ws, Hs, y, c);
     const sOf = r => f / (r + Z_NEAR);
@@ -364,7 +380,20 @@ export function renderMap(view, ctx) {
         b.house.style.setProperty('--house-size', `${(size / s).toFixed(3)}px`);
         b.house.style.setProperty('--house-offset', `${(offset / s).toFixed(3)}px`);
       }
-      if (b.panel) b.panel.className = `gq-here-panel ${sx > Ws / 2 ? 'left' : 'right'}`; // 道の広い側に出す
+      if (b.el.classList.contains('gq-bb-tsumugi') || b.panel) b.scale = 1 / s;
+      if (b.panel) {
+        // 頭上から始め、左右の端と投影された家の矩形を避ける。
+        const pw = b.panel.offsetWidth, ph = b.panel.offsetHeight;
+        const obstacles = boards.filter(other => other.house).map(other => {
+          const p = project(other.y);
+          const h = houseGeometry(Ws, p, Number(other.house.dataset.shelf) === map.here?.shelf);
+          const x = h.side === 'left' ? p.x - h.offset - h.size : p.x + h.offset;
+          return {left:x, right:x + h.size, top:p.y - h.size * .85, bottom:p.y + h.size * .15};
+        });
+        const {left, top} = panelGeometry(Ws, Hs, sx, Y(s), pw, ph, obstacles);
+        b.panel.style.left = `${left - sx}px`;
+        b.panel.style.top = `${Math.max(8, top) - Y(s)}px`;
+      }
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${(s * b.scale).toFixed(3)})`;
       b.el.style.opacity = fade.toFixed(2);
       b.el.style.zIndex = String(Math.round(s * 100));
@@ -381,14 +410,20 @@ export function renderMap(view, ctx) {
   };
   const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
 
-  // 枠の大きさが決まったら、カメラを今いる石段に置く。大きさが変わっても、カメラの位置は保つ。
-  let cameraAt = hereY;
+  // 枠の大きさが決まったら、今いる石段が画面中央より少し下に来るカメラ位置にする。大きさが変わっても、カメラの位置は保つ。
+  let cameraAt = null;
   const measure = () => {
     const w = road.clientWidth, h = road.clientHeight;
     if (!w || !h) return;
-    if (Ws && Hs) cameraAt = Math.min(total, Math.max(0, total - road.scrollTop));
+    if (Ws && Hs) cameraAt = Math.min(total, Math.max(-1400, total - road.scrollTop));
     Ws = w; Hs = h;
-    inner.style.height = `${Hs + total}px`;
+    if (cameraAt === null) {
+      // ツムギの中心を画面の58.5%へ。足元は同じ石段の投影点に固定する。
+      const feet = window.innerHeight * .585 + 50 - road.getBoundingClientRect().top;
+      const scale = Math.max(.35, Math.min(.85, (feet / Hs - HORIZON) / H_CAMERA));
+      cameraAt = hereY + Z_NEAR - f / scale;
+    }
+    inner.style.height = `${Hs + total + 1400}px`;
     stage.style.height = `${Hs}px`;
     svg.setAttribute('viewBox', `0 0 ${Ws} ${Hs}`);
     road.scrollTop = total - cameraAt;
