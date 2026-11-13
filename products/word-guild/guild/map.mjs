@@ -388,7 +388,10 @@ export function renderMap(view, ctx) {
         right: points.map(p => [p.x + p.half * width, p.y])};
     };
     const cap = $('#gq-road-cap');
-    cap.style.height = `${project(visibleEnd).y + 31}px`;
+    const tip = project(visibleEnd);
+    cap.style.left = `${tip.x}px`;
+    cap.style.top = `${tip.y}px`;
+    cap.style.width = `${tip.half * 2 * 2.5}px`;
     cap.style.display = roadEnd > c + DRAW_DISTANCE ? '' : 'none';
     const fmt = p => `${p[0].toFixed(1)} ${p[1].toFixed(1)}`;
     const poly = ({left, right}) => `M${left.map(fmt).join('L')}L${right.reverse().map(fmt).join('L')}Z`;

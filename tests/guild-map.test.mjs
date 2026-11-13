@@ -242,6 +242,21 @@ test('現在地から10石段より遠い灯台は描かない', () => {
   assert.equal(lighthouseVisible(0), true);
 });
 
+test('道の先端の霞は道幅の2.5倍・高さ32pxで、端を透明にする', async () => {
+  const source = await readFile(new URL('../products/word-guild/guild/map.mjs', import.meta.url), 'utf8');
+  const css = await readFile(new URL('../products/word-guild/map.css', import.meta.url), 'utf8');
+  assert.match(source, /const tip = project\(visibleEnd\)/);
+  assert.match(source, /cap\.style\.left = `\$\{tip\.x\}px`/);
+  assert.match(source, /cap\.style\.top = `\$\{tip\.y\}px`/);
+  assert.match(source, /cap\.style\.width = `\$\{tip\.half \* 2 \* 2\.5\}px`/);
+  assert.match(source, /cap\.style\.display = roadEnd > c \+ DRAW_DISTANCE \? '' : 'none'/);
+  const rule = css.match(/\.gq-road-cap\{([^}]+)\}/)[1];
+  assert.match(rule, /height:32px/);
+  assert.match(rule, /transform:translate\(-50%,-50%\)/);
+  assert.match(rule, /background:radial-gradient\(ellipse at center,var\(--fog-lt\) 0 35%,transparent 72%\)/);
+  assert.doesNotMatch(rule, /(?:mask|filter|right:|left:0|top:0)/);
+});
+
 test('スマホ幅で道の点列は打ち切り距離を超えず、画面の間隔は2px未満', () => {
   for (const [width, height] of [[320,480], [390,680], [430,760]]) {
     for (const camera of [-1400, 0, 530, 10000]) {

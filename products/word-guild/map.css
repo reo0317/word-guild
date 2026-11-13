@@ -145,6 +145,6 @@
 .gq-bb-tsumugi{will-change:transform}
 .gq-bb-panel{opacity:1}
 
-/* 非表示は透過やマスクに依存させない。霞の上端は不透明。 */
+/* 遠い物は非表示にし、道の打ち切り位置だけ小さな霞でなじませる。 */
 .gq-bb[hidden]{display:none!important}
-.gq-road-cap{position:absolute;left:0;right:0;top:0;pointer-events:none;z-index:199;background:linear-gradient(var(--fog-lt) 0 calc(100% - 28px),transparent 100%);border-radius:0 0 50% 50%}
+.gq-road-cap{position:absolute;height:32px;transform:translate(-50%,-50%);pointer-events:none;z-index:199;background:radial-gradient(ellipse at center,var(--fog-lt) 0 35%,transparent 72%)}
