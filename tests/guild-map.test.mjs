@@ -208,6 +208,7 @@ test('390×844・360×640で吹き出しは左右の家とツムギを避け、�
         houses.push({left, right:left + h.size, top:p.y - h.size * .85, bottom:p.y + h.size * .15});
       }
       const panel = panelGeometry(width, height, here.x, here.y, 150, 88, houses);
+      if (!panel) continue;
       assert.ok(panel.left >= 8 && panel.left + 150 <= width - 8);
       assert.ok(panel.top >= 8 && panel.top + 88 <= height - 8);
       for (const h of houses) assert.ok(panel.left >= h.right || panel.left + 150 <= h.left || panel.top >= h.bottom || panel.top + 88 <= h.top);
@@ -215,7 +216,7 @@ test('390×844・360×640で吹き出しは左右の家とツムギを避け、�
   }
 });
 
- test('縮尺の上下限・灯台の霧・遠い道の減衰', () => {
+ test('縮尺の上下限・灯台の霧・一定の道の振幅', () => {
   for (const scale of [-10, 0, .1, .3, 1, 1.2, 100, Infinity, NaN]) {
     assert.ok(objectScale(scale) >= .3 && objectScale(scale) <= 1.2);
     assert.ok(tsumugiScale(scale, .4) >= .3 && tsumugiScale(scale, .4) <= 1.2);
@@ -231,7 +232,7 @@ test('390×844・360×640で吹き出しは左右の家とツムギを避け、�
     previous = amplitude;
   }
   assert.equal(roadAmplitude(0), 1);
-  assert.equal(roadAmplitude(2200), 0);
+  assert.equal(roadAmplitude(2200), 1);
 });
 
 
@@ -272,6 +273,27 @@ test('スマホ幅で道の点列は打ち切り距離を超えず、画面の�
           }
         }
       }
+    }
+  }
+});
+
+
+test('吹き出しは大きなツムギの横に限り、左の家を避けて右へ出す', () => {
+  const house = {left:10, right:140, top:270, bottom:440};
+  assert.deepEqual(panelGeometry(390, 680, 190, 400, 130, 80, [house]), {left:246, top:300});
+  assert.equal(panelGeometry(390, 680, 190, 400, 130, 80, [], 74), null);
+  assert.equal(panelGeometry(320, 480, 160, 300, 150, 80, []), null);
+  assert.deepEqual(panelGeometry(390, 680, 210, 400, 130, 80,
+    [{left:260, right:380, top:270, bottom:440}]), {left:24, top:300});
+});
+
+test('打ち切り地点まで世界座標の sin の振幅を保つ', () => {
+  assert.ok(DRAW_DISTANCE <= 1400);
+  for (const camera of [0, 137, 550, 1100]) {
+    for (let d = 0; d <= DRAW_DISTANCE; d += 25) {
+      const p = projectRoad(390, 680, camera + d, camera);
+      assert.ok(Math.abs((p.x - 195) / (390 * p.scale)
+        - A * Math.sin(2 * Math.PI * (camera + d) / L + Math.PI / 2)) < 1e-12);
     }
   }
 });

@@ -33,7 +33,7 @@ export const H_CAMERA = 0.86; // カメラの高さ（画面の縦横比で補�
 const Z_NEAR = 700;    // 下端での最短距離。これより近い地面は描かない
 const PHASE = Math.PI / 2;
 const S_MIN = 0.07;
-export const DRAW_DISTANCE = 1800;
+export const DRAW_DISTANCE = 1400;
 export const LIGHTHOUSE_DISTANCE = H.step * 10;
 
 export function lighthouseVisible(remaining) {
@@ -45,7 +45,7 @@ export function roadPoints(width, height, end, camera = 0) {
   const cap = Math.max(camera, Math.min(end, camera + DRAW_DISTANCE));
   const near = projectRoad(width, height, camera, camera);
   const far = projectRoad(width, height, cap, camera);
-  const count = Math.max(1, Math.ceil(near.y - far.y));
+  const count = Math.max(1, Math.ceil((near.y - far.y) * 3));
   return Array.from({length: count + 1}, (_, i) => {
     const scale = near.scale + (far.scale - near.scale) * i / count;
     const worldZ = i === count ? cap : Math.min(cap, camera + f / scale - Z_NEAR);
@@ -77,10 +77,8 @@ export function tsumugiScale(scale, initialScale) {
 export function objectScale(scale) {
   return Math.max(.3, Math.min(1.2, Number.isFinite(scale) ? scale : scale > 0 ? 1.2 : .3));
 }
-export function roadAmplitude(distance) {
-  const t = Math.max(0, Math.min(1, (distance - 550) / 1650));
-  return (1 - t) ** 3;
-}
+// 横振幅は世界座標で一定。遠方は描画距離で打ち切る。
+export function roadAmplitude() { return 1; }
 export function lighthouseOpacity(distance) {
   return Math.max(0, Math.min(1, (2400 - distance) / 1000));
 }
@@ -104,27 +102,19 @@ export function houseGeometry(width, projection, current = false) {
   return {x, size, offset: half + 8, side};
 }
 
-// 頭上に近い空き位置を選ぶ。画面端・家・ツムギ自身を避ける。
+// 胸〜頭の横だけを候補にする。隣に空きがなければ表示しない。
 export function panelGeometry(width, height, x, feet, pw, ph, objects, tsumugiSize = 100) {
-  const preferred = {left: Math.max(8, Math.min(width - pw - 8, x - pw / 2)), top: feet - tsumugiSize - 12 - ph};
-  const obstacles = [...objects, {left:x - tsumugiSize / 2, right:x + tsumugiSize / 2, top:feet - tsumugiSize, bottom:feet}];
-  const xs = [preferred.left, 8, width - pw - 8, ...obstacles.flatMap(h => [h.left - pw - 6, h.right + 6])];
-  const ys = [preferred.top, 8, ...obstacles.flatMap(h => [h.top - ph - 6, h.bottom + 6])];
-  const clear = ({left, top}) => left >= 8 && left + pw <= width - 8 && top >= 8 && top + ph <= height - 8
-    && !obstacles.some(h => left < h.right + 5 && left + pw > h.left - 5 && top < h.bottom + 5 && top + ph > h.top - 5);
-  // 頭上 → 左上 → 右上。横の候補も頭より上に保つ。
-  for (const left of [preferred.left, Math.max(8, x - 56 - pw), Math.min(width - pw - 8, x + 56)]) {
-    const candidate = {left, top: preferred.top};
-    if (clear(candidate)) return candidate;
-  }
-  let best = {...preferred, top: Math.max(8, Math.min(height - ph - 8, preferred.top))}, score = Infinity;
-  for (const left of xs) for (const top of ys) {
+  if (tsumugiSize < 75) return null;
+  const top = Math.max(8, Math.min(height - ph - 8, feet - tsumugiSize));
+  if (top > feet - tsumugiSize * .55) return null;
+  const gap = tsumugiSize / 2 + 6;
+  for (const left of [x + gap, x - gap - pw]) {
     if (left < 8 || left + pw > width - 8 || top < 8 || top + ph > height - 8) continue;
-    if (obstacles.some(h => left < h.right + 5 && left + pw > h.left - 5 && top < h.bottom + 5 && top + ph > h.top - 5)) continue;
-    const distance = (left - preferred.left) ** 2 + (top - preferred.top) ** 2;
-    if (distance < score) { best = {left, top}; score = distance; }
+    if (objects.some(h => left < h.right + 5 && left + pw > h.left - 5
+      && top < h.bottom + 5 && top + ph > h.top - 5)) continue;
+    return {left, top};
   }
-  return best;
+  return null;
 }
 
 const DAILY_SHORT = {revenge: ['↺', '戻ってきた紙魚'], fresh: ['✦', '新しい紙魚'], clean: ['✓', 'ヒントなし'], finish: ['▶', '配達']};
@@ -458,10 +448,12 @@ export function renderMap(view, ctx) {
             top:r.top - origin.top, bottom:r.bottom - origin.top};
         }));
       const p = project(panelBoard.y);
-      const {left, top} = panelGeometry(Ws, Hs, p.x, p.y,
+      const placement = panelGeometry(Ws, Hs, p.x, p.y,
         panelBoard.panel.offsetWidth, panelBoard.panel.offsetHeight, obstacles,
         100 * tsumugiScale(p.scale, initialTsumugiScale));
-      panelBoard.panel.style.visibility = '';
+      panelBoard.panel.style.visibility = placement ? '' : 'hidden';
+      if (!placement) return;
+      const {left, top} = placement;
       panelBoard.panel.style.transform = `translate(${left - p.x}px,${top - p.y}px)`;
     }
 

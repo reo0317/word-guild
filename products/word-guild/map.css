@@ -52,9 +52,9 @@
 .gq-gate:active{transform:none;box-shadow:none}
 
 .gq-tsumugi-pin{position:absolute;left:0;top:0;width:100px;height:100px;margin:-100px 0 0 -50px;object-fit:contain;object-position:center bottom;pointer-events:none}
-.gq-here-panel{position:absolute;top:0;left:0;display:grid;gap:4px;width:max-content;max-width:170px;padding:5px 8px;border:2px solid var(--ink);border-radius:18px;background:#fff9eb;box-shadow:0 3px 0 var(--ink)}
+.gq-here-panel{position:absolute;top:0;left:0;display:grid;gap:4px;width:max-content;max-width:130px;padding:5px 8px;border:2px solid var(--ink);border-radius:18px;background:#fff9eb;box-shadow:0 3px 0 var(--ink)}
 .gq-here-panel.left,.gq-here-panel.right{right:auto}
-.gq-here-panel .gq-faces{display:flex;align-items:center;gap:2px}.gq-here-panel .gq-face{width:34px;height:34px}
+.gq-here-panel .gq-faces{display:flex;align-items:center;gap:2px}.gq-here-panel .gq-face{width:26px;height:26px}
 .gq-due-n,.gq-due-badge b{display:grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:11px;background:var(--seal);color:var(--paper);font-size:13px;font-weight:900;border:1.5px solid var(--ink)}
 
 .gq-pin{position:absolute;top:-30px;display:flex;align-items:flex-end;gap:2px;width:max-content;padding:0;background:none;border:0;border-radius:0;box-shadow:none;line-height:0}
