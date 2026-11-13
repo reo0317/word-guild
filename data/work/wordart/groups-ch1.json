@@ -1,0 +1,1301 @@
+{
+ "ch": 1,
+ "groups": [
+  {
+   "g": "c1-001",
+   "concept": "ink blob with a huge open mouth shouting out a big blank speech bubble",
+   "words": [
+    {
+     "id": "b0001",
+     "w": "say",
+     "tint": 0
+    },
+    {
+     "id": "b0045",
+     "w": "talk",
+     "tint": 1
+    },
+    {
+     "id": "b0024",
+     "w": "tell",
+     "tint": 2
+    },
+    {
+     "id": "b0137",
+     "w": "speak",
+     "tint": 3
+    }
+   ]
+  },
+  {
+   "g": "c1-002",
+   "concept": "ink creature with steam and small gears rising from its head, a glowing light bulb floating above",
+   "words": [
+    {
+     "id": "b0003",
+     "w": "think",
+     "tint": 0
+    },
+    {
+     "id": "b0115",
+     "w": "idea",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-003",
+   "concept": "smug ink creature with a glowing light bulb in its chest, arms crossed, a big check mark badge",
+   "words": [
+    {
+     "id": "b0002",
+     "w": "know",
+     "tint": 0
+    },
+    {
+     "id": "b0133",
+     "w": "sure",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-004",
+   "concept": "ink creature in a mortarboard and round glasses reading a stack of books, a school bell and a pencil behind its ear",
+   "words": [
+    {
+     "id": "b0073",
+     "w": "study",
+     "tint": 0
+    },
+    {
+     "id": "b0123",
+     "w": "learn",
+     "tint": 1
+    },
+    {
+     "id": "b0049",
+     "w": "school",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c1-005",
+   "concept": "ink creature with one huge eyeball and binoculars, gazing at a faraway scenic hill",
+   "words": [
+    {
+     "id": "b0005",
+     "w": "see",
+     "tint": 0
+    },
+    {
+     "id": "b0012",
+     "w": "look",
+     "tint": 1
+    },
+    {
+     "id": "b0140",
+     "w": "view",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c1-006",
+   "concept": "ink creature with a giant ear and one hand on its heart, fingertips touching a fluffy cloud, sound waves curling toward it",
+   "words": [
+    {
+     "id": "b0068",
+     "w": "hear",
+     "tint": 0
+    },
+    {
+     "id": "b0032",
+     "w": "feel",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-007",
+   "concept": "ink creature whose round body is a clock face, holding a small hourglass, tiny gears showing",
+   "words": [
+    {
+     "id": "b0004",
+     "w": "time",
+     "tint": 0
+    },
+    {
+     "id": "b0112",
+     "w": "hour",
+     "tint": 1
+    },
+    {
+     "id": "b0134",
+     "w": "term",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c1-008",
+   "concept": "ink creature with a big sun for a head, rays around it, cheerful morning pose",
+   "words": [
+    {
+     "id": "b0018",
+     "w": "day",
+     "tint": 0
+    },
+    {
+     "id": "b0111",
+     "w": "today",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-009",
+   "concept": "sleepy ink creature wearing a nightcap under a crescent moon and stars",
+   "words": [
+    {
+     "id": "b0129",
+     "w": "night",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-010",
+   "concept": "ink creature whose body is a torn calendar page with a grid of small blank squares and a birthday candle on top",
+   "words": [
+    {
+     "id": "b0056",
+     "w": "week",
+     "tint": 0
+    },
+    {
+     "id": "b0089",
+     "w": "month",
+     "tint": 1
+    },
+    {
+     "id": "b0008",
+     "w": "year",
+     "tint": 2
+    },
+    {
+     "id": "b0135",
+     "w": "age",
+     "tint": 3
+    }
+   ]
+  },
+  {
+   "g": "c1-011",
+   "concept": "ink creature greeting a sunrise, with a rooster crest and a toothbrush, fresh and wide awake",
+   "words": [
+    {
+     "id": "b0079",
+     "w": "early",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-012",
+   "concept": "ink creature rushing in panting with a clock chasing it, hair messy, a bit sleepy",
+   "words": [
+    {
+     "id": "b0050",
+     "w": "late",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-013",
+   "concept": "ink creature walking toward the viewer with an arrow of footprints behind it and one hand beckoning",
+   "words": [
+    {
+     "id": "b0009",
+     "w": "come",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-014",
+   "concept": "ink creature walking out through a door with a small suitcase, waving goodbye",
+   "words": [
+    {
+     "id": "b0037",
+     "w": "leave",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-015",
+   "concept": "ink blob halfway transforming into a star shape with swirling sparkle lines",
+   "words": [
+    {
+     "id": "b0047",
+     "w": "become",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-016",
+   "concept": "ink creature wearing a hard hat and holding a wrench and a lunch box, sweat drop",
+   "words": [
+    {
+     "id": "b0010",
+     "w": "work",
+     "tint": 0
+    },
+    {
+     "id": "b0100",
+     "w": "job",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-017",
+   "concept": "ink creature gripping a big tool, the tool glowing as it is being used",
+   "words": [
+    {
+     "id": "b0011",
+     "w": "use",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-018",
+   "concept": "ink creature with hungry wide eyes reaching both hands toward a glowing treasure, drooling a little",
+   "words": [
+    {
+     "id": "b0013",
+     "w": "want",
+     "tint": 0
+    },
+    {
+     "id": "b0019",
+     "w": "need",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-019",
+   "concept": "ink creature with clasped hands looking up at a single shooting star",
+   "words": [
+    {
+     "id": "b0114",
+     "w": "hope",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-020",
+   "concept": "ink creature hugging a big heart, with small hearts floating around it",
+   "words": [
+    {
+     "id": "b0099",
+     "w": "love",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-021",
+   "concept": "ink creature holding out a ribboned gift box with both hands, leaning forward",
+   "words": [
+    {
+     "id": "b0014",
+     "w": "give",
+     "tint": 0
+    },
+    {
+     "id": "b0104",
+     "w": "offer",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-022",
+   "concept": "ink creature holding up a big empty picture frame, one hand pointing at it proudly",
+   "words": [
+    {
+     "id": "b0026",
+     "w": "show",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-023",
+   "concept": "ink creature walking while carrying a big parcel tied with string",
+   "words": [
+    {
+     "id": "b0078",
+     "w": "bring",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-024",
+   "concept": "ink creature handing coins across a shop counter and receiving a small bag, coins flying from its purse",
+   "words": [
+    {
+     "id": "b0096",
+     "w": "pay",
+     "tint": 0
+    },
+    {
+     "id": "b0108",
+     "w": "buy",
+     "tint": 1
+    },
+    {
+     "id": "b0120",
+     "w": "spend",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c1-025",
+   "concept": "ink creature made of stacked coins and a coin bag, with shiny coins on top",
+   "words": [
+    {
+     "id": "b0083",
+     "w": "money",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-026",
+   "concept": "ink creature with a big price tag tied around its neck and a gauge dial on its belly, tiny coin scale beside it",
+   "words": [
+    {
+     "id": "b0116",
+     "w": "cost",
+     "tint": 0
+    },
+    {
+     "id": "b0141",
+     "w": "price",
+     "tint": 1
+    },
+    {
+     "id": "b0150",
+     "w": "rate",
+     "tint": 2
+    },
+    {
+     "id": "b0124",
+     "w": "level",
+     "tint": 3
+    }
+   ]
+  },
+  {
+   "g": "c1-027",
+   "concept": "freshly hatched shiny ink creature with sparkles and a few eggshell pieces on its head",
+   "words": [
+    {
+     "id": "b0015",
+     "w": "new",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-028",
+   "concept": "ink creature with a long beard, a cane and a hunched back, cracked and faded edges",
+   "words": [
+    {
+     "id": "b0048",
+     "w": "old",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-029",
+   "concept": "small bouncy ink creature with a pacifier-like bubble and a sprout on its head",
+   "words": [
+    {
+     "id": "b0105",
+     "w": "young",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-030",
+   "concept": "ink creature giving a big thumbs up with a golden crown and sparkles",
+   "words": [
+    {
+     "id": "b0006",
+     "w": "good",
+     "tint": 0
+    },
+    {
+     "id": "b0035",
+     "w": "great",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-031",
+   "concept": "grumpy ink creature giving a thumbs down under a small storm cloud with lightning",
+   "words": [
+    {
+     "id": "b0127",
+     "w": "bad",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-032",
+   "concept": "huge ink creature towering over tiny houses, one foot taller than a tree",
+   "words": [
+    {
+     "id": "b0070",
+     "w": "big",
+     "tint": 0
+    },
+    {
+     "id": "b0090",
+     "w": "large",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-033",
+   "concept": "tiny ink creature next to a giant button for scale, peering up",
+   "words": [
+    {
+     "id": "b0072",
+     "w": "small",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-034",
+   "concept": "very stretched-out snake-like ink creature winding across a long road toward a tiny faraway horizon, holding a telescope",
+   "words": [
+    {
+     "id": "b0031",
+     "w": "long",
+     "tint": 0
+    },
+    {
+     "id": "b0110",
+     "w": "far",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-035",
+   "concept": "tall ink creature stretched on tiptoe on stacked boxes, reaching the clouds",
+   "words": [
+    {
+     "id": "b0051",
+     "w": "high",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-036",
+   "concept": "flat squashed ink creature crawling under a low bar, close to the ground",
+   "words": [
+    {
+     "id": "b0136",
+     "w": "low",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-037",
+   "concept": "crowd of small ink creatures wearing the same badge ribbons, standing shoulder to shoulder",
+   "words": [
+    {
+     "id": "b0007",
+     "w": "people",
+     "tint": 0
+    },
+    {
+     "id": "b0138",
+     "w": "public",
+     "tint": 1
+    },
+    {
+     "id": "b0061",
+     "w": "group",
+     "tint": 2
+    },
+    {
+     "id": "b0126",
+     "w": "member",
+     "tint": 3
+    }
+   ]
+  },
+  {
+   "g": "c1-038",
+   "concept": "single ink creature standing upright in a neat outline with a simple round head, hat and coat",
+   "words": [
+    {
+     "id": "b0125",
+     "w": "person",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-039",
+   "concept": "ink creature with a bowler hat, a mustache and a necktie",
+   "words": [
+    {
+     "id": "b0028",
+     "w": "man",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-040",
+   "concept": "ink creature with long wavy hair, a ribbon hat and an earring",
+   "words": [
+    {
+     "id": "b0063",
+     "w": "woman",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-041",
+   "concept": "small round ink creature with a school cap and a backpack",
+   "words": [
+    {
+     "id": "b0023",
+     "w": "child",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-042",
+   "concept": "big ink creature holding hands with two small ink creatures, walking together",
+   "words": [
+    {
+     "id": "b0142",
+     "w": "parent",
+     "tint": 0
+    },
+    {
+     "id": "b0065",
+     "w": "family",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-043",
+   "concept": "two ink creatures shaking hands with arms around each other's shoulders, smiling",
+   "words": [
+    {
+     "id": "b0088",
+     "w": "friend",
+     "tint": 0
+    },
+    {
+     "id": "b0043",
+     "w": "meet",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-044",
+   "concept": "ink creature with a party hat blowing a horn, confetti and balloons",
+   "words": [
+    {
+     "id": "b0144",
+     "w": "party",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-045",
+   "concept": "ink creature wearing a little house as a snail-like shell on its back, a chimney with smoke, a lit window",
+   "words": [
+    {
+     "id": "b0058",
+     "w": "home",
+     "tint": 0
+    },
+    {
+     "id": "b0059",
+     "w": "house",
+     "tint": 1
+    },
+    {
+     "id": "b0054",
+     "w": "live",
+     "tint": 2
+    },
+    {
+     "id": "b0117",
+     "w": "room",
+     "tint": 3
+    }
+   ]
+  },
+  {
+   "g": "c1-046",
+   "concept": "ink creature standing on a map patch with a big map pin planted beside it and a skyscraper skyline behind",
+   "words": [
+    {
+     "id": "b0128",
+     "w": "city",
+     "tint": 0
+    },
+    {
+     "id": "b0030",
+     "w": "place",
+     "tint": 1
+    },
+    {
+     "id": "b0085",
+     "w": "area",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c1-047",
+   "concept": "ink creature with a globe body, continents on it, tiny orbiting lines",
+   "words": [
+    {
+     "id": "b0055",
+     "w": "world",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-048",
+   "concept": "ink creature standing in front of a small neighborhood shop with an awning, waving at a passing cat",
+   "words": [
+    {
+     "id": "b0145",
+     "w": "local",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-049",
+   "concept": "ink creature in a detective hat with a magnifying glass and a stamp of truth, a briefcase at its side",
+   "words": [
+    {
+     "id": "b0081",
+     "w": "state",
+     "tint": 0
+    },
+    {
+     "id": "b0062",
+     "w": "case",
+     "tint": 1
+    },
+    {
+     "id": "b0084",
+     "w": "fact",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c1-050",
+   "concept": "ink creature standing at a forked road next to a signpost with arrows only",
+   "words": [
+    {
+     "id": "b0016",
+     "w": "way",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-051",
+   "concept": "row of ink creatures queuing in a neat straight line",
+   "words": [
+    {
+     "id": "b0131",
+     "w": "line",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-052",
+   "concept": "ink creature in profile, body split in two halves with an arrow pointing to the left",
+   "words": [
+    {
+     "id": "b0132",
+     "w": "side",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-053",
+   "concept": "ink creature turning away to show its back with a visible spine ridge and a small bag, looking over its shoulder",
+   "words": [
+    {
+     "id": "b0020",
+     "w": "back",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-054",
+   "concept": "ink creature pushing a cart of moving boxes, leaning into a sharp curve with a big curved arrow under its feet",
+   "words": [
+    {
+     "id": "b0077",
+     "w": "turn",
+     "tint": 0
+    },
+    {
+     "id": "b0082",
+     "w": "move",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-055",
+   "concept": "ink creature with a magnifying glass jumping in surprise at a hidden treasure",
+   "words": [
+    {
+     "id": "b0017",
+     "w": "find",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-056",
+   "concept": "ink creature pointing at a picture bubble showing an object, a chain link leading to a lightbulb, thoughtful expression",
+   "words": [
+    {
+     "id": "b0021",
+     "w": "mean",
+     "tint": 0
+    },
+    {
+     "id": "b0118",
+     "w": "reason",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-057",
+   "concept": "ink creature holding an old phone receiver to its ear with a raised hand and curious tilted head, sound waves",
+   "words": [
+    {
+     "id": "b0025",
+     "w": "call",
+     "tint": 0
+    },
+    {
+     "id": "b0042",
+     "w": "ask",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-058",
+   "concept": "ink creature with a heartbeat line on its chest and a green sprout growing out of its head",
+   "words": [
+    {
+     "id": "b0027",
+     "w": "life",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-059",
+   "concept": "ink creature startled by a sudden spark with a pop, its body mid-transformation with swirling arrows",
+   "words": [
+    {
+     "id": "b0029",
+     "w": "change",
+     "tint": 0
+    },
+    {
+     "id": "b0103",
+     "w": "happen",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-060",
+   "concept": "ink creature reading an open book in one hand while writing with a feather quill tail on a scroll",
+   "words": [
+    {
+     "id": "b0033",
+     "w": "write",
+     "tint": 0
+    },
+    {
+     "id": "b0087",
+     "w": "read",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-061",
+   "concept": "ink creature holding a ticket stub with a calendar and a small reserved tag, pleased",
+   "words": [
+    {
+     "id": "b0064",
+     "w": "book",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-062",
+   "concept": "ink creature with a blank name tag, holding an open storybook with a fairy tale castle popping out and a quill",
+   "words": [
+    {
+     "id": "b0093",
+     "w": "word",
+     "tint": 0
+    },
+    {
+     "id": "b0086",
+     "w": "name",
+     "tint": 1
+    },
+    {
+     "id": "b0147",
+     "w": "story",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c1-063",
+   "concept": "ink creature made of counting beads on an abacus frame, one finger pointing at a dot, a pie slice in its hand",
+   "words": [
+    {
+     "id": "b0038",
+     "w": "number",
+     "tint": 0
+    },
+    {
+     "id": "b0040",
+     "w": "point",
+     "tint": 1
+    },
+    {
+     "id": "b0039",
+     "w": "part",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c1-064",
+   "concept": "perfectly round ink creature with a full complete circle body, tidy and satisfied",
+   "words": [
+    {
+     "id": "b0149",
+     "w": "whole",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-065",
+   "concept": "two identical twin ink creatures mirroring the same pose, linked by an equals-like pair of bars",
+   "words": [
+    {
+     "id": "b0034",
+     "w": "same",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-066",
+   "concept": "ink creature surrounded by several different small siblings of various shapes in an assorted row",
+   "words": [
+    {
+     "id": "b0066",
+     "w": "kind",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-067",
+   "concept": "ink creature straining with a sweat drop, trying to lift a heavy weight, determined",
+   "words": [
+    {
+     "id": "b0036",
+     "w": "try",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-068",
+   "concept": "strong ink creature lifting a barbell easily with one hand, flexing muscles",
+   "words": [
+    {
+     "id": "b0130",
+     "w": "able",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-069",
+   "concept": "ink creature crouching at a starting line with a flag, a small seedling beside it",
+   "words": [
+    {
+     "id": "b0044",
+     "w": "start",
+     "tint": 0
+    },
+    {
+     "id": "b0075",
+     "w": "begin",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-070",
+   "concept": "ink creature breaking a finish tape ribbon, last in the line behind a stop post",
+   "words": [
+    {
+     "id": "b0053",
+     "w": "end",
+     "tint": 0
+    },
+    {
+     "id": "b0022",
+     "w": "last",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-071",
+   "concept": "ink creature reaching down a hand to pull a smaller creature up a ledge",
+   "words": [
+    {
+     "id": "b0041",
+     "w": "help",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-072",
+   "concept": "ink creature carrying a flag at the front of a line of small followers",
+   "words": [
+    {
+     "id": "b0107",
+     "w": "lead",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-073",
+   "concept": "ink creature standing very upright on sturdy legs, carefully placing a cube on a shelf, tools laid out neatly",
+   "words": [
+    {
+     "id": "b0046",
+     "w": "put",
+     "tint": 0
+    },
+    {
+     "id": "b0071",
+     "w": "set",
+     "tint": 1
+    },
+    {
+     "id": "b0148",
+     "w": "stand",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c1-074",
+   "concept": "ink creature hugging a treasure chest tight with both arms and a lock",
+   "words": [
+    {
+     "id": "b0098",
+     "w": "hold",
+     "tint": 0
+    },
+    {
+     "id": "b0067",
+     "w": "keep",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-075",
+   "concept": "ink creature juggling a ball, a kite and a toy block with a joyful face",
+   "words": [
+    {
+     "id": "b0057",
+     "w": "play",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-076",
+   "concept": "ink creature in an apron standing behind a shop counter, running a business with a ledger and a bell",
+   "words": [
+    {
+     "id": "b0076",
+     "w": "run",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-077",
+   "concept": "ink creature next to a line of falling dominoes with the last one resting on a small trophy",
+   "words": [
+    {
+     "id": "b0102",
+     "w": "result",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-078",
+   "concept": "ink creature built of interlocking gears and pipes, steam puffs",
+   "words": [
+    {
+     "id": "b0069",
+     "w": "system",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-079",
+   "concept": "sweating ink creature pushing a giant boulder up a steep hill, tangled in a knot of rope",
+   "words": [
+    {
+     "id": "b0094",
+     "w": "issue",
+     "tint": 0
+    },
+    {
+     "id": "b0143",
+     "w": "hard",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-080",
+   "concept": "ink creature behind a fruit stall with a striped awning, holding a waiter notepad and a small bell",
+   "words": [
+    {
+     "id": "b0095",
+     "w": "market",
+     "tint": 0
+    },
+    {
+     "id": "b0092",
+     "w": "order",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-081",
+   "concept": "ink creature unrolling a blueprint scroll with a compass, a half-built brick wall behind it",
+   "words": [
+    {
+     "id": "b0097",
+     "w": "build",
+     "tint": 0
+    },
+    {
+     "id": "b0101",
+     "w": "plan",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-082",
+   "concept": "ink creature bowing politely while holding a small flower",
+   "words": [
+    {
+     "id": "b0109",
+     "w": "thank",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-083",
+   "concept": "ink creature bravely staring down a giant shadow with eyes wide, fists clenched",
+   "words": [
+    {
+     "id": "b0113",
+     "w": "face",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-084",
+   "concept": "ink creature with an oversized round head, hands on cheeks",
+   "words": [
+    {
+     "id": "b0121",
+     "w": "head",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-085",
+   "concept": "ink creature shaped like a big open hand, each finger a small blob with eyes",
+   "words": [
+    {
+     "id": "b0080",
+     "w": "hand",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-086",
+   "concept": "ink creature with a car body, round wheels and headlight eyes, a small locomotive smoke puff above",
+   "words": [
+    {
+     "id": "b0122",
+     "w": "car",
+     "tint": 0
+    },
+    {
+     "id": "b0139",
+     "w": "train",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-087",
+   "concept": "ink creature dropping coins from a hole in its pocket, looking dismayed and empty-handed",
+   "words": [
+    {
+     "id": "b0146",
+     "w": "lose",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-088",
+   "concept": "ink creature pulling a door shut behind itself, a latch clicked",
+   "words": [
+    {
+     "id": "b0106",
+     "w": "close",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-089",
+   "concept": "ink creature standing at a wide-open door with arms spread, light pouring out",
+   "words": [
+    {
+     "id": "b0091",
+     "w": "open",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c1-090",
+   "concept": "ink creature in a press cap holding a newspaper sheet and a blank form paper with empty tick boxes",
+   "words": [
+    {
+     "id": "b0060",
+     "w": "report",
+     "tint": 0
+    },
+    {
+     "id": "b0119",
+     "w": "form",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-091",
+   "concept": "ink creature trailing behind a line of footprints with a lantern, peeking toward the next step ahead",
+   "words": [
+    {
+     "id": "b0074",
+     "w": "follow",
+     "tint": 0
+    },
+    {
+     "id": "b0052",
+     "w": "next",
+     "tint": 1
+    }
+   ]
+  }
+ ]
+}
