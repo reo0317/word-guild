@@ -514,3 +514,11 @@ Subject: late: ink creature rushing and panting with a clock chasing it, messy h
 ## 単語の絵：c1-055
 
 Square game enemy illustration for find: an ink monster with a large magnifying glass surprised to discover a hidden treasure chest. Match reference style: paper and letterpress ink print, thick navy outlines, flat navy, mist, paper and a little vermilion, textured ink stain monster with white eyes. Full body centered, clear meaning. Pure flat solid #00ff00 green background, no ground or shadows, no green on subject. No text, letters, numbers or symbols.
+
+## 単語の絵：c1-051
+
+Square game enemy illustration. Match the reference images: Japanese paper and letterpress ink printmaking, thick navy outlines, flat color blocks, paper texture, a slightly cute spooky living ink stain with white eyes. Navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Full body, centered, clear meaning. Flat pure green #00ff00 background, no ground or shadows, no green on subjects. No writing, letters, numbers, symbols or existing characters. Subject: line: a single ink monster with several tiny ink droplet companions queued in a clear straight row.
+
+## 単語の絵：c1-052
+
+Square game enemy illustration. Match the reference images: Japanese paper and letterpress ink printmaking, thick navy outlines, flat color blocks, paper texture, a slightly cute spooky living ink stain with white eyes. Navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Full body, centered, clear meaning. Flat pure green #00ff00 background, no ground or shadows, no green on subjects. No writing, letters, numbers, symbols or existing characters. Subject: side: a single ink monster shown in unmistakable full-body side profile, facing left.
