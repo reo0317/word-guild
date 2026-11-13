@@ -928,3 +928,105 @@ feel
 
 Create one square game illustration matching the attached ink monster references exactly: paper and letterpress woodblock print, thick navy outlines, flat color blocks with subtle ink and paper texture; palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. One full-body cute eerie living ink stain monster with white eyes, centered large. Meaning must be immediately obvious from large clear action and objects. Subject: both hands pressed to its chest over a glowing heart, eyes closed, emotion radiating as soft rays. Background must be perfectly flat solid pure green #00ff00, no floor, cast shadows, gradient or pattern; no green on creature or objects. No writing, letters, numbers, marks or symbols. No known copyrighted characters.
 
+
+## 単語の絵（描き直し）：c1-013
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. COME: the ink monster runs toward the viewer with arms outstretched, approaching a large beckoning hand entering from the foreground; clear physical approach.
+
+## 単語の絵（描き直し）：c1-015
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. BECOME: the ink monster proudly puts on a large chef hat and apron and holds a mixing bowl, becoming a chef; unmistakable familiar transformation into a cook.
+
+## 単語の絵（描き直し）：c1-017
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. USE: the ink monster actively uses a large paintbrush to paint a broad red stroke on a blank paper sheet; brush touching paper.
+
+## 単語の絵（描き直し）：c1-026
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. PRICE: the ink monster holds a large blank price tag against a single prominent coin, as if paying for an apple at a simple shop counter. No markings on tag or coin.
+
+## 単語の絵（描き直し）：c1-038
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. PERSON: the ink monster shaped unmistakably like a person with head, two arms and two legs, dressed in plain everyday shirt and trousers, standing upright.
+
+## 単語の絵（描き直し）：c1-048
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. LOCAL: the ink monster stands at its own small familiar neighborhood house, waving to a neighboring house; house and friendly inhabitant suggest home neighborhood.
+
+## 単語の絵（描き直し）：c1-049
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. STATE: the ink monster sits in bed visibly sick, with thermometer in mouth, ice pack on head and blanket; its present condition is unmistakable.
+
+## 単語の絵（描き直し）：c1-051
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. LINE: the central ink monster stands in a clear queue behind two smaller simple paper parcels, all in a straight line toward a counter; visual focus on the row.
+
+## 単語の絵（描き直し）：c1-052
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. SIDE: the ink monster stands directly beside a large simple house, touching its side wall; clear spatial relation beside.
+
+## 単語の絵（描き直し）：c1-053
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. BACK: the ink monster faces completely away from viewer, showing its back with a large backpack and back of head, no face visible.
+
+## 単語の絵（描き直し）：c1-056
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. REASON: the ink monster is soaked by a large rain cloud raining directly onto it, holding a closed umbrella; clear cause and effect.
+
+## 単語の絵（描き直し）：c1-059
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. CHANGE: the ink monster changes clothes, pulling off a plain coat while putting on a distinctly different apron; obvious everyday act of changing.
+
+## 単語の絵（描き直し）：c1-064
+
+Use the three attached illustrations as exact style references for a cohesive game enemy illustration: paper and letterpress ink print, thick navy outlines, flat limited color blocks, textured paper and ink, a cute spooky ink-stain monster with white eyes. Main palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, small vermilion #c8462f. Square 1:1, one central full-body ink monster, large clear readable everyday scene. Solid perfectly flat pure green #00ff00 background only, no ground, shadows or pattern. No green in subjects. No letters, numbers, symbols, arrows or writing. Avoid known copyrighted characters. WHOLE: the ink monster embraces one large complete round uncut cake with frosting, no missing slices; cake is the dominant visible object.
+
+
+## 単語の絵（描き直し）：c1-065
+
+Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Two identical ink monster twins, same face, shape and pose, holding identical apples.
+
+## 単語の絵（描き直し）：c1-066
+
+Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Monster sorts three different kinds of fruit: a large apple, pear and grapes, each in a separate basket.
+
+## 単語の絵（描き直し）：c1-068
+
+Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Monster successfully reaches a high shelf by standing on a small stool and grasps a large jar, pleased it can reach.
+
+## 単語の絵（描き直し）：c1-070
+
+Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Monster closes the last page of a large picture book, showing the story has ended; blank book.
+
+## 単語の絵（描き直し）：c1-076
+
+Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Monster runs a shop, handing a large loaf across a shop counter to a customer's hand and accepting coins with its other hand.
+
+## 単語の絵（描き直し）：c1-077
+
+Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Monster proudly holds a fully grown flowering plant in a pot beside a seed packet with a seed pictogram and a watering can, the result of growing.
+
+## 単語の絵（描き直し）：c1-082
+
+Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Monster receives a large wrapped gift from another person's hands and bows deeply in gratitude, joyful eyes.
+
+## 単語の絵（描き直し）：c1-083
+
+Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Monster stands its ground facing a huge broken bridge blocking its way, hands on hips in determination, confronting the obstacle.
+
+## 単語の絵（描き直し）：c1-084
+
+Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Monster points with both hands to its own huge rounded head above a much smaller body; eyes on head.
+
+## 単語の絵（描き直し）：c1-085
+
+Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Monster holds an enormous clear open five-fingered hand toward viewer, palm forward, its full little body visible behind.
+
+## 単語の絵（描き直し）：c1-090
+
+Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Monster holds a huge blank paper form on a clipboard and pen poised to fill it in; empty outlined rectangular fields only.
+
+## 単語の絵（描き直し）：c1-092
+
+Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Monster touches a large prickly cactus with its fingertip and recoils with a startled expression, clearly feeling the prick.
+
