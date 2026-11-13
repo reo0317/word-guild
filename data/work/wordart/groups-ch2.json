@@ -1,0 +1,2275 @@
+{
+ "ch": 2,
+ "groups": [
+  {
+   "g": "c2-001",
+   "concept": "ink creature in a top hat tipping it politely with a formal bow, a neat bow tie, greeting a stranger",
+   "words": [
+    {
+     "id": "t0001",
+     "w": "mister",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-002",
+   "concept": "ink creature lounging on a deck chair on a big cruise ship with sunglasses and a cool drink, ocean around",
+   "words": [
+    {
+     "id": "t0002",
+     "w": "vacation",
+     "tint": 0
+    },
+    {
+     "id": "t0103",
+     "w": "cruise",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-003",
+   "concept": "ink creature in a tidy suit and an ink creature carrying many shopping bags out of a store, customers happy",
+   "words": [
+    {
+     "id": "t0003",
+     "w": "client",
+     "tint": 0
+    },
+    {
+     "id": "t0183",
+     "w": "shopper",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-004",
+   "concept": "ink creature reading a thin glowing tablet held in both hands with a page turning on its screen, a tall stack of paper books left unused beside it",
+   "words": [
+    {
+     "id": "t0004",
+     "w": "e-book",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-005",
+   "concept": "ink creature with a small suitcase in a huge hall with big windows showing airplanes outside, gates and a crowd of travelers",
+   "words": [
+    {
+     "id": "t0005",
+     "w": "airport",
+     "tint": 0
+    },
+    {
+     "id": "t0193",
+     "w": "terminal",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-006",
+   "concept": "ink creature at a desk with towering stacks of papers and a sticky note, stamping documents with a rubber stamp",
+   "words": [
+    {
+     "id": "t0222",
+     "w": "paperwork",
+     "tint": 0
+    },
+    {
+     "id": "t0212",
+     "w": "administrative",
+     "tint": 1
+    },
+    {
+     "id": "t0006",
+     "w": "memo",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c2-007",
+   "concept": "ink creature at a restaurant host stand marking a blank page in a reservation book while another creature waits happily",
+   "words": [
+    {
+     "id": "t0007",
+     "w": "reservation",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-008",
+   "concept": "ink creature with a magnifying glass connecting dots with a thread on a board and drawing a confident conclusion",
+   "words": [
+    {
+     "id": "t0008",
+     "w": "logical",
+     "tint": 0
+    },
+    {
+     "id": "t0039",
+     "w": "infer",
+     "tint": 1
+    },
+    {
+     "id": "t0068",
+     "w": "inference",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c2-009",
+   "concept": "ink creature crouching to find a footprint trail with a magnifying glass, a single glinting hint on the ground",
+   "words": [
+    {
+     "id": "t0056",
+     "w": "clue",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-010",
+   "concept": "ink creature feeding a sheet of paper into a boxy machine with a phone handset, a copy of the paper slowly emerging from a second machine far away on a wire",
+   "words": [
+    {
+     "id": "t0009",
+     "w": "fax",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-011",
+   "concept": "ink creature pressing the lid of a big copy machine, a bright light scanning under it, identical paper sheets piling out",
+   "words": [
+    {
+     "id": "t0123",
+     "w": "photocopy",
+     "tint": 0
+    },
+    {
+     "id": "t0132",
+     "w": "copier",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-012",
+   "concept": "ink creature with a clock face for a belly, its hour hand pointing straight up and the short hand at three, standing proudly",
+   "words": [
+    {
+     "id": "t0010",
+     "w": "o'clock",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-013",
+   "concept": "ink creature squinting under a bright sun directly overhead, its shadow a tiny puddle under its feet, a lunch box in hand",
+   "words": [
+    {
+     "id": "t0021",
+     "w": "noon",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-014",
+   "concept": "ink creature yawning under a big full moon and stars in a dark sky, a sleeping town behind",
+   "words": [
+    {
+     "id": "t0233",
+     "w": "midnight",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-015",
+   "concept": "ink creature finishing a letter with a flourishing signature, one hand on its chest, bowing respectfully",
+   "words": [
+    {
+     "id": "t0011",
+     "w": "sincerely",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-016",
+   "concept": "ink creature pointing at a calendar page a few pages ahead with a cheerful thought bubble of itself doing a task there, relaxed",
+   "words": [
+    {
+     "id": "t0012",
+     "w": "sometime",
+     "tint": 0
+    },
+    {
+     "id": "t0129",
+     "w": "shortly",
+     "tint": 1
+    },
+    {
+     "id": "t0086",
+     "w": "upcoming",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c2-017",
+   "concept": "ink creature looking over its shoulder at the last few torn-off calendar pages lying behind it",
+   "words": [
+    {
+     "id": "t0248",
+     "w": "lately",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-018",
+   "concept": "ink creature as a boss standing on a platform watching a row of busy ink workers with folded arms, keeping an eye on everyone",
+   "words": [
+    {
+     "id": "t0013",
+     "w": "supervisor",
+     "tint": 0
+    },
+    {
+     "id": "t0199",
+     "w": "supervise",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-019",
+   "concept": "ink creature in a cozy chair whispering helpful guidance into the ear of a worried creature across a desk",
+   "words": [
+    {
+     "id": "t0179",
+     "w": "advisor",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-020",
+   "concept": "ink creature in a whistle and sweatband coaching two others, demonstrating a move with a pointer, patient teacher",
+   "words": [
+    {
+     "id": "t0090",
+     "w": "instructor",
+     "tint": 0
+    },
+    {
+     "id": "t0228",
+     "w": "trainer",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-021",
+   "concept": "ink creature in an oversized uniform following behind an expert, carefully copying how a task is done, eager beginner",
+   "words": [
+    {
+     "id": "t0237",
+     "w": "trainee",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-022",
+   "concept": "ink creature handing coins back across a counter to a customer who is returning a product box",
+   "words": [
+    {
+     "id": "t0014",
+     "w": "refund",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-023",
+   "concept": "ink creature surrounded by shelves full of neat boxes, bottles and toys, merchant presenting items for sale",
+   "words": [
+    {
+     "id": "t0015",
+     "w": "goods",
+     "tint": 0
+    },
+    {
+     "id": "t0071",
+     "w": "merchandise",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-024",
+   "concept": "ink creature counting stacked boxes in a huge building piled to the ceiling with crates and a forklift passing by",
+   "words": [
+    {
+     "id": "t0060",
+     "w": "inventory",
+     "tint": 0
+    },
+    {
+     "id": "t0131",
+     "w": "warehouse",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-025",
+   "concept": "ink creature in front of a small group of creatures sitting around a table, all busy trying a hands-on task together while a speaker guides them",
+   "words": [
+    {
+     "id": "t0016",
+     "w": "workshop",
+     "tint": 0
+    },
+    {
+     "id": "t0029",
+     "w": "seminar",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-026",
+   "concept": "ink creature standing at a microphone beside a screen pointing with a stick at charts-like shapes in front of an audience",
+   "words": [
+    {
+     "id": "t0250",
+     "w": "presenter",
+     "tint": 0
+    },
+    {
+     "id": "t0185",
+     "w": "announcer",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-027",
+   "concept": "ink creature walking among a cluster of tall skyscrapers and busy streets in the heart of a city, cars and crowds",
+   "words": [
+    {
+     "id": "t0017",
+     "w": "downtown",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-028",
+   "concept": "ink creature panicking over a mountain of unfinished work with an alarm clock ringing and the last sand falling in an hourglass",
+   "words": [
+    {
+     "id": "t0018",
+     "w": "deadline",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-029",
+   "concept": "ink creature at a counter handing a long paper about money to a customer while another creature holds a paper strip after paying, coins exchanging",
+   "words": [
+    {
+     "id": "t0019",
+     "w": "invoice",
+     "tint": 0
+    },
+    {
+     "id": "t0033",
+     "w": "receipt",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-030",
+   "concept": "ink creature holding a folded glossy leaflet and pinning a stack of rolled papers on a notice board while others read",
+   "words": [
+    {
+     "id": "t0020",
+     "w": "brochure",
+     "tint": 0
+    },
+    {
+     "id": "t0178",
+     "w": "newsletter",
+     "tint": 1
+    },
+    {
+     "id": "t0158",
+     "w": "bulletin",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c2-031",
+   "concept": "ink creature with round glasses at a desk with an abacus, coins and a thick ledger book, carefully checking every line with a magnifying glass",
+   "words": [
+    {
+     "id": "t0022",
+     "w": "accountant",
+     "tint": 0
+    },
+    {
+     "id": "t0187",
+     "w": "audit",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-032",
+   "concept": "two ink creatures swapping a sack of coins for a wrapped box, a handshake in the middle",
+   "words": [
+    {
+     "id": "t0238",
+     "w": "transaction",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-033",
+   "concept": "ink creature in a neat uniform behind a front counter with a small bell, welcoming a guest and handing over a bag and a key",
+   "words": [
+    {
+     "id": "t0023",
+     "w": "clerk",
+     "tint": 0
+    },
+    {
+     "id": "t0052",
+     "w": "attendant",
+     "tint": 1
+    },
+    {
+     "id": "t0046",
+     "w": "reception",
+     "tint": 2
+    },
+    {
+     "id": "t0072",
+     "w": "receptionist",
+     "tint": 3
+    }
+   ]
+  },
+  {
+   "g": "c2-034",
+   "concept": "ink creature lounging on a plump sofa in a large entrance hall with a high ceiling and potted plants",
+   "words": [
+    {
+     "id": "t0024",
+     "w": "lobby",
+     "tint": 0
+    },
+    {
+     "id": "t0216",
+     "w": "sofa",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-035",
+   "concept": "ink creature feeding blank paper into a printing press, a bound book emerging for readers",
+   "words": [
+    {
+     "id": "t0025",
+     "w": "publish",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-036",
+   "concept": "ink creature sitting nervously in an interview room holding up a neat paper listing its skills with a photo, interviewer behind a desk",
+   "words": [
+    {
+     "id": "t0026",
+     "w": "résumé",
+     "tint": 0
+    },
+    {
+     "id": "t0028",
+     "w": "applicant",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-037",
+   "concept": "ink creature tucking a folded paper into an envelope along with another sheet and sealing it",
+   "words": [
+    {
+     "id": "t0027",
+     "w": "enclose",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-038",
+   "concept": "ink creature in goggles with a toolbox and wrench fixing the insides of a machine with gears and a glowing screen, oily gloves",
+   "words": [
+    {
+     "id": "t0030",
+     "w": "technician",
+     "tint": 0
+    },
+    {
+     "id": "t0140",
+     "w": "mechanic",
+     "tint": 1
+    },
+    {
+     "id": "t0202",
+     "w": "developer",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c2-039",
+   "concept": "ink creature unrolling a bolt of soft fabric and wearing a warm knitted sweater, needle and scissors",
+   "words": [
+    {
+     "id": "t0031",
+     "w": "cloth",
+     "tint": 0
+    },
+    {
+     "id": "t0143",
+     "w": "sweater",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-040",
+   "concept": "ink creature dropping coins into the fare box beside a bus driver, ticket in hand",
+   "words": [
+    {
+     "id": "t0032",
+     "w": "fare",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-041",
+   "concept": "ink creature with a big backpack and a folded map walking along a road in a foreign town, camera around its neck",
+   "words": [
+    {
+     "id": "t0034",
+     "w": "traveler",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-042",
+   "concept": "ink creature in a crowded train car holding a briefcase and hanging from a strap, heading to work each morning",
+   "words": [
+    {
+     "id": "t0176",
+     "w": "commuter",
+     "tint": 0
+    },
+    {
+     "id": "t0220",
+     "w": "commute",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-043",
+   "concept": "ink creature holding an old rotary telephone to its ear and turning its round dial with a finger, ringing sound waves",
+   "words": [
+    {
+     "id": "t0035",
+     "w": "caller",
+     "tint": 0
+    },
+    {
+     "id": "t0153",
+     "w": "dial",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-044",
+   "concept": "ink creature riding a train in a dark tunnel under the ground, a small bus shuttling back and forth between two stops behind it",
+   "words": [
+    {
+     "id": "t0036",
+     "w": "subway",
+     "tint": 0
+    },
+    {
+     "id": "t0204",
+     "w": "shuttle",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-045",
+   "concept": "ink creature dragging a pile of travel cases, a big hard-shell suitcase and a slim briefcase through a station, tired",
+   "words": [
+    {
+     "id": "t0037",
+     "w": "luggage",
+     "tint": 0
+    },
+    {
+     "id": "t0152",
+     "w": "baggage",
+     "tint": 1
+    },
+    {
+     "id": "t0062",
+     "w": "suitcase",
+     "tint": 2
+    },
+    {
+     "id": "t0169",
+     "w": "briefcase",
+     "tint": 3
+    }
+   ]
+  },
+  {
+   "g": "c2-046",
+   "concept": "ink creature loading boxes onto a delivery van, a courier creature running with a parcel while a conveyor sends boxes to many shops",
+   "words": [
+    {
+     "id": "t0038",
+     "w": "shipment",
+     "tint": 0
+    },
+    {
+     "id": "t0242",
+     "w": "courier",
+     "tint": 1
+    },
+    {
+     "id": "t0215",
+     "w": "distribution",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c2-047",
+   "concept": "ink creature in a bow tie carrying a tray with a plate and glass to a restaurant table, napkin on arm",
+   "words": [
+    {
+     "id": "t0040",
+     "w": "waiter",
+     "tint": 0
+    },
+    {
+     "id": "t0200",
+     "w": "waitress",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-048",
+   "concept": "ink creature handing house keys to another creature who gives coins each month, a small apartment house between them",
+   "words": [
+    {
+     "id": "t0041",
+     "w": "rental",
+     "tint": 0
+    },
+    {
+     "id": "t0048",
+     "w": "lease",
+     "tint": 1
+    },
+    {
+     "id": "t0111",
+     "w": "tenant",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c2-049",
+   "concept": "ink creature holding a big shield over a new gadget while a repairman waves, a ribbon promising protection",
+   "words": [
+    {
+     "id": "t0042",
+     "w": "warranty",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-050",
+   "concept": "ink creature sitting at a table in a casual dining hall with a tray, knife and fork and a cup of coffee, eating a meal",
+   "words": [
+    {
+     "id": "t0043",
+     "w": "cafeteria",
+     "tint": 0
+    },
+    {
+     "id": "t0105",
+     "w": "café",
+     "tint": 1
+    },
+    {
+     "id": "t0083",
+     "w": "dine",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c2-051",
+   "concept": "ink creature in a tall white chef hat flipping food in a pan over a flame, big ladle",
+   "words": [
+    {
+     "id": "t0044",
+     "w": "chef",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-052",
+   "concept": "ink creature munching on small treats with a tray of cups of juice and a tall cold drink with a straw",
+   "words": [
+    {
+     "id": "t0130",
+     "w": "snack",
+     "tint": 0
+    },
+    {
+     "id": "t0211",
+     "w": "refreshment",
+     "tint": 1
+    },
+    {
+     "id": "t0134",
+     "w": "beverage",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c2-053",
+   "concept": "ink creature holding a slice of cake with cream in one hand and a sandwich stacked with lettuce in the other",
+   "words": [
+    {
+     "id": "t0170",
+     "w": "dessert",
+     "tint": 0
+    },
+    {
+     "id": "t0112",
+     "w": "sandwich",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-054",
+   "concept": "ink creature standing in a small metal box with sliding doors, floors of a tall building passing",
+   "words": [
+    {
+     "id": "t0045",
+     "w": "elevator",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-055",
+   "concept": "ink creature checking a finished puzzle with a magnifying glass, every piece fitting perfectly, nodding with confidence",
+   "words": [
+    {
+     "id": "t0047",
+     "w": "correctly",
+     "tint": 0
+    },
+    {
+     "id": "t0240",
+     "w": "verify",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-056",
+   "concept": "ink creature holding up a pass to a gate that opens with a glow, qualifying and approved, the guard nodding",
+   "words": [
+    {
+     "id": "t0094",
+     "w": "valid",
+     "tint": 0
+    },
+    {
+     "id": "t0150",
+     "w": "eligible",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-057",
+   "concept": "ink creature pedaling a two-wheeled bicycle along a road, hair blowing",
+   "words": [
+    {
+     "id": "t0049",
+     "w": "bicycle",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-058",
+   "concept": "ink creature handing a message to another and ringing a small bell so it knows, informing someone",
+   "words": [
+    {
+     "id": "t0050",
+     "w": "notify",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-059",
+   "concept": "ink creature raising a hand with a big curious expression asking a counter staff a question",
+   "words": [
+    {
+     "id": "t0173",
+     "w": "inquire",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-060",
+   "concept": "ink creature peeking through a curtain at a small screen showing a sneak peek of a film",
+   "words": [
+    {
+     "id": "t0051",
+     "w": "preview",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-061",
+   "concept": "ink creature receiving a rolled newspaper at its door each morning, paying a monthly coin to a delivery creature",
+   "words": [
+    {
+     "id": "t0053",
+     "w": "subscription",
+     "tint": 0
+    },
+    {
+     "id": "t0206",
+     "w": "subscribe",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-062",
+   "concept": "ink creature relaxing in a house where the store, bus stop and everything is right next door, everything within easy reach",
+   "words": [
+    {
+     "id": "t0054",
+     "w": "convenient",
+     "tint": 0
+    },
+    {
+     "id": "t0149",
+     "w": "convenience",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-063",
+   "concept": "ink creature tangled in a hassle, struggling with a broken door and a long detour, unlucky",
+   "words": [
+    {
+     "id": "t0116",
+     "w": "inconvenience",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-064",
+   "concept": "ink creature reading a thick instruction booklet and pointing at a diagram on a board to explain how a machine works",
+   "words": [
+    {
+     "id": "t0055",
+     "w": "manual",
+     "tint": 0
+    },
+    {
+     "id": "t0089",
+     "w": "explanatory",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-065",
+   "concept": "ink creature driving a shiny car into a small garage shed beside a house, door rolling open",
+   "words": [
+    {
+     "id": "t0057",
+     "w": "garage",
+     "tint": 0
+    },
+    {
+     "id": "t0241",
+     "w": "automobile",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-066",
+   "concept": "ink creature reaching out and receiving a shiny item into its hands, delighted to get it at last",
+   "words": [
+    {
+     "id": "t0058",
+     "w": "obtain",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-067",
+   "concept": "ink creature holding a perfectly egg-shaped mirror, its own body round like an egg, smooth curves",
+   "words": [
+    {
+     "id": "t0059",
+     "w": "oval",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-068",
+   "concept": "ink creature camping on a green hill with a tent and sitting on a blanket with a basket of food under open sky",
+   "words": [
+    {
+     "id": "t0061",
+     "w": "outdoor",
+     "tint": 0
+    },
+    {
+     "id": "t0209",
+     "w": "picnic",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-069",
+   "concept": "ink creature sitting cozy in a warm room with a rug, curtains closed, a roof above",
+   "words": [
+    {
+     "id": "t0151",
+     "w": "indoor",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-070",
+   "concept": "ink creature arriving at a finish flag at the end of a long winding road, a map pin planted at the top",
+   "words": [
+    {
+     "id": "t0063",
+     "w": "destination",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-071",
+   "concept": "ink creature wearing work clothes and tools of a trade, looking proud of its job",
+   "words": [
+    {
+     "id": "t0064",
+     "w": "occupation",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-072",
+   "concept": "ink creature pushing a calendar page far ahead with both hands, putting the appointment off for later",
+   "words": [
+    {
+     "id": "t0065",
+     "w": "postpone",
+     "tint": 0
+    },
+    {
+     "id": "t0077",
+     "w": "reschedule",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-073",
+   "concept": "two ink creatures arguing face to face, one pointing up while the other points the opposite way, shaking head",
+   "words": [
+    {
+     "id": "t0066",
+     "w": "contradict",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-074",
+   "concept": "ink creature holding an open umbrella in falling rain with a gray cloud and puddles",
+   "words": [
+    {
+     "id": "t0067",
+     "w": "umbrella",
+     "tint": 0
+    },
+    {
+     "id": "t0235",
+     "w": "rainy",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-075",
+   "concept": "ink creature enjoying a bright blue sky with a shining sun and a few light clouds, happy",
+   "words": [
+    {
+     "id": "t0125",
+     "w": "sunny",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-076",
+   "concept": "ink creature looking up at a sky filled with thick gray clouds, sun hidden",
+   "words": [
+    {
+     "id": "t0181",
+     "w": "cloudy",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-077",
+   "concept": "ink creature holding a small slim phone in one hand and a thin laptop folded open on its knees, glowing screens",
+   "words": [
+    {
+     "id": "t0069",
+     "w": "cellphone",
+     "tint": 0
+    },
+    {
+     "id": "t0096",
+     "w": "laptop",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-078",
+   "concept": "ink creature typing on a large flat keyboard with its many fingers, keys clicking",
+   "words": [
+    {
+     "id": "t0091",
+     "w": "keyboard",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-079",
+   "concept": "ink creature holding a small, neatly folded, tiny version of a gadget, everything tiny and light",
+   "words": [
+    {
+     "id": "t0070",
+     "w": "compact",
+     "tint": 0
+    },
+    {
+     "id": "t0114",
+     "w": "mini",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-080",
+   "concept": "ink creature in a mask with a small mirror and tool looking into a patient's big open mouth full of teeth",
+   "words": [
+    {
+     "id": "t0073",
+     "w": "dentist",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-081",
+   "concept": "ink creature sick in bed with a red nose and thermometer, holding colorful pills and a glass of water",
+   "words": [
+    {
+     "id": "t0108",
+     "w": "medication",
+     "tint": 0
+    },
+    {
+     "id": "t0225",
+     "w": "flu",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-082",
+   "concept": "ink creature holding up a small booklet and a card with its photo to a guard at a desk",
+   "words": [
+    {
+     "id": "t0074",
+     "w": "identification",
+     "tint": 0
+    },
+    {
+     "id": "t0084",
+     "w": "passport",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-083",
+   "concept": "ink creature receiving a scroll with a ribbon and a gold seal on a stage, graduation applause",
+   "words": [
+    {
+     "id": "t0159",
+     "w": "certificate",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-084",
+   "concept": "ink creature snipping a paper out of a newspaper with scissors and carrying armfuls of goods, paying only a few coins to a happy shopkeeper",
+   "words": [
+    {
+     "id": "t0075",
+     "w": "coupon",
+     "tint": 0
+    },
+    {
+     "id": "t0230",
+     "w": "bargain",
+     "tint": 1
+    },
+    {
+     "id": "t0218",
+     "w": "affordable",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c2-085",
+   "concept": "ink creature holding a little tag on a string attached to a shirt, a price in a hand",
+   "words": [
+    {
+     "id": "t0184",
+     "w": "tag",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-086",
+   "concept": "ink creature waving goodbye from a train window as the train pulls out of a station, leaving through a door",
+   "words": [
+    {
+     "id": "t0076",
+     "w": "depart",
+     "tint": 0
+    },
+    {
+     "id": "t0113",
+     "w": "departure",
+     "tint": 1
+    },
+    {
+     "id": "t0101",
+     "w": "exit",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c2-087",
+   "concept": "ink creature planning moves on a map with toy soldiers and flags, sly smile, sketching a battle plan",
+   "words": [
+    {
+     "id": "t0078",
+     "w": "tactic",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-088",
+   "concept": "ink creature with a paint roller and hammer remaking an old room into a new one, new furniture arriving",
+   "words": [
+    {
+     "id": "t0079",
+     "w": "renovation",
+     "tint": 0
+    },
+    {
+     "id": "t0124",
+     "w": "renovate",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-089",
+   "concept": "ink creature stepping up from a small seat to a bigger shiny luxury seat, a grand upgrade",
+   "words": [
+    {
+     "id": "t0080",
+     "w": "upgrade",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-090",
+   "concept": "ink creature swapping a broken part for a new one and handing back an old pass for a fresh one, old part in a bin",
+   "words": [
+    {
+     "id": "t0082",
+     "w": "replacement",
+     "tint": 0
+    },
+    {
+     "id": "t0110",
+     "w": "renew",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-091",
+   "concept": "ink creature holding a carton of milk gone moldy next to a calendar whose page has run out, an empty hourglass",
+   "words": [
+    {
+     "id": "t0121",
+     "w": "expire",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-092",
+   "concept": "ink creature walking in front leading a line of others behind it, going first",
+   "words": [
+    {
+     "id": "t0081",
+     "w": "precede",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-093",
+   "concept": "two ink creatures at neighboring desks chatting and sharing a snack in an office",
+   "words": [
+    {
+     "id": "t0085",
+     "w": "coworker",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-094",
+   "concept": "ink creature opening the doors of a tall cabinet and a drawer, clothes hanging in a closet beside",
+   "words": [
+    {
+     "id": "t0087",
+     "w": "cabinet",
+     "tint": 0
+    },
+    {
+     "id": "t0118",
+     "w": "closet",
+     "tint": 1
+    },
+    {
+     "id": "t0155",
+     "w": "drawer",
+     "tint": 2
+    }
+   ]
+  },
+  {
+   "g": "c2-095",
+   "concept": "ink creature lifting a lid from a plastic box to store things inside, stacks of boxes",
+   "words": [
+    {
+     "id": "t0154",
+     "w": "container",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-096",
+   "concept": "ink creature surrounded by a toaster, a kettle and a washing machine with cords and plugs, sparks of electricity",
+   "words": [
+    {
+     "id": "t0088",
+     "w": "appliance",
+     "tint": 0
+    },
+    {
+     "id": "t0098",
+     "w": "electrical",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-097",
+   "concept": "ink creature slotting a small cylinder cell and a printer cartridge into machines, charging, ink drips",
+   "words": [
+    {
+     "id": "t0165",
+     "w": "battery",
+     "tint": 0
+    },
+    {
+     "id": "t0180",
+     "w": "cartridge",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-098",
+   "concept": "ink creature holding a glowing lamp that lights up a dark room",
+   "words": [
+    {
+     "id": "t0247",
+     "w": "lamp",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-099",
+   "concept": "ink creature in front of a television, radio and a stack of newspapers, news flowing out",
+   "words": [
+    {
+     "id": "t0092",
+     "w": "media",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-100",
+   "concept": "ink creature pushing a cart through a big store with food shelves and many shops along a bright hall",
+   "words": [
+    {
+     "id": "t0093",
+     "w": "supermarket",
+     "tint": 0
+    },
+    {
+     "id": "t0107",
+     "w": "mall",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-101",
+   "concept": "ink creature pushing a shopping cart on wheels down a long narrow path between tall shelves in a store",
+   "words": [
+    {
+     "id": "t0196",
+     "w": "cart",
+     "tint": 0
+    },
+    {
+     "id": "t0138",
+     "w": "aisle",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-102",
+   "concept": "ink creature handing a coin at a ticket booth to enter a gate to a park",
+   "words": [
+    {
+     "id": "t0095",
+     "w": "admission",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-103",
+   "concept": "ink creature drawing a bold straight line under a sentence of wavy squiggles with a pen, a ruler",
+   "words": [
+    {
+     "id": "t0097",
+     "w": "underline",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-104",
+   "concept": "ink teacher creature handing out a task paper, a student dropping a finished stack into a submission box",
+   "words": [
+    {
+     "id": "t0100",
+     "w": "assignment",
+     "tint": 0
+    },
+    {
+     "id": "t0157",
+     "w": "submission",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-105",
+   "concept": "ink creature sitting in a seat in the audience of a lecture, an auditorium and a speaker small ahead",
+   "words": [
+    {
+     "id": "t0102",
+     "w": "attendee",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-106",
+   "concept": "ink creature in a party hat blowing out the candles on a cake with balloons and presents",
+   "words": [
+    {
+     "id": "t0104",
+     "w": "birthday",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-107",
+   "concept": "ink creature reading a short passage then nodding with a bright aha look, a light bulb coming on in understanding",
+   "words": [
+    {
+     "id": "t0106",
+     "w": "comprehension",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-108",
+   "concept": "ink creature turning an empty bottle and can into a new object, a loop of green, bins beside it",
+   "words": [
+    {
+     "id": "t0109",
+     "w": "recycle",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-109",
+   "concept": "ink creature lifting dumbbells in a gym, sweating with a towel, muscles",
+   "words": [
+    {
+     "id": "t0115",
+     "w": "fitness",
+     "tint": 0
+    },
+    {
+     "id": "t0160",
+     "w": "gym",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-110",
+   "concept": "ink creature kicking a ball into a goal net with one foot while swinging a bat at a small ball",
+   "words": [
+    {
+     "id": "t0142",
+     "w": "soccer",
+     "tint": 0
+    },
+    {
+     "id": "t0245",
+     "w": "baseball",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-111",
+   "concept": "ink creature in front of a huge oval hall with a stage and rows of cheering seats around it",
+   "words": [
+    {
+     "id": "t0175",
+     "w": "venue",
+     "tint": 0
+    },
+    {
+     "id": "t0192",
+     "w": "stadium",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-112",
+   "concept": "ink creature in a fancy hall at a long dinner table with many creatures toasting glasses, a grand feast",
+   "words": [
+    {
+     "id": "t0117",
+     "w": "banquet",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-113",
+   "concept": "two look-alike ink creatures side by side, a decoy fooling a confused third creature scratching its head",
+   "words": [
+    {
+     "id": "t0120",
+     "w": "distractor",
+     "tint": 0
+    },
+    {
+     "id": "t0207",
+     "w": "alike",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-114",
+   "concept": "ink creature carrying a stack of papers in a paper folder tucked under its arm",
+   "words": [
+    {
+     "id": "t0122",
+     "w": "folder",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-115",
+   "concept": "ink creature tearing the top page off a big wall calendar with a pen nearby",
+   "words": [
+    {
+     "id": "t0126",
+     "w": "calendar",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-116",
+   "concept": "ink creature putting coins and clothes into a big donation box for others",
+   "words": [
+    {
+     "id": "t0127",
+     "w": "donation",
+     "tint": 0
+    },
+    {
+     "id": "t0166",
+     "w": "donate",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-117",
+   "concept": "ink creature showing a drawing to a friend who points at parts to improve while the first nods and fixes it",
+   "words": [
+    {
+     "id": "t0128",
+     "w": "feedback",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-118",
+   "concept": "ink creature connecting a long cable and pipe to a house, supplying water and power to a home",
+   "words": [
+    {
+     "id": "t0133",
+     "w": "provider",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-119",
+   "concept": "ink creature clutching a rumbling stomach, staring at a table of food with big eyes",
+   "words": [
+    {
+     "id": "t0135",
+     "w": "hungry",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-120",
+   "concept": "ink creature licking its lips with a delighted face over a swirl of tasty flavor, steam from a plate",
+   "words": [
+    {
+     "id": "t0197",
+     "w": "delicious",
+     "tint": 0
+    },
+    {
+     "id": "t0208",
+     "w": "flavor",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-121",
+   "concept": "ink creature examining goods with a magnifying glass and a flashlight, checking carefully",
+   "words": [
+    {
+     "id": "t0136",
+     "w": "inspection",
+     "tint": 0
+    },
+    {
+     "id": "t0139",
+     "w": "inspect",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-122",
+   "concept": "ink creature at a front door receiving a parcel from a delivery creature, signing for it",
+   "words": [
+    {
+     "id": "t0137",
+     "w": "recipient",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-123",
+   "concept": "two ink creatures blending into one big ink creature, companies joined together",
+   "words": [
+    {
+     "id": "t0141",
+     "w": "merger",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-124",
+   "concept": "ink creature following a cooking guide, putting eggs, flour, milk and tomatoes into a mixing bowl, a cookbook open",
+   "words": [
+    {
+     "id": "t0144",
+     "w": "ingredient",
+     "tint": 0
+    },
+    {
+     "id": "t0210",
+     "w": "recipe",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-125",
+   "concept": "ink creature erasing a paragraph of squiggles and writing it again with a pencil, crumpled paper",
+   "words": [
+    {
+     "id": "t0145",
+     "w": "rewrite",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-126",
+   "concept": "ink creature with a folded route map with several stops marked on a trip, a train ticket and hotel",
+   "words": [
+    {
+     "id": "t0146",
+     "w": "itinerary",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-127",
+   "concept": "ink creature in an office with rows of desks, computers and coffee machine",
+   "words": [
+    {
+     "id": "t0147",
+     "w": "workplace",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-128",
+   "concept": "ink creature in a hard hat holding a blueprint and a ruler, directing a building crew",
+   "words": [
+    {
+     "id": "t0148",
+     "w": "architect",
+     "tint": 0
+    },
+    {
+     "id": "t0188",
+     "w": "contractor",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-129",
+   "concept": "ink creature in a white coat mixing bubbling flasks and test tubes in a laboratory",
+   "words": [
+    {
+     "id": "t0156",
+     "w": "lab",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-130",
+   "concept": "ink creature standing beside a wide multi-lane road full of cars and trucks speeding",
+   "words": [
+    {
+     "id": "t0161",
+     "w": "highway",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-131",
+   "concept": "ink creature answering a survey held by a person with a clipboard and ticking boxes on a long sheet with a pencil",
+   "words": [
+    {
+     "id": "t0162",
+     "w": "respondent",
+     "tint": 0
+    },
+    {
+     "id": "t0244",
+     "w": "questionnaire",
+     "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c2-132",
+   "concept": "ink creature wearing a sparkling necklace, ring and earrings, gems glittering",
+   "words": [
+    {
+     "id": "t0163",
+     "w": "jewelry",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-133",
+   "concept": "ink creature still working at a desk late at night, a moon in the window and a clock past closing, tired",
+   "words": [
+    {
+     "id": "t0164",
+     "w": "overtime",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-134",
+   "concept": "ink creature sleeping in a hotel bed through the whole night, stars and the moon outside",
+   "words": [
+    {
+     "id": "t0174",
+     "w": "overnight",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-135",
+   "concept": "ink creature standing on the top of a podium shining brightly above the others, a spotlight",
+   "words": [
+    {
+     "id": "t0167",
+     "w": "outstanding",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-136",
+   "concept": "ink creature flipping rapidly through a book with eyes darting across pages, not reading closely",
+   "words": [
+    {
+     "id": "t0168",
+     "w": "skim",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-137",
+   "concept": "ink creature crashing a ball into a wall creating huge ripples and a big wave of change",
+   "words": [
+    {
+     "id": "t0171",
+     "w": "impact",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-138",
+   "concept": "ink creature inventing a brand new gadget with a bright light bulb overhead, tools and sparkles, so new",
+   "words": [
+    {
+     "id": "t0172",
+     "w": "innovative",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-139",
+   "concept": "ink creature waving a flag with a bold simple emblem, a stamp of a brand mark, no letters",
+   "words": [
+    {
+     "id": "t0177",
+     "w": "logo",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-140",
+   "concept": "ink creature with a big camera around its neck taking a picture of a smiling friend, a tripod",
+   "words": [
+    {
+     "id": "t0182",
+     "w": "photographer",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-141",
+   "concept": "ink creature turning a cube around to look at it from a different side, one face lit",
+   "words": [
+    {
+     "id": "t0186",
+     "w": "aspect",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-142",
+   "concept": "ink creature catching a box falling from a cloud on its arms, a progress bar of shapes on a screen",
+   "words": [
+    {
+     "id": "t0189",
+     "w": "download",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-143",
+   "concept": "ink creature whispering a secret into a big padlock on a door, key hole glowing",
+   "words": [
+    {
+     "id": "t0190",
+     "w": "password",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-144",
+   "concept": "ink creature blocked at a door by a huge hand held up like a stop gesture, a guard shaking head",
+   "words": [
+    {
+     "id": "t0191",
+     "w": "prohibit",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-145",
+   "concept": "ink creature heading to work in the morning with a briefcase, a calendar showing five busy columns, then a rest",
+   "words": [
+    {
+     "id": "t0194",
+     "w": "weekday",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-146",
+   "concept": "ink creature receiving an extra bag of coins as a gift from a smiling boss",
+   "words": [
+    {
+     "id": "t0195",
+     "w": "bonus",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-147",
+   "concept": "ink creature dipping a feather pen into an inkwell, black drops",
+   "words": [
+    {
+     "id": "t0198",
+     "w": "ink",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-148",
+   "concept": "ink creature with a mop and bucket polishing a floor, a spray bottle, shiny clean",
+   "words": [
+    {
+     "id": "t0201",
+     "w": "cleaner",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-149",
+   "concept": "ink creature in front of a big tall building with a flag on top, smaller branch buildings far around",
+   "words": [
+    {
+     "id": "t0203",
+     "w": "headquarter",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-150",
+   "concept": "ink creature surrounded by pencils, scissors, tape and notebooks on a desk",
+   "words": [
+    {
+     "id": "t0205",
+     "w": "stationery",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-151",
+   "concept": "ink creature pressing a big stamp onto a paper, giving permission, a seal glowing",
+   "words": [
+    {
+     "id": "t0213",
+     "w": "authorize",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-152",
+   "concept": "ink creature in a uniform with a badge holding up a hand to direct crowds with an official look",
+   "words": [
+    {
+     "id": "t0224",
+     "w": "authority",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-153",
+   "concept": "ink creature in a crowd where everyone is doing the same ordinary thing, usual and everywhere",
+   "words": [
+    {
+     "id": "t0214",
+     "w": "commonly",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-154",
+   "concept": "ink creature squeezing many guests and beds into a room, room for everyone",
+   "words": [
+    {
+     "id": "t0217",
+     "w": "accommodate",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-155",
+   "concept": "tiny ink creature buzzing around the head of another creature that is gritting its teeth and annoyed",
+   "words": [
+    {
+     "id": "t0219",
+     "w": "annoy",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-156",
+   "concept": "ink creature as a conductor arranging others so they work together smoothly, waving a baton",
+   "words": [
+    {
+     "id": "t0221",
+     "w": "coordinate",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-157",
+   "concept": "ink creature dropping its tools, walking out of a door and waving goodbye to a job",
+   "words": [
+    {
+     "id": "t0223",
+     "w": "quit",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-158",
+   "concept": "ink creature in a captain hat at the wheel of a big plane cockpit, stripes on its shoulders",
+   "words": [
+    {
+     "id": "t0226",
+     "w": "captain",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-159",
+   "concept": "ink creature fitting a big machine into place with a wrench, bolts and a ladder",
+   "words": [
+    {
+     "id": "t0227",
+     "w": "installation",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-160",
+   "concept": "ink creature at a hotel desk with many empty rooms available, keys hanging free",
+   "words": [
+    {
+     "id": "t0229",
+     "w": "availability",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-161",
+   "concept": "ink creature receiving a free gift with a ribbon, no coins exchanged, a smiling host",
+   "words": [
+    {
+     "id": "t0231",
+     "w": "complimentary",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-162",
+   "concept": "ink creature staring at a price tag climbing up a ladder very high, shocked shoppers",
+   "words": [
+    {
+     "id": "t0232",
+     "w": "hike",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-163",
+   "concept": "ink creature at a fast assembly line producing many items quickly, a pile of goods",
+   "words": [
+    {
+     "id": "t0234",
+     "w": "productivity",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-164",
+   "concept": "ink creature carrying boxes and a plant to a new house in a different place, a moving van",
+   "words": [
+    {
+     "id": "t0236",
+     "w": "relocate",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-165",
+   "concept": "ink creature with a downturned mouth and a gray cloud over its head, a sad face",
+   "words": [
+    {
+     "id": "t0239",
+     "w": "unhappy",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-166",
+   "concept": "ink creature holding an unfinished puzzle with a hole where a piece is missing",
+   "words": [
+    {
+     "id": "t0243",
+     "w": "incomplete",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-167",
+   "concept": "ink creature gazing at a dragon floating in a bubble of fantasy, not real, a dream",
+   "words": [
+    {
+     "id": "t0119",
+     "w": "unreal",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-168",
+   "concept": "ink creature standing on a wooden pier beside a moored ship with ropes, crates",
+   "words": [
+    {
+     "id": "t0246",
+     "w": "dock",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-169",
+   "concept": "ink creature standing among big gears, pipes and heavy machines in a factory",
+   "words": [
+    {
+     "id": "t0249",
+     "w": "machinery",
+     "tint": 0
+    }
+   ]
+  },
+  {
+   "g": "c2-170",
+   "concept": "ink creature flying in a plane over clouds, wings, a window seat",
+   "words": [
+    {
+     "id": "t0099",
+     "w": "airplane",
+     "tint": 0
+    }
+   ]
+  }
+ ]
+}
