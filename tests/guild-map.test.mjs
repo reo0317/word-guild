@@ -101,11 +101,14 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
   const progress = {words: {}, gates: []};
   const map = buildMap(words, progress, 20000);
   let scroll, scheduled;
-  const road = {clientWidth:390, clientHeight:680, scrollTop:0,
+  const road = {clientWidth:402, clientHeight:710, scrollTop:0,
     getBoundingClientRect:()=>({top:44}), addEventListener:(_, fn)=>{scroll=fn;}};
   const pin = {style:{}, classList:{contains:cls=>cls === 'gq-bb-tsumugi'}, querySelector:()=>null};
+  const panel = {style:{}, offsetWidth:130, offsetHeight:80};
+  const panelBoard = {style:{}, classList:{contains:()=>false}, querySelector:sel=>sel === '.gq-here-panel' ? panel : null};
+  const lamps = [];
   const sky = {style:{}, dataset:{ward:'1'}, classList:{toggle(){}}};
-  const nodes = {'#gq-road':road};
+  const nodes = {'#gq-road':road, '#gq-stage':{style:{}, isConnected:true, getBoundingClientRect:()=>({left:0,top:44})}};
   const view = {innerHTML:'', querySelector(selector) {
     return nodes[selector] ??= {style:{}, attrs:{}, setAttribute(k,v){this.attrs[k]=v;}};
   }, querySelectorAll(selector) {
@@ -113,10 +116,15 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     if (selector !== '.gq-bb') return [];
     const match = this.innerHTML.match(/class="gq-bb gq-bb-tsumugi" data-y="([^"]+)" data-lat="([^"]+)"/);
     pin.dataset = {y:match[1], lat:match[2]};
-    return [pin];
+    panelBoard.dataset = {...pin.dataset};
+    for (const lamp of this.innerHTML.matchAll(/class="gq-bb gq-bb-lamp[^"]*" data-y="([^"]+)" data-lat="([^"]+)"/g)) {
+      lamps.push({style:{}, dataset:{y:lamp[1],lat:lamp[2]}, classList:{contains:()=>false}, querySelector:()=>null});
+    }
+    for (const node of [pin, ...lamps]) node.querySelectorAll = () => [];
+    return [pin, panelBoard, ...lamps];
   }};
   const oldWindow = globalThis.window, oldRAF = globalThis.requestAnimationFrame;
-  globalThis.window = {innerHeight:844};
+  globalThis.window = {innerHeight:874};
   globalThis.requestAnimationFrame = fn => {scheduled=fn; return 1;};
   try {
     renderMap(view, {map,today:20000,progress,total:1400,face:()=>'',tsumugi:'',on:{}});
@@ -124,7 +132,7 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     const end = Number(view.innerHTML.match(/class="gq-bb gq-bb-top" data-y="([^"]+)"/)[1]);
     const checkRoadEnd = () => {
       const camera = Math.min(end + 40, Math.max(-1400, end + 40 - road.scrollTop));
-      const terminal = projectRoad(390, 680, Math.min(end, camera + DRAW_DISTANCE), camera);
+      const terminal = projectRoad(402, 710, Math.min(end, camera + DRAW_DISTANCE), camera);
       for (const name of ['base', 'edge', 'lines', 'center', 'walked']) {
         const coords = nodes[`#gq-r-${name}`].attrs.d.match(/-?\d+(?:\.\d+)?/g)?.map(Number) ?? [];
         for (let i = 1; i < coords.length; i += 2) assert.ok(coords[i] >= terminal.y - .051, `${name} extends past lighthouse`);
@@ -136,9 +144,20 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     assert.match(view.innerHTML, /<img src="art\/house-48.webp"/);
     assert.doesNotMatch(view.innerHTML, /<svg viewBox="0 0 120 150"/);
     checkRoadEnd();
+    assert.equal(panelBoard.hidden, false);
+    assert.equal(panel.style.visibility, '');
+    assert.match(panel.style.transform, /translate/);
+    // 初期の街灯から6個先の札も、道の打ち切りより手前に描かれる。
+    const sixthAhead = lamps[6];
+    assert.equal(sixthAhead.hidden, false);
+    assert.ok(Number(sixthAhead.style.opacity) > 0);
+    const initialCamera = end + 40 - road.scrollTop;
+    assert.ok(Number(sixthAhead.dataset.y) <= initialCamera + DRAW_DISTANCE);
+    assert.ok(projectRoad(402,710,Number(sixthAhead.dataset.y),initialCamera).y
+      >= projectRoad(402,710,initialCamera + DRAW_DISTANCE,initialCamera).y);
     const initialScroll = road.scrollTop;
     assert.equal(scale(), 1);
-    assert.equal(sky.style.top, `${skyGeometry(390,680,1).top}px`);
+    assert.equal(sky.style.top, `${skyGeometry(402,710,1).top}px`);
     // 初回の再計測でも基準倍率を変えない。
     scheduled();
     assert.equal(scale(), 1);
@@ -194,27 +213,6 @@ test('家の境目は24%のグラデーションで、未配達と全着色は�
   assert.match(css, /\.gq-road-svg path\{animation:none;transition:none;transform:none\}/);
 });
 
-
-test('390×844・360×640で吹き出しは左右の家とツムギを避け、画面内に収まる', () => {
-  for (const [width, height] of [[390, 680], [360, 480]]) {
-    for (let camera = -500; camera < 2500; camera += 137) {
-      const here = projectRoad(width, height, camera + 450, camera);
-      const houses = [];
-      for (let y = 300; y < 6000; y += 362) {
-        if (y < camera) continue;
-        const p = projectRoad(width, height, y, camera);
-        const h = houseGeometry(width, p, true);
-        const left = h.side === 'left' ? p.x - h.offset - h.size : p.x + h.offset;
-        houses.push({left, right:left + h.size, top:p.y - h.size * .85, bottom:p.y + h.size * .15});
-      }
-      const panel = panelGeometry(width, height, here.x, here.y, 150, 88, houses);
-      if (!panel) continue;
-      assert.ok(panel.left >= 8 && panel.left + 150 <= width - 8);
-      assert.ok(panel.top >= 8 && panel.top + 88 <= height - 8);
-      for (const h of houses) assert.ok(panel.left >= h.right || panel.left + 150 <= h.left || panel.top >= h.bottom || panel.top + 88 <= h.top);
-    }
-  }
-});
 
  test('縮尺の上下限・灯台の霧・一定の道の振幅', () => {
   for (const scale of [-10, 0, .1, .3, 1, 1.2, 100, Infinity, NaN]) {
@@ -281,14 +279,14 @@ test('スマホ幅で道の点列は打ち切り距離を超えず、画面の�
 test('吹き出しは大きなツムギの横に限り、左の家を避けて右へ出す', () => {
   const house = {left:10, right:140, top:270, bottom:440};
   assert.deepEqual(panelGeometry(390, 680, 190, 400, 130, 80, [house]), {left:246, top:300});
-  assert.equal(panelGeometry(390, 680, 190, 400, 130, 80, [], 74), null);
-  assert.equal(panelGeometry(320, 480, 160, 300, 150, 80, []), null);
+  assert.equal(panelGeometry(390, 680, 190, 400, 130, 80, [], 69), null);
+  assert.deepEqual(panelGeometry(320, 480, 160, 300, 150, 80, []), {left:162, top:200});
   assert.deepEqual(panelGeometry(390, 680, 210, 400, 130, 80,
     [{left:260, right:380, top:270, bottom:440}]), {left:24, top:300});
 });
 
 test('打ち切り地点まで世界座標の sin の振幅を保つ', () => {
-  assert.ok(DRAW_DISTANCE <= 1400);
+  assert.ok(DRAW_DISTANCE >= 3200 && DRAW_DISTANCE <= 3600);
   for (const camera of [0, 137, 550, 1100]) {
     for (let d = 0; d <= DRAW_DISTANCE; d += 25) {
       const p = projectRoad(390, 680, camera + d, camera);
@@ -296,4 +294,13 @@ test('打ち切り地点まで世界座標の sin の振幅を保つ', () => {
         - A * Math.sin(2 * Math.PI * (camera + d) / L + Math.PI / 2)) < 1e-12);
     }
   }
+});
+
+
+test('両側に家があっても重なりの小さい側へ必ず出す（同点は右）', () => {
+  const left = {left:0, right:150, top:280, bottom:400};
+  const right = {left:260, right:390, top:280, bottom:400};
+  assert.deepEqual(panelGeometry(390,680,190,400,130,80,[left,right]), {left:246,top:300});
+  assert.deepEqual(panelGeometry(390,680,190,400,130,80,[{...left,right:50},right]), {left:8,top:300});
+  assert.ok(panelGeometry(390,680,190,400,130,80,[left,right],70));
 });

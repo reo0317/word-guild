@@ -33,7 +33,7 @@ export const H_CAMERA = 0.86; // カメラの高さ（画面の縦横比で補�
 const Z_NEAR = 700;    // 下端での最短距離。これより近い地面は描かない
 const PHASE = Math.PI / 2;
 const S_MIN = 0.07;
-export const DRAW_DISTANCE = 1400;
+export const DRAW_DISTANCE = 3600;
 export const LIGHTHOUSE_DISTANCE = H.step * 10;
 
 export function lighthouseVisible(remaining) {
@@ -102,19 +102,20 @@ export function houseGeometry(width, projection, current = false) {
   return {x, size, offset: half + 8, side};
 }
 
-// 胸〜頭の横だけを候補にする。隣に空きがなければ表示しない。
+// 大きく映る間は必ず表示。左右の家との重なり面積を比べ、同点なら右。
 export function panelGeometry(width, height, x, feet, pw, ph, objects, tsumugiSize = 100) {
-  if (tsumugiSize < 75) return null;
+  if (tsumugiSize < 70) return null;
   const top = Math.max(8, Math.min(height - ph - 8, feet - tsumugiSize));
-  if (top > feet - tsumugiSize * .55) return null;
   const gap = tsumugiSize / 2 + 6;
-  for (const left of [x + gap, x - gap - pw]) {
-    if (left < 8 || left + pw > width - 8 || top < 8 || top + ph > height - 8) continue;
-    if (objects.some(h => left < h.right + 5 && left + pw > h.left - 5
-      && top < h.bottom + 5 && top + ph > h.top - 5)) continue;
-    return {left, top};
-  }
-  return null;
+  const candidates = [x + gap, x - gap - pw].map(left => {
+    left = Math.max(8, Math.min(width - pw - 8, left));
+    const overlap = objects.reduce((sum, h) => sum
+      + Math.max(0, Math.min(left + pw, h.right) - Math.max(left, h.left))
+      * Math.max(0, Math.min(top + ph, h.bottom) - Math.max(top, h.top)), 0);
+    return {left, top, overlap};
+  });
+  const best = candidates[1].overlap < candidates[0].overlap ? candidates[1] : candidates[0];
+  return {left: best.left, top: best.top};
 }
 
 const DAILY_SHORT = {revenge: ['↺', '戻ってきた紙魚'], fresh: ['✦', '新しい紙魚'], clean: ['✓', 'ヒントなし'], finish: ['▶', '配達']};
@@ -442,7 +443,7 @@ export function renderMap(view, ctx) {
     if (panelBoard) {
       const origin = stage.getBoundingClientRect();
       const obstacles = boards.filter(b => b.shown && !b.panel).flatMap(b =>
-        [...b.el.querySelectorAll('.gq-house, .gq-lamp-node, .gq-post')].map(el => {
+        [...b.el.querySelectorAll('.gq-house')].map(el => {
           const r = el.getBoundingClientRect();
           return {left:r.left - origin.left, right:r.right - origin.left,
             top:r.top - origin.top, bottom:r.bottom - origin.top};
@@ -458,6 +459,7 @@ export function renderMap(view, ctx) {
     }
 
     };
+    placePanel();
     // カメラの少し先にある区の絵を、背景に出す。
     let ward = wardStarts[0]?.ch ?? 1;
     for (const w of wardStarts) if (w.y <= c + 500) ward = w.ch;
@@ -498,8 +500,6 @@ export function renderMap(view, ctx) {
     placePanel();
   };
   road.addEventListener('scroll', () => {
-    const panel = boards.find(b => b.panel);
-    if (panel) panel.panel.style.visibility = 'hidden';
     schedule();
     clearTimeout(panelTimer);
     panelTimer = setTimeout(() => { if (frame) { cancelAnimationFrame(frame); update(); } placePanel(); }, 140);
