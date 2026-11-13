@@ -73,7 +73,7 @@ export function groupWords(words, rand = null) {
 // progress.words は {id: {box, due, seen}}。戻り値は 3語ずつの組の配列。
 export function pickSession(words, progress, today, size = SESSION_SIZE, rand = null, fresh = NEW_PER_SESSION) {
   const state = word => progress.words[word.id];
-  const maxDue = Math.max(0, size - fresh);
+  const maxDue = Math.min(6, Math.max(0, size - fresh));
   const dueAll = words
     .filter(word => isDue(state(word), today))
     .sort((a, b) => state(a).due - state(b).due || byShelfThenId(a, b));

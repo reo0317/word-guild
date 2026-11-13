@@ -304,3 +304,21 @@ test('両側に家があっても重なりの小さい側へ必ず出す（同�
   assert.deepEqual(panelGeometry(390,680,190,400,130,80,[{...left,right:50},right]), {left:8,top:300});
   assert.ok(panelGeometry(390,680,190,400,130,80,[left,right],70));
 });
+
+
+test('トップの速達ラベルは依頼の種類によらず今日の速達で、印と達成表示を保つ', () => {
+  const old = globalThis.requestAnimationFrame;
+  globalThis.requestAnimationFrame = () => 1;
+  try {
+    for (const [kind, mark] of [['revenge', '↺'], ['fresh', '✦'], ['clean', '✓'], ['finish', '▶']]) {
+      for (const done of [false, true]) {
+        const progress = {words: {}, gates: [], daily: {kind, goal: 10, count: done ? 10 : 0, done}};
+        const node = {style: {}, clientWidth: 390, addEventListener() {}, setAttribute() {}};
+        const view = {innerHTML: '', querySelector: () => ({...node}), querySelectorAll: () => []};
+        renderMap(view, {map: buildMap(words, progress, 20000), today: 20000, progress, total: 1400, face: () => '', tsumugi: '', letterOf: () => ({}), on: {}});
+        assert.ok(view.innerHTML.includes(`<i aria-hidden="true">${mark}</i>今日の速達<b>${done ? 10 : 0}/10</b>`));
+        assert.ok(view.innerHTML.includes(`class="gq-daily ${done ? 'done' : ''}"`));
+      }
+    }
+  } finally {globalThis.requestAnimationFrame = old;}
+});

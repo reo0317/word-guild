@@ -303,7 +303,7 @@ export function renderMap(view, ctx) {
     <div class="gq-map-foot">
       ${ctx.warn ? `<p class="gq-warn">${esc(ctx.warn)}</p>` : ''}
       <div class="gq-chips">
-        ${brief ? `<span class="gq-daily ${progress.daily.done ? 'done' : ''}" aria-label="今日の速達 ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>${esc(brief.name)}<b>${brief.count}/${brief.goal}</b></span>` : ''}
+        ${brief ? `<span class="gq-daily ${progress.daily.done ? 'done' : ''}" aria-label="今日の速達 ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>今日の速達<b>${brief.count}/${brief.goal}</b></span>` : ''}
         ${tomorrow.length ? `<span class="gq-tomorrow" aria-label="明日戻ってくる紙魚 ${tomorrow.length} 匹"><small>明日</small><span class="gq-faces">${tomorrowFaces}</span><b>${tomorrow.length}</b></span>` : ''}
       </div>
       <div class="gq-dock">

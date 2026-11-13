@@ -53,7 +53,7 @@ test('pickSession（初回）：新出が12語、重複なし、棚と id の順
   assert.deepEqual(new Set(picked.map(w => w.id)), new Set(firstTwelve.map(w => w.id)));
 });
 
-test('pickSession：期限語を古い順に最大7、新出5、不足は新出で補う', () => {
+test('pickSession：期限語を古い順に最大6、新出6、不足は新出で補う', () => {
   const progress = emptyProgress();
   words.slice(0, 10).forEach((word, i) => {
     progress.words[word.id] = {box: 2, due: TODAY - i, seen: 2}; // i が大きいほど古い
@@ -61,9 +61,9 @@ test('pickSession：期限語を古い順に最大7、新出5、不足は新出�
   progress.words[words[10].id] = {box: 4, due: TODAY + 5, seen: 3}; // 期限前は選ばれない
   const picked = pickSession(words, progress, TODAY).flat();
   const due = picked.filter(w => progress.words[w.id]);
-  assert.equal(due.length, 7);
-  assert.deepEqual(new Set(due.map(w => w.id)), new Set(words.slice(3, 10).map(w => w.id)), '最も古い7語');
-  assert.equal(picked.filter(w => !progress.words[w.id]).length, 5);
+  assert.equal(due.length, 6);
+  assert.deepEqual(new Set(due.map(w => w.id)), new Set(words.slice(4, 10).map(w => w.id)), '最も古い6語');
+  assert.equal(picked.filter(w => !progress.words[w.id]).length, 6);
   assert.ok(!picked.includes(words[10]));
   assert.equal(new Set(picked.map(w => w.id)).size, 12);
 });
@@ -175,18 +175,18 @@ const dueWords = n => Array.from({length: n}, (_, i) => ({id: `u${i}`, w: `due${
 const freshWords = n => Array.from({length: n}, (_, i) => ({id: `f${i}`, w: `new${String.fromCharCode(97 + i)}y`, ja: 'x', pos: 'n', shelf: 2}));
 const bigWords = n => Array.from({length: n}, (_, i) => ({id: `b${i}`, w: `internationa${String.fromCharCode(97 + i)}`, ja: 'x', pos: 'n', shelf: 3}));
 
-test('pickSession：fresh が 4／6／8 のとき期限語の上限は 8／6／4', () => {
+test('pickSession：fresh が 4／6／8 のとき期限語の上限は 6／6／4', () => {
   const due = dueWords(12);
   const progress = emptyProgress();
   due.forEach((w, i) => { progress.words[w.id] = {box: 2, due: TODAY - i, seen: 2}; });
   const all = [...due, ...freshWords(12)];
-  for (const [fresh, maxDue] of [[4, 8], [6, 6], [8, 4]]) {
+  for (const [fresh, maxDue] of [[4, 6], [6, 6], [8, 4]]) {
     const picked = pickSession(all, progress, TODAY, 12, null, fresh).flat();
     assert.equal(picked.filter(w => progress.words[w.id]).length, maxDue, `fresh=${fresh}`);
     assert.equal(picked.length, 12);
   }
   const dflt = pickSession(all, progress, TODAY).flat();
-  assert.equal(dflt.filter(w => progress.words[w.id]).length, 7, '既定は5');
+  assert.equal(dflt.filter(w => progress.words[w.id]).length, 6, '既定でも期限語は最大6');
 });
 
 test('isBig：13文字以上', () => {
