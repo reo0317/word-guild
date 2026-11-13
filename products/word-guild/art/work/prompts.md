@@ -1229,3 +1229,371 @@ Square game enemy illustration. Match the three attached reference images: paper
 ## 単語の絵：c2-009
 
 Square game enemy illustration. Match the three attached reference images: paper and letterpress ink print, thick navy outlines, flat color blocks, paper texture, cute spooky living ink stain monster with white eyes. Full-body main monster centered and large, with oversized clear everyday objects and action conveying meaning. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Background perfectly flat pure green #00ff00 only, no ground, shadows or patterns, no green on subject. No letters, numbers, symbols, text or recognizable characters. Scene: discovering a large footprint clue with a magnifying glass
+
+## 単語の絵：c2-012
+宛名の消えた封筒の一つ目の魔物が、3時を示す大きな文字のないアナログ時計を持つ。全身、紙と活版インクの版画風、太い紺線、紺・霧・紙色と少量の朱、背景は純緑一色。文字・数字なし。
+
+## 単語の絵：c2-010
+参照：nijimi.png（キャラクター）、c1-051.png（画風）。水でにじんだ白い目の魔物が、受話器付きのファックスに紙を入れ、別の紙が出てくる。紙と活版インクの版画風、太い紺の線、平塗り、紙の質感。紺・霧・紙色と少量の朱。正方形、全身、背景は純緑 #00ff00、文字・数字・記号なし。
+
+## 単語の絵：c2-017
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character looking back at several recently torn calendar pages. 
+
+## 単語の絵：c2-022
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character returning coins to a customer who returns a product box at a counter. 
+
+共通指示：参照の消しゴムのかすが固まった灰色のころころした魔物の体形・白い目・特徴を保つ。紙と活版インクの版画風、太い紺線、紺・霧色・紙色を主体に朱を少し、塊ごとの平塗り。正方形、全身を中央に大きく。背景は影や模様のない純緑 #00ff00。体内に緑を使わず、文字・数字・記号を入れない。意味を動作と持ち物で大きく明瞭に表す。
+
+## 単語の絵：c2-006
+事務書類・事務の・メモ：机の書類の山に判を押し、無地の付箋を添える。
+
+## 単語の絵：c2-014
+真夜中：満月と星の下、眠る町を背にあくびする。
+
+## 単語の絵：c2-019
+顧問：机越しに悩む相手へ助言する。
+
+## 単語の絵：c2-024
+在庫・倉庫：倉庫で積み上がった箱を数える。
+
+## 単語の絵：c2-029
+請求書・領収書：カウンターで硬貨と長い無地の紙をやり取りする。
+
+## 単語の絵：c2-034
+ロビー・ソファー：入口の広間にある大きなソファーでくつろぐ。
+
+## 単語の絵：c2-039
+布・セーター：編んだセーターを着て布の反物を持つ。
+
+## 単語の絵：c2-044
+地下鉄・シャトルバス：地下トンネルの電車に乗り、地上には小さなバス。
+
+## 単語の絵：c2-049
+保証：新しい機器を大きな盾で守り、修理人が工具を持つ。
+
+## 単語の絵：c2-054
+エレベーター：高い建物の断面で、開いたエレベーターに立つ。
+
+## 単語の絵：c2-059
+問い合わせる：案内カウンターで手を挙げて質問する。
+
+## 単語の絵：c2-064
+マニュアル・説明の：説明書を読みながら簡単な機械の組立を説明する。
+
+## 単語の絵：c2-069
+屋内の：屋根と壁、敷物とカーテンが見える家の中でくつろぐ。
+
+## 単語の絵：c2-074
+傘・雨の：雨雲の下で大きく開いた傘を持つ。
+
+## 単語の絵：c2-079
+小型の・ミニ：指先につまんだ小さなカメラを大きなカメラと比べる。
+
+## 単語の絵：c2-084
+クーポン・お買い得品・手頃な：店で無地の切り抜き券を出し、少ない硬貨で商品を買う。
+
+## 単語の絵：c2-090
+交換品・更新する：壊れた部品を同じ形の新品と交換する。
+
+## 単語の絵：c2-095
+容器：中身の見える大きな箱のふたを開ける。
+
+## 単語の絵：c2-100
+スーパー・モール：食品棚の横で食料入りのカートを押す。
+
+## 単語の絵：c2-105
+出席者：講演者に向かって観客席に座る。
+
+## 単語の絵：c2-110
+サッカー・野球：サッカーボールをゴールへ蹴り、野球のバットとボールを持つ。
+
+## 単語の絵：c2-115
+カレンダー：文字も数字もない格子の壁掛けカレンダーをめくる。
+
+## 単語の絵：c2-120
+おいしい・風味：湯気の上がる料理を喜んで食べる。
+
+## 単語の絵：c2-125
+書き直す：紙を消しゴムで消して鉛筆で書き直し、丸めた紙を添える。
+
+## 単語の絵：c2-146
+賞与：笑顔の上司から追加の硬貨の袋を受け取る。
+
+## 単語の絵：c2-151
+承認する：無地の書類に大きな判を押す。
+
+## 単語の絵：c2-156
+調整する：指揮棒を振り、作業する仲間をまとめる。
+
+## 単語の絵：c2-161
+無料の：カウンターで笑顔の店員からリボン付きの贈り物を受け取る。硬貨は描かない。
+
+## 単語の絵：c2-166
+不完全な：一片だけ欠け、穴の見える大きなジグソーパズルを持つ。
+
+## 単語の絵：c2-015
+nijimi.png の魔物が手紙を書き終え、胸に手を当てて丁寧にお辞儀する。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-020
+nijimi.png の魔物が笛をつけ、体操を実演して生徒を指導する。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-027
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character walking amidst a dense cluster of tall city buildings and tiny cars. 
+
+## 単語の絵：c2-030
+nijimi.png の魔物が大きく開いた折りたたみパンフレットを読者に見せる。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-032
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character exchanging a box for coins with a customer. 
+
+## 単語の絵：c2-080
+nijimi.png の魔物が歯科医となり、鏡で患者の開いた口と歯を診察する。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-037
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character inserting two sheets together inside a separate open envelope. 
+
+## 単語の絵：c2-047
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character a restaurant waiter carrying a tray with a plate and glass, wearing a bow tie. 
+
+## 単語の絵：c2-091
+nijimi.png の魔物がカビの生えた牛乳を持ち、空の砂時計の横にいる。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-042
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character commuting in a crowded train, hanging from a strap and holding a briefcase. 
+
+## 単語の絵：c2-013
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: holding a lunch box under a large sun directly overhead, conveying noon
+
+## 単語の絵：c2-018
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: a boss on a raised platform watching small busy workers, arms folded, supervising
+
+## 単語の絵：c2-023
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: presenting large shelves of boxes, bottles and toys for sale, merchandise
+
+## 単語の絵：c2-028
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: frantically working on unfinished paperwork beside a nearly empty hourglass and ringing alarm clock, deadline
+
+## 単語の絵：c2-033
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: wearing a uniform behind a reception counter, welcoming a guest and handing over a key
+
+## 単語の絵：c2-038
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: wearing goggles, fixing an open machine with gears using a large wrench and toolbox
+
+## 単語の絵：c2-043
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: holding a rotary telephone receiver to its ear while turning its circular dial
+
+## 単語の絵：c2-048
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: handing house keys to a tenant who pays coins, with an apartment house
+
+## 単語の絵：c2-053
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: holding a big slice of cream cake in one hand and a large sandwich in the other
+
+## 単語の絵：c2-058
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: handing a message to another creature and ringing a bell to alert them
+
+## 単語の絵：c2-063
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: struggling to get through a broken door blocked by obstacles, visibly inconvenienced
+
+## 単語の絵：c2-068
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: enjoying a picnic on a blanket with a basket of food, tent and sun
+
+## 単語の絵：c2-073
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: arguing with a second creature, pointing in opposite directions, contradicting
+
+## 単語の絵：c2-078
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: typing on an oversized computer keyboard with clearly visible blank keys
+
+## 単語の絵：c2-083
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: receiving a large certificate scroll with ribbon and seal
+
+## 単語の絵：c2-089
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: stepping from a small plain chair to a large luxurious chair, an upgrade
+
+## 単語の絵：c2-094
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: opening a tall wardrobe showing hanging clothes and a large drawer
+
+## 単語の絵：c2-099
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: presenting a television, radio and stack of newspapers, media
+
+## 単語の絵：c2-104
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: receiving an assignment paper and placing completed papers in a submission box
+
+## 単語の絵：c2-109
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: lifting large dumbbells with a towel and sweat, exercising at a gym
+
+## 単語の絵：c2-114
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: carrying a large open paper folder filled with sheets
+
+## 単語の絵：c2-119
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: clutching its empty stomach while staring hungrily at a big meal
+
+## 単語の絵：c2-124
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: mixing eggs, flour, milk and tomatoes in a bowl beside an open illustrated cookbook
+
+## 単語の絵：c2-129
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: in a white lab coat mixing bubbling flasks and test tubes in a laboratory
+
+## 単語の絵：c2-150
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: presenting large pencils, scissors, tape and notebooks on a desk, stationery
+
+## 単語の絵：c2-155
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: gritting teeth in annoyance as a tiny buzzing creature pesters its head
+
+## 単語の絵：c2-160
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: at a hotel reception desk presenting multiple available keys and empty rooms
+
+## 単語の絵：c2-165
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: looking unhappy with drooping mouth, dejected posture and a grey cloud overhead
+
+## 単語の絵：c2-170
+
+Square game illustration; reference image shimi.png is the exact character and style. Preserve the same navy ink stain monster’s silhouette, white eyes, ink droplets and features, large central full body. Paper letterpress print texture, bold navy outlines and flat limited navy #1f2a44, pale grey #9fb3bf, cream #f3ead8, little vermilion #c8462f. Make the meaning immediately obvious with large recognizable objects. Pure flat solid #00ff00 green background, no ground, shadows, scenery background, letters, numbers or symbols. Scene: riding in a clearly recognizable airplane flying above clouds
+
+## 単語の絵：c2-035
+nijimi.png の魔物が印刷機で製本された本を作り、本の山がそばにある。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-052
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character eating small snacks beside a large cup of drink with a straw. 
+
+## 単語の絵：c2-040
+nijimi.png の魔物がバスの入口で運賃箱に硬貨を入れる。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-057
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character riding a large clearly recognizable two-wheeled bicycle. 
+
+## 単語の絵：c2-085
+nijimi.png の魔物がシャツについた大きな白紙の値札を持ち、近くに硬貨がある。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-045
+nijimi.png の魔物が大きな車輪付きスーツケースを引き、ブリーフケースを持つ。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-118
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character connecting a water pipe and power cable to a house. 
+
+## 単語の絵：c2-050
+nijimi.png の魔物がテーブルにつき、トレーとコーヒーを前にフォークで食事する。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-062
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character reaching easily from home to a nearby shop and bus stop. 
+
+## 単語の絵：c2-070
+nijimi.png の魔物がスーツケースと共に道の終点の旗へ到着する。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-025
+nijimi.png の魔物がテーブルの生徒たちに陶芸を実演し、体験型ワークショップを指導する。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-093
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character working and chatting with a coworker at neighboring office desks. 
+
+## 単語の絵：c2-067
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character holding a large unmistakably oval egg-shaped mirror. 
+
+## 単語の絵：c2-098
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character holding a large unmistakable glowing table lamp. 
+
+## 単語の絵：c2-060
+nijimi.png の魔物が開いたカーテン越しに映画の小さな画面をのぞき見る。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-106
+nijimi.png の魔物がプレゼントと風船に囲まれ誕生日ケーキのろうそくを吹き消す。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-072
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character moving an appointment token from one calendar page to a later calendar page. 
+
+## 単語の絵：c2-116
+nijimi.png の魔物が他の人のために寄付箱へ硬貨と衣類を入れる。c1-051.png の版画風、純緑背景、文字・数字・記号なし。
+
+## 単語の絵：c2-103
+Use case illustration-story, square game asset. Image 1 is exact character reference: preserve envelope body, flap, one sad eye, thin limbs and ink stains. Image 2 is style reference. One central full-body envelope monster, large and recognizable. Paper letterpress print, thick navy outlines, flat navy #1f2a44, mist #9fb3bf, paper #f3ead8 and little vermilion #c8462f, white eye, paper texture. Background absolutely flat solid pure green #00ff00 without ground, shadow or pattern; no green inside subject. No letters, numbers, symbols or speech bubbles. Meaning must be visually clear. Depict character drawing a straight underline with a pen beneath blank horizontal rows, no letters. 
+
+## 単語の絵：c2-011
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: pressing the lid of a large photocopier, identical blank sheets emerging
+
+## 単語の絵：c2-016
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: pointing happily to a future day on a blank calendar, with a small clock nearby
+
+## 単語の絵：c2-021
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: a trainee in oversized work uniform carefully learning to bake by copying a human expert
+
+## 単語の絵：c2-026
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: presenting at a microphone, pointing at a screen with simple pictorial shapes, a small audience
+
+## 単語の絵：c2-031
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: an accountant checking coins and a ledger with a magnifying glass, abacus nearby
+
+## 単語の絵：c2-036
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: nervously presenting a blank résumé with a portrait to an interviewer across a desk
+
+## 単語の絵：c2-041
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: a traveler with large backpack, folded map and camera
+
+## 単語の絵：c2-046
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: loading prominent parcels onto a delivery van
+
+## 単語の絵：c2-051
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: a chef wearing tall white chef hat cooking food in a frying pan
+
+## 単語の絵：c2-056
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: showing a valid pass with a portrait to a guard at an open entrance gate
+
+## 単語の絵：c2-066
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: delightedly receiving a large wrapped gift into its hands
+
+## 単語の絵：c2-071
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: proudly wearing a carpenter's work apron and carrying hammer and saw
+
+## 単語の絵：c2-076
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: looking up at a large thick gray cloud hiding the sun
+
+## 単語の絵：c2-081
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: sick in bed, thermometer in mouth, holding medicine and a glass of water
+
+## 単語の絵：c2-086
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: waving goodbye from a departing train window, a person waving from platform
+
+## 単語の絵：c2-092
+
+Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: walking in front leading a line of people behind it
