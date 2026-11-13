@@ -47,8 +47,8 @@ function viewFunction(name, deps) {
   return Function(...Object.keys(deps), `return (${viewSource.slice(start, end)});`)(...Object.values(deps));
 }
 
-test('再戦の撃破はヒントの有無によらず切手を作らず、700msで消える。動きを減らす場合は即消える', () => {
-  for (const hint of [0, 1]) for (const still of [false, true]) {
+test('再戦でヒントを使うと切手を作らず、700msで消える。動きを減らす場合は即消える', () => {
+  for (const hint of [1, 2]) for (const still of [false, true]) {
     const classes = new Set();
     const mon = {classList: {remove() {}, add: (...names) => names.forEach(n => classes.add(n))},
       insertAdjacentHTML: (_, html) => { mon.html = html; }};
@@ -70,23 +70,28 @@ test('再戦の撃破はヒントの有無によらず切手を作らず、700ms
   }
 });
 
-test('再戦では手紙の行を表示せず、切手数は増えず、切手も飛ばない', () => {
-  const quest = {isRevenge: true, results: new Map([['a', 'clean'], ['b', 'hint']])};
-  const unexpected = () => { throw Error('再戦で表示処理が走った'); };
+test('再戦のヒントなし正解も切手数に加え、手紙の行を表示し、切手を飛ばす', () => {
+  const quest = {isRevenge: true, restoredIds: new Set(['a'])};
   assert.equal(viewFunction('stampCount', {quest})(), 1);
-  viewFunction('showClip', {quest, $: unexpected})('a');
-  viewFunction('showClip', {quest, $: () => null})('a', true);
-  viewFunction('flyStamps', {quest, $: () => ({}), view: {querySelectorAll: unexpected}})();
-  quest.isRevenge = false;
-  assert.equal(viewFunction('stampCount', {quest})(), 1);
+  quest.restoredIds.add('b');
+  assert.equal(viewFunction('stampCount', {quest})(), 2);
+  const band = {classList: {remove() {}, add() {}}};
+  viewFunction('showClip', {$: () => band, story: {letters: [{}]}, clipParts: () => ({left: '', word: 'book', right: ''}),
+    clipSeq: 0, reducedMotion: () => true, esc: s => s, later() {}})('a');
+  assert.match(band.innerHTML, /s-ink/);
+  assert.equal(band.hidden, false);
+  let flown = false;
+  const element = {getBoundingClientRect: () => ({x: 0, y: 0, width: 1, height: 1}), animate() { flown = true; }};
+  viewFunction('flyStamps', {$: () => element, reducedMotion: () => false, view: {querySelectorAll: () => [element]}})();
+  assert.equal(flown, true);
 });
 
-test('通常の撃破は本刷り切手、ヒント使用時は逃走のまま', () => {
-  for (const hint of [0, 1]) {
+test('通常と再戦のヒントなし撃破は切手、通常のヒント使用は逃走', () => {
+  for (const [isRevenge, hint] of [[false, 0], [false, 1], [true, 0]]) {
     const classes = [];
     let state;
     const mon = {classList: {remove() {}, add: (...names) => classes.push(...names)}, insertAdjacentHTML() {}};
-    viewFunction('resolveMon', {quest: {isRevenge: false}, monOf: () => mon, specFor: () => ({}),
+    viewFunction('resolveMon', {quest: {isRevenge}, monOf: () => mon, specFor: () => ({}),
       stampHtml: (_, __, options) => { state = options.state; return '<button>'; }})({word: {id: 'a'}, hint});
     assert.ok(classes.includes(hint ? 'fled' : 'stamped'));
     assert.equal(state, hint ? undefined : 'print');

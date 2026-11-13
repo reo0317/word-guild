@@ -1,3 +1,4 @@
+import {isRestored} from './srs.mjs';
 // 道の地図（トップの画面）。手前（下）から奥（上）へ、遠近のついた道が続く。
 // 手前が近くて大きく、奥へ行くほど小さく霧にかすむ。今いる石段は手前寄りに見える。
 // DOM は container.innerHTML に描くだけで、ゲームの進行や保存には触らない。押されたものは ctx.on の関数に渡す。
@@ -209,7 +210,7 @@ export function renderMap(view, ctx) {
 
   const days = streakDays(progress.streak, today);
   const count = streakNow(progress.streak, today);
-  const collected = Object.keys(progress.words).length;
+  const collected = Object.values(progress.words).filter(isRestored).length;
   const brief = dailyBrief(progress.daily);
   const openGate = map.wards.find(w => w.gate === 'open');
   const tomorrow = map.tomorrow;

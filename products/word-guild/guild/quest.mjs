@@ -1,6 +1,6 @@
 // 1クエストの状態。時間は advance(ms) で外から進める。DOM もタイマーも持たない。
 import {generateBoard, matchWord, spelling} from './board.mjs';
-import {grade, isDue, isBig} from './srs.mjs';
+import {grade, isDue, isBig, isRestored} from './srs.mjs';
 import {applyOutcome, streakNow} from './daily.mjs';
 import {emptyProgress} from './store.mjs';
 
@@ -26,6 +26,7 @@ export class Quest {
     this.save = save;
     this.gate = Number.isInteger(gate) && gate >= 1 && gate <= 6 ? gate : null;
     this.hearts = HEARTS;
+    this.restoredIds = new Set(); // 今回ヒントなしで答えた語（再戦を含む）
     this.results = new Map(); // id → 'clean' | 'hint' | 'taught'（最初の結果）
     this.retreated = false;
     this.revengeWords = [];
@@ -89,6 +90,7 @@ export class Quest {
     if (!match) return null;
     const slot = this.slotFor(match);
     slot.solved = true;
+    if (slot.hint === 0) this.restoredIds.add(slot.word.id);
     if (!this.isRevenge && !this.results.has(slot.word.id)) {
       this.results.set(slot.word.id, RESULT_BY_HINT[slot.hint]);
     }
@@ -139,8 +141,9 @@ export class Quest {
       if (!result) continue;
       const before = this.startProgress.words[word.id];
       const after = grade(before, result, this.today);
+      after.restored = isRestored(before) || this.restoredIds.has(word.id);
       words[word.id] = after;
-      entries.push({word, result, isNew: !before, box: after.box, due: isDue(before, this.today), big: isBig(word)});
+      entries.push({word, result, restored: after.restored, stamped: this.restoredIds.has(word.id), isNew: !before, box: after.box, due: isDue(before, this.today), big: isBig(word)});
     }
     const progress = {
       ...this.startProgress,

@@ -522,3 +522,111 @@ Square game enemy illustration. Match the reference images: Japanese paper and l
 ## 単語の絵：c1-052
 
 Square game enemy illustration. Match the reference images: Japanese paper and letterpress ink printmaking, thick navy outlines, flat color blocks, paper texture, a slightly cute spooky living ink stain with white eyes. Navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Full body, centered, clear meaning. Flat pure green #00ff00 background, no ground or shadows, no green on subjects. No writing, letters, numbers, symbols or existing characters. Subject: side: a single ink monster shown in unmistakable full-body side profile, facing left.
+
+## 単語の絵：c1-053
+
+Square game enemy illustration. Match reference images: Japanese paper and letterpress ink printmaking, thick navy outlines, flat distinct color blocks, visible paper texture, living ink stain monster, slightly cute and spooky, white eyes. Restricted palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Full body, large centered composition, oversized immediately recognizable meaning. Background completely flat pure solid green #00ff00, no shadows, ground or pattern. No green on subjects. No writing, letters, numbers, symbols or glyphs anywhere. No existing characters. back: ink monster turned away showing its back, spine ridge and small backpack, looking over shoulder.
+
+## 単語の絵：c1-054
+
+Square game enemy illustration. Match reference images: Japanese paper and letterpress ink printmaking, thick navy outlines, flat distinct color blocks, visible paper texture, living ink stain monster, slightly cute and spooky, white eyes. Restricted palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Full body, large centered composition, oversized immediately recognizable meaning. Background completely flat pure solid green #00ff00, no shadows, ground or pattern. No green on subjects. No writing, letters, numbers, symbols or glyphs anywhere. No existing characters. turn/move: ink monster pushing a cart piled with boxes, leaning sharply around a curve, motion shown by flowing ink trails.
+
+
+## 単語の絵：c1-031
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. bad: grumpy creature giving a thumbs down under a small storm cloud with lightning
+
+
+## 単語の絵：c1-032
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. big/large: huge creature towering over tiny houses, one foot taller than a tree
+
+
+## 単語の絵：c1-033
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. small: tiny creature next to a giant button for scale, peering up
+
+
+## 単語の絵：c1-034
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. long/far: stretched-out snake-like creature winding across a long road toward a tiny faraway horizon, holding a telescope
+
+
+## 単語の絵：c1-035
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. high: creature on tiptoe on stacked boxes, reaching clouds
+
+
+## 単語の絵：c1-036
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. low: flat squashed creature crawling under a low bar, close to the ground
+
+
+## 単語の絵：c1-037
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. people/public/group/member: crowd of small creatures wearing matching blank badge ribbons, standing shoulder to shoulder
+
+
+## 単語の絵：c1-038
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. person: single creature standing upright in a human-shaped outline with a round head, hat and coat
+
+
+## 単語の絵：c1-039
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. man: creature with a bowler hat, mustache and necktie
+
+
+## 単語の絵：c1-040
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. woman: creature with long wavy hair, ribbon hat and earring
+
+
+## 単語の絵：c1-041
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. child: small round creature with school cap and backpack
+
+
+## 単語の絵：c1-042
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. parent/family: big creature holding hands with two small creatures, walking together
+
+
+## 単語の絵：c1-043
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. friend/meet: two creatures shaking hands with arms around each other's shoulders, smiling
+
+
+## 単語の絵：c1-044
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. party: creature with party hat blowing a horn, confetti and balloons
+
+
+## 単語の絵：c1-045
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. home/house/live/room: creature wearing a little house as a snail-like shell, chimney with smoke, lit window
+
+
+## 単語の絵：c1-046
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. city/place/area: creature on a map patch with a big map pin and skyscraper skyline behind
+
+
+## 単語の絵：c1-047
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. world: creature with globe body, recognizable continents and orbiting lines
+
+
+## 単語の絵：c1-048
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. local: creature in front of small neighborhood shop with awning, waving at passing cat
+
+
+## 単語の絵：c1-049
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. state/case/fact: creature in detective hat with magnifying glass and blank stamp, briefcase at its side
+
+
+## 単語の絵：c1-050
+
+Square game illustration matching reference images' style and ink monster design: paper and letterpress ink print, thick navy outlines, flat discrete color blocks, paper grain, ink stain monster with white eyes, slightly cute and eerie. Main colors navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Meaning immediately obvious. Full body centered and large. Background flat pure green #00ff00, no ground shadow, gradient or pattern; no green inside subjects. No text, letters, numbers, symbols or writing, no existing copyrighted characters. way: creature at forked road beside signpost with blank directional arrow shapes

@@ -88,7 +88,7 @@ test('ハート0で撤退し、回答済みの語だけが採点されて保存�
   assert.equal(quest.retreated, true);
   assert.equal(saved.length, 1);
   assert.deepEqual(Object.keys(saved[0].words), ['w0']);
-  assert.deepEqual(saved[0].words.w0, {box: 3, due: TODAY + 3, seen: 1});
+  assert.deepEqual(saved[0].words.w0, {box: 3, due: TODAY + 3, seen: 1, restored: true});
   assert.equal(saved[0].quests, 1);
   assert.equal(saved[0].lastDay, TODAY);
   assert.equal(quest.outcome.entries.length, 3, '出題済みの3語が並ぶ');
@@ -176,7 +176,7 @@ test('リベンジでの結果は習熟度を変えない（ヒントなしで�
   assert.deepEqual(quest.slots.map(s => s.word.id), ['w0']);
   solve(quest);
   quest.next();
-  assert.deepEqual(saved[0].words.w0, {box: 4, due: TODAY, seen: 6}, 'hint は据え置き・当日');
+  assert.deepEqual(saved[0].words.w0, {box: 4, due: TODAY, seen: 6, restored: true}, 'hint は据え置き・当日');
 });
 
 test('リベンジ中の撤退でも、最初の結果で保存される', () => {

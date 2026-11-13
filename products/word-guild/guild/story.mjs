@@ -1,5 +1,5 @@
 // DOM・保存への書き込みを持たない物語の読み取り。
-import {isDue, LIT_BOX} from './srs.mjs';
+import {isDue, LIT_BOX, isRestored} from './srs.mjs';
 
 // text は地の文、word は対象語。空の地の文は返さない。不正な括弧は拒否する。
 export function parseLine(en) {
@@ -56,7 +56,7 @@ export function letterView(story, words, progress, shelf, today) {
       if (part.type === 'text') return part;
       const id = line.ids[i++];
       const saved = progress.words?.[id];
-      const state = !saved ? 'gone' : isDue(saved, today) ? 'worn' : saved.box >= LIT_BOX ? 'ink' : 'thin';
+      const state = !isRestored(saved) ? 'gone' : isDue(saved, today) ? 'worn' : saved.box >= LIT_BOX ? 'ink' : 'thin';
       return {...part, id, word: byId.get(id), state};
     });
     return {...line, parts, readable: parts.filter(p => p.type === 'word').every(p => p.state !== 'gone')};

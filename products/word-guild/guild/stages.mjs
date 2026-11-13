@@ -1,6 +1,6 @@
 // 坂道の地図。DOM・保存先を触らず、words.json の順で石段を組む。
 import {CHAPTER_NAMES} from './chapters.mjs';
-import {HEAVY_DUE, LIT_BOX, MAX_BOX, isDue} from './srs.mjs';
+import {HEAVY_DUE, LIT_BOX, MAX_BOX, isDue, isRestored} from './srs.mjs';
 
 // step は街灯内の1始まり。lit / gold は該当語数（total と同数で点灯）。
 // tomorrow は明日期限になる全ID（期限切れは含めない）。fog は真偽値。
@@ -26,11 +26,11 @@ export function buildMap(words, progress, today) {
     }
     const step = lamp.steps.at(-1);
     step.ids.push(word.id);
-    step.passed &&= Boolean(state(word));
+    step.passed &&= isRestored(state(word));
     lamp.total++;
-    if (state(word)) lamp.got++;
-    if (state(word)?.box >= LIT_BOX) lamp.lit++;
-    if (state(word)?.box >= MAX_BOX) lamp.gold++;
+    if (isRestored(state(word))) lamp.got++;
+    if (isRestored(state(word)) && state(word)?.box >= LIT_BOX) lamp.lit++;
+    if (isRestored(state(word)) && state(word)?.box >= MAX_BOX) lamp.gold++;
   }
   for (const ward of wards) {
     ward.gate = progress.gates?.includes(ward.ch) ? 'cleared'
@@ -40,7 +40,7 @@ export function buildMap(words, progress, today) {
   const here = position ? {ch: position.ch, shelf: position.shelf, step: position.step} : null;
   const current = positions.indexOf(position);
   const next = positions.slice(current, current + 2).flatMap(p => p.entry.ids)
-    .filter(id => !progress.words[id]).slice(0, 3);
+    .filter(id => !isRestored(progress.words[id])).slice(0, 3);
   const dueWords = words.filter(w => isDue(state(w), today))
     .sort((a, b) => state(a).due - state(b).due || a.shelf - b.shelf || a.id.localeCompare(b.id));
   const result = {wards, here, next, due: dueWords.slice(0, 3).map(w => w.id), dueCount: dueWords.length,

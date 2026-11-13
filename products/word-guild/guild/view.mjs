@@ -1,3 +1,4 @@
+import {isRestored} from './srs.mjs';
 // 地図・配達の画面・結果画面と、盤面の入力。
 // app.mjs からは mountGuild() だけを使う。ゲームの進行は quest.mjs、地図の形は stages.mjs に任せる。
 import {Trace} from './trace.mjs';
@@ -9,7 +10,7 @@ import {loadProgress, saveProgress} from './store.mjs';
 import {COLS, spelling} from './board.mjs';
 import {buildMap, gateWords, separateSpecs} from './stages.mjs';
 import {letterView, clipParts, loadScenes} from './story.mjs';
-import {pageSpecs, stampState} from './chara.mjs';
+import {pageSpecs, stampState as rawStampState} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {rollDaily} from './daily.mjs';
 import {onUpdateReady, applyUpdate} from './pwa.mjs';
@@ -214,7 +215,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   function mapNotice(today) {
     if (updateReady) return {text: '新しい版があります　', label: '更新', act: 'update'};
-    const collected = Object.keys(progress.words).length;
+    const collected = Object.values(progress.words).filter(isRestored).length;
     if (collected >= 100 && today - progress.exportDay >= EXPORT_REMIND_DAYS) {
       return {text: '進捗を書き出しておこう　', label: '書き出し', act: 'settings'};
     }
@@ -464,7 +465,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   }
 
   function stampCount() {
-    return quest.results ? [...quest.results.values()].filter(result => result === 'clean').length : 0;
+    return quest.restoredIds.size;
   }
 
   function paintTop() {
@@ -625,12 +626,12 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     board.addEventListener('touchmove', event => event.preventDefault(), {passive: false});
   }
 
-  // 正解した紙魚：再戦はインクと霧に消える。通常は切手になり、ヒントを使っていたら逃げる。
+  // ヒントなしなら切手になる。ヒント使用時は通常は逃げ、再戦はインクに消える。
   function resolveMon(slot) {
     const mon = monOf(slot.word.id);
     if (!mon) return;
     mon.classList.remove('hinted');
-    if (quest.isRevenge) {
+    if (quest.isRevenge && slot.hint > 0) {
       mon.classList.add('solved', 'dissolved');
       if (reducedMotion()) {
         mon.hidden = true;
@@ -654,7 +655,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   // 盤面を取り切ったら、切手が上の切手の数へ飛ぶ（0.5 秒）。
   function flyStamps() {
     const target = $('#gq-tally');
-    if (quest.isRevenge || !target || reducedMotion()) return;
+    if (!target || reducedMotion()) return;
     const goal = target.getBoundingClientRect();
     view.querySelectorAll('.gq-mon-stamp').forEach(element => {
       const box = element.getBoundingClientRect();
@@ -669,7 +670,6 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   // 正解の一瞬：その語を含む行の一部が出て、霧のかすれに語がインクで戻る（0.8秒）。英文が無い語は何も出さない。
   function showClip(id, keep = false) {
-    if (quest.isRevenge) return;
     const band = $('#gq-story');
     const clip = story.letters.length ? clipParts(story, id, 17) : null;
     if (!band || !clip) return;
@@ -701,8 +701,9 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     message = `${result.word.w} · ${result.word.ja}`;
     pulse($('#gq-board'), 'correct');
     resolveMon(quest.slots.find(slot => slot.word.id === result.word.id));
-    showClip(result.word.id);
-    if (!quest.isRevenge && result.cleared && clipParts(story, result.word.id, 17)) lastClip = result.word.id;
+    const clean = quest.slots.find(slot => slot.word.id === result.word.id).hint === 0;
+    if (clean) showClip(result.word.id);
+    if (clean && result.cleared && clipParts(story, result.word.id, 17)) lastClip = result.word.id;
     react();
     paintAll();
     if (result.cleared) defeat();
@@ -818,7 +819,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     for (const [s, n] of changedByShelf) if (n > most) { most = n; shelf = s; }
     const lampNow = lamps(after).get(shelf);
     const pageWords = words.filter(w => w.shelf === shelf);
-    const changedIds = new Set(outcome.entries.filter(e => e.result === 'clean').map(e => e.word.id));
+    const changedIds = new Set(outcome.entries.filter(e => e.stamped).map(e => e.word.id));
     const state = (id, source) => stampState(source.words[id]);
     const cells = pageWords.map(word => {
       const st = state(word.id, quest.progress);
@@ -860,7 +861,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const changedByShelf = new Map();
     const zoomInfo = [];
     const stamps = outcome.entries.map((entry, i) => {
-      const fled = entry.result !== 'clean';
+      const fled = !entry.stamped;
       const was = state(entry.word.id, quest.startProgress);
       const now = fled ? 'shadow' : state(entry.word.id, quest.progress);
       let mark = '';
@@ -875,12 +876,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     });
 
     // 今の1通。逃げた語は、配達の前の状態のまま（新しい語なら霧のまま）で、紙魚の顔が乗る。
-    const fledIds = new Set(outcome.entries.filter(e => e.result !== 'clean').map(e => e.word.id));
-    const endProgress = {...quest.progress, words: {...quest.progress.words}};
-    for (const id of fledIds) {
-      if (quest.startProgress.words[id]) endProgress.words[id] = quest.startProgress.words[id];
-      else delete endProgress.words[id];
-    }
+    const fledIds = new Set(outcome.entries.filter(e => !e.stamped).map(e => e.word.id));
+    const endProgress = quest.progress;
     const shelf = pickLetterShelf(outcome, after, quest.startProgress, endProgress, today);
     const lvStart = shelf === null ? null : letterAt(shelf, quest.startProgress, today);
     const lvEnd = shelf === null ? null : letterAt(shelf, endProgress, today);
@@ -1101,3 +1098,5 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   return {open, hasProgress: () => progress.quests > 0 || Object.keys(progress.words).length > 0};
 }
+
+function stampState(state) { return isRestored(state) ? rawStampState(state) : 'shadow'; }

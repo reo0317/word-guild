@@ -1,3 +1,4 @@
+import {isRestored} from './srs.mjs';
 // 切手帳（旧・ことば帳）。1ページ＝街灯1本＝25枚。開いたページだけを描く。
 //
 // openAlbum(container, deps) → {close()}
@@ -14,7 +15,7 @@
 //   base      絵の置き場の前置き。無ければ このファイルから見た products/word-guild/
 //   music, storage は使わない
 // 画面は container.innerHTML に描く。album.css は <link> で一度だけ読み込む。
-import {stampState, pageSpecs} from './chara.mjs';
+import {stampState as rawStampState, pageSpecs} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {letterView, loadScenes} from './story.mjs';
 import {CHAPTER_NAMES} from './chapters.mjs';
@@ -396,3 +397,5 @@ export function openAlbum(container, deps = {}) {
   }
 }
 
+
+function stampState(state) { return isRestored(state) ? rawStampState(state) : 'shadow'; }

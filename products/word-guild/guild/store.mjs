@@ -34,10 +34,11 @@ export function validateProgress(value) {
     || Array.isArray(value.words)) return emptyProgress();
   const words = {};
   for (const [id, entry] of Object.entries(value.words)) {
-    if (!Array.isArray(entry) || entry.length !== 3) continue;
+    if (!Array.isArray(entry) || (entry.length !== 3 && entry.length !== 4)) continue;
     const [box, due, seen] = entry;
     if (!Number.isInteger(box) || box < 0 || box > 5 || !isCount(due) || !isCount(seen)) continue;
-    words[id] = {box, due, seen};
+    if (entry.length === 4 && typeof entry[3] !== 'boolean') continue;
+    words[id] = {box, due, seen, ...(entry.length === 4 ? {restored: entry[3]} : {})};
   }
   return {
     v: 1,
@@ -52,6 +53,7 @@ export function serializeProgress(progress) {
   const words = {};
   for (const [id, state] of Object.entries(progress.words)) {
     words[id] = [state.box, state.due, state.seen];
+    if (typeof state.restored === 'boolean') words[id].push(state.restored);
   }
   return {v: 1, words, quests: progress.quests, lastDay: progress.lastDay, ...additionalFields(progress)};
 }

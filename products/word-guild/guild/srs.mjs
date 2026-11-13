@@ -126,3 +126,6 @@ export function shelfStatus(words, progress) {
     .sort((a, b) => a.shelf - b.shelf)
     .map(s => ({...s, isLit: s.lit === s.total, isGold: s.gold === s.total}));
 }
+
+// 印のない旧保存は、これまでどおり復元済みとして読む。
+export const isRestored = state => Boolean(state) && state.restored !== false;
