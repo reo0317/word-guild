@@ -15,7 +15,7 @@ import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {rollDaily} from './daily.mjs';
 import {onUpdateReady, applyUpdate} from './pwa.mjs';
 import {esc, speak, prepareSpeech, setSpeechEnabled, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, helpButton, icon,
-  ensureLetterCss, letterHtml, lineBody, lampRing, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
+  ensureLetterCss, letterHtml, lineBody, lampRing, deliveryLetter, deliveryLineLights, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
 import {showStampZoom, ensureCss as ensureAlbumCss, sceneFor, gateCard, newlyOpenedGate, playOptionalCinema, showPaperCard, sceneCardHtml, blankCardHtml, postscriptHtml, handlePostscriptClick} from './album.mjs';
 import {renderMap, dailyBrief} from './map.mjs';
 
@@ -66,6 +66,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   let onMap = false;
 
   let quest = null;
+  let currentLetter = null;
+  let lineLights = [];
   let questWard = 1;        // 配達の背景になる区
   let tutorial = false;     // 最初の配達：1枚目にハトリ局長の説明とヒント1
   let trace = null;
@@ -328,6 +330,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     dealt = new Map();
     lastClip = null;
     quest = new Quest(groups, {rand: Math.random, progress, today, save: persist, gate, mode: opts.arrival ? 'arrival' : returning ? 'return' : 'normal', shelf: opts.shelf, rares, map, tutorial});
+    currentLetter = deliveryLetter(story, groups, quest.startProgress);
+    lineLights = deliveryLineLights(currentLetter, quest.startProgress);
     setScreen('guild-quest');
     renderBoard();
   }
@@ -372,7 +376,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       ? `<div class="gq-coach">${artBox('hatori', 'gq-coach-face')}<b>ハトリ局長</b>${COACH}</div>` : '';
     view.className = `gq gq-quest gq-ch${questWard}${coach ? ' gq-tutor' : ''}${quest.isNight ? ' gq-night' : ''}`;
     view.innerHTML = `
-      <div class="gq-top"><span class="gq-hearts" id="gq-hearts"></span><b id="gq-label"></b><span class="gq-timer" aria-hidden="true"><i id="gq-timer"></i></span><span class="gq-tally" id="gq-tally" role="img"></span><button type="button" class="gq-quit" id="gq-quit" aria-label="やめる"><span aria-hidden="true">✕</span></button></div>
+      <div class="gq-top"><span class="gq-hearts" id="gq-hearts"></span><b id="gq-label"></b><span class="gq-delivery-ring" id="gq-delivery-ring" role="img" hidden></span><span class="gq-timer" aria-hidden="true"><i id="gq-timer"></i></span><span class="gq-tally" id="gq-tally" role="img"></span><button type="button" class="gq-quit" id="gq-quit" aria-label="やめる"><span aria-hidden="true">✕</span></button></div>
       ${quest.isNight ? `<span id="gq-night-home" class="gq-night-home" aria-label="街灯${quest.shelf}の家">⌂<i>✦</i></span>` : ''}
       <div class="gq-story" id="gq-story" hidden aria-hidden="true"></div>
       <div class="gq-arena" id="gq-arena">
@@ -512,7 +516,24 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     return quest.restoredIds.size;
   }
 
+  function paintDeliveryRing() {
+    const ring = $('#gq-delivery-ring');
+    if (!ring || !currentLetter) return;
+    const next = deliveryLineLights(currentLetter, quest.startProgress, quest.restoredIds);
+    const newlyLit = next.flatMap((on, i) => on && !lineLights[i] ? [i] : []);
+    ring.hidden = false;
+    ring.setAttribute('aria-label', `今の手紙 5行中${next.filter(Boolean).length}行が戻った`);
+    // 再描画で点灯中の演出を途中で消さない。
+    if (!ring.firstElementChild || next.some((on, i) => on !== lineLights[i])) {
+      ring.innerHTML = lampRing(next, next.every(Boolean), 30);
+      if (!reducedMotion()) for (const i of newlyLit) ring.querySelectorAll('path')[i].classList.add('just-lit');
+    }
+    if (newlyLit.length) sfx('lamp');
+    lineLights = next;
+  }
+
   function paintTop() {
+    paintDeliveryRing();
     const hearts = $('#gq-hearts');
     hearts.setAttribute('role', 'img');
     hearts.setAttribute('aria-label', `ハート ${HEARTS} 個中 ${quest.hearts} 個`);

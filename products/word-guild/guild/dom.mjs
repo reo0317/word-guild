@@ -1,3 +1,4 @@
+import {isRestored} from './srs.mjs';
 // 画面から共通で使う小さな部品。
 export function esc(text) {
   return String(text).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
@@ -195,12 +196,34 @@ export const plainLine = line => line.parts.map(part => part.text).join('');
 
 // 街灯の小さな輪：読めた行の数だけ5つに分かれた弧が埋まる。lit で灯。
 export function lampRing(n, lit = false, size = 28) {
+  const on = i => Array.isArray(n) ? n[i] === true : i < n;
   const arcs = Array.from({length: 5}, (_, i) => {
     const a0 = (-90 + i * 72 + 6) * Math.PI / 180, a1 = (-90 + (i + 1) * 72 - 6) * Math.PI / 180, r = 11;
     const at = a => [14 + r * Math.cos(a), 14 + r * Math.sin(a)].map(x => x.toFixed(2)).join(' ');
-    return `<path d="M${at(a0)}A${r} ${r} 0 0 1 ${at(a1)}" fill="none" stroke="${i < n ? 'var(--lamp)' : 'var(--fog)'}" stroke-width="3.4" stroke-linecap="round"${i < n ? '' : ' opacity=".55"'}/>`;
+    return `<path d="M${at(a0)}A${r} ${r} 0 0 1 ${at(a1)}" fill="none" stroke="${on(i) ? 'var(--lamp)' : 'var(--fog)'}" stroke-width="3.4" stroke-linecap="round"${on(i) ? '' : ' opacity=".55"'}/>`;
   }).join('');
   return `<svg class="lring" width="${size}" height="${size}" viewBox="0 0 28 28" aria-hidden="true">${arcs}<circle cx="14" cy="14" r="4.2" fill="${lit ? 'var(--lamp)' : 'var(--fog)'}" stroke="var(--ink)" stroke-width="1.2"/>${lit ? '<circle cx="14" cy="14" r="7" fill="none" stroke="var(--lamp)" stroke-opacity=".5"/>' : ''}</svg>`;
+}
+
+// 配達の対象は開始時の語で固定。新出語数、全対象語数、登場順で選ぶ。
+export function deliveryLetter(story, groups, progress) {
+  const counts = new Map();
+  for (const word of new Map(groups.flat().map(w => [w.id, w])).values()) {
+    const count = counts.get(word.shelf) ?? {fresh: 0, total: 0};
+    count.total++;
+    if (!progress.words?.[word.id]) count.fresh++;
+    counts.set(word.shelf, count);
+  }
+  const shelves = [...counts].sort((a, b) => b[1].fresh - a[1].fresh || b[1].total - a[1].total);
+  // 選ばれた街灯に英文が無ければ、別の通を代わりに見せない。
+  return story.letters?.find(letter => letter.shelf === shelves[0]?.[0]) ?? null;
+}
+
+export function deliveryLineLights(letter, progress, restoredIds = new Set()) {
+  return Array.from({length: 5}, (_, i) => {
+    const ids = letter?.lines[i]?.ids;
+    return !!ids?.length && ids.every(id => isRestored(progress.words?.[id]) || restoredIds.has(id));
+  });
 }
 
 // 1行の中身（語の並び）。opts: {face(id, state), shadow: 霧の語に紙魚の影を乗せる, hit: 光らせる語の id}

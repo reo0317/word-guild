@@ -85,3 +85,45 @@ test('通常と再戦のヒントなし撃破は切手、通常のヒント使�
     assert.equal(state, hint ? undefined : 'print');
   }
 });
+
+const {deliveryLetter, deliveryLineLights, lampRing} = await import('../products/word-guild/guild/dom.mjs');
+const ringLetter = {shelf: 1, lines: [['a', 'b'], ['c'], ['d'], ['e'], ['f']].map(ids => ({ids}))};
+test('手紙の弧は順番によらず、その行の全語が restored になった時だけ灯る', () => {
+  const progress = {words: {a: {restored: true}, b: {box: 5, restored: false}, c: {box: 1}, e: {restored: true}}};
+  const before = deliveryLineLights(ringLetter, progress);
+  assert.deepEqual(before, [false, true, false, true, false]);
+  assert.deepEqual(deliveryLineLights(ringLetter, progress, new Set(['b', 'd'])), [true, true, true, true, false]);
+  assert.deepEqual(deliveryLineLights(ringLetter, progress), before); // ヒント・逃走は追加しない
+  const html = lampRing(before);
+  assert.equal((html.match(/stroke="var\(--lamp\)"/g) ?? []).length, 2);
+  assert.equal((html.match(/<path /g) ?? []).length, 5);
+  assert.equal((lampRing(2).match(/stroke="var\(--lamp\)"/g) ?? []).length, 2);
+});
+test('配達の通は新出語が多い街灯。再配達・夜も元の組から選び、英文が無ければ隠す', () => {
+  const other = {shelf: 2, lines: ringLetter.lines};
+  const story = {letters: [ringLetter, other]};
+  const groups = [[{id: 'a', shelf: 1}, {id: 'b', shelf: 1}], [{id: 'c', shelf: 2}]];
+  const progress = {words: {a: {restored: true}, b: {restored: true}}};
+  assert.equal(deliveryLetter(story, groups, progress), other);
+  assert.equal(deliveryLetter(story, groups, {words: {}}), ringLetter);
+  assert.equal(deliveryLetter(story, [groups[0]], progress), ringLetter);
+  assert.equal(deliveryLetter({letters: [ringLetter]}, groups, progress), null);
+  assert.equal(deliveryLetter(story, [[{id: 'rare', shelf: 99}]], progress), null);
+  assert.deepEqual(deliveryLineLights(null, progress), [false, false, false, false, false]);
+});
+test('行が完成した時だけ音と短い点灯演出。reduced-motion では即時点灯', () => {
+  for (const reduced of [false, true]) {
+    const paths = Array.from({length: 5}, () => ({classList: {add(name) { this.added = name; }}}));
+    const ring = {firstElementChild: {}, setAttribute() {}, querySelectorAll: () => paths};
+    let sounds = 0;
+    const quest = {startProgress: {words: {}}, restoredIds: new Set(['c'])};
+    const paint = viewFunction('paintDeliveryRing', {$: () => ring, currentLetter: ringLetter,
+      lineLights: [false, false, false, false, false], deliveryLineLights, quest, lampRing,
+      reducedMotion: () => reduced, sfx: name => { assert.equal(name, 'lamp'); sounds++; }});
+    paint(); paint();
+    assert.equal(sounds, 1);
+    assert.equal(paths[1].classList.added, reduced ? undefined : 'just-lit');
+    assert.equal(paths[0].classList.added, undefined);
+    assert.equal(ring.hidden, false);
+  }
+});

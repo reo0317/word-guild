@@ -383,3 +383,11 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .paper .ln-wrap.read .dot{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;background:var(--paper-hi);border:1px solid currentColor;font-size:16px;cursor:pointer}
 
 .gq-fog-count i{display:inline-block;width:12px;height:6px;border-radius:50%;background:var(--fog);margin-right:2px;vertical-align:middle}
+
+/* 手紙の5行。上の帯の高さや紙魚の描画には影響させない。 */
+.gq-delivery-ring{display:flex;flex:0 0 30px;width:30px;height:30px;align-items:center}
+.gq-delivery-ring[hidden]{display:none}
+.gq-delivery-ring .just-lit{animation:gq-line-lit .4s ease-out}
+@keyframes gq-line-lit{0%,45%{stroke:var(--paper-hi);stroke-width:5.5}100%{stroke:var(--lamp);stroke-width:3.4}}
+@media(prefers-reduced-motion:reduce){.gq-delivery-ring .just-lit{animation:none}}
+@media(max-height:700px){.gq-delivery-ring{flex-basis:24px;width:24px;height:22px}.gq-delivery-ring svg{width:24px;height:24px}}
