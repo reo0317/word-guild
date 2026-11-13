@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {buildMap, gateWords, separateSpecs} from '../products/word-guild/guild/stages.mjs';
+import {buildMap, gateWords, gateArrivalWords, separateSpecs} from '../products/word-guild/guild/stages.mjs';
 import {emptyProgress} from '../products/word-guild/guild/store.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url), 'utf8'));
@@ -32,7 +32,9 @@ test('地図：280石段・56街灯、語順を保ち各街灯内で5語ずつ',
 
 test('今いる場所：部分通過、穴、街灯・区の境目、全通過', () => {
   for (const [n, here] of [[4, [1, 1, 1]], [5, [1, 1, 2]], [25, [1, 2, 1]], [150, [2, 7, 1]], [1400, [6, 56, 5]]]) {
-    const m = map(progressFor(words.slice(0, n)));
+    const p = progressFor(words.slice(0, n));
+    p.gates = [1, 2, 3, 4, 5, 6];
+    const m = map(p);
     assert.deepEqual(m.here, Object.fromEntries(['ch', 'shelf', 'step'].map((key, i) => [key, here[i]])));
   }
   const p = progressFor(words);
@@ -68,13 +70,14 @@ test('戻り霧：19匹では晴れ、20匹から霧。期限順の顔3つと明
   }
 });
 
-test('門：全石段通過で出現、点灯不要、開門しなくても次の区へ進む', () => {
+test('門：全石段通過で出現、点灯不要、未通過なら門の手前に止まる', () => {
   const p = progressFor(words.slice(0, 149));
   assert.equal(map(p).wards[0].gate, 'hidden');
   p.words[words[149].id] = {box: 1, due: 102, seen: 1};
   assert.equal(map(p).wards[0].gate, 'open');
-  assert.equal(map(p).here.ch, 2);
+  assert.deepEqual(map(p).here, {ch: 1, shelf: 6, step: 5, gate: true});
   p.gates = [1];
+  assert.equal(map(p).here.ch, 2);
   assert.equal(map(p).wards[0].gate, 'cleared');
   assert.equal(map(p).wards[1].gate, 'hidden');
   assert.ok(map(progressFor(words)).wards.every(w => w.gate === 'open'));
@@ -109,4 +112,13 @@ test('門の12語：対象区だけ、習熟度→期限→元の順。入力を
 test('空の語データも扱える', () => {
   const m = buildMap([], emptyProgress(), today);
   assert.deepEqual(m, {wards: [], here: null, next: [], due: [], dueCount: 0, fog: false, tomorrow: []});
+});
+
+test('開門後は次区の最初の石段の新出3語だけ', () => {
+  const p = emptyProgress();
+  const next = words.filter(w => w.ch === 2).slice(0, 5);
+  assert.deepEqual(gateArrivalWords(words, p, 1), next.slice(0, 3));
+  p.words[next[0].id] = {box: 1};
+  assert.deepEqual(gateArrivalWords(words, p, 1), next.slice(1, 4));
+  assert.deepEqual(gateArrivalWords(words, p, 6), []);
 });

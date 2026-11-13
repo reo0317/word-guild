@@ -78,7 +78,7 @@ export class Quest {
         this.enter(this.index + 1, this.groups[this.index + 1]);
       } else if (this.mode === 'return' && !this.nightChecked && !this.isRevenge && this.openNight()) {
         // おまけは通常の配達と別に採点する。
-      } else if (!this.isRevenge && this.pickRevenge().length > 0) {
+      } else if (this.mode !== 'arrival' && !this.isRevenge && this.pickRevenge().length > 0) {
         this.isNight = false;
         this.revengeWords = this.pickRevenge();
         this.enter(this.total, this.revengeWords);

@@ -8,7 +8,7 @@ import {Quest, HEARTS} from './quest.mjs';
 import {pickSession, pickReturn, groupWords, todayNumber, SESSION_SIZE} from './srs.mjs';
 import {loadProgress, saveProgress} from './store.mjs';
 import {COLS, spelling} from './board.mjs';
-import {buildMap, gateWords, separateSpecs} from './stages.mjs';
+import {buildMap, gateWords, gateArrivalWords, separateSpecs} from './stages.mjs';
 import {letterView, clipParts, loadScenes} from './story.mjs';
 import {charaSpec, pageSpecs, stampState as rawStampState} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
@@ -297,15 +297,15 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const returning = opts.mode === 'return';
     const map = buildMap(words, progress, today);
     if (returning && !lampOf(map, opts.shelf)?.done) return;
-    const groups = returning ? pickReturn(words, progress, today, opts.shelf, Math.random) : gate !== null
+    const groups = opts.arrival ? [opts.arrival] : returning ? pickReturn(words, progress, today, opts.shelf, Math.random) : gate !== null
       ? groupWords(gateWords(words, progress, gate), Math.random)
       : pickSession(words, progress, today, SESSION_SIZE, Math.random);
-    const ward = returning ? words.find(word => word.shelf === opts.shelf)?.ch ?? 1 : gate ?? map.here?.ch ?? 1;
+    const ward = opts.arrival ? opts.arrival[0].ch : returning ? words.find(word => word.shelf === opts.shelf)?.ch ?? 1 : gate ?? map.here?.ch ?? 1;
     questWard = ward;
     stopSession();
     dealt = new Map();
     lastClip = null;
-    quest = new Quest(groups, {rand: Math.random, progress, today, save: persist, gate, mode: returning ? 'return' : 'normal', shelf: opts.shelf, rares, map});
+    quest = new Quest(groups, {rand: Math.random, progress, today, save: persist, gate, mode: opts.arrival ? 'arrival' : returning ? 'return' : 'normal', shelf: opts.shelf, rares, map});
     setScreen('guild-quest');
     renderBoard();
   }
@@ -850,6 +850,27 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   function showResults() {
     if (!quest || !quest.outcome) return;
+    const completed = quest;
+    if (newlyOpenedGate(quest.startProgress, quest.progress, quest.gate) && !quest.arrivalShown) {
+      quest.arrivalShown = true;
+      const arrival = gateArrivalWords(words, quest.progress, quest.gate);
+      if (arrival.length) {
+        stopSession();
+        quest = completed;
+        const token = sessionToken;
+        void (async () => {
+          await presentCinema('playGateCard', gateCard(story, completed.progress.gates, completed.gate),
+            () => paperPresentation(blankCardHtml(story, completed.progress.gates)));
+          if (quest !== completed || token !== sessionToken) return;
+          view.className = 'gq gq-gate-opening';
+          view.innerHTML = `<div class="gq-opening-arch"><i></i><i></i></div><p>門の向こうから、紙魚がやってきた！</p>`;
+          later(reducedMotion() ? 0 : 1200, () => {
+            if (quest === completed) startQuest({arrival});
+          });
+        })();
+        return;
+      }
+    }
     const {outcome} = quest;
     const returning = quest.mode === 'return';
     const today = quest.today;

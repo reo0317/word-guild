@@ -361,3 +361,10 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 @media(prefers-reduced-motion:reduce){.gq-return-seal{animation:none}}
 
 .gq-wax.return polygon{fill:#334b68}
+
+.gq-gate-opening { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:24px; }
+.gq-opening-arch { display:flex; width:180px; height:240px; border:8px solid var(--ink); border-radius:90px 90px 0 0; overflow:hidden; background:var(--lamp); perspective:500px; }
+.gq-opening-arch i { width:50%; height:100%; background:var(--paper-2); border:2px solid var(--ink); transform-origin:left; animation:gq-open-door 1.1s ease forwards; }
+.gq-opening-arch i + i { transform-origin:right; }
+@keyframes gq-open-door { to { transform:rotateY(85deg); } }
+@media (prefers-reduced-motion:reduce) { .gq-opening-arch i { animation:none; transform:rotateY(85deg); } }

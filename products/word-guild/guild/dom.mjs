@@ -3,17 +3,65 @@ export function esc(text) {
   return String(text).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
 }
 
-export function speak(text) {
-  try {
-    const synth = window.speechSynthesis;
-    if (!synth || typeof SpeechSynthesisUtterance === 'undefined') return;
-    synth.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
-    utterance.rate = 0.9;
-    synth.speak(utterance);
-  } catch {
-    // 発音できない端末では黙って省く
+// 端末依存部分を注入できる、最新の語だけを読む制御。
+export function createSpeaker({synth, Utterance, later = setTimeout, clear = clearTimeout} = {}) {
+  let unlocked = false, generation = 0, timer, watchdog, voice;
+  const voices = () => { voice = synth?.getVoices?.().find(v => v.lang === 'en-US'); };
+  voices();
+  synth?.addEventListener?.('voiceschanged', voices);
+  const resume = () => { if (synth?.paused) synth.resume(); };
+  function unlock() {
+    if (unlocked || !synth || !Utterance) return;
+    try {
+      resume();
+      const silent = new Utterance('');
+      silent.volume = 0;
+      synth.speak(silent);
+      unlocked = true;
+    } catch { /* 次の操作で再試行 */ }
+  }
+  function speak(text) {
+    if (!synth || !Utterance || !text) return;
+    const token = ++generation;
+    clear(timer); clear(watchdog);
+    function attempt(retries = 0) {
+      if (token !== generation) return;
+      try {
+        synth.cancel();
+        resume();
+        timer = later(() => {
+          if (token !== generation) return;
+          voices();
+          const utterance = new Utterance(text);
+          utterance.lang = 'en-US';
+          if (voice) utterance.voice = voice;
+          utterance.rate = 0.9;
+          let settled = false;
+          const retry = () => {
+            if (settled || token !== generation) return;
+            settled = true; clear(watchdog);
+            if (retries < 2) attempt(retries + 1);
+          };
+          utterance.onend = () => { settled = true; clear(watchdog); };
+          utterance.onerror = retry;
+          watchdog = later(retry, 15000);
+          resume();
+          try { synth.speak(utterance); } catch { retry(); }
+        }, 50);
+      } catch { /* 非対応端末では省く */ }
+    }
+    attempt();
+  }
+  return {speak, unlock};
+}
+let speaker;
+function deviceSpeaker() {
+  return speaker ??= createSpeaker({synth: globalThis.window?.speechSynthesis, Utterance: globalThis.SpeechSynthesisUtterance});
+}
+export const speak = text => deviceSpeaker().speak(text);
+if (typeof document !== 'undefined') {
+  for (const event of ['pointerdown', 'touchstart', 'keydown']) {
+    document.addEventListener(event, () => deviceSpeaker().unlock(), {capture: true, passive: true});
   }
 }
 

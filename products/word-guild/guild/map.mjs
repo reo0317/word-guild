@@ -174,11 +174,12 @@ function layout(map) {
     add('ward', H.ward, {ward, wi}, H.ward / 2);
     for (const lamp of ward.lamps) {
       lamp.steps.forEach((step, si) => {
-        const isHere = Boolean(here) && here.ch === ward.ch && here.shelf === lamp.shelf && here.step === si + 1;
+        const isHere = Boolean(here) && !here.gate && here.ch === ward.ch && here.shelf === lamp.shelf && here.step === si + 1;
         add('step', H.step, {ward, lamp, step, si, isHere, k: k++});
       });
       add('lamp', H.lamp, {ward, lamp, k: k++});
     }
+    if (here?.gate && here.ch === ward.ch) add('gate-front', 0, {ward, isHere: true}, 0);
     add('gate', H.gate, {ward, k: k++});
   });
   add('top', H.top, {}, H.top - 70);

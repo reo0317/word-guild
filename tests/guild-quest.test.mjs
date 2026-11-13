@@ -307,3 +307,17 @@ test('門の配達は完了時だけ開き、通常どおり速達と連続日�
   repeat.finish(false);
   assert.deepEqual(repeat.progress.gates, [1]);
 });
+
+test('門の先の1回戦は通常採点で保存し、ヒントでも再戦しない', () => {
+  const p = {...emptyProgress(), gates: [1]};
+  const q = new Quest([groups[0]], {mode: 'arrival', progress: p, today: TODAY, rand: mulberry32(1)});
+  q.next();
+  q.slots[0].hint = 1;
+  solve(q);
+  q.next();
+  assert.equal(q.phase, 'finished');
+  assert.equal(q.outcome.entries.length, 3);
+  assert.deepEqual(q.progress.gates, [1]);
+  assert.equal(q.progress.quests, 1);
+  assert.ok(q.outcome.entries.every(e => q.progress.words[e.word.id]));
+});

@@ -38,7 +38,9 @@ export function buildMap(words, progress, today) {
       : ward.lamps.every(l => l.steps.every(s => s.passed)) ? 'open' : 'hidden';
   }
   const position = positions.find(p => !p.entry.passed) ?? positions.at(-1);
-  const here = position ? {ch: position.ch, shelf: position.shelf, step: position.step} : null;
+  const blocked = wards.find(w => w.gate !== 'cleared' && position && w.ch < position.ch);
+  const lastLamp = blocked?.lamps.at(-1);
+  const here = blocked ? {ch: blocked.ch, shelf: lastLamp.shelf, step: lastLamp.steps.length, gate: true} : position ? {ch: position.ch, shelf: position.shelf, step: position.step} : null;
   const current = positions.indexOf(position);
   const next = positions.slice(current, current + 2).flatMap(p => p.entry.ids)
     .filter(id => !isRestored(progress.words[id])).slice(0, 3);
@@ -74,4 +76,12 @@ export function gateWords(words, progress, ch) {
   return words.filter(w => w.ch === ch).sort((a, b) =>
     (progress.words[a.id]?.box ?? 0) - (progress.words[b.id]?.box ?? 0)
     || (progress.words[a.id]?.due ?? 0) - (progress.words[b.id]?.due ?? 0)).slice(0, 12);
+}
+
+// 次区の最初の石段から、新出の通常語を1盤面分選ぶ。
+export function gateArrivalWords(words, progress, ch) {
+  const next = words.find(w => w.ch > ch);
+  if (!next) return [];
+  return words.filter(w => w.ch === next.ch && w.shelf === next.shelf).slice(0, 5)
+    .filter(w => !progress.words[w.id]).slice(0, 3);
 }
