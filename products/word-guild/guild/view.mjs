@@ -203,7 +203,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     pop.setAttribute('aria-modal', 'true');
     pop.innerHTML = `<div class="gq-pop-card">${letterHtml(letter, {face: faceOf, shadowLines: shadowLinesOf(letter), lit: lamp?.lit === lamp?.total})}
       ${lamp?.done ? `<div class="gq-night-shadows">${nightStamps}</div>${ps ? postscriptHtml(ps) : ''}` : ''}
-      <div class="gq-pop-acts">${lamp?.done ? waxButton({label: 'もう一度<br>届ける', id: 'gq-return'}) : ''}${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}${fab({icon: 'album', label: '切手帳', attrs: 'data-act="album"'})}</div></div>`;
+      <div class="gq-pop-acts">${lamp?.done ? waxButton({label: '復習の<br>配達', id: 'gq-return'}) : ''}${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}${fab({icon: 'album', label: '切手帳', attrs: 'data-act="album"'})}</div></div>`;
     const close = () => { pop.remove(); if (popEl === pop) popEl = null; };
     pop.onclick = event => {
       if (view.querySelector('.gq-zoom')) return;
