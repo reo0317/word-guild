@@ -43,6 +43,10 @@ export function roadOpacity(distance) {
 }
 export const LIGHTHOUSE_DISTANCE = H.step * 10;
 
+export function remainingSteps(items, hereY, complete = false) {
+  return complete ? 0 : items.filter(item => item.type === 'step' && item.cy > hereY).length;
+}
+
 export function lighthouseVisible(remaining) {
   return remaining >= 0 && remaining <= LIGHTHOUSE_DISTANCE;
 }
@@ -200,7 +204,8 @@ export function renderMap(view, ctx) {
     item.lat = Math.sin(2 * Math.PI * item.cy / L + PHASE);
     if (item.isHere) hereItem = item;
   }
-  const hereY = hereItem ? hereItem.cy : 0;
+  const hereY = hereItem ? hereItem.cy : map.here ? 0 : roadEnd;
+  const nearLighthouse = lighthouseVisible(remainingSteps(items, hereY, !map.here) * H.step);
 
   const bb = (cls, y, lat, inner) =>
     `<div class="gq-bb ${cls}" data-y="${y.toFixed(1)}" data-lat="${lat.toFixed(3)}" hidden>${inner}</div>`;
@@ -419,12 +424,13 @@ export function renderMap(view, ctx) {
 
     // 道の上の物：位置と大きさと霧のかかり方を決める。
     for (const b of boards) {
-      const r = b.y - c;
+      const isLighthouse = b.el.classList.contains('gq-bb-top');
+      const r = isLighthouse && nearLighthouse ? Math.max(0, Math.min(DRAW_DISTANCE * .6, b.y - c)) : b.y - c;
       const s = sOf(r);
       const top = b.el.classList.contains('gq-bb-top');
       const post = b.el.classList.contains('gq-bb-post');
       const pin = b.el.classList.contains('gq-bb-tsumugi');
-      if (r < 0 || r >= DRAW_DISTANCE || (top && !lighthouseVisible(roadEnd - hereY)) || (post && (Math.abs(hereY - b.y) > 600 || r > 850)) || Y(s) > Hs + 140) {
+      if (r < 0 || r >= DRAW_DISTANCE || (top && !nearLighthouse) || (post && (Math.abs(hereY - b.y) > 600 || r > 850)) || Y(s) > Hs + 140) {
         b.el.hidden = true; b.el.style.display = 'none'; b.shown = false;
         continue;
       }

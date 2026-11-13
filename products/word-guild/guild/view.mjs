@@ -14,7 +14,7 @@ import {charaSpec, pageSpecs, stampState as rawStampState} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {rollDaily} from './daily.mjs';
 import {onUpdateReady, applyUpdate} from './pwa.mjs';
-import {esc, speak, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, helpButton, icon,
+import {esc, speak, prepareSpeech, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, helpButton, icon,
   ensureLetterCss, letterHtml, lineBody, lampRing, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
 import {showStampZoom, ensureCss as ensureAlbumCss, sceneFor, gateCard, newlyOpenedGate, playOptionalCinema, showPaperCard, sceneCardHtml, blankCardHtml, postscriptHtml, handlePostscriptClick} from './album.mjs';
 import {renderMap, dailyBrief} from './map.mjs';
@@ -287,7 +287,27 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   // ---------- 配達 ----------
 
   // opts: {first: 最初の配達, gate: 区の番号（区の門の配達）}
+  let preparingQuest = false;
   function startQuest(opts = {}) {
+    if (preparingQuest) return;
+    let soundOn = true;
+    try { soundOn = localStorage.getItem('kiriharePost.sound') !== 'off'; } catch { /* 既定はオン */ }
+    if (!soundOn) return enterQuest(opts);
+    preparingQuest = true;
+    const token = sessionToken;
+    const badge = document.createElement('span');
+    badge.className = 'gq-speech-loading';
+    badge.setAttribute('role', 'status');
+    badge.textContent = '準備中…';
+    view.append(badge);
+    prepareSpeech().finally(() => {
+      preparingQuest = false;
+      badge.remove();
+      if (token === sessionToken) enterQuest(opts);
+    });
+  }
+
+  function enterQuest(opts = {}) {
     tutorial = opts.first === true;
     onMap = false;
     const today = todayNumber();

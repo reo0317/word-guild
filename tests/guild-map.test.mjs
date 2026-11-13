@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {HOUSE_ART} from '../products/word-guild/guild/art.mjs';
-import {renderMap, houseFlipped, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, lighthouseVisible, LIGHTHOUSE_DISTANCE, roadPoints, roadOpacity, FADE_START, DRAW_DISTANCE, A, L, W, f} from '../products/word-guild/guild/map.mjs';
+import {remainingSteps, renderMap, houseFlipped, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, lighthouseVisible, LIGHTHOUSE_DISTANCE, roadPoints, roadOpacity, FADE_START, DRAW_DISTANCE, A, L, W, f} from '../products/word-guild/guild/map.mjs';
 import {buildMap} from '../products/word-guild/guild/stages.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
@@ -360,4 +360,13 @@ test('56軒の玄関を道側へ向け、中央の玄関と飾りは反転しな
   const source = await readFile(new URL('../products/word-guild/guild/map.mjs', import.meta.url), 'utf8');
   assert.match(source, /gq-house-warm"><\/i><\/span><i class="gq-house-sparks/);
   assert.match(source, /classList.toggle\('door-flipped', houseFlipped\(b.house.dataset.shelf, side\)\)/);
+});
+
+ test('灯台は終点近くの残り石段数と全完了で表示する（DOM不要）', () => {
+  const items = Array.from({length: 56}, (_, i) => ({type: 'step', cy: i * 900}));
+  items.push({type: 'gate', cy: 60000});
+  for (const [current, visible] of [[44, false], [45, true], [55, true]]) {
+    assert.equal(lighthouseVisible(remainingSteps(items, current * 900) * (LIGHTHOUSE_DISTANCE / 10)), visible);
+  }
+  assert.equal(lighthouseVisible(remainingSteps(items, 0, true)), true);
 });

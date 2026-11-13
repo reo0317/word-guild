@@ -5,6 +5,7 @@ export function esc(text) {
 
 // 端末依存部分を注入できる、最新の語だけを読む制御。
 export function createSpeaker({synth, Utterance, later = setTimeout, clear = clearTimeout} = {}) {
+  let ready = false, preparing = null;
   let unlocked = false, generation = 0, timer, watchdog, voice;
   const voices = () => { voice = synth?.getVoices?.().find(v => v.lang === 'en-US'); };
   voices();
@@ -19,6 +20,45 @@ export function createSpeaker({synth, Utterance, later = setTimeout, clear = cle
       synth.speak(silent);
       unlocked = true;
     } catch { /* 次の操作で再試行 */ }
+  }
+  function prepare() {
+    if (!synth || !Utterance) return Promise.resolve(false);
+    if (ready) return Promise.resolve(true);
+    if (preparing) return preparing;
+    preparing = new Promise(resolve => {
+      let finished = false, poll, limit, probe;
+      const finish = ok => {
+        if (finished) return;
+        finished = true;
+        clear(poll); clear(limit);
+        if (probe) probe.onstart = probe.onend = probe.onerror = null;
+        ready = ok;
+        preparing = null;
+        resolve(ok);
+      };
+      const check = () => {
+        if (finished) return;
+        try {
+          voices();
+          if (voice && !probe) {
+            resume();
+            probe = new Utterance(' ');
+            probe.lang = 'en-US'; probe.voice = voice; probe.volume = 0;
+            probe.onstart = probe.onend = () => { unlocked = true; finish(true); };
+            probe.onerror = () => finish(false);
+            synth.speak(probe);
+          }
+        } catch { finish(false); }
+        if (!finished) poll = later(check, 50);
+      };
+      limit = later(() => {
+        try { synth.cancel(); } catch { /* 無反応の発話を残さない */ }
+        finish(false);
+      }, 3000);
+      unlock();
+      check();
+    });
+    return preparing;
   }
   function speak(text) {
     if (!synth || !Utterance || !text) return;
@@ -52,12 +92,13 @@ export function createSpeaker({synth, Utterance, later = setTimeout, clear = cle
     }
     attempt();
   }
-  return {speak, unlock};
+  return {speak, unlock, prepare};
 }
 let speaker;
 function deviceSpeaker() {
   return speaker ??= createSpeaker({synth: globalThis.window?.speechSynthesis, Utterance: globalThis.SpeechSynthesisUtterance});
 }
+export const prepareSpeech = () => deviceSpeaker().prepare();
 export const speak = text => deviceSpeaker().speak(text);
 if (typeof document !== 'undefined') {
   for (const event of ['pointerdown', 'touchstart', 'keydown']) {

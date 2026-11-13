@@ -368,3 +368,5 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-opening-arch i + i { transform-origin:right; }
 @keyframes gq-open-door { to { transform:rotateY(85deg); } }
 @media (prefers-reduced-motion:reduce) { .gq-opening-arch i { animation:none; transform:rotateY(85deg); } }
+
+.gq-speech-loading { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000; padding: 8px 16px; border-radius: 24px; background: #fff5de; color: #63452e; font-size: 13px; box-shadow: 0 2px 12px #38231830; }

@@ -32,3 +32,32 @@ test('声の遅延読込、失敗と無反応の再作成、古い発話の失�
   speaker.speak('dog'); old.onerror(); run(50);
   assert.equal(calls.at(-1).text, 'dog');
 });
+
+test('準備はen-USの遅延読込と解錠発話の開始を待つ', async () => {
+  const {speaker, synth, calls, run} = setup();
+  let done = false;
+  const pending = speaker.prepare().then(ok => { done = ok; });
+  await Promise.resolve();
+  assert.equal(done, false);
+  synth.voices = [{lang: 'en-US'}];
+  run(50);
+  const probe = calls.at(-1);
+  assert.equal(probe.voice, synth.voices[0]);
+  await Promise.resolve();
+  assert.equal(done, false);
+  probe.onstart();
+  await pending;
+  assert.equal(done, true);
+  assert.equal(await speaker.prepare(), true);
+});
+
+test('声がない・解錠が無反応でも3秒で先へ進む', async () => {
+  for (const available of [false, true]) {
+    const {speaker, synth, run} = setup();
+    if (available) synth.voices = [{lang: 'en-US'}];
+    const pending = speaker.prepare();
+    run(3000);
+    assert.equal(await pending, false);
+  }
+  assert.equal(await createSpeaker().prepare(), false);
+});
