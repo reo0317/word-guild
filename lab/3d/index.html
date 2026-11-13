@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>3D試作 — 霧晴れ郵便局</title>
+<style>
+  :root { --navy:#1f2a44; --paper:#f3ead8; --red:#c8462f; --fog:#9fb3bf; --lamp:#f2b84b; }
+  html, body { margin:0; height:100%; background:var(--fog); overflow:hidden; }
+  body { font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif; color:var(--navy); }
+  #stage { position:fixed; inset:0; width:100%; height:100%; display:block; touch-action:none; }
+  /* 紙のざらつき（1回だけ作るタイル） */
+  #grain { position:fixed; inset:0; pointer-events:none; opacity:.5; mix-blend-mode:multiply; }
+  #frame { position:fixed; inset:8px; border:2px solid var(--navy); border-radius:4px; pointer-events:none;
+           box-shadow:inset 0 0 0 3px var(--paper), inset 0 0 0 4px var(--navy); }
+  h1 { position:fixed; left:0; right:0; top:calc(env(safe-area-inset-top) + 34px); margin:0; text-align:center;
+       font-size:30px; letter-spacing:.18em; font-weight:700; pointer-events:none;
+       text-shadow:0 0 0 var(--navy), 2px 2px 0 var(--paper); }
+  h1 small { display:block; font-size:11px; letter-spacing:.5em; margin-top:6px; color:var(--red); }
+  #note { position:fixed; left:20px; right:20px; bottom:calc(env(safe-area-inset-bottom) + 20px); margin:0;
+          padding:7px 8px; text-align:center; font-size:11px; line-height:1.3; white-space:nowrap; overflow:hidden;
+          text-overflow:ellipsis; background:var(--paper); border:1.5px solid var(--navy); border-radius:3px;
+          font-family:"Hiragino Sans","Yu Gothic",sans-serif; }
+  #fps { position:fixed; right:20px; top:calc(env(safe-area-inset-top) + 16px); font:10px/1 ui-monospace,monospace;
+         color:var(--navy); opacity:.6; pointer-events:none; }
+</style>
+</head>
+<body>
+<canvas id="stage" aria-label="霧の坂道を歩くツムギと、周りを飛ぶフウロウの3Dアニメーション"></canvas>
+<div id="grain"></div>
+<div id="frame"></div>
+<h1>霧晴れ郵便局<small>3D&nbsp;TEST</small></h1>
+<div id="fps"></div>
+<p id="note">3D試作｜図形だけで組んだツムギとフウロウの歩きと羽ばたき</p>
+
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js';
+
+const C = { navy:0x1f2a44, paper:0xf3ead8, red:0xc8462f, fog:0x9fb3bf, lamp:0xf2b84b,
+            skin:0xf7dcc0, hair:0x191c2c, cream:0xf6ead2, ochre:0xd9a441, blush:0xee9d8a };
+const note = document.getElementById('note');
+const canvas = document.getElementById('stage');
+
+// ---- 紙のざらつきタイル ----
+{
+  const g = document.createElement('canvas'); g.width = g.height = 128;
+  const x = g.getContext('2d'), d = x.createImageData(128, 128);
+  for (let i = 0; i < d.data.length; i += 4) {
+    const v = 215 + Math.random() * 40;
+    d.data[i] = v; d.data[i+1] = v - 4; d.data[i+2] = v - 12; d.data[i+3] = 255;
+  }
+  x.putImageData(d, 0, 0);
+  document.getElementById('grain').style.backgroundImage = `url(${g.toDataURL()})`;
+}
+
+let renderer;
+try {
+  renderer = new THREE.WebGLRenderer({ canvas, antialias:true, powerPreference:'high-performance' });
+} catch (e) {
+  note.textContent = 'この端末ではWebGLが使えないため、3Dを表示できません';
+  throw e;
+}
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(C.fog);
+scene.fog = new THREE.Fog(C.fog, 7, 26);
+const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 60);
+
+scene.add(new THREE.AmbientLight(0xffffff, 1.5));
+const sun = new THREE.DirectionalLight(0xfff4e0, 2.0);
+sun.position.set(2.5, 4, 3.5);
+scene.add(sun);
+
+// ---- 素材：3段階のトゥーン陰影＋裏面を膨らませた輪郭線 ----
+const ramp = new THREE.DataTexture(new Uint8Array([120, 200, 255]), 3, 1, THREE.RedFormat);
+ramp.minFilter = ramp.magFilter = THREE.NearestFilter; ramp.needsUpdate = true;
+const toonCache = new Map(), flatCache = new Map(), lineCache = new Map();
+const toon = c => toonCache.get(c) || toonCache.set(c, new THREE.MeshToonMaterial({ color:c, gradientMap:ramp })).get(c);
+const flat = c => flatCache.get(c) || flatCache.set(c, new THREE.MeshBasicMaterial({ color:c })).get(c);
+function line(t) {
+  if (lineCache.has(t)) return lineCache.get(t);
+  const m = new THREE.MeshBasicMaterial({ color:C.navy, side:THREE.BackSide });
+  m.onBeforeCompile = s => {
+    s.vertexShader = s.vertexShader.replace('#include <begin_vertex>',
+      `vec3 transformed = position + normalize(normal) * ${t.toFixed(4)};`);
+  };
+  m.customProgramCacheKey = () => 'line' + t;
+  lineCache.set(t, m); return m;
+}
+// 部品を1つ足す。ol=輪郭線の太さ（0で無し）
+function part(parent, geo, mat, x = 0, y = 0, z = 0, ol = 0.016) {
+  const m = new THREE.Mesh(geo, mat);
+  m.position.set(x, y, z); parent.add(m);
+  if (ol) m.add(new THREE.Mesh(geo, line(ol)));
+  return m;
+}
+const sph = (r, sx = 1, sy = 1, sz = 1) => new THREE.SphereGeometry(r, 18, 12).scale(sx, sy, sz);
+const cyl = (rt, rb, h, seg = 14) => new THREE.CylinderGeometry(rt, rb, h, seg);
+const cap = (r, len) => new THREE.CapsuleGeometry(r, len, 3, 10);
+const box = (w, h, d) => new THREE.BoxGeometry(w, h, d);
+const lathe = pts => new THREE.LatheGeometry(pts.map(p => new THREE.Vector2(p[0], p[1])), 18);
+const grp = (parent, x = 0, y = 0, z = 0) => { const g = new THREE.Group(); g.position.set(x, y, z); parent.add(g); return g; };
+
+// ---- ツムギ（正面は +z） ----
+function buildTsumugi() {
+  const root = new THREE.Group(), body = grp(root), R = {};
+  // 脚
+  R.legs = [-1, 1].map(s => {
+    const leg = grp(body, s * 0.1, 0.56, 0);
+    part(leg, cap(0.05, 0.2), toon(C.skin), 0, -0.15, 0);
+    part(leg, cyl(0.078, 0.07, 0.12), toon(C.cream), 0, -0.31, 0);
+    part(leg, sph(0.1, 0.9, 0.95, 1.45), toon(C.navy), 0, -0.45, 0.035);
+    part(leg, sph(0.1, 0.95, 0.3, 1.5), toon(C.ochre), 0, -0.535, 0.035, 0.012);
+    return leg;
+  });
+  // スカート・上着
+  part(body, lathe([[0, 0.5], [0.4, 0.5], [0.36, 0.6], [0.2, 0.72], [0, 0.72]]), toon(0x3a4668), 0, 0, 0);
+  part(body, lathe([[0, 0.6], [0.34, 0.6], [0.345, 0.64], [0.25, 0.82], [0.17, 0.98], [0.1, 1.03], [0, 1.03]]), toon(C.red));
+  part(body, cyl(0.35, 0.35, 0.03, 18), toon(C.cream), 0, 0.615, 0, 0.012); // 裾の白い縁
+  [[-0.07, 0.9], [0.07, 0.9], [-0.09, 0.76], [0.09, 0.76]].forEach(([x, y]) =>
+    part(body, sph(0.028), toon(C.lamp), x, y, 0.2 + (0.9 - y) * 0.42, 0.008));
+  // 鞄と肩ひも
+  const strap = part(body, new THREE.TorusGeometry(0.25, 0.018, 6, 20).rotateY(Math.PI / 2).scale(1, 1.3, 1.05),
+    toon(0x8a6a4a), 0.02, 0.8, 0, 0.008);
+  strap.rotation.z = 0.72;
+  const bag = grp(body, 0.31, 0.6, 0.1); bag.rotation.y = 0.5; R.bag = bag;
+  part(bag, box(0.25, 0.18, 0.1), toon(C.cream));
+  part(bag, box(0.26, 0.09, 0.105), toon(0xe8d3a6), 0, 0.05, 0.004, 0.01);
+  part(bag, cyl(0.035, 0.035, 0.02, 10).rotateX(Math.PI / 2), toon(C.red), 0, 0.01, 0.06, 0.008);
+  // 腕（+x の手に手紙）
+  const arm = s => {
+    const a = grp(body, s * 0.2, 0.94, 0);
+    part(a, cap(0.058, 0.24), toon(C.red), 0, -0.16, 0);
+    part(a, cyl(0.07, 0.075, 0.06), toon(C.cream), 0, -0.32, 0, 0.012);
+    part(a, sph(0.058), toon(C.skin), 0, -0.39, 0, 0.012);
+    return a;
+  };
+  R.armL = arm(-1); R.armR = arm(1);
+  const letter = grp(R.armR, 0, -0.47, 0.02); letter.rotation.set(1.8, 0.1, 0.55);
+  part(letter, box(0.24, 0.16, 0.012), toon(C.paper), 0, 0, 0, 0.012);
+  part(letter, cyl(0.032, 0.032, 0.016, 10).rotateX(Math.PI / 2), toon(C.red), 0, 0, 0.012, 0);
+  // マフラー
+  part(body, new THREE.TorusGeometry(0.16, 0.075, 8, 18).rotateX(Math.PI / 2).scale(1, 0.85, 1), toon(C.cream), 0, 1.02, 0.01);
+  R.scarf = [0, 1].map(i => {
+    const g = grp(body, 0.1 - i * 0.04, 1.02 - i * 0.04, -0.17); g.rotation.y = 0.35 + i * 0.3;
+    part(g, box(0.13, 0.035, 0.4), toon(C.cream), 0, 0, -0.2, 0.012);
+    return g;
+  });
+  // 頭
+  const head = grp(body, 0, 1.3, 0); R.head = head;
+  part(head, sph(0.34), toon(C.skin));
+  part(head, sph(0.365, 1.02, 1, 1), toon(C.hair), 0, 0.03, -0.055, 0.012);
+  [[-0.17, 0.2, 0.22, 0.5], [0, 0.25, 0.25, 0], [0.17, 0.2, 0.22, -0.5]].forEach(([x, y, z, r]) => {
+    const b = part(head, sph(0.11, 1.1, 0.75, 0.6), toon(C.hair), x, y, z, 0.008); b.rotation.z = r;
+  });
+  [-1, 1].forEach(s => {
+    part(head, sph(0.05, 0.85, 1.15, 0.4), flat(C.navy), s * 0.125, -0.03, 0.312, 0);
+    part(head, sph(0.016), flat(0xffffff), s * 0.125 + 0.016, -0.005, 0.332, 0);
+    part(head, sph(0.05, 1.1, 0.6, 0.3), flat(C.blush), s * 0.215, -0.11, 0.255, 0);
+  });
+  part(head, sph(0.045, 1.1, 0.7, 0.4), flat(0x9c2f25), 0, -0.14, 0.305, 0);
+  // 帽子
+  const hat = grp(head, 0.02, 0.24, -0.02); hat.rotation.set(-0.2, 0, -0.14);
+  part(hat, sph(0.37, 1, 0.45, 1), toon(C.red), 0, 0.09, 0);
+  part(hat, cyl(0.29, 0.3, 0.07, 18), toon(C.navy), 0, 0, 0, 0.012);
+  part(hat, sph(0.2, 1, 0.16, 0.75), toon(C.red), 0, -0.01, 0.27, 0.012);
+  part(hat, sph(0.035), toon(C.lamp), 0.27, 0.01, 0.14, 0.008);
+  // 三つ編みとリボン（-x 側）
+  const braid = grp(head, -0.3, -0.1, -0.1); R.braid = braid;
+  [0.08, 0.072, 0.064, 0.055].forEach((r, i) => part(braid, sph(r), toon(C.hair), -0.04 - i * 0.075, -0.05 - i * 0.085, 0, 0.01));
+  const bow = grp(braid, -0.33, -0.37, 0);
+  [-1, 1].forEach(s => {
+    const c = part(bow, new THREE.ConeGeometry(0.06, 0.15, 6), toon(C.red), s * 0.07, -0.01, 0, 0.01);
+    c.rotation.z = s * 1.3;
+  });
+  part(bow, sph(0.035), toon(C.red), 0, 0, 0, 0.01);
+  root.userData = R; root.userData.body = body;
+  return root;
+}
+
+// ---- フウロウ（正面は +z） ----
+function buildFuurou() {
+  const root = new THREE.Group(), R = {};
+  part(root, sph(0.3, 1, 1.1, 0.95), toon(C.cream));
+  part(root, sph(0.2, 1, 0.5, 0.8), toon(C.fog), 0, -0.22, -0.16, 0.012); // 尾
+  [-1, 1].forEach(s => {
+    part(root, sph(0.085, 1, 1, 0.3), flat(C.lamp), s * 0.11, 0.1, 0.262, 0.01);
+    part(root, sph(0.05, 1, 1, 0.3), flat(C.navy), s * 0.105, 0.1, 0.285, 0);
+    part(root, sph(0.016), flat(0xffffff), s * 0.105 + 0.02, 0.122, 0.3, 0);
+    part(root, sph(0.045, 1, 0.5, 1.3), toon(C.ochre), s * 0.09, -0.32, 0.06, 0.01);
+  });
+  const beak = part(root, new THREE.ConeGeometry(0.035, 0.09, 6), toon(C.ochre), 0, 0.035, 0.3, 0.008);
+  beak.rotation.x = 2.2;
+  [-0.5, 0, 0.5].forEach(a => {
+    const f = part(root, sph(0.055, 0.7, 1.5, 0.5), toon(C.red), Math.sin(a) * 0.09, 0.36 + Math.cos(a) * 0.05, 0, 0.012);
+    f.rotation.z = -a;
+  });
+  part(root, cyl(0.08, 0.08, 0.03, 9).rotateX(Math.PI / 2), toon(C.red), 0, -0.17, 0.262, 0.012);
+  part(root, cyl(0.045, 0.045, 0.012, 9).rotateX(Math.PI / 2), flat(0xa5341f), 0, -0.17, 0.282, 0);
+  R.wings = [-1, 1].map(s => {
+    const w = grp(root, s * 0.25, 0.04, 0);
+    part(w, sph(0.24, 1, 0.16, 0.62), toon(C.cream), s * 0.2, 0, 0);
+    part(w, sph(0.14, 1, 0.18, 0.75), toon(C.fog), s * 0.36, -0.005, -0.02, 0.012);
+    return w;
+  });
+  root.userData = R;
+  return root;
+}
+
+// ---- 霧の坂道：ツムギは原点で足踏みし、町並みが後ろへ流れる ----
+const SLOPE = 0.17, ZMAX = 1.4, LOOP = 36, SPEED = 1.05;
+const hill = new THREE.Group(); hill.rotation.x = -SLOPE; scene.add(hill);
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(80, 80).rotateX(-Math.PI / 2), flat(0x8ea3b0));
+ground.position.y = -0.02; hill.add(ground);
+const road = new THREE.Mesh(new THREE.PlaneGeometry(2.8, 80).rotateX(-Math.PI / 2), flat(0xe6dcc6));
+road.position.y = -0.01; hill.add(road);
+[-1, 1].forEach(s => { const e = new THREE.Mesh(new THREE.PlaneGeometry(0.04, 80).rotateX(-Math.PI / 2), flat(C.navy)); e.position.x = s * 1.4; hill.add(e); });
+const shadowMat = new THREE.MeshBasicMaterial({ color:C.navy, transparent:true, opacity:0.22, depthWrite:false });
+const shadowT = new THREE.Mesh(new THREE.CircleGeometry(0.42, 20).rotateX(-Math.PI / 2), shadowMat); hill.add(shadowT);
+const shadowF = new THREE.Mesh(new THREE.CircleGeometry(0.16, 16).rotateX(-Math.PI / 2), shadowMat); hill.add(shadowF);
+
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const glowTex = (() => {
+  const g = document.createElement('canvas'); g.width = g.height = 64; const x = g.getContext('2d');
+  const gr = x.createRadialGradient(32, 32, 0, 32, 32, 32);
+  gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(0.35, 'rgba(255,255,255,.45)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
+  x.fillStyle = gr; x.fillRect(0, 0, 64, 64);
+  return new THREE.CanvasTexture(g);
+})();
+const scrollers = [];
+const scroller = (base, x, pop = true) => {
+  const g = grp(hill, x, 0, 0); g.rotation.x = SLOPE; // 建物はまっすぐ立てる
+  scrollers.push({ g, base, pop }); return g;
+};
+const wallColors = [0xece2cc, 0x7f95a8, 0xd9c9a8, 0x4a5a7c], roofColors = [C.red, C.navy, 0xa83c2a];
+for (let i = 0; i < 12; i++) [-1, 1].forEach(s => { // 家
+  const w = 1.5 + rnd() * 0.7, h = 1.5 + rnd() * 1.5, g = scroller(i * 3 + rnd(), s * (2.7 + rnd() * 0.9 + w / 2));
+  part(g, box(w, h, 1.8), toon(wallColors[(rnd() * 4) | 0]), 0, h / 2 - 0.3, 0, 0.03);
+  const roof = part(g, new THREE.ConeGeometry(w * 0.82, 0.9, 4).rotateY(Math.PI / 4), toon(roofColors[(rnd() * 3) | 0]), 0, h + 0.15, 0, 0.03);
+  roof.scale.z = 1.1;
+  part(g, box(0.3, 0.36, 0.05), flat(C.lamp), -s * w * 0.2, h * 0.55, 0.9, 0.02);
+  part(g, box(0.05, 0.36, 0.3), flat(C.lamp), -s * w / 2, h * 0.5, 0.2, 0.02);
+});
+for (let i = 0; i < 6; i++) { // 街灯
+  const g = scroller(i * 6 + 2, (i % 2 ? 1 : -1) * 2.05);
+  part(g, cyl(0.035, 0.05, 2.3, 8), toon(C.navy), 0, 0.95, 0, 0);
+  part(g, box(0.2, 0.26, 0.2), flat(C.lamp), 0, 2.2, 0, 0.025);
+  part(g, new THREE.ConeGeometry(0.2, 0.14, 4).rotateY(Math.PI / 4), toon(C.navy), 0, 2.4, 0, 0);
+  const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map:glowTex, color:C.lamp, transparent:true, opacity:0.55,
+    blending:THREE.AdditiveBlending, depthWrite:false, fog:false }));
+  halo.scale.setScalar(2.2); halo.position.y = 2.2; g.add(halo);
+}
+for (let i = 0; i < 30; i++) { // 石畳の目地
+  const g = scroller(i * 1.2, 0, false);
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(2.7, 0.045).rotateX(-Math.PI / 2), flat(0xcbbfa4));
+  m.rotation.x = -SLOPE; g.add(m);
+}
+// 霧のかたまり
+const mists = [0, 1, 2, 3].map(i => {
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map:glowTex, color:0xe8eef0, transparent:true, opacity:0.3, depthWrite:false, fog:false }));
+  s.scale.set(9, 3.2, 1); s.position.set(0, 0.6 - i * 0.5, -3 - i * 3.5); scene.add(s); return s;
+});
+
+const tsumugi = buildTsumugi(); scene.add(tsumugi);
+const fuurou = buildFuurou(); fuurou.scale.setScalar(0.7); scene.add(fuurou);
+
+// ---- 動き ----
+function pose(t) {
+  const T = tsumugi.userData, w = t * 6.4, sw = Math.sin(w);
+  T.body.position.y = Math.abs(Math.cos(w)) * 0.035;
+  T.body.rotation.z = sw * 0.03; T.body.rotation.x = 0.06;
+  T.legs[0].rotation.x = sw * 0.62; T.legs[1].rotation.x = -sw * 0.62;
+  T.armL.rotation.x = sw * 0.5; T.armL.rotation.z = -0.18;
+  T.armR.rotation.x = -1.75 + Math.sin(w * 0.5) * 0.12; T.armR.rotation.z = 0.75;
+  T.head.rotation.z = Math.sin(w * 0.5) * 0.05; T.head.rotation.y = Math.sin(t * 0.7) * 0.18;
+  T.braid.rotation.z = -0.25 + Math.sin(w + 1) * 0.16; T.braid.rotation.x = -0.25 + Math.cos(w) * 0.1;
+  T.bag.rotation.z = Math.sin(w + 0.6) * 0.06;
+  T.scarf.forEach((s, i) => { s.rotation.x = 0.15 + Math.sin(t * 5 + i * 1.3) * 0.22; s.rotation.y = 0.35 + i * 0.3 + Math.sin(t * 3.1 + i) * 0.2; });
+
+  const a = t * 1.05, r = 0.78, F = fuurou.userData, flap = Math.sin(t * 13);
+  fuurou.position.set(Math.cos(a) * r, 1.5 + Math.sin(a) * 0.3 - flap * 0.03, Math.sin(a) * r);
+  fuurou.rotation.set(0.15, -a, 0.28, 'YXZ');
+  F.wings[0].rotation.z = -0.15 - flap * 0.75; F.wings[1].rotation.z = 0.15 + flap * 0.75;
+
+  const dist = t * SPEED;
+  for (const s of scrollers) {
+    const k = (((s.base + dist) % LOOP) + LOOP) % LOOP; // 0=現れた直後
+    s.g.position.z = ZMAX - k;
+    s.g.position.y = 0;
+    if (s.pop) { const p = Math.min(1, k / 2.2), e = p * p * (3 - 2 * p); s.g.scale.set(1, Math.max(0.001, e), 1); } // 飛び出す絵本のように立ち上がる
+  }
+  shadowT.scale.setScalar(1 - T.body.position.y * 3);
+  shadowF.position.set(fuurou.position.x, 0, fuurou.position.z);
+  mists.forEach((m, i) => { m.position.x = Math.sin(t * 0.12 + i * 1.9) * 3.5; });
+
+  const az = Math.sin(t * 0.22) * 0.5, d = camera.userData.d;
+  camera.position.set(Math.sin(az) * d, 1.75 + Math.sin(t * 0.17) * 0.15, Math.cos(az) * d);
+  camera.lookAt(0, 0.92, 0);
+}
+
+function resize() {
+  const w = window.innerWidth, h = window.innerHeight;
+  renderer.setSize(w, h, false);
+  camera.aspect = w / h;
+  // 縦長の画面でも、フウロウの輪が横に収まる距離まで下がる
+  camera.userData.d = Math.max(4.6, 1.08 / (Math.tan(THREE.MathUtils.degToRad(20)) * camera.aspect));
+  camera.updateProjectionMatrix();
+}
+
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+const fpsEl = document.getElementById('fps');
+let time = 1.4, last = 0, raf = 0, frames = 0, fpsAt = 0;
+function frame(now) {
+  raf = requestAnimationFrame(frame);
+  const dt = Math.min(0.05, (now - last) / 1000 || 0); last = now; time += dt;
+  pose(time); renderer.render(scene, camera);
+  frames++; if (now - fpsAt > 1000) { fpsEl.textContent = Math.round(frames * 1000 / (now - fpsAt)) + ' fps'; frames = 0; fpsAt = now; }
+}
+function start() {
+  cancelAnimationFrame(raf); raf = 0;
+  if (reduce.matches) { // 動きを減らす設定では1枚の絵として止める
+    pose(1.4); renderer.render(scene, camera); fpsEl.textContent = '';
+    note.textContent = '3D試作｜「視差効果を減らす」設定のため静止画で表示中';
+  } else if (!document.hidden) {
+    note.textContent = '3D試作｜図形だけで組んだツムギとフウロウの歩きと羽ばたき';
+    last = performance.now(); fpsAt = last; frames = 0; raf = requestAnimationFrame(frame);
+  }
+}
+reduce.addEventListener('change', start);
+document.addEventListener('visibilitychange', start);
+window.addEventListener('resize', () => { resize(); if (!raf) { pose(time); renderer.render(scene, camera); } });
+resize(); start();
+window.__lab3d = { pose, render: () => renderer.render(scene, camera) }; // 確認用
+</script>
+</body>
+</html>
