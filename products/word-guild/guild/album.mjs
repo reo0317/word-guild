@@ -29,6 +29,10 @@ const STATE_NAME = {shadow: '影', proof: '仮刷り', print: '本刷り', gold:
 // ---------- DOM を使わない部分（tests/guild-album.test.mjs が検査する） ----------
 
 // 語を街灯の番号ごとに分けて、ページの配列にする（番号の小さい順）。
+// 街灯の表示名（宛先の名前、data/stage-names.json）。無ければ番号。
+let stageNames = {};
+const stageName = shelf => stageNames[shelf] ?? `街灯 ${shelf}`;
+
 export function albumPages(words) {
   const byShelf = new Map();
   for (const word of words) {
@@ -238,6 +242,7 @@ async function load(deps) {
   if (!tags) {
     try { tags = await (await fetch(new URL('data/chara.json', BASE))).json(); } catch { tags = {}; }
   }
+  try { stageNames = await (await fetch(new URL('data/stage-names.json', BASE))).json(); } catch { stageNames = {}; }
   let story = deps.story;
   if (story === undefined) {
     try {
@@ -328,7 +333,7 @@ export function openAlbum(container, deps = {}) {
         <div class="gq-album-top">${backButton}<span class="gq-album-total">集めた切手 <b>${collected}</b>/${words.length}</span><button class="text-button" data-act="index" type="button">目次</button></div>
         <div class="gq-album-nav">
           <button type="button" class="gq-round" data-act="prev" aria-label="前のページ" ${index === 0 ? 'disabled' : ''}>${icon('prev')}</button>
-          <div class="gq-album-title"><small>${page.ch}区 ${esc(wardName)}</small><b>街灯 ${page.shelf}</b><span>${index + 1} / ${pages.length}</span></div>
+          <div class="gq-album-title"><small>${page.ch}区 ${esc(wardName)}</small><b>${esc(stageName(page.shelf))}</b><span>${index + 1} / ${pages.length}</span></div>
           <button type="button" class="gq-round" data-act="next" aria-label="次のページ" >${icon('next')}</button>
         </div>
         <div class="gq-album-body ${pp.allGold ? 'gold-page' : pp.complete ? 'lit-page' : ''}">
@@ -373,7 +378,7 @@ export function openAlbum(container, deps = {}) {
         <div class="gq-album-nav"><button type="button" class="gq-round" data-act="night-prev" aria-label="前のページ">${icon('prev')}</button>
           <div class="gq-album-title"><small>${group.ch}区 ${esc(group.name)}</small><b>夜の切手帳</b><span>${nightIndex + 1} / ${nightGroups.length}</span></div>
           <button type="button" class="gq-round" data-act="night-next" aria-label="次のページ" ${nightIndex === nightGroups.length - 1 ? 'disabled' : ''}>${icon('next')}</button></div>
-        <div class="gq-album-body gq-night-pages">${group.pages.map(page => `<section class="gq-night-row"><h3>街灯 ${page.shelf}</h3><div class="gq-night-sheet">${page.words.map(word => stampWithMark(word, charaSpec(word, tags[word.id] ?? '', {rare: true}), stampState(progress.rares?.[word.id]), base, 'sm')).join('')}</div>${psOf(page.shelf)}</section>`).join('')}</div>`;
+        <div class="gq-album-body gq-night-pages">${group.pages.map(page => `<section class="gq-night-row"><h3>${esc(stageName(page.shelf))}</h3><div class="gq-night-sheet">${page.words.map(word => stampWithMark(word, charaSpec(word, tags[word.id] ?? '', {rare: true}), stampState(progress.rares?.[word.id]), base, 'sm')).join('')}</div>${psOf(page.shelf)}</section>`).join('')}</div>`;
     }
 
     function zoomRare(id) {
