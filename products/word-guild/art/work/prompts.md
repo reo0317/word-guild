@@ -1597,3 +1597,718 @@ Square game illustration. Image 1 is the exact character reference: preserve the
 ## 単語の絵：c2-092
 
 Square game illustration. Image 1 is the exact character reference: preserve the same single fluffy mist-gray dust ball body, dark navy outline, thin arms and legs, white eyes, red ink accents; make it the central large full-body protagonist. Image 2 is style reference. Paper and letterpress ink print, thick navy outlines, flat limited color blocks, visible paper texture, slightly cute spooky ink-stain monster. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning immediately obvious using large clear everyday objects. Background pure flat solid chroma green #00ff00 only, no ground, shadow, pattern or gradient. No green on characters or props. No letters, numbers, symbols, writing, logos or text anywhere. One monster only; supporting humans where necessary. Full body, not cropped. Scene: walking in front leading a line of people behind it
+
+## 単語の絵：c2-130
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: highway: Keshikasu standing beside a wide multi-lane road full of cars and trucks speeding.
+
+## 単語の絵：c2-087
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu planning moves on a map with toy soldiers and flags, sly smile, sketching a battle plan.
+
+## 単語の絵：c2-001
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Preserve Keshikasu's round blue-gray eraser-crumb body, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu in a top hat tipping it politely with a formal bow and a neat bow tie, greeting a stranger.
+
+## 単語の絵：c2-044
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu riding a train in a dark tunnel under the ground, a small bus shuttling back and forth between two stops behind it.
+
+## 単語の絵：c2-131
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: respondent and questionnaire: Keshikasu answering a survey held by a person with a clipboard and marking boxes on a long blank sheet with a pencil.
+
+## 単語の絵：c2-002
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Preserve Keshikasu's round blue-gray eraser-crumb body, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu lounging on a deck chair on a big cruise ship with sunglasses and a cool drink, ocean around.
+
+## 単語の絵：c2-088
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu with a paint roller and hammer remaking an old room into a new one, new furniture arriving.
+
+## 単語の絵：c2-045
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu dragging a pile of travel cases, a big hard-shell suitcase and a slim briefcase through a station, tired.
+
+## 単語の絵：c2-132
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: jewelry: Keshikasu wearing a sparkling necklace, ring and earrings, gems glittering.
+
+## 単語の絵：c2-003
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Preserve Keshikasu's round blue-gray eraser-crumb body, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu in a tidy suit and another Keshikasu carrying many shopping bags out of a store, customers happy.
+
+## 単語の絵：c2-089
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu stepping up from a small seat to a bigger shiny luxury seat, a grand upgrade.
+
+## 単語の絵：c2-046
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu loading boxes onto a delivery van, a courier creature running with a parcel while a conveyor sends boxes to many shops.
+
+## 単語の絵：c2-004
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Preserve Keshikasu's round blue-gray eraser-crumb body, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu reading a thin glowing tablet held in both hands with a page turning on its screen, a tall stack of paper books left unused beside it.
+
+## 単語の絵：c2-133
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: overtime: Keshikasu still working at a desk late at night, a moon in the window and a clock past closing, tired.
+
+## 単語の絵：c2-090
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu swapping a broken part for a new one and handing back an old pass for a fresh one, old part in a bin.
+
+## 単語の絵：c2-047
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu in a bow tie carrying a tray with a plate and glass to a restaurant table, napkin on arm.
+
+## 単語の絵：c2-134
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: overnight: Keshikasu sleeping in a hotel bed through the whole night, stars and the moon outside.
+
+## 単語の絵：c2-091
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu holding a carton of milk gone moldy next to a calendar whose page has run out, an empty hourglass.
+
+## 単語の絵：c2-048
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu handing house keys to another creature who gives coins each month, a small apartment house between them.
+
+## 単語の絵：c2-005
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu character exactly: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress ink texture. Palette navy, mist, cream, vermilion. Make meaning recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background everywhere around isolated character and props, no scenery filling background, no floor or shadows. No green in subject. No text, letters, numerals or symbols.
+Subject: Keshikasu carrying a small suitcase, with a small isolated airport window frame showing a tiny airplane and gate props beside him.
+
+## 単語の絵：c2-135
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: outstanding: Keshikasu standing on the top of a podium shining brightly above the others, a spotlight.
+
+## 単語の絵：c2-092
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu walking in front leading a line of others behind it, going first.
+
+## 単語の絵：c2-006
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu character exactly: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress ink texture. Palette navy, mist, cream, vermilion. Make meaning recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background everywhere around isolated character and props, no scenery filling background, no floor or shadows. No green in subject. No text, letters, numerals or symbols.
+Subject: Keshikasu at a desk with towering stacks of blank papers and a blank sticky note, stamping documents with a rubber stamp.
+
+## 単語の絵：c2-049
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu holding a big shield over a new gadget while a repairman waves, a ribbon promising protection.
+
+## 単語の絵：c2-136
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: skim: Keshikasu flipping rapidly through a book with eyes darting across blank pages, not reading closely.
+
+## 単語の絵：c2-093
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: two Keshikasu at neighboring desks chatting and sharing a snack in an office.
+
+## 単語の絵：c2-050
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu sitting at a table in a casual dining hall with a tray, knife and fork and a cup of coffee, eating a meal.
+
+## 単語の絵：c2-137
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: impact: Keshikasu crashing a ball into a wall creating huge ripples and a big wave of change.
+
+## 単語の絵：c2-094
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu opening the doors of a tall cabinet and a drawer, clothes hanging in a closet beside.
+
+## 単語の絵：c2-051
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu in a tall white chef hat flipping food in a pan over a flame, big ladle.
+
+## 単語の絵：c2-007
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere. All paper pages completely blank.
+Subject: Keshikasu at a restaurant host stand holding a pen over a completely blank open reservation book while another creature waits happily.
+
+## 単語の絵：c2-138
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: innovative: Keshikasu inventing a brand new gadget with a bright light bulb overhead, tools and sparkles.
+
+## 単語の絵：c2-095
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu lifting a lid from a plastic box to store things inside, stacks of boxes.
+
+## 単語の絵：c2-052
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu munching on small treats with a tray of cups of juice and a tall cold drink with a straw.
+
+## 単語の絵：c2-139
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: logo: Keshikasu waving a flag with a bold simple pictorial emblem, a stamp of the same brand mark, no letters.
+
+## 単語の絵：c2-096
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu surrounded by a toaster, a kettle and a washing machine with cords and plugs, sparks of electricity.
+
+## 単語の絵：c2-053
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu holding a slice of cake with cream in one hand and a sandwich stacked with lettuce in the other.
+
+## 単語の絵：c2-008
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere.
+Subject: Keshikasu with a magnifying glass connecting small pinned photos with red thread on a board, looking thoughtful.
+
+## 単語の絵：c2-097
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu slotting a small cylinder cell and a printer cartridge into machines, charging, ink drips.
+
+## 単語の絵：c2-140
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: photographer: Keshikasu with a big camera around its neck taking a picture of a smiling friend, a tripod.
+
+## 単語の絵：c2-054
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu standing in a small metal box with sliding doors, floors of a tall building passing.
+
+## 単語の絵：c2-098
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu holding a glowing lamp that lights up a dark room.
+
+## 単語の絵：c2-009
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere.
+Subject: Keshikasu crouching to find a trail of footprints with a magnifying glass, a single glinting hint nearby.
+
+## 単語の絵：c2-141
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: aspect: Keshikasu turning a cube around to look at it from a different side, one face lit.
+
+## 単語の絵：c2-099
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu in front of a television, radio and a stack of newspapers, news flowing out.
+
+## 単語の絵：c2-055
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu checking a finished puzzle with a magnifying glass, every piece fitting perfectly, nodding with confidence.
+
+## 単語の絵：c2-010
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere.
+Subject: Keshikasu feeding a blank sheet into a boxy fax machine with a telephone handset, an identical blank page emerging from a second machine connected by a wire.
+
+## 単語の絵：c2-142
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: download: Keshikasu catching a box falling from a cloud on its arms, a progress bar of shapes on a screen.
+
+## 単語の絵：c2-011
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere.
+Subject: Keshikasu pressing the lid of a big copy machine, a bright light scanning under it, identical blank paper sheets piling out.
+
+## 単語の絵：c2-100
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu pushing a cart through a big store with food shelves and many shops along a bright hall.
+
+## 単語の絵：c2-056
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu holding up a pass to a gate that opens with a glow, qualifying and approved, the guard nodding.
+
+## 単語の絵：c2-143
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: password: Keshikasu whispering a secret into a big padlock on a door, key hole glowing.
+
+## 単語の絵：c2-012
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere.
+Subject: Keshikasu holding an oversized blank clock face with its long hand pointing straight up and short hand pointing right, standing proudly.
+
+## 単語の絵：c2-101
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu pushing a shopping cart on wheels down a long narrow path between tall shelves in a store.
+
+## 単語の絵：c2-057
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu pedaling a two-wheeled bicycle along a road, hair blowing.
+
+## 単語の絵：c2-144
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: prohibit: Keshikasu blocked at a door by a huge hand held up like a stop gesture, a guard shaking head.
+
+## 単語の絵：c2-013
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere.
+Subject: Keshikasu squinting under a bright sun directly overhead, a lunch box in hand.
+
+## 単語の絵：c2-102
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu handing a coin at a ticket booth to enter a gate to a park.
+
+## 単語の絵：c2-058
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu handing a message to another and ringing a small bell so it knows, informing someone.
+
+## 単語の絵：c2-103
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu drawing a bold straight line under a sentence of wavy squiggles with a pen, a ruler.
+
+## 単語の絵：c2-014
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere.
+Subject: Keshikasu yawning under a big full moon with a tiny sleeping town behind.
+
+## 単語の絵：c2-059
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu raising a hand with a big curious expression asking a counter staff a question.
+
+## 単語の絵：c2-145
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu precisely: gray-blue eraser debris creature, cream face and claws, yellow eyes, dark navy zigzag mouth, red wisps, textured paper and letterpress ink, thick dark navy outlines. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, vermilion #c8462f. Pure flat solid #00ff00 background. No text, letters, numbers, symbols, arrows or sleep marks anywhere.
+Subject: weekday: Keshikasu heading to work in morning with briefcase, beside a blank calendar with five columns of tiny briefcase pictures and two columns of empty beds. No writing.
+
+## 単語の絵：c2-015
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere.
+Subject: Keshikasu finishing a blank letter with a pen, one hand on its chest, bowing respectfully.
+
+## 単語の絵：c2-104
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu as teacher handing out a task paper, a student dropping a finished stack into a submission box.
+
+## 単語の絵：c2-060
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu peeking through a curtain at a small screen showing a sneak peek of a film.
+
+## 単語の絵：c2-146
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: bonus: Keshikasu receiving an extra bag of coins as a gift from a smiling boss.
+
+## 単語の絵：c2-016
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere.
+Subject: Keshikasu pointing at a blank calendar page a few pages ahead with a cheerful thought bubble of itself doing a task later, relaxed.
+
+## 単語の絵：c2-105
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu sitting in a seat in the audience of a lecture, an auditorium and a speaker small ahead.
+
+## 単語の絵：c2-061
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu receiving a rolled newspaper at its door each morning, paying a monthly coin to a delivery creature.
+
+## 単語の絵：c2-147
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: ink: Keshikasu dipping a feather pen into an inkwell, black drops.
+
+## 単語の絵：c2-017
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere.
+Subject: Keshikasu looking over its shoulder at the last few torn-off blank calendar pages lying behind it.
+
+## 単語の絵：c2-106
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu in a party hat blowing out the candles on a cake with balloons and presents.
+
+## 単語の絵：c2-062
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu relaxing in a house where the store, bus stop and everything is right next door, everything within easy reach.
+
+## 単語の絵：c2-148
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: cleaner: Keshikasu with a mop and bucket polishing a floor, a spray bottle, shiny clean.
+
+## 単語の絵：c2-018
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere.
+Subject: Keshikasu as a boss standing on a platform watching a row of busy workers with folded arms, keeping an eye on everyone.
+
+## 単語の絵：c2-107
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu reading a short passage then nodding with a bright aha look, a light bulb coming on in understanding.
+
+## 単語の絵：c2-063
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu tangled in a hassle, struggling with a broken door and a long detour, unlucky.
+
+## 単語の絵：c2-149
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: headquarters: Keshikasu in front of a big tall building with a flag on top, smaller branch buildings far around.
+
+## 単語の絵：c2-019
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, checkmarks or symbols anywhere.
+Subject: Keshikasu in a cozy chair whispering helpful guidance into the ear of a worried creature across a desk.
+
+## 単語の絵：c2-108
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu turning an empty bottle and can into a new object, bins beside it.
+
+## 単語の絵：c2-064
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu reading a thick instruction booklet and pointing at a diagram on a board to explain how a machine works.
+
+## 単語の絵：c2-150
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: stationery: Keshikasu surrounded by pencils, scissors, tape and notebooks on a desk.
+
+## 単語の絵：c2-109
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu lifting dumbbells in a gym, sweating with a towel, muscles.
+
+## 単語の絵：c2-020
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, arrows, diagrams or symbols anywhere.
+Subject: Keshikasu wearing a whistle and sweatband physically coaching two smaller creatures, demonstrating a stretching exercise to them.
+
+## 単語の絵：c2-065
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu driving a shiny car into a small garage shed beside a house, door rolling open.
+
+## 単語の絵：c2-110
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu kicking a ball into a goal net with one foot while swinging a bat at a small ball.
+
+## 単語の絵：c2-021
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, arrows or symbols anywhere.
+Subject: Keshikasu in an oversized uniform following behind an expert, carefully copying how a task is done, eager beginner.
+
+## 単語の絵：c2-151
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: authorize: Keshikasu pressing a big stamp onto a blank paper, giving permission, a seal glowing.
+
+## 単語の絵：c2-066
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu reaching out and receiving a shiny item into its hands, delighted to get it at last.
+
+## 単語の絵：c2-111
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu in front of a huge oval hall with a stage and rows of cheering seats around it.
+
+## 単語の絵：c2-022
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, arrows or symbols anywhere.
+Subject: Keshikasu handing plain unmarked coins back across a counter to a customer who is returning a product box.
+
+## 単語の絵：c2-152
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: authority: Keshikasu in a uniform with a badge holding up a hand to direct crowds with an official look.
+
+## 単語の絵：c2-067
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu holding a perfectly egg-shaped mirror, its own body round like an egg, smooth curves.
+
+## 単語の絵：c2-112
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu in a fancy hall at a long dinner table with many creatures toasting glasses, a grand feast.
+
+## 単語の絵：c2-153
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: commonly: Keshikasu in a crowd where everyone is doing the same ordinary thing, usual and everywhere.
+
+## 単語の絵：c2-023
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, arrows or symbols anywhere.
+Subject: Keshikasu surrounded by shelves full of neat boxes, bottles and toys, merchant presenting items for sale.
+
+## 単語の絵：c2-113
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: two look-alike Keshikasu side by side, a decoy fooling a confused third creature scratching its head.
+
+## 単語の絵：c2-068
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu camping on a hill with a tent and sitting on a blanket with a basket of food under open sky.
+
+## 単語の絵：c2-154
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: accommodate: Keshikasu squeezing many guests and beds into a room, room for everyone.
+
+## 単語の絵：c2-114
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu carrying a stack of papers in a paper folder tucked under its arm.
+
+## 単語の絵：c2-024
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. Absolutely no text, letters, numerals, checkmarks, clipboards or symbols anywhere.
+Subject: Keshikasu pointing with a claw at stacked plain boxes and crates, with a tiny forklift nearby.
+
+## 単語の絵：c2-069
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu sitting cozy in a warm room with a rug, curtains closed, a roof above.
+
+## 単語の絵：c2-155
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: annoy: tiny Keshikasu buzzing around the head of another larger Keshikasu that is gritting its teeth and annoyed.
+
+## 単語の絵：c2-115
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu tearing the top page off a big wall calendar with a pen nearby.
+
+## 単語の絵：c2-070
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu arriving at a finish flag at the end of a long winding road, a map pin planted at the top.
+
+## 単語の絵：c2-025
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, arrows or symbols anywhere.
+Subject: Keshikasu guiding a small group of creatures sitting around a table, all trying a hands-on pottery task together.
+
+## 単語の絵：c2-116
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu putting coins and clothes into a big donation box for others.
+
+## 単語の絵：c2-156
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: coordinate: Keshikasu as a conductor arranging others so they work together smoothly, waving a baton.
+
+## 単語の絵：c2-071
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu wearing work clothes and tools of a trade, looking proud of its job.
+
+## 単語の絵：c2-026
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, arrows or symbols anywhere.
+Subject: Keshikasu standing at a microphone beside a blank screen pointing with a stick in front of an audience.
+
+## 単語の絵：c2-117
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu showing a drawing to a friend who points at parts to improve while the first nods and fixes it.
+
+## 単語の絵：c2-157
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: quit: Keshikasu dropping its tools, walking out of a door and waving goodbye to a job.
+
+## 単語の絵：c2-072
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu pushing a blank calendar page far ahead with both hands, putting the appointment off for later.
+
+## 単語の絵：c2-118
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu connecting a long cable and pipe to a house, supplying water and power to a home.
+
+## 単語の絵：c2-073
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: two Keshikasu creatures arguing face to face, one pointing up while the other points the opposite way, shaking head.
+
+## 単語の絵：c2-027
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background everywhere around the isolated character and small props, no floor, no street surface, no scene backdrop or shadows. No green in subject. No text, letters, numerals, arrows or symbols anywhere.
+Subject: Keshikasu walking alongside small isolated skyscraper models and a tiny car, suggesting a busy city center.
+
+## 単語の絵：c2-158
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: captain: Keshikasu in a captain hat at the wheel of a big plane cockpit, stripes on its shoulders.
+
+## 単語の絵：c2-119
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu clutching a rumbling stomach, staring at a table of food with big eyes.
+
+## 単語の絵：c2-074
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu holding an open umbrella in falling rain with a gray cloud and puddles.
+
+## 単語の絵：c2-028
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, arrows or symbols anywhere; clock faces blank.
+Subject: Keshikasu panicking over a mountain of unfinished work with a ringing alarm clock and the last sand falling in an hourglass.
+
+## 単語の絵：c2-120
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu licking its lips with a delighted face over a swirl of tasty flavor, steam from a plate.
+
+## 単語の絵：c2-159
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: installation: Keshikasu fitting a big machine into place with a wrench, bolts and a ladder.
+
+## 単語の絵：c2-075
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu enjoying a bright blue sky with a shining sun and a few light clouds, happy.
+
+## 単語の絵：c2-029
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, arrows or symbols anywhere; all papers completely blank and coins unmarked.
+Subject: Keshikasu at a counter handing a long blank paper to a customer while another creature holds a paper strip after paying, coins exchanging.
+
+## 単語の絵：c2-121
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu examining goods with a magnifying glass and a flashlight, checking carefully.
+
+## 単語の絵：c2-076
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu looking up at a sky filled with thick gray clouds, sun hidden.
+
+## 単語の絵：c2-160
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: availability: Keshikasu at a hotel desk with many empty rooms available, keys hanging free.
+
+## 単語の絵：c2-030
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, arrows or symbols anywhere; all papers completely blank.
+Subject: Keshikasu holding a folded glossy leaflet and pinning blank sheets on a notice board while others read.
+
+## 単語の絵：c2-122
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu at a front door receiving a parcel from a delivery creature, signing for it.
+
+## 単語の絵：c2-077
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu holding a small slim phone in one hand and a thin laptop folded open on its knees, glowing screens.
+
+## 単語の絵：c2-161
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: complimentary: Keshikasu receiving a free gift with a ribbon, no coins exchanged, a smiling host.
+
+## 単語の絵：c2-123
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: two Keshikasu blending into one big Keshikasu, companies joined together.
+
+## 単語の絵：c2-031
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, arrows or symbols anywhere; all papers completely blank.
+Subject: Keshikasu with round glasses at a desk with an abacus, plain coins and a thick ledger book, carefully checking it with a magnifying glass.
+
+## 単語の絵：c2-078
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu typing on a large flat keyboard with its many fingers, keys clicking.
+
+## 単語の絵：c2-032
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, arrows or symbols anywhere; coins unmarked.
+Subject: Keshikasu and another creature swapping a sack of coins for a wrapped box, a handshake in the middle.
+
+## 単語の絵：c2-124
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu following a cooking guide, putting eggs, flour, milk and tomatoes into a mixing bowl, a cookbook open.
+
+## 単語の絵：c2-162
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hike: Keshikasu staring at a blank price tag climbing up a ladder very high, shocked shoppers.
+
+## 単語の絵：c2-079
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu holding a small, neatly folded, tiny version of a gadget, everything tiny and light.
+
+## 単語の絵：c2-125
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser-shavings creature with rounded blue-gray layered crumb body, cream face, yellow eyes, jagged navy mouth, dark navy outlines, cream fragments and vermilion curls. Paper and letterpress ink printmaking, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
+Subject: Keshikasu erasing a paragraph of squiggles and writing it again with a pencil, crumpled paper.
+
+## 単語の絵：c2-033
+
+Use case: illustration-story. Game enemy illustration, full-body Keshikasu centered large in square composition. Match attached character: round blue-gray eraser crumbs, cream fragments and face, yellow eyes, jagged navy mouth, vermilion wisps and clawed limbs, thick navy outlines, paper and letterpress texture. Pure flat solid chroma green #00ff00 background, no floor or shadows. No green in subject. No text, letters, numerals, arrows or symbols anywhere.
+Subject: Keshikasu in a neat uniform behind a front counter with a small bell, welcoming a guest and handing over a bag and a key.
+
+## 単語の絵：c2-080
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Keshikasu character exactly: eraser-shaving creature, blue-gray textured round body, cream fragments and claws, red wisps, yellow eyes and dark jagged mouth. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains, slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu in a mask with a small mirror and tool looking into a patient's big open mouth full of teeth.
+
+## 単語の絵：c2-163
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: productivity: Keshikasu at a fast assembly line producing many items quickly, a pile of goods.
