@@ -1,0 +1,3005 @@
+{
+ "ch": 4,
+ "groups": [
+  {
+   "g": "c4-001",
+   "concept": "ink creature lying on a neatly cut green grass yard pushing a lawn mower in a garden",
+   "words": [
+    {
+     "id": "t0501",
+     "w": "lawn",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-002",
+   "concept": "ink creature peering into a microscope at a tiny wiggling germ on a glass slide",
+   "words": [
+    {
+     "id": "t0502",
+     "w": "microscope",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-003",
+   "concept": "ink creature pointing a signpost the wrong way to a lost traveler who follows it into a swamp, tricked",
+   "words": [
+    {
+     "id": "t0503",
+     "w": "mislead",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-004",
+   "concept": "ink creature searching under cushions and in pockets for its lost glasses that sit on its own head",
+   "words": [
+    {
+     "id": "t0504",
+     "w": "misplace",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-005",
+   "concept": "ink creature at a small street kiosk buying a daily paper from a vendor among magazines",
+   "words": [
+    {
+     "id": "t0505",
+     "w": "newsstand",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-006",
+   "concept": "ink creature looking up at a shelf and a lamp hanging above its head on the ceiling",
+   "words": [
+    {
+     "id": "t0506",
+     "w": "overhead",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-007",
+   "concept": "ink creature opening a large flat case of its own drawings to show an interviewer",
+   "words": [
+    {
+     "id": "t0507",
+     "w": "portfolio",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-008",
+   "concept": "ink creature hanging coats on a metal rail and putting shoes on a tiered shelf rack",
+   "words": [
+    {
+     "id": "t0508",
+     "w": "rack",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-009",
+   "concept": "ink creature knocking down a wall and putting in new cabinets in a kitchen while a contractor holds blueprints",
+   "words": [
+    {
+     "id": "t0509",
+     "w": "remodel",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-010",
+   "concept": "ink creature pointing at a board full of pie charts and dots, counting survey results",
+   "words": [
+    {
+     "id": "t0510",
+     "w": "statistics",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-011",
+   "concept": "ink creature driving through a long dark tube cut under a mountain with light at the end",
+   "words": [
+    {
+     "id": "t0511",
+     "w": "tunnel",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-012",
+   "concept": "ink creature scooping endless noodles from a bowl that never empties with an infinity loop of ribbon",
+   "words": [
+    {
+     "id": "t0512",
+     "w": "unlimited",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-013",
+   "concept": "ink creature chewing an orange and swallowing a small colorful pill with muscles flexed, healthy",
+   "words": [
+    {
+     "id": "t0513",
+     "w": "vitamin",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-014",
+   "concept": "ink creature holding a balloon in front of cages with an elephant and a giraffe, visiting",
+   "words": [
+    {
+     "id": "t0514",
+     "w": "zoo",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-015",
+   "concept": "ink creature hearing a flashing siren bell and holding up a warning light, a loud warning",
+   "words": [
+    {
+     "id": "t0515",
+     "w": "alert",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-016",
+   "concept": "ink creature at a podium on a stage in a huge hall with rows of seats full of listeners",
+   "words": [
+    {
+     "id": "t0516",
+     "w": "auditorium",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-017",
+   "concept": "ink creature on a red carpet in sunglasses surrounded by cameras and fans asking for autographs",
+   "words": [
+    {
+     "id": "t0517",
+     "w": "celebrity",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-018",
+   "concept": "ink creature taking a few coins out of a pile and moving them away to a side",
+   "words": [
+    {
+     "id": "t0518",
+     "w": "deduct",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-019",
+   "concept": "ink creature at a table where a huge crash of dishes and a power outage interrupts a quiet meeting, chaos",
+   "words": [
+    {
+     "id": "t0519",
+     "w": "disruption",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-020",
+   "concept": "ink creature in a hard hat on a pole fixing glowing wires with pliers",
+   "words": [
+    {
+     "id": "t0520",
+     "w": "electrician",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-021",
+   "concept": "ink creature bouncing with both fists raised and sparkling eyes, super keen",
+   "words": [
+    {
+     "id": "t0521",
+     "w": "enthusiastic",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-022",
+   "concept": "ink creature in a cap and gown throwing its square hat into the air with a diploma",
+   "words": [
+    {
+     "id": "t0522",
+     "w": "graduation",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-023",
+   "concept": "ink creature slipping on a frozen slick path with icicles hanging from a roof",
+   "words": [
+    {
+     "id": "t0523",
+     "w": "icy",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-024",
+   "concept": "ink creature looking at a row of fence posts of uneven sizes and spacing, one skipping out of the pattern",
+   "words": [
+    {
+     "id": "t0524",
+     "w": "irregular",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-025",
+   "concept": "ink creature typing a secret passcode into a screen and a door opening to its own account",
+   "words": [
+    {
+     "id": "t0525",
+     "w": "login",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-026",
+   "concept": "ink creature in a tie at the head of a desk directing a team with a clipboard, a boss role",
+   "words": [
+    {
+     "id": "t0526",
+     "w": "managerial",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-027",
+   "concept": "ink creature holding a shiny crystal rock from a cave with a pickaxe",
+   "words": [
+    {
+     "id": "t0527",
+     "w": "mineral",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-028",
+   "concept": "ink creature riding a two-wheeled engine bike with a helmet down a road",
+   "words": [
+    {
+     "id": "t0528",
+     "w": "motorcycle",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-029",
+   "concept": "ink creature packing a small bag with only water and food it cannot live without",
+   "words": [
+    {
+     "id": "t0529",
+     "w": "necessity",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-030",
+   "concept": "ink creature drawing a schedule with arrows and steps on a big board with a pencil",
+   "words": [
+    {
+     "id": "t0530",
+     "w": "planner",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-031",
+   "concept": "ink creature at a dark desk typing on a laptop among energy drink cans with green screens",
+   "words": [
+    {
+     "id": "t0531",
+     "w": "programmer",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-032",
+   "concept": "ink creature checking a page with a red pen and circling mistakes in a document",
+   "words": [
+    {
+     "id": "t0532",
+     "w": "proofread",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-033",
+   "concept": "ink creature at a table interviewing a nervous applicant and shaking hands on a hire",
+   "words": [
+    {
+     "id": "t0533",
+     "w": "recruiter",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-034",
+   "concept": "ink creature looking at the last few leftover cookies after a party, what is left on the plate",
+   "words": [
+    {
+     "id": "t0534",
+     "w": "remainder",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-035",
+   "concept": "ink creature standing frozen on a tall stone pedestal in a park, pigeons on its head",
+   "words": [
+    {
+     "id": "t0535",
+     "w": "statue",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-036",
+   "concept": "ink creature climbing a staircase one regular step after another at a constant pace with a rising line",
+   "words": [
+    {
+     "id": "t0536",
+     "w": "steadily",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-037",
+   "concept": "ink creature holding a share paper in a meeting room, owning a piece of the company",
+   "words": [
+    {
+     "id": "t0537",
+     "w": "stockholder",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-038",
+   "concept": "ink creature opening the door of a totally empty room with a sign saying no one lives inside",
+   "words": [
+    {
+     "id": "t0538",
+     "w": "vacant",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-039",
+   "concept": "ink creature wearing a scarf, a ring and a hat as extra decorations to its outfit",
+   "words": [
+    {
+     "id": "t0539",
+     "w": "accessory",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-040",
+   "concept": "ink creatures putting parts together on a factory line, hammering a car body",
+   "words": [
+    {
+     "id": "t0540",
+     "w": "assembly",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-041",
+   "concept": "ink creature carrying a woven wicker basket of apples",
+   "words": [
+    {
+     "id": "t0541",
+     "w": "basket",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-042",
+   "concept": "ink creature receiving an official framed paper and a seal stamp after passing an exam",
+   "words": [
+    {
+     "id": "t0542",
+     "w": "certification",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-043",
+   "concept": "ink creature flipping a door sign to shut and padlocking a shop for good with boards over windows",
+   "words": [
+    {
+     "id": "t0543",
+     "w": "closure",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-044",
+   "concept": "ink creature pushing away a plate of broccoli with a frown and a turned-up nose",
+   "words": [
+    {
+     "id": "t0544",
+     "w": "dislike",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-045",
+   "concept": "ink creature heading down a staircase with arrows pointing down to the first floor",
+   "words": [
+    {
+     "id": "t0545",
+     "w": "downstairs",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-046",
+   "concept": "ink creature sniffing a carton of milk gone bad past its last date on a calendar, a bad smell",
+   "words": [
+    {
+     "id": "t0546",
+     "w": "expiration",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-047",
+   "concept": "ink creature clutching its head with a pounding hammer and lightning bolts inside, wincing",
+   "words": [
+    {
+     "id": "t0547",
+     "w": "headache",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-048",
+   "concept": "ink creature stuck in a long line of honking cars on a highway, going nowhere",
+   "words": [
+    {
+     "id": "t0548",
+     "w": "jam",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-049",
+   "concept": "ink creature hammering a metal nail into a wooden board with a hammer",
+   "words": [
+    {
+     "id": "t0549",
+     "w": "nail",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-050",
+   "concept": "ink creature looking at a half full glass with a big smile and a sun rising behind it",
+   "words": [
+    {
+     "id": "t0550",
+     "w": "optimistic",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-051",
+   "concept": "ink creature crossing a striped crosswalk on foot while cars wait",
+   "words": [
+    {
+     "id": "t0551",
+     "w": "pedestrian",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-052",
+   "concept": "ink creature drawing a dotted line arrow continuing a graph into the future with a guess",
+   "words": [
+    {
+     "id": "t0552",
+     "w": "projection",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-053",
+   "concept": "ink creature pulling a long sleeve over its arm and a cuff on a jacket",
+   "words": [
+    {
+     "id": "t0553",
+     "w": "sleeve",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-054",
+   "concept": "ink creature in a quiet neighborhood of small houses at the outskirts with a city skyline far away",
+   "words": [
+    {
+     "id": "t0554",
+     "w": "suburb",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-055",
+   "concept": "ink creature in a big suit buying a small company building and putting a new flag on top",
+   "words": [
+    {
+     "id": "t0555",
+     "w": "takeover",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-056",
+   "concept": "ink creature scratching its head with a shrug and a question mark, unable to decide",
+   "words": [
+    {
+     "id": "t0556",
+     "w": "unsure",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-057",
+   "concept": "ink creature climbing a staircase with arrows pointing up to the second floor",
+   "words": [
+    {
+     "id": "t0557",
+     "w": "upstairs",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-058",
+   "concept": "ink creature speaking out loud with speech waves instead of writing on paper, a spoken promise",
+   "words": [
+    {
+     "id": "t0558",
+     "w": "verbal",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-059",
+   "concept": "ink creature at a border desk getting a stamp in its passport from an officer",
+   "words": [
+    {
+     "id": "t0559",
+     "w": "visa",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-060",
+   "concept": "ink creature on a safari watching a deer, a bear and birds in a forest",
+   "words": [
+    {
+     "id": "t0560",
+     "w": "wildlife",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-061",
+   "concept": "ink creature standing before a huge crowd of workers in helmets and uniforms outside a factory",
+   "words": [
+    {
+     "id": "t0561",
+     "w": "workforce",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-062",
+   "concept": "ink creature looking at a classroom with one empty desk and a note, missing from class",
+   "words": [
+    {
+     "id": "t0562",
+     "w": "absent",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-063",
+   "concept": "ink creature piling up coins into a growing mountain, adding more each day",
+   "words": [
+    {
+     "id": "t0563",
+     "w": "accumulate",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-064",
+   "concept": "ink creature with a magnifying glass valuing an antique vase and stating a price",
+   "words": [
+    {
+     "id": "t0564",
+     "w": "appraisal",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-065",
+   "concept": "ink creature in a workshop watching a master craftsman and holding a tool, learning a trade",
+   "words": [
+    {
+     "id": "t0565",
+     "w": "apprentice",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-066",
+   "concept": "ink creature in a suit and tie with a briefcase on a city street",
+   "words": [
+    {
+     "id": "t0566",
+     "w": "businessman",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-067",
+   "concept": "ink creature looking up at the flat top of a room with a lamp hanging down",
+   "words": [
+    {
+     "id": "t0567",
+     "w": "ceiling",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-068",
+   "concept": "ink creature in a bright field of rainbow flowers and painted houses of every color",
+   "words": [
+    {
+     "id": "t0568",
+     "w": "colorful",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-069",
+   "concept": "ink creature handing a bag of coins to a creature whose bike it broke, making up for it",
+   "words": [
+    {
+     "id": "t0569",
+     "w": "compensate",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-070",
+   "concept": "ink creature at a party dressed as a pirate in a hat and eye patch",
+   "words": [
+    {
+     "id": "t0570",
+     "w": "costume",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-071",
+   "concept": "ink creature in a newspaper office writing an opinion column with a typewriter and a stack of printed papers",
+   "words": [
+    {
+     "id": "t0571",
+     "w": "editorial",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-072",
+   "concept": "ink creature with a medicine and a smiling gauge pointing to full, it really works",
+   "words": [
+    {
+     "id": "t0572",
+     "w": "effectiveness",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-073",
+   "concept": "ink creature smoothing a path with a broom and opening doors for others to pass easily, making it easier",
+   "words": [
+    {
+     "id": "t0573",
+     "w": "facilitate",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-074",
+   "concept": "ink creature in a helmet spraying a hose at a burning house from a red fire truck",
+   "words": [
+    {
+     "id": "t0574",
+     "w": "firefighter",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-075",
+   "concept": "ink creature filling a car at a pump station with a nozzle",
+   "words": [
+    {
+     "id": "t0575",
+     "w": "gasoline",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-076",
+   "concept": "ink creature in a swimsuit at a formal funeral while others in black stare, out of place",
+   "words": [
+    {
+     "id": "t0576",
+     "w": "inappropriate",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-077",
+   "concept": "ink creature at a laptop with glowing lines connecting to the whole world with globes and clouds",
+   "words": [
+    {
+     "id": "t0577",
+     "w": "internet",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-078",
+   "concept": "ink creature holding a ring of keys at a door of an apartment and collecting rent from a resident",
+   "words": [
+    {
+     "id": "t0578",
+     "w": "landlord",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-079",
+   "concept": "ink creature arranging photo and text blocks on a page grid with a ruler for design",
+   "words": [
+    {
+     "id": "t0579",
+     "w": "layout",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-080",
+   "concept": "ink creature opening a lunch box at a desk with a clock showing noon",
+   "words": [
+    {
+     "id": "t0580",
+     "w": "lunchtime",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-081",
+   "concept": "ink creature stuffing pay envelopes for a row of workers from a money drawer",
+   "words": [
+    {
+     "id": "t0581",
+     "w": "payroll",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-082",
+   "concept": "ink creature in a lab coat in a factory pouring medicine into capsules and bottles on a belt",
+   "words": [
+    {
+     "id": "t0582",
+     "w": "pharmaceutical",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-083",
+   "concept": "ink creature listening and nodding to a story that sounds reasonable and believable with a thumb up",
+   "words": [
+    {
+     "id": "t0583",
+     "w": "plausible",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-084",
+   "concept": "ink creature paying a monthly fee in coins to an insurance agent, an umbrella of protection above it",
+   "words": [
+    {
+     "id": "t0584",
+     "w": "premium",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-085",
+   "concept": "ink creature crossing a street holding a parent's hand, with a helmet and seat belt on, free of danger",
+   "words": [
+    {
+     "id": "t0585",
+     "w": "safely",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-086",
+   "concept": "ink creature untangling a messy knot of strings into one clean straight line",
+   "words": [
+    {
+     "id": "t0586",
+     "w": "simplify",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-087",
+   "concept": "ink creature in a restaurant proudly presenting its signature dish on a plate, what it does best",
+   "words": [
+    {
+     "id": "t0587",
+     "w": "specialty",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-088",
+   "concept": "ink creature surrounded by gadgets, circuits and a glowing robot in a lab",
+   "words": [
+    {
+     "id": "t0588",
+     "w": "tech",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-089",
+   "concept": "ink creature opening a door and a surprise confetti jumps out making it jump back",
+   "words": [
+    {
+     "id": "t0589",
+     "w": "unexpected",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-090",
+   "concept": "ink creature holding a blank form with empty boxes and a question mark, no details given",
+   "words": [
+    {
+     "id": "t0590",
+     "w": "unspecified",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-091",
+   "concept": "ink creature gluing a sticker to a wall and keeping to the rules in a handbook, sticking firmly",
+   "words": [
+    {
+     "id": "t0591",
+     "w": "adhere",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-092",
+   "concept": "ink creature with empty pockets turned out and a closed shop, a sad face as creditors take its things",
+   "words": [
+    {
+     "id": "t0592",
+     "w": "bankrupt",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-093",
+   "concept": "ink creature tiptoeing past a wet floor sign with hands up, careful",
+   "words": [
+    {
+     "id": "t0593",
+     "w": "caution",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-094",
+   "concept": "ink creature holding papers together with a metal paper clip",
+   "words": [
+    {
+     "id": "t0594",
+     "w": "clip",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-095",
+   "concept": "ink creature following the instructions and wearing a helmet as told by a guard, obeying",
+   "words": [
+    {
+     "id": "t0595",
+     "w": "comply",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-096",
+   "concept": "ink creature sitting at a counter in a casual roadside restaurant with a milkshake and a burger",
+   "words": [
+    {
+     "id": "t0596",
+     "w": "diner",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-097",
+   "concept": "ink creature with two perfectly identical copies of a key made by a machine",
+   "words": [
+    {
+     "id": "t0597",
+     "w": "duplicate",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-098",
+   "concept": "ink creature in the front row leaning forward with a raised hand and bright eyes, can't wait",
+   "words": [
+    {
+     "id": "t0598",
+     "w": "eager",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-099",
+   "concept": "ink creature in glasses at a board of rising and falling money arrows and coins in a lecture",
+   "words": [
+    {
+     "id": "t0599",
+     "w": "economist",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-100",
+   "concept": "ink creature at the gate of a big official building with a foreign flag",
+   "words": [
+    {
+     "id": "t0600",
+     "w": "embassy",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-101",
+   "concept": "ink creature buckling a seat belt with a click and zipping a coat",
+   "words": [
+    {
+     "id": "t0601",
+     "w": "fasten",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-102",
+   "concept": "ink creature looking at a bottle with a skull mark and a sick plant wilting nearby, dangerous",
+   "words": [
+    {
+     "id": "t0602",
+     "w": "harmful",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-103",
+   "concept": "ink creature reading a newspaper full of useful facts with a lightbulb above it",
+   "words": [
+    {
+     "id": "t0603",
+     "w": "informative",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-104",
+   "concept": "ink creature walking into a grand building of research with columns and a plaque",
+   "words": [
+    {
+     "id": "t0604",
+     "w": "institute",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-105",
+   "concept": "ink creature opening a box with all the parts and tools for a project, a first aid kit",
+   "words": [
+    {
+     "id": "t0605",
+     "w": "kit",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-106",
+   "concept": "ink creature buying a tomato at a small neighborhood farm stand from a nearby farmer",
+   "words": [
+    {
+     "id": "t0606",
+     "w": "locally",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-107",
+   "concept": "ink creature sitting with an older wise creature who points to a path and teaches it advice",
+   "words": [
+    {
+     "id": "t0607",
+     "w": "mentor",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-108",
+   "concept": "ink creature raising a hand and pointing at a friend to be chosen as a candidate among a crowd",
+   "words": [
+    {
+     "id": "t0608",
+     "w": "nominate",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-109",
+   "concept": "ink creature picking one of two doors with a finger, making a choice",
+   "words": [
+    {
+     "id": "t0609",
+     "w": "opt",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-110",
+   "concept": "ink creatures marching down a street with a brass band, floats and flags with crowds",
+   "words": [
+    {
+     "id": "t0610",
+     "w": "parade",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-111",
+   "concept": "ink creature in a white coat with a stethoscope listening to a patient's chest",
+   "words": [
+    {
+     "id": "t0611",
+     "w": "physician",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-112",
+   "concept": "ink creature rubbing a shoe with a cloth until it shines with sparkles",
+   "words": [
+    {
+     "id": "t0612",
+     "w": "polish",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-113",
+   "concept": "ink creature licking a small stamp and sticking it on an envelope at a post office",
+   "words": [
+    {
+     "id": "t0613",
+     "w": "postage",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-114",
+   "concept": "ink creatures playing volleyball and boating at a lake park on a weekend, having fun",
+   "words": [
+    {
+     "id": "t0614",
+     "w": "recreational",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-115",
+   "concept": "ink creature practicing a speech on a stage with a script while a director watches, no audience",
+   "words": [
+    {
+     "id": "t0615",
+     "w": "rehearse",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-116",
+   "concept": "ink creature peeling a sticker off and pulling a stain away with a cloth, taking something away",
+   "words": [
+    {
+     "id": "t0616",
+     "w": "removal",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-117",
+   "concept": "ink creature checking a report card with a mark that says okay, good enough, a calm nod",
+   "words": [
+    {
+     "id": "t0617",
+     "w": "satisfactory",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-118",
+   "concept": "ink creature with four small panels of spring blossoms, summer sun, fall leaves and winter snow",
+   "words": [
+    {
+     "id": "t0618",
+     "w": "seasonal",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-119",
+   "concept": "ink creatures walking in different directions each with its own luggage and a bill, split in two",
+   "words": [
+    {
+     "id": "t0619",
+     "w": "separately",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-120",
+   "concept": "ink creature watching workers leaving through a revolving door while new ones come in, a swirling staff",
+   "words": [
+    {
+     "id": "t0620",
+     "w": "turnover",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-121",
+   "concept": "ink creature carrying an umbrella on a sunny day and a bag of too many extra things that it never needs",
+   "words": [
+    {
+     "id": "t0621",
+     "w": "unnecessary",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-122",
+   "concept": "ink creature wearing a raincoat after seeing the rain cloud forecast, acting to match the situation",
+   "words": [
+    {
+     "id": "t0622",
+     "w": "accordingly",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-123",
+   "concept": "ink creature biting a juicy red apple on a branch",
+   "words": [
+    {
+     "id": "t0623",
+     "w": "apple",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-124",
+   "concept": "ink creature holding a rule sheet and a rule that fits its situation, a matching puzzle piece",
+   "words": [
+    {
+     "id": "t0624",
+     "w": "applicable",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-125",
+   "concept": "ink creature at an auction raising a paddle while an auctioneer bangs a gavel over a painting",
+   "words": [
+    {
+     "id": "t0625",
+     "w": "auction",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-126",
+   "concept": "ink creature on a small outdoor platform of a high apartment holding a coffee cup, plants around the railing",
+   "words": [
+    {
+     "id": "t0626",
+     "w": "balcony",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-127",
+   "concept": "ink creature going down the steps into a dark cellar with boxes and a single light bulb",
+   "words": [
+    {
+     "id": "t0627",
+     "w": "basement",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-128",
+   "concept": "ink creature setting the table and preparing food an hour early before guests arrive, in advance",
+   "words": [
+    {
+     "id": "t0628",
+     "w": "beforehand",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-129",
+   "concept": "ink creature in a tall hat with knives and pots in a cooking school, the art of cuisine",
+   "words": [
+    {
+     "id": "t0629",
+     "w": "culinary",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-130",
+   "concept": "ink creature with a film camera following a polar bear on ice for a nature film",
+   "words": [
+    {
+     "id": "t0630",
+     "w": "documentary",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-131",
+   "concept": "ink creature watching a graph line of coins tumble downward with a sad face on a stock board",
+   "words": [
+    {
+     "id": "t0631",
+     "w": "downturn",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-132",
+   "concept": "ink creature clinging to a table as the ground shakes, cracks in a wall, books falling",
+   "words": [
+    {
+     "id": "t0632",
+     "w": "earthquake",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-133",
+   "concept": "ink creature in a long gown and gloves walking gracefully into a ballroom",
+   "words": [
+    {
+     "id": "t0633",
+     "w": "elegant",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-134",
+   "concept": "ink creature pouring far too much sugar into a cup that overflows into a mountain",
+   "words": [
+    {
+     "id": "t0634",
+     "w": "excessive",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-135",
+   "concept": "ink creature picking a plain white box of medicine without a brand next to a fancy brand box",
+   "words": [
+    {
+     "id": "t0635",
+     "w": "generic",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-136",
+   "concept": "ink creature blowing a saxophone in a smoky club with a piano and a bass",
+   "words": [
+    {
+     "id": "t0636",
+     "w": "jazz",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-137",
+   "concept": "ink creature growing from a baby to an old creature with a cane in a row of ages, a whole life",
+   "words": [
+    {
+     "id": "t0637",
+     "w": "lifetime",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-138",
+   "concept": "ink creature lying on a table with a therapist kneading its shoulders, relaxing",
+   "words": [
+    {
+     "id": "t0638",
+     "w": "massage",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-139",
+   "concept": "ink creature stretching a balloon or a bar chart to the very top of its scale, as high as possible",
+   "words": [
+    {
+     "id": "t0639",
+     "w": "maximize",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-140",
+   "concept": "ink creature enjoying a gentle breeze and soft warm weather with a calm smile, not too hot, not too cold",
+   "words": [
+    {
+     "id": "t0640",
+     "w": "mild",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-141",
+   "concept": "ink creature running on a conveyor with arrows still moving and a half-built tower still in progress",
+   "words": [
+    {
+     "id": "t0641",
+     "w": "ongoing",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-142",
+   "concept": "ink creature checking a clock that rings every few hours and a plant that gets watered at intervals",
+   "words": [
+    {
+     "id": "t0642",
+     "w": "periodically",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-143",
+   "concept": "ink creature serving a slice of fruit pie with a golden crust",
+   "words": [
+    {
+     "id": "t0643",
+     "w": "pie",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-144",
+   "concept": "ink creature pushing the prongs of a power cord into a wall socket",
+   "words": [
+    {
+     "id": "t0644",
+     "w": "plug",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-145",
+   "concept": "ink creature at a job fair booth with a banner and a line of applicants handing in resumes",
+   "words": [
+    {
+     "id": "t0645",
+     "w": "recruitment",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-146",
+   "concept": "ink creature in a striped shirt blowing a whistle and holding a card on a field",
+   "words": [
+    {
+     "id": "t0646",
+     "w": "referee",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-147",
+   "concept": "ink creature passing a friend's card to a doctor, recommending a person to someone",
+   "words": [
+    {
+     "id": "t0647",
+     "w": "referral",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-148",
+   "concept": "ink creature on a hill with a loud trumpet while a crowd of villagers admire its famous name and a laurel crown",
+   "words": [
+    {
+     "id": "t0648",
+     "w": "renown",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-149",
+   "concept": "ink creature sprinting along a race track in shorts with a number bib",
+   "words": [
+    {
+     "id": "t0649",
+     "w": "runner",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-150",
+   "concept": "ink creature pulling a striped sock onto its foot",
+   "words": [
+    {
+     "id": "t0650",
+     "w": "sock",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-151",
+   "concept": "ink creature at a laptop buried under a flood of junk mail envelopes with a trash bin",
+   "words": [
+    {
+     "id": "t0651",
+     "w": "spam",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-152",
+   "concept": "ink creature on a sofa scrolling through web page after web page on a tablet, browsing the net",
+   "words": [
+    {
+     "id": "t0652",
+     "w": "surf",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-153",
+   "concept": "ink creature at a station looking up at a big board of train departures",
+   "words": [
+    {
+     "id": "t0653",
+     "w": "timetable",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-154",
+   "concept": "ink creature arranging tulips in a glass vase on a table",
+   "words": [
+    {
+     "id": "t0654",
+     "w": "vase",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-155",
+   "concept": "ink creature stepping up a gangway onto a ship with luggage and a ticket",
+   "words": [
+    {
+     "id": "t0655",
+     "w": "aboard",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-156",
+   "concept": "ink creature climbing from a lower desk to a higher one step by step to a bigger office, a promotion",
+   "words": [
+    {
+     "id": "t0656",
+     "w": "advancement",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-157",
+   "concept": "ink creature holding a megaphone beside a billboard with a product picture, selling",
+   "words": [
+    {
+     "id": "t0657",
+     "w": "advertiser",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-158",
+   "concept": "ink creature offering two different paths in a fork, either this or that",
+   "words": [
+    {
+     "id": "t0658",
+     "w": "alternatively",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-159",
+   "concept": "ink creature laughing as a clown does tricks and bubbles",
+   "words": [
+    {
+     "id": "t0659",
+     "w": "amuse",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-160",
+   "concept": "ink creature in a court in a suit arguing with a book of law to a judge",
+   "words": [
+    {
+     "id": "t0660",
+     "w": "attorney",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-161",
+   "concept": "ink creature getting a permission stamp from an officer on a form that allows it to pass a gate",
+   "words": [
+    {
+     "id": "t0661",
+     "w": "authorization",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-162",
+   "concept": "ink creature on a bicycle on a green university ground with brick buildings and a clock tower",
+   "words": [
+    {
+     "id": "t0662",
+     "w": "campus",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-163",
+   "concept": "ink creature unwrapping a colorful swirl lollipop and hard sweets",
+   "words": [
+    {
+     "id": "t0663",
+     "w": "candy",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-164",
+   "concept": "ink creature pressing an official seal on a paper for a person who passed",
+   "words": [
+    {
+     "id": "t0664",
+     "w": "certify",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-165",
+   "concept": "ink creature in a long queue at a supermarket register with a basket",
+   "words": [
+    {
+     "id": "t0665",
+     "w": "checkout",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-166",
+   "concept": "ink creature in goggles mixing colorful liquids in glass flasks with bubbling",
+   "words": [
+    {
+     "id": "t0666",
+     "w": "chemistry",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-167",
+   "concept": "ink creature watching a newspaper press printing and trucks distributing thousands of copies to many hands",
+   "words": [
+    {
+     "id": "t0667",
+     "w": "circulation",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-168",
+   "concept": "ink creature at a hotel front desk handing a city map and keys to a guest and calling a taxi",
+   "words": [
+    {
+     "id": "t0668",
+     "w": "concierge",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-169",
+   "concept": "ink creature nodding yes and signing a permission paper for a doctor",
+   "words": [
+    {
+     "id": "t0669",
+     "w": "consent",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-170",
+   "concept": "ink creature hitting a bullseye every time in a long row of darts, always the same",
+   "words": [
+    {
+     "id": "t0670",
+     "w": "consistently",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-171",
+   "concept": "ink creature holding a chocolate chip cookie with a bite taken",
+   "words": [
+    {
+     "id": "t0671",
+     "w": "cookie",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-172",
+   "concept": "ink creature on a wooden outdoor floor behind a house with a grill and chairs",
+   "words": [
+    {
+     "id": "t0672",
+     "w": "deck",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-173",
+   "concept": "ink creature telling a story with a lot of vivid detail and pictures coming from a speech bubble",
+   "words": [
+    {
+     "id": "t0673",
+     "w": "descriptive",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-174",
+   "concept": "ink creature pulling a coupon along a dotted line and detaching a trailer hitch from a car, separating a piece",
+   "words": [
+    {
+     "id": "t0674",
+     "w": "detach",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-175",
+   "concept": "ink creature carrying a thick binder of manuals and records from a shelf",
+   "words": [
+    {
+     "id": "t0675",
+     "w": "documentation",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-176",
+   "concept": "ink creature opening its own small startup in a garage with a lightbulb idea and a sign",
+   "words": [
+    {
+     "id": "t0676",
+     "w": "entrepreneur",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-177",
+   "concept": "ink creature shining gold among a crowd of ordinary gray ones, outstanding",
+   "words": [
+    {
+     "id": "t0677",
+     "w": "exceptional",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-178",
+   "concept": "ink creature touring a new office to get to know each tool and room, learning the ropes",
+   "words": [
+    {
+     "id": "t0678",
+     "w": "familiarize",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-179",
+   "concept": "ink creature talking on a red phone with a headset operator who is ready any time for help",
+   "words": [
+    {
+     "id": "t0679",
+     "w": "hotline",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-180",
+   "concept": "ink creature speaking a sentence with a rising and falling wavy pitch, a musical curve",
+   "words": [
+    {
+     "id": "t0680",
+     "w": "intonation",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-181",
+   "concept": "ink creature in a workshop proudly presenting a brand-new gadget with sparks and a lightbulb",
+   "words": [
+    {
+     "id": "t0681",
+     "w": "invention",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-182",
+   "concept": "ink creature gritting its teeth as a buzzing mosquito circles its head, annoyed",
+   "words": [
+    {
+     "id": "t0682",
+     "w": "irritate",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-183",
+   "concept": "ink creature opening a small metal storage door in a gym row with a padlock",
+   "words": [
+    {
+     "id": "t0683",
+     "w": "locker",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-184",
+   "concept": "ink creature walking past a big mistake without noticing, its eyes closed, missing a detail",
+   "words": [
+    {
+     "id": "t0684",
+     "w": "overlook",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-185",
+   "concept": "ink creature stamping an official rights certificate on a new invention at a government office",
+   "words": [
+    {
+     "id": "t0685",
+     "w": "patent",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-186",
+   "concept": "ink creature holding a bill with coins due soon on a calendar, owing money",
+   "words": [
+    {
+     "id": "t0686",
+     "w": "payable",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-187",
+   "concept": "ink creature at a first rough qualifying round before the main event with an opening bell",
+   "words": [
+    {
+     "id": "t0687",
+     "w": "preliminary",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-188",
+   "concept": "ink creature going door to door in a suit selling vacuum cleaners",
+   "words": [
+    {
+     "id": "t0688",
+     "w": "salesman",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-189",
+   "concept": "ink creature sweating in a wooden hot room with steam and a towel on its head",
+   "words": [
+    {
+     "id": "t0689",
+     "w": "sauna",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-190",
+   "concept": "ink creature gliding on ice or machine gears running in smooth motion without a hitch",
+   "words": [
+    {
+     "id": "t0690",
+     "w": "smoothly",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-191",
+   "concept": "ink creature basking in warm sun rays on a bright clear day",
+   "words": [
+    {
+     "id": "t0691",
+     "w": "sunshine",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-192",
+   "concept": "ink creature pulling a broken car with a rope behind a tow truck",
+   "words": [
+    {
+     "id": "t0692",
+     "w": "tow",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-193",
+   "concept": "ink creature at a desk with two dictionaries turning one language into another",
+   "words": [
+    {
+     "id": "t0693",
+     "w": "translator",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-194",
+   "concept": "ink creature handing over coins at a school office to pay for lessons",
+   "words": [
+    {
+     "id": "t0694",
+     "w": "tuition",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-195",
+   "concept": "ink creature at a closed door with an out of order sign and a shelf that is empty, cannot be used",
+   "words": [
+    {
+     "id": "t0695",
+     "w": "unavailable",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-196",
+   "concept": "ink creature being handed a ticket by a traffic cop after running a red light, breaking a rule",
+   "words": [
+    {
+     "id": "t0696",
+     "w": "violation",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-197",
+   "concept": "ink creature viewing a page on a screen with a cursor arrow, links and a browser window",
+   "words": [
+    {
+     "id": "t0697",
+     "w": "webpage",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-198",
+   "concept": "ink creature opening a letter that says welcome and jumping for joy, admitted",
+   "words": [
+    {
+     "id": "t0698",
+     "w": "acceptance",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-199",
+   "concept": "ink creature dividing a pile of coins into piles and handing them out to different departments",
+   "words": [
+    {
+     "id": "t0699",
+     "w": "allocate",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-200",
+   "concept": "ink creature gazing at a tall mountain top with a flag, aiming high with fire in its eyes",
+   "words": [
+    {
+     "id": "t0700",
+     "w": "ambitious",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-201",
+   "concept": "ink creature flipping to the extra pages at the very end of a thick book",
+   "words": [
+    {
+     "id": "t0701",
+     "w": "appendix",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-202",
+   "concept": "ink creature standing at a small stall at a trade fair with a banner, a stand",
+   "words": [
+    {
+     "id": "t0702",
+     "w": "booth",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-203",
+   "concept": "ink creature wiping a foggy window clear and explaining with a diagram to a confused listener",
+   "words": [
+    {
+     "id": "t0703",
+     "w": "clarify",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-204",
+   "concept": "ink creature sitting next to a friend at adjacent school desks in a classroom",
+   "words": [
+    {
+     "id": "t0704",
+     "w": "classmate",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-205",
+   "concept": "ink creature collecting scattered notes and pages into one neat book on a desk",
+   "words": [
+    {
+     "id": "t0705",
+     "w": "compile",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-206",
+   "concept": "ink creature fixing a wrong answer on a test with a red pen",
+   "words": [
+    {
+     "id": "t0706",
+     "w": "correction",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-207",
+   "concept": "ink creature adding stickers and its own parts to a plain phone case and a bike to fit its own taste, tailoring",
+   "words": [
+    {
+     "id": "t0707",
+     "w": "customize",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-208",
+   "concept": "ink creature practicing a violin every night through a window with callused fingers, committed",
+   "words": [
+    {
+     "id": "t0708",
+     "w": "dedication",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-209",
+   "concept": "ink creature as a doctor looking at an X-ray and telling the cause of a cough",
+   "words": [
+    {
+     "id": "t0709",
+     "w": "diagnose",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-210",
+   "concept": "ink creature taking a product off a shelf and putting a closed sign with a line crossed out, no longer made",
+   "words": [
+    {
+     "id": "t0710",
+     "w": "discontinue",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-211",
+   "concept": "ink creature loading plates into a machine under the counter that sprays water",
+   "words": [
+    {
+     "id": "t0711",
+     "w": "dishwasher",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-212",
+   "concept": "ink creature standing on cracked dry earth with a wilted plant and a blazing sun, no rain",
+   "words": [
+    {
+     "id": "t0712",
+     "w": "drought",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-213",
+   "concept": "ink creature turning off lights and clipping coupons to save every coin in a piggy bank",
+   "words": [
+    {
+     "id": "t0713",
+     "w": "economize",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-214",
+   "concept": "ink creature being served the main course on a large plate by a waiter, a steak and sides",
+   "words": [
+    {
+     "id": "t0714",
+     "w": "entrée",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-215",
+   "concept": "ink creature watching bright bursts of color explode in the night sky",
+   "words": [
+    {
+     "id": "t0715",
+     "w": "firework",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-216",
+   "concept": "ink creature on a long train loaded with heavy goods rolling with a rail yard",
+   "words": [
+    {
+     "id": "t0716",
+     "w": "freight",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-217",
+   "concept": "ink creature cooking sizzling potatoes in a pan of hot oil",
+   "words": [
+    {
+     "id": "t0717",
+     "w": "fry",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-218",
+   "concept": "ink creature holding a big jug of milk bigger than itself for measuring liquid",
+   "words": [
+    {
+     "id": "t0718",
+     "w": "gallon",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-219",
+   "concept": "ink creature in a straw hat watering flowers and trimming hedges with shears",
+   "words": [
+    {
+     "id": "t0719",
+     "w": "gardener",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-220",
+   "concept": "ink creature dreaming of a perfect house in a cloud above its head, wishing the best case",
+   "words": [
+    {
+     "id": "t0720",
+     "w": "ideally",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-221",
+   "concept": "ink creature receiving a bill where tax and service are all included in one price, everything in",
+   "words": [
+    {
+     "id": "t0721",
+     "w": "inclusive",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-222",
+   "concept": "ink creature with a tiny blanket that cannot cover both its head and feet, not enough",
+   "words": [
+    {
+     "id": "t0722",
+     "w": "insufficient",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-223",
+   "concept": "ink creature on its first lesson at a beginner class with simple basics on a board",
+   "words": [
+    {
+     "id": "t0723",
+     "w": "introductory",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-224",
+   "concept": "ink creature in a garage buried under old broken stuff and rusty parts",
+   "words": [
+    {
+     "id": "t0724",
+     "w": "junk",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-225",
+   "concept": "ink creature in a bow tie bowing politely to a lady creature at a shop, addressing a lady",
+   "words": [
+    {
+     "id": "t0725",
+     "w": "ma'am",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-226",
+   "concept": "ink creature looking at a car dashboard that shows how far it drove with a road behind",
+   "words": [
+    {
+     "id": "t0726",
+     "w": "mileage",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-227",
+   "concept": "ink creature covering its ears in a loud room with a blaring band and drums",
+   "words": [
+    {
+     "id": "t0727",
+     "w": "noisy",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-228",
+   "concept": "ink creature holding a flat metal cooking pot with a handle over a stove",
+   "words": [
+    {
+     "id": "t0728",
+     "w": "pan",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-229",
+   "concept": "ink creature carrying a brown paper box tied with string to the post office",
+   "words": [
+    {
+     "id": "t0729",
+     "w": "parcel",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-230",
+   "concept": "ink creature twirling spaghetti on a fork with a red sauce",
+   "words": [
+    {
+     "id": "t0730",
+     "w": "pasta",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-231",
+   "concept": "ink creature picking up a thin weekly magazine from a rack of issues",
+   "words": [
+    {
+     "id": "t0731",
+     "w": "periodical",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-232",
+   "concept": "ink creature swallowing a small round tablet with water",
+   "words": [
+    {
+     "id": "t0732",
+     "w": "pill",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-233",
+   "concept": "ink creature lifting a small foldable radio by a handle and carrying it easily",
+   "words": [
+    {
+     "id": "t0733",
+     "w": "portable",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-234",
+   "concept": "ink creature standing at the door exactly when the clock strikes with a pocket watch, never late",
+   "words": [
+    {
+     "id": "t0734",
+     "w": "punctual",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-235",
+   "concept": "ink creature happily playing a game of catch in a park, free-time fun",
+   "words": [
+    {
+     "id": "t0735",
+     "w": "recreation",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-236",
+   "concept": "ink creature sighing in comfort as a heavy backpack is lifted off its shoulders, pain going away",
+   "words": [
+    {
+     "id": "t0736",
+     "w": "relieve",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-237",
+   "concept": "ink creature looking at a sticky note on a fridge and a ringing alarm clock, a gentle nudge",
+   "words": [
+    {
+     "id": "t0737",
+     "w": "reminder",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-238",
+   "concept": "ink creatures whispering behind their hands in a circle, a gossip spreading from ear to ear",
+   "words": [
+    {
+     "id": "t0738",
+     "w": "rumor",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-239",
+   "concept": "ink creature wrapping a long woolen scarf around its neck in snow",
+   "words": [
+    {
+     "id": "t0739",
+     "w": "scarf",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-240",
+   "concept": "ink creature on a sandy shore with beach umbrellas and gentle waves",
+   "words": [
+    {
+     "id": "t0740",
+     "w": "seaside",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-241",
+   "concept": "ink creature cutting a long rope in half with scissors, making a long thing short",
+   "words": [
+    {
+     "id": "t0741",
+     "w": "shorten",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-242",
+   "concept": "ink creature baking a one-of-a-kind cake with sparkles made only for a certain guest, for a purpose",
+   "words": [
+    {
+     "id": "t0742",
+     "w": "specially",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-243",
+   "concept": "ink creature knocking over a cup of juice that runs across a table",
+   "words": [
+    {
+     "id": "t0743",
+     "w": "spill",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-244",
+   "concept": "ink creature in a wedding ring holding hands with its husband or wife at home",
+   "words": [
+    {
+     "id": "t0744",
+     "w": "spouse",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-245",
+   "concept": "ink creature taking three apples away from a pile of five on a chalkboard",
+   "words": [
+    {
+     "id": "t0745",
+     "w": "subtract",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  },
+  {
+   "g": "c4-246",
+   "concept": "ink creature tapping a flat touch-screen computer in both hands",
+   "words": [
+    {
+     "id": "t0746",
+     "w": "tablet",
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c4-247",
+   "concept": "ink creature straining to lift an enormous block labeled with an elephant on a scale, heavy",
+   "words": [
+    {
+     "id": "t0747",
+     "w": "ton",
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c4-248",
+   "concept": "ink creature tapping a snack machine that drops a bag of chips into a tray",
+   "words": [
+    {
+     "id": "t0748",
+     "w": "vend",
+     "tint": 0
+    }
+   ],
+   "species": "hokoridama"
+  },
+  {
+   "g": "c4-249",
+   "concept": "ink creature balancing on one leg in a stretching pose on a mat, calm",
+   "words": [
+    {
+     "id": "t0749",
+     "w": "yoga",
+     "tint": 0
+    }
+   ],
+   "species": "atenashi"
+  },
+  {
+   "g": "c4-250",
+   "concept": "ink creature at a strange place speaking with a heavy regional way of talking shown by a wavy speech bubble, a foreign accent",
+   "words": [
+    {
+     "id": "t0750",
+     "w": "accent",
+     "tint": 0
+    }
+   ],
+   "species": "shimi"
+  }
+ ]
+}
