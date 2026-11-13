@@ -114,10 +114,24 @@
 @keyframes gq-house-rise{from{transform:translateY(0);opacity:0}25%{opacity:.9}to{transform:translateY(-22px);opacity:0}}
 @media(prefers-reduced-motion:reduce){.gq-house-sparks{animation:none;opacity:.7}}
 
-/* 本文だけをスクロールし、切手と操作は画面内に残す。 */
-.gq-pop-letter{min-height:0;overflow:auto;overscroll-behavior:contain}
-.gq-pop-card > .gq-night-shadows{flex:0 0 auto;grid-template-columns:repeat(5,28px);gap:6px;margin:2px auto}
-.gq-pop .gq-night-shadows .stamp{width:28px;height:28px;padding:2px;min-height:0}
-.gq-pop .gq-night-shadows .stamp .in{padding:1px}
-.gq-pop .gq-night-shadows .stamp .lbl,.gq-pop .gq-night-shadows .stamp .ja,.gq-pop .gq-night-shadows .stamp .val{display:none}
-.gq-pop-acts{flex:0 0 auto}
+/* 本文は全行を表示し、通常サイズの切手を操作の左に重ねる。 */
+.gq-pop-letter{flex:0 0 auto;overflow:visible}
+.gq-pop-footer{display:flex;align-items:center;justify-content:center;gap:8px;flex:0 0 auto}
+.gq-pop-footer > .gq-night-shadows{position:relative;display:block;flex:0 0 108px;height:100px;margin:0}
+.gq-pop .gq-night-shadows .stamp{position:absolute;top:8px;left:2px;width:56px;transform:rotate(-12deg);transform-origin:50% 85%}
+.gq-pop .gq-night-shadows .stamp:nth-child(2){left:14px;top:5px;transform:rotate(-6deg)}
+.gq-pop .gq-night-shadows .stamp:nth-child(3){left:26px;top:3px;transform:rotate(0deg)}
+.gq-pop .gq-night-shadows .stamp:nth-child(4){left:38px;top:5px;transform:rotate(6deg)}
+.gq-pop .gq-night-shadows .stamp:nth-child(5){left:50px;top:8px;transform:rotate(12deg)}
+.gq-pop .gq-night-shadows .stamp:focus-visible{z-index:1}
+.gq-pop .gq-pop-acts{flex:0 0 auto;flex-wrap:nowrap;align-items:center;gap:8px}
+.gq-pop .gq-wax{width:64px;height:64px;font-size:15px}
+.gq-pop [data-act="close"]:focus:not(:focus-visible){outline:none}
+.gq-pop [data-act="close"]:focus-visible{outline:2px solid var(--seal);outline-offset:3px;border-radius:6px}
+@media(max-height:700px){
+ .gq-pop-card{gap:6px;padding:8px}
+ .gq-pop .paper{padding:6px 8px}
+ .gq-pop .paper .ln{font-size:14px;line-height:1.4}
+ .gq-pop .paper .ph{padding-bottom:3px;margin-bottom:3px}
+ .gq-pop .gq-postscript{padding:4px 8px;line-height:1.4}
+}
