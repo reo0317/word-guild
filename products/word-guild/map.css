@@ -27,7 +27,7 @@
 .gq-road-svg .center{fill:var(--ink);opacity:.4}
 
 /* 道の上の物の置き場所（大きさ0の点）。中身は点を中心に置く。 */
-.gq-bb{position:absolute;left:0;top:0;width:0;height:0;will-change:transform,opacity}
+.gq-bb{position:absolute;left:0;top:0;width:0;height:0}
 .gq-ward-tag{position:absolute;left:0;top:0;transform:translate(-50%,-50%);height:30px;padding:5px 12px 0;background:var(--ink);color:var(--paper);font-family:var(--serif);font-size:13px;letter-spacing:.06em;border-radius:15px;white-space:nowrap;box-shadow:0 2px 0 #0004}.gq-ward-tag b{color:var(--lamp)}
 
 .gq-step{position:absolute;left:0;top:0;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;border:3px solid var(--ink);background:var(--paper)}
@@ -52,7 +52,7 @@
 .gq-gate:active{transform:none;box-shadow:none}
 
 .gq-tsumugi-pin{position:absolute;left:0;top:0;width:100px;height:100px;margin:-100px 0 0 -50px;object-fit:contain;object-position:center bottom;pointer-events:none}
-.gq-here-panel{position:absolute;top:-34px;display:grid;gap:4px;width:max-content;max-width:170px;padding:5px 8px;border:2px solid var(--ink);border-radius:18px;background:var(--paper-hi);box-shadow:0 3px 0 var(--ink)}
+.gq-here-panel{position:absolute;top:0;left:0;display:grid;gap:4px;width:max-content;max-width:170px;padding:5px 8px;border:2px solid var(--ink);border-radius:18px;background:#fff9eb;box-shadow:0 3px 0 var(--ink)}
 .gq-here-panel.left,.gq-here-panel.right{right:auto}
 .gq-here-panel .gq-faces{display:flex;align-items:center;gap:2px}.gq-here-panel .gq-face{width:34px;height:34px}
 .gq-due-n,.gq-due-badge b{display:grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:11px;background:var(--seal);color:var(--paper);font-size:13px;font-weight:900;border:1.5px solid var(--ink)}
@@ -139,3 +139,11 @@
  .gq-pop .paper .ph{padding-bottom:3px;margin-bottom:3px}
  .gq-pop .gq-postscript{padding:4px 8px;line-height:1.4}
 }
+
+/* 家の基準サイズは固定し、スクロール時は transform だけを変える。 */
+.gq-house.left,.gq-house.right{left:0;right:auto;top:0;width:140px;height:140px;transform-origin:0 0}
+.gq-bb-tsumugi{will-change:transform}
+.gq-bb-panel{opacity:1}
+
+/* 遠景の描画端を霧へ溶かす。紙魚とは別の道路 SVG だけをマスクする。 */
+.gq-road-svg{-webkit-mask-image:linear-gradient(transparent 27%,#000 38%);mask-image:linear-gradient(transparent 27%,#000 38%)}

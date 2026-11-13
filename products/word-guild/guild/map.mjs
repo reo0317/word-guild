@@ -33,6 +33,7 @@ export const H_CAMERA = 0.86; // カメラの高さ（画面の縦横比で補�
 const Z_NEAR = 700;    // 下端での最短距離。これより近い地面は描かない
 const PHASE = Math.PI / 2;
 const S_MIN = 0.07;
+const DRAW_DISTANCE = 3300;
 
 // art/ward-N.webp（1200×800）の奥の道・海面の消失点。原画内の比率。
 export const WARD_VANISHING = {
@@ -51,15 +52,27 @@ export function skyGeometry(width, height, ward) {
 }
 
 export function tsumugiScale(scale, initialScale) {
-  return scale / initialScale;
+  return objectScale(scale / initialScale);
+}
+
+// 地面の投影と、絵の表示倍率は分離する。
+export function objectScale(scale) {
+  return Math.max(.3, Math.min(1.2, Number.isFinite(scale) ? scale : scale > 0 ? 1.2 : .3));
+}
+export function roadAmplitude(distance) {
+  const t = Math.max(0, Math.min(1, (distance - 550) / 1650));
+  return (1 - t) ** 3;
+}
+export function lighthouseOpacity(distance) {
+  return Math.max(0, Math.min(1, (2400 - distance) / 1000));
 }
 
 // worldZ は地面上の絶対位置、camera はスクロールによる前進距離。
 // 縦横の画面単位をそれぞれ width / height に戻す通常の透視投影。
 export function projectRoad(width, height, worldZ, camera = 0) {
-  const z = worldZ - camera + Z_NEAR;
+  const z = Math.max(1, worldZ - camera + Z_NEAR);
   const scale = f / z;
-  const worldX = A * Math.sin(2 * Math.PI * worldZ / L + PHASE);
+  const worldX = A * roadAmplitude(worldZ - camera) * Math.sin(2 * Math.PI * worldZ / L + PHASE);
   return {x: width / 2 + width * scale * worldX,
     y: height * (HORIZON + scale * H_CAMERA), width: width * scale * W,
     half: width * scale * W / 2, scale, z};
@@ -198,7 +211,7 @@ export function renderMap(view, ctx) {
         data-reveal="${reveal}" style="--reveal:${100 - reveal}%" aria-label="街灯${lamp.shelf}の${letter ? '手紙' : '切手帳'}を開く">
         <span class="gq-house-fallback" aria-hidden="true">${miniHouse()}</span>
         <span class="gq-house-art" aria-hidden="true"><i class="gq-house-halo"></i><i class="gq-house-shadow"></i>
-        <img class="gq-house-color" alt="" width="192" height="192" decoding="async">
+        <img class="gq-house-color" alt="" width="140" height="140" decoding="async">
         <i class="gq-house-warm"></i><i class="gq-house-sparks"></i></span>
         ${visiting.has(lamp.shelf) ? '<span class="gq-visitor" aria-label="まれびとが来ています">✦</span>' : ''}
         ${done ? `<span class="gq-house-stars ${stars?.complete ? 'joined' : ''} ${stars?.gold === 5 ? 'gold' : ''}" aria-label="夜の切手 ${stars?.met ?? 0}/5">${Array.from({length: 5}, (_, i) => `<i class="${i < (stars?.met ?? 0) ? 'met' : ''}">★</i>`).join('')}</span>` : ''}
@@ -335,12 +348,13 @@ export function renderMap(view, ctx) {
   const skyLayers = [...view.querySelectorAll('.gq-sky-art')];
   let Ws = 0, Hs = 0, frame = 0, lastWard = 0;
   let initialTsumugiScale = null;
+  let panelTimer;
+  let placePanel = () => {};
 
   const update = () => {
     frame = 0;
     if (!Ws || !Hs) return;
     const c = Math.min(total, Math.max(-1400, total - road.scrollTop)); // カメラの位置
-    const F = Z_NEAR;
     const project = y => projectRoad(Ws, Hs, y, c);
     const sOf = r => f / (r + Z_NEAR);
     const X = y => project(y).x;
@@ -349,8 +363,10 @@ export function renderMap(view, ctx) {
 
     // 画面の縦方向に等間隔で標本化し、同じ投影から両側を作る。
     const S_MAX = 1;
-    const N = 360;
+    const N = 120;
+    const visibleEnd = Math.min(roadEnd, c + DRAW_DISTANCE);
     const ribbon = (cap, width) => {
+      cap = Math.min(cap, visibleEnd);
       const left = [], right = [];
       for (let i = 0; i <= N; i++) {
         const s0 = S_MAX + (S_MIN - S_MAX) * i / N;
@@ -372,7 +388,7 @@ export function renderMap(view, ctx) {
     paths.walked.setAttribute('d', hereItem ? poly(ribbon(Math.min(hereY, roadEnd), 0.5)) : '');
 
     // 石だたみの横線と、中央の破線（距離に合わせて間隔が縮む）。
-    const yMax = Math.min(roadEnd, c + F * (1 / S_MIN - 1));
+    const yMax = visibleEnd;
     let lines = '', dashes = '';
     for (let y = Math.max(0, Math.ceil((c) / 48) * 48); y <= yMax; y += 48) {
       const s = sOf(y - c);
@@ -393,35 +409,32 @@ export function renderMap(view, ctx) {
     for (const b of boards) {
       const r = b.y - c;
       const s = sOf(r);
-      if (r < 0 || (s < S_MIN && !b.el.classList.contains('gq-bb-top'))) {
+      const top = b.el.classList.contains('gq-bb-top');
+      const post = b.el.classList.contains('gq-bb-post');
+      const pin = b.el.classList.contains('gq-bb-tsumugi');
+      if (r < 0 || r > DRAW_DISTANCE || (top && !lighthouseOpacity(r)) || (post && (Math.abs(hereY - b.y) > 600 || r > 850)) || Y(s) > Hs + 140) {
         if (b.shown) { b.el.style.display = 'none'; b.shown = false; }
         continue;
       }
       if (!b.shown) { b.el.style.display = ''; b.shown = true; }
       const fade = Math.min(1, Math.max(0, (s - S_MIN) / 0.2)) * (b.far ? 0.55 : 1);
       const sx = X(b.y, s);
+      const displayScale = b.panel ? 1 : pin ? tsumugiScale(s, initialTsumugiScale)
+        : top ? objectScale(Math.min(240, 600 * s ** .6) / 600) : objectScale(s * b.scale);
       if (b.house) {
         const current = Number(b.house.dataset.shelf) === map.here?.shelf;
         const {size, offset, side} = houseGeometry(Ws, project(b.y), current);
-        b.house.classList.toggle('left', side === 'left');
-        b.house.classList.toggle('right', side === 'right');
-        // 親の遠近縮小を打ち消し、画像も代替の家も同じ表示幅にする。
-        b.house.style.visibility = size < 24 ? 'hidden' : '';
-        b.house.style.setProperty('--house-size', `${(size / s).toFixed(3)}px`);
-        b.house.style.setProperty('--house-offset', `${(offset / s).toFixed(3)}px`);
+        const hx = side === 'left' ? -offset - size : offset;
+        b.house.style.transform = `translate(${(hx / displayScale).toFixed(2)}px,${(-size * .85 / displayScale).toFixed(2)}px) scale(${(size / (140 * displayScale)).toFixed(3)})`;
       }
-      if (b.el.classList.contains('gq-bb-tsumugi')) b.scale = tsumugiScale(1, initialTsumugiScale);
-      if (b.el.classList.contains('gq-bb-top')) {
-        // 家より大きな目印。遠近を保ち、近接時は画面内に収める。
-        b.scale = Math.min(240, 600 * s ** .6) / (600 * s);
-      }
-      if (b.panel) b.scale = 1 / s;
-      b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${(s * b.scale).toFixed(3)})`;
-      b.el.style.opacity = b.el.classList.contains('gq-bb-top') ? '1' : fade.toFixed(2);
-      b.el.style.zIndex = b.panel ? '202' : String(Math.round(s * 100));
+      b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${displayScale.toFixed(3)})`;
+      b.el.style.opacity = b.panel || pin ? '1' : top ? lighthouseOpacity(r).toFixed(2) : fade.toFixed(2);
+      b.el.style.zIndex = b.panel ? '203' : pin ? '202' : String(Math.round(s * 100));
     }
 
-    // 全物体の投影後に実際の矩形を測る。更新前の座標や非表示の物体は使わない。
+    // レイアウトの測定は初期表示・リサイズ・スクロール停止時だけ。
+    placePanel = () => {
+    if (!stage.isConnected) return;
     const panelBoard = boards.find(b => b.panel && b.shown);
     if (panelBoard) {
       const origin = stage.getBoundingClientRect();
@@ -435,10 +448,11 @@ export function renderMap(view, ctx) {
       const {left, top} = panelGeometry(Ws, Hs, p.x, p.y,
         panelBoard.panel.offsetWidth, panelBoard.panel.offsetHeight, obstacles,
         100 * tsumugiScale(p.scale, initialTsumugiScale));
-      panelBoard.panel.style.left = `${left - p.x}px`;
-      panelBoard.panel.style.top = `${top - p.y}px`;
+      panelBoard.panel.style.visibility = '';
+      panelBoard.panel.style.transform = `translate(${left - p.x}px,${top - p.y}px)`;
     }
 
+    };
     // カメラの少し先にある区の絵を、背景に出す。
     let ward = wardStarts[0]?.ch ?? 1;
     for (const w of wardStarts) if (w.y <= c + 500) ward = w.ch;
@@ -476,8 +490,15 @@ export function renderMap(view, ctx) {
         Math.min(total, Math.max(-1400, total - road.scrollTop))).scale;
     }
     update();
+    placePanel();
   };
-  road.addEventListener('scroll', schedule, {passive: true});
+  road.addEventListener('scroll', () => {
+    const panel = boards.find(b => b.panel);
+    if (panel) panel.panel.style.visibility = 'hidden';
+    schedule();
+    clearTimeout(panelTimer);
+    panelTimer = setTimeout(() => { if (frame) { cancelAnimationFrame(frame); update(); } placePanel(); }, 140);
+  }, {passive: true});
   measure();
   requestAnimationFrame(measure);
   if (typeof ResizeObserver !== 'undefined') new ResizeObserver(measure).observe(road);

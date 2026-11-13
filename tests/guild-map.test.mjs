@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {HOUSE_ART} from '../products/word-guild/guild/art.mjs';
-import {renderMap, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, A, L, W, f} from '../products/word-guild/guild/map.mjs';
+import {renderMap, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, A, L, W, f} from '../products/word-guild/guild/map.mjs';
 import {buildMap} from '../products/word-guild/guild/stages.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
@@ -89,9 +89,9 @@ test('ツムギは初期位置で100pxを保ち、スクロールで道と同じ
     for (const camera of [-1400, -500, initialCamera, 700, 900]) {
       const p = projectRoad(width, height, worldZ, camera);
       const size = 100 * tsumugiScale(p.scale, initial.scale);
-      assert.ok(size > previous);
-      assert.ok(Math.abs(size / 100 - initial.z / p.z) < 1e-12);
-      assert.ok(Math.abs(size / 100 - p.width / initial.width) < 1e-12);
+      assert.ok(size >= previous);
+      assert.ok(Math.abs(size / 100 - objectScale(initial.z / p.z)) < 1e-12);
+      assert.ok(Math.abs(size / 100 - objectScale(p.width / initial.width)) < 1e-12);
       previous = size;
     }
   }
@@ -124,7 +124,7 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     const end = Number(view.innerHTML.match(/class="gq-bb gq-bb-top" data-y="([^"]+)"/)[1]);
     const checkRoadEnd = () => {
       const camera = Math.min(end + 40, Math.max(-1400, end + 40 - road.scrollTop));
-      const terminal = projectRoad(390, 680, end, camera);
+      const terminal = projectRoad(390, 680, Math.min(end, camera + 3300), camera);
       for (const name of ['base', 'edge', 'lines', 'center', 'walked']) {
         const coords = nodes[`#gq-r-${name}`].attrs.d.match(/-?\d+(?:\.\d+)?/g)?.map(Number) ?? [];
         for (let i = 1; i < coords.length; i += 2) assert.ok(coords[i] >= terminal.y - .051, `${name} extends past lighthouse`);
@@ -213,4 +213,23 @@ test('390×844・360×640で吹き出しは左右の家とツムギを避け、�
       for (const h of houses) assert.ok(panel.left >= h.right || panel.left + 150 <= h.left || panel.top >= h.bottom || panel.top + 88 <= h.top);
     }
   }
+});
+
+ test('縮尺の上下限・灯台の霧・遠い道の減衰', () => {
+  for (const scale of [-10, 0, .1, .3, 1, 1.2, 100, Infinity, NaN]) {
+    assert.ok(objectScale(scale) >= .3 && objectScale(scale) <= 1.2);
+    assert.ok(tsumugiScale(scale, .4) >= .3 && tsumugiScale(scale, .4) <= 1.2);
+  }
+  assert.equal(lighthouseOpacity(2400), 0);
+  assert.equal(lighthouseOpacity(10000), 0);
+  assert.equal(lighthouseOpacity(1400), 1);
+  assert.equal(lighthouseOpacity(1900), .5);
+  let previous = 1;
+  for (let d = 0; d <= 10000; d += 10) {
+    const amplitude = roadAmplitude(d);
+    assert.ok(amplitude >= 0 && amplitude <= previous);
+    previous = amplitude;
+  }
+  assert.equal(roadAmplitude(0), 1);
+  assert.equal(roadAmplitude(2200), 0);
 });
