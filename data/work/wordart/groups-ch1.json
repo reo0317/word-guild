@@ -45,7 +45,7 @@
   },
   {
    "g": "c1-003",
-   "concept": "smug ink creature with a glowing light bulb in its chest, arms crossed, a big check mark badge",
+   "concept": "Ink creature with a closed thick book tucked under its arm, chin up, smug confident grin, tapping its own head with one finger (no check marks, no symbols).",
    "words": [
     {
      "id": "b0002",
@@ -103,17 +103,12 @@
   },
   {
    "g": "c1-006",
-   "concept": "ink creature with a giant ear and one hand on its heart, fingertips touching a fluffy cloud, sound waves curling toward it",
+   "concept": "Ink creature with one enormous cupped ear, sound waves and tiny musical notes flowing into it, eyes closed listening intently.",
    "words": [
     {
      "id": "b0068",
      "w": "hear",
      "tint": 0
-    },
-    {
-     "id": "b0032",
-     "w": "feel",
-     "tint": 1
     }
    ]
   },
@@ -193,7 +188,7 @@
   },
   {
    "g": "c1-011",
-   "concept": "ink creature greeting a sunrise, with a rooster crest and a toothbrush, fresh and wide awake",
+   "concept": "Ink creature yawning and stretching beside a candle, dark sky with stars still out and only a thin glow on the horizon, rooster crowing on its shoulder — very early before dawn.",
    "words": [
     {
      "id": "b0079",
@@ -1294,6 +1289,17 @@
      "id": "b0052",
      "w": "next",
      "tint": 1
+    }
+   ]
+  },
+  {
+   "g": "c1-092",
+   "concept": "Ink creature with both hands pressed to its chest over a glowing heart, eyes closed, warm emotion radiating as soft rays.",
+   "words": [
+    {
+     "id": "b0032",
+     "w": "feel",
+     "tint": 0
     }
    ]
   }
