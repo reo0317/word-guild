@@ -115,20 +115,13 @@ export function houseGeometry(width, projection, current = false) {
   return {x, size, offset: half + 8, side};
 }
 
-// 大きく映る間は必ず表示。左右の家との重なり面積を比べ、同点なら右。
+// 大きく映る間は画面中央に向かう側へ。家との重なりは許し、画面内に収める。
 export function panelGeometry(width, height, x, feet, pw, ph, objects, tsumugiSize = 100) {
   if (tsumugiSize < 70) return null;
   const top = Math.max(8, Math.min(height - ph - 8, feet - tsumugiSize));
   const gap = tsumugiSize / 2 + 6;
-  const candidates = [x + gap, x - gap - pw].map(left => {
-    left = Math.max(8, Math.min(width - pw - 8, left));
-    const overlap = objects.reduce((sum, h) => sum
-      + Math.max(0, Math.min(left + pw, h.right) - Math.max(left, h.left))
-      * Math.max(0, Math.min(top + ph, h.bottom) - Math.max(top, h.top)), 0);
-    return {left, top, overlap};
-  });
-  const best = candidates[1].overlap < candidates[0].overlap ? candidates[1] : candidates[0];
-  return {left: best.left, top: best.top};
+  const beside = x < width / 2 ? x + gap : x - gap - pw;
+  return {left: Math.max(8, Math.min(width - pw - 8, beside)), top};
 }
 
 const DAILY_SHORT = {revenge: ['↺', '戻ってきた紙魚'], fresh: ['✦', '新しい紙魚'], clean: ['✓', 'ヒントなし'], finish: ['▶', '配達']};
@@ -457,16 +450,9 @@ export function renderMap(view, ctx) {
     if (!stage.isConnected) return;
     const panelBoard = boards.find(b => b.panel && b.shown);
     if (panelBoard) {
-      const origin = stage.getBoundingClientRect();
-      const obstacles = boards.filter(b => b.shown && !b.panel).flatMap(b =>
-        [...b.el.querySelectorAll('.gq-house')].map(el => {
-          const r = el.getBoundingClientRect();
-          return {left:r.left - origin.left, right:r.right - origin.left,
-            top:r.top - origin.top, bottom:r.bottom - origin.top};
-        }));
       const p = project(panelBoard.y);
       const placement = panelGeometry(Ws, Hs, p.x, p.y,
-        panelBoard.panel.offsetWidth, panelBoard.panel.offsetHeight, obstacles,
+        panelBoard.panel.offsetWidth, panelBoard.panel.offsetHeight, [],
         100 * tsumugiScale(p.scale, initialTsumugiScale));
       panelBoard.panel.style.visibility = placement ? '' : 'hidden';
       if (!placement) return;

@@ -286,11 +286,11 @@ test('スマホ幅で道の点列は打ち切り距離を超えず、画面の�
 });
 
 
-test('吹き出しは大きなツムギの横に限り、左の家を避けて右へ出す', () => {
+test('吹き出しは中央より左のツムギの右、中央以降のツムギの左に出す', () => {
   const house = {left:10, right:140, top:270, bottom:440};
   assert.deepEqual(panelGeometry(390, 680, 190, 400, 130, 80, [house]), {left:246, top:300});
   assert.equal(panelGeometry(390, 680, 190, 400, 130, 80, [], 69), null);
-  assert.deepEqual(panelGeometry(320, 480, 160, 300, 150, 80, []), {left:162, top:200});
+  assert.deepEqual(panelGeometry(320, 480, 160, 300, 150, 80, []), {left:8, top:200});
   assert.deepEqual(panelGeometry(390, 680, 210, 400, 130, 80,
     [{left:260, right:380, top:270, bottom:440}]), {left:24, top:300});
 });
@@ -307,12 +307,22 @@ test('打ち切り地点まで世界座標の sin の振幅を保つ', () => {
 });
 
 
-test('両側に家があっても重なりの小さい側へ必ず出す（同点は右）', () => {
+test('家との重なりによらず中央に向かう側へ出し、小さいツムギでは隠す', () => {
   const left = {left:0, right:150, top:280, bottom:400};
   const right = {left:260, right:390, top:280, bottom:400};
   assert.deepEqual(panelGeometry(390,680,190,400,130,80,[left,right]), {left:246,top:300});
-  assert.deepEqual(panelGeometry(390,680,190,400,130,80,[{...left,right:50},right]), {left:8,top:300});
+  assert.deepEqual(panelGeometry(390,680,190,400,130,80,[{...left,right:50},right]), {left:246,top:300});
   assert.ok(panelGeometry(390,680,190,400,130,80,[left,right],70));
+  assert.deepEqual(panelGeometry(390,680,210,400,130,80,[left,right]), {left:24,top:300});
+  for (const width of [320, 375, 390, 430]) {
+    for (const x of [0, width / 2 - 1, width / 2, width]) {
+      for (const feet of [0, 400, 680]) {
+        const p = panelGeometry(width,680,x,feet,130,80,[left,right]);
+        assert.ok(p.left >= 8 && p.left + 130 <= width - 8);
+        assert.ok(p.top >= 8 && p.top + 80 <= 672);
+      }
+    }
+  }
 });
 
 
