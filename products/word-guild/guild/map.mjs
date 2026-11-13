@@ -54,12 +54,19 @@ export function houseGeometry(width, projection, current = false) {
 }
 
 // 頭上に近い空き位置を選ぶ。画面端・家・ツムギ自身を避ける。
-export function panelGeometry(width, height, x, feet, pw, ph, houses) {
+export function panelGeometry(width, height, x, feet, pw, ph, objects) {
   const preferred = {left: Math.max(8, Math.min(width - pw - 8, x - pw / 2)), top: feet - 112 - ph};
-  const obstacles = [...houses, {left:x - 50, right:x + 50, top:feet - 100, bottom:feet}];
+  const obstacles = [...objects, {left:x - 50, right:x + 50, top:feet - 100, bottom:feet}];
   const xs = [preferred.left, 8, width - pw - 8, ...obstacles.flatMap(h => [h.left - pw - 6, h.right + 6])];
   const ys = [preferred.top, 8, ...obstacles.flatMap(h => [h.top - ph - 6, h.bottom + 6])];
-  let best = preferred, score = Infinity;
+  const clear = ({left, top}) => left >= 8 && left + pw <= width - 8 && top >= 8 && top + ph <= height - 8
+    && !obstacles.some(h => left < h.right + 5 && left + pw > h.left - 5 && top < h.bottom + 5 && top + ph > h.top - 5);
+  // 頭上 → 左上 → 右上。横の候補も頭より上に保つ。
+  for (const left of [preferred.left, Math.max(8, x - 56 - pw), Math.min(width - pw - 8, x + 56)]) {
+    const candidate = {left, top: preferred.top};
+    if (clear(candidate)) return candidate;
+  }
+  let best = {...preferred, top: Math.max(8, Math.min(height - ph - 8, preferred.top))}, score = Infinity;
   for (const left of xs) for (const top of ys) {
     if (left < 8 || left + pw > width - 8 || top < 8 || top + ph > height - 8) continue;
     if (obstacles.some(h => left < h.right + 5 && left + pw > h.left - 5 && top < h.bottom + 5 && top + ph > h.top - 5)) continue;
@@ -381,22 +388,26 @@ export function renderMap(view, ctx) {
         b.house.style.setProperty('--house-offset', `${(offset / s).toFixed(3)}px`);
       }
       if (b.el.classList.contains('gq-bb-tsumugi') || b.panel) b.scale = 1 / s;
-      if (b.panel) {
-        // 頭上から始め、左右の端と投影された家の矩形を避ける。
-        const pw = b.panel.offsetWidth, ph = b.panel.offsetHeight;
-        const obstacles = boards.filter(other => other.house).map(other => {
-          const p = project(other.y);
-          const h = houseGeometry(Ws, p, Number(other.house.dataset.shelf) === map.here?.shelf);
-          const x = h.side === 'left' ? p.x - h.offset - h.size : p.x + h.offset;
-          return {left:x, right:x + h.size, top:p.y - h.size * .85, bottom:p.y + h.size * .15};
-        });
-        const {left, top} = panelGeometry(Ws, Hs, sx, Y(s), pw, ph, obstacles);
-        b.panel.style.left = `${left - sx}px`;
-        b.panel.style.top = `${Math.max(8, top) - Y(s)}px`;
-      }
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${(s * b.scale).toFixed(3)})`;
       b.el.style.opacity = fade.toFixed(2);
-      b.el.style.zIndex = String(Math.round(s * 100));
+      b.el.style.zIndex = b.panel ? '202' : String(Math.round(s * 100));
+    }
+
+    // 全物体の投影後に実際の矩形を測る。更新前の座標や非表示の物体は使わない。
+    const panelBoard = boards.find(b => b.panel && b.shown);
+    if (panelBoard) {
+      const origin = stage.getBoundingClientRect();
+      const obstacles = boards.filter(b => b.shown && !b.panel).flatMap(b =>
+        [...b.el.querySelectorAll('.gq-house, .gq-lamp-node, .gq-post')].map(el => {
+          const r = el.getBoundingClientRect();
+          return {left:r.left - origin.left, right:r.right - origin.left,
+            top:r.top - origin.top, bottom:r.bottom - origin.top};
+        }));
+      const p = project(panelBoard.y);
+      const {left, top} = panelGeometry(Ws, Hs, p.x, p.y,
+        panelBoard.panel.offsetWidth, panelBoard.panel.offsetHeight, obstacles);
+      panelBoard.panel.style.left = `${left - p.x}px`;
+      panelBoard.panel.style.top = `${top - p.y}px`;
     }
 
     // カメラの少し先にある区の絵を、背景に出す。
