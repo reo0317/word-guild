@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {HOUSE_ART} from '../products/word-guild/guild/art.mjs';
-import {renderMap, panelGeometry, houseGeometry, projectRoad, A, L, W, f} from '../products/word-guild/guild/map.mjs';
+import {renderMap, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, A, L, W, f} from '../products/word-guild/guild/map.mjs';
 import {buildMap} from '../products/word-guild/guild/stages.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
@@ -64,6 +64,80 @@ test('一定幅の世界座標の道を投影すると遠いほど細くなる',
       assert.ok(Math.abs(p.width - width * f * W / p.z) < 1e-10);
       previous = p.width;
     }
+  }
+});
+
+test('6区の原画の消失点がスマホ縦横の投影と一致し、背景の左右に隙間を作らない', () => {
+  for (const [width, height] of [[320, 480], [390, 680], [430, 760], [844, 280]]) {
+    for (const [ward, point] of Object.entries(WARD_VANISHING)) {
+      const sky = skyGeometry(width, height, Number(ward));
+      const distant = projectRoad(width, height, 1e15, 321);
+      assert.ok(Math.abs(sky.left + sky.width * point.x - distant.x) < 1e-8);
+      assert.ok(Math.abs(sky.top + sky.height * point.y - distant.y) < 1e-8);
+      assert.ok(sky.left <= 1e-9 && sky.left + sky.width >= width - 1e-9);
+      assert.ok(Math.abs(sky.width / sky.height - 1.5) < 1e-12);
+    }
+  }
+});
+
+test('ツムギは初期位置で100pxを保ち、スクロールで道と同じ逆距離比で縮小・拡大する', () => {
+  for (const [width, height] of [[320, 480], [390, 680], [430, 760]]) {
+    const worldZ = 900, initialCamera = 400;
+    const initial = projectRoad(width, height, worldZ, initialCamera);
+    assert.equal(100 * tsumugiScale(initial.scale, initial.scale), 100);
+    let previous = 0;
+    for (const camera of [-1400, -500, initialCamera, 700, 900]) {
+      const p = projectRoad(width, height, worldZ, camera);
+      const size = 100 * tsumugiScale(p.scale, initial.scale);
+      assert.ok(size > previous);
+      assert.ok(Math.abs(size / 100 - initial.z / p.z) < 1e-12);
+      assert.ok(Math.abs(size / 100 - p.width / initial.width) < 1e-12);
+      previous = size;
+    }
+  }
+});
+
+test('描画とスクロールにもツムギの遠近縮尺と背景の補正を適用する', () => {
+  const progress = {words: {}, gates: []};
+  const map = buildMap(words, progress, 20000);
+  let scroll, scheduled;
+  const road = {clientWidth:390, clientHeight:680, scrollTop:0,
+    getBoundingClientRect:()=>({top:44}), addEventListener:(_, fn)=>{scroll=fn;}};
+  const pin = {style:{}, classList:{contains:cls=>cls === 'gq-bb-tsumugi'}, querySelector:()=>null};
+  const sky = {style:{}, dataset:{ward:'1'}, classList:{toggle(){}}};
+  const nodes = {'#gq-road':road};
+  const view = {innerHTML:'', querySelector(selector) {
+    return nodes[selector] ??= {style:{}, setAttribute(){}};
+  }, querySelectorAll(selector) {
+    if (selector === '.gq-sky-art') return [sky];
+    if (selector !== '.gq-bb') return [];
+    const match = this.innerHTML.match(/class="gq-bb gq-bb-tsumugi" data-y="([^"]+)" data-lat="([^"]+)"/);
+    pin.dataset = {y:match[1], lat:match[2]};
+    return [pin];
+  }};
+  const oldWindow = globalThis.window, oldRAF = globalThis.requestAnimationFrame;
+  globalThis.window = {innerHeight:844};
+  globalThis.requestAnimationFrame = fn => {scheduled=fn; return 1;};
+  try {
+    renderMap(view, {map,today:20000,progress,total:1400,face:()=>'',tsumugi:'',on:{}});
+    const scale = () => Number(pin.style.transform.match(/scale\(([^)]+)\)/)[1]);
+    const initialScroll = road.scrollTop;
+    assert.equal(scale(), 1);
+    assert.equal(sky.style.top, `${skyGeometry(390,680,1).top}px`);
+    // 初回の再計測でも基準倍率を変えない。
+    scheduled();
+    assert.equal(scale(), 1);
+    road.scrollTop = initialScroll + 600;
+    scroll(); scheduled();
+    const far = scale();
+    assert.ok(far < 1);
+    road.scrollTop = initialScroll - 200;
+    scroll(); scheduled();
+    assert.ok(scale() > 1);
+    assert.doesNotMatch(view.innerHTML, /<img[^>]*loading="lazy"/);
+  } finally {
+    if (oldWindow === undefined) delete globalThis.window; else globalThis.window = oldWindow;
+    if (oldRAF === undefined) delete globalThis.requestAnimationFrame; else globalThis.requestAnimationFrame = oldRAF;
   }
 });
 

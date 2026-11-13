@@ -34,6 +34,26 @@ const Z_NEAR = 700;    // 下端での最短距離。これより近い地面は
 const PHASE = Math.PI / 2;
 const S_MIN = 0.07;
 
+// art/ward-N.webp（1200×800）の奥の道・海面の消失点。原画内の比率。
+export const WARD_VANISHING = {
+  1: {x: .32, y: .42}, 2: {x: .53, y: .44},
+  3: {x: .31, y: .45}, 4: {x: .25, y: .53},
+  5: {x: .23, y: .55}, 6: {x: .56, y: .44},
+};
+
+// cover による切り抜きを避け、絵の消失点を投影の消失点へ移す。
+export function skyGeometry(width, height, ward) {
+  const point = WARD_VANISHING[Math.min(ward, 6)] ?? WARD_VANISHING[1];
+  const imageWidth = Math.max(width * .5 / point.x, width * .5 / (1 - point.x));
+  const imageHeight = imageWidth * 2 / 3;
+  return {left: width * .5 - imageWidth * point.x, top: height * HORIZON - imageHeight * point.y,
+    width: imageWidth, height: imageHeight};
+}
+
+export function tsumugiScale(scale, initialScale) {
+  return scale / initialScale;
+}
+
 // worldZ は地面上の絶対位置、camera はスクロールによる前進距離。
 // 縦横の画面単位をそれぞれ width / height に戻す通常の透視投影。
 export function projectRoad(width, height, worldZ, camera = 0) {
@@ -54,9 +74,9 @@ export function houseGeometry(width, projection, current = false) {
 }
 
 // 頭上に近い空き位置を選ぶ。画面端・家・ツムギ自身を避ける。
-export function panelGeometry(width, height, x, feet, pw, ph, objects) {
-  const preferred = {left: Math.max(8, Math.min(width - pw - 8, x - pw / 2)), top: feet - 112 - ph};
-  const obstacles = [...objects, {left:x - 50, right:x + 50, top:feet - 100, bottom:feet}];
+export function panelGeometry(width, height, x, feet, pw, ph, objects, tsumugiSize = 100) {
+  const preferred = {left: Math.max(8, Math.min(width - pw - 8, x - pw / 2)), top: feet - tsumugiSize - 12 - ph};
+  const obstacles = [...objects, {left:x - tsumugiSize / 2, right:x + tsumugiSize / 2, top:feet - tsumugiSize, bottom:feet}];
   const xs = [preferred.left, 8, width - pw - 8, ...obstacles.flatMap(h => [h.left - pw - 6, h.right + 6])];
   const ys = [preferred.top, 8, ...obstacles.flatMap(h => [h.top - ph - 6, h.bottom + 6])];
   const clear = ({left, top}) => left >= 8 && left + pw <= width - 8 && top >= 8 && top + ph <= height - 8
@@ -315,6 +335,7 @@ export function renderMap(view, ctx) {
   };
   const skyLayers = [...view.querySelectorAll('.gq-sky-art')];
   let Ws = 0, Hs = 0, frame = 0, lastWard = 0;
+  let initialTsumugiScale = null;
 
   const update = () => {
     frame = 0;
@@ -344,6 +365,9 @@ export function renderMap(view, ctx) {
     const fmt = p => `${p[0].toFixed(1)} ${p[1].toFixed(1)}`;
     const poly = ({left, right}) => `M${left.map(fmt).join('L')}L${right.reverse().map(fmt).join('L')}Z`;
     const full = ribbon(total, 1);
+    // 有限のゲーム世界の先も背景と同じ消失点までつなぐ。
+    full.left.push([Ws / 2, Hs * HORIZON]);
+    full.right.push([Ws / 2, Hs * HORIZON]);
     paths.edge.setAttribute('d', `M${full.left.map(fmt).join('L')}M${full.right.map(fmt).join('L')}`);
     paths.base.setAttribute('d', poly(full));
     paths.walked.setAttribute('d', hereItem ? poly(ribbon(hereY, 0.5)) : '');
@@ -387,7 +411,8 @@ export function renderMap(view, ctx) {
         b.house.style.setProperty('--house-size', `${(size / s).toFixed(3)}px`);
         b.house.style.setProperty('--house-offset', `${(offset / s).toFixed(3)}px`);
       }
-      if (b.el.classList.contains('gq-bb-tsumugi') || b.panel) b.scale = 1 / s;
+      if (b.el.classList.contains('gq-bb-tsumugi')) b.scale = tsumugiScale(1, initialTsumugiScale);
+      if (b.panel) b.scale = 1 / s;
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${(s * b.scale).toFixed(3)})`;
       b.el.style.opacity = fade.toFixed(2);
       b.el.style.zIndex = b.panel ? '202' : String(Math.round(s * 100));
@@ -405,7 +430,8 @@ export function renderMap(view, ctx) {
         }));
       const p = project(panelBoard.y);
       const {left, top} = panelGeometry(Ws, Hs, p.x, p.y,
-        panelBoard.panel.offsetWidth, panelBoard.panel.offsetHeight, obstacles);
+        panelBoard.panel.offsetWidth, panelBoard.panel.offsetHeight, obstacles,
+        100 * tsumugiScale(p.scale, initialTsumugiScale));
       panelBoard.panel.style.left = `${left - p.x}px`;
       panelBoard.panel.style.top = `${top - p.y}px`;
     }
@@ -428,6 +454,10 @@ export function renderMap(view, ctx) {
     if (!w || !h) return;
     if (Ws && Hs) cameraAt = Math.min(total, Math.max(-1400, total - road.scrollTop));
     Ws = w; Hs = h;
+    for (const layer of skyLayers) {
+      const geometry = skyGeometry(Ws, Hs, Number(layer.dataset.ward));
+      for (const [key, value] of Object.entries(geometry)) layer.style[key] = `${value}px`;
+    }
     if (cameraAt === null) {
       // ツムギの中心を画面の58.5%へ。足元は同じ石段の投影点に固定する。
       const feet = window.innerHeight * .585 + 50 - road.getBoundingClientRect().top;
@@ -438,6 +468,10 @@ export function renderMap(view, ctx) {
     stage.style.height = `${Hs}px`;
     svg.setAttribute('viewBox', `0 0 ${Ws} ${Hs}`);
     road.scrollTop = total - cameraAt;
+    if (initialTsumugiScale === null) {
+      initialTsumugiScale = projectRoad(Ws, Hs, hereY,
+        Math.min(total, Math.max(-1400, total - road.scrollTop))).scale;
+    }
     update();
   };
   road.addEventListener('scroll', schedule, {passive: true});

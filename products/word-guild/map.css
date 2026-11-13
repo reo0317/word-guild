@@ -12,8 +12,8 @@
 .gq-road{position:relative;z-index:0;flex:1;min-height:0;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;background:var(--paper-2)}
 .gq-road-in{position:relative;width:100%}
 .gq-stage{position:sticky;top:0;width:100%;overflow:hidden;background:linear-gradient(var(--fog) 0,var(--fog-lt) 14%,var(--paper-2) 14.2%)}
-.gq-sky{position:absolute;left:0;right:0;top:0;height:50%;pointer-events:none;-webkit-mask-image:linear-gradient(#000 50%,transparent);mask-image:linear-gradient(#000 50%,transparent)}
-.gq-sky-art{position:absolute;inset:0;opacity:0;transition:opacity .6s}.gq-sky-art.on{opacity:.6}
+.gq-sky{position:absolute;inset:0;pointer-events:none;-webkit-mask-image:linear-gradient(#000 14%,transparent 50%);mask-image:linear-gradient(#000 14%,transparent 50%)}
+.gq-sky-art{position:absolute;opacity:0;transition:opacity .6s}.gq-sky-art.on{opacity:.6}
 .gq-sky-img{position:absolute;inset:0;border:0;border-radius:0}
 .gq-haze{position:absolute;left:0;right:0;top:0;height:40%;background:linear-gradient(rgba(205,218,224,.95),rgba(205,218,224,0));pointer-events:none;z-index:200}
 .gq-fogband{position:absolute;left:0;right:0;top:0;height:72%;background:linear-gradient(rgba(205,218,224,var(--d)),rgba(205,218,224,0));pointer-events:none;z-index:201}
