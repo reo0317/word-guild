@@ -1,6 +1,6 @@
 # 語彙データのライセンス
 
-`products/word-guild/data/words.json` と `data/work/` の語彙データは、次の語彙リストをもとに作成しています。
+`products/word-guild/data/words.json`、`rare.json`、`story-ps.json` と `data/work/` の語彙データは、次の語彙リストをもとに作成しています。
 
 - **TOEIC Service List 1.2**（TSL）
   https://www.newgeneralservicelist.com/toeic-service-list
@@ -14,7 +14,8 @@ https://creativecommons.org/licenses/by-sa/4.0/
 ## 加えた変更
 
 - NGSL から基本語150語を選び出した。
+- NGSL 1.2（CC BY-SA 4.0）から、まれびと用に追加で280語を選び出した。日本語訳、品詞、例句とその訳、および追伸56行の英文と日本語訳を独自に追加した。
 - 語を章と棚に割り当てた。
 - 日本語訳、品詞、英語の例句とその日本語訳を独自に追加した。
 
-上の変更を含む語彙データ（`words.json` と `data/work/`）も、CC BY-SA 4.0 で公開します。ゲームのコード、絵、音楽、音声は、このライセンスの対象外です。
+上の変更を含む語彙データ（`words.json`、`rare.json`、`story-ps.json` と `data/work/`）も、CC BY-SA 4.0 で公開します。ゲームのコード、絵、音楽、音声は、このライセンスの対象外です。

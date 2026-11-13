@@ -29,6 +29,11 @@ export const ART = {
   oshimi:     {file: 'art/oshimi.webp',         kind: 'sprite', label: 'オオシミ', ready: true},
 };
 
+// 手紙の宛先ごとの家（街灯番号1〜56）。
+export const HOUSE_ART = Object.fromEntries(
+  Array.from({length: 56}, (_, i) => [i + 1, `art/house-${i + 1}.webp`])
+);
+
 // 分類名から、後日届く紙魚の体の絵を引く。
 export const BODY_ART = Object.fromEntries(
   ['money', 'work', 'person', 'time', 'place', 'move', 'food', 'doc',

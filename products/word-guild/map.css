@@ -87,3 +87,26 @@
 .gq-pop{position:absolute;inset:0;z-index:15;display:flex;padding:10px;background:#1f2a44cc;overflow:auto}
 .gq-pop-card{margin:auto;width:100%;max-width:420px;display:grid;gap:8px;padding:10px;background:var(--paper);border:2px solid var(--ink);border-radius:12px;box-shadow:0 8px 30px #0006}
 .gq-pop-acts{display:flex;justify-content:center;gap:22px}
+
+/* 宛先の家。紙魚の祖先には filter を置かず、透過画像の mask と光だけで描く。 */
+.gq-house{position:absolute;top:-64px;width:80px;height:80px;padding:0;border:0;border-radius:0;background:none;box-shadow:none;line-height:0}
+.gq-house.left{right:35px}.gq-house.right{left:35px}
+.gq-house:active{transform:none;box-shadow:none}
+.gq-house:focus-visible{outline:2px solid var(--seal);outline-offset:4px}
+.gq-house-fallback{position:absolute;inset:26px;display:block}.gq-house-fallback .house{width:100%;height:100%}
+.gq-house-art{display:none;position:absolute;inset:0;pointer-events:none}
+.gq-house.loaded .gq-house-art{display:block}.gq-house.loaded .gq-house-fallback{display:none}
+.gq-house-shadow,.gq-house-color,.gq-house-warm{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.gq-house-shadow,.gq-house-warm{-webkit-mask:var(--house-image) center/contain no-repeat;mask:var(--house-image) center/contain no-repeat}
+.gq-house-shadow{background:var(--fog);opacity:.8}
+.gq-house-color{clip-path:inset(var(--reveal) 0 0)}
+.gq-house-halo{position:absolute;inset:-12%;background:radial-gradient(ellipse,#ffd77e88,transparent 68%);opacity:0}
+.gq-house-warm{background:radial-gradient(ellipse at 50% 76%,#ffc66b99,transparent 65%);opacity:0}
+.gq-house.complete .gq-house-halo,.gq-house.complete .gq-house-warm{opacity:1}
+.gq-house.complete::before{content:"";position:absolute;left:8%;right:8%;bottom:-5px;height:18px;background:radial-gradient(ellipse,#ffd57799,transparent 70%)}
+.gq-house.lit .gq-house-halo{inset:-32%;background:radial-gradient(ellipse,#ffd77eaa,transparent 68%)}
+.gq-house-sparks{display:none;position:absolute;left:45%;top:38%;width:3px;height:3px;border-radius:50%;background:#fff0b0;box-shadow:10px 8px #ffd77e,-9px -6px #ffe6a0;animation:gq-house-rise 3s ease-out infinite}
+.gq-house.lit .gq-house-sparks{display:block}
+.gq-house-vane{position:absolute;top:-12px;left:calc(50% - 12px);width:24px;height:24px;fill:#eac25c;stroke:#976a16;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@keyframes gq-house-rise{from{transform:translateY(0);opacity:0}25%{opacity:.9}to{transform:translateY(-22px);opacity:0}}
+@media(prefers-reduced-motion:reduce){.gq-house-sparks{animation:none;opacity:.7}}

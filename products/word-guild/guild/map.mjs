@@ -16,8 +16,8 @@
 //
 // 遠近：スクロール量を「カメラの位置」にして、道の上の各地点（world の y）を毎回投影し直す。
 //   画面の y = 地平線 + (手前の基準線 - 地平線) × s、s = 1 / (1 + 距離 / F)
-import {esc, fab, waxButton, miniPaper, miniEnvelope, miniHouse} from './dom.mjs';
-import {artBox} from './art.mjs';
+import {esc, fab, waxButton, miniHouse} from './dom.mjs';
+import {artBox, HOUSE_ART} from './art.mjs';
 import {streakNow} from './daily.mjs';
 import {WARDS} from './chara-svg.mjs';
 
@@ -135,11 +135,18 @@ export function renderMap(view, ctx) {
       const gold = lamp.gold === lamp.total;
       const isHereLamp = map.here && map.here.shelf === lamp.shelf;
       const remain = isHereLamp ? lamp.steps.length - map.here.step + 1 : 0;
-      // その通の紙の小さな絵。読めた通は封筒と、窓に灯のともった家。道の広い側に置く。
       const letter = ctx.letterOf?.(lamp.shelf) ?? null;
-      const worn = letter ? letter.lines.reduce((n, line) => n + line.parts.filter(p => p.state === 'worn').length, 0) : 0;
-      const pin = letter ? `<button type="button" class="gq-pin ${item.lat > 0 ? 'left' : 'right'}${letter.readable ? ' sealed' : ''}" data-shelf="${lamp.shelf}"
-        aria-label="街灯${lamp.shelf}の手紙">${letter.readable ? `${miniEnvelope()}${miniHouse()}` : miniPaper(letter, {fog: map.fog && worn >= 5})}</button>` : '';
+      const done = lamp.got === lamp.total;
+      const file = HOUSE_ART[lamp.shelf];
+      const reveal = lamp.got ? Math.min(5, Math.ceil(lamp.got / lamp.total * 5)) * 20 : 0;
+      const pin = `<button type="button" class="gq-house ${lamp.shelf % 2 ? 'left' : 'right'}${done ? ' complete' : ''}${lit ? ' lit' : ''}${gold ? ' gold' : ''}"
+        data-shelf="${lamp.shelf}" data-house-ward="${item.ward.ch}"${file ? ` data-house-src="${file}"` : ''}
+        style="--reveal:${100 - reveal}%" aria-label="街灯${lamp.shelf}の${letter ? '手紙' : '切手帳'}を開く">
+        <span class="gq-house-fallback" aria-hidden="true">${miniHouse()}</span>
+        <span class="gq-house-art" aria-hidden="true"><i class="gq-house-halo"></i><i class="gq-house-shadow"></i>
+        <img class="gq-house-color" alt="" width="192" height="192" loading="lazy" decoding="async">
+        <i class="gq-house-warm"></i><i class="gq-house-sparks"></i></span>
+        ${gold ? '<svg class="gq-house-vane" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 30V3M3 12h26M3 12l7-5v10zM22 12l7-5v10z"/></svg>' : ''}</button>`;
       return bb(`gq-bb-lamp${far}`, item.cy, item.lat,
         `<button type="button" class="gq-lamp-node ${gold ? 'gold' : lit ? 'lit' : ''}" data-shelf="${lamp.shelf}"
         style="--p:${Math.round(lamp.got / lamp.total * 100)}%;--wc:${ink(item.ward)}"
@@ -254,6 +261,21 @@ export function renderMap(view, ctx) {
     scale: el.classList.contains('gq-bb-ward') ? 0.9 : 1,
     panel: el.querySelector('.gq-here-panel'),
   }));
+  const houses = [...view.querySelectorAll('[data-house-ward]')];
+  const loadHouses = ward => {
+    const index = wardStarts.findIndex(w => w.ch === ward);
+    const nearby = wardStarts.slice(Math.max(0, index - 1), index + 2).map(w => w.ch);
+    for (const house of houses) {
+      if (!nearby.includes(Number(house.dataset.houseWard)) || !house.dataset.houseSrc) continue;
+      const file = house.dataset.houseSrc;
+      delete house.dataset.houseSrc;
+      const img = house.querySelector('img');
+      img.onload = () => house.classList.add('loaded');
+      img.onerror = () => house.classList.remove('loaded');
+      house.style.setProperty('--house-image', `url("${file}")`);
+      img.src = file;
+    }
+  };
   const skyLayers = [...view.querySelectorAll('.gq-sky-art')];
   let Ws = 0, Hs = 0, frame = 0, lastWard = 0;
 
@@ -330,6 +352,7 @@ export function renderMap(view, ctx) {
     for (const w of wardStarts) if (w.y <= c + 500) ward = w.ch;
     if (ward !== lastWard) {
       lastWard = ward;
+      loadHouses(ward);
       skyLayers.forEach(layer => layer.classList.toggle('on', Number(layer.dataset.ward) === ward));
     }
   };

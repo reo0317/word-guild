@@ -10,13 +10,15 @@ const charaUrl = new URL('../products/word-guild/data/chara.json', import.meta.u
 const tags = JSON.parse(await readFile(charaUrl, 'utf8'));
 const tagOf = word => tags[word.id] ?? '';
 
-test('chara.json は1,400語すべてを持ち、値は16種か空（空は8語）', () => {
-  assert.equal(Object.keys(tags).length, 1400);
+test('chara.json は1,400語すべてと、まれびと280語（r で始まる id）を持ち、値は16種か空（空は8語）', () => {
+  const main = Object.keys(tags).filter(id => !id.startsWith('r'));
+  assert.equal(main.length, 1400);
+  assert.equal(Object.keys(tags).filter(id => id.startsWith('r')).length, 280);
   for (const word of words) {
     assert.ok(word.id in tags, `${word.id} の分類がない`);
     assert.ok(tags[word.id] === '' || CATEGORIES.includes(tags[word.id]), `${word.id}: ${tags[word.id]}`);
   }
-  assert.equal(Object.values(tags).filter(tag => tag === '').length, 8);
+  assert.equal(main.filter(id => tags[id] === '').length, 8);
   assert.equal(CATEGORIES.length, 16);
 });
 

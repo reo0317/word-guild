@@ -1,0 +1,674 @@
+[
+ {
+  "shelf": 1,
+  "en": "A {secret}: on my first day, I put a {stamp} on an empty {envelope}. Just {deliver} the {mail}.",
+  "ja": "ひとつ秘密を。初日のわたしは、空っぽの封筒に切手を貼った。とにかく郵便を届けなさい。",
+  "ids": [
+   "r0005",
+   "r0002",
+   "r0001",
+   "r0003",
+   "r0004"
+  ]
+ },
+ {
+  "shelf": 2,
+  "en": "A {cheap} {label} in chalk is enough. With a {discount} or a {sample}, no price feels {expensive}.",
+  "ja": "チョークで書いた安い札で十分です。値引きか見本をつければ、高く感じる値段はありません。",
+  "ids": [
+   "r0006",
+   "r0010",
+   "r0007",
+   "r0009",
+   "r0008"
+  ]
+ },
+ {
+  "shelf": 3,
+  "en": "The {cake} in the {kitchen} is for you, not the {guest}. I put {cheese} in your {bread} too.",
+  "ja": "台所のケーキはお客さんのじゃなくて、あなたの分。パンにはチーズもこっそり入れておいたよ。",
+  "ids": [
+   "r0012",
+   "r0013",
+   "r0014",
+   "r0015",
+   "r0011"
+  ]
+ },
+ {
+  "shelf": 4,
+  "en": "I made {breakfast} for Mom today. Do not tell her I put {salt}, not {sugar}, in her {bowl} of {milk}.",
+  "ja": "今日はママに朝ごはんを作ったよ。牛乳の鉢に、砂糖じゃなくて塩を入れたことは、ママには内緒にしてね。",
+  "ids": [
+   "r0018",
+   "r0020",
+   "r0017",
+   "r0019",
+   "r0016"
+  ]
+ },
+ {
+  "shelf": 5,
+  "en": "My son gave a {wave} the card from the {shore}. Now he wants a {boat}, a {knife}, and the {ocean}.",
+  "ja": "息子は岸から、あのカードを波にくれてやった。今は小舟と包丁と、大洋がほしいそうだ。",
+  "ids": [
+   "r0023",
+   "r0024",
+   "r0021",
+   "r0025",
+   "r0022"
+  ]
+ },
+ {
+  "shelf": 6,
+  "en": "I keep a {ticket} home. The last {passenger} leaves the {platform} by {rail}, but my {journey} is here.",
+  "ja": "帰りの切符は、まだ取ってある。最後の乗客がホームを離れて線路の向こうへ去っても、わたしの旅はここにある。",
+  "ids": [
+   "r0026",
+   "r0029",
+   "r0028",
+   "r0030",
+   "r0027"
+  ]
+ },
+ {
+  "shelf": 7,
+  "en": "A {reply} came from the {publisher}: our {catalog} goes to the {printer} again, in a new {edition}.",
+  "ja": "出版社から返事が来ました。うちの目録が新しい版になって、もう一度印刷機にかかります。",
+  "ids": [
+   "r0035",
+   "r0033",
+   "r0032",
+   "r0031",
+   "r0034"
+  ]
+ },
+ {
+  "shelf": 8,
+  "en": "I put a blue {button} in his {coat} {pocket}. With the remaining cloth, I made a {jacket} for Riku and a {skirt} for Mina.",
+  "ja": "あの白い上着のポケットに、青いボタンをひとつ入れておいた。余った布で、リクにはジャケットを、ミナにはスカートを作った。",
+  "ids": [
+   "r0038",
+   "r0036",
+   "r0039",
+   "r0037",
+   "r0040"
+  ]
+ },
+ {
+  "shelf": 9,
+  "en": "Our {nurse} needs no label. She knows the {medicine} for every {cough}, every {pain}, and every {symptom}.",
+  "ja": "うちの看護師に札は要りません。どのせきにも、どの痛みにも、どの症状にも効く薬を、彼女は知っています。",
+  "ids": [
+   "r0044",
+   "r0041",
+   "r0043",
+   "r0045",
+   "r0042"
+  ]
+ },
+ {
+  "shelf": 10,
+  "en": "Please do not send back the blue {novel}. It is my own {fiction}: one {chapter}, some {poetry}, and an {essay} I never finished.",
+  "ja": "青い小説だけは返さないでください。あれはわたしの書いた作り話です。章がひとつと、少しの詩歌と、書きかけの随筆。",
+  "ids": [
+   "r0046",
+   "r0049",
+   "r0047",
+   "r0048",
+   "r0050"
+  ]
+ },
+ {
+  "shelf": 11,
+  "en": "Smaller print: there is no {trick} and no {charm}. We do not {pretend}; the {luxury} of forgetting will {fool} only you.",
+  "ja": "もっと小さな字で。たくらみも魅力もありません。ふりはしません。忘れるというぜいたくがだますのは、あなた自身だけです。",
+  "ids": [
+   "r0051",
+   "r0052",
+   "r0054",
+   "r0053",
+   "r0055"
+  ]
+ },
+ {
+  "shelf": 12,
+  "en": "One old review came back in ink. 'Good {coffee} and {cream}, a kind {taste}, and a {chat} that is not on the {menu}.'",
+  "ja": "古いレビューがひとつ、インクで戻ってきました。「おいしいコーヒーとクリーム、やさしい味、それに品書きに無いおしゃべり」",
+  "ids": [
+   "r0056",
+   "r0058",
+   "r0060",
+   "r0059",
+   "r0057"
+  ]
+ },
+ {
+  "shelf": 13,
+  "en": "No bill for the {pink} {rose}. Put this {seed} in the {grass} by your door; its {flower} will be for both shops.",
+  "ja": "桃色のバラのお代は要りません。この種を、戸口の草の中にまいてください。咲いた花は、両方の店のものです。",
+  "ids": [
+   "r0065",
+   "r0062",
+   "r0063",
+   "r0064",
+   "r0061"
+  ]
+ },
+ {
+  "shelf": 14,
+  "en": "Your {photograph} with Furo is above our counter. To our {delight}, he pecked a {sweet} {chocolate} {cloud}.",
+  "ja": "フウロウと一緒の写真は、店の帳場の上に飾りました。うれしいことに、あの子は甘いチョコの雲をつついていきました。",
+  "ids": [
+   "r0069",
+   "r0068",
+   "r0067",
+   "r0066",
+   "r0070"
+  ]
+ },
+ {
+  "shelf": 15,
+  "en": "Our {editor} did not sign, and no {reporter} or {journalist} here will. We will {broadcast} the truth in this {column} each week.",
+  "ja": "うちの編集者は契約しなかったし、ここの記者も報道人も、誰も契約しない。毎週このコラムで本当のことを伝えていく。",
+  "ids": [
+   "r0072",
+   "r0071",
+   "r0073",
+   "r0074",
+   "r0075"
+  ]
+ },
+ {
+  "shelf": 16,
+  "en": "That night, an old {pilot} took me to the {harbor} in his {truck}. After the {rain}, we looked up at the {moon}.",
+  "ja": "あの夜、年老いた水先人がトラックで港まで連れていってくれたの。雨のあと、ふたりで月を見ました。",
+  "ids": [
+   "r0079",
+   "r0076",
+   "r0080",
+   "r0077",
+   "r0078"
+  ]
+ },
+ {
+  "shelf": 17,
+  "en": "Under the white {load} in {storage} was one old {package} of wooden boats. We once {exported} them; I will {transport} these to the school.",
+  "ja": "倉庫の白い積み荷の下に、木の船がつまった古い荷物がひとつあった。昔は輸出していたものだ。これは学校へ運んでやる。",
+  "ids": [
+   "r0083",
+   "r0082",
+   "r0081",
+   "r0085",
+   "r0084"
+  ]
+ },
+ {
+  "shelf": 18,
+  "en": "Good news: I {calculate} only two more days of {delay}. We {import} on {schedule} again, so you need not {hurry}.",
+  "ja": "よい知らせです。計算では、遅れはあと2日だけ。輸入も予定どおりに戻ったので、急がなくてかまいません。",
+  "ids": [
+   "r0086",
+   "r0088",
+   "r0089",
+   "r0087",
+   "r0090"
+  ]
+ },
+ {
+  "shelf": 19,
+  "en": "I {suspect} more. They {declare} paper at the {border}, but we {examine} it and find no {permit} for the cape.",
+  "ja": "わたしはまだ疑っている。彼らは境で紙だと申告するが、調べてみると、岬へ行く許可証がどこにも無い。",
+  "ids": [
+   "r0093",
+   "r0095",
+   "r0091",
+   "r0092",
+   "r0094"
+  ]
+ },
+ {
+  "shelf": 20,
+  "en": "We {warn} you again: {wash} {dirty} gloves, be {careful}, and do not {slip}. Good news: a fish boat found her wallet.",
+  "ja": "もう一度注意します。汚れた手袋は洗うこと、慎重に動くこと、滑らないこと。よい知らせ：漁船が彼女の財布を見つけました。",
+  "ids": [
+   "r0100",
+   "r0097",
+   "r0098",
+   "r0099",
+   "r0096"
+  ]
+ },
+ {
+  "shelf": 21,
+  "en": "Until the books return, each {wage} comes in {cash}. Goro pays the {expense} from his own {salary}; he wants no {payment} back.",
+  "ja": "帳簿が戻るまで、賃金は現金で渡します。その出費はゴローが自分の給料から払っています。返してもらう支払いは要らないそうです。",
+  "ids": [
+   "r0102",
+   "r0103",
+   "r0104",
+   "r0101",
+   "r0105"
+  ]
+ },
+ {
+  "shelf": 22,
+  "en": "I {regret} that I kept quiet. The keeper was {honest} and {proud} of his {duty}; I {trust} you to say it for us both.",
+  "ja": "黙っていたことを悔やんでいる。灯台守は正直で、自分の務めを誇りにしていた。おれたちふたりの分まで、それを言ってくれると信じている。",
+  "ids": [
+   "r0110",
+   "r0107",
+   "r0109",
+   "r0108",
+   "r0106"
+  ]
+ },
+ {
+  "shelf": 23,
+  "en": "Note: the keeper is not to blame for this {accident}. Each {witness} saw his {smoke}; without it, this {insurance} report would describe a {disaster}.",
+  "ja": "付記。この事故は灯台守のせいではない。目撃者は皆、彼の煙を見ている。それが無ければ、この保険の報告書は大災害を記すことになっていた。",
+  "ids": [
+   "r0112",
+   "r0113",
+   "r0114",
+   "r0111",
+   "r0115"
+  ]
+ },
+ {
+  "shelf": 24,
+  "en": "I never told the {crew}: at the {wheel} in that {storm}, I lost hope. One small fire in the {darkness} came to {rescue} us.",
+  "ja": "乗組員には言わなかったが、あの嵐の中、舵輪を握りながら、わたしは望みを失っていた。暗闇の小さな火が、わたしたちを救いに来てくれた。",
+  "ids": [
+   "r0116",
+   "r0119",
+   "r0117",
+   "r0120",
+   "r0118"
+  ]
+ },
+ {
+  "shelf": 25,
+  "en": "Our {deficit}, not the keeper, made us {withdraw}. I could not {cancel} the plan, so I {resign}; I will not {abandon} the truth.",
+  "ja": "撤退するのは、灯台守のせいではなく、わが社の赤字のためです。計画を取り消せなかったので、わたしは辞めます。本当のことを見捨てはしません。",
+  "ids": [
+   "r0123",
+   "r0121",
+   "r0125",
+   "r0122",
+   "r0124"
+  ]
+ },
+ {
+  "shelf": 26,
+  "en": "The {mayor} will {greet} us with a {ceremony}. He does not know the {gift} is a {trap} he set himself, twenty years ago.",
+  "ja": "町長は式典でわれわれを出迎えるだろう。この贈り物が、20年前に自分で仕掛けたわなだとも知らずに。",
+  "ids": [
+   "r0126",
+   "r0130",
+   "r0128",
+   "r0127",
+   "r0129"
+  ]
+ },
+ {
+  "shelf": 27,
+  "en": "Each {visitor} may {register} at this {desk}, even without a number card. We {announce} one new {regulation}: owls may wait inside.",
+  "ja": "番号札が無くても、訪問者はどなたでもこの机で登録できます。新しい規則をひとつ発表します。フクロウは中で待ってかまいません。",
+  "ids": [
+   "r0132",
+   "r0133",
+   "r0131",
+   "r0134",
+   "r0135"
+  ]
+ },
+ {
+  "shelf": 28,
+  "en": "I {request} an hour downstairs. The old {secretary} says the town notes are under the {commercial} papers of every {executive} and {shareholder}.",
+  "ja": "下の階で1時間ください。古くからいる秘書によれば、町の古い記録は、重役と株主の商業書類の山の下にあるそうです。",
+  "ids": [
+   "r0140",
+   "r0137",
+   "r0139",
+   "r0136",
+   "r0138"
+  ]
+ },
+ {
+  "shelf": 29,
+  "en": "Every {citizen} in each {district} may lose a {debt}. As your {leader}, I hope no one notices the {absence} of one old report.",
+  "ja": "どの地区の市民も、借金をひとつ消せます。指導者として願うのは、古い報告書がひとつ不在であることに、誰も気づかないことです。",
+  "ids": [
+   "r0142",
+   "r0144",
+   "r0143",
+   "r0141",
+   "r0145"
+  ]
+ },
+ {
+  "shelf": 30,
+  "en": "We {guarantee} to {release} every {mortgage} and every {private} debt. This {agreement} also takes every note of thanks, without exception.",
+  "ja": "住宅ローンも私的な借金も、すべて解き放つことを保証します。なお、この合意は、お礼の言葉もひとつ残らず持っていきます。",
+  "ids": [
+   "r0149",
+   "r0146",
+   "r0150",
+   "r0147",
+   "r0148"
+  ]
+ },
+ {
+  "shelf": 31,
+  "en": "Note from the clerk: the {committee} will {appoint} no new keeper. This {policy} saves the {budget}, but no {institution} will save the next ship.",
+  "ja": "書記の付記。委員会は新しい灯台守を任命しない。この方針で予算は守られるが、次の船を守ってくれる機関はどこにも無い。",
+  "ids": [
+   "r0152",
+   "r0154",
+   "r0153",
+   "r0151",
+   "r0155"
+  ]
+ },
+ {
+  "shelf": 32,
+  "en": "I saw his {fire} from the {dark} balcony. He let his hands {burn} in an {emergency} to keep the {damage} small.",
+  "ja": "わたしは暗いバルコニーから、彼の火を見ていた。緊急事態の中、彼は手を燃やしてまで、損害を小さくとどめた。",
+  "ids": [
+   "r0157",
+   "r0158",
+   "r0160",
+   "r0159",
+   "r0156"
+  ]
+ },
+ {
+  "shelf": 33,
+  "en": "I will not {shout}, {advertise}, or ask a {lawyer}. I asked no {permission} to save them, and I want no {promotion} for it.",
+  "ja": "叫びもしないし、宣伝もしないし、弁護士も頼まない。彼らを救うのに許可は求めなかった。そのことで昇進も望まない。",
+  "ids": [
+   "r0165",
+   "r0162",
+   "r0161",
+   "r0163",
+   "r0164"
+  ]
+ },
+ {
+  "shelf": 34,
+  "en": "Does the {device} look {familiar}? The lamp in your post {office} is the one he {invented}; no {record} says who gave it to Hatori.",
+  "ja": "その装置に見覚えはありませんか。郵便局の事務所にあるランプは、彼が発明したものです。それをハトリさんに贈ったのが誰か、どの記録にもありません。",
+  "ids": [
+   "r0167",
+   "r0170",
+   "r0168",
+   "r0166",
+   "r0169"
+  ]
+ },
+ {
+  "shelf": 35,
+  "en": "Before you sign a {contract}, {evaluate} it with us. Our {maintenance} team brings play {equipment} for children; Tsumugi will {dedicate} her day to you.",
+  "ja": "契約に署名する前に、わたしたちと一緒に評価してください。保守の係が子どもの遊ぶ設備を運びます。ツムギはこの日を、皆さんのために捧げます。",
+  "ids": [
+   "r0173",
+   "r0174",
+   "r0175",
+   "r0171",
+   "r0172"
+  ]
+ },
+ {
+  "shelf": 36,
+  "en": "For my {journal}: after the hearing, Mina brought {food}, and the whole room ate one {meal}. {Remind} me to hold it {weekly}.",
+  "ja": "日誌に書いておく。公聴会のあと、ミナが食べ物を持ってきて、部屋じゅうで同じ食事をした。毎週の集まりにするよう、思い出させてほしい。",
+  "ids": [
+   "r0177",
+   "r0178",
+   "r0179",
+   "r0176",
+   "r0180"
+  ]
+ },
+ {
+  "shelf": 37,
+  "en": "Mr. Blank cannot {sleep} in a dark {bedroom}. He wants a lamp each {evening} and looks at the cape each {morning} from the {hotel}.",
+  "ja": "ブランク氏は、暗い寝室では眠れない。夕方になるとランプを欲しがり、朝になるとホテルから岬を見ている。",
+  "ids": [
+   "r0185",
+   "r0181",
+   "r0182",
+   "r0184",
+   "r0183"
+  ]
+ },
+ {
+  "shelf": 38,
+  "en": "Give each old crew member a free {dinner}, a {bath}, and a {shower}. I will {repair} my old {apartment} myself for Captain Nagi.",
+  "ja": "乗組員の皆さんには、夕食と風呂とシャワーを無料で。ナギ船長のために、わたしの古い集合住宅の部屋を自分で修理します。",
+  "ids": [
+   "r0188",
+   "r0187",
+   "r0186",
+   "r0189",
+   "r0190"
+  ]
+ },
+ {
+  "shelf": 39,
+  "en": "One {tourist} will {travel} from {abroad}: a man from the old crew. We will show him the {museum} and pay for his {restaurant} dinner.",
+  "ja": "それでも外国から旅してくる観光客がひとりいます。あの乗組員のひとりです。博物館を案内し、食堂での夕食はこちらで払います。",
+  "ids": [
+   "r0191",
+   "r0193",
+   "r0194",
+   "r0195",
+   "r0192"
+  ]
+ },
+ {
+  "shelf": 40,
+  "en": "The last train will wait ten {minutes} on crew party night. Our {station} {clock} will go slow, and no {traffic} will stop this {route}.",
+  "ja": "乗組員の集まりの夜、最終列車は10分待ちます。駅の時計はゆっくり進み、どんな交通もこの経路を止めません。",
+  "ids": [
+   "r0196",
+   "r0197",
+   "r0198",
+   "r0199",
+   "r0200"
+  ]
+ },
+ {
+  "shelf": 41,
+  "en": "Our {team} wants no {charity}. A {stranger} kept a fire for our {vessel}, and our {cook} still sets a place for him.",
+  "ja": "おれたちの班は慈善など要らない。見知らぬ人が、この大型船のために火を守ってくれた。料理人は今も、その人の席を用意している。",
+  "ids": [
+   "r0201",
+   "r0202",
+   "r0203",
+   "r0205",
+   "r0204"
+  ]
+ },
+ {
+  "shelf": 42,
+  "en": "In my {dream}, the {ship} still has every {sail} up and a small fire on the cape. This last {adventure} is for that {memory}.",
+  "ja": "夢の中では、船は今も帆をすべて張っていて、岬には小さな火が見える。この最後の冒険は、その記憶のためにある。",
+  "ids": [
+   "r0208",
+   "r0209",
+   "r0206",
+   "r0210",
+   "r0207"
+  ]
+ },
+ {
+  "shelf": 43,
+  "en": "Last {complaint}: the {noise} in the {hall} is a child reading. Do not stop her or move the {furniture}; my room is too {quiet}.",
+  "ja": "最後の苦情をひとつ。廊下の騒音は、子どもが本を読む声だ。止めるな。家具も動かすな。わたしの部屋は静かすぎる。",
+  "ids": [
+   "r0214",
+   "r0211",
+   "r0212",
+   "r0213",
+   "r0215"
+  ]
+ },
+ {
+  "shelf": 44,
+  "en": "This is not a {protest}. Every {resident} we could {gather} signed as one {community}, and more {evidence} is in the bottom drawer.",
+  "ja": "これは抗議ではありません。集まれた住民が皆、ひとつの地域社会として署名しました。それに、もっと確かな証拠が一番下の引き出しにあります。",
+  "ids": [
+   "r0217",
+   "r0218",
+   "r0219",
+   "r0220",
+   "r0216"
+  ]
+ },
+ {
+  "shelf": 45,
+  "en": "For your staff: old {currency} and {theater} tickets, under the lamp. I {deny} I left them; a man in his {prison} has no {credit}.",
+  "ja": "従業員へ。ランプの下に、古い通貨と劇場の切符を置いた。わたしが置いたことは否定する。自分の牢にいる男に、信用など無いのだから。",
+  "ids": [
+   "r0221",
+   "r0222",
+   "r0224",
+   "r0223",
+   "r0225"
+  ]
+ },
+ {
+  "shelf": 46,
+  "en": "I {seal} this with the same wax as theirs. No {document} I own {weighs} more than this {paper}; you will be an {excellent} carrier.",
+  "ja": "この手紙も、あの手紙と同じ蝋で封をします。わたしの持つどの書類よりも、この紙は重い。あなたなら、優れた運び手になれる。",
+  "ids": [
+   "r0226",
+   "r0229",
+   "r0228",
+   "r0230",
+   "r0227"
+  ]
+ },
+ {
+  "shelf": 47,
+  "en": "In bad {weather}, the {path} is a {danger}. On the last {slope} of the {hill}, keep to the stones the keeper put by hand.",
+  "ja": "天気が悪いと、この小道は危険です。丘の最後の坂では、灯台守が手で置いた石の上を歩いてください。",
+  "ids": [
+   "r0233",
+   "r0231",
+   "r0232",
+   "r0234",
+   "r0235"
+  ]
+ },
+ {
+  "shelf": 48,
+  "en": "For the {account}: I fixed a {shoe} for the auditor with old {steel}. I {assure} you, no town {metal} was used.",
+  "ja": "帳簿のために記す。監査役の靴を、古い鋼で直してやった。請け合うが、町の金属は使っていない。",
+  "ids": [
+   "r0238",
+   "r0236",
+   "r0240",
+   "r0239",
+   "r0237"
+  ]
+ },
+ {
+  "shelf": 49,
+  "en": "No money, but no {poverty} either: the {wind}, a {calm} sea, and this {tower} are my {reward}.",
+  "ja": "お金は無いが、貧しさも無い。風と、穏やかな海と、この塔が、わたしへの報いだ。",
+  "ids": [
+   "r0243",
+   "r0241",
+   "r0244",
+   "r0245",
+   "r0242"
+  ]
+ },
+ {
+  "shelf": 50,
+  "en": "After a {sudden} {silence}, the {radio} gave me one word: thanks. I stayed on the {floor}, on my burned {carpet}, until dawn.",
+  "ja": "突然の静けさのあと、無線がひとことだけ届けた。「ありがとう」。わたしは焼けた敷物の上、床に座ったまま夜明けを迎えた。",
+  "ids": [
+   "r0250",
+   "r0248",
+   "r0246",
+   "r0247",
+   "r0249"
+  ]
+ },
+ {
+  "shelf": 51,
+  "en": "I saw a {drama} from the back {gallery}. The {audience} would {praise} a {lazy} man in a costume, but not a quiet keeper.",
+  "ja": "後ろの桟敷から劇を見たことがある。観客は、衣装を着た怠け者ならほめるのに、黙って働く灯台守はほめない。",
+  "ids": [
+   "r0254",
+   "r0255",
+   "r0253",
+   "r0252",
+   "r0251"
+  ]
+ },
+ {
+  "shelf": 52,
+  "en": "I will not send an {email} or a {digital} note. I am {ashamed} of the {silver} bugs, but I cannot hide {forever}.",
+  "ja": "電子メールも、電子の書きつけも送らない。銀の紙魚たちを恥じている。それでも、永遠に隠れてはいられない。",
+  "ids": [
+   "r0258",
+   "r0259",
+   "r0260",
+   "r0256",
+   "r0257"
+  ]
+ },
+ {
+  "shelf": 53,
+  "en": "No {victim} here: our thanks are a {permanent} {obligation}. A lamp at each door is our {signal}, and Mina brings bread for any {hunger}.",
+  "ja": "ここに被害者はいません。お礼は、ずっと残る義務です。戸口ごとのランプが合図で、空腹の人にはミナがパンを届けます。",
+  "ids": [
+   "r0263",
+   "r0262",
+   "r0261",
+   "r0264",
+   "r0265"
+  ]
+ },
+ {
+  "shelf": 54,
+  "en": "I blamed {inflation}, {unemployment}, and my {worry} for the town. The truth: my {thirst} for power, which is a {shock} to me too.",
+  "ja": "わたしは物価上昇と失業と、町への心配のせいにしてきた。本当は、力への渇きだった。それは、わたし自身にも衝撃だ。",
+  "ids": [
+   "r0268",
+   "r0269",
+   "r0267",
+   "r0266",
+   "r0270"
+  ]
+ },
+ {
+  "shelf": 55,
+  "en": "Every year on that night, we {remember} you with {respect}. {Bless} you, keeper; we are {grateful}, and our children send their {friendship} too.",
+  "ja": "毎年あの夜になると、わたしたちは敬意をこめてあなたを覚えている。灯台守よ、あなたに祝福を。心から感謝しています。子どもたちも友情を送ります。",
+  "ids": [
+   "r0271",
+   "r0274",
+   "r0275",
+   "r0273",
+   "r0272"
+  ]
+ },
+ {
+  "shelf": 56,
+  "en": "This is no {literature}; my {grammar} is slow. But thanks is a {language} you can read, so here is a {poem}: stay {healthy}, keeper.",
+  "ja": "これは文学ではありません。文法もまだおぼつかない。でも、お礼はあなたにも読める言語だから、詩をひとつ。灯台守さん、どうか健康で。",
+  "ids": [
+   "r0276",
+   "r0277",
+   "r0279",
+   "r0278",
+   "r0280"
+  ]
+ }
+]

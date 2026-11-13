@@ -84,6 +84,45 @@ export function checkStory(story, words, allow, {partial = false} = {}) {
   return {issues, reports};
 }
 
+
+// 追伸は全区の通常語・まれびと・許可語を使える。対象語の id は括弧順。
+export function checkPostscript(ps, rare, words, allow) {
+  const issues = [], reports = [];
+  if (!Array.isArray(ps)) return {issues: ['追伸: 配列が必要'], reports};
+  if (ps.length !== 56) issues.push(`追伸: ${ps.length}/56行`);
+  const accepted = new Set([...words, ...rare].flatMap(w => [...regularForms(w.w)]));
+  for (const w of allow.words ?? []) for (const f of regularForms(w)) accepted.add(f);
+  for (const name of allow.names ?? []) for (const t of tokens(name)) accepted.add(t.toLowerCase());
+  for (const [i, line] of ps.entries()) {
+    const add = msg => issues.push(`追伸${line.shelf}: ${msg}`);
+    if (line.shelf !== i + 1) add('shelf は1〜56の順');
+    const assigned = rare.filter(w => w.shelf === line.shelf);
+    const ch = assigned[0]?.ch;
+    if (typeof line.ja !== 'string' || !line.ja.trim()) add('ja が空');
+    let parts;
+    try { parts = parseLine(line.en); } catch(e) { add(e.message); continue; }
+    const targets = parts.filter(p => p.type === 'word');
+    const ids = line.ids ?? [];
+    if (targets.length !== 5 || ids.length !== 5 || new Set(ids).size !== 5 || [...ids].sort().join() !== assigned.map(w => w.id).sort().join()) add('ids/括弧が担当の5語と不一致');
+    targets.forEach((p,j) => {if (!inflects(assigned.find(w => w.id === ids[j])?.w, p.text)) add(`対象語 ${ids[j]} {${p.text}} が不一致`);});
+    const text = parts.map(p => p.text).join('');
+    if (/[^\x00-\x7f\p{L}\p{N}\s]/u.test(text)) add('ASCII 以外の句読点');
+    const count = parts.reduce((n,p) => n + (p.type === 'word' ? 1 : tokens(p.text).length), 0);
+    const min = ch === 1 ? 10 : 12, max = ch === 1 ? 20 : 24;
+    if (count < min || count > max) add(`語数 ${count}（${min}〜${max}）`);
+    const sentences = text.replace(/\b(?:Mr|Ms|Co)\./gu, m => m.slice(0,-1)).split(/[.!?]+/u).filter(s => tokens(s).length);
+    if (sentences.length < 1 || sentences.length > 2) add('文数は1〜2');
+    const sentenceMax = ch === 1 ? 14 : ch <= 3 ? 18 : 22;
+    for (const sentence of sentences) if (tokens(sentence).length > sentenceMax) add(`1文の語数が${sentenceMax}を超える`);
+    for (const p of parts.filter(p => p.type === 'text')) for (const token of tokens(p.text)) {
+      if (!accepted.has(token.toLowerCase())) add(`地の文の未許可語 ${token}`);
+      if (assigned.some(w => inflects(w.w, token))) add(`対象語の重複（括弧外） ${token}`);
+    }
+    reports.push(`追伸${line.shelf}: ${count}語`);
+  }
+  return {issues, reports};
+}
+
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   try {
     const json = async path => JSON.parse(await readFile(path, 'utf8'));
@@ -92,6 +131,13 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
     const allow = await json(new URL('../products/word-guild/data/story-allow.json', import.meta.url));
     const partial = process.argv.includes('--partial');
     const result = checkStory(story, words, allow, {partial});
+    if (!partial) {
+      const ps = await json(new URL('../products/word-guild/data/story-ps.json', import.meta.url));
+      const rare = await json(new URL('../products/word-guild/data/rare.json', import.meta.url));
+      const post = checkPostscript(ps, rare, words, allow);
+      result.issues.push(...post.issues);
+      result.reports.push(...post.reports);
+    }
     console.log([...result.reports, ...result.issues, `${result.issues.length}件の問題${partial ? '（部分検査）' : ''}。意味・品詞・自然さ・関係節数は要読解確認。`].join('\n'));
     process.exitCode = result.issues.length ? 1 : 0;
   } catch (e) { console.error(e.message); process.exitCode = 1; }
