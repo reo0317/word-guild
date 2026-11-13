@@ -510,3 +510,7 @@ Subject: early: ink creature greeting a sunrise, with a rooster crest and a toot
 Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
 Subject: late: ink creature rushing and panting with a clock chasing it, messy hair, a bit sleepy, clock has no numbers.
 
+
+## 単語の絵：c1-055
+
+Square game enemy illustration for find: an ink monster with a large magnifying glass surprised to discover a hidden treasure chest. Match reference style: paper and letterpress ink print, thick navy outlines, flat navy, mist, paper and a little vermilion, textured ink stain monster with white eyes. Full body centered, clear meaning. Pure flat solid #00ff00 green background, no ground or shadows, no green on subject. No text, letters, numbers or symbols.

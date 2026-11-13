@@ -28,15 +28,21 @@ const ROAD_W = 0.13;   // 手前での道の半幅（枠の幅に対する割合
 const SWING = 0.42;    // 手前での横の振れ幅（枠の幅に対する割合）
 const S_MIN = 0.07;    // これより遠いものは描かない
 
-// 家は盤面の縮尺から独立した表示幅にする。道の両側に8pxの隙間を残す。
+// 道・節・家で同じ中心線を使う。画面下端に向けて帯を左右の端まで広げる。
+export function roadGeometry(width, scale, lat = 0) {
+  const shift = lat * width * SWING * scale ** 1.35;
+  const bottomScale = (1 - HORIZON) / (NEAR - HORIZON);
+  const flare = Math.min(1, Math.max(0, (scale - 0.75) / (bottomScale - 0.75))) ** 2;
+  const half = width * ROAD_W * scale;
+  return {x: width / 2 + shift, half: half + (width / 2 + Math.abs(shift) - half) * flare};
+}
+
+// 道の外側に8px空ける。手前で余白がなくなる家は、画面外へはみ出す前に隠す。
 export function houseGeometry(width, scale, lat = 0, current = false) {
-  const roadHalf = width * ROAD_W * scale;
-  const room = Math.max(36, width / 2 - roadHalf - 16);
+  const {x, half} = roadGeometry(width, scale, lat);
+  const room = Math.max(0, Math.min(x, width - x) - half - 16);
   const size = Math.min(room, Math.max(36, Math.min(140, (current ? 160 : 132) * Math.min(1, scale) ** 0.6)));
-  const reserve = Math.min(room, Math.max(36, Math.min(140, 160 * Math.min(1, scale) ** 0.6)));
-  const inset = roadHalf + reserve + 16;
-  const x = Math.max(Math.min(inset, width / 2), Math.min(Math.max(width - inset, width / 2), width / 2 + lat * width * SWING * scale));
-  return {x, size, offset: roadHalf + 8};
+  return {x, size, offset: half + 8};
 }
 
 const DAILY_SHORT = {revenge: ['↺', '戻ってきた紙魚'], fresh: ['✦', '新しい紙魚'], clean: ['✓', 'ヒントなし'], finish: ['▶', '配達']};
@@ -152,7 +158,7 @@ export function renderMap(view, ctx) {
       const reveal = lamp.got ? Math.min(5, Math.ceil(lamp.got / lamp.total * 5)) * 20 : 0;
       const pin = `<button type="button" class="gq-house ${lamp.shelf % 2 ? 'left' : 'right'}${done ? ' complete' : ''}${lit ? ' lit' : ''}${gold ? ' gold' : ''}"
         data-shelf="${lamp.shelf}" data-house-ward="${item.ward.ch}"${file ? ` data-house-src="${file}"` : ''}
-        style="--reveal:${100 - reveal}%" aria-label="街灯${lamp.shelf}の${letter ? '手紙' : '切手帳'}を開く">
+        data-reveal="${reveal}" style="--reveal:${100 - reveal}%" aria-label="街灯${lamp.shelf}の${letter ? '手紙' : '切手帳'}を開く">
         <span class="gq-house-fallback" aria-hidden="true">${miniHouse()}</span>
         <span class="gq-house-art" aria-hidden="true"><i class="gq-house-halo"></i><i class="gq-house-shadow"></i>
         <img class="gq-house-color" alt="" width="192" height="192" decoding="async">
@@ -299,9 +305,9 @@ export function renderMap(view, ctx) {
     const yh = Hs * HORIZON;
     const span = Hs * NEAR - yh;
     const sOf = r => 1 / (1 + Math.max(r, -0.55 * F) / F);
-    const X = (y, s) => houseGeometry(Ws, s, latAt(y)).x;
+    const X = (y, s) => roadGeometry(Ws, s, latAt(y)).x;
     const Y = s => yh + span * s;
-    const rw = Ws * ROAD_W;
+    const halfAt = (y, s) => roadGeometry(Ws, s, latAt(y)).half;
 
     // 道の帯：画面の上では等間隔になるように、遠くほど間隔をあけて標本を取る。
     const S_MAX = 1.6;
@@ -310,9 +316,9 @@ export function renderMap(view, ctx) {
       const left = [], right = [];
       for (let i = 0; i <= N; i++) {
         const s0 = S_MAX * Math.pow(S_MIN / S_MAX, i / N);
-        const y = Math.min(cap, Math.min(total, Math.max(0, c + F * (1 / s0 - 1))));
+        const y = Math.min(cap, Math.min(total, c + F * (1 / s0 - 1)));
         const s = sOf(y - c);
-        const x = X(y, s), sy = Y(s), w = rw * s * width;
+        const x = X(y, s), sy = Y(s), w = halfAt(y, s) * width;
         left.push([x - w, sy]); right.push([x + w, sy]);
       }
       return {left, right};
@@ -329,7 +335,7 @@ export function renderMap(view, ctx) {
     let lines = '', dashes = '';
     for (let y = Math.max(0, Math.ceil((c - 0.5 * F) / 48) * 48); y <= yMax; y += 48) {
       const s = sOf(y - c);
-      const x = X(y, s), sy = Y(s).toFixed(1), w = rw * s;
+      const x = X(y, s), sy = Y(s).toFixed(1), w = halfAt(y, s);
       lines += `M${(x - w).toFixed(1)} ${sy}L${(x + w).toFixed(1)} ${sy}`;
     }
     for (let y = Math.max(0, Math.ceil((c - 0.5 * F) / 36) * 36); y <= yMax; y += 36) {
@@ -357,6 +363,7 @@ export function renderMap(view, ctx) {
         const current = Number(b.house.dataset.shelf) === map.here?.shelf;
         const {size, offset} = houseGeometry(Ws, s, latAt(b.y), current);
         // 親の遠近縮小を打ち消し、画像も代替の家も同じ表示幅にする。
+        b.house.style.visibility = size < 24 ? 'hidden' : '';
         b.house.style.setProperty('--house-size', `${(size / s).toFixed(3)}px`);
         b.house.style.setProperty('--house-offset', `${(offset / s).toFixed(3)}px`);
       }

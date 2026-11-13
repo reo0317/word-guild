@@ -625,17 +625,27 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     board.addEventListener('touchmove', event => event.preventDefault(), {passive: false});
   }
 
-  // 正解した紙魚：ヒントなしなら判を押されて切手になる。ヒントを使っていたら、切手にならずに逃げる。
+  // 正解した紙魚：再戦はインクと霧に消える。通常は切手になり、ヒントを使っていたら逃げる。
   function resolveMon(slot) {
     const mon = monOf(slot.word.id);
     if (!mon) return;
     mon.classList.remove('hinted');
+    if (quest.isRevenge) {
+      mon.classList.add('solved', 'dissolved');
+      if (reducedMotion()) {
+        mon.hidden = true;
+        return;
+      }
+      mon.insertAdjacentHTML('beforeend', `<span class="gq-ink-burst" aria-hidden="true">${Array.from({length: 8}, (_, i) => `<i style="--angle:${i * 45}deg"></i>`).join('')}</span>`);
+      later(700, () => { mon.hidden = true; });
+      return;
+    }
     if (slot.hint > 0) {
       mon.classList.add('solved', 'fled');
       return;
     }
     const spec = specFor(slot.word);
-    const html = stampHtml(slot.word, spec, {state: quest.isRevenge ? 'proof' : 'print', ward: slot.word.ch})
+    const html = stampHtml(slot.word, spec, {state: 'print', ward: slot.word.ch})
       .replace('<button', '<button tabindex="-1"');
     mon.insertAdjacentHTML('beforeend', `<div class="gq-mon-stamp">${html}</div>`);
     mon.classList.add('solved', 'stamped');
@@ -644,7 +654,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   // 盤面を取り切ったら、切手が上の切手の数へ飛ぶ（0.5 秒）。
   function flyStamps() {
     const target = $('#gq-tally');
-    if (!target || reducedMotion()) return;
+    if (quest.isRevenge || !target || reducedMotion()) return;
     const goal = target.getBoundingClientRect();
     view.querySelectorAll('.gq-mon-stamp').forEach(element => {
       const box = element.getBoundingClientRect();
@@ -659,6 +669,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   // 正解の一瞬：その語を含む行の一部が出て、霧のかすれに語がインクで戻る（0.8秒）。英文が無い語は何も出さない。
   function showClip(id, keep = false) {
+    if (quest.isRevenge) return;
     const band = $('#gq-story');
     const clip = story.letters.length ? clipParts(story, id, 17) : null;
     if (!band || !clip) return;
@@ -691,7 +702,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     pulse($('#gq-board'), 'correct');
     resolveMon(quest.slots.find(slot => slot.word.id === result.word.id));
     showClip(result.word.id);
-    if (result.cleared && clipParts(story, result.word.id, 17)) lastClip = result.word.id;
+    if (!quest.isRevenge && result.cleared && clipParts(story, result.word.id, 17)) lastClip = result.word.id;
     react();
     paintAll();
     if (result.cleared) defeat();
@@ -709,7 +720,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     $('#gq-board').classList.add('crumbling');
     sfx('crumble');
     later(180, flyStamps);
-    later(CRUMBLE_MS, () => {
+    later(quest.isRevenge && !reducedMotion() ? 740 : CRUMBLE_MS, () => {
       quest.next();
       if (quest.phase === 'finished') showResults();
       else renderBoard();

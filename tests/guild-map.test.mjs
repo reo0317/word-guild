@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {HOUSE_ART} from '../products/word-guild/guild/art.mjs';
-import {renderMap, houseGeometry} from '../products/word-guild/guild/map.mjs';
+import {renderMap, houseGeometry, roadGeometry} from '../products/word-guild/guild/map.mjs';
 import {buildMap} from '../products/word-guild/guild/stages.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
@@ -55,25 +55,41 @@ test('家は左右交互で、霧・5段階の色・完成・点灯・金を進�
 });
 
 
-test('家は独立した遠近サイズで、道・番号札と離れ、スクロール中も左右8pxに収まる', () => {
+test('道は奥ほど細く小さくくねり、下端で画面幅を覆う。家と節は同じ中心に並ぶ', () => {
+  const bottom = (1 - 0.14) / (0.8 - 0.14);
   for (const width of [320, 390, 430]) {
-    for (let scale = 0.07; scale <= 2; scale += 0.01) {
+    let lastHalf = 0, lastSwing = 0;
+    for (let scale = 0.07; scale <= bottom; scale += 0.01) {
+      const road = roadGeometry(width, scale, 0.5);
+      assert.ok(road.half > lastHalf);
+      assert.ok(road.x - width / 2 > lastSwing);
+      lastHalf = road.half; lastSwing = road.x - width / 2;
       for (const lat of [-0.5, 0, 0.5]) {
         for (const current of [false, true]) {
           const {x, size, offset} = houseGeometry(width, scale, lat, current);
-          assert.ok(size >= 36 && size <= 140);
-          assert.ok(x - offset - size >= 8 - 1e-9);
-          assert.ok(x + offset + size <= width - 8 + 1e-9);
-          assert.ok(offset >= 28 * scale + 8);
+          assert.equal(x, roadGeometry(width, scale, lat).x);
+          assert.ok(size >= 0 && size <= 140);
+          if (size >= 24) {
+            assert.ok(x - offset - size >= 8 - 1e-9);
+            assert.ok(x + offset + size <= width - 8 + 1e-9);
+          }
+          assert.equal(offset, roadGeometry(width, scale, lat).half + 8);
         }
       }
     }
+    for (const lat of [-0.5, 0, 0.5]) {
+      const {x, half} = roadGeometry(width, bottom, lat);
+      assert.ok(x - half <= 1e-9);
+      assert.ok(x + half >= width - 1e-9);
+    }
   }
-  for (const scale of [0.85, 0.95, 1]) {
-    const normal = houseGeometry(390, scale).size;
-    const current = houseGeometry(390, scale, 0, true).size;
-    assert.ok(normal >= 110 && normal <= 140);
-    assert.ok(current >= normal && current <= 140);
-  }
-  assert.equal(houseGeometry(390, 0.07).size, 36);
+});
+
+test('家の境目は24%のグラデーションで、未配達と全着色は端まで描き分ける', async () => {
+  const css = await readFile(new URL('../products/word-guild/map.css', import.meta.url), 'utf8');
+  assert.match(css, /-webkit-mask-image:linear-gradient\(to bottom,transparent calc\(var\(--reveal\) - 12%\),#000 calc\(var\(--reveal\) \+ 12%\)\)/);
+  assert.match(css, /\[data-reveal="0"\] .gq-house-color\{visibility:hidden\}/);
+  assert.match(css, /\[data-reveal="100"\] .gq-house-color\{-webkit-mask-image:none;mask-image:none\}/);
+  assert.doesNotMatch(css, /(?:^|[;{])\s*filter\s*:/);
+  assert.match(css, /\.gq-road-svg path\{animation:none;transition:none;transform:none\}/);
 });
