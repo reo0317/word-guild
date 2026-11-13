@@ -160,6 +160,7 @@ function layout(map) {
 export function renderMap(view, ctx) {
   const {map, today, progress, on} = ctx;
   const {items, total} = layout(map);
+  const roadEnd = total - 40; // 灯台の足元が道の終点。
   const night = rareStatus(ctx.rares ?? [], progress);
   const visiting = new Set(visitors(map, ctx.rares ?? [], progress, today).filter(shelf => progress.rare?.day !== today || !progress.rare.met.includes(shelf)));
   const hereWard = map.wards.findIndex(w => w.ch === map.here?.ch);
@@ -238,9 +239,7 @@ export function renderMap(view, ctx) {
 
   const post = bb('gq-bb-post', 14, 0, `<div class="gq-post">${artBox('post', 'gq-post-art')}
     <div class="gq-guide">${artBox('hatoriSmile', 'gq-face-hatori')}${map.dueCount ? `<span class="gq-due-badge" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b>${map.dueCount}</b></span>` : ''}</div></div>`);
-  const lighthouse = bb('gq-bb-top', total - 40, 0, `<div class="gq-top-block">${night.complete ? '<span class="gq-full-stars" aria-label="夜の切手がすべてそろいました">✦ ⋆ ✧ ⋆ ✦<br>⋆ ✦ ⋆ ✧ ⋆<br>✧ ⋆ ✦ ⋆ ✧</span>' : ''}<svg viewBox="0 0 120 150" aria-hidden="true">
-    <path d="M60 4l-46 40M60 4l46 40" class="beam"/><rect x="48" y="30" width="24" height="16" rx="3" class="lamp"/><path d="M44 46h32l8 100H36z" class="tower"/>
-    <path d="M42 80h36M39 112h42" class="band"/></svg><b>灯台</b></div>`);
+  const lighthouse = bb('gq-bb-top', roadEnd, 0, `<div class="gq-top-block" role="img" aria-label="道の終点の灯台">${night.complete ? '<span class="gq-full-stars" aria-label="夜の切手がすべてそろいました">✦ ⋆ ✧ ⋆ ✦</span>' : ''}<i class="gq-lighthouse-beam" aria-hidden="true"></i><img src="art/house-48.webp" alt="" width="600" height="600" decoding="async"></div>`);
 
   const skies = [...new Set(map.wards.map(w => w.ch))].map(ch => `<div class="gq-sky-art" data-ward="${ch}">${artBox(`ward${Math.min(ch, 6)}`, 'gq-sky-img')}${night.wards[ch]?.complete ? constellation(ch) : ''}</div>`).join('');
   // カメラの先にある区を調べるための、区ごとの始まりの y
@@ -355,25 +354,25 @@ export function renderMap(view, ctx) {
       const left = [], right = [];
       for (let i = 0; i <= N; i++) {
         const s0 = S_MAX + (S_MIN - S_MAX) * i / N;
-        const y = Math.max(c, Math.min(cap, Math.min(total, c + f / s0 - Z_NEAR)));
+        const y = Math.max(c, Math.min(cap, c + f / s0 - Z_NEAR));
         const p = project(y);
         left.push([p.x - p.half * width, p.y]);
         right.push([p.x + p.half * width, p.y]);
       }
+      const end = project(Math.max(c, cap));
+      left.push([end.x - end.half * width, end.y]);
+      right.push([end.x + end.half * width, end.y]);
       return {left, right};
     };
     const fmt = p => `${p[0].toFixed(1)} ${p[1].toFixed(1)}`;
     const poly = ({left, right}) => `M${left.map(fmt).join('L')}L${right.reverse().map(fmt).join('L')}Z`;
-    const full = ribbon(total, 1);
-    // 有限のゲーム世界の先も背景と同じ消失点までつなぐ。
-    full.left.push([Ws / 2, Hs * HORIZON]);
-    full.right.push([Ws / 2, Hs * HORIZON]);
+    const full = ribbon(roadEnd, 1);
     paths.edge.setAttribute('d', `M${full.left.map(fmt).join('L')}M${full.right.map(fmt).join('L')}`);
     paths.base.setAttribute('d', poly(full));
-    paths.walked.setAttribute('d', hereItem ? poly(ribbon(hereY, 0.5)) : '');
+    paths.walked.setAttribute('d', hereItem ? poly(ribbon(Math.min(hereY, roadEnd), 0.5)) : '');
 
     // 石だたみの横線と、中央の破線（距離に合わせて間隔が縮む）。
-    const yMax = Math.min(total, c + F * (1 / S_MIN - 1));
+    const yMax = Math.min(roadEnd, c + F * (1 / S_MIN - 1));
     let lines = '', dashes = '';
     for (let y = Math.max(0, Math.ceil((c) / 48) * 48); y <= yMax; y += 48) {
       const s = sOf(y - c);
@@ -381,7 +380,7 @@ export function renderMap(view, ctx) {
       lines += `M${(x - w).toFixed(1)} ${sy}L${(x + w).toFixed(1)} ${sy}`;
     }
     for (let y = Math.max(0, Math.ceil((c) / 36) * 36); y <= yMax; y += 36) {
-      const y2 = y + 14;
+      const y2 = Math.min(y + 14, yMax);
       const s1 = sOf(y - c), s2 = sOf(y2 - c);
       const x1 = X(y, s1), x2 = X(y2, s2);
       const w1 = 2.4 * s1, w2 = 2.4 * s2;
@@ -394,7 +393,7 @@ export function renderMap(view, ctx) {
     for (const b of boards) {
       const r = b.y - c;
       const s = sOf(r);
-      if (r < 0 || s < S_MIN) {
+      if (r < 0 || (s < S_MIN && !b.el.classList.contains('gq-bb-top'))) {
         if (b.shown) { b.el.style.display = 'none'; b.shown = false; }
         continue;
       }
@@ -412,9 +411,13 @@ export function renderMap(view, ctx) {
         b.house.style.setProperty('--house-offset', `${(offset / s).toFixed(3)}px`);
       }
       if (b.el.classList.contains('gq-bb-tsumugi')) b.scale = tsumugiScale(1, initialTsumugiScale);
+      if (b.el.classList.contains('gq-bb-top')) {
+        // 家より大きな目印。遠近を保ち、近接時は画面内に収める。
+        b.scale = Math.min(240, 600 * s ** .6) / (600 * s);
+      }
       if (b.panel) b.scale = 1 / s;
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${(s * b.scale).toFixed(3)})`;
-      b.el.style.opacity = fade.toFixed(2);
+      b.el.style.opacity = b.el.classList.contains('gq-bb-top') ? '1' : fade.toFixed(2);
       b.el.style.zIndex = b.panel ? '202' : String(Math.round(s * 100));
     }
 

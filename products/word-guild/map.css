@@ -69,8 +69,12 @@
 .gq-post{position:absolute;left:-120px;top:-130px;width:240px;height:130px;border:3px solid var(--ink);border-radius:14px;background:var(--fog)}
 .gq-post-art{position:absolute;inset:0;border:0;border-radius:11px}
 .gq-guide{position:absolute;left:8px;bottom:-6px;display:flex;align-items:flex-end;gap:4px}.gq-face-hatori{flex:0 0 72px;height:72px}
-.gq-top-block{position:absolute;left:-60px;top:-150px;width:120px;display:grid;justify-items:center;color:var(--ink);font-size:13px}
-.gq-top-block svg{width:80px;height:100px}.gq-top-block .beam{fill:none;stroke:var(--lamp);stroke-width:3;opacity:.7}.gq-top-block .lamp{fill:var(--lamp)}.gq-top-block .tower{fill:var(--paper);stroke:var(--ink);stroke-width:3}.gq-top-block .band{stroke:var(--seal);stroke-width:6}
+.gq-top-block{position:absolute;left:-300px;bottom:-18px;width:600px;height:600px;pointer-events:none}
+.gq-top-block img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.gq-top-block .gq-full-stars{position:absolute;bottom:100%;left:0;width:100%;text-align:center;color:var(--lamp)}
+.gq-lighthouse-beam{position:absolute;left:69%;top:17%;width:95%;height:25%;transform-origin:0 50%;background:linear-gradient(90deg,#ffe6a0bb,#ffe6a000);clip-path:polygon(0 46%,100% 0,100% 100%,0 54%);animation:gq-lighthouse-light 9s ease-in-out infinite;opacity:.6}
+@keyframes gq-lighthouse-light{0%,100%{transform:rotate(-12deg) scaleX(.8);opacity:.25}50%{transform:rotate(9deg) scaleX(1);opacity:.8}}
+@media(prefers-reduced-motion:reduce){.gq-lighthouse-beam{animation:none;opacity:.5}}
 
 
 .gq-map-foot{position:relative;z-index:1;flex-shrink:0;display:flex;flex-direction:column;gap:4px;padding:6px 8px calc(4px + env(safe-area-inset-bottom));background:var(--paper);border-top:2px solid var(--ink)}

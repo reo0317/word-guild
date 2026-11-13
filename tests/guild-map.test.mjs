@@ -107,7 +107,7 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
   const sky = {style:{}, dataset:{ward:'1'}, classList:{toggle(){}}};
   const nodes = {'#gq-road':road};
   const view = {innerHTML:'', querySelector(selector) {
-    return nodes[selector] ??= {style:{}, setAttribute(){}};
+    return nodes[selector] ??= {style:{}, attrs:{}, setAttribute(k,v){this.attrs[k]=v;}};
   }, querySelectorAll(selector) {
     if (selector === '.gq-sky-art') return [sky];
     if (selector !== '.gq-bb') return [];
@@ -121,6 +121,21 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
   try {
     renderMap(view, {map,today:20000,progress,total:1400,face:()=>'',tsumugi:'',on:{}});
     const scale = () => Number(pin.style.transform.match(/scale\(([^)]+)\)/)[1]);
+    const end = Number(view.innerHTML.match(/class="gq-bb gq-bb-top" data-y="([^"]+)"/)[1]);
+    const checkRoadEnd = () => {
+      const camera = Math.min(end + 40, Math.max(-1400, end + 40 - road.scrollTop));
+      const terminal = projectRoad(390, 680, end, camera);
+      for (const name of ['base', 'edge', 'lines', 'center', 'walked']) {
+        const coords = nodes[`#gq-r-${name}`].attrs.d.match(/-?\d+(?:\.\d+)?/g)?.map(Number) ?? [];
+        for (let i = 1; i < coords.length; i += 2) assert.ok(coords[i] >= terminal.y - .051, `${name} extends past lighthouse`);
+      }
+      const base = nodes['#gq-r-base'].attrs.d;
+      assert.ok(base.includes(`${(terminal.x - terminal.half).toFixed(1)} ${terminal.y.toFixed(1)}`));
+      assert.ok(base.includes(`${(terminal.x + terminal.half).toFixed(1)} ${terminal.y.toFixed(1)}`));
+    };
+    assert.match(view.innerHTML, /<img src="art\/house-48.webp"/);
+    assert.doesNotMatch(view.innerHTML, /<svg viewBox="0 0 120 150"/);
+    checkRoadEnd();
     const initialScroll = road.scrollTop;
     assert.equal(scale(), 1);
     assert.equal(sky.style.top, `${skyGeometry(390,680,1).top}px`);
@@ -129,10 +144,12 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     assert.equal(scale(), 1);
     road.scrollTop = initialScroll + 600;
     scroll(); scheduled();
+    checkRoadEnd();
     const far = scale();
     assert.ok(far < 1);
     road.scrollTop = initialScroll - 200;
     scroll(); scheduled();
+    checkRoadEnd();
     assert.ok(scale() > 1);
     assert.doesNotMatch(view.innerHTML, /<img[^>]*loading="lazy"/);
   } finally {
