@@ -44,6 +44,10 @@ test('家は左右交互で、霧・5段階の色・完成・点灯・金を進�
   } finally {globalThis.requestAnimationFrame=old;}
   const houses = [...view.innerHTML.matchAll(/class="gq-house ([^"]*)"\s+data-shelf="(\d+)"[^>]*style="--reveal:(\d+)%"/g)];
   assert.equal(houses.length,56);
+  assert.match(view.innerHTML, /<b>郵便局<\/b><small>25\/25<\/small><span class="gq-name-postmark"/);
+  assert.match(view.innerHTML, /<b>シラセさん<\/b><small>0\/25<\/small>/);
+  assert.equal([...view.innerHTML.matchAll(/class="gq-name-postmark"/g)].length, 3);
+  assert.equal(new Set([...view.innerHTML.matchAll(/--name-color:([^;]+)/g)].map(m => m[1])).size, 6);
   assert.match(houses[0][1], /left complete lit gold/);
   assert.equal(houses[1][1], 'right complete lit');
   assert.equal(houses[2][1], 'left complete');
@@ -286,11 +290,11 @@ test('スマホ幅で道の点列は打ち切り距離を超えず、画面の�
 });
 
 
-test('吹き出しは大きなツムギの横に限り、左の家を避けて右へ出す', () => {
+test('吹き出しは大きなツムギの反対側に出す', () => {
   const house = {left:10, right:140, top:270, bottom:440};
   assert.deepEqual(panelGeometry(390, 680, 190, 400, 130, 80, [house]), {left:246, top:300});
   assert.equal(panelGeometry(390, 680, 190, 400, 130, 80, [], 69), null);
-  assert.deepEqual(panelGeometry(320, 480, 160, 300, 150, 80, []), {left:162, top:200});
+  assert.deepEqual(panelGeometry(320, 480, 160, 300, 150, 80, []), {left:8, top:200});
   assert.deepEqual(panelGeometry(390, 680, 210, 400, 130, 80,
     [{left:260, right:380, top:270, bottom:440}]), {left:24, top:300});
 });
@@ -307,11 +311,11 @@ test('打ち切り地点まで世界座標の sin の振幅を保つ', () => {
 });
 
 
-test('両側に家があっても重なりの小さい側へ必ず出す（同点は右）', () => {
+test('家の重なりによらず画面中央を境に側を決める', () => {
   const left = {left:0, right:150, top:280, bottom:400};
   const right = {left:260, right:390, top:280, bottom:400};
   assert.deepEqual(panelGeometry(390,680,190,400,130,80,[left,right]), {left:246,top:300});
-  assert.deepEqual(panelGeometry(390,680,190,400,130,80,[{...left,right:50},right]), {left:8,top:300});
+  assert.deepEqual(panelGeometry(390,680,190,400,130,80,[{...left,right:50},right]), {left:246,top:300});
   assert.ok(panelGeometry(390,680,190,400,130,80,[left,right],70));
 });
 
@@ -350,4 +354,22 @@ test('56軒の玄関を道側へ向け、中央の玄関と飾りは反転しな
   const source = await readFile(new URL('../products/word-guild/guild/map.mjs', import.meta.url), 'utf8');
   assert.match(source, /gq-house-warm"><\/i><\/span><i class="gq-house-sparks/);
   assert.match(source, /classList.toggle\('door-flipped', houseFlipped\(b.house.dataset.shelf, side\)\)/);
+});
+
+test('スマホ幅で吹き出しは左右反転し、家の位置によらず画面内に収まる', () => {
+  for (const [width, height] of [[320,480], [390,680], [430,760]]) {
+    for (const x of [width * .25, width * .49, width * .51, width * .75]) {
+      const p = panelGeometry(width, height, x, 400, 130, 80, [{left:0,right:width,top:0,bottom:height}]);
+      assert.ok(p.left >= 8 && p.left + 130 <= width - 8);
+      assert.ok(p.top >= 8 && p.top + 80 <= height - 8);
+      assert.ok(x < width / 2 ? p.left > x : p.left + 130 < x);
+    }
+  }
+});
+
+test('ゲーム用の宛先名は制作データの56件をそのまま使う', async () => {
+  const source = await readFile(new URL('../data/work/stage-names.json', import.meta.url), 'utf8');
+  const deployed = await readFile(new URL('../products/word-guild/data/stage-names.json', import.meta.url), 'utf8');
+  assert.equal(deployed, source);
+  assert.equal(Object.keys(JSON.parse(deployed)).length, 56);
 });
