@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {HOUSE_ART} from '../products/word-guild/guild/art.mjs';
-import {renderMap, houseGeometry, roadGeometry} from '../products/word-guild/guild/map.mjs';
+import {renderMap, houseGeometry, projectRoad, A, L, W, f} from '../products/word-guild/guild/map.mjs';
 import {buildMap} from '../products/word-guild/guild/stages.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
@@ -55,32 +55,41 @@ test('家は左右交互で、霧・5段階の色・完成・点灯・金を進�
 });
 
 
-test('道は奥ほど細く小さくくねり、下端で画面幅を覆う。家と節は同じ中心に並ぶ', () => {
-  const bottom = (1 - 0.14) / (0.8 - 0.14);
+test('一定幅の世界座標の道を投影すると遠いほど細くなる', () => {
   for (const width of [320, 390, 430]) {
-    let lastHalf = 0, lastSwing = 0;
-    for (let scale = 0.07; scale <= bottom; scale += 0.01) {
-      const road = roadGeometry(width, scale, 0.5);
-      assert.ok(road.half > lastHalf);
-      assert.ok(road.x - width / 2 > lastSwing);
-      lastHalf = road.half; lastSwing = road.x - width / 2;
-      for (const lat of [-0.5, 0, 0.5]) {
-        for (const current of [false, true]) {
-          const {x, size, offset} = houseGeometry(width, scale, lat, current);
-          assert.equal(x, roadGeometry(width, scale, lat).x);
-          assert.ok(size >= 0 && size <= 140);
-          if (size >= 24) {
-            assert.ok(x - offset - size >= 8 - 1e-9);
-            assert.ok(x + offset + size <= width - 8 + 1e-9);
-          }
-          assert.equal(offset, roadGeometry(width, scale, lat).half + 8);
-        }
-      }
+    let previous = Infinity;
+    for (let z = 0; z <= 10000; z += 10) {
+      const p = projectRoad(width, 600, z);
+      assert.ok(p.width < previous);
+      assert.ok(Math.abs(p.width - width * f * W / p.z) < 1e-10);
+      previous = p.width;
     }
-    for (const lat of [-0.5, 0, 0.5]) {
-      const {x, half} = roadGeometry(width, bottom, lat);
-      assert.ok(x - half <= 1e-9);
-      assert.ok(x + half >= width - 1e-9);
+  }
+});
+
+test('左右の手前の極値は大きく振れ、道の外縁が10%まで近づく', () => {
+  for (const width of [320, 390, 430]) {
+    for (const camera of [0, L / 2, L, 3 * L / 2]) {
+      const p = projectRoad(width, 600, camera, camera);
+      assert.ok(Math.abs(Math.abs(p.x / width - 0.5) - A) < 1e-12);
+      assert.ok(p.width / width >= 0.30 && p.width / width <= 0.40);
+      assert.ok(Math.abs(Math.min(p.x - p.half, width - p.x - p.half) / width - 0.10) < 1e-12);
+    }
+  }
+});
+
+test('前進中も道は画面内に収まり、家は余白の広い道の外側に置く', () => {
+  for (const width of [320, 390, 430]) {
+    for (let camera = 0; camera <= L; camera += 17) {
+      for (let distance = 0; distance <= 10000; distance += 37) {
+        const p = projectRoad(width, 600, camera + distance, camera);
+        assert.ok(p.x - p.half >= 0 && p.x + p.half <= width);
+        assert.ok(p.y >= 84 && p.y <= 600);
+        const h = houseGeometry(width, p, true);
+        assert.equal(h.x, p.x);
+        assert.equal(h.offset, p.half + 8);
+        assert.ok(h.side === 'left' ? h.x - h.offset - h.size >= 8 - 1e-9 : h.x + h.offset + h.size <= width - 8 + 1e-9);
+      }
     }
   }
 });

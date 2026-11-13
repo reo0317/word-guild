@@ -15,8 +15,7 @@ import {isRestored} from './srs.mjs';
 //   ctx.letterOf(shelf)   その街灯の通（letterView の結果）か null。英文が無い街灯は null で、紙の絵を出さない
 //   ctx.on        {go, gate, lamp, album, settings, title, notice}
 //
-// 遠近：スクロール量を「カメラの位置」にして、道の上の各地点（world の y）を毎回投影し直す。
-//   画面の y = 地平線 + (手前の基準線 - 地平線) × s、s = 1 / (1 + 距離 / F)
+// 遠近：スクロール量をカメラの前進距離として、同じ世界座標の道を投影し直す。
 import {esc, fab, waxButton, miniHouse} from './dom.mjs';
 import {artBox, HOUSE_ART} from './art.mjs';
 import {streakNow} from './daily.mjs';
@@ -24,26 +23,33 @@ import {WARDS} from './chara-svg.mjs';
 
 const H = {post: 170, ward: 64, step: 54, lamp: 92, gate: 112, top: 180};
 const HORIZON = 0.14;  // 地平線の高さ（道の枠の高さに対する割合）
-const NEAR = 0.8;      // カメラの足もと（今いる石段）の高さ
-const ROAD_W = 0.13;   // 手前での道の半幅（枠の幅に対する割合）
-const SWING = 0.42;    // 手前での横の振れ幅（枠の幅に対する割合）
-const S_MIN = 0.07;    // これより遠いものは描かない
+// 世界座標の単位は任意。f は画面幅を単位とする焦点距離。
+export const A = 0.225; // 中心線の横振幅（最接近時、道の外縁が画面の10%まで来る）
+export const L = 1100;  // 奥行き方向のくねりの周期
+export const W = 0.35; // 世界座標で一定の道幅
+export const f = 700;  // 焦点距離（画面幅に対する投影倍率の基準）
+export const H_CAMERA = 0.86; // カメラの高さ（画面の縦横比で補正して投影）
+const Z_NEAR = 700;    // 下端での最短距離。これより近い地面は描かない
+const PHASE = Math.PI / 2;
+const S_MIN = 0.07;
 
-// 道・節・家で同じ中心線を使う。画面下端に向けて帯を左右の端まで広げる。
-export function roadGeometry(width, scale, lat = 0) {
-  const shift = lat * width * SWING * scale ** 1.35;
-  const bottomScale = (1 - HORIZON) / (NEAR - HORIZON);
-  const flare = Math.min(1, Math.max(0, (scale - 0.75) / (bottomScale - 0.75))) ** 2;
-  const half = width * ROAD_W * scale;
-  return {x: width / 2 + shift, half: half + (width / 2 + Math.abs(shift) - half) * flare};
+// worldZ は地面上の絶対位置、camera はスクロールによる前進距離。
+// 縦横の画面単位をそれぞれ width / height に戻す通常の透視投影。
+export function projectRoad(width, height, worldZ, camera = 0) {
+  const z = worldZ - camera + Z_NEAR;
+  const scale = f / z;
+  const worldX = A * Math.sin(2 * Math.PI * worldZ / L + PHASE);
+  return {x: width / 2 + width * scale * worldX,
+    y: height * (HORIZON + scale * H_CAMERA), width: width * scale * W,
+    half: width * scale * W / 2, scale, z};
 }
 
-// 道の外側に8px空ける。手前で余白がなくなる家は、画面外へはみ出す前に隠す。
-export function houseGeometry(width, scale, lat = 0, current = false) {
-  const {x, half} = roadGeometry(width, scale, lat);
-  const room = Math.max(0, Math.min(x, width - x) - half - 16);
+export function houseGeometry(width, projection, current = false) {
+  const {x, half, scale} = projection;
+  const side = x >= width / 2 ? 'left' : 'right';
+  const room = Math.max(0, (side === 'left' ? x : width - x) - half - 16);
   const size = Math.min(room, Math.max(36, Math.min(140, (current ? 160 : 132) * Math.min(1, scale) ** 0.6)));
-  return {x, size, offset: half + 8};
+  return {x, size, offset: half + 8, side};
 }
 
 const DAILY_SHORT = {revenge: ['↺', '戻ってきた紙魚'], fresh: ['✦', '新しい紙魚'], clean: ['✓', 'ヒントなし'], finish: ['▶', '配達']};
@@ -107,35 +113,17 @@ function layout(map) {
   return {items, total: y};
 }
 
-// 道の左右の振れ。ノードの番号で決める（-0.5〜0.5）。
-const latOf = k => Math.sin(k * 0.5) * 0.5;
-
 export function renderMap(view, ctx) {
   const {map, today, progress, on} = ctx;
   const {items, total} = layout(map);
   const hereWard = map.wards.findIndex(w => w.ch === map.here?.ch);
   const ink = ward => (WARDS[ward.ch] ?? WARDS[1]).inks[0][1];
 
-  // 道の中心線（ノードの点列）。なめらかにつなぐ。
-  const pts = [{y: 0, lat: 0}];
   let hereItem = null;
   for (const item of items) {
-    if (item.type === 'step' || item.type === 'lamp' || item.type === 'gate') {
-      item.lat = latOf(item.k);
-      pts.push({y: item.cy, lat: item.lat});
-      if (item.isHere) hereItem = item;
-    }
+    item.lat = Math.sin(2 * Math.PI * item.cy / L + PHASE);
+    if (item.isHere) hereItem = item;
   }
-  pts.push({y: total, lat: 0});
-  const latAt = y => {
-    if (y <= pts[0].y) return pts[0].lat;
-    if (y >= pts.at(-1).y) return pts.at(-1).lat;
-    let lo = 0, hi = pts.length - 1;
-    while (hi - lo > 1) { const mid = (lo + hi) >> 1; if (pts[mid].y <= y) lo = mid; else hi = mid; }
-    const t = (y - pts[lo].y) / (pts[hi].y - pts[lo].y);
-    const e = (1 - Math.cos(Math.PI * t)) / 2;
-    return pts[lo].lat + (pts[hi].lat - pts[lo].lat) * e;
-  };
   const hereY = hereItem ? hereItem.cy : 0;
 
   const bb = (cls, y, lat, inner) =>
@@ -302,25 +290,24 @@ export function renderMap(view, ctx) {
     frame = 0;
     if (!Ws || !Hs) return;
     const c = Math.min(total, Math.max(0, total - road.scrollTop)); // カメラの位置
-    const F = Hs * 0.8;
-    const yh = Hs * HORIZON;
-    const span = Hs * NEAR - yh;
-    const sOf = r => 1 / (1 + Math.max(r, -0.55 * F) / F);
-    const X = (y, s) => roadGeometry(Ws, s, latAt(y)).x;
-    const Y = s => yh + span * s;
-    const halfAt = (y, s) => roadGeometry(Ws, s, latAt(y)).half;
+    const F = Z_NEAR;
+    const project = y => projectRoad(Ws, Hs, y, c);
+    const sOf = r => f / (r + Z_NEAR);
+    const X = y => project(y).x;
+    const Y = s => Hs * (HORIZON + H_CAMERA * s);
+    const halfAt = y => project(y).half;
 
-    // 道の帯：画面の上では等間隔になるように、遠くほど間隔をあけて標本を取る。
-    const S_MAX = 1.6;
-    const N = 90;
+    // 画面の縦方向に等間隔で標本化し、同じ投影から両側を作る。
+    const S_MAX = 1;
+    const N = 360;
     const ribbon = (cap, width) => {
       const left = [], right = [];
       for (let i = 0; i <= N; i++) {
-        const s0 = S_MAX * Math.pow(S_MIN / S_MAX, i / N);
-        const y = Math.min(cap, Math.min(total, c + F * (1 / s0 - 1)));
-        const s = sOf(y - c);
-        const x = X(y, s), sy = Y(s), w = halfAt(y, s) * width;
-        left.push([x - w, sy]); right.push([x + w, sy]);
+        const s0 = S_MAX + (S_MIN - S_MAX) * i / N;
+        const y = Math.max(c, Math.min(cap, Math.min(total, c + f / s0 - Z_NEAR)));
+        const p = project(y);
+        left.push([p.x - p.half * width, p.y]);
+        right.push([p.x + p.half * width, p.y]);
       }
       return {left, right};
     };
@@ -334,12 +321,12 @@ export function renderMap(view, ctx) {
     // 石だたみの横線と、中央の破線（距離に合わせて間隔が縮む）。
     const yMax = Math.min(total, c + F * (1 / S_MIN - 1));
     let lines = '', dashes = '';
-    for (let y = Math.max(0, Math.ceil((c - 0.5 * F) / 48) * 48); y <= yMax; y += 48) {
+    for (let y = Math.max(0, Math.ceil((c) / 48) * 48); y <= yMax; y += 48) {
       const s = sOf(y - c);
       const x = X(y, s), sy = Y(s).toFixed(1), w = halfAt(y, s);
       lines += `M${(x - w).toFixed(1)} ${sy}L${(x + w).toFixed(1)} ${sy}`;
     }
-    for (let y = Math.max(0, Math.ceil((c - 0.5 * F) / 36) * 36); y <= yMax; y += 36) {
+    for (let y = Math.max(0, Math.ceil((c) / 36) * 36); y <= yMax; y += 36) {
       const y2 = y + 14;
       const s1 = sOf(y - c), s2 = sOf(y2 - c);
       const x1 = X(y, s1), x2 = X(y2, s2);
@@ -353,7 +340,7 @@ export function renderMap(view, ctx) {
     for (const b of boards) {
       const r = b.y - c;
       const s = sOf(r);
-      if (r < -0.5 * F || s < S_MIN) {
+      if (r < 0 || s < S_MIN) {
         if (b.shown) { b.el.style.display = 'none'; b.shown = false; }
         continue;
       }
@@ -362,7 +349,9 @@ export function renderMap(view, ctx) {
       const sx = X(b.y, s);
       if (b.house) {
         const current = Number(b.house.dataset.shelf) === map.here?.shelf;
-        const {size, offset} = houseGeometry(Ws, s, latAt(b.y), current);
+        const {size, offset, side} = houseGeometry(Ws, project(b.y), current);
+        b.house.classList.toggle('left', side === 'left');
+        b.house.classList.toggle('right', side === 'right');
         // 親の遠近縮小を打ち消し、画像も代替の家も同じ表示幅にする。
         b.house.style.visibility = size < 24 ? 'hidden' : '';
         b.house.style.setProperty('--house-size', `${(size / s).toFixed(3)}px`);
