@@ -168,6 +168,8 @@ export class Quest {
   // 回答済みの語だけを採点して保存する。撤退でも呼ばれる。
   finish(retreated) {
     if (this.phase === 'finished') return;
+    // おまけを閉じても、終えた配達と無傷の消印は失わない。
+    if (this.isNight) retreated = false;
     this.retreated = retreated;
     this.phase = 'finished';
     const words = {...this.startProgress.words};
@@ -208,7 +210,7 @@ export class Quest {
         ? [...new Set([...(this.startProgress.gates ?? []), this.gate])]
         : [...(this.startProgress.gates ?? [])],
     };
-    // 撤退したとき、出題済みで未回答の語を末尾に足す（採点も保存もしない）
+    // 撤退時の未回答語。戻り道だけは箱を守り、期限を今日へ戻す。
     if (retreated) {
       const upto = this.isRevenge ? this.total : this.index + 1;
       for (const word of this.groups.slice(0, upto).flat()) {

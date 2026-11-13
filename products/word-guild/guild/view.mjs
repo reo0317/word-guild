@@ -666,7 +666,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   // 盤面を取り切ったら、切手が上の切手の数へ飛ぶ（0.5 秒）。
   function flyStamps() {
-    const target = quest.isNight ? $('#gq-night-home') : $('#gq-tally');
+    const target = $('#gq-night-home') ?? $('#gq-tally');
     if (!target || reducedMotion()) return;
     const goal = target.getBoundingClientRect();
     view.querySelectorAll('.gq-mon-stamp').forEach(element => {
@@ -939,7 +939,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         </section>
       </div>
       <div class="gq-dock gq-result-dock">
-        ${fab({icon: returning ? 'go' : 'home', label: returning ? 'つぎの石段へ' : 'トップへ', attrs: 'id="gq-guild"'})}
+        ${fab({icon: returning ? 'next' : 'home', label: returning ? 'つぎの石段へ' : 'トップへ', attrs: 'id="gq-guild"'})}
         ${waxButton({label: primary, id: 'gq-again'})}
         ${fab({icon: 'album', label: '切手帳', attrs: 'id="gq-album"'})}
         ${nextGate && !gateNext ? fab({icon: 'gate', label: `${nextGate.ch}区の門`, cls: 'glow', attrs: 'id="gq-gate"'}) : ''}

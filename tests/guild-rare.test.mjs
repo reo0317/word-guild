@@ -186,3 +186,61 @@ test('通常配達やハート切れには夜が開かず、戻り道の再戦�
   assert.equal(revenge.phase, 'finished');
   assert.equal(revenge.progress.quests, 1);
 });
+
+test('まれびとの分類の体に星と金縁を刷り、通常語には刷らない', async () => {
+  const {charaSpec} = await import('../products/word-guild/guild/chara.mjs');
+  const {charaDefs, charaSvg} = await import('../products/word-guild/guild/chara-svg.mjs');
+  const spec = charaSpec(rares[0], 'doc', {rare: true});
+  assert.equal(spec.kind, 'rare');
+  assert.equal(spec.pattern, 'star');
+  assert.equal(spec.species, 'doc');
+  assert.match(charaSvg(spec), /cg-rare-edge/);
+  assert.match(charaSvg(spec), /cg-pt-star/);
+  assert.match(charaDefs(), /id="cg-pt-star"/);
+  assert.equal(charaSpec(words[0]).kind, 'normal');
+});
+
+test('夜の切手帳は6区280枠、集めた家の追伸を読む', async () => {
+  const {openAlbum} = await import('../products/word-guild/guild/album.mjs');
+  const [postscript, tags, story] = await Promise.all(['story-ps', 'chara', 'story'].map(read));
+  const previousDocument = globalThis.document;
+  globalThis.document = {getElementById: () => ({}), querySelector: () => ({}), addEventListener() {}, removeEventListener() {}};
+  let handle;
+  try {
+    const container = {innerHTML: '', querySelector: () => null};
+    const progress = emptyProgress();
+    for (const word of rares.slice(0, 5)) progress.rares[word.id] = {box: 3, due: 1000, seen: 1, restored: true};
+    handle = openAlbum(container, {words, rares, postscript, tags, story, scenes: {}, progress});
+    await new Promise(resolve => setTimeout(resolve, 0));
+    const click = act => container.onclick({target: {closest: selector => selector === '[data-act]' ? {dataset: {act}} : null}});
+    click('index');
+    assert.match(container.innerHTML, /夜の切手帳/);
+    click('night');
+    let frames = 0;
+    for (let ch = 1; ch <= 6; ch++) {
+      const count = (container.innerHTML.match(/class="stamp /g) ?? []).length;
+      assert.equal(count, ch === 1 ? 30 : 50);
+      frames += count;
+      if (ch === 1) {
+        assert.match(container.innerHTML, /data-ps-say="secret"/);
+        assert.doesNotMatch(container.innerHTML, /\{secret\}/);
+      }
+      click('night-next');
+    }
+    assert.equal(frames, 280);
+  } finally {
+    handle?.close();
+    if (previousDocument === undefined) delete globalThis.document;
+    else globalThis.document = previousDocument;
+  }
+});
+
+test('夜だけ途中で閉じても通常配達と消印を失わない', () => {
+  const q = returnQuest();
+  solveOrdinary(q);
+  q.finish(true);
+  assert.equal(q.outcome.retreated, false);
+  assert.ok(q.outcome.sealed);
+  assert.equal(q.progress.daily.count, 12);
+  assert.equal(q.progress.rares[q.nightWord.id].restored, false);
+});

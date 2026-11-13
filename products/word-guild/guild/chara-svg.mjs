@@ -75,6 +75,7 @@ export function charaDefs(base = '') {
   const nightTone = {dark: NIGHT.dark, mid: NIGHT.mid, tint: NIGHT.tint};
   parts.push(toneFilter('cg-t-rare', nightTone), accentFilter('cg-a-rare', NIGHT.accent),
     lineFilter('cg-l-rare', NIGHT.dark, 3), lineFilter('cg-p-rare', NIGHT.dark, 5));
+  parts.push(`<filter id="cg-rare-edge" ${FX}><feMorphology in="SourceAlpha" operator="dilate" radius="5" result="edge"/><feFlood flood-color="${NIGHT.tint}"/><feComposite operator="in" in2="edge"/></filter>`);
   parts.push(`<filter id="cg-shadow" ${FX}><feColorMatrix type="matrix" values="0 0 0 0 0.38  0 0 0 0 0.36  0 0 0 0 0.46  0 0 0 0.5 0"/></filter>`);
   parts.push(`<filter id="cg-white" ${FX}><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0"/></filter>`);
   // 模様と網点は、体の形でくりぬく
@@ -172,7 +173,7 @@ export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = tr
   let deco = '';
   if (rare) deco += SPARK(70, 90, 1.1, NIGHT.tint) + SPARK(450, 120, 0.8, NIGHT.tint) + SPARK(110, 400, 0.7, NIGHT.tint) + SPARK(420, 60, 0.55, NIGHT.tint);
   if (state === 'gold') deco += SPARK(60, 440, 0.9, '#f0c23c') + SPARK(455, 90, 0.7, '#f0c23c');
-  return `${open}${pose(body + over)}${spec.wordart ? '' : propSvg(spec, proof ? mono : props)}${deco}</svg>`;
+  return `${open}${pose((rare ? img('cg-rare-edge') : '') + body + over)}${spec.wordart ? '' : propSvg(spec, proof ? mono : props)}${deco}</svg>`;
 }
 
 // ---------- 切手の HTML ----------
