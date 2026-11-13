@@ -32,8 +32,14 @@ export const f = 700;  // 焦点距離（画面幅に対する投影倍率の基
 export const H_CAMERA = 0.86; // カメラの高さ（画面の縦横比で補正して投影）
 const Z_NEAR = 700;    // 下端での最短距離。これより近い地面は描かない
 const PHASE = Math.PI / 2;
-const S_MIN = 0.07;
 export const DRAW_DISTANCE = 3600;
+export const FADE_START = DRAW_DISTANCE * .7;
+// SVG の画面 y 方向のグラデーションと同じ透視投影上の透明度。
+export function roadOpacity(distance) {
+  const scale = d => f / (d + Z_NEAR);
+  return Math.max(0, Math.min(1,
+    (scale(distance) - scale(DRAW_DISTANCE)) / (scale(FADE_START) - scale(DRAW_DISTANCE))));
+}
 export const LIGHTHOUSE_DISTANCE = H.step * 10;
 
 export function lighthouseVisible(remaining) {
@@ -292,10 +298,11 @@ export function renderMap(view, ctx) {
         <div class="gq-sky" aria-hidden="true">${skies}</div>
         <i class="gq-haze" aria-hidden="true"></i>
         <svg class="gq-road-svg" id="gq-road-svg" aria-hidden="true">
+          <defs>${[['paper', 'var(--paper-hi)'], ['ink', 'var(--ink)'], ['lamp', 'var(--lamp)']].map(([id, color]) =>
+            `<linearGradient id="gq-road-${id}" gradientUnits="userSpaceOnUse" x1="0" x2="0"><stop offset="0" stop-color="${color}" stop-opacity="0"/><stop offset="1" stop-color="${color}" stop-opacity="1"/></linearGradient>`).join('')}</defs>
           <path class="base" id="gq-r-base"/><path class="lines" id="gq-r-lines"/><path class="walked" id="gq-r-walked"/>
           <path class="edge" id="gq-r-edge"/><path class="center" id="gq-r-center"/>
         </svg>
-        <i class="gq-road-cap" id="gq-road-cap" aria-hidden="true"></i>
         ${nodes}${herePanel}${post}${lighthouse}
         ${map.fog ? `<i class="gq-fogband" aria-hidden="true" style="--d:${fogDensity.toFixed(2)}"></i>` : ''}
       </div>
@@ -378,12 +385,12 @@ export function renderMap(view, ctx) {
       return {left: points.map(p => [p.x - p.half * width, p.y]),
         right: points.map(p => [p.x + p.half * width, p.y])};
     };
-    const cap = $('#gq-road-cap');
-    const tip = project(visibleEnd);
-    cap.style.left = `${tip.x}px`;
-    cap.style.top = `${tip.y}px`;
-    cap.style.width = `${tip.half * 2 * 2.5}px`;
-    cap.style.display = roadEnd > c + DRAW_DISTANCE ? '' : 'none';
+    // 上（打ち切り距離）で透明、最後の30%の手前で不透明。
+    for (const color of ['paper', 'ink', 'lamp']) {
+      const gradient = $(`#gq-road-${color}`);
+      gradient.setAttribute('y1', project(c + DRAW_DISTANCE).y);
+      gradient.setAttribute('y2', project(c + FADE_START).y);
+    }
     const fmt = p => `${p[0].toFixed(1)} ${p[1].toFixed(1)}`;
     const poly = ({left, right}) => `M${left.map(fmt).join('L')}L${right.reverse().map(fmt).join('L')}Z`;
     const full = ribbon(roadEnd, 1);
@@ -416,12 +423,12 @@ export function renderMap(view, ctx) {
       const top = b.el.classList.contains('gq-bb-top');
       const post = b.el.classList.contains('gq-bb-post');
       const pin = b.el.classList.contains('gq-bb-tsumugi');
-      if (r < 0 || r > DRAW_DISTANCE || (top && !lighthouseVisible(roadEnd - hereY)) || (post && (Math.abs(hereY - b.y) > 600 || r > 850)) || Y(s) > Hs + 140) {
+      if (r < 0 || r >= DRAW_DISTANCE || (top && !lighthouseVisible(roadEnd - hereY)) || (post && (Math.abs(hereY - b.y) > 600 || r > 850)) || Y(s) > Hs + 140) {
         b.el.hidden = true; b.el.style.display = 'none'; b.shown = false;
         continue;
       }
       b.el.hidden = false; b.el.style.display = ''; b.shown = true;
-      const fade = Math.min(1, Math.max(0, (s - S_MIN) / 0.2)) * (b.far ? 0.55 : 1);
+      const fade = roadOpacity(r);
       const sx = X(b.y, s);
       const displayScale = b.panel ? 1 : pin ? tsumugiScale(s, initialTsumugiScale)
         : top ? objectScale(Math.min(240, 600 * s ** .6) / 600) : objectScale(s * b.scale);
@@ -432,7 +439,7 @@ export function renderMap(view, ctx) {
         b.house.style.transform = `translate(${(hx / displayScale).toFixed(2)}px,${(-size * .85 / displayScale).toFixed(2)}px) scale(${(size / (140 * displayScale)).toFixed(3)})`;
       }
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${displayScale.toFixed(3)})`;
-      b.el.style.opacity = b.panel || pin ? '1' : top ? '1' : fade.toFixed(2);
+      b.el.style.opacity = String(fade);
       b.el.style.zIndex = b.panel ? '203' : pin ? '202' : String(Math.round(s * 100));
     }
 

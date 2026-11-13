@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {HOUSE_ART} from '../products/word-guild/guild/art.mjs';
-import {renderMap, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, lighthouseVisible, LIGHTHOUSE_DISTANCE, roadPoints, DRAW_DISTANCE, A, L, W, f} from '../products/word-guild/guild/map.mjs';
+import {renderMap, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, lighthouseVisible, LIGHTHOUSE_DISTANCE, roadPoints, roadOpacity, FADE_START, DRAW_DISTANCE, A, L, W, f} from '../products/word-guild/guild/map.mjs';
 import {buildMap} from '../products/word-guild/guild/stages.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
@@ -241,19 +241,29 @@ test('現在地から10石段より遠い灯台は描かない', () => {
   assert.equal(lighthouseVisible(0), true);
 });
 
-test('道の先端の霞は道幅の2.5倍・高さ32pxで、端を透明にする', async () => {
+test('楕円の霞を使わず、道と物を最後の30%で同じ透明度にする', async () => {
   const source = await readFile(new URL('../products/word-guild/guild/map.mjs', import.meta.url), 'utf8');
   const css = await readFile(new URL('../products/word-guild/map.css', import.meta.url), 'utf8');
-  assert.match(source, /const tip = project\(visibleEnd\)/);
-  assert.match(source, /cap\.style\.left = `\$\{tip\.x\}px`/);
-  assert.match(source, /cap\.style\.top = `\$\{tip\.y\}px`/);
-  assert.match(source, /cap\.style\.width = `\$\{tip\.half \* 2 \* 2\.5\}px`/);
-  assert.match(source, /cap\.style\.display = roadEnd > c \+ DRAW_DISTANCE \? '' : 'none'/);
-  const rule = css.match(/\.gq-road-cap\{([^}]+)\}/)[1];
-  assert.match(rule, /height:32px/);
-  assert.match(rule, /transform:translate\(-50%,-50%\)/);
-  assert.match(rule, /background:radial-gradient\(ellipse at center,var\(--fog-lt\) 0 35%,transparent 72%\)/);
-  assert.doesNotMatch(rule, /(?:mask|filter|right:|left:0|top:0)/);
+  assert.doesNotMatch(source + css, /gq-road-cap/);
+  assert.match(source, /gradientUnits="userSpaceOnUse"/);
+  assert.equal(roadOpacity(0), 1);
+  assert.equal(roadOpacity(FADE_START), 1);
+  assert.equal(roadOpacity(DRAW_DISTANCE), 0);
+  assert.equal(roadOpacity(DRAW_DISTANCE + 100), 0);
+  for (const [width, height] of [[320,480], [390,680], [430,760]]) {
+    for (const camera of [-1400, 0, 530, 10000]) {
+      const start = projectRoad(width, height, camera + FADE_START, camera).y;
+      const end = projectRoad(width, height, camera + DRAW_DISTANCE, camera).y;
+      let previous = 1;
+      for (let d = FADE_START; d <= DRAW_DISTANCE; d += 10) {
+        const opacity = roadOpacity(d);
+        assert.ok(opacity <= previous && opacity >= 0);
+        const y = projectRoad(width, height, camera + d, camera).y;
+        assert.ok(Math.abs(opacity - (y - end) / (start - end)) < 1e-12);
+        previous = opacity;
+      }
+    }
+  }
 });
 
 test('スマホ幅で道の点列は打ち切り距離を超えず、画面の間隔は2px未満', () => {

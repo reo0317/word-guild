@@ -20,11 +20,11 @@
 
 .gq-road-svg{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;animation:none;transition:none;transform:none}
 .gq-road-svg path{animation:none;transition:none;transform:none}
-.gq-road-svg .base{fill:var(--paper-hi);opacity:.97}
-.gq-road-svg .lines{fill:none;stroke:var(--ink);stroke-width:1.4;opacity:.16}
-.gq-road-svg .walked{fill:var(--lamp);opacity:.75}
-.gq-road-svg .edge{fill:none;stroke:var(--ink);stroke-width:2;opacity:.7;stroke-linejoin:round}
-.gq-road-svg .center{fill:var(--ink);opacity:.4}
+.gq-road-svg .base{fill:url(#gq-road-paper);opacity:.97}
+.gq-road-svg .lines{fill:none;stroke:url(#gq-road-ink);stroke-width:1.4;opacity:.16}
+.gq-road-svg .walked{fill:url(#gq-road-lamp);opacity:.75}
+.gq-road-svg .edge{fill:none;stroke:url(#gq-road-ink);stroke-width:2;opacity:.7;stroke-linejoin:round}
+.gq-road-svg .center{fill:url(#gq-road-ink);opacity:.4}
 
 /* 道の上の物の置き場所（大きさ0の点）。中身は点を中心に置く。 */
 .gq-bb{position:absolute;left:0;top:0;width:0;height:0}
@@ -145,6 +145,5 @@
 .gq-bb-tsumugi{will-change:transform}
 .gq-bb-panel{opacity:1}
 
-/* 遠い物は非表示にし、道の打ち切り位置だけ小さな霞でなじませる。 */
+/* 打ち切り距離以遠の物は表示しない。 */
 .gq-bb[hidden]{display:none!important}
-.gq-road-cap{position:absolute;height:32px;transform:translate(-50%,-50%);pointer-events:none;z-index:199;background:radial-gradient(ellipse at center,var(--fog-lt) 0 35%,transparent 72%)}
