@@ -5,18 +5,18 @@ import {Trace} from './trace.mjs';
 import {artBox, swapArt, artFile} from './art.mjs';
 import {loadWords} from './words.mjs';
 import {Quest, HEARTS} from './quest.mjs';
-import {pickSession, groupWords, todayNumber, SESSION_SIZE} from './srs.mjs';
+import {pickSession, pickReturn, groupWords, todayNumber, SESSION_SIZE} from './srs.mjs';
 import {loadProgress, saveProgress} from './store.mjs';
 import {COLS, spelling} from './board.mjs';
 import {buildMap, gateWords, separateSpecs} from './stages.mjs';
 import {letterView, clipParts, loadScenes} from './story.mjs';
-import {pageSpecs, stampState as rawStampState} from './chara.mjs';
+import {charaSpec, pageSpecs, stampState as rawStampState} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {rollDaily} from './daily.mjs';
 import {onUpdateReady, applyUpdate} from './pwa.mjs';
 import {esc, speak, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, helpButton, icon,
   ensureLetterCss, letterHtml, lineBody, lampRing, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
-import {showStampZoom, ensureCss as ensureAlbumCss, sceneFor, gateCard, newlyOpenedGate, playOptionalCinema, showPaperCard, sceneCardHtml, blankCardHtml} from './album.mjs';
+import {showStampZoom, ensureCss as ensureAlbumCss, sceneFor, gateCard, newlyOpenedGate, playOptionalCinema, showPaperCard, sceneCardHtml, blankCardHtml, postscriptHtml, handlePostscriptClick} from './album.mjs';
 import {renderMap, dailyBrief} from './map.mjs';
 
 const POS_LABEL = {v: '動', n: '名', a: '形', o: '他'}; // 色の意味を文字でも示す
@@ -52,6 +52,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   }
   let words = null;
   let byId = null;
+  let rares = [];
+  let postscript = [];
   let tags = {};
   let story = {v: 1, letters: []}; // 物語の英文。data/story.json が無い・一部の街灯だけでも遊べる
   let storyLoaded = false;
@@ -135,6 +137,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   const specCache = new Map();
   function specOf(word) {
+    if (/^r\d{4}$/.test(word.id)) return charaSpec(word, tags[word.id] ?? '', {rare: true});
     if (!specCache.has(word.id)) {
       const page = words.filter(other => other.shelf === word.shelf);
       pageSpecs(page, page.map(other => tags[other.id] ?? '')).forEach((spec, i) => specCache.set(page[i].id, spec));
@@ -189,15 +192,25 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     if (!letter) { openAlbumAt(shelf); return; }
     popEl?.remove();
     const lamp = lampOf(map, shelf);
+    const nightWords = rares.filter(word => word.shelf === shelf);
+    const nightStamps = nightWords.map(word => stampHtml(word, specOf(word), {
+      state: stampState(progress.rares?.[word.id]), ward: word.ch})).join('');
+    const ps = nightWords.length === 5 && nightWords.every(word => isRestored(progress.rares?.[word.id]))
+      ? postscript.find(row => row.shelf === shelf) : null;
     const pop = document.createElement('div');
     pop.className = 'gq-pop';
     pop.setAttribute('role', 'dialog');
     pop.setAttribute('aria-modal', 'true');
     pop.innerHTML = `<div class="gq-pop-card">${letterHtml(letter, {face: faceOf, shadowLines: shadowLinesOf(letter), lit: lamp?.lit === lamp?.total})}
-      <div class="gq-pop-acts">${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}${fab({icon: 'album', label: '切手帳', attrs: 'data-act="album"'})}</div></div>`;
+      ${lamp?.done ? `<div class="gq-night-shadows">${nightStamps}</div>${ps ? postscriptHtml(ps) : ''}` : ''}
+      <div class="gq-pop-acts">${lamp?.done ? waxButton({label: 'もう一度<br>届ける', id: 'gq-return'}) : ''}${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}${fab({icon: 'album', label: '切手帳', attrs: 'data-act="album"'})}</div></div>`;
     const close = () => { pop.remove(); if (popEl === pop) popEl = null; };
     pop.onclick = event => {
       if (view.querySelector('.gq-zoom')) return;
+      if (event.target.closest('#gq-return')) { close(); startQuest({mode: 'return', shelf}); return; }
+      if (handlePostscriptClick(event, speak)) return;
+      const rareId = event.target.closest('.gq-night-shadows [data-id]')?.dataset.id;
+      if (rareId && isRestored(progress.rares?.[rareId])) { speak(byId.get(rareId).w); return; }
       const act = event.target.closest('[data-act]')?.dataset.act;
       if (act === 'close' || event.target === pop) { close(); return; }
       if (act === 'album') { close(); openAlbumAt(shelf); return; }
@@ -225,7 +238,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   // 切手帳・設定が受け取る材料。戻るボタンは地図へ。
   function libDeps(extra = {}) {
     return {
-      words, tags, progress, storage, dev, music, today: todayNumber(), story: story.letters.length ? story : null, scenes,
+      words, tags, rares, postscript, progress, storage, dev, music, today: todayNumber(), story: story.letters.length ? story : null, scenes,
       back: showMap, speak,
       onProgress: next => { persist(next); },
       ...extra,
@@ -253,7 +266,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     if (rolled !== progress) persist(rolled);
     const map = buildMap(words, progress, today);
     renderMap(view, {
-      map, today, progress, total: words.length,
+      map, today, progress, rares, total: words.length,
       face: faceOf, tsumugi: artFile('tsumugi'),
       letterOf: shelf => letterAt(shelf, progress, today), hereLine: hereLine(map),
       notice: mapNotice(today),
@@ -281,15 +294,18 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const rolled = rollDaily(progress, words, today);
     if (rolled !== progress) persist(rolled);
     const gate = Number.isInteger(opts.gate) ? opts.gate : null;
-    const groups = gate !== null
+    const returning = opts.mode === 'return';
+    const map = buildMap(words, progress, today);
+    if (returning && !lampOf(map, opts.shelf)?.done) return;
+    const groups = returning ? pickReturn(words, progress, today, opts.shelf, Math.random) : gate !== null
       ? groupWords(gateWords(words, progress, gate), Math.random)
       : pickSession(words, progress, today, SESSION_SIZE, Math.random);
-    const ward = gate ?? buildMap(words, progress, today).here?.ch ?? 1;
+    const ward = returning ? words.find(word => word.shelf === opts.shelf)?.ch ?? 1 : gate ?? map.here?.ch ?? 1;
     questWard = ward;
     stopSession();
     dealt = new Map();
     lastClip = null;
-    quest = new Quest(groups, {rand: Math.random, progress, today, save: persist, gate});
+    quest = new Quest(groups, {rand: Math.random, progress, today, save: persist, gate, mode: returning ? 'return' : 'normal', shelf: opts.shelf, rares, map});
     setScreen('guild-quest');
     renderBoard();
   }
@@ -300,6 +316,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   }
 
   function topLabel() {
+    if (quest.isNight) return '✦ 夜の盤面';
     if (quest.isRevenge) return '再戦';
     return `${quest.index + 1}/${quest.total}${quest.isBig ? ' 大物' : ''}`;
   }
@@ -311,6 +328,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     return `<div class="gq-mon${big ? ' big' : ''}${quest.isRevenge ? ' angry' : ''}" data-id="${esc(slot.word.id)}">
       <span class="gq-mon-val" aria-hidden="true">${spec.kind === 'big' ? '大' : slot.text.length}</span>
       <div class="gq-mon-body">${charaSvg(spec, {state: 'print', ward: slot.word.ch})}</div>
+      ${quest.isNight ? '<span class="gq-night-lantern" aria-hidden="true">♧</span>' : ''}
       <i class="gq-mon-seal" aria-hidden="true"></i>
       <span class="gq-mon-gone" aria-hidden="true">また来る</span>
     </div>`;
@@ -330,9 +348,10 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     message = quest.isBig ? '大物！' : '';
     const coach = tutorial && quest.index === 0
       ? `<div class="gq-coach">${artBox('hatori', 'gq-coach-face')}<b>ハトリ局長</b>${COACH}</div>` : '';
-    view.className = `gq gq-quest gq-ch${questWard}${coach ? ' gq-tutor' : ''}`;
+    view.className = `gq gq-quest gq-ch${questWard}${coach ? ' gq-tutor' : ''}${quest.isNight ? ' gq-night' : ''}`;
     view.innerHTML = `
       <div class="gq-top"><span class="gq-hearts" id="gq-hearts"></span><b id="gq-label"></b><span class="gq-timer" aria-hidden="true"><i id="gq-timer"></i></span><span class="gq-tally" id="gq-tally" role="img"></span><button type="button" class="gq-quit" id="gq-quit" aria-label="やめる"><span aria-hidden="true">✕</span></button></div>
+      ${quest.isNight ? `<span id="gq-night-home" class="gq-night-home" aria-label="街灯${quest.shelf}の家">⌂<i>✦</i></span>` : ''}
       <div class="gq-story" id="gq-story" hidden aria-hidden="true"></div>
       <div class="gq-arena" id="gq-arena">
         <div class="gq-arena-clip">
@@ -446,6 +465,9 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         message = 'こうげき！ ♥ −1';
         later(2200, () => { message = ''; paintInput(); });
         paintAll();
+      } else if (event.type === 'escape') {
+        monOf(event.word.id)?.classList.add('solved', 'fled');
+        later(700, () => { quest.next(); if (quest.phase === 'finished') showResults(); else renderBoard(); });
       } else if (event.type === 'retreat') {
         later(700, showResults);
       }
@@ -636,7 +658,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       return;
     }
     const spec = specFor(slot.word);
-    const html = stampHtml(slot.word, spec, {state: 'print', ward: slot.word.ch})
+    const html = quest.isNight ? '<span class="gq-night-star">✦</span>' : stampHtml(slot.word, spec, {state: 'print', ward: slot.word.ch})
       .replace('<button', '<button tabindex="-1"');
     mon.insertAdjacentHTML('beforeend', `<div class="gq-mon-stamp">${html}</div>`);
     mon.classList.add('solved', 'stamped');
@@ -644,7 +666,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   // 盤面を取り切ったら、切手が上の切手の数へ飛ぶ（0.5 秒）。
   function flyStamps() {
-    const target = $('#gq-tally');
+    const target = quest.isNight ? $('#gq-night-home') : $('#gq-tally');
     if (!target || reducedMotion()) return;
     const goal = target.getBoundingClientRect();
     view.querySelectorAll('.gq-mon-stamp').forEach(element => {
@@ -810,7 +832,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const lampNow = lamps(after).get(shelf);
     const pageWords = words.filter(w => w.shelf === shelf);
     const changedIds = new Set(outcome.entries.filter(e => e.stamped).map(e => e.word.id));
-    const state = (id, source) => stampState(source.words[id]);
+    const state = (id, source) => stampState((/^r/.test(id) ? source.rares : source.words)?.[id]);
     const cells = pageWords.map(word => {
       const st = state(word.id, quest.progress);
       const fresh = changedIds.has(word.id) && state(word.id, quest.startProgress) !== st;
@@ -829,6 +851,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   function showResults() {
     if (!quest || !quest.outcome) return;
     const {outcome} = quest;
+    const returning = quest.mode === 'return';
     const today = quest.today;
     const before = buildMap(words, quest.startProgress, today);
     const after = buildMap(words, quest.progress, today);
@@ -847,7 +870,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     bgm('post');
 
     // 切手：新しく入った／上がった／逃げた（影のまま）
-    const state = (id, source) => stampState(source.words[id]);
+    const state = (id, source) => stampState((/^r/.test(id) ? source.rares : source.words)?.[id]);
     const changedByShelf = new Map();
     const zoomInfo = [];
     const stamps = outcome.entries.map((entry, i) => {
@@ -860,7 +883,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         else if (was !== now) mark = now === 'gold' ? '<span class="mk gold">金</span>' : '<span class="mk up">↑</span>';
         if (mark) changedByShelf.set(entry.word.shelf, (changedByShelf.get(entry.word.shelf) ?? 0) + 1);
       }
-      zoomInfo[i] = {word: entry.word, state: now, box: quest.progress.words[entry.word.id]?.box ?? 0};
+      zoomInfo[i] = {word: entry.word, state: now, box: (entry.rare ? quest.progress.rares : quest.progress.words)?.[entry.word.id]?.box ?? 0};
       const html = stampHtml(entry.word, specFor(entry.word), {state: now, ward: entry.word.ch});
       return `<li class="gq-stamp-cell${fled ? ' fled' : ''}${entry.big ? ' wide' : ''}" style="--i:${i}" data-i="${i}">${html}${mark}${fled ? '<small class="again" aria-hidden="true">↺</small>' : ''}</li>`;
     });
@@ -868,7 +891,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     // 今の1通。逃げた語は、配達の前の状態のまま（新しい語なら霧のまま）で、紙魚の顔が乗る。
     const fledIds = new Set(outcome.entries.filter(e => !e.stamped).map(e => e.word.id));
     const endProgress = quest.progress;
-    const shelf = pickLetterShelf(outcome, after, quest.startProgress, endProgress, today);
+    const shelf = returning ? quest.shelf : pickLetterShelf(outcome, after, quest.startProgress, endProgress, today);
     const lvStart = shelf === null ? null : letterAt(shelf, quest.startProgress, today);
     const lvEnd = shelf === null ? null : letterAt(shelf, endProgress, today);
     const lampNow = shelf === null ? null : lamps(after).get(shelf);
@@ -884,7 +907,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       () => paperPresentation(blankCardHtml(story, resultProgress.gates))) : Promise.resolve();
     const nextGate = after.wards.find(w => w.gate === 'open');
     const gateNext = !after.fog && nextGate;
-    const primary = after.fog ? '霧を<br>払う' : nextGate ? `${nextGate.ch}区の<br>門へ` : 'つぎの<br>石段へ';
+    const primary = returning ? '地図へ' : after.fog ? '霧を<br>払う' : nextGate ? `${nextGate.ch}区の<br>門へ` : 'つぎの<br>石段へ';
     const daily = quest.progress.daily;
     const brief = dailyBrief(daily);
     const tomorrow = after.tomorrow;
@@ -893,7 +916,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
     view.className = 'gq gq-result';
     view.innerHTML = `
-      <div class="gq-result-head">${artBox(outcome.retreated ? 'tsumugi' : 'tsumugiJoy')}<h2 class="gq-title">${outcome.retreated ? 'おつかれさま' : '配達完了！'}</h2>${artBox(outcome.retreated ? 'fuurou' : 'fuurouStamp', 'art-owl')}</div>
+      <div class="gq-result-head">${artBox(outcome.retreated ? 'tsumugi' : 'tsumugiJoy')}<h2 class="gq-title">${outcome.retreated ? 'おつかれさま' : '配達完了！'}</h2>${outcome.sealed ? '<span class="gq-return-seal" aria-label="無傷の消印">〒</span>' : ''}${artBox(outcome.retreated ? 'fuurou' : 'fuurouStamp', 'art-owl')}</div>
       <div class="gq-res-scroll" id="gq-res">
         ${lvStart ? `<section class="gq-res-sec gq-letter-sec" style="--d:.05s">
           <div id="gq-paper">${letterHtml(lvStart, paperOpts(lvStart))}</div>
@@ -916,13 +939,13 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         </section>
       </div>
       <div class="gq-dock gq-result-dock">
-        ${fab({icon: 'home', label: 'トップへ', attrs: 'id="gq-guild"'})}
+        ${fab({icon: returning ? 'go' : 'home', label: returning ? 'つぎの石段へ' : 'トップへ', attrs: 'id="gq-guild"'})}
         ${waxButton({label: primary, id: 'gq-again'})}
         ${fab({icon: 'album', label: '切手帳', attrs: 'id="gq-album"'})}
         ${nextGate && !gateNext ? fab({icon: 'gate', label: `${nextGate.ch}区の門`, cls: 'glow', attrs: 'id="gq-gate"'}) : ''}
       </div>`;
-    $('#gq-again').onclick = () => (after.fog || !nextGate ? startQuest() : startQuest({gate: nextGate.ch}));
-    $('#gq-guild').onclick = showMap;
+    $('#gq-again').onclick = () => returning ? showMap() : (after.fog || !nextGate ? startQuest() : startQuest({gate: nextGate.ch}));
+    $('#gq-guild').onclick = returning ? () => startQuest() : showMap;
     $('#gq-album').onclick = () => openAlbumAt(lvEnd ? shelf : after.here?.shelf);
     if ($('#gq-gate')) $('#gq-gate').onclick = () => startQuest({gate: nextGate.ch});
 
@@ -936,7 +959,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       });
     };
 
-    if (lvStart) playLetter({lvStart, lvEnd, endProgress, fledIds, newlyRead, nextLetter, shelf, paperOpts, onComplete: showGate});
+    if (returning) { if (lvEnd) $('#gq-paper').innerHTML = letterHtml(lvEnd, paperOpts(lvEnd)); }
+    else if (lvStart) playLetter({lvStart, lvEnd, endProgress, fledIds, newlyRead, nextLetter, shelf, paperOpts, onComplete: showGate});
     else void showGate();
 
     res.addEventListener('click', event => {
@@ -1042,7 +1066,11 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     view.innerHTML = '<p class="eyebrow">霧晴れ郵便局</p><p class="gq-loading">局の帳簿を開いています…</p>';
     try {
       words ??= await loadWords();
-      byId = new Map(words.map(word => [word.id, word]));
+      const rareResponse = await fetch(new URL('../data/rare.json', import.meta.url));
+      if (rareResponse.ok) rares = await rareResponse.json();
+      const psResponse = await fetch(new URL('../data/story-ps.json', import.meta.url));
+      if (psResponse.ok) postscript = await psResponse.json();
+      byId = new Map([...words, ...rares].map(word => [word.id, word]));
       try {
         const response = await fetch(TAGS_URL);
         if (response.ok) tags = await response.json();

@@ -328,3 +328,32 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 @media(prefers-reduced-motion:reduce){.gq-mons.arriving .gq-mon-body,.gq-mons.arriving::after{animation:none}.gq-mons.arriving::after{display:none}}
 
 .gq-mon[hidden]{display:none}
+
+/* 屋根の訪問印、五つ星、無傷の消印。SVG の祖先に filter は使わない。 */
+.gq-visitor{position:absolute;top:-16%;left:40%;font-size:28px;line-height:1;color:#ffe6a1;text-shadow:0 0 8px #d3a246;z-index:3}
+.gq-house-stars{line-height:1;position:absolute;bottom:-8px;left:5%;width:90%;display:flex;justify-content:space-between;color:#9a9c9c;font-size:clamp(9px,2.8vw,15px);z-index:3}
+.gq-house-stars i{font-style:normal;position:relative}.gq-house-stars .met{color:#d6a943}.gq-house-stars.joined::before{content:"";position:absolute;top:50%;left:7%;right:7%;height:1px;background:#d6a943}.gq-house-stars.gold{color:#ffe189;text-shadow:0 0 6px #ffcf5c}
+.gq-house-seal{line-height:1;position:absolute;right:0;bottom:10%;display:grid;place-items:center;width:23%;aspect-ratio:1;border:2px double #8e3f39;border-radius:50%;font-size:12px;color:#8e3f39;background:#f7e8c9d9;transform:rotate(-14deg);z-index:3}
+.gq-constellation{position:absolute;width:40%;height:40%;top:6%;right:8%;fill:#fff2bd;stroke:#f9d782;stroke-width:1;opacity:.85}.gq-constellation polyline{fill:none;stroke-width:.6}
+.gq-full-stars{position:absolute;bottom:70%;left:50%;transform:translateX(-50%);width:190px;line-height:1.8;font-size:24px;letter-spacing:.35em;color:#f9d782;text-shadow:0 0 8px #e7c979}
+.gq-postscript{padding:10px 12px;border-radius:6px;border-top:1px solid #bd995c;color:var(--ink);text-align:left;line-height:1.7;font-family:var(--serif)}
+.gq-postscript>small{color:#95743d;font-style:italic}.gq-postscript p{margin:3px 0;font-size:14px}.gq-postscript button{display:inline;padding:0;min-width:0;min-height:0;border:0;border-radius:0;background:none;box-shadow:none;color:inherit;font:inherit;text-align:inherit}.gq-postscript button:focus-visible{outline:2px solid #ac853c;outline-offset:2px}.gq-postscript .gq-ps-ja{font-size:12px;color:#6b6559}.gq-postscript [hidden]{display:none!important}
+
+/* 戻り道の夜。SVGの祖先にはfilterを使わない。 */
+.gq-night{background:#151f39;color:#f8e7b6}
+.gq-night .gq-arena-bg,.gq-night .gq-owl{opacity:0}
+.gq-night .gq-arena{background:radial-gradient(circle at 20% 15%,#f5d381 1px,transparent 2px),radial-gradient(circle at 75% 28%,#f5d381 1px,transparent 2px),linear-gradient(#14213d,#324362);background-size:83px 97px,137px 113px,auto}
+.gq-night .gq-cell{background:#e8e6d9;color:#202c48;border-color:#8f91a0}
+.gq-night .gq-clue{background:#f4ead4;color:#26324a}
+.gq-night .gq-timer i{background:#edcf85}
+.gq-night-home{position:absolute;right:24px;top:48px;font-size:32px;color:#edcf85;z-index:3}
+.gq-night-home i{position:absolute;font-size:17px;left:9px;top:-8px;font-style:normal}
+.gq-night-lantern{position:absolute;right:5%;bottom:22%;width:22px;height:28px;border:2px solid #d6ac51;border-radius:8px;background:#ffe5a0;box-shadow:0 0 24px 9px #edc45c66;color:transparent}
+.gq-night-lantern::before{content:'';position:absolute;width:12px;height:10px;border:2px solid #e6c980;border-bottom:0;border-radius:8px 8px 0 0;top:-11px;left:3px}
+.gq-night-star{display:block;font-size:72px;color:#f5cf71;text-shadow:0 0 18px #f5cf7180}
+.gq-night-shadows{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;max-width:300px;margin:12px auto}
+.gq-night-shadows .stamp{width:100%;min-width:0}
+.gq-pop-acts{flex-wrap:wrap}
+.gq-return-seal{display:inline-grid;place-items:center;border:3px double #9b4439;border-radius:50%;width:48px;height:48px;color:#9b4439;transform:rotate(-13deg);font-size:26px;animation:gq-return-mark .45s ease-out}
+@keyframes gq-return-mark{from{transform:scale(1.7) rotate(-13deg);opacity:0}to{transform:scale(1) rotate(-13deg);opacity:1}}
+@media(prefers-reduced-motion:reduce){.gq-return-seal{animation:none}}

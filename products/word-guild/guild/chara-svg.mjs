@@ -83,6 +83,7 @@ export function charaDefs(base = '') {
   }
   const dark = '#12102a';
   parts.push(
+    `<pattern id="cg-pt-star" patternUnits="userSpaceOnUse" width="100" height="100"><path d="M50 15l8 25 27 10-27 8-8 27-8-27-27-8 27-10z" fill="${NIGHT.tint}"/></pattern>`,
     `<pattern id="cg-pt-stripe" patternUnits="userSpaceOnUse" width="24" height="24" patternTransform="rotate(45)"><rect width="10" height="24" fill="${dark}"/></pattern>`,
     `<pattern id="cg-pt-dot" patternUnits="userSpaceOnUse" width="36" height="36"><circle cx="18" cy="18" r="8" fill="${dark}"/></pattern>`,
     `<pattern id="cg-pt-grid" patternUnits="userSpaceOnUse" width="40" height="40"><path d="M0 0H40M0 0V40" stroke="${dark}" stroke-width="6" fill="none"/></pattern>`,
@@ -163,7 +164,7 @@ export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = tr
   }
   let over = '';
   if (!spec.wordart && !proof && unify) {
-    const pattern = PATTERNS[spec.pattern];
+    const pattern = rare ? 'star' : PATTERNS[spec.pattern];
     const mask = `url(#cg-m-${spec.species})`;
     if (pattern && pattern !== 'plain') over += `<rect width="512" height="512" fill="url(#cg-pt-${pattern})" mask="${mask}" opacity="0.26"/>`;
     over += `<rect width="512" height="512" fill="url(#cg-ht)" mask="${mask}" opacity="0.28"/>`;

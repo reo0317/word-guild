@@ -1,4 +1,5 @@
 import {isRestored} from './srs.mjs';
+import {visitors, rareStatus} from './rare.mjs';
 // 道の地図（トップの画面）。手前（下）から奥（上）へ、遠近のついた道が続く。
 // 手前が近くて大きく、奥へ行くほど小さく霧にかすむ。今いる石段は手前寄りに見える。
 // DOM は container.innerHTML に描くだけで、ゲームの進行や保存には触らない。押されたものは ctx.on の関数に渡す。
@@ -116,6 +117,8 @@ function layout(map) {
 export function renderMap(view, ctx) {
   const {map, today, progress, on} = ctx;
   const {items, total} = layout(map);
+  const night = rareStatus(ctx.rares ?? [], progress);
+  const visiting = new Set(visitors(map, ctx.rares ?? [], progress, today).filter(shelf => progress.rare?.day !== today || !progress.rare.met.includes(shelf)));
   const hereWard = map.wards.findIndex(w => w.ch === map.here?.ch);
   const ink = ward => (WARDS[ward.ch] ?? WARDS[1]).inks[0][1];
 
@@ -143,6 +146,7 @@ export function renderMap(view, ctx) {
       const remain = isHereLamp ? lamp.steps.length - map.here.step + 1 : 0;
       const letter = ctx.letterOf?.(lamp.shelf) ?? null;
       const done = lamp.got === lamp.total;
+      const stars = night.shelves[lamp.shelf];
       const file = HOUSE_ART[lamp.shelf];
       const reveal = lamp.got ? Math.min(5, Math.ceil(lamp.got / lamp.total * 5)) * 20 : 0;
       const pin = `<button type="button" class="gq-house ${lamp.shelf % 2 ? 'left' : 'right'}${done ? ' complete' : ''}${lit ? ' lit' : ''}${gold ? ' gold' : ''}"
@@ -152,6 +156,9 @@ export function renderMap(view, ctx) {
         <span class="gq-house-art" aria-hidden="true"><i class="gq-house-halo"></i><i class="gq-house-shadow"></i>
         <img class="gq-house-color" alt="" width="192" height="192" decoding="async">
         <i class="gq-house-warm"></i><i class="gq-house-sparks"></i></span>
+        ${visiting.has(lamp.shelf) ? '<span class="gq-visitor" aria-label="まれびとが来ています">✦</span>' : ''}
+        ${done ? `<span class="gq-house-stars ${stars?.complete ? 'joined' : ''} ${stars?.gold === 5 ? 'gold' : ''}" aria-label="夜の切手 ${stars?.met ?? 0}/5">${Array.from({length: 5}, (_, i) => `<i class="${i < (stars?.met ?? 0) ? 'met' : ''}">★</i>`).join('')}</span>` : ''}
+        ${(progress.seals ?? []).includes(lamp.shelf) ? '<span class="gq-house-seal" aria-label="無傷の消印">〒</span>' : ''}
         ${gold ? '<svg class="gq-house-vane" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 30V3M3 12h26M3 12l7-5v10zM22 12l7-5v10z"/></svg>' : ''}</button>`;
       return bb(`gq-bb-lamp${far}`, item.cy, item.lat,
         `<button type="button" class="gq-lamp-node ${gold ? 'gold' : lit ? 'lit' : ''}" data-shelf="${lamp.shelf}"
@@ -188,11 +195,11 @@ export function renderMap(view, ctx) {
 
   const post = bb('gq-bb-post', 14, 0, `<div class="gq-post">${artBox('post', 'gq-post-art')}
     <div class="gq-guide">${artBox('hatoriSmile', 'gq-face-hatori')}${map.dueCount ? `<span class="gq-due-badge" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b>${map.dueCount}</b></span>` : ''}</div></div>`);
-  const lighthouse = bb('gq-bb-top', total - 40, 0, `<div class="gq-top-block"><svg viewBox="0 0 120 150" aria-hidden="true">
+  const lighthouse = bb('gq-bb-top', total - 40, 0, `<div class="gq-top-block">${night.complete ? '<span class="gq-full-stars" aria-label="夜の切手がすべてそろいました">✦ ⋆ ✧ ⋆ ✦<br>⋆ ✦ ⋆ ✧ ⋆<br>✧ ⋆ ✦ ⋆ ✧</span>' : ''}<svg viewBox="0 0 120 150" aria-hidden="true">
     <path d="M60 4l-46 40M60 4l46 40" class="beam"/><rect x="48" y="30" width="24" height="16" rx="3" class="lamp"/><path d="M44 46h32l8 100H36z" class="tower"/>
     <path d="M42 80h36M39 112h42" class="band"/></svg><b>灯台</b></div>`);
 
-  const skies = [...new Set(map.wards.map(w => w.ch))].map(ch => `<div class="gq-sky-art" data-ward="${ch}">${artBox(`ward${Math.min(ch, 6)}`, 'gq-sky-img')}</div>`).join('');
+  const skies = [...new Set(map.wards.map(w => w.ch))].map(ch => `<div class="gq-sky-art" data-ward="${ch}">${artBox(`ward${Math.min(ch, 6)}`, 'gq-sky-img')}${night.wards[ch]?.complete ? constellation(ch) : ''}</div>`).join('');
   // カメラの先にある区を調べるための、区ごとの始まりの y
   const wardStarts = items.filter(item => item.type === 'ward').map(item => ({ch: item.ward.ch, y: item.from}));
 
@@ -391,4 +398,18 @@ export function renderMap(view, ctx) {
   measure();
   requestAnimationFrame(measure);
   if (typeof ResizeObserver !== 'undefined') new ResizeObserver(measure).observe(road);
+}
+
+// 6区それぞれの星座。星は紙魚の絵とは別の層に描く。
+function constellation(ch) {
+  const shapes = [
+    [[12,70],[32,25],[52,60],[75,18],[91,48]],
+    [[10,25],[35,15],[55,45],[80,30],[65,80]],
+    [[12,60],[30,30],[60,20],[85,55],[52,75],[30,30]],
+    [[15,22],[45,35],[75,15],[60,70],[25,80],[45,35]],
+    [[10,50],[30,15],[50,50],[75,10],[90,65],[50,50]],
+    [[12,30],[40,15],[75,25],[88,65],[50,85],[20,65],[12,30]],
+  ];
+  const points = shapes[(ch - 1) % shapes.length];
+  return `<svg class="gq-constellation" viewBox="0 0 100 100"><polyline points="${points.map(p => p.join(',')).join(' ')}"/>${points.map(([x,y]) => `<circle cx="${x}" cy="${y}" r="2"/>`).join('')}</svg>`;
 }

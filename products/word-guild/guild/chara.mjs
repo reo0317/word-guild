@@ -47,6 +47,8 @@ export const isBigWord = word => spelling(word.w).length >= BIG_LETTERS;
 
 // tag は products/word-guild/data/chara.json の値（16種か空文字）。
 export function charaSpec(word, tag = '', artMap = wordart) {
+  const rare = artMap?.rare === true || /^r\d{4}$/.test(word.id);
+  if (artMap?.rare === true) artMap = wordart;
   const rand = rngOf('chara:', word.id);
   const big = isBigWord(word);
   const category = CATEGORIES.includes(tag) ? tag : '';
@@ -66,6 +68,7 @@ export function charaSpec(word, tag = '', artMap = wordart) {
     scale: pick(SCALES, r),
     kind: big ? 'big' : 'normal',
     ...(validArt(art) ? {wordart: {g: art.g, tint: art.tint}, prop: '', pattern: 0} : {}),
+    ...(rare ? {kind: 'rare', pattern: 'star'} : {}),
   };
 }
 
@@ -77,7 +80,7 @@ export function pageSpecs(words, tags = [], artMap = wordart) {
   const specs = words.map((word, i) => charaSpec(word, tags[i] ?? '', artMap));
   const seen = new Set();
   specs.forEach((spec, i) => {
-    if (spec.wordart) return; // 意味と tint はページ内の重複調整で変えない
+    if (spec.wordart || spec.kind === 'rare') return; // 意味と tint はページ内の重複調整で変えない
     const rand = rngOf('page:', words[i].id);
     // 大物（oshimi）は種族から分類が分からないので、語の分類（tags）の小物も除く。
     const own = new Set([PROP_OF[spec.species], PROP_OF[tags[i] ?? '']]);

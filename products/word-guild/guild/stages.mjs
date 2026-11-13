@@ -33,6 +33,7 @@ export function buildMap(words, progress, today) {
     if (isRestored(state(word)) && state(word)?.box >= MAX_BOX) lamp.gold++;
   }
   for (const ward of wards) {
+    for (const lamp of ward.lamps) lamp.done = lamp.got === lamp.total;
     ward.gate = progress.gates?.includes(ward.ch) ? 'cleared'
       : ward.lamps.every(l => l.steps.every(s => s.passed)) ? 'open' : 'hidden';
   }

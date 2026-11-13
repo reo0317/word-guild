@@ -94,3 +94,12 @@
 /* 通（物語の紙）。見た目の本体は letter.css */
 .gq-album-letter{margin:0 2px 10px}
 .gq-zoom-card .paper{width:100%}
+
+/* 別冊。街灯ごとの五枚を一列に、区ごとに一ページ。 */
+.gq-night-book{display:grid;place-items:center;gap:8px;width:112px;height:140px;margin:22px auto;background:#192744;color:#f6dc8c;border:2px solid #c7a55b;border-radius:8px 16px 16px 8px;box-shadow:-5px 0 0 #af8e51;font-family:var(--serif)}
+.gq-night-book span{font-size:28px}.gq-night-book b{font-size:17px}
+.gq-night-pages{background:#1b2945;border-radius:12px;padding:12px 8px;color:#f6dc8c}
+.gq-night-row{margin-bottom:24px}.gq-night-row h3{font-size:12px;letter-spacing:.12em;margin:0 0 8px}
+.gq-night-sheet{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}
+.gq-night-sheet .stamp{min-width:0;width:100%}.gq-night-sheet .stamp .lbl{font-size:8px;overflow-wrap:anywhere}.gq-night-sheet .stamp .ja{font-size:8px}
+.gq-night-row .gq-postscript{margin-top:12px;background:#f7efd9;color:#273248}

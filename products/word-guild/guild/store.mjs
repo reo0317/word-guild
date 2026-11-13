@@ -5,15 +5,37 @@ const BACKUP_KEY = `${STORAGE_KEY}.backup`;
 export function emptyProgress() {
   return {v: 1, words: {}, quests: 0, lastDay: 0,
     settings: {fresh: 4}, streak: {count: 0, last: 0, best: 0},
-    daily: null, dailyDone: 0, exportDay: 0, gates: []};
+    daily: null, dailyDone: 0, exportDay: 0, gates: [],
+    rares: {}, rare: {miss: 0, day: 0, met: []}, seals: []};
 }
 
 const isCount = value => Number.isInteger(value) && value >= 0;
+
+const shelves = value => Array.isArray(value) && value.every(n => Number.isInteger(n) && n >= 1 && n <= 56)
+  && new Set(value).size === value.length ? [...value] : [];
+
+function rareStates(value, encode = false) {
+  const result = {};
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return result;
+  for (const [id, entry] of Object.entries(value)) {
+    const tuple = encode ? [entry?.box, entry?.due, entry?.seen] : entry;
+    if (encode && typeof entry?.restored === 'boolean') tuple.push(entry.restored);
+    if (!Array.isArray(tuple) || (tuple.length !== 3 && tuple.length !== 4)) continue;
+    if (tuple.length === 4 && typeof tuple[3] !== 'boolean') continue;
+    const [box, due, seen] = tuple;
+    if (!Number.isInteger(box) || box < 0 || box > 5 || !isCount(due) || !isCount(seen)) continue;
+    result[id] = encode ? tuple : {box, due, seen, ...(tuple.length === 4 ? {restored: tuple[3]} : {})};
+  }
+  return result;
+}
 
 function additionalFields(value) {
   const streak = value.streak;
   const daily = value.daily;
   return {
+    seals: shelves(value.seals),
+    rare: {miss: Number.isInteger(value.rare?.miss) && value.rare.miss >= 0 && value.rare.miss <= 3 ? value.rare.miss : 0,
+      day: isCount(value.rare?.day) ? value.rare.day : 0, met: shelves(value.rare?.met)},
     gates: Array.isArray(value.gates) && value.gates.every(gate => Number.isInteger(gate) && gate >= 1 && gate <= 6) && new Set(value.gates).size === value.gates.length ? [...value.gates] : [],
     settings: {fresh: [4, 6, 8].includes(value.settings?.fresh) ? value.settings.fresh : 4},
     streak: Object.fromEntries(['count', 'last', 'best'].map(key =>
@@ -43,6 +65,7 @@ export function validateProgress(value) {
   return {
     v: 1,
     words,
+    rares: rareStates(value.rares),
     quests: isCount(value.quests) ? value.quests : 0,
     lastDay: isCount(value.lastDay) ? value.lastDay : 0,
     ...additionalFields(value),
@@ -55,7 +78,7 @@ export function serializeProgress(progress) {
     words[id] = [state.box, state.due, state.seen];
     if (typeof state.restored === 'boolean') words[id].push(state.restored);
   }
-  return {v: 1, words, quests: progress.quests, lastDay: progress.lastDay, ...additionalFields(progress)};
+  return {v: 1, words, rares: rareStates(progress.rares, true), quests: progress.quests, lastDay: progress.lastDay, ...additionalFields(progress)};
 }
 
 // {progress, ok}。ok は storage が使えたか（保存の可否の目安）。

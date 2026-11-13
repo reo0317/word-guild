@@ -129,3 +129,26 @@ export function shelfStatus(words, progress) {
 
 // 印のない旧保存は、これまでどおり復元済みとして読む。
 export const isRestored = state => Boolean(state) && state.restored !== false;
+
+// 戻り道は出会った語だけ。最終日の専用保存は持たず、期限と箱の間隔から並べる。
+export function pickReturn(words, progress, today, shelf, rand = null) {
+  const state = word => progress.words[word.id];
+  const last = word => state(word).due - INTERVALS[state(word).box];
+  const candidates = words.filter(word => word.shelf === shelf && state(word)?.seen > 0)
+    .sort((a, b) => Number(isDue(state(b), today)) - Number(isDue(state(a), today))
+      || state(a).box - state(b).box || last(a) - last(b) || a.id.localeCompare(b.id));
+  const spells = new Set();
+  const picked = candidates.filter(word => {
+    const text = spelling(word.w);
+    if (spells.has(text)) return false;
+    spells.add(text);
+    return true;
+  }).slice(0, SESSION_SIZE);
+  return groupWords(picked, rand);
+}
+
+// 早取りの正解では箱を上げず、忘れた語は箱を守って今日の復習へ戻す。
+export function gradeReturn(state, result, today) {
+  const next = grade(state, result, today);
+  return {...next, box: Math.max(state?.box ?? 0, next.box)};
+}

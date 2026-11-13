@@ -1,7 +1,8 @@
 // 1クエストの状態。時間は advance(ms) で外から進める。DOM もタイマーも持たない。
 import {generateBoard, matchWord, spelling} from './board.mjs';
-import {grade, isDue, isBig, isRestored} from './srs.mjs';
+import {grade, gradeReturn, isDue, isBig, isRestored} from './srs.mjs';
 import {applyOutcome, streakNow} from './daily.mjs';
+import {rollRare} from './rare.mjs';
 import {emptyProgress} from './store.mjs';
 
 export const HEARTS = 5;
@@ -17,14 +18,25 @@ const REVENGE_ORDER = {taught: 0, hint: 1};
 // phase: entering（入場中） / battle / defeated（撃破の演出中） / finished
 export class Quest {
   // groups は pickSession の戻り値（語オブジェクトの組の配列）。
-  constructor(groups, {rand = Math.random, progress = emptyProgress(), today = 0, save = () => {}, gate = null} = {}) {
+  constructor(groups, {rand = Math.random, progress = emptyProgress(), today = 0, save = () => {}, gate = null, mode = 'normal', shelf = null, rares = [], map = null} = {}) {
     this.groups = groups;
+    this.mode = mode;
+    this.shelf = shelf;
+    this.rares = rares;
+    this.map = map;
+    this.isNight = false;
+    this.nightChecked = false;
+    this.nightWord = null;
+    this.nightResult = null;
+    this.rareRoll = progress.rare;
+    this.usedHelp = false;
+    this.wrong = false;
     this.rand = rand;
     this.startProgress = progress;
     this.progress = progress;
     this.today = today;
     this.save = save;
-    this.gate = Number.isInteger(gate) && gate >= 1 && gate <= 6 ? gate : null;
+    this.gate = mode !== 'return' && Number.isInteger(gate) && gate >= 1 && gate <= 6 ? gate : null;
     this.hearts = HEARTS;
     this.restoredIds = new Set(); // 今回ヒントなしで答えた語（再戦を含む）
     this.results = new Map(); // id → 'clean' | 'hint' | 'taught'（最初の結果）
@@ -35,11 +47,11 @@ export class Quest {
   }
 
   get total() { return this.groups.length; }
-  get isRevenge() { return this.index >= this.total; }
+  get isRevenge() { return !this.isNight && this.index >= this.total; }
   // 互換のため残す（非推奨）。
   get enemy() { return this.isRevenge ? REVENGE_ENEMY : ENEMIES[Math.min(this.index, ENEMIES.length - 1)]; }
   get isBig() { return !this.isRevenge && this.slots.length === 1 && isBig(this.slots[0].word); }
-  get idleLimit() { return this.isBig ? IDLE_LIMIT_BIG : IDLE_LIMIT; }
+  get idleLimit() { return this.isNight ? 25000 : this.isBig ? IDLE_LIMIT_BIG : IDLE_LIMIT; }
   get unsolved() { return this.slots.filter(slot => !slot.solved); }
   get solvedCount() { return this.slots.length - this.unsolved.length; }
 
@@ -62,9 +74,12 @@ export class Quest {
     if (this.phase === 'entering') {
       this.phase = 'battle';
     } else if (this.phase === 'defeated') {
-      if (this.index + 1 < this.total) {
+      if (!this.isNight && this.index + 1 < this.total) {
         this.enter(this.index + 1, this.groups[this.index + 1]);
+      } else if (this.mode === 'return' && !this.nightChecked && !this.isRevenge && this.openNight()) {
+        // おまけは通常の配達と別に採点する。
       } else if (!this.isRevenge && this.pickRevenge().length > 0) {
+        this.isNight = false;
         this.revengeWords = this.pickRevenge();
         this.enter(this.total, this.revengeWords);
       } else {
@@ -72,6 +87,17 @@ export class Quest {
       }
     }
     return this.phase;
+  }
+
+  openNight() {
+    this.nightChecked = true;
+    const roll = rollRare(this.startProgress, this.shelf, this.today, this.rand, this.rares, this.map);
+    this.rareRoll = roll.rare;
+    if (!roll.word) return false;
+    this.nightWord = roll.word;
+    this.isNight = true;
+    this.enter(this.total, [roll.word]);
+    return true;
   }
 
   // clean 以外の語から最大3語。教わった語を先にする。
@@ -87,11 +113,12 @@ export class Quest {
   answer(text) {
     if (this.phase !== 'battle') return null;
     const match = matchWord(text, this.unsolved.map(slot => slot.text));
-    if (!match) return null;
+    if (!match) { if (!this.isNight) this.wrong = true; return null; }
     const slot = this.slotFor(match);
     slot.solved = true;
     if (slot.hint === 0) this.restoredIds.add(slot.word.id);
-    if (!this.isRevenge && !this.results.has(slot.word.id)) {
+    if (this.isNight) this.nightResult = RESULT_BY_HINT[slot.hint];
+    if (!this.isNight && !this.isRevenge && !this.results.has(slot.word.id)) {
       this.results.set(slot.word.id, RESULT_BY_HINT[slot.hint]);
     }
     this.idle = 0;
@@ -105,6 +132,7 @@ export class Quest {
     const slot = this.slots.find(s => s.word.id === id && !s.solved);
     if (!slot) return false;
     slot.hint = Math.max(slot.hint, level);
+    if (!this.isNight) this.usedHelp = true;
     return true;
   }
 
@@ -116,6 +144,13 @@ export class Quest {
     const events = [];
     if (this.phase !== 'battle' || !(ms > 0)) return events;
     this.idle += ms;
+    if (this.isNight) {
+      if (this.idle >= this.idleLimit) {
+        this.phase = 'defeated';
+        return [{type: 'escape', word: this.nightWord}];
+      }
+      return events;
+    }
     while (this.idle >= this.idleLimit && this.phase === 'battle') {
       this.idle -= this.idleLimit;
       this.hearts--;
@@ -132,6 +167,7 @@ export class Quest {
 
   // 回答済みの語だけを採点して保存する。撤退でも呼ばれる。
   finish(retreated) {
+    if (this.phase === 'finished') return;
     this.retreated = retreated;
     this.phase = 'finished';
     const words = {...this.startProgress.words};
@@ -140,14 +176,32 @@ export class Quest {
       const result = this.results.get(word.id);
       if (!result) continue;
       const before = this.startProgress.words[word.id];
-      const after = grade(before, result, this.today);
+      const after = (this.mode === 'return' ? gradeReturn : grade)(before, result, this.today);
       after.restored = isRestored(before) || this.restoredIds.has(word.id);
       words[word.id] = after;
       entries.push({word, result, restored: after.restored, stamped: this.restoredIds.has(word.id), isNew: !before, box: after.box, due: isDue(before, this.today), big: isBig(word)});
     }
+    const rares = {...(this.startProgress.rares ?? {})};
+    const rareEntries = [];
+    if (this.nightWord) {
+      const word = this.nightWord;
+      const before = rares[word.id];
+      const result = this.nightResult ?? 'taught';
+      const after = grade(before, result, this.today);
+      after.restored = isRestored(before) || this.nightResult === 'clean';
+      rares[word.id] = after;
+      rareEntries.push({word, result: this.nightResult ?? 'missed', rare: true,
+        stamped: this.nightResult === 'clean', restored: after.restored,
+        isNew: !before, box: after.box, due: isDue(before, this.today), big: false});
+    }
+    const sealed = this.mode === 'return' && !retreated && this.hearts === HEARTS
+      && !this.usedHelp && !this.wrong && this.groups.flat().length === 12
+      && this.groups.flat().every(word => this.results.get(word.id) === 'clean');
     const progress = {
       ...this.startProgress,
-      words,
+      words, rares, rare: this.rareRoll,
+      seals: sealed ? [...new Set([...(this.startProgress.seals ?? []), this.shelf])]
+        : [...(this.startProgress.seals ?? [])],
       quests: this.startProgress.quests + 1,
       lastDay: this.today,
       gates: !retreated && this.gate !== null
@@ -158,13 +212,18 @@ export class Quest {
     if (retreated) {
       const upto = this.isRevenge ? this.total : this.index + 1;
       for (const word of this.groups.slice(0, upto).flat()) {
-        if (!this.results.has(word.id)) entries.push({word, result: 'missed', isNew: !this.startProgress.words[word.id], box: this.startProgress.words[word.id]?.box ?? 0, due: isDue(this.startProgress.words[word.id], this.today), big: isBig(word)});
+        if (!this.results.has(word.id)) {
+          if (this.mode === 'return' && words[word.id]) {
+            words[word.id] = {...gradeReturn(words[word.id], 'taught', this.today), restored: isRestored(words[word.id])};
+          }
+          entries.push({word, result: 'missed', isNew: !this.startProgress.words[word.id], box: this.startProgress.words[word.id]?.box ?? 0, due: isDue(this.startProgress.words[word.id], this.today), big: isBig(word)});
+        }
       }
     }
     const applied = applyOutcome(progress, {retreated, entries}, this.today);
     this.progress = applied.progress;
     this.outcome = {
-      retreated, entries,
+      retreated, entries: [...entries, ...rareEntries], sealed, mode: this.mode,
       dailyDone: applied.dailyDone,
       streakUp: applied.streakUp,
       daily: this.progress.daily,

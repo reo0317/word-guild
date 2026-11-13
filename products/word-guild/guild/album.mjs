@@ -15,7 +15,7 @@ import {isRestored} from './srs.mjs';
 //   base      絵の置き場の前置き。無ければ このファイルから見た products/word-guild/
 //   music, storage は使わない
 // 画面は container.innerHTML に描く。album.css は <link> で一度だけ読み込む。
-import {stampState as rawStampState, pageSpecs} from './chara.mjs';
+import {stampState as rawStampState, pageSpecs, charaSpec} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {letterView, loadScenes} from './story.mjs';
 import {CHAPTER_NAMES} from './chapters.mjs';
@@ -116,6 +116,24 @@ export function blankCardHtml(story, gates = []) {
       ? `<p lang="en">${esc(line.en)}<small lang="ja">${esc(line.ja)}</small></p>`
       : '<p class="gq-card-mist" aria-label="霧に隠れた行"><span aria-hidden="true">──────────</span></p>';
   }).join('')}`;
+}
+
+// 追伸の語は発音、余白は訳。元データの波括弧は刷り上がりに残さない。
+export function postscriptHtml(ps) {
+  if (!ps) return '';
+  const text = ps.en.replace(/[{}]/g, '');
+  const line = text.split(/([A-Za-z]+(?:['’-][A-Za-z]+)*)/).map((part, i) => i % 2
+    ? `<button type="button" data-ps-say="${esc(part)}">${esc(part)}</button>` : esc(part)).join('');
+  return `<div class="gq-postscript"><small>P.S.</small><p lang="en" data-ps-line tabindex="0" role="button" aria-label="追伸の訳を読む">${line}</p><p class="gq-ps-ja" lang="ja" hidden>${esc(ps.ja)}</p></div>`;
+}
+
+export function handlePostscriptClick(event, say = defaultSpeak) {
+  const ps = event.target.closest('.gq-postscript');
+  if (!ps) return false;
+  const word = event.target.closest('[data-ps-say]');
+  if (word) say(word.dataset.psSay);
+  else { const ja = ps.querySelector('.gq-ps-ja'); ja.hidden = !ja.hidden; }
+  return true;
 }
 
 export function showPaperCard(host, html) {
@@ -227,8 +245,13 @@ async function load(deps) {
       story = response.ok ? await response.json() : null;
     } catch { story = null; }
   }
+  const optional = async name => {
+    try { const response = await fetch(new URL(`data/${name}.json`, BASE)); return response.ok ? await response.json() : []; }
+    catch { return []; }
+  };
+  const [rares, postscript] = await Promise.all([deps.rares ?? optional('rare'), deps.postscript ?? optional('story-ps')]);
   const scenes = deps.scenes === undefined ? await loadScenes() : deps.scenes;
-  return {words, tags, scenes, story: Array.isArray(story?.letters) ? story : null};
+  return {words, tags, scenes, rares, postscript, story: Array.isArray(story?.letters) ? story : null};
 }
 
 export function openAlbum(container, deps = {}) {
@@ -246,7 +269,7 @@ export function openAlbum(container, deps = {}) {
   }};
   container.className = 'gq gq-album';
   container.innerHTML = '<p class="gq-loading">切手帳をひらいています…</p>';
-  load(deps).then(({words, tags, story, scenes}) => { if (!closed) start(words, tags, story, scenes); }, () => {
+  load(deps).then(({words, tags, story, scenes, rares, postscript}) => { if (!closed) start(words, tags, story, scenes, rares, postscript); }, () => {
     if (closed) return;
     container.innerHTML = '<p class="gq-warn">切手帳を読み込めません。</p>';
     addBack();
@@ -263,7 +286,7 @@ export function openAlbum(container, deps = {}) {
     container.append(button);
   }
 
-  function start(words, tags, story, scenes) {
+  function start(words, tags, story, scenes, rares, postscript) {
     const progress = deps.progress ?? emptyProgress();
     const say = deps.speak ?? defaultSpeak;
     const base = deps.base ?? BASE;
@@ -280,6 +303,8 @@ export function openAlbum(container, deps = {}) {
     const gates = progress.gates ?? [];
     const collected = words.filter(w => stampState(progress.words?.[w.id]) !== 'shadow').length;
     let index = startIndex(pages, progress, deps.shelf);
+    let nightIndex = 0;
+    const nightGroups = wardGroups(albumPages(rares));
     let view = 'page'; // 'page' | 'index'
 
     const backButton = deps.back ? '<button class="text-button gq-album-back" data-act="back" type="button">← トップへ</button>' : '';
@@ -304,11 +329,11 @@ export function openAlbum(container, deps = {}) {
         <div class="gq-album-nav">
           <button type="button" class="gq-round" data-act="prev" aria-label="前のページ" ${index === 0 ? 'disabled' : ''}>${icon('prev')}</button>
           <div class="gq-album-title"><small>${page.ch}区 ${esc(wardName)}</small><b>街灯 ${page.shelf}</b><span>${index + 1} / ${pages.length}</span></div>
-          <button type="button" class="gq-round" data-act="next" aria-label="次のページ" ${index === pages.length - 1 ? 'disabled' : ''}>${icon('next')}</button>
+          <button type="button" class="gq-round" data-act="next" aria-label="次のページ" >${icon('next')}</button>
         </div>
         <div class="gq-album-body ${pp.allGold ? 'gold-page' : pp.complete ? 'lit-page' : ''}">
           ${first ? `<div class="gq-album-gate">${memorialHtml(page.ch, gates.includes(page.ch), base)}</div>` : ''}
-          ${paper}
+          ${paper}${psOf(page.shelf)}
           ${letter?.readable && sceneFor(scenes, page.shelf) ? '<button type="button" class="gq-scene-tag" data-act="scene">場面</button>' : ''}
           <p class="gq-page-count"><b>${pp.got}/${pp.total}</b> ${seal}</p>
           <div class="gq-sheet">${stamps}</div>
@@ -330,7 +355,34 @@ export function openAlbum(container, deps = {}) {
         <div class="gq-album-body"><article class="gq-story-card gq-card-door">${blankCardHtml(story, gates)}</article>${groups.map(group => `<section class="gq-ward">
           <h3>${group.ch}区 ${esc(group.name)}<small>記念切手 ${gates.includes(group.ch) ? '済' : '未'}</small></h3>
           <div class="gq-ward-gate">${memorialHtml(group.ch, gates.includes(group.ch), base)}</div>
-          <div class="gq-lampgrid">${cells(group)}</div></section>`).join('')}</div>`;
+          <div class="gq-lampgrid">${cells(group)}</div></section>`).join('')}<button type="button" class="gq-night-book" data-act="night" aria-label="夜の切手帳"><span aria-hidden="true">☾ ✦</span><b>夜の<br>切手帳</b></button></div>`;
+    }
+
+    function psOf(shelf) {
+      const set = rares.filter(w => w.shelf === shelf);
+      return set.length === 5 && set.every(w => isRestored(progress.rares?.[w.id]))
+        ? postscriptHtml(postscript.find(ps => ps.shelf === shelf)) : '';
+    }
+
+    function renderNight() {
+      if (!nightGroups.length) return renderIndex();
+      view = 'night';
+      const group = nightGroups[nightIndex];
+      const met = rares.filter(w => isRestored(progress.rares?.[w.id])).length;
+      container.innerHTML = `<div class="gq-album-top">${backButton}<span class="gq-album-total">✦ <b>${met}</b>/${rares.length}</span><button class="text-button" data-act="index" type="button">目次</button></div>
+        <div class="gq-album-nav"><button type="button" class="gq-round" data-act="night-prev" aria-label="前のページ">${icon('prev')}</button>
+          <div class="gq-album-title"><small>${group.ch}区 ${esc(group.name)}</small><b>夜の切手帳</b><span>${nightIndex + 1} / ${nightGroups.length}</span></div>
+          <button type="button" class="gq-round" data-act="night-next" aria-label="次のページ" ${nightIndex === nightGroups.length - 1 ? 'disabled' : ''}>${icon('next')}</button></div>
+        <div class="gq-album-body gq-night-pages">${group.pages.map(page => `<section class="gq-night-row"><h3>街灯 ${page.shelf}</h3><div class="gq-night-sheet">${page.words.map(word => stampWithMark(word, charaSpec(word, tags[word.id] ?? '', {rare: true}), stampState(progress.rares?.[word.id]), base, 'sm')).join('')}</div>${psOf(page.shelf)}</section>`).join('')}</div>`;
+    }
+
+    function zoomRare(id) {
+      const word = rares.find(w => w.id === id);
+      if (!word) return;
+      const close = showStampZoom(container, {word, spec: charaSpec(word, tags[id] ?? '', {rare: true}),
+        state: stampState(progress.rares?.[id]), box: progress.rares?.[id]?.box ?? 0, base, say,
+        onClose: () => { const i = cleanups.indexOf(close); if (i >= 0) cleanups.splice(i, 1); }});
+      cleanups.push(close);
     }
 
     // 切手を見たあと、通の中のその語を光らせる（通がある、見えている語だけ）。
@@ -380,9 +432,14 @@ export function openAlbum(container, deps = {}) {
       }
       if (act === 'back') return deps.back?.();
       if (act === 'prev') { index = clampIndex(index - 1, pages.length); return renderPage(); }
+      if (act === 'next' && index === pages.length - 1) { nightIndex = 0; return renderNight(); }
+      if (act === 'night') { nightIndex = 0; return renderNight(); }
+      if (act === 'night-prev') { if (!nightIndex) { index = pages.length - 1; return renderPage(); } nightIndex--; return renderNight(); }
+      if (act === 'night-next') { nightIndex = clampIndex(nightIndex + 1, nightGroups.length); return renderNight(); }
       if (act === 'next') { index = clampIndex(index + 1, pages.length); return renderPage(); }
       if (act === 'index') return renderIndex();
       if (act === 'page') return renderPage();
+      if (handlePostscriptClick(event, say)) return;
       const cell = target.closest('[data-shelf]');
       if (cell) { index = clampIndex(pages.findIndex(p => p.shelf === Number(cell.dataset.shelf)), pages.length); return renderPage(); }
       if (container.querySelector('.gq-zoom')) return;
@@ -392,7 +449,12 @@ export function openAlbum(container, deps = {}) {
       }
       const stamp = target.closest('.stamp[data-id], [data-id]');
       if (stamp && view === 'page') zoom(stamp.dataset.id);
+      if (stamp && view === 'night') zoomRare(stamp.dataset.id);
     };
+    container.onkeydown = event => {
+      if (event.target.matches('[data-ps-line]') && ['Enter', ' '].includes(event.key)) { event.preventDefault(); handlePostscriptClick(event, say); }
+    };
+    cleanups.push(() => { container.onkeydown = null; });
     renderPage();
   }
 }
