@@ -47,26 +47,14 @@ function viewFunction(name, deps) {
   return Function(...Object.keys(deps), `return (${viewSource.slice(start, end)});`)(...Object.values(deps));
 }
 
-test('再戦でヒントを使うと切手を作らず、700msで消える。動きを減らす場合は即消える', () => {
-  for (const hint of [1, 2]) for (const still of [false, true]) {
+test('再戦のヒント・おしえては通常と同じ逃走で、切手を作らない', () => {
+  for (const hint of [1, 2]) {
     const classes = new Set();
     const mon = {classList: {remove() {}, add: (...names) => names.forEach(n => classes.add(n))},
-      insertAdjacentHTML: (_, html) => { mon.html = html; }};
-    const timers = [];
-    const resolve = viewFunction('resolveMon', {quest: {isRevenge: true}, monOf: () => mon,
-      reducedMotion: () => still, later: (ms, run) => timers.push({ms, run}),
-      stampHtml: () => { throw Error('再戦で切手を生成した'); }});
-    resolve({word: {id: 'test'}, hint});
-    assert.ok(classes.has('dissolved'));
-    assert.ok(!classes.has('stamped') && !classes.has('fled'));
-    if (still) { assert.equal(mon.hidden, true); assert.equal(mon.html, undefined); }
-    else {
-      assert.match(mon.html, /gq-ink-burst/);
-      assert.equal((mon.html.match(/<i /g) ?? []).length, 8);
-      assert.equal(timers[0].ms, 700);
-      timers[0].run();
-      assert.equal(mon.hidden, true);
-    }
+      insertAdjacentHTML() { throw Error('切手やしぶきを生成した'); }};
+    viewFunction('resolveMon', {quest: {isRevenge: true}, monOf: () => mon,
+      stampHtml: () => { throw Error('再戦で切手を生成した'); }})({word: {id: 'test'}, hint});
+    assert.deepEqual([...classes], ['solved', 'fled']);
   }
 });
 

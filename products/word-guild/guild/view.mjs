@@ -626,21 +626,11 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     board.addEventListener('touchmove', event => event.preventDefault(), {passive: false});
   }
 
-  // ヒントなしなら切手になる。ヒント使用時は通常は逃げ、再戦はインクに消える。
+  // ヒントなしなら切手になる。ヒント使用時は通常も再戦も逃げる。
   function resolveMon(slot) {
     const mon = monOf(slot.word.id);
     if (!mon) return;
     mon.classList.remove('hinted');
-    if (quest.isRevenge && slot.hint > 0) {
-      mon.classList.add('solved', 'dissolved');
-      if (reducedMotion()) {
-        mon.hidden = true;
-        return;
-      }
-      mon.insertAdjacentHTML('beforeend', `<span class="gq-ink-burst" aria-hidden="true">${Array.from({length: 8}, (_, i) => `<i style="--angle:${i * 45}deg"></i>`).join('')}</span>`);
-      later(700, () => { mon.hidden = true; });
-      return;
-    }
     if (slot.hint > 0) {
       mon.classList.add('solved', 'fled');
       return;
