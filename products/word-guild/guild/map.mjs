@@ -1,7 +1,3 @@
-const STAGE_NAMES = await import('../data/stage-names.json', {with: {type: 'json'}})
-  .then(module => module.default).catch(() => ({}));
-const NAME_COLORS = ['#263c59', '#e8d8b8', '#a84436', '#b7cbd0', '#f2c36a', '#665770'];
-const NAME_INKS = ['#fff9eb', '#263c59', '#fff9eb', '#263c59', '#263c59', '#fff9eb'];
 import HOUSE_DOORS from '../data/house-doors.json' with {type: 'json'};
 import {isRestored} from './srs.mjs';
 import {visitors, rareStatus} from './rare.mjs';
@@ -119,13 +115,20 @@ export function houseGeometry(width, projection, current = false) {
   return {x, size, offset: half + 8, side};
 }
 
-// 画面中央を境にツムギの反対側へ出し、画面内に収める。
+// 大きく映る間は必ず表示。左右の家との重なり面積を比べ、同点なら右。
 export function panelGeometry(width, height, x, feet, pw, ph, objects, tsumugiSize = 100) {
   if (tsumugiSize < 70) return null;
   const top = Math.max(8, Math.min(height - ph - 8, feet - tsumugiSize));
   const gap = tsumugiSize / 2 + 6;
-  const left = x < width / 2 ? x + gap : x - gap - pw;
-  return {left: Math.max(8, Math.min(width - pw - 8, left)), top};
+  const candidates = [x + gap, x - gap - pw].map(left => {
+    left = Math.max(8, Math.min(width - pw - 8, left));
+    const overlap = objects.reduce((sum, h) => sum
+      + Math.max(0, Math.min(left + pw, h.right) - Math.max(left, h.left))
+      * Math.max(0, Math.min(top + ph, h.bottom) - Math.max(top, h.top)), 0);
+    return {left, top, overlap};
+  });
+  const best = candidates[1].overlap < candidates[0].overlap ? candidates[1] : candidates[0];
+  return {left: best.left, top: best.top};
 }
 
 const DAILY_SHORT = {revenge: ['↺', '戻ってきた紙魚'], fresh: ['✦', '新しい紙魚'], clean: ['✓', 'ヒントなし'], finish: ['▶', '配達']};
@@ -217,8 +220,6 @@ export function renderMap(view, ctx) {
     }
     if (item.type === 'lamp') {
       const {lamp} = item;
-      const name = STAGE_NAMES?.[lamp.shelf] || String(lamp.shelf);
-      const colorIndex = (item.ward.ch - 1) % 6;
       const lit = lamp.lit === lamp.total;
       const gold = lamp.gold === lamp.total;
       const isHereLamp = map.here && map.here.shelf === lamp.shelf;
@@ -241,9 +242,9 @@ export function renderMap(view, ctx) {
         ${gold ? '<svg class="gq-house-vane" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 30V3M3 12h26M3 12l7-5v10zM22 12l7-5v10z"/></svg>' : ''}</button>`;
       return bb(`gq-bb-lamp${far}`, item.cy, item.lat,
         `<button type="button" class="gq-lamp-node ${gold ? 'gold' : lit ? 'lit' : ''}" data-shelf="${lamp.shelf}"
-        style="--name-color:${NAME_COLORS[colorIndex]};--name-ink:${NAME_INKS[colorIndex]}"
-        aria-label="${esc(name)}　切手 ${lamp.got}/${lamp.total}　${letter ? '手紙を開く' : '切手帳を開く'}">
-        <b>${esc(name)}</b><small>${lamp.got}/${lamp.total}</small>${done ? '<span class="gq-name-postmark" aria-label="配達済み">〒</span>' : ''}${remain ? `<em>↑${remain}</em>` : ''}</button>${pin}`);
+        style="--p:${Math.round(lamp.got / lamp.total * 100)}%;--wc:${ink(item.ward)}"
+        aria-label="街灯${lamp.shelf}　切手 ${lamp.got}/${lamp.total}　${letter ? '手紙を開く' : '切手帳を開く'}">
+        <b>${lamp.shelf}</b><small>${lamp.got}/${lamp.total}</small>${remain ? `<em>↑${remain}</em>` : ''}</button>${pin}`);
     }
     if (item.type === 'gate') {
       const {ward} = item;
@@ -353,7 +354,6 @@ export function renderMap(view, ctx) {
     scale: el.classList.contains('gq-bb-ward') ? 0.9 : 1,
     panel: el.querySelector('.gq-here-panel'),
     house: el.querySelector('.gq-house'),
-    nameplate: el.querySelector('.gq-lamp-node'),
   }));
   const houses = [...view.querySelectorAll('[data-house-ward]')];
   const loadHouses = ward => {
@@ -447,11 +447,6 @@ export function renderMap(view, ctx) {
         const hx = side === 'left' ? -offset - size : offset;
         b.house.style.transform = `translate(${(hx / displayScale).toFixed(2)}px,${(-size * .85 / displayScale).toFixed(2)}px) scale(${(size / (140 * displayScale)).toFixed(3)})`;
       }
-      if (b.nameplate) {
-        const dot = displayScale < .7;
-        b.nameplate.classList.toggle('distant', dot);
-        b.nameplate.style.transform = `scale(${dot ? 1 : Math.max(1, .85 / displayScale)})`;
-      }
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${displayScale.toFixed(3)})`;
       b.el.style.opacity = String(fade);
       b.el.style.zIndex = b.panel ? '203' : pin ? '202' : String(Math.round(s * 100));
@@ -462,9 +457,16 @@ export function renderMap(view, ctx) {
     if (!stage.isConnected) return;
     const panelBoard = boards.find(b => b.panel && b.shown);
     if (panelBoard) {
+      const origin = stage.getBoundingClientRect();
+      const obstacles = boards.filter(b => b.shown && !b.panel).flatMap(b =>
+        [...b.el.querySelectorAll('.gq-house')].map(el => {
+          const r = el.getBoundingClientRect();
+          return {left:r.left - origin.left, right:r.right - origin.left,
+            top:r.top - origin.top, bottom:r.bottom - origin.top};
+        }));
       const p = project(panelBoard.y);
       const placement = panelGeometry(Ws, Hs, p.x, p.y,
-        panelBoard.panel.offsetWidth, panelBoard.panel.offsetHeight, [],
+        panelBoard.panel.offsetWidth, panelBoard.panel.offsetHeight, obstacles,
         100 * tsumugiScale(p.scale, initialTsumugiScale));
       panelBoard.panel.style.visibility = placement ? '' : 'hidden';
       if (!placement) return;
