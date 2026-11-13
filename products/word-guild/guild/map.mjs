@@ -240,7 +240,7 @@ export function renderMap(view, ctx) {
         ${(progress.seals ?? []).includes(lamp.shelf) ? '<span class="gq-house-seal" aria-label="無傷の消印">〒</span>' : ''}
         ${gold ? '<svg class="gq-house-vane" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 30V3M3 12h26M3 12l7-5v10zM22 12l7-5v10z"/></svg>' : ''}</button>`;
       return bb(`gq-bb-lamp${far}`, item.cy, item.lat,
-        `<button type="button" class="gq-lamp-node ${gold ? 'gold' : lit ? 'lit' : ''}" data-shelf="${lamp.shelf}"
+        `<button type="button" class="gq-lamp-node${done ? ' delivered' : ''} ${gold ? 'gold' : lit ? 'lit' : ''}" data-shelf="${lamp.shelf}"
         style="--name-color:${NAME_COLORS[colorIndex]};--name-ink:${NAME_INKS[colorIndex]}"
         aria-label="${esc(name)}　切手 ${lamp.got}/${lamp.total}　${letter ? '手紙を開く' : '切手帳を開く'}">
         <b>${esc(name)}</b><small>${lamp.got}/${lamp.total}</small>${done ? '<span class="gq-name-postmark" aria-label="配達済み">〒</span>' : ''}${remain ? `<em>↑${remain}</em>` : ''}</button>${pin}`);
@@ -355,6 +355,9 @@ export function renderMap(view, ctx) {
     house: el.querySelector('.gq-house'),
     nameplate: el.querySelector('.gq-lamp-node'),
   }));
+  const nameBoards = boards.filter(b => b.nameplate);
+  const currentName = nameBoards.findIndex(b => Number(b.nameplate.dataset.shelf) === map.here?.shelf);
+  const nearbyNames = new Set(nameBoards.slice(Math.max(0, currentName), Math.max(0, currentName) + 3));
   const houses = [...view.querySelectorAll('[data-house-ward]')];
   const loadHouses = ward => {
     const index = wardStarts.findIndex(w => w.ch === ward);
@@ -448,7 +451,9 @@ export function renderMap(view, ctx) {
         b.house.style.transform = `translate(${(hx / displayScale).toFixed(2)}px,${(-size * .85 / displayScale).toFixed(2)}px) scale(${(size / (140 * displayScale)).toFixed(3)})`;
       }
       if (b.nameplate) {
-        const dot = displayScale < .7;
+        b.nameplate.style.left = '';
+        b.nameplate.style.top = '';
+        const dot = displayScale < .7 && !nearbyNames.has(b);
         b.nameplate.classList.toggle('distant', dot);
         b.nameplate.style.transform = `scale(${dot ? 1 : Math.max(1, .85 / displayScale)})`;
       }
@@ -474,6 +479,41 @@ export function renderMap(view, ctx) {
 
     };
     placePanel();
+    // 近くの名札は画面座標で配置し、人物・吹き出し・先に置いた札を避ける。
+    const occupied = [];
+    const person = boards.find(b => b.el.classList.contains('gq-bb-tsumugi') && b.shown);
+    if (person) {
+      const p = project(person.y), size = 100 * tsumugiScale(p.scale, initialTsumugiScale);
+      occupied.push({left:p.x-size/2, right:p.x+size/2, top:p.y-size, bottom:p.y});
+    }
+    const speech = boards.find(b => b.panel && b.shown);
+    if (speech && speech.panel.style.visibility !== 'hidden') {
+      const p = project(speech.y);
+      const box = panelGeometry(Ws,Hs,p.x,p.y,speech.panel.offsetWidth,speech.panel.offsetHeight,[],
+        100 * tsumugiScale(p.scale, initialTsumugiScale));
+      if (box) occupied.push({left:box.left,right:box.left+speech.panel.offsetWidth,top:box.top,bottom:box.top+speech.panel.offsetHeight});
+    }
+    for (const b of nameBoards.filter(b => b.shown && nearbyNames.has(b))) {
+      const p = project(b.y), scale = objectScale(p.scale);
+      const size = Math.max(scale, .85);
+      const width = b.nameplate.offsetWidth * size, height = b.nameplate.offsetHeight * size;
+      let box;
+      search: for (let lift = 0; lift < Hs; lift += 12) {
+        for (const left of [p.x + p.half + 10, p.x - p.half - width - 10]) {
+          const x = Math.max(8, Math.min(Ws-width-8,left));
+          const y = Math.max(8, p.y-height/2-lift);
+          const candidate = {left:x,right:x+width,top:y,bottom:y+height};
+          if (occupied.every(o => candidate.right+8 <= o.left || candidate.left >= o.right+8 || candidate.bottom+8 <= o.top || candidate.top >= o.bottom+8)) {
+            box = candidate; break search;
+          }
+        }
+      }
+      if (box) {
+        occupied.push(box);
+        b.nameplate.style.left = `${(box.left + width/2 - p.x)/scale}px`;
+        b.nameplate.style.top = `${(box.top + height/2 - p.y)/scale}px`;
+      }
+    }
     // カメラの少し先にある区の絵を、背景に出す。
     let ward = wardStarts[0]?.ch ?? 1;
     for (const w of wardStarts) if (w.y <= c + 500) ward = w.ch;
