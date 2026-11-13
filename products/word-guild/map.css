@@ -145,5 +145,6 @@
 .gq-bb-tsumugi{will-change:transform}
 .gq-bb-panel{opacity:1}
 
-/* 遠景の描画端を霧へ溶かす。紙魚とは別の道路 SVG だけをマスクする。 */
-.gq-road-svg{-webkit-mask-image:linear-gradient(transparent 27%,#000 38%);mask-image:linear-gradient(transparent 27%,#000 38%)}
+/* 非表示は透過やマスクに依存させない。霞の上端は不透明。 */
+.gq-bb[hidden]{display:none!important}
+.gq-road-cap{position:absolute;left:0;right:0;top:0;pointer-events:none;z-index:199;background:linear-gradient(var(--fog-lt) 0 calc(100% - 28px),transparent 100%);border-radius:0 0 50% 50%}

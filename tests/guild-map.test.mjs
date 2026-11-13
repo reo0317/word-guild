@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {HOUSE_ART} from '../products/word-guild/guild/art.mjs';
-import {renderMap, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, A, L, W, f} from '../products/word-guild/guild/map.mjs';
+import {renderMap, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, lighthouseVisible, LIGHTHOUSE_DISTANCE, roadPoints, DRAW_DISTANCE, A, L, W, f} from '../products/word-guild/guild/map.mjs';
 import {buildMap} from '../products/word-guild/guild/stages.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
@@ -124,7 +124,7 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     const end = Number(view.innerHTML.match(/class="gq-bb gq-bb-top" data-y="([^"]+)"/)[1]);
     const checkRoadEnd = () => {
       const camera = Math.min(end + 40, Math.max(-1400, end + 40 - road.scrollTop));
-      const terminal = projectRoad(390, 680, Math.min(end, camera + 3300), camera);
+      const terminal = projectRoad(390, 680, Math.min(end, camera + DRAW_DISTANCE), camera);
       for (const name of ['base', 'edge', 'lines', 'center', 'walked']) {
         const coords = nodes[`#gq-r-${name}`].attrs.d.match(/-?\d+(?:\.\d+)?/g)?.map(Number) ?? [];
         for (let i = 1; i < coords.length; i += 2) assert.ok(coords[i] >= terminal.y - .051, `${name} extends past lighthouse`);
@@ -232,4 +232,31 @@ test('390×844・360×640で吹き出しは左右の家とツムギを避け、�
   }
   assert.equal(roadAmplitude(0), 1);
   assert.equal(roadAmplitude(2200), 0);
+});
+
+
+test('現在地から10石段より遠い灯台は描かない', () => {
+  assert.equal(lighthouseVisible(LIGHTHOUSE_DISTANCE + 1), false);
+  assert.equal(lighthouseVisible(100000), false);
+  assert.equal(lighthouseVisible(LIGHTHOUSE_DISTANCE), true);
+  assert.equal(lighthouseVisible(0), true);
+});
+
+test('スマホ幅で道の点列は打ち切り距離を超えず、画面の間隔は2px未満', () => {
+  for (const [width, height] of [[320,480], [390,680], [430,760]]) {
+    for (const camera of [-1400, 0, 530, 10000]) {
+      for (const distance of [300, DRAW_DISTANCE, 100000]) {
+        const points = roadPoints(width, height, camera + distance, camera);
+        assert.equal(points.at(-1).worldZ, camera + Math.min(distance, DRAW_DISTANCE));
+        for (const [i, p] of points.entries()) {
+          assert.ok(p.worldZ <= camera + Math.min(distance, DRAW_DISTANCE));
+          if (i) {
+            const prev = points[i - 1];
+            assert.ok(Math.hypot(p.x - prev.x, p.y - prev.y) < 2);
+            assert.ok(p.worldZ >= prev.worldZ);
+          }
+        }
+      }
+    }
+  }
 });

@@ -33,7 +33,25 @@ export const H_CAMERA = 0.86; // カメラの高さ（画面の縦横比で補�
 const Z_NEAR = 700;    // 下端での最短距離。これより近い地面は描かない
 const PHASE = Math.PI / 2;
 const S_MIN = 0.07;
-const DRAW_DISTANCE = 3300;
+export const DRAW_DISTANCE = 1800;
+export const LIGHTHOUSE_DISTANCE = H.step * 10;
+
+export function lighthouseVisible(remaining) {
+  return remaining >= 0 && remaining <= LIGHTHOUSE_DISTANCE;
+}
+
+// 画面上の縦間隔を1px以下にし、打ち切り位置も必ず標本に含める。
+export function roadPoints(width, height, end, camera = 0) {
+  const cap = Math.max(camera, Math.min(end, camera + DRAW_DISTANCE));
+  const near = projectRoad(width, height, camera, camera);
+  const far = projectRoad(width, height, cap, camera);
+  const count = Math.max(1, Math.ceil(near.y - far.y));
+  return Array.from({length: count + 1}, (_, i) => {
+    const scale = near.scale + (far.scale - near.scale) * i / count;
+    const worldZ = i === count ? cap : Math.min(cap, camera + f / scale - Z_NEAR);
+    return {...projectRoad(width, height, worldZ, camera), worldZ};
+  });
+}
 
 // art/ward-N.webp（1200×800）の奥の道・海面の消失点。原画内の比率。
 export const WARD_VANISHING = {
@@ -187,7 +205,7 @@ export function renderMap(view, ctx) {
   const hereY = hereItem ? hereItem.cy : 0;
 
   const bb = (cls, y, lat, inner) =>
-    `<div class="gq-bb ${cls}" data-y="${y.toFixed(1)}" data-lat="${lat.toFixed(3)}">${inner}</div>`;
+    `<div class="gq-bb ${cls}" data-y="${y.toFixed(1)}" data-lat="${lat.toFixed(3)}" hidden>${inner}</div>`;
 
   const nodes = items.map(item => {
     const far = hereWard >= 0 && map.wards.indexOf(item.ward) > hereWard + 1 ? ' far' : '';
@@ -286,6 +304,7 @@ export function renderMap(view, ctx) {
           <path class="base" id="gq-r-base"/><path class="lines" id="gq-r-lines"/><path class="walked" id="gq-r-walked"/>
           <path class="edge" id="gq-r-edge"/><path class="center" id="gq-r-center"/>
         </svg>
+        <i class="gq-road-cap" id="gq-road-cap" aria-hidden="true"></i>
         ${nodes}${herePanel}${post}${lighthouse}
         ${map.fog ? `<i class="gq-fogband" aria-hidden="true" style="--d:${fogDensity.toFixed(2)}"></i>` : ''}
       </div>
@@ -362,24 +381,15 @@ export function renderMap(view, ctx) {
     const halfAt = y => project(y).half;
 
     // 画面の縦方向に等間隔で標本化し、同じ投影から両側を作る。
-    const S_MAX = 1;
-    const N = 120;
     const visibleEnd = Math.min(roadEnd, c + DRAW_DISTANCE);
     const ribbon = (cap, width) => {
-      cap = Math.min(cap, visibleEnd);
-      const left = [], right = [];
-      for (let i = 0; i <= N; i++) {
-        const s0 = S_MAX + (S_MIN - S_MAX) * i / N;
-        const y = Math.max(c, Math.min(cap, c + f / s0 - Z_NEAR));
-        const p = project(y);
-        left.push([p.x - p.half * width, p.y]);
-        right.push([p.x + p.half * width, p.y]);
-      }
-      const end = project(Math.max(c, cap));
-      left.push([end.x - end.half * width, end.y]);
-      right.push([end.x + end.half * width, end.y]);
-      return {left, right};
+      const points = roadPoints(Ws, Hs, Math.min(cap, visibleEnd), c);
+      return {left: points.map(p => [p.x - p.half * width, p.y]),
+        right: points.map(p => [p.x + p.half * width, p.y])};
     };
+    const cap = $('#gq-road-cap');
+    cap.style.height = `${project(visibleEnd).y + 31}px`;
+    cap.style.display = roadEnd > c + DRAW_DISTANCE ? '' : 'none';
     const fmt = p => `${p[0].toFixed(1)} ${p[1].toFixed(1)}`;
     const poly = ({left, right}) => `M${left.map(fmt).join('L')}L${right.reverse().map(fmt).join('L')}Z`;
     const full = ribbon(roadEnd, 1);
@@ -412,11 +422,11 @@ export function renderMap(view, ctx) {
       const top = b.el.classList.contains('gq-bb-top');
       const post = b.el.classList.contains('gq-bb-post');
       const pin = b.el.classList.contains('gq-bb-tsumugi');
-      if (r < 0 || r > DRAW_DISTANCE || (top && !lighthouseOpacity(r)) || (post && (Math.abs(hereY - b.y) > 600 || r > 850)) || Y(s) > Hs + 140) {
-        if (b.shown) { b.el.style.display = 'none'; b.shown = false; }
+      if (r < 0 || r > DRAW_DISTANCE || (top && !lighthouseVisible(roadEnd - hereY)) || (post && (Math.abs(hereY - b.y) > 600 || r > 850)) || Y(s) > Hs + 140) {
+        b.el.hidden = true; b.el.style.display = 'none'; b.shown = false;
         continue;
       }
-      if (!b.shown) { b.el.style.display = ''; b.shown = true; }
+      b.el.hidden = false; b.el.style.display = ''; b.shown = true;
       const fade = Math.min(1, Math.max(0, (s - S_MIN) / 0.2)) * (b.far ? 0.55 : 1);
       const sx = X(b.y, s);
       const displayScale = b.panel ? 1 : pin ? tsumugiScale(s, initialTsumugiScale)
@@ -428,7 +438,7 @@ export function renderMap(view, ctx) {
         b.house.style.transform = `translate(${(hx / displayScale).toFixed(2)}px,${(-size * .85 / displayScale).toFixed(2)}px) scale(${(size / (140 * displayScale)).toFixed(3)})`;
       }
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${displayScale.toFixed(3)})`;
-      b.el.style.opacity = b.panel || pin ? '1' : top ? lighthouseOpacity(r).toFixed(2) : fade.toFixed(2);
+      b.el.style.opacity = b.panel || pin ? '1' : top ? '1' : fade.toFixed(2);
       b.el.style.zIndex = b.panel ? '203' : pin ? '202' : String(Math.round(s * 100));
     }
 
