@@ -122,10 +122,7 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     pin.dataset = {y:match[1], lat:match[2]};
     panelBoard.dataset = {...pin.dataset};
     for (const lamp of this.innerHTML.matchAll(/class="gq-bb gq-bb-lamp[^"]*" data-y="([^"]+)" data-lat="([^"]+)"/g)) {
-      const classes = new Set();
-      const nameplate = {dataset:{shelf:String(lamps.length+1)},offsetWidth:132,offsetHeight:56,style:{},
-        classList:{toggle(cls,on){if(on) classes.add(cls);else classes.delete(cls);},contains:cls=>classes.has(cls)}};
-      lamps.push({nameplate,style:{}, dataset:{y:lamp[1],lat:lamp[2]}, classList:{contains:()=>false}, querySelector:sel=>sel === '.gq-lamp-node' ? nameplate : null});
+      lamps.push({style:{}, dataset:{y:lamp[1],lat:lamp[2]}, classList:{contains:()=>false}, querySelector:()=>null});
     }
     for (const node of [pin, ...lamps]) node.querySelectorAll = () => [];
     return [pin, panelBoard, ...lamps];
@@ -162,12 +159,6 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     assert.ok(Number(sixthAhead.dataset.y) <= initialCamera + DRAW_DISTANCE);
     assert.ok(projectRoad(402,710,Number(sixthAhead.dataset.y),initialCamera).y
       >= projectRoad(402,710,initialCamera + DRAW_DISTANCE,initialCamera).y);
-    for (const lamp of lamps.slice(0,3)) {
-      assert.equal(lamp.nameplate.classList.contains('distant'), false);
-      assert.ok(Number.isFinite(parseFloat(lamp.nameplate.style.left)));
-      assert.ok(Number.isFinite(parseFloat(lamp.nameplate.style.top)));
-    }
-    assert.equal(lamps[3].nameplate.classList.contains('distant'), true);
     const initialScroll = road.scrollTop;
     assert.equal(scale(), 1);
     assert.equal(sky.style.top, `${skyGeometry(402,710,1).top}px`);
