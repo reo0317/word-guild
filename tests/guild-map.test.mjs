@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {HOUSE_ART} from '../products/word-guild/guild/art.mjs';
-import {renderMap} from '../products/word-guild/guild/map.mjs';
+import {renderMap, houseGeometry} from '../products/word-guild/guild/map.mjs';
 import {buildMap} from '../products/word-guild/guild/stages.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
@@ -52,4 +52,28 @@ test('家は左右交互で、霧・5段階の色・完成・点灯・金を進�
   buttons.find(b=>b.dataset.shelf==='3').onclick();
   assert.equal(opened,3);
   assert.equal(JSON.stringify(progress),before);
+});
+
+
+test('家は独立した遠近サイズで、道・番号札と離れ、スクロール中も左右8pxに収まる', () => {
+  for (const width of [320, 390, 430]) {
+    for (let scale = 0.07; scale <= 2; scale += 0.01) {
+      for (const lat of [-0.5, 0, 0.5]) {
+        for (const current of [false, true]) {
+          const {x, size, offset} = houseGeometry(width, scale, lat, current);
+          assert.ok(size >= 36 && size <= 140);
+          assert.ok(x - offset - size >= 8 - 1e-9);
+          assert.ok(x + offset + size <= width - 8 + 1e-9);
+          assert.ok(offset >= 28 * scale + 8);
+        }
+      }
+    }
+  }
+  for (const scale of [0.85, 0.95, 1]) {
+    const normal = houseGeometry(390, scale).size;
+    const current = houseGeometry(390, scale, 0, true).size;
+    assert.ok(normal >= 110 && normal <= 140);
+    assert.ok(current >= normal && current <= 140);
+  }
+  assert.equal(houseGeometry(390, 0.07).size, 36);
 });

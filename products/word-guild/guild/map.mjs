@@ -28,6 +28,17 @@ const ROAD_W = 0.13;   // 手前での道の半幅（枠の幅に対する割合
 const SWING = 0.42;    // 手前での横の振れ幅（枠の幅に対する割合）
 const S_MIN = 0.07;    // これより遠いものは描かない
 
+// 家は盤面の縮尺から独立した表示幅にする。道の両側に8pxの隙間を残す。
+export function houseGeometry(width, scale, lat = 0, current = false) {
+  const roadHalf = width * ROAD_W * scale;
+  const room = Math.max(36, width / 2 - roadHalf - 16);
+  const size = Math.min(room, Math.max(36, Math.min(140, (current ? 160 : 132) * Math.min(1, scale) ** 0.6)));
+  const reserve = Math.min(room, Math.max(36, Math.min(140, 160 * Math.min(1, scale) ** 0.6)));
+  const inset = roadHalf + reserve + 16;
+  const x = Math.max(Math.min(inset, width / 2), Math.min(Math.max(width - inset, width / 2), width / 2 + lat * width * SWING * scale));
+  return {x, size, offset: roadHalf + 8};
+}
+
 const DAILY_SHORT = {revenge: ['↺', '戻ってきた紙魚'], fresh: ['✦', '新しい紙魚'], clean: ['✓', 'ヒントなし'], finish: ['▶', '配達']};
 
 export function dailyLine(daily) {
@@ -260,6 +271,7 @@ export function renderMap(view, ctx) {
     far: el.classList.contains('far'),
     scale: el.classList.contains('gq-bb-ward') ? 0.9 : 1,
     panel: el.querySelector('.gq-here-panel'),
+    house: el.querySelector('.gq-house'),
   }));
   const houses = [...view.querySelectorAll('[data-house-ward]')];
   const loadHouses = ward => {
@@ -287,7 +299,7 @@ export function renderMap(view, ctx) {
     const yh = Hs * HORIZON;
     const span = Hs * NEAR - yh;
     const sOf = r => 1 / (1 + Math.max(r, -0.55 * F) / F);
-    const X = (y, s) => Ws / 2 + latAt(y) * Ws * SWING * s;
+    const X = (y, s) => houseGeometry(Ws, s, latAt(y)).x;
     const Y = s => yh + span * s;
     const rw = Ws * ROAD_W;
 
@@ -341,6 +353,13 @@ export function renderMap(view, ctx) {
       if (!b.shown) { b.el.style.display = ''; b.shown = true; }
       const fade = Math.min(1, Math.max(0, (s - S_MIN) / 0.2)) * (b.far ? 0.55 : 1);
       const sx = X(b.y, s);
+      if (b.house) {
+        const current = Number(b.house.dataset.shelf) === map.here?.shelf;
+        const {size, offset} = houseGeometry(Ws, s, latAt(b.y), current);
+        // 親の遠近縮小を打ち消し、画像も代替の家も同じ表示幅にする。
+        b.house.style.setProperty('--house-size', `${(size / s).toFixed(3)}px`);
+        b.house.style.setProperty('--house-offset', `${(offset / s).toFixed(3)}px`);
+      }
       if (b.panel) b.panel.className = `gq-here-panel ${sx > Ws / 2 ? 'left' : 'right'}`; // 道の広い側に出す
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${(s * b.scale).toFixed(3)})`;
       b.el.style.opacity = fade.toFixed(2);

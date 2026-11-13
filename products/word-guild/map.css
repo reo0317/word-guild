@@ -89,16 +89,16 @@
 .gq-pop-acts{display:flex;justify-content:center;gap:22px}
 
 /* 宛先の家。紙魚の祖先には filter を置かず、透過画像の mask と光だけで描く。 */
-.gq-house{position:absolute;top:-64px;width:80px;height:80px;padding:0;border:0;border-radius:0;background:none;box-shadow:none;line-height:0}
-.gq-house.left{right:35px}.gq-house.right{left:35px}
+.gq-house{position:absolute;top:calc(var(--house-size,124px) * -.85);width:var(--house-size,124px);height:var(--house-size,124px);padding:0;border:0;border-radius:0;background:none;box-shadow:none;line-height:0}
+.gq-house.left{right:var(--house-offset,60px)}.gq-house.right{left:var(--house-offset,60px)}
 .gq-house:active{transform:none;box-shadow:none}
 .gq-house:focus-visible{outline:2px solid var(--seal);outline-offset:4px}
-.gq-house-fallback{position:absolute;inset:26px;display:block}.gq-house-fallback .house{width:100%;height:100%}
+.gq-house-fallback{position:absolute;inset:0;display:block}.gq-house-fallback .house{width:100%;height:100%}
 .gq-house-art{display:none;position:absolute;inset:0;pointer-events:none}
 .gq-house.loaded .gq-house-art{display:block}.gq-house.loaded .gq-house-fallback{display:none}
 .gq-house-shadow,.gq-house-color,.gq-house-warm{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .gq-house-shadow,.gq-house-warm{-webkit-mask:var(--house-image) center/contain no-repeat;mask:var(--house-image) center/contain no-repeat}
-.gq-house-shadow{background:var(--fog);opacity:.8}
+.gq-house-shadow{background:var(--ink);opacity:.88}
 .gq-house-color{clip-path:inset(var(--reveal) 0 0)}
 .gq-house-halo{position:absolute;inset:-12%;background:radial-gradient(ellipse,#ffd77e88,transparent 68%);opacity:0}
 .gq-house-warm{background:radial-gradient(ellipse at 50% 76%,#ffc66b99,transparent 65%);opacity:0}
