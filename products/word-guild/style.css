@@ -84,7 +84,9 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-mon.big .gq-mon-val{transform:translateX(-300%)}
 .gq-mon.hinted .gq-mon-body{animation:gq-sway .7s ease-in-out infinite alternate}
 .gq-mon.hinted::after{content:"";position:absolute;right:calc(50% - var(--enemy-size)*.5);top:10%;width:9px;height:13px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:#6fb3d8;border:1.5px solid var(--ink)}
-.gq-mon.angry::before{content:"!";position:absolute;right:calc(50% - var(--enemy-size)*.55);top:2px;width:18px;height:18px;border-radius:50%;background:var(--seal);color:var(--paper);font:900 13px/18px Arial,sans-serif;text-align:center;border:1.5px solid var(--ink);z-index:2}
+.gq-mon.angry .gq-mon-body::after{content:"!";position:absolute;right:12%;top:8%;width:clamp(12px,18cqw,18px);aspect-ratio:1;border-radius:50%;background:var(--seal);color:var(--paper);font:900 clamp(10px,13cqw,13px)/1 Arial,sans-serif;display:grid;place-items:center;border:1.5px solid var(--ink);box-sizing:border-box;z-index:2}
+.gq-mon.big.angry .gq-mon-body::after{right:31%}
+.gq-mon.solved .gq-mon-body::after{display:none}
 .gq-mon-seal{position:absolute;left:50%;top:50%;width:calc(var(--enemy-size)*.62);height:calc(var(--enemy-size)*.62);margin:calc(var(--enemy-size)*-.31) 0 0 calc(var(--enemy-size)*-.31);border-radius:50%;border:4px solid var(--seal);box-shadow:inset 0 0 0 3px var(--paper),inset 0 0 0 5px var(--seal);opacity:0;pointer-events:none;z-index:4}
 .gq-mon-stamp{position:absolute;left:50%;bottom:2px;width:min(82%,calc(100cqh - 26px),140px);translate:-50% 0;transform-origin:50% 100%;z-index:3;pointer-events:none}
 .gq-mon.big .gq-mon-stamp{width:min(82%,calc(200cqh - 52px),220px)}
@@ -135,7 +137,7 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-arena{position:relative;z-index:3;flex-shrink:0;height:calc(var(--enemy-size) + 14px + var(--plate-h));border:2px solid var(--ink);border-radius:10px;background:var(--fog)}
 .gq-mons{position:absolute;inset:0 0 var(--plate-h) calc(var(--enemy-size)*.6);display:flex;justify-content:center;align-items:flex-end;padding:0 2px 4px}
 /* 影は絵の外の楕円で描く（CSS の filter を紙魚の SVG の祖先に置かない。iOS Safari で SVG の filter・mask が消える） */
-.gq-mon-body{position:relative;width:min(calc(var(--enemy-size) - 2px),100%);aspect-ratio:1;transform-origin:50% 90%}
+.gq-mon-body{container-type:inline-size;position:relative;width:min(calc(var(--enemy-size) - 2px),100%);aspect-ratio:1;transform-origin:50% 90%}
 .gq-mon-body::before{content:"";position:absolute;left:14%;right:14%;bottom:-2px;height:9px;border-radius:50%;background:#1f2a4440}
 .gq-mon-body .chara{position:relative}
 .gq-mon.big .gq-mon-body{width:min(calc(var(--enemy-size)*1.05),50%);transform:scale(1.1)}
@@ -357,3 +359,5 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-return-seal{display:inline-grid;place-items:center;border:3px double #9b4439;border-radius:50%;width:48px;height:48px;color:#9b4439;transform:rotate(-13deg);font-size:26px;animation:gq-return-mark .45s ease-out}
 @keyframes gq-return-mark{from{transform:scale(1.7) rotate(-13deg);opacity:0}to{transform:scale(1) rotate(-13deg);opacity:1}}
 @media(prefers-reduced-motion:reduce){.gq-return-seal{animation:none}}
+
+.gq-wax.return polygon{fill:#334b68}

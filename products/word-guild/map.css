@@ -85,8 +85,8 @@
 @media(prefers-reduced-motion:reduce){.gq-gate.open i,.gq-fab.glow .gq-disc{animation:none}.gq-sky-art{transition:none}}
 
 /* 街灯の節を押して開く通の窓 */
-.gq-pop{position:absolute;inset:0;z-index:15;display:flex;padding:10px;background:#1f2a44cc;overflow:auto}
-.gq-pop-card{margin:auto;width:100%;max-width:420px;display:grid;gap:8px;padding:10px;background:var(--paper);border:2px solid var(--ink);border-radius:12px;box-shadow:0 8px 30px #0006}
+.gq-pop{position:absolute;inset:0;z-index:15;display:flex;padding:10px;background:#1f2a44cc;overflow:hidden;max-height:100dvh;box-sizing:border-box}
+.gq-pop-card{margin:auto;width:100%;max-width:420px;max-height:100%;min-height:0;overflow:hidden;box-sizing:border-box;display:flex;flex-direction:column;gap:8px;padding:10px;background:var(--paper);border:2px solid var(--ink);border-radius:12px;box-shadow:0 8px 30px #0006}
 .gq-pop-acts{display:flex;justify-content:center;gap:22px}
 
 /* 宛先の家。紙魚の祖先には filter を置かず、透過画像の mask と光だけで描く。 */
@@ -113,3 +113,11 @@
 .gq-house-vane{position:absolute;top:-12px;left:calc(50% - 12px);width:24px;height:24px;fill:#eac25c;stroke:#976a16;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 @keyframes gq-house-rise{from{transform:translateY(0);opacity:0}25%{opacity:.9}to{transform:translateY(-22px);opacity:0}}
 @media(prefers-reduced-motion:reduce){.gq-house-sparks{animation:none;opacity:.7}}
+
+/* 本文だけをスクロールし、切手と操作は画面内に残す。 */
+.gq-pop-letter{min-height:0;overflow:auto;overscroll-behavior:contain}
+.gq-pop-card > .gq-night-shadows{flex:0 0 auto;grid-template-columns:repeat(5,28px);gap:6px;margin:2px auto}
+.gq-pop .gq-night-shadows .stamp{width:28px;height:28px;padding:2px;min-height:0}
+.gq-pop .gq-night-shadows .stamp .in{padding:1px}
+.gq-pop .gq-night-shadows .stamp .lbl,.gq-pop .gq-night-shadows .stamp .ja,.gq-pop .gq-night-shadows .stamp .val{display:none}
+.gq-pop-acts{flex:0 0 auto}
