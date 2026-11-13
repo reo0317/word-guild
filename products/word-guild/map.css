@@ -147,3 +147,7 @@
 
 /* 打ち切り距離以遠の物は表示しない。 */
 .gq-bb[hidden]{display:none!important}
+
+/* 絵とそのシルエットだけを反転し、星・光・火花はそのままにする。 */
+.gq-house-image{position:absolute;inset:0}
+.gq-house.door-flipped .gq-house-image{transform:scaleX(-1)}

@@ -1,3 +1,4 @@
+import HOUSE_DOORS from '../data/house-doors.json' with {type: 'json'};
 import {isRestored} from './srs.mjs';
 import {visitors, rareStatus} from './rare.mjs';
 // 道の地図（トップの画面）。手前（下）から奥（上）へ、遠近のついた道が続く。
@@ -98,6 +99,12 @@ export function projectRoad(width, height, worldZ, camera = 0) {
   return {x: width / 2 + width * scale * worldX,
     y: height * (HORIZON + scale * H_CAMERA), width: width * scale * W,
     half: width * scale * W / 2, scale, z};
+}
+
+// side は道に対する家の位置。中央の玄関は向きを変えない。
+export function houseFlipped(shelf, side) {
+  const door = HOUSE_DOORS[shelf];
+  return door !== 'center' && door === side;
 }
 
 export function houseGeometry(width, projection, current = false) {
@@ -226,9 +233,9 @@ export function renderMap(view, ctx) {
         data-shelf="${lamp.shelf}" data-house-ward="${item.ward.ch}"${file ? ` data-house-src="${file}"` : ''}
         data-reveal="${reveal}" style="--reveal:${100 - reveal}%" aria-label="街灯${lamp.shelf}の${letter ? '手紙' : '切手帳'}を開く">
         <span class="gq-house-fallback" aria-hidden="true">${miniHouse()}</span>
-        <span class="gq-house-art" aria-hidden="true"><i class="gq-house-halo"></i><i class="gq-house-shadow"></i>
+        <span class="gq-house-art" aria-hidden="true"><i class="gq-house-halo"></i><span class="gq-house-image"><i class="gq-house-shadow"></i>
         <img class="gq-house-color" alt="" width="140" height="140" decoding="async">
-        <i class="gq-house-warm"></i><i class="gq-house-sparks"></i></span>
+        <i class="gq-house-warm"></i></span><i class="gq-house-sparks"></i></span>
         ${visiting.has(lamp.shelf) ? '<span class="gq-visitor" aria-label="まれびとが来ています">✦</span>' : ''}
         ${done ? `<span class="gq-house-stars ${stars?.complete ? 'joined' : ''} ${stars?.gold === 5 ? 'gold' : ''}" aria-label="夜の切手 ${stars?.met ?? 0}/5">${Array.from({length: 5}, (_, i) => `<i class="${i < (stars?.met ?? 0) ? 'met' : ''}">★</i>`).join('')}</span>` : ''}
         ${(progress.seals ?? []).includes(lamp.shelf) ? '<span class="gq-house-seal" aria-label="無傷の消印">〒</span>' : ''}
@@ -436,6 +443,7 @@ export function renderMap(view, ctx) {
       if (b.house) {
         const current = Number(b.house.dataset.shelf) === map.here?.shelf;
         const {size, offset, side} = houseGeometry(Ws, project(b.y), current);
+        b.house.classList.toggle('door-flipped', houseFlipped(b.house.dataset.shelf, side));
         const hx = side === 'left' ? -offset - size : offset;
         b.house.style.transform = `translate(${(hx / displayScale).toFixed(2)}px,${(-size * .85 / displayScale).toFixed(2)}px) scale(${(size / (140 * displayScale)).toFixed(3)})`;
       }

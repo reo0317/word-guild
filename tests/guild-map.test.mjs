@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {HOUSE_ART} from '../products/word-guild/guild/art.mjs';
-import {renderMap, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, lighthouseVisible, LIGHTHOUSE_DISTANCE, roadPoints, roadOpacity, FADE_START, DRAW_DISTANCE, A, L, W, f} from '../products/word-guild/guild/map.mjs';
+import {renderMap, houseFlipped, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, lighthouseVisible, LIGHTHOUSE_DISTANCE, roadPoints, roadOpacity, FADE_START, DRAW_DISTANCE, A, L, W, f} from '../products/word-guild/guild/map.mjs';
 import {buildMap} from '../products/word-guild/guild/stages.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
@@ -331,4 +331,23 @@ test('トップの速達ラベルは依頼の種類によらず今日の速達�
       }
     }
   } finally {globalThis.requestAnimationFrame = old;}
+});
+
+
+test('56軒の玄関を道側へ向け、中央の玄関と飾りは反転しない', async () => {
+  const doors = JSON.parse(await readFile(new URL('../products/word-guild/data/house-doors.json', import.meta.url)));
+  assert.equal(Object.keys(doors).length, 56);
+  for (let shelf = 1; shelf <= 56; shelf++) {
+    assert.ok(['left', 'right', 'center'].includes(doors[shelf]));
+    for (const side of ['left', 'right']) {
+      const flipped = houseFlipped(shelf, side);
+      const facing = flipped ? (doors[shelf] === 'left' ? 'right' : 'left') : doors[shelf];
+      assert.equal(facing, doors[shelf] === 'center' ? 'center' : side === 'left' ? 'right' : 'left');
+    }
+  }
+  const css = await readFile(new URL('../products/word-guild/map.css', import.meta.url), 'utf8');
+  assert.match(css, /\.gq-house\.door-flipped \.gq-house-image\{transform:scaleX\(-1\)\}/);
+  const source = await readFile(new URL('../products/word-guild/guild/map.mjs', import.meta.url), 'utf8');
+  assert.match(source, /gq-house-warm"><\/i><\/span><i class="gq-house-sparks/);
+  assert.match(source, /classList.toggle\('door-flipped', houseFlipped\(b.house.dataset.shelf, side\)\)/);
 });
