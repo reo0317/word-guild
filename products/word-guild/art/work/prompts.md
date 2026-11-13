@@ -1030,3 +1030,202 @@ Square game illustration. Match attached reference images exactly: paper and let
 
 Square game illustration. Match attached reference images exactly: paper and letterpress ink print, thick navy outlines, flat color blocks, textured paper and ink stains, cute eerie living ink blot monster with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Monster centered large, full body. Meaning unmistakable. Entire background pure flat green #00ff00, no shadow, ground, gradient or pattern; no green in subjects. No letters, numbers, symbols, speech bubbles, logos, or copyrighted characters. Monster touches a large prickly cactus with its fingertip and recoils with a startled expression, clearly feeling the prick.
 
+
+## 単語の絵：c2-087
+戦術：紙魚が兵隊の駒と旗を並べた大きな地図を見て作戦を練る。添付の参考画像に合わせた紙と活版インクの版画風、太い紺線、紺・霧・紙色と少量の朱、白い目。中央に全身、正方形、背景は均一な純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-130
+
+高速道路：車やトラックが行き交う複数車線の道路のそばに立つ。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-131
+
+回答者・アンケート：鉛筆で質問票の枠に回答する。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-132
+
+宝飾品：ネックレス、指輪、イヤリングを身に着ける。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-133
+
+残業：月の見える夜、疲れながら机で働く。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-134
+
+一晩の：月と星の見えるホテルのベッドで眠る。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-135
+
+傑出した：他より高い表彰台でスポットライトを浴びる。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-136
+
+ざっと読む：本のページを素早くめくり目を走らせる。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-137
+
+影響：ドミノの一つを倒して連鎖を起こす。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-138
+
+革新的な：新しい装置を発明し電球が光る。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-139
+
+ロゴ：旗と箱に同じシンプルな図案。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-140
+
+写真家：大きなカメラで友人を撮影する。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-141
+
+側面：立方体を回して別の面を見る。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-142
+
+ダウンロードする：雲から箱がコンピューターに降りる。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-143
+
+パスワード：鍵のかかったドアの入力装置に秘密を入力する。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-144
+
+禁止する：入り口で係員が手を上げて通せんぼする。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-145
+
+平日：通勤かばんを持ち、五日分のカレンダーと会社へ向かう。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-146
+
+賞与：上司から硬貨の入った追加の袋を受け取る。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-147
+
+インク：羽ペンをインク壺につける。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-148
+
+清掃員：モップとバケツで床を掃除する。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-149
+
+本社を置く：小さな支店に囲まれた大きな本社ビル。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-150
+
+文房具：鉛筆、はさみ、テープ、ノートに囲まれる。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-151
+
+承認する：書類に大きな印を押す。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-152
+
+当局：制服の係員が人々を誘導する。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-153
+
+一般に：皆と同じように傘を差す。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-154
+
+収容する：たくさんの客をベッドの並ぶ部屋へ迎える。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-155
+
+いらだたせる：小さな虫に付きまとわれ、いら立つ。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-156
+
+調整する：指揮者として演奏者をまとめる。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-157
+
+やめる：道具を置いて職場のドアから出る。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-158
+
+機長：帽子と制服を着て飛行機の操縦席に座る。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-159
+
+設置：レンチとボルトで大きな機械を据え付ける。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-160
+
+空き状況：ホテルの受付で空室の鍵を見せる。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-161
+
+無料の：代金を払わず贈り物を受け取る。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-162
+
+値上げ：大きな値札がはしごを上り驚く。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-163
+
+生産性：生産ラインで多くの箱を作る。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-164
+
+移転する：引っ越し車と箱を運び別の家へ移る。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-165
+
+不満な：口をへの字にして腕を組む。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-166
+
+不完全な：一片が欠けたジグソーパズルを持つ。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-167
+
+非現実的な：眠りながら空飛ぶドラゴンを夢見る。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-168
+
+埠頭：船がロープで係留された木の桟橋に立つ。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-169
+
+機械類：歯車やパイプを備えた工場の機械に囲まれる。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-170
+
+飛行機：雲の上を飛ぶ大きな旅客機を操縦する。 添付の紙と活版インクの版画風。白い目、太い紺の線、紺・霧・紙色と少量の朱の平塗り。正方形、中央に全身、背景は影や模様のない純緑 #00ff00。文字・数字・記号なし。
+
+## 単語の絵：c2-002
+
+Square game enemy illustration. Match the three attached reference images: paper and letterpress ink print, thick navy outlines, flat color blocks, paper texture, cute spooky living ink stain monster with white eyes. Full-body main monster centered and large, with oversized clear everyday objects and action conveying meaning. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Background perfectly flat pure green #00ff00 only, no ground, shadows or patterns, no green on subject. No letters, numbers, symbols, text or recognizable characters. Scene: relaxing on a deck chair on a large cruise ship, sunglasses and a drink
+
+## 単語の絵：c2-001
+
+Square game enemy illustration. Match the three attached reference images: paper and letterpress ink print, thick navy outlines, flat color blocks, paper texture, cute spooky living ink stain monster with white eyes. Full-body main monster centered and large, with oversized clear everyday objects and action conveying meaning. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Background perfectly flat pure green #00ff00 only, no ground, shadows or patterns, no green on subject. No letters, numbers, symbols, text or recognizable characters. Scene: a polite gentleman bowing and tipping a top hat, wearing a bow tie
+
+## 単語の絵：c2-004
+
+Square game enemy illustration. Match the three attached reference images: paper and letterpress ink print, thick navy outlines, flat color blocks, paper texture, cute spooky living ink stain monster with white eyes. Full-body main monster centered and large, with oversized clear everyday objects and action conveying meaning. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Background perfectly flat pure green #00ff00 only, no ground, shadows or patterns, no green on subject. No letters, numbers, symbols, text or recognizable characters. Scene: reading an electronic book on a thin tablet, a page without writing
+
+## 単語の絵：c2-007
+
+Square game enemy illustration. Match the three attached reference images: paper and letterpress ink print, thick navy outlines, flat color blocks, paper texture, cute spooky living ink stain monster with white eyes. Full-body main monster centered and large, with oversized clear everyday objects and action conveying meaning. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Background perfectly flat pure green #00ff00 only, no ground, shadows or patterns, no green on subject. No letters, numbers, symbols, text or recognizable characters. Scene: booking a restaurant table at a host stand with a blank reservation book
+
+## 単語の絵：c2-008
+
+Square game enemy illustration. Match the three attached reference images: paper and letterpress ink print, thick navy outlines, flat color blocks, paper texture, cute spooky living ink stain monster with white eyes. Full-body main monster centered and large, with oversized clear everyday objects and action conveying meaning. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Background perfectly flat pure green #00ff00 only, no ground, shadows or patterns, no green on subject. No letters, numbers, symbols, text or recognizable characters. Scene: working out a logical inference by connecting visual clues on a board
+
+## 単語の絵：c2-003
+
+Square game enemy illustration. Match the three attached reference images: paper and letterpress ink print, thick navy outlines, flat color blocks, paper texture, cute spooky living ink stain monster with white eyes. Full-body main monster centered and large, with oversized clear everyday objects and action conveying meaning. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Background perfectly flat pure green #00ff00 only, no ground, shadows or patterns, no green on subject. No letters, numbers, symbols, text or recognizable characters. Scene: a shopper carrying many shopping bags leaving a store
+
+## 単語の絵：c2-005
+
+Square game enemy illustration. Match the three attached reference images: paper and letterpress ink print, thick navy outlines, flat color blocks, paper texture, cute spooky living ink stain monster with white eyes. Full-body main monster centered and large, with oversized clear everyday objects and action conveying meaning. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Background perfectly flat pure green #00ff00 only, no ground, shadows or patterns, no green on subject. No letters, numbers, symbols, text or recognizable characters. Scene: with suitcase in an airport terminal with windows showing airplanes
+
+## 単語の絵：c2-009
+
+Square game enemy illustration. Match the three attached reference images: paper and letterpress ink print, thick navy outlines, flat color blocks, paper texture, cute spooky living ink stain monster with white eyes. Full-body main monster centered and large, with oversized clear everyday objects and action conveying meaning. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, little vermilion #c8462f. Background perfectly flat pure green #00ff00 only, no ground, shadows or patterns, no green on subject. No letters, numbers, symbols, text or recognizable characters. Scene: discovering a large footprint clue with a magnifying glass

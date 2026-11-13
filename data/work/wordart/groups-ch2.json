@@ -10,7 +10,8 @@
      "w": "mister",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-002",
@@ -26,7 +27,8 @@
      "w": "cruise",
      "tint": 1
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-003",
@@ -42,7 +44,8 @@
      "w": "shopper",
      "tint": 1
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-004",
@@ -53,7 +56,8 @@
      "w": "e-book",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-005",
@@ -69,7 +73,8 @@
      "w": "terminal",
      "tint": 1
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-006",
@@ -90,7 +95,8 @@
      "w": "memo",
      "tint": 2
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-007",
@@ -101,7 +107,8 @@
      "w": "reservation",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-008",
@@ -122,7 +129,8 @@
      "w": "inference",
      "tint": 2
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-009",
@@ -133,7 +141,8 @@
      "w": "clue",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-010",
@@ -144,7 +153,8 @@
      "w": "fax",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-011",
@@ -160,7 +170,8 @@
      "w": "copier",
      "tint": 1
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-012",
@@ -171,7 +182,8 @@
      "w": "o'clock",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-013",
@@ -182,7 +194,8 @@
      "w": "noon",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-014",
@@ -193,7 +206,8 @@
      "w": "midnight",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-015",
@@ -204,7 +218,8 @@
      "w": "sincerely",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-016",
@@ -225,7 +240,8 @@
      "w": "upcoming",
      "tint": 2
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-017",
@@ -236,7 +252,8 @@
      "w": "lately",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-018",
@@ -252,7 +269,8 @@
      "w": "supervise",
      "tint": 1
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-019",
@@ -263,7 +281,8 @@
      "w": "advisor",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-020",
@@ -279,7 +298,8 @@
      "w": "trainer",
      "tint": 1
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-021",
@@ -290,7 +310,8 @@
      "w": "trainee",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-022",
@@ -301,7 +322,8 @@
      "w": "refund",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-023",
@@ -317,7 +339,8 @@
      "w": "merchandise",
      "tint": 1
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-024",
@@ -333,7 +356,8 @@
      "w": "warehouse",
      "tint": 1
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-025",
@@ -349,7 +373,8 @@
      "w": "seminar",
      "tint": 1
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-026",
@@ -365,7 +390,8 @@
      "w": "announcer",
      "tint": 1
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-027",
@@ -376,7 +402,8 @@
      "w": "downtown",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-028",
@@ -387,7 +414,8 @@
      "w": "deadline",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-029",
@@ -403,7 +431,8 @@
      "w": "receipt",
      "tint": 1
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-030",
@@ -424,7 +453,8 @@
      "w": "bulletin",
      "tint": 2
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-031",
@@ -440,7 +470,8 @@
      "w": "audit",
      "tint": 1
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-032",
@@ -451,7 +482,8 @@
      "w": "transaction",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-033",
@@ -477,7 +509,8 @@
      "w": "receptionist",
      "tint": 3
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-034",
@@ -493,7 +526,8 @@
      "w": "sofa",
      "tint": 1
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-035",
@@ -504,7 +538,8 @@
      "w": "publish",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-036",
@@ -520,7 +555,8 @@
      "w": "applicant",
      "tint": 1
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-037",
@@ -531,7 +567,8 @@
      "w": "enclose",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-038",
@@ -552,7 +589,8 @@
      "w": "developer",
      "tint": 2
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-039",
@@ -568,7 +606,8 @@
      "w": "sweater",
      "tint": 1
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-040",
@@ -579,7 +618,8 @@
      "w": "fare",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-041",
@@ -590,7 +630,8 @@
      "w": "traveler",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-042",
@@ -606,7 +647,8 @@
      "w": "commute",
      "tint": 1
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-043",
@@ -622,7 +664,8 @@
      "w": "dial",
      "tint": 1
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-044",
@@ -638,7 +681,8 @@
      "w": "shuttle",
      "tint": 1
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-045",
@@ -664,7 +708,8 @@
      "w": "briefcase",
      "tint": 3
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-046",
@@ -685,7 +730,8 @@
      "w": "distribution",
      "tint": 2
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-047",
@@ -701,7 +747,8 @@
      "w": "waitress",
      "tint": 1
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-048",
@@ -722,7 +769,8 @@
      "w": "tenant",
      "tint": 2
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-049",
@@ -733,7 +781,8 @@
      "w": "warranty",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-050",
@@ -754,7 +803,8 @@
      "w": "dine",
      "tint": 2
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-051",
@@ -765,7 +815,8 @@
      "w": "chef",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-052",
@@ -786,7 +837,8 @@
      "w": "beverage",
      "tint": 2
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-053",
@@ -802,7 +854,8 @@
      "w": "sandwich",
      "tint": 1
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-054",
@@ -813,7 +866,8 @@
      "w": "elevator",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-055",
@@ -829,7 +883,8 @@
      "w": "verify",
      "tint": 1
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-056",
@@ -845,7 +900,8 @@
      "w": "eligible",
      "tint": 1
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-057",
@@ -856,7 +912,8 @@
      "w": "bicycle",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-058",
@@ -867,7 +924,8 @@
      "w": "notify",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-059",
@@ -878,7 +936,8 @@
      "w": "inquire",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-060",
@@ -889,7 +948,8 @@
      "w": "preview",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-061",
@@ -905,7 +965,8 @@
      "w": "subscribe",
      "tint": 1
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-062",
@@ -921,7 +982,8 @@
      "w": "convenience",
      "tint": 1
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-063",
@@ -932,7 +994,8 @@
      "w": "inconvenience",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-064",
@@ -948,7 +1011,8 @@
      "w": "explanatory",
      "tint": 1
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-065",
@@ -964,7 +1028,8 @@
      "w": "automobile",
      "tint": 1
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-066",
@@ -975,7 +1040,8 @@
      "w": "obtain",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-067",
@@ -986,7 +1052,8 @@
      "w": "oval",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-068",
@@ -1002,7 +1069,8 @@
      "w": "picnic",
      "tint": 1
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-069",
@@ -1013,7 +1081,8 @@
      "w": "indoor",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-070",
@@ -1024,7 +1093,8 @@
      "w": "destination",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-071",
@@ -1035,7 +1105,8 @@
      "w": "occupation",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-072",
@@ -1051,7 +1122,8 @@
      "w": "reschedule",
      "tint": 1
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-073",
@@ -1062,7 +1134,8 @@
      "w": "contradict",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-074",
@@ -1078,7 +1151,8 @@
      "w": "rainy",
      "tint": 1
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-075",
@@ -1089,7 +1163,8 @@
      "w": "sunny",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-076",
@@ -1100,7 +1175,8 @@
      "w": "cloudy",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-077",
@@ -1116,7 +1192,8 @@
      "w": "laptop",
      "tint": 1
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-078",
@@ -1127,7 +1204,8 @@
      "w": "keyboard",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-079",
@@ -1143,7 +1221,8 @@
      "w": "mini",
      "tint": 1
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-080",
@@ -1154,7 +1233,8 @@
      "w": "dentist",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-081",
@@ -1170,7 +1250,8 @@
      "w": "flu",
      "tint": 1
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-082",
@@ -1186,7 +1267,8 @@
      "w": "passport",
      "tint": 1
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-083",
@@ -1197,7 +1279,8 @@
      "w": "certificate",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-084",
@@ -1218,7 +1301,8 @@
      "w": "affordable",
      "tint": 2
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-085",
@@ -1229,7 +1313,8 @@
      "w": "tag",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-086",
@@ -1250,7 +1335,8 @@
      "w": "exit",
      "tint": 2
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-087",
@@ -1261,7 +1347,8 @@
      "w": "tactic",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-088",
@@ -1277,7 +1364,8 @@
      "w": "renovate",
      "tint": 1
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-089",
@@ -1288,7 +1376,8 @@
      "w": "upgrade",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-090",
@@ -1304,7 +1393,8 @@
      "w": "renew",
      "tint": 1
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-091",
@@ -1315,7 +1405,8 @@
      "w": "expire",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-092",
@@ -1326,7 +1417,8 @@
      "w": "precede",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-093",
@@ -1337,7 +1429,8 @@
      "w": "coworker",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-094",
@@ -1358,7 +1451,8 @@
      "w": "drawer",
      "tint": 2
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-095",
@@ -1369,7 +1463,8 @@
      "w": "container",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-096",
@@ -1385,7 +1480,8 @@
      "w": "electrical",
      "tint": 1
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-097",
@@ -1401,7 +1497,8 @@
      "w": "cartridge",
      "tint": 1
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-098",
@@ -1412,7 +1509,8 @@
      "w": "lamp",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-099",
@@ -1423,7 +1521,8 @@
      "w": "media",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-100",
@@ -1439,7 +1538,8 @@
      "w": "mall",
      "tint": 1
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-101",
@@ -1455,7 +1555,8 @@
      "w": "aisle",
      "tint": 1
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-102",
@@ -1466,7 +1567,8 @@
      "w": "admission",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-103",
@@ -1477,7 +1579,8 @@
      "w": "underline",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-104",
@@ -1493,7 +1596,8 @@
      "w": "submission",
      "tint": 1
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-105",
@@ -1504,7 +1608,8 @@
      "w": "attendee",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-106",
@@ -1515,7 +1620,8 @@
      "w": "birthday",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-107",
@@ -1526,7 +1632,8 @@
      "w": "comprehension",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-108",
@@ -1537,7 +1644,8 @@
      "w": "recycle",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-109",
@@ -1553,7 +1661,8 @@
      "w": "gym",
      "tint": 1
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-110",
@@ -1569,7 +1678,8 @@
      "w": "baseball",
      "tint": 1
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-111",
@@ -1585,7 +1695,8 @@
      "w": "stadium",
      "tint": 1
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-112",
@@ -1596,7 +1707,8 @@
      "w": "banquet",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-113",
@@ -1612,7 +1724,8 @@
      "w": "alike",
      "tint": 1
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-114",
@@ -1623,7 +1736,8 @@
      "w": "folder",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-115",
@@ -1634,7 +1748,8 @@
      "w": "calendar",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-116",
@@ -1650,7 +1765,8 @@
      "w": "donate",
      "tint": 1
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-117",
@@ -1661,7 +1777,8 @@
      "w": "feedback",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-118",
@@ -1672,7 +1789,8 @@
      "w": "provider",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-119",
@@ -1683,7 +1801,8 @@
      "w": "hungry",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-120",
@@ -1699,7 +1818,8 @@
      "w": "flavor",
      "tint": 1
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-121",
@@ -1715,7 +1835,8 @@
      "w": "inspect",
      "tint": 1
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-122",
@@ -1726,7 +1847,8 @@
      "w": "recipient",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-123",
@@ -1737,7 +1859,8 @@
      "w": "merger",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-124",
@@ -1753,7 +1876,8 @@
      "w": "recipe",
      "tint": 1
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-125",
@@ -1764,7 +1888,8 @@
      "w": "rewrite",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-126",
@@ -1775,7 +1900,8 @@
      "w": "itinerary",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-127",
@@ -1786,7 +1912,8 @@
      "w": "workplace",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-128",
@@ -1802,7 +1929,8 @@
      "w": "contractor",
      "tint": 1
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-129",
@@ -1813,7 +1941,8 @@
      "w": "lab",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-130",
@@ -1824,7 +1953,8 @@
      "w": "highway",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-131",
@@ -1840,7 +1970,8 @@
      "w": "questionnaire",
      "tint": 1
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-132",
@@ -1851,7 +1982,8 @@
      "w": "jewelry",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-133",
@@ -1862,7 +1994,8 @@
      "w": "overtime",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-134",
@@ -1873,7 +2006,8 @@
      "w": "overnight",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-135",
@@ -1884,7 +2018,8 @@
      "w": "outstanding",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-136",
@@ -1895,7 +2030,8 @@
      "w": "skim",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-137",
@@ -1906,7 +2042,8 @@
      "w": "impact",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-138",
@@ -1917,7 +2054,8 @@
      "w": "innovative",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-139",
@@ -1928,7 +2066,8 @@
      "w": "logo",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-140",
@@ -1939,7 +2078,8 @@
      "w": "photographer",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-141",
@@ -1950,7 +2090,8 @@
      "w": "aspect",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-142",
@@ -1961,7 +2102,8 @@
      "w": "download",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-143",
@@ -1972,7 +2114,8 @@
      "w": "password",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-144",
@@ -1983,7 +2126,8 @@
      "w": "prohibit",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-145",
@@ -1994,7 +2138,8 @@
      "w": "weekday",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-146",
@@ -2005,7 +2150,8 @@
      "w": "bonus",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-147",
@@ -2016,7 +2162,8 @@
      "w": "ink",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-148",
@@ -2027,7 +2174,8 @@
      "w": "cleaner",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-149",
@@ -2038,7 +2186,8 @@
      "w": "headquarter",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-150",
@@ -2049,7 +2198,8 @@
      "w": "stationery",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-151",
@@ -2060,7 +2210,8 @@
      "w": "authorize",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-152",
@@ -2071,7 +2222,8 @@
      "w": "authority",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-153",
@@ -2082,7 +2234,8 @@
      "w": "commonly",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-154",
@@ -2093,7 +2246,8 @@
      "w": "accommodate",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-155",
@@ -2104,7 +2258,8 @@
      "w": "annoy",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-156",
@@ -2115,7 +2270,8 @@
      "w": "coordinate",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-157",
@@ -2126,7 +2282,8 @@
      "w": "quit",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-158",
@@ -2137,7 +2294,8 @@
      "w": "captain",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-159",
@@ -2148,7 +2306,8 @@
      "w": "installation",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-160",
@@ -2159,7 +2318,8 @@
      "w": "availability",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-161",
@@ -2170,7 +2330,8 @@
      "w": "complimentary",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-162",
@@ -2181,7 +2342,8 @@
      "w": "hike",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-163",
@@ -2192,7 +2354,8 @@
      "w": "productivity",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-164",
@@ -2203,7 +2366,8 @@
      "w": "relocate",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-165",
@@ -2214,7 +2378,8 @@
      "w": "unhappy",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   },
   {
    "g": "c2-166",
@@ -2225,7 +2390,8 @@
      "w": "incomplete",
      "tint": 0
     }
-   ]
+   ],
+   "species": "keshikasu"
   },
   {
    "g": "c2-167",
@@ -2236,7 +2402,8 @@
      "w": "unreal",
      "tint": 0
     }
-   ]
+   ],
+   "species": "nijimi"
   },
   {
    "g": "c2-168",
@@ -2247,7 +2414,8 @@
      "w": "dock",
      "tint": 0
     }
-   ]
+   ],
+   "species": "hokoridama"
   },
   {
    "g": "c2-169",
@@ -2258,7 +2426,8 @@
      "w": "machinery",
      "tint": 0
     }
-   ]
+   ],
+   "species": "atenashi"
   },
   {
    "g": "c2-170",
@@ -2269,7 +2438,8 @@
      "w": "airplane",
      "tint": 0
     }
-   ]
+   ],
+   "species": "shimi"
   }
  ]
 }
