@@ -397,7 +397,7 @@ export function renderMap(view, ctx) {
     <div class="gq-guide">${artBox('hatoriSmile', 'gq-face-hatori')}${map.dueCount ? `<span class="gq-due-badge" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b>${map.dueCount}</b></span>` : ''}</div></div>`);
   const lighthouse = bb('gq-bb-top', roadEnd, 0, `<div class="gq-top-block" role="img" aria-label="道の終点の灯台">${night.complete ? '<span class="gq-full-stars" aria-label="夜の切手がすべてそろいました">✦ ⋆ ✧ ⋆ ✦</span>' : ''}<i class="gq-lighthouse-beam" aria-hidden="true"></i><img src="art/lighthouse.webp" data-lighthouse alt="" width="600" height="600" decoding="async"></div>`);
 
-  const skies = [...new Set(map.wards.map(w => w.ch))].map(ch => `<div class="gq-sky-art" data-ward="${ch}">${artBox(`ward${Math.min(ch, 6)}`, 'gq-sky-img')}${night.wards[ch]?.complete ? constellation(ch) : ''}</div>`).join('');
+  const skies = [...new Set(map.wards.map(w => w.ch))].map(ch => `<div class="gq-sky-art" data-ward="${ch}">${artBox(`ward${Math.min(ch, 6)}`, 'gq-sky-img')}<i class="gq-sky-ext" style="background-image:url(art/ward-${Math.min(ch, 6)}.webp)"></i>${night.wards[ch]?.complete ? constellation(ch) : ''}</div>`).join('');
   // カメラの先にある区を調べるための、区ごとの始まりの y
   const wardStarts = items.filter(item => item.type === 'ward').map(item => ({ch: item.ward.ch, y: item.from}));
 
@@ -689,7 +689,8 @@ export function renderMap(view, ctx) {
       const top = b.el.classList.contains('gq-bb-top');
       const post = b.el.classList.contains('gq-bb-post');
       const pin = b.el.classList.contains('gq-bb-tsumugi');
-      if (r < 0 || r >= DRAW_DISTANCE || (top && !nearLighthouse && c < camMax - 300) || false || Y(s) > Hs + 140) {
+      // 灯台もほかの建物と同じく、遠いほど霧で薄くなるだけ（急に現れたり消えたりしない）。
+      if (r < 0 || r >= DRAW_DISTANCE || Y(s) > Hs + 140) {
         b.el.hidden = true; b.el.style.display = 'none'; b.shown = false;
         continue;
       }

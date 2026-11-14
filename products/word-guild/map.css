@@ -227,3 +227,6 @@
 .gq-pop-card{position:relative}
 .gq-pop-x{position:absolute;top:max(8px,env(safe-area-inset-top));right:max(8px,env(safe-area-inset-right));z-index:2;width:40px;height:40px;border-radius:50%;border:2px solid var(--ink);background:var(--paper-hi);color:var(--ink);font-size:22px;line-height:1;font-weight:800;box-shadow:0 2px 0 var(--ink);cursor:pointer}
 .gq-pop .gq-pop-x{border-radius:50%}
+
+/* 試し：背景の絵の下の地面（道）を画面の下まで伸ばす。絵の下端の帯を縦に引き伸ばして敷く。 */
+.gq-sky-ext{position:absolute;left:0;top:calc(100% - 1px);width:100%;height:130%;background-repeat:no-repeat;background-size:100% 400%;background-position:center bottom}
