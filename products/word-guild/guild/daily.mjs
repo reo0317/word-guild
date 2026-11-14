@@ -4,7 +4,7 @@ import {isDue, dueCount} from './srs.mjs';
 export const REVENGE_GOAL = 8;
 export const CLEAN_GOAL = 10;
 export const FINISH_GOAL = 2;
-export const DAILY_KINDS = ['revenge', 'fresh', 'clean', 'finish']; // 選ぶ順
+export const DAILY_KINDS = ['revenge', 'fresh', 'clean']; // 選ぶ順（「配達を2回」は難しいので出さない）
 
 const freshGoal = progress => (progress.settings?.fresh ?? 4) * 2;
 
@@ -13,7 +13,7 @@ function availableKinds(progress, words, today) {
   const kinds = [];
   if (dueCount(words, progress, today) >= REVENGE_GOAL) kinds.push('revenge');
   if (words.filter(word => !progress.words[word.id]).length >= freshGoal(progress)) kinds.push('fresh');
-  kinds.push('clean', 'finish');
+  kinds.push('clean');
   return kinds;
 }
 
@@ -25,7 +25,7 @@ function goalOf(kind, progress) {
 
 // 今日の依頼を決める。同じ日ならそのまま。乱数は使わない。
 export function rollDaily(progress, words, today) {
-  if (progress.daily?.day === today) return progress;
+  if (progress.daily?.day === today && progress.daily.kind !== 'finish') return progress;
   const kinds = availableKinds(progress, words, today);
   const kind = kinds[today % kinds.length];
   return {...progress, daily: {day: today, kind, goal: goalOf(kind, progress), count: 0, done: false}};

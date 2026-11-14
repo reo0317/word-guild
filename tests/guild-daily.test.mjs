@@ -73,18 +73,18 @@ test('rollDaily：同じ日は変わらず、違う日は新しい依頼', () =>
 });
 
 test('rollDaily：出せない種類は選ばず、日番号で順に替わる', () => {
-  // 未出題 40 語・期限なし：fresh(8)・clean・finish が出せる
+  // 未出題 40 語・期限なし：fresh(8)・clean が出せる（finish は出さない）
   const kinds = [0, 1, 2].map(d => rollDaily(emptyProgress(), words, 30000 + d).daily.kind);
-  assert.deepEqual(new Set(kinds), new Set(['fresh', 'clean', 'finish']));
+  assert.deepEqual(new Set(kinds), new Set(['fresh', 'clean']));
   // 期限の語が8語以上なら revenge も入る（4つで1周）
   const due = emptyProgress();
   words.slice(0, 8).forEach(w => { due.words[w.id] = {box: 2, due: TODAY, seen: 2}; });
   const four = [0, 1, 2, 3].map(d => rollDaily(due, words, 30000 + d).daily.kind);
-  assert.deepEqual(new Set(four), new Set(['revenge', 'fresh', 'clean', 'finish']));
+  assert.deepEqual(new Set(four), new Set(['revenge', 'fresh', 'clean']));
   // 全語が出題済み・期限なし：revenge も fresh も出ない
   const seen = emptyProgress();
   words.forEach(w => { seen.words[w.id] = {box: 3, due: TODAY + 9, seen: 1}; });
-  for (let d = 0; d < 6; d++) assert.ok(['clean', 'finish'].includes(rollDaily(seen, words, TODAY + d).daily.kind));
+  for (let d = 0; d < 6; d++) assert.ok(['clean'].includes(rollDaily(seen, words, TODAY + d).daily.kind));
   // 未出題が goal に足りないと fresh は出ない
   const few = emptyProgress();
   words.slice(0, 33).forEach(w => { few.words[w.id] = {box: 3, due: TODAY + 9, seen: 1}; });
