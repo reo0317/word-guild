@@ -223,7 +223,3 @@
 .gq-bb-tsumugi .gq-here-panel.right{left:46px;top:-104px}
 .gq-bb-tsumugi .gq-here-panel.left{left:-46px;top:-104px;transform:translateX(-100%)}
 
-/* 長い手紙でも戻れるよう、右上にも閉じるボタン */
-.gq-pop-card{position:relative}
-.gq-pop-x{position:absolute;top:max(8px,env(safe-area-inset-top));right:max(8px,env(safe-area-inset-right));z-index:2;width:40px;height:40px;border-radius:50%;border:2px solid var(--ink);background:var(--paper-hi);color:var(--ink);font-size:22px;line-height:1;font-weight:800;box-shadow:0 2px 0 var(--ink);cursor:pointer}
-.gq-pop .gq-pop-x{border-radius:50%}
