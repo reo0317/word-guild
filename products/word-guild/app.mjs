@@ -31,7 +31,10 @@ function title() {
     <div class="kp-foot">
       <button class="primary" id="kp-start" type="button">${returning ? 'つづきから' : 'はじめる'}</button>
       <button class="text-button" id="kp-sound" type="button" aria-pressed="${soundOn}"></button>
+      ${returning ? '<button class="text-button" id="kp-story" type="button">はじまりの物語</button>' : ''}
     </div>`;
+  // オープニングの物語は、つづきから遊ぶ人もあとで見返せる（見終わるとタイトルへ戻る）。
+  view.querySelector('#kp-story')?.addEventListener('click', () => { unlockSound(); opening(0, true); });
   view.querySelector('#kp-sound').insertAdjacentHTML('afterend', `<button type="button" class="kp-switch" id="kp-speech" aria-pressed="${guild.speechEnabled()}">読みあげ ${guild.speechEnabled() ? 'オン' : 'オフ'}</button>`);
   view.querySelector('#kp-speech').onclick = event => {
     guild.setSpeech(!guild.speechEnabled());
@@ -63,7 +66,7 @@ const OPENING = [
   {art: 'open3', lines: ['新人のツムギは、局長から鞄を受け取った。', '「消えた言葉を取り戻して、手紙を届けておいで」']},
 ];
 
-function opening(step = 0) {
+function opening(step = 0, replay = false) {
   const page = OPENING[step];
   const last = step === OPENING.length - 1;
   view.className = 'kp kp-opening';
@@ -72,11 +75,11 @@ function opening(step = 0) {
     <button class="text-button kp-skip" id="kp-skip" type="button">とばす</button>
     <button class="kp-page" id="kp-next" type="button" aria-label="${last ? '最初の配達へ' : '次へ'}">
       <span class="kp-text">${page.lines.map(line => `<span>${line}</span>`).join('')}</span>
-      <small aria-hidden="true">${step + 1} / ${OPENING.length}　タップで${last ? 'はじめる' : '次へ'}</small>
+      <small aria-hidden="true">${step + 1} / ${OPENING.length}　タップで${last ? (replay ? 'もどる' : 'はじめる') : '次へ'}</small>
     </button>`;
-  const finish = () => { music.sfx('stamp'); guild.open({first: true}); };
+  const finish = () => { if (replay) { title(); return; } music.sfx('stamp'); guild.open({first: true}); };
   view.querySelector('#kp-skip').onclick = finish;
-  view.querySelector('#kp-next').onclick = () => (last ? finish() : opening(step + 1));
+  view.querySelector('#kp-next').onclick = () => (last ? finish() : opening(step + 1, replay));
 }
 
 if (params.get('guild') === '1') guild.open();

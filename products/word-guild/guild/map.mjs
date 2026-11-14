@@ -68,6 +68,7 @@ export function gateArchPath(ch) {
   return `M${x-r} ${y}A${r} ${r} 0 0 1 ${x+r} ${y}`;
 }
 export const LIGHTHOUSE_DISTANCE = H.step * 10;
+export const LIGHTHOUSE_STOP = 900; // 道の終点からこれだけ手前でカメラが止まる
 
 export function remainingSteps(items, hereY, complete = false) {
   return complete ? 0 : items.filter(item => item.type === 'step' && item.cy > hereY).length;
@@ -294,6 +295,8 @@ export function renderMap(view, ctx) {
   const {map, today, progress, on} = ctx;
   const {items, total, ranges} = layout(map);
   const roadEnd = total - 40; // 灯台の足元が道の終点。
+  // カメラは灯台が画面の上の方に見える所で止める（その先の何もない所へ行かない）。
+  const camMax = Math.max(0, roadEnd - LIGHTHOUSE_STOP);
   const night = rareStatus(ctx.rares ?? [], progress);
   const visiting = new Set(visitors(map, ctx.rares ?? [], progress, today).filter(shelf => progress.rare?.day !== today || !progress.rare.met.includes(shelf)));
   const hereWard = map.wards.findIndex(w => w.ch === map.here?.ch);
@@ -514,7 +517,7 @@ export function renderMap(view, ctx) {
   const update = () => {
     frame = 0;
     if (!Ws || !Hs) return;
-    const c = Math.min(total, Math.max(-1400, total - road.scrollTop)); // カメラの位置
+    const c = Math.min(camMax, Math.max(-1400, camMax - road.scrollTop)); // カメラの位置
     const project = y => projectRoad(Ws, Hs, y, c);
     const sOf = r => f / (r + Z_NEAR);
     const X = y => project(y).x;
@@ -678,7 +681,7 @@ export function renderMap(view, ctx) {
       const top = b.el.classList.contains('gq-bb-top');
       const post = b.el.classList.contains('gq-bb-post');
       const pin = b.el.classList.contains('gq-bb-tsumugi');
-      if (r < 0 || r >= DRAW_DISTANCE || (top && !nearLighthouse) || (post && (Math.abs(hereY - b.y) > 600 || r > 850)) || Y(s) > Hs + 140) {
+      if (r < 0 || r >= DRAW_DISTANCE || (top && !nearLighthouse && c < camMax - 300) || (post && (Math.abs(hereY - b.y) > 600 || r > 850)) || Y(s) > Hs + 140) {
         b.el.hidden = true; b.el.style.display = 'none'; b.shown = false;
         continue;
       }
@@ -734,7 +737,7 @@ export function renderMap(view, ctx) {
   const measure = () => {
     const w = road.clientWidth, h = road.clientHeight;
     if (!w || !h) return;
-    if (Ws && Hs) cameraAt = Math.min(total, Math.max(-1400, total - road.scrollTop));
+    if (Ws && Hs) cameraAt = Math.min(camMax, Math.max(-1400, camMax - road.scrollTop));
     Ws = w; Hs = h;
     for (const layer of skyLayers) {
       const geometry = skyGeometry(Ws, Hs, Number(layer.dataset.ward));
@@ -746,13 +749,13 @@ export function renderMap(view, ctx) {
       const scale = Math.max(.35, Math.min(.85, (feet / Hs - HORIZON) / H_CAMERA));
       cameraAt = hereY + Z_NEAR - f / scale;
     }
-    inner.style.height = `${Hs + total + 1400}px`;
+    inner.style.height = `${Hs + camMax + 1400}px`;
     stage.style.height = `${Hs}px`;
     svg.setAttribute('viewBox', `0 0 ${Ws} ${Hs}`);
-    road.scrollTop = total - cameraAt;
+    road.scrollTop = camMax - cameraAt;
     if (initialTsumugiScale === null) {
       initialTsumugiScale = projectRoad(Ws, Hs, hereY - 12,
-        Math.min(total, Math.max(-1400, total - road.scrollTop))).scale;
+        Math.min(camMax, Math.max(-1400, camMax - road.scrollTop))).scale;
     }
     update();
     placePanel();

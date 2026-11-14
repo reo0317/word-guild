@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {HOUSE_ART} from '../products/word-guild/guild/art.mjs';
-import {announceFog, remainingSteps, renderMap, houseFlipped, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, lighthouseVisible, LIGHTHOUSE_DISTANCE, roadPoints, roadOpacity, FADE_START, DRAW_DISTANCE, A, L, W, f} from '../products/word-guild/guild/map.mjs';
+import {announceFog, remainingSteps, renderMap, houseFlipped, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, lighthouseVisible, LIGHTHOUSE_DISTANCE, LIGHTHOUSE_STOP, roadPoints, roadOpacity, FADE_START, DRAW_DISTANCE, A, L, W, f} from '../products/word-guild/guild/map.mjs';
 import {buildMap} from '../products/word-guild/guild/stages.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
@@ -133,7 +133,7 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     const scale = () => Number(pin.style.transform.match(/scale\(([^)]+)\)/)[1]);
     const end = Number(view.innerHTML.match(/class="gq-bb gq-bb-top" data-y="([^"]+)"/)[1]);
     const checkRoadEnd = () => {
-      const camera = Math.min(end + 40, Math.max(-1400, end + 40 - road.scrollTop));
+      const camera = Math.min(end - LIGHTHOUSE_STOP, Math.max(-1400, end - LIGHTHOUSE_STOP - road.scrollTop));
       const terminal = projectRoad(402, 710, Math.min(end, camera + DRAW_DISTANCE), camera);
       for (const name of ['base', 'edge', 'lines', 'center', 'walked']) {
         const coords = nodes[`#gq-r-${name}`].attrs.d.match(/-?\d+(?:\.\d+)?/g)?.map(Number) ?? [];
@@ -152,7 +152,7 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     const sixthAhead = lamps[6];
     assert.equal(sixthAhead.hidden, false);
     assert.ok(Number(sixthAhead.style.opacity) > 0);
-    const initialCamera = end + 40 - road.scrollTop;
+    const initialCamera = end - LIGHTHOUSE_STOP - road.scrollTop;
     assert.ok(Number(sixthAhead.dataset.y) <= initialCamera + DRAW_DISTANCE);
     assert.ok(projectRoad(402,710,Number(sixthAhead.dataset.y),initialCamera).y
       >= projectRoad(402,710,initialCamera + DRAW_DISTANCE,initialCamera).y);
