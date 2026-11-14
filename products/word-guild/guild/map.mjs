@@ -615,12 +615,13 @@ export function renderMap(view, ctx) {
           const sample = remaining;
           // 手前の地面：道と同じ絵を、道の外にも薄く敷く（奥へ行くほど消える）。
           const near = row.worldZ - c;
-          if (near < GROUND_DEPTH && v + remaining <= tileHeight) {
+          if (near < GROUND_DEPTH) {
+            // 道の下も含めて横いっぱいに敷く（道の脇に隙間を作らない）。行の境目で切れないよう、標本は絵の中に収める。
             paint.globalAlpha = .2 * (1 - near / GROUND_DEPTH);
             const tw = row.half * 2;
+            const gv = Math.min(v, tileHeight - .5), gh = Math.max(.5, Math.min(remaining, tileHeight - gv));
             for (let gx = row.x - row.half - tw * Math.ceil((row.x - row.half) / tw); gx < Ws; gx += tw) {
-              if (gx + tw > row.x - row.half && gx < row.x + row.half) continue;
-              paint.drawImage(tex, 0, v, tex.width, remaining, gx, y, tw, 1.05);
+              paint.drawImage(tex, tex.width * .2, gv, tex.width * .6, gh, Math.floor(gx), y, Math.ceil(tw) + 1, 1.05); // 道の縁石の部分は使わない（縦の線が並ばない）
             }
           }
           paint.globalAlpha = roadOpacity(row.worldZ - c);
