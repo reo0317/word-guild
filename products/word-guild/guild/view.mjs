@@ -904,11 +904,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
           await presentCinema('playGateCard', gateCard(story, completed.progress.gates, completed.gate),
             () => paperPresentation(blankCardHtml(story, completed.progress.gates)));
           if (quest !== completed || token !== sessionToken) return;
-          view.className = 'gq gq-gate-opening';
-          view.innerHTML = `<div class="gq-opening-arch"><i></i><i></i></div><p>門の向こうから、紙魚がやってきた！</p>`;
-          later(reducedMotion() ? 0 : 1200, () => {
-            if (quest === completed) startQuest({arrival});
-          });
+          await presentCinema('playGateOpen', {ward:completed.gate}, () => Promise.resolve());
+          if (quest === completed && token === sessionToken) startQuest({arrival});
         })();
         return;
       }
@@ -966,8 +963,12 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const gateOpened = newlyOpenedGate(quest.startProgress, quest.progress, quest.gate);
     const openedWard = quest.gate;
     const resultProgress = quest.progress;
-    const showGate = () => gateOpened ? presentCinema('playGateCard', gateCard(story, resultProgress.gates, openedWard),
-      () => paperPresentation(blankCardHtml(story, resultProgress.gates))) : Promise.resolve();
+    const showGate = async () => {
+      if (!gateOpened) return;
+      await presentCinema('playGateCard', gateCard(story, resultProgress.gates, openedWard),
+        () => paperPresentation(blankCardHtml(story, resultProgress.gates)));
+      await presentCinema('playGateOpen', {ward:openedWard}, () => Promise.resolve());
+    };
     const nextGate = after.wards.find(w => w.gate === 'open');
     const gateNext = !after.fog && nextGate;
     const primary = returning ? '地図へ' : after.fog ? '霧を<br>払う' : nextGate ? `${nextGate.ch}区の<br>門へ` : 'つぎの<br>石段へ';

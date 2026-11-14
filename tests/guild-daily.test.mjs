@@ -134,3 +134,12 @@ test('DAILY_TEXT：種類ごとの文面', () => {
   assert.equal(DAILY_TEXT({kind: 'clean', goal: 10}), 'ヒントなしで10語答える');
   assert.equal(DAILY_TEXT({kind: 'finish', goal: 2}), '配達を2回やりとげる');
 });
+
+ test('依頼達成日は一度だけ保存し、直近14日より古い日を落とす',()=>{
+ const p=withDaily('clean',1,0,{dailyDays:[TODAY-20,TODAY-13,TODAY-1]});
+ const r=run(p,[entry('clean')]);
+ assert.deepEqual(r.progress.dailyDays,[TODAY-13,TODAY-1,TODAY]);
+ assert.deepEqual(run(r.progress,[entry('clean')]).progress.dailyDays,r.progress.dailyDays);
+ assert.deepEqual(p.dailyDays,[TODAY-20,TODAY-13,TODAY-1]);
+ assert.deepEqual(run(withDaily('clean',2),[entry('clean')]).progress.dailyDays,[]);
+ });

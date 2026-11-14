@@ -1,3 +1,4 @@
+import {MAP_ART, GATE_RECTS} from '../art/map-art.mjs';
 import HOUSE_DOORS from '../data/house-doors.json' with {type: 'json'};
 import {isRestored} from './srs.mjs';
 import {visitors, rareStatus} from './rare.mjs';
@@ -136,7 +137,22 @@ export function wardAt(ranges, worldZ) {
   return ranges.find(r => worldZ >= r.start && worldZ < r.end)?.ch ?? null;
 }
 export function gateDoorRect(ch) {
-  return ch === 2 ? {x: 500/1536, y: 700/1536, width: 536/1536, height: 490/1536} : null;
+  const r = GATE_RECTS[ch];
+  return r ? {x:r[0], y:r[1], width:r[2], height:r[3]} : null;
+}
+
+export function propsFor(ward) {
+  const opposite = lamp => { const z=lamp.cy ?? lamp.shelf*H.lamp; return Math.sin(2*Math.PI*z/L+PHASE)>=0 ? 'right' : 'left'; };
+  let previous = -1;
+  return ward.lamps.flatMap(lamp => [
+    {shelf:lamp.shelf, si:null, kind:0, side:opposite(lamp)},
+    ...lamp.steps.flatMap((_,si) => {
+      if (si % 2) return [];
+      let kind = (lamp.shelf*7+si*3)%5+1;
+      if (kind === previous) kind = kind%5+1;
+      previous = kind;
+      return [{shelf:lamp.shelf, si, kind, side:opposite(lamp)}];
+    })]);
 }
 
 // side は道に対する家の位置。中央の玄関は向きを変えない。
@@ -216,18 +232,18 @@ export function bindInfo(view, daily) {
 }
 
 // 直近7日（左が6日前、右が今日）の消印。streak は {count, last, best}。
-export function streakDays(streak, today) {
+export function streakDays(streak, today, dailyDays = []) {
   const count = streakNow(streak, today);
   const last = streak?.last ?? 0;
   return Array.from({length: 7}, (_, i) => {
     const day = today - 6 + i;
     const date = new Date(day * 86400000).getUTCDate();
-    return {day, date, on: count > 0 && day <= last && day > last - count};
+    return {day, date, daily: dailyDays.includes(day), on: count > 0 && day <= last && day > last - count};
   });
 }
 
 function postmark(day) {
-  return `<span class="gq-pm ${day.on ? 'on' : ''}" title="${day.date}日"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="9.5"/><text x="15" y="19" text-anchor="middle">${day.date}</text></svg></span>`;
+  return `<span class="gq-pm ${day.on || day.daily ? 'on' : ''} ${day.daily ? 'daily' : ''}" title="${day.date}日${day.daily ? ' 今日の依頼達成' : ''}"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="9.5"/><text x="15" y="19" text-anchor="middle">${day.date}</text>${day.daily ? '<path class="gq-pm-star" d="M25 -3l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5-3.6-3.5 5-.7Z"/>' : ''}</svg></span>`;
 }
 
 // 道の上の位置を下から積んで決める。y は「郵便局からの距離」。
@@ -319,17 +335,18 @@ export function renderMap(view, ctx) {
     }
     if (item.type === 'gate') {
       const {ward} = item;
-      // 次の区の名札は門の足もとに付ける（門の絵と重ならない）。
+      // 次の区の名札は承認済みの位置（門の上）を保つ。
       const nextWard = map.wards[map.wards.indexOf(ward) + 1];
       const gateTag = nextWard ? `<div class="gq-ward-tag gq-gate-tag"><b>${nextWard.ch}区</b> ${esc(nextWard.name)}</div>` : '';
-      if (ward.ch === 2) {
+      if (MAP_ART.gates.includes(ward.ch)) {
+        const r = gateDoorRect(ward.ch);
         const tag = ward.gate === 'open' ? 'button' : 'div';
         return bb(`gq-bb-gate${far}`, item.cy, item.lat,
-          `<${tag} class="gq-gate gq-gate-art ${ward.gate}" aria-label="2区の門${ward.gate === 'cleared' ? '（通過済み）' : ''}" ${tag === 'button' ? 'type="button" data-gate="2"' : ''}>
-          <img class="gq-gate-frame" src="art/gate-2.webp" alt="" width="512" height="512">
-          <img class="gq-gate-door gq-gate-door-l" src="art/gate-2-door-l.webp" alt="">
-          <img class="gq-gate-door gq-gate-door-r" src="art/gate-2-door-r.webp" alt="">
-          ${ward.gate === 'open' ? '<b class="gq-gate-card" aria-hidden="true">•</b>' : ''}</${tag}>${gateTag}`);
+          `<${tag} class="gq-gate gq-gate-art ${ward.gate}" style="--door-x:${r.x*100}%;--door-y:${r.y*100}%;--door-w:${r.width*50}%;--door-h:${r.height*100}%" aria-label="${ward.ch}区の門${ward.gate === 'cleared' ? '（通過済み）' : ''}" ${tag === 'button' ? 'type="button" data-gate="' + ward.ch + '"' : ''}>
+          <i class="gq-gate-fallback" aria-hidden="true"></i><img class="gq-gate-frame" src="art/gate-${ward.ch}.webp" alt="" width="512" height="512">
+          <img class="gq-gate-door gq-gate-door-l" src="art/gate-${ward.ch}-door-l.webp" alt="">
+          <img class="gq-gate-door gq-gate-door-r" src="art/gate-${ward.ch}-door-r.webp" alt="">
+          <span class="gq-gate-number">${ward.ch}</span><i class="gq-gate-mist a"></i><i class="gq-gate-mist b"></i>${ward.gate === 'open' ? '<b class="gq-gate-card" aria-hidden="true">•</b>' : ''}</${tag}>${gateTag}`);
       }
       const label = {hidden: '', open: `${ward.ch}区`, cleared: '✓'}[ward.gate];
       const tag = ward.gate === 'open' ? 'button' : 'div';
@@ -365,7 +382,7 @@ export function renderMap(view, ctx) {
   // カメラの先にある区を調べるための、区ごとの始まりの y
   const wardStarts = items.filter(item => item.type === 'ward').map(item => ({ch: item.ward.ch, y: item.from}));
 
-  const days = streakDays(progress.streak, today);
+  const days = streakDays(progress.streak, today, progress.dailyDays);
   const count = streakNow(progress.streak, today);
   const collected = Object.values(progress.words).filter(isRestored).length;
   const brief = dailyBrief(progress.daily);
@@ -433,8 +450,19 @@ export function renderMap(view, ctx) {
   const inner = $('#gq-road-in');
   const stage = $('#gq-stage');
   const svg = $('#gq-road-svg');
+  const landings = items.filter(i=>i.type==='lamp');
   const canvas = $('#gq-road-cv');
-  let mips = null, textureRequested = false;
+  const textures = new Map(), requested = new Set(), props = new Map();
+  const scenery = map.wards.flatMap(ward => propsFor({...ward, lamps:ward.lamps.map(lamp=>({...lamp,cy:items.find(i=>i.type==='lamp' && i.lamp===lamp)?.cy}))}).map(prop => ({...prop, ch:ward.ch, item:items.find(i => i.ward === ward && i.lamp?.shelf === prop.shelf && (prop.si === null ? i.type === 'lamp' : i.type === 'step' && i.si === prop.si))})));
+  view.querySelectorAll('.gq-gate-art').forEach(gate => {
+    const imgs = [...gate.querySelectorAll('img')];
+    const fail = () => {
+      gate.classList.remove('gq-gate-art'); gate.removeAttribute('style');
+      const label=gate.classList.contains('cleared') ? '✓' : gate.classList.contains('open') ? `${gate.dataset.gate}区` : '';
+      gate.innerHTML=`<i aria-hidden="true"></i>${label ? `<span>${label}</span>` : ''}`;
+    };
+    imgs.forEach(img => { img.onerror = fail; });
+  });
   const paths = {
     base: $('#gq-r-base'), lines: $('#gq-r-lines'), walked: $('#gq-r-walked'), edge: $('#gq-r-edge'), center: $('#gq-r-center'),
   };
@@ -492,7 +520,19 @@ export function renderMap(view, ctx) {
     const fmt = p => `${p[0].toFixed(1)} ${p[1].toFixed(1)}`;
     const poly = ({left, right}) => `M${left.map(fmt).join('L')}L${right.reverse().map(fmt).join('L')}Z`;
     const full = ribbon(roadEnd, 1);
-    paths.edge.setAttribute('d', `M${full.left.map(fmt).join('L')}M${full.right.map(fmt).join('L')}`);
+    let edge = '', previousEdge = false;
+    for (const p of roadPoints(Ws,Hs,visibleEnd,c)) {
+      const ch=wardAt(ranges,p.worldZ), show=!(textures.has(ch) && (ch===1 || ch===6));
+      if(show) edge += `${previousEdge?'L':'M'}${fmt([p.x-p.half,p.y])}`;
+      previousEdge=show;
+    }
+    previousEdge=false;
+    for (const p of roadPoints(Ws,Hs,visibleEnd,c)) {
+      const ch=wardAt(ranges,p.worldZ), show=!(textures.has(ch) && (ch===1 || ch===6));
+      if(show) edge += `${previousEdge?'L':'M'}${fmt([p.x+p.half,p.y])}`;
+      previousEdge=show;
+    }
+    paths.edge.setAttribute('d', edge);
     paths.base.setAttribute('d', poly(full));
     const walked = roadPoints(Ws, Hs, Math.min(hereY, visibleEnd), c);
     let walkedPath = '', run = [];
@@ -501,7 +541,7 @@ export function renderMap(view, ctx) {
       run = [];
     };
     for (const p of walked) {
-      if (mips && wardAt(ranges, p.worldZ) === 2) flushWalked();
+      if (textures.has(wardAt(ranges, p.worldZ))) flushWalked();
       else run.push(p);
     }
     flushWalked();
@@ -511,13 +551,13 @@ export function renderMap(view, ctx) {
     const yMax = visibleEnd;
     let lines = '', dashes = '';
     for (let y = Math.max(0, Math.ceil((c) / 48) * 48); y <= yMax; y += 48) {
-      if (mips && wardAt(ranges, y) === 2) continue;
+      if (textures.has(wardAt(ranges, y))) continue;
       const s = sOf(y - c);
       const x = X(y, s), sy = Y(s).toFixed(1), w = halfAt(y, s);
       lines += `M${(x - w).toFixed(1)} ${sy}L${(x + w).toFixed(1)} ${sy}`;
     }
     for (let y = Math.max(0, Math.ceil((c) / 36) * 36); y <= yMax; y += 36) {
-      if (mips && wardAt(ranges, y) === 2) continue;
+      if (textures.has(wardAt(ranges, y))) continue;
       const y2 = Math.min(y + 14, yMax);
       const s1 = sOf(y - c), s2 = sOf(y2 - c);
       const x1 = X(y, s1), x2 = X(y2, s2);
@@ -527,7 +567,7 @@ export function renderMap(view, ctx) {
     paths.lines.setAttribute('d', lines);
     paths.center.setAttribute('d', dashes);
 
-    // G0: 2区だけ既存の道の上へ石畳を貼る。読込失敗時は下のSVGが残る。
+    // 区ごとの絵を投影し、読込失敗時は下のSVGを残す。
     const paint = canvas.getContext?.('2d');
     if (paint) {
       const ratio = Math.min(window.devicePixelRatio || 1, 2);
@@ -536,15 +576,20 @@ export function renderMap(view, ctx) {
       }
       paint.setTransform(ratio, 0, 0, ratio, 0, 0);
       paint.clearRect(0, 0, Ws, Hs);
-      if (mips) {
+      if (textures.size) {
         const fog = getComputedStyle(stage).getPropertyValue('--fog-lt').trim() || '#dce4e5';
         for (let y = Math.ceil(project(visibleEnd).y); y < Hs; y++) {
           const row = roadRow(Ws, Hs, y, c);
-          if (!row || wardAt(ranges, row.worldZ) !== 2) continue;
+          if (!row) continue;
+          const mips = textures.get(wardAt(ranges, row.worldZ));
+          if (!mips) continue;
           const tex = mips[mipLevel(row.dz)];
-          const k = tex.height / 280;
-          let v = ((row.worldZ * k) % tex.height + tex.height) % tex.height;
-          let remaining = Math.min(tex.height, Math.max(1, row.dz * k));
+          const tileHeight = 512 >> mipLevel(row.dz);
+          const k = tileHeight / 280;
+          let v = ((row.worldZ * k) % tileHeight + tileHeight) % tileHeight;
+          let remaining = Math.min(tileHeight, Math.max(1, row.dz * k));
+          const landing = landings.find(i => row.worldZ >= i.cy-52 && row.worldZ < i.cy);
+          if (landing) { v = tileHeight+(row.worldZ-(landing.cy-52))*96/52/(2**mipLevel(row.dz)); remaining = Math.min(tex.height-v, Math.max(.1,row.dz*96/52/(2**mipLevel(row.dz)))); }
           let destY = y;
           const sample = remaining;
           paint.globalAlpha = roadOpacity(row.worldZ - c);
@@ -554,7 +599,7 @@ export function renderMap(view, ctx) {
           paint.globalAlpha = roadOpacity(row.worldZ - c);
           // タイルをまたぐ標本も折り返す。画像外を読む空白を作らない。
           while (remaining > .00001) {
-            const count = Math.min(remaining, tex.height - v);
+            const count = Math.min(remaining, (v >= tileHeight ? tex.height : tileHeight) - v);
             const dh = count / sample;
             paint.drawImage(tex, 0, v, tex.width, count, row.x-row.half, destY, row.half*2, dh+.05);
             remaining -= count; destY += dh; v = 0;
@@ -567,20 +612,38 @@ export function renderMap(view, ctx) {
         paint.globalAlpha = 1;
       }
     }
-    if (paint && !textureRequested && ranges.some(r => r.ch === 2 && r.end > c && r.start < visibleEnd)) {
-      textureRequested = true;
-      const texture = new Image();
-      texture.onload = () => {
-        if (!stage.isConnected) return;
-        mips = Array.from({length: 6}, (_, level) => {
-          const tile = document.createElement('canvas');
-          tile.width = 256 >> level; tile.height = 512 >> level;
-          tile.getContext('2d').drawImage(texture, 0, 0, tile.width, tile.height);
-          return tile;
-        });
-        schedule();
+    const active = wardAt(ranges, c) ?? 1;
+    for (const ch of [active-1,active,active+1]) {
+      if (!paint || typeof Image === 'undefined' || ch < 1 || ch > 6 || requested.has(ch)) continue;
+      requested.add(ch);
+      if (MAP_ART.roads.includes(ch)) {
+        const texture = new Image();
+        texture.onload = () => {
+          if (!stage.isConnected) return;
+          textures.set(ch, Array.from({length:6}, (_,level) => {
+            const tile=document.createElement('canvas'); tile.width=256>>level; tile.height=608>>level;
+            tile.getContext('2d').drawImage(texture,0,0,tile.width,tile.height); return tile;
+          })); schedule();
+        };
+        texture.src = `art/road/road-${ch}.webp`;
+      }
+      if (MAP_ART.props.includes(ch)) {
+        const image = new Image(); image.onload=()=>{if(stage.isConnected){props.set(ch,image);schedule();}};
+        image.src=`art/road/props-${ch}.webp`;
+      }
+    }
+    if (paint) {
+      const glow = (worldZ, strength) => {
+        const p=project(worldZ); if (worldZ<c || worldZ>visibleEnd) return;
+        paint.save(); paint.translate(p.x,p.y); paint.scale(1,.35);
+        const radius=p.half*1.5, g=paint.createRadialGradient(0,0,0,0,0,radius);
+        g.addColorStop(0,`rgba(242,184,75,${strength})`);g.addColorStop(1,'rgba(242,184,75,0)');
+        paint.fillStyle=g;paint.fillRect(-radius,-radius,radius*2,radius*2);paint.restore();
       };
-      texture.src = 'art/road/road-2.webp';
+      items.filter(i=>i.type==='lamp' && i.lamp.lit===i.lamp.total).forEach(i=>glow(i.cy,i.lamp.gold === i.lamp.total ? .45 : .32));
+      glow(hereY,.5);
+
+      paint.globalAlpha=1;
     }
 
     // 道の上の物：位置と大きさと霧のかかり方を決める。
@@ -630,6 +693,26 @@ export function renderMap(view, ctx) {
 
     };
     placePanel();
+    if (paint) {
+      const host=stage.getBoundingClientRect();
+      const obstacles=boards.filter(b=>b.shown && (b.house || b.panel || b.el.classList.contains('gq-bb-tsumugi'))).map(b=>(b.house ?? b.panel ?? b.el).getBoundingClientRect()).map(r=>({left:r.left-host.left,right:r.right-host.left,top:r.top-host.top,bottom:r.bottom-host.top}));
+      const visible=scenery.filter(p=>p.item && p.item.cy>=c && p.item.cy<=visibleEnd).sort((a,b)=>b.item.cy-a.item.cy).slice(0,40);
+      for (const prop of visible) {
+        const image=props.get(prop.ch); if(!image) continue;
+        const p=project(prop.item.cy), size=110*p.scale;
+        const side=prop.side==='right'?1:-1;
+        const x=p.x+side*p.half*1.44;
+        if(obstacles.some(r=>x+size/2>r.left-6 && x-size/2<r.right+6 && p.y>r.top-6 && p.y-size<r.bottom+6)) continue;
+        paint.globalAlpha=roadOpacity(prop.item.cy-c);
+        paint.drawImage(image,(prop.kind%3)*256,Math.floor(prop.kind/3)*256,256,256,x-size/2,p.y-size,size,size);
+        if(prop.kind===0 && prop.item.lamp.lit===prop.item.lamp.total) {
+          const radius=size*.12, light=paint.createRadialGradient(x,p.y-size*.78,0,x,p.y-size*.78,radius);
+          light.addColorStop(0,'rgba(242,184,75,.8)');light.addColorStop(1,'rgba(242,184,75,0)');
+          paint.fillStyle=light;paint.fillRect(x-radius,p.y-size*.78-radius,radius*2,radius*2);
+        }
+      }
+      paint.globalAlpha=1;
+    }
     // カメラの少し先にある区の絵を、背景に出す。
     let ward = wardStarts[0]?.ch ?? 1;
     for (const w of wardStarts) if (w.y <= c + 500) ward = w.ch;

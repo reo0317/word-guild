@@ -5,7 +5,7 @@ const BACKUP_KEY = `${STORAGE_KEY}.backup`;
 export function emptyProgress() {
   return {v: 1, words: {}, quests: 0, lastDay: 0,
     settings: {fresh: 4, speech: true}, streak: {count: 0, last: 0, best: 0},
-    daily: null, dailyDone: 0, exportDay: 0, gates: [],
+    daily: null, dailyDays: [], dailyDone: 0, exportDay: 0, gates: [],
     rares: {}, rare: {miss: 0, day: 0, met: []}, seals: []};
 }
 
@@ -45,6 +45,7 @@ function additionalFields(value) {
       && typeof daily.done === 'boolean'
       ? {day: daily.day, kind: daily.kind, goal: daily.goal, count: daily.count, done: daily.done}
       : null,
+    dailyDays: Array.isArray(value.dailyDays) ? [...new Set(value.dailyDays.filter(isCount))].sort((a,b) => a-b).filter((day, _, days) => day > days.at(-1)-14).slice(-14) : [],
     dailyDone: isCount(value.dailyDone) ? value.dailyDone : 0,
     exportDay: isCount(value.exportDay) ? value.exportDay : 0,
   };

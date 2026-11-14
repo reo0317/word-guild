@@ -35,7 +35,7 @@ p{margin:0;font-size:12px;color:#6f6a5c;line-height:1.6}
   <p>途中でタップすると早送り。最後の状態でタップすると閉じる。手紙は story.json の shelf 1、場面の文は仮。</p>
 </div>
 <script type="module">
-import {playLetterComplete, playGateCard} from '../../products/word-guild/guild/cinema.mjs';
+import {playLetterComplete, playGateCard, playGateOpen} from '../../products/word-guild/guild/cinema.mjs';
 const base = '../../products/word-guild/';
 const story = await (await fetch(base + 'data/story.json')).json();
 const stage = document.getElementById('stage'), $ = id => document.getElementById(id);
@@ -50,6 +50,7 @@ const q = new URLSearchParams(location.search);
 if (q.get('ward')) $('ward').value = q.get('ward');
 if (q.get('n')) $('line').value = q.get('n');
 $('still').checked = q.has('still'); $('noscene').checked = q.has('noscene');
+if (q.get('play') === 'open') playGateOpen(stage, {ward:+$('ward').value,base,reduced:still()}).then(() => document.body.dataset.done = '1');
 if (q.get('play') === 'letter') letter().then(() => document.body.dataset.done = '1');
 if (q.get('play') === 'gate') gate().then(() => document.body.dataset.done = '1');
 </script>

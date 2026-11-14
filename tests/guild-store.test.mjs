@@ -186,3 +186,10 @@ test('読みあげ設定は旧保存ではオン、オフは書出し・読込�
   progress.settings.speech = false;
   assert.equal(importText(exportText(progress)).progress.settings.speech,false);
 });
+
+ test('達成日を検証し、旧保存は空配列、書き戻しと復元でも保持する',()=>{
+ assert.deepEqual(validateProgress({v:1,words:{}}).dailyDays,[]);
+ const p=validateProgress({v:1,words:{},dailyDays:[100,100,-1,'101',NaN,101.5,120,119,null]});
+ assert.deepEqual(p.dailyDays,[119,120]);
+ assert.deepEqual(validateProgress(serializeProgress(p)).dailyDays,[119,120]);
+ });

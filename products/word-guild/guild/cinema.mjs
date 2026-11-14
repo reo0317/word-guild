@@ -506,3 +506,37 @@ export async function playGateCard(container, {lines = [], newIndex = -1, ...opt
   await run(root, {dur: T, draw, still});
   ink?.remove();
 }
+
+// 門のカードの後に一度だけ、扉の向こうの町を見せる。
+export async function playGateOpen(container, {ward = 1, reduced, base = HOME} = {}) {
+  const {GATE_RECTS, MAP_ART} = await import('../art/map-art.mjs');
+  const ch = Number(ward), rect = GATE_RECTS[ch];
+  if (!rect || !MAP_ART.gates.includes(ch)) return;
+  const [x,y,w,h] = rect;
+  const root = mount(container, 'cin-gate', '門の向こうへ');
+  const url = name => `${base}art/${name}.webp`;
+  root.innerHTML = `<img class="go-town" src="${url(`ward-${ch}`)}" alt=""><img class="go-next" src="${url(ch<6 ? `ward-${ch+1}` : 'house-48')}" alt="">
+    <div class="go-light"></div><div class="go-gate"><img class="go-frame" src="${url(`gate-${ch}`)}" alt="">
+    ${['l','r'].map((side,i)=>`<div class="go-door" style="left:${(x+i*w/2)*100}%;top:${y*100}%;width:${w*50}%;height:${h*100}%;transform-origin:${i?'right':'left'} center"><img src="${url(`gate-${ch}-door-${side}`)}" alt=""><i></i></div>`).join('')}
+    <b class="go-card">●</b></div>${Array.from({length:6},(_,i)=>`<div class="go-fog" style="top:${30+i*8}%"></div>`).join('')}
+    <div class="go-tag">${ch<6 ? `${ch+1}区　${['朝市','商店街','倉庫街','役場','ホテル通り','灯台岬'][ch]}` : '灯台岬の光'}</div><div class="cin-hint">タップで閉じる</div>`;
+  const style=document.createElement('style'); style.textContent=`
+    .go-town,.go-next{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.go-next{opacity:0}
+    .go-gate{position:absolute;width:86%;aspect-ratio:1;left:7%;top:20%;perspective:900px}.go-frame{position:absolute;inset:0;width:100%;height:100%}
+    .go-door{position:absolute;transform-style:preserve-3d}.go-door img,.go-door i{position:absolute;inset:0;width:100%;height:100%}.go-door i{background:#1f2a44;opacity:0}
+    .go-card{position:absolute;left:48%;top:60%;padding:8px 3px;background:#fff9ed;color:#c8462f;font-size:9px;transform:rotate(4deg)}
+    .go-fog{position:absolute;left:-20%;width:140%;height:35%;background:radial-gradient(ellipse,#dde5e8 15%,transparent 70%);pointer-events:none}
+    .go-light{position:absolute;left:35%;top:50%;width:30%;height:50%;background:linear-gradient(#f2b84baa,transparent);transform-origin:top}
+    .go-tag{position:absolute;bottom:16%;left:20%;width:60%;padding:12px;border:2px solid #1f2a44;background:#fff9ed;text-align:center;font-weight:bold}.cin-gate .cin-hint{position:absolute;bottom:6%}`;
+  root.append(style); container.append(root);
+  const doors=[...root.querySelectorAll('.go-door')], fog=[...root.querySelectorAll('.go-fog')];
+  const draw=t=>{
+    const opening=eIO(seg(t,.5,1.9)), clearing=seg(t,1.2,2.6);
+    doors.forEach((door,i)=>{door.style.transform=`rotateY(${opening*(i?108:-108)}deg)`;door.querySelector('i').style.opacity=opening>90/108?1:0;});
+    const card=root.querySelector('.go-card'),fall=seg(t,.3,1.3);card.style.transform=`translateY(${fall*230}px) rotate(${4+fall*110}deg)`;card.style.opacity=1-fall;
+    fog.forEach((el,i)=>{el.style.transform=`translateX(${clearing*(i%2?70:-70)}%)`;el.style.opacity=.8*(1-clearing);});
+    root.querySelector('.go-next').style.opacity=clearing;root.querySelector('.go-light').style.transform=`scaleY(${opening})`;
+    root.querySelector('.go-tag').style.opacity=seg(t,2.6,3.2);
+  };
+  await run(root,{dur:3.2,draw,still:wantsStill({reduced})});
+}

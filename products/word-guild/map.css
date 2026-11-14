@@ -152,7 +152,7 @@
 .gq-house-image{position:absolute;inset:0}
 .gq-house.door-flipped .gq-house-image{transform:scaleX(-1)}
 
-/* G0: Canvasは既存の道の上、家・人物の下。2区以外は透明。 */
+/* Canvasは道の上、家・人物の下。 */
 .gq-road-cv{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
 .gq-gate.gq-gate-art{display:block;width:232px;height:232px;margin:-187px 0 0 -116px;font-size:0}
 .gq-gate-art img{position:absolute;display:block;pointer-events:none}
@@ -184,3 +184,28 @@
 .gq-fog-ovals i:nth-child(3){left:12px;top:28px}
 
 .gq-gate-tag{top:-200px;z-index:1;pointer-events:none}.gq-bb-gate .gq-gate:not(.gq-gate-art)~.gq-gate-tag{top:-78px}
+/* 道ばたと消印。画像が使えない場合は既存の帯を残す。 */
+.gq-pm.daily{color:#e7b04a;opacity:1}.gq-pm.daily svg{stroke:#e7b04a;stroke-width:2}.gq-pm.daily path{fill:#e7b04a;stroke:none}.gq-pm.daily text{fill:var(--ink)}
+.gq-step{width:26px;height:12px;margin:-6px 0 0 -13px;border-width:2px;border-radius:50%}
+.gq-step.done{box-shadow:inset 0 0 0 1px var(--paper)}.gq-step.todo{background:var(--fog-lt)}
+.gq-step.here{width:28px;height:14px;margin:-7px 0 0 -14px;border-width:2px}
+.gq-lamp-node{width:40px;height:40px;margin:-40px 0 0 -20px}.gq-lamp-node b{font-size:13px}.gq-lamp-node small{font-size:8px}
+.gq-gate-art .gq-gate-door{top:var(--door-y);width:var(--door-w);height:var(--door-h)}
+.gq-gate-art .gq-gate-door-l{left:var(--door-x)}.gq-gate-art .gq-gate-door-r{left:calc(var(--door-x) + var(--door-w))}
+.gq-gate-fallback{display:none}.gq-gate-art.art-failed img,.gq-gate-art.art-failed .gq-gate-card{display:none}
+.gq-gate-art.art-failed .gq-gate-fallback{display:block;position:absolute;inset:40% 28% 18%;border:8px solid var(--ink);border-bottom:0;background:var(--fog-lt)}
+.gq-gate-art.art-failed.cleared .gq-gate-fallback{background:transparent}
+.gq-gate-art.open::before{content:"";position:absolute;inset:var(--door-y) 48% 18%;background:var(--lamp);box-shadow:0 0 8px var(--lamp);animation:gq-door-light 3s ease-in-out infinite}
+.gq-gate-art.cleared::before{content:"";position:absolute;inset:20% 30% 60%;background:radial-gradient(ellipse,#f2b84b99,transparent 70%)}
+@keyframes gq-door-light{50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){.gq-gate-art.open::before{animation:none}}
+.gq-road-svg .edge{stroke-width:1.5;opacity:.35}
+.gq-gate-number{position:absolute;left:46%;top:40%;width:18px;height:16px;border:1px solid var(--ink);border-radius:3px;background:var(--paper);color:var(--ink);font-size:11px;line-height:14px}
+.gq-gate-mist{position:absolute;top:40%;left:-15%;width:100%;height:65%;background:radial-gradient(ellipse,var(--fog-lt),transparent 70%);opacity:.8;pointer-events:none}.gq-gate-mist.b{left:15%;top:50%}
+.gq-gate-art.cleared .gq-gate-mist{display:none}.gq-gate-art.open .gq-gate-mist{animation:gq-gate-mist 7s ease-in-out infinite alternate}.gq-gate-art.open .gq-gate-mist.b{animation-direction:alternate-reverse}
+@keyframes gq-gate-mist{to{transform:translateX(12%)}}
+@media(prefers-reduced-motion:reduce){.gq-gate-art.open .gq-gate-mist{animation:none}}
+.gq-pm.daily circle{stroke:#e7b04a;stroke-width:2;stroke-dasharray:none}
+
+/* 今日の依頼を達成した日：金の封蝋の消印 */
+.gq-pm.daily svg{overflow:visible}.gq-pm.daily circle:first-of-type{fill:#f3d366;stroke:#b98512;stroke-width:2.4}.gq-pm.daily circle:nth-of-type(2){fill:none;stroke:#fff6d0;stroke-width:1.2}.gq-pm.daily text{fill:#5a3d00;font-weight:800}.gq-pm.daily .gq-pm-star{fill:#c8462f;stroke:#fff;stroke-width:1}.gq-pm.daily{filter:none;box-shadow:none}.gq-pm.daily svg{animation:none}

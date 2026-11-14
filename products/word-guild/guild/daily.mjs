@@ -55,6 +55,7 @@ export function applyOutcome(progress, outcome, today) {
     next.daily = {...daily, count, done};
     if (done) {
       next.dailyDone = (progress.dailyDone ?? 0) + 1;
+      next.dailyDays = [...new Set([...(progress.dailyDays ?? []), today])].filter(day => day > today - 14 && day <= today).sort((a,b) => a-b);
       dailyDone = true;
     }
   }

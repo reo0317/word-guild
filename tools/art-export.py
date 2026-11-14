@@ -138,11 +138,79 @@ def export_map2():
     print('gate-2', save_webp(gate.resize((512,512), Image.LANCZOS), OUT / 'gate-2.webp', 70), 'KB')
 
 
+# 原画に対する割合。2区は承認済みの切り出しを保持する。
+GATE_RECTS = {1:(.30,.48,.40,.35), 2:(500/1536,700/1536,536/1536,490/1536),
+              3:(.28,.52,.43,.34), 4:(.28,.51,.44,.35),
+              5:(.29,.49,.42,.38), 6:(.31,.51,.38,.34)}
+
+def export_map():
+    import json
+    dest = OUT / 'road'
+    dest.mkdir(exist_ok=True)
+    available = {'roads': [], 'gates': [], 'props': []}
+    for n in range(1,7):
+        for kind in ('road', 'gate', 'props'):
+            try:
+                path = WORK / f'{kind}-{n}.{"webp" if kind == "road" else "png"}'
+                with Image.open(path) as source:
+                    source.load()
+                    im = source.convert('RGBA')
+                if kind == 'road':
+                    im = im.resize((256,608), Image.LANCZOS)
+                    original = im.copy()
+                    for y in range(16):
+                        blend = Image.blend(original.crop((0,y,256,y+1)), original.crop((0,511-y,256,512-y)), .5)
+                        for row in (y,511-y):
+                            im.paste(Image.blend(original.crop((0,row,256,row+1)),blend,(1-y/16)**2),(0,row))
+                    target = dest / f'road-{n}.webp'
+                    for colors in (128,64,32,16):
+                        im.quantize(colors).convert('RGBA').save(target,'WEBP',lossless=True,method=6)
+                        if target.stat().st_size <= 45*1024: break
+                    with Image.open(target) as check:
+                        assert check.crop((0,0,256,1)).tobytes() == check.crop((0,511,256,512)).tobytes()
+                    available['roads'].append(n)
+                elif kind == 'props':
+                    source = key_out_green(im)
+                    im = Image.new('RGBA',(768,512))
+                    for cell in range(6):
+                        cw,ch=source.width//3,source.height//2
+                        left,top=(cell%3)*cw,(cell//3)*ch
+                        sprite=source.crop((left+8,top+8,left+cw-8,top+ch-8))
+                        box=sprite.getchannel('A').point(lambda v:255 if v>32 else 0).getbbox()
+                        if box:
+                            sprite=sprite.crop(box)
+                            sprite.thumbnail((240,240),Image.LANCZOS)
+                            im.paste(sprite,((cell%3)*256+(256-sprite.width)//2,(cell//3)*256+256-sprite.height))
+                    save_webp(im,dest / f'props-{n}.webp',70)
+                    available['props'].append(n)
+                else:
+                    im = remove_alpha_specks(im)
+                    x,y,w,h = GATE_RECTS[n]
+                    x0,y0,x1,y1 = round(x*im.width),round(y*im.height),round((x+w)*im.width),round((y+h)*im.height)
+                    mid=(x0+x1)//2
+                    door=im.crop((x0,y0,x1,y1))
+                    save_webp(door.resize((round(w*512),round(h*512)),Image.LANCZOS),OUT / f'gate-{n}-door.webp',40)
+                    for side,box in [('l',(x0,y0,mid,y1)),('r',(mid,y0,x1,y1))]:
+                        leaf=im.crop(box).resize((round(w*256),round(h*512)),Image.LANCZOS)
+                        save_webp(leaf,OUT / f'gate-{n}-door-{side}.webp',40)
+                    im.paste((0,0,0,0),(x0,y0,x1,y1))
+                    save_webp(im.resize((512,512),Image.LANCZOS),OUT / f'gate-{n}.webp',70)
+                    available['gates'].append(n)
+                print(kind,n,'OK')
+            except (OSError,ValueError,AssertionError) as error:
+                print(kind,n,'従来表示:',error)
+    (OUT / 'map-art.mjs').write_text('export const MAP_ART = '+json.dumps(available)+';\nexport const GATE_RECTS = '+json.dumps(GATE_RECTS)+';\n')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--word', action='store_true', help='単語の意味の絵だけを書き出す')
+    parser.add_argument('--map', action='store_true', help='全区の道・門・小物を書き出す')
     parser.add_argument('--map2', action='store_true', help='2区の道と門だけを書き出す')
     args = parser.parse_args()
+    if args.map:
+        export_map()
+        return
     if args.map2:
         export_map2()
         return

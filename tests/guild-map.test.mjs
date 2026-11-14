@@ -449,3 +449,13 @@ test('霧の地図を描いた次のフレームで案内を開き、再描画�
     announceFog(false, storage);
   }
 });
+
+test('依頼達成日の金の消印は通常の消印と区別され、連続日数に依存しない', async () => {
+  const {streakDays} = await import('../products/word-guild/guild/map.mjs');
+  const days=streakDays({count:2,last:20000,best:2},20000,[19995,20000]);
+  assert.equal(days[1].daily,true);
+  assert.equal(days[1].on,false);
+  assert.equal(days[5].on,true);
+  assert.equal(days[5].daily,false);
+  assert.equal(days[6].daily,true);
+});
