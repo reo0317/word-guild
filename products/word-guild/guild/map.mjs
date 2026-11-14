@@ -340,8 +340,8 @@ export function renderMap(view, ctx) {
       const gateTag = nextWard ? `<div class="gq-ward-tag gq-gate-tag"><b>${nextWard.ch}区</b> ${esc(nextWard.name)}</div>` : '';
       if (MAP_ART.gates.includes(ward.ch)) {
         const r = gateDoorRect(ward.ch);
-        // 2区の門（3区へ）は、アーチに沿って次の区の名前を書く。
-        const archText = ward.ch === 2 && nextWard ? `<svg class="gq-gate-arch" viewBox="0 0 512 512" aria-hidden="true"><path id="gq-arch-${ward.ch}" d="M172 206Q256 146 340 206" fill="none"/><text><textPath href="#gq-arch-${ward.ch}" startOffset="50%" text-anchor="middle">${nextWard.ch}区 ${esc(nextWard.name)}</textPath></text></svg>` : '';
+        // 2区の門（3区へ）は、門と背景がつくる半円の外側に沿って、次の区の名前を大きく書く。
+        const archText = ward.ch === 2 && nextWard ? `<svg class="gq-gate-arch" viewBox="0 0 512 512" aria-hidden="true"><path id="gq-arch-${ward.ch}" d="M30 300A226 216 0 0 1 482 300" fill="none"/><text><textPath href="#gq-arch-${ward.ch}" startOffset="50%" text-anchor="middle">${nextWard.ch}区 ${esc(nextWard.name)}</textPath></text></svg>` : '';
         const tag = ward.gate === 'open' ? 'button' : 'div';
         return bb(`gq-bb-gate${far}`, item.cy, item.lat,
           `<${tag} class="gq-gate gq-gate-art ${ward.gate}" style="--door-x:${r.x*100}%;--door-y:${r.y*100}%;--door-w:${r.width*50}%;--door-h:${r.height*100}%" aria-label="${ward.ch}区の門${ward.gate === 'cleared' ? '（通過済み）' : ''}" ${tag === 'button' ? 'type="button" data-gate="' + ward.ch + '"' : ''}>
