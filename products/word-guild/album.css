@@ -104,7 +104,8 @@
 .gq-night-sheet .stamp{min-width:0;width:100%}.gq-night-sheet .stamp .lbl{font-size:8px;overflow-wrap:anywhere}.gq-night-sheet .stamp .ja{font-size:8px}
 .gq-night-row .gq-postscript{margin-top:12px;background:#f7efd9;color:#273248}
 
-.gq-album-modes{display:flex;justify-content:center;gap:14px;flex-shrink:0}
-.gq-album-modes button{width:58px;height:58px;padding:0;border-radius:50%;font-size:11px;letter-spacing:0;background:#f3ead8;color:#1f2a44}
-.gq-album-modes button[aria-pressed=true]{background:#e7b04a}
 .gq-collected-sheet{grid-auto-flow:row;grid-template-columns:repeat(5,minmax(0,1fr))}
+
+.gq-stamp-shelf{min-height:550px}
+.gq-stamp-shelf h3{margin:8px 0;font-size:13px}
+.gq-collected-sheet .stamp:disabled{cursor:default}

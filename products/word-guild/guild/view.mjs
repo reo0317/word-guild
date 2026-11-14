@@ -280,6 +280,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         gate: ch => startQuest({gate: ch}),
         lamp: shelf => openLetterPop(map, shelf),
         album: () => openAlbumAt(map.here?.shelf),
+        stamps: () => { onMap = false; openOptional(() => import('./album.mjs'), 'openAlbum', {mode: 'stamps'}); },
         settings: openSettingsHere,
         title: () => { onMap = false; stopSession(); exit(); },
         notice: act => { if (act === 'update') applyUpdate(); else openSettingsHere(); },

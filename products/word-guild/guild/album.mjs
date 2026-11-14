@@ -49,6 +49,12 @@ export function collectedStamps(words, rares, progress) {
     .sort((a, b) => a.word.ch - b.word.ch || a.word.shelf - b.word.shelf || Number(a.rare) - Number(b.rare));
 }
 
+// 未取得も含めた全切手。街灯内では通常、まれびとの順。
+export function allStamps(words, rares) {
+  return [...words.map(word => ({word, rare: false})), ...rares.map(word => ({word, rare: true}))]
+    .sort((a, b) => a.word.ch - b.word.ch || a.word.shelf - b.word.shelf || Number(a.rare) - Number(b.rare));
+}
+
 // ページの進み具合。got＝仮刷り以上の枚数、lit＝本刷り以上、gold＝金ぶち。
 export function pageProgress(page, progress) {
   const total = page.words.length;
@@ -323,7 +329,7 @@ export function openAlbum(container, deps = {}) {
     let nightIndex = 0;
     const nightGroups = wardGroups(albumPages(rares));
     let view = 'page'; // 'page' | 'index' | 'night' | 'stamps'
-    const modes = only => `<div class="gq-album-modes" role="group" aria-label="切手帳の表示">${[['page', '手紙ごと'], ['stamps', '切手だけ']].map(([act, label]) => `<button type="button" data-act="${act}" aria-pressed="${only === (act === 'stamps')}">${label}</button>`).join('')}</div>`;
+
 
     const backButton = deps.back ? '<button class="text-button gq-album-back" data-act="back" type="button">← トップへ</button>' : '';
 
@@ -344,7 +350,7 @@ export function openAlbum(container, deps = {}) {
       const seal = pp.allGold ? '<span class="gq-seal gold">完・金</span>' : pp.complete ? '<span class="gq-seal">完</span>' : '';
       container.innerHTML = `
         <div class="gq-album-top">${backButton}<span class="gq-album-total">集めた切手 <b>${collected}</b>/${words.length}</span><button class="text-button" data-act="index" type="button">目次</button></div>
-        ${modes(false)}<div class="gq-album-nav">
+        <div class="gq-album-nav">
           <button type="button" class="gq-round" data-act="prev" aria-label="前のページ" ${index === 0 ? 'disabled' : ''}>${icon('prev')}</button>
           <div class="gq-album-title"><small>${page.ch}区 ${esc(wardName)}</small><b>${esc(stageName(page.shelf))}</b><span>${index + 1} / ${pages.length}</span></div>
           <button type="button" class="gq-round" data-act="next" aria-label="次のページ" >${icon('next')}</button>
@@ -362,13 +368,37 @@ export function openAlbum(container, deps = {}) {
 
     function renderStamps() {
       view = 'stamps';
-      const stamps = collectedStamps(words, rares, progress);
-      container.innerHTML = `<div class="gq-album-top">${backButton}<span class="gq-album-total">集めた切手 <b>${stamps.length}</b></span></div>${modes(true)}
-        <div class="gq-album-body"><div class="gq-sheet gq-collected-sheet">${stamps.map(({word, rare}) => {
-          const page = pages.find(p => p.shelf === word.shelf);
+      const stamps = allStamps(words, rares);
+      const shelves = albumPages(stamps.map(({word}) => word));
+      const got = collectedStamps(words, rares, progress).length;
+      container.innerHTML = `<div class="gq-album-top">${backButton}<span class="gq-album-total">切手帳 <b>${got}</b>/${stamps.length}</span></div>
+        <div class="gq-album-body">${shelves.map(page => `<section class="gq-stamp-shelf" data-stamp-shelf="${page.shelf}"><h3>${page.ch}区 · ${page.shelf}</h3><div class="gq-sheet gq-collected-sheet"></div></section>`).join('')}</div>`;
+      const body = container.querySelector('.gq-album-body');
+      const draw = section => {
+        const shelf = Number(section.dataset.stampShelf);
+        const page = pages.find(p => p.shelf === shelf);
+        section.querySelector('.gq-sheet').innerHTML = stamps.filter(({word}) => word.shelf === shelf).map(({word, rare}) => {
           const spec = rare ? charaSpec(word, tags[word.id] ?? '', {rare: true}) : specsOf(page)[page.words.indexOf(word)];
-          return stampWithMark(word, spec, stampState((rare ? progress.rares : progress.words)?.[word.id]), base, 'sm');
-        }).join('')}</div></div>`;
+          const state = stampState((rare ? progress.rares : progress.words)?.[word.id]);
+          let html = stampWithMark(word, spec, state, base, 'sm');
+          if (state === 'shadow') html = html.replace('<button ', '<button disabled ').replace(/<div class="lbl">.*?<\/div>/, '<div class="lbl" aria-hidden="true">&nbsp;</div>');
+          return html;
+        }).join('');
+      };
+      const sections = body.querySelectorAll('[data-stamp-shelf]');
+      if (typeof IntersectionObserver === 'undefined') sections.forEach(draw);
+      else {
+        const observer = new IntersectionObserver(entries => {
+          for (const {target, isIntersecting} of entries) {
+            if (isIntersecting) {
+              draw(target);
+              target.style.minHeight = `${target.offsetHeight}px`;
+            } else target.querySelector('.gq-sheet').innerHTML = '';
+          }
+        }, {root: body, rootMargin: '400px'});
+        sections.forEach(section => observer.observe(section));
+        cleanups.push(() => observer.disconnect());
+      }
     }
 
     function renderIndex() {
@@ -380,7 +410,7 @@ export function openAlbum(container, deps = {}) {
       }).join('');
       container.innerHTML = `
         <div class="gq-album-top">${backButton}<span class="gq-album-total">集めた切手 <b>${collected}</b>/${words.length}</span><button class="text-button" data-act="page" type="button">ページへ</button></div>
-        ${modes(false)}<p class="eyebrow">切手帳の目次</p>
+        <p class="eyebrow">切手帳の目次</p>
         <div class="gq-album-body"><article class="gq-story-card gq-card-door">${blankCardHtml(story, gates)}</article>${groups.map(group => `<section class="gq-ward">
           <h3>${group.ch}区 ${esc(group.name)}<small>記念切手 ${gates.includes(group.ch) ? '済' : '未'}</small></h3>
           <div class="gq-ward-gate">${memorialHtml(group.ch, gates.includes(group.ch), base)}</div>
@@ -399,7 +429,7 @@ export function openAlbum(container, deps = {}) {
       const group = nightGroups[nightIndex];
       const met = rares.filter(w => isRestored(progress.rares?.[w.id])).length;
       container.innerHTML = `<div class="gq-album-top">${backButton}<span class="gq-album-total">✦ <b>${met}</b>/${rares.length}</span><button class="text-button" data-act="index" type="button">目次</button></div>
-        ${modes(false)}<div class="gq-album-nav"><button type="button" class="gq-round" data-act="night-prev" aria-label="前のページ">${icon('prev')}</button>
+        <div class="gq-album-nav"><button type="button" class="gq-round" data-act="night-prev" aria-label="前のページ">${icon('prev')}</button>
           <div class="gq-album-title"><small>${group.ch}区 ${esc(group.name)}</small><b>夜の切手帳</b><span>${nightIndex + 1} / ${nightGroups.length}</span></div>
           <button type="button" class="gq-round" data-act="night-next" aria-label="次のページ" ${nightIndex === nightGroups.length - 1 ? 'disabled' : ''}>${icon('next')}</button></div>
         <div class="gq-album-body gq-night-pages">${group.pages.map(page => `<section class="gq-night-row"><h3>${esc(stageName(page.shelf))}</h3><div class="gq-night-sheet">${page.words.map(word => stampWithMark(word, charaSpec(word, tags[word.id] ?? '', {rare: true}), stampState(progress.rares?.[word.id]), base, 'sm')).join('')}</div>${psOf(page.shelf)}</section>`).join('')}</div>`;
@@ -468,7 +498,6 @@ export function openAlbum(container, deps = {}) {
       if (act === 'next') { index = clampIndex(index + 1, pages.length); return renderPage(); }
       if (act === 'index') return renderIndex();
       if (act === 'page') return renderPage();
-      if (act === 'stamps') return renderStamps();
       if (handlePostscriptClick(event, say)) return;
       const cell = target.closest('[data-shelf]');
       if (cell) { index = clampIndex(pages.findIndex(p => p.shelf === Number(cell.dataset.shelf)), pages.length); return renderPage(); }
@@ -480,7 +509,7 @@ export function openAlbum(container, deps = {}) {
       const stamp = target.closest('.stamp[data-id], [data-id]');
       if (stamp && view === 'page') zoom(stamp.dataset.id);
       if (stamp && view === 'night') zoomRare(stamp.dataset.id);
-      if (stamp && view === 'stamps') {
+      if (stamp && view === 'stamps' && !stamp.classList.contains('s-shadow')) {
         if (rares.some(word => word.id === stamp.dataset.id)) zoomRare(stamp.dataset.id);
         else zoom(stamp.dataset.id);
       }
@@ -489,7 +518,8 @@ export function openAlbum(container, deps = {}) {
       if (event.target.matches('[data-ps-line]') && ['Enter', ' '].includes(event.key)) { event.preventDefault(); handlePostscriptClick(event, say); }
     };
     cleanups.push(() => { container.onkeydown = null; });
-    renderPage();
+    if (deps.mode === 'stamps') renderStamps();
+    else renderPage();
   }
 }
 

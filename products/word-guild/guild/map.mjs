@@ -453,10 +453,11 @@ export function renderMap(view, ctx) {
         ${tomorrow.length ? `<span class="gq-tomorrow" role="button" tabindex="0" aria-label="明日戻ってくる紙魚 ${tomorrow.length} 匹"><small>明日</small><span class="gq-faces">${tomorrowFaces}</span><b>${tomorrow.length}</b></span>` : ''}
       </div>
       <div class="gq-dock">
+        ${mapButton({kind: 'letter', label: '手紙', id: 'gq-letters'})}
         ${mapButton({kind: 'album', label: '切手帳', id: 'gq-album'})}
-        ${mapButton({kind: 'gear', label: '設定', id: 'gq-settings', badge: ctx.notice?.act === 'settings'})}
         ${waxButton({label: openGate ? `${openGate.ch}区の<br>門へ` : map.fog ? '霧を<br>払う' : '配達に<br>出る', id: 'gq-go', cls: map.fog ? 'fog' : ''})}
         ${openGate ? fab({icon: 'gate', label: `${openGate.ch}区の門`, cls: 'glow', attrs: `id="gq-gate" data-gate="${openGate.ch}"`}) : ''}
+        ${mapButton({kind: 'gear', label: '設定', id: 'gq-settings', badge: ctx.notice?.act === 'settings'})}
         ${mapButton({kind: 'title', label: 'タイトル', id: 'gq-title'})}
         ${noticeFab}
       </div>
@@ -476,7 +477,8 @@ export function renderMap(view, ctx) {
   bindInfo(view, progress.daily);
   const $ = s => view.querySelector(s);
   $('#gq-go').onclick = () => openGate ? on.gate(openGate.ch) : on.go();
-  $('#gq-album').onclick = () => on.album();
+  $('#gq-letters').onclick = () => on.album();
+  $('#gq-album').onclick = () => on.stamps();
   $('#gq-settings').onclick = () => on.settings();
   $('#gq-title').onclick = () => on.title();
   if ($('#gq-notice')) $('#gq-notice').onclick = () => on.notice(ctx.notice.act);

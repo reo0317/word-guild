@@ -74,3 +74,26 @@ test('切手だけ：通常とまれびとを区・街灯順に集め、未収�
   assert.deepEqual(stamps.map(s => s.rare), [true, false, false, true]);
   assert.deepEqual(collectedStamps(normal, rares, {}), []);
 });
+
+test('全切手は未取得も含め1680枚、街灯ごとに通常25枚と夜5枚', async () => {
+  const {allStamps} = await import('../products/word-guild/guild/album.mjs');
+  const rares = JSON.parse(await readFile(new URL('../products/word-guild/data/rare.json', import.meta.url), 'utf8'));
+  const stamps = allStamps(words, rares);
+  assert.equal(stamps.length, 1680);
+  for (let shelf = 1; shelf <= 56; shelf++) {
+    const row = stamps.slice((shelf - 1) * 30, shelf * 30);
+    assert.ok(row.every(({word}) => word.shelf === shelf));
+    assert.deepEqual(row.map(({rare}) => rare), [...Array(25).fill(false), ...Array(5).fill(true)]);
+  }
+});
+
+test('切手番号は小型・拡大・影とも街灯内の順番、夜は1〜5', async () => {
+  const {stampHtml, stampNumber} = await import('../products/word-guild/guild/chara-svg.mjs');
+  const {charaSpec} = await import('../products/word-guild/guild/chara.mjs');
+  for (const [word, number] of [[words[0], '1-1'], [words[24], '1-25'], [words[25], '2-1'], [words[1399], '56-25'], [{id:'r0280', shelf:56,w:'night',ja:'夜'}, '56-夜5']]) {
+    assert.equal(stampNumber(word), number);
+    for (const state of ['shadow', 'print', 'gold']) for (const size of ['sm', 'lg']) {
+      assert.ok(stampHtml(word, charaSpec(word), {state, size}).includes(`<span class="val">${number}</span>`));
+    }
+  }
+});

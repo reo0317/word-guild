@@ -179,9 +179,15 @@ export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = tr
 // ---------- 切手の HTML ----------
 // size: 'sm'（切手帳の小さい切手）／'lg'（大きい切手。訳も出す）。枠の CSS は呼び出し側（切手帳・見本）が持つ。
 // 影のときは語と訳を「？」にする。大物（kind 'big'）は横2枚ぶん（class "big"）。
+export function stampNumber(word) {
+  const rare = /^r/.test(word.id);
+  const ordinal = (Number(word.id.replace(/^\D+/, '')) - 1) % (rare ? 5 : 25) + 1;
+  return `${word.shelf}-${rare ? '夜' : ''}${ordinal}`;
+}
+
 export function stampHtml(word, spec, {state = 'print', ward = word.ch || 1, base = '', size = 'sm', unify = true} = {}) {
   const shadow = state === 'shadow';
   const classes = ['stamp', `s-${state}`, size === 'lg' ? 'lg' : '', spec.kind === 'big' ? 'big' : '', spec.kind === 'rare' ? 'rare' : ''].filter(Boolean).join(' ');
   const label = shadow ? '？' : esc(word.w);
-  return `<button class="${classes}" data-id="${esc(word.id)}" aria-label="${label}"><div class="in"><span class="val">${word.w.replace(/[^a-zA-Z]/g, '').length}</span><div class="pic">${charaSvg(spec, {state, ward, base, unify})}</div><div class="lbl">${label}</div>${size === 'lg' ? `<div class="ja">${shadow ? '？' : esc(word.ja)}</div>` : ''}</div></button>`;
+  return `<button class="${classes}" data-id="${esc(word.id)}" aria-label="${label}"><div class="in"><span class="val">${stampNumber(word)}</span><div class="pic">${charaSvg(spec, {state, ward, base, unify})}</div><div class="lbl">${label}</div>${size === 'lg' ? `<div class="ja">${shadow ? '？' : esc(word.ja)}</div>` : ''}</div></button>`;
 }

@@ -176,7 +176,9 @@ export function fab({icon: name, label, caption = true, cls = '', attrs = ''}) {
 // 地図の小さな札。影も SVG の輪郭を重ねて描く。
 export function mapButton({kind, label, id, badge = false}) {
   let shape;
-  if (kind === 'album') {
+  if (kind === 'letter') {
+    shape = '<path d="M4 10h42v32H4Z"/><path d="M4 10l21 18 21-18M4 42l15-19m27 19L31 23" fill="none"/>';
+  } else if (kind === 'album') {
     let d = 'M10 3';
     for (let x = 10; x < 40; x += 6) d += `h1a2 2 0 0 0 4 0h1`;
     d += 'h0v3';
@@ -194,7 +196,7 @@ export function mapButton({kind, label, id, badge = false}) {
     }).join(' ');
     shape = `<polygon points="${points}"/>`;
   } else shape = '<path d="M8 46V21a17 17 0 0 1 34 0v25Z"/>';
-  return `<button type="button" class="gq-fab gq-map-button ${kind}" id="${esc(id)}" aria-label="${esc(label)}${badge ? '、書き出しのおすすめ' : ''}"><span class="gq-button-art"><svg viewBox="0 0 50 53" aria-hidden="true"><g class="gq-button-shadow" transform="translate(0 3)">${shape}</g><g class="gq-button-face">${shape}</g>${kind === 'gear' ? '<circle cx="25" cy="25" r="7" fill="#f3ead8" stroke="#1f2a44" stroke-width="2"/>' : ''}</svg>${kind === 'gear' ? '' : icon(kind)}${badge ? '<span class="gq-export-dot" role="img" aria-label="書き出しのおすすめ"></span>' : ''}</span><small>${esc(label)}</small></button>`;
+  return `<button type="button" class="gq-fab gq-map-button ${kind}" id="${esc(id)}" aria-label="${esc(label)}${badge ? '、書き出しのおすすめ' : ''}"><span class="gq-button-art"><svg viewBox="0 0 50 53" aria-hidden="true"><g class="gq-button-shadow" transform="translate(0 3)">${shape}</g><g class="gq-button-face">${shape}</g>${kind === 'gear' ? '<circle cx="25" cy="25" r="7" fill="#f3ead8" stroke="#1f2a44" stroke-width="2"/>' : ''}</svg>${['gear', 'letter'].includes(kind) ? '' : icon(kind)}${badge ? '<span class="gq-export-dot" role="img" aria-label="書き出しのおすすめ"></span>' : ''}</span><small>${esc(label)}</small></button>`;
 }
 
 // 封蝋のボタン（主ボタン）。波打つ縁の赤い蝋に、文字を押す。
