@@ -94,3 +94,4 @@
 .gq-card-mist{opacity:.32;letter-spacing:.14em;background:radial-gradient(ellipse,#b9c7cf99,transparent);user-select:none}
 .gq-card-door{margin:14px auto 24px}
 .gq-scene-tag{display:block;width:48px;min-height:44px;margin:8px 0 8px auto;padding:5px;border-radius:3px;border:1px solid var(--ink);background:var(--paper-hi);color:var(--ink);font:14px var(--serif,serif);box-shadow:2px 2px 0 #0002}
+.paper .ja{display:none!important} /* 手紙の和訳は出さない（依頼者の判断） */

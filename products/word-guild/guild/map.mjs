@@ -243,7 +243,7 @@ export function streakDays(streak, today, dailyDays = []) {
 }
 
 function postmark(day) {
-  return `<span class="gq-pm ${day.on || day.daily ? 'on' : ''} ${day.daily ? 'daily' : ''}" title="${day.date}日${day.daily ? ' 今日の依頼達成' : ''}"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="9.5"/><text x="15" y="19" text-anchor="middle">${day.date}</text>${day.daily ? '<path class="gq-pm-star" d="M25 -3l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5-3.6-3.5 5-.7Z"/>' : ''}</svg></span>`;
+  return `<span class="gq-pm ${day.on || day.daily ? 'on' : ''} ${day.daily ? 'daily' : ''}" title="${day.date}日${day.daily ? ' 今日の依頼達成' : ''}"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="9.5"/><text x="15" y="19" text-anchor="middle">${day.date}</text></svg></span>`;
 }
 
 // 道の上の位置を下から積んで決める。y は「郵便局からの距離」。
@@ -340,13 +340,15 @@ export function renderMap(view, ctx) {
       const gateTag = nextWard ? `<div class="gq-ward-tag gq-gate-tag"><b>${nextWard.ch}区</b> ${esc(nextWard.name)}</div>` : '';
       if (MAP_ART.gates.includes(ward.ch)) {
         const r = gateDoorRect(ward.ch);
+        // 2区の門（3区へ）は、アーチに沿って次の区の名前を書く。
+        const archText = ward.ch === 2 && nextWard ? `<svg class="gq-gate-arch" viewBox="0 0 512 512" aria-hidden="true"><path id="gq-arch-${ward.ch}" d="M172 206Q256 146 340 206" fill="none"/><text><textPath href="#gq-arch-${ward.ch}" startOffset="50%" text-anchor="middle">${nextWard.ch}区 ${esc(nextWard.name)}</textPath></text></svg>` : '';
         const tag = ward.gate === 'open' ? 'button' : 'div';
         return bb(`gq-bb-gate${far}`, item.cy, item.lat,
           `<${tag} class="gq-gate gq-gate-art ${ward.gate}" style="--door-x:${r.x*100}%;--door-y:${r.y*100}%;--door-w:${r.width*50}%;--door-h:${r.height*100}%" aria-label="${ward.ch}区の門${ward.gate === 'cleared' ? '（通過済み）' : ''}" ${tag === 'button' ? 'type="button" data-gate="' + ward.ch + '"' : ''}>
           <i class="gq-gate-fallback" aria-hidden="true"></i><img class="gq-gate-frame" src="art/gate-${ward.ch}.webp" alt="" width="512" height="512">
           <img class="gq-gate-door gq-gate-door-l" src="art/gate-${ward.ch}-door-l.webp" alt="">
           <img class="gq-gate-door gq-gate-door-r" src="art/gate-${ward.ch}-door-r.webp" alt="">
-          <span class="gq-gate-number">${ward.ch}</span><i class="gq-gate-mist a"></i><i class="gq-gate-mist b"></i>${ward.gate === 'open' ? '<b class="gq-gate-card" aria-hidden="true">•</b>' : ''}</${tag}>${gateTag}`);
+          <span class="gq-gate-number">${ward.ch}</span><i class="gq-gate-mist a"></i><i class="gq-gate-mist b"></i>${ward.gate === 'open' ? '<b class="gq-gate-card" aria-hidden="true">•</b>' : ''}${archText}</${tag}>${archText ? '' : gateTag}`);
       }
       const label = {hidden: '', open: `${ward.ch}区`, cleared: '✓'}[ward.gate];
       const tag = ward.gate === 'open' ? 'button' : 'div';

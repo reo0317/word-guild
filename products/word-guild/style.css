@@ -380,7 +380,7 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .kp-foot{grid-template-columns:1fr 1fr;justify-items:center;align-items:center}
 #kp-start{grid-column:1/-1}
 .kp-foot #kp-sound,.kp-foot #kp-speech{border:2px solid var(--ink);border-radius:50%;width:112px;height:64px;font-size:12px;padding:6px;background:var(--paper)}
-.paper .ln-wrap.read .dot{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;background:var(--paper-hi);border:1px solid currentColor;font-size:16px;cursor:pointer}
+
 
 .gq-fog-count i{display:inline-block;width:12px;height:6px;border-radius:50%;background:var(--fog);margin-right:2px;vertical-align:middle}
 

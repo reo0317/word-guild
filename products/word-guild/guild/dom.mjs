@@ -240,7 +240,7 @@ export function lineBody(line, {face = () => '', shadow = false, hit = ''} = {})
 // 1行。読めた行は押すと訳が出る（スピーカーつき）。
 export function lineHtml(line, li, opts = {}) {
   const say = line.readable ? `<button type="button" class="ln-say" data-say="${esc(plainLine(line))}" aria-label="読みあげ">${icon('speaker', 16)}</button>` : '';
-  return `<div class="ln-wrap${line.readable ? ' read' : ''}" data-l="${li}"><p class="ln"><span class="dot">${line.readable ? '▱' : ''}</span><span class="txt">${lineBody(line, opts)}</span></p><p class="ja" hidden>${esc(line.ja ?? '')}${say}</p></div>`;
+  return `<div class="ln-wrap${line.readable ? ' read' : ''}" data-l="${li}"><p class="ln"><span class="dot"></span><span class="txt">${lineBody(line, opts)}</span></p><p class="ja" hidden>${esc(line.ja ?? '')}${say}</p></div>`;
 }
 
 // 切手の拡大に添える、その語を含む行（語を光らせる）。通が無ければ空。
