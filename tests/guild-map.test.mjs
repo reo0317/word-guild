@@ -146,9 +146,8 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     assert.match(view.innerHTML, /<img src="art\/lighthouse.webp"/);
     assert.doesNotMatch(view.innerHTML, /<svg viewBox="0 0 120 150"/);
     checkRoadEnd();
-    assert.equal(panelBoard.hidden, false);
-    assert.equal(panel.style.visibility, '');
-    assert.match(panel.style.transform, /translate/);
+    // 吹き出しはツムギと同じ層（同じ gq-bb-tsumugi の中）に固定する。
+    assert.match(view.innerHTML, /gq-bb-tsumugi[^>]*>.*?<img class="gq-tsumugi-pin"[^>]*><div class="gq-here-panel (left|right)">/s);
     // 初期の街灯から6個先の札も、道の打ち切りより手前に描かれる。
     const sixthAhead = lamps[6];
     assert.equal(sixthAhead.hidden, false);
@@ -161,7 +160,7 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     assert.equal(scale(), 1);
     assert.ok(Number(depthHouses[0].style.zIndex) > Number(pin.style.zIndex));
     assert.ok(Number(depthHouses[1].style.zIndex) < Number(pin.style.zIndex));
-    assert.equal(panelBoard.style.zIndex, "203");
+    // 吹き出しはツムギと同じ層なので、独自の前面の重なり順は持たない。
     assert.equal(sky.style.top, `${skyGeometry(402,710,1).top}px`);
     // 初回の再計測でも基準倍率を変えない。
     scheduled();

@@ -43,7 +43,8 @@ const H = {post: 170, ward: 64, step: 54, lamp: 92, gate: 200, top: 180};
 const HORIZON = 0.14;  // 地平線の高さ（道の枠の高さに対する割合）
 // 世界座標の単位は任意。f は画面幅を単位とする焦点距離。
 export const A = 0.225; // 中心線の横振幅（最接近時、道の外縁が画面の10%まで来る）
-export const L = 1100;  // 奥行き方向のくねりの周期
+export const L = 1100;
+const GROUND_DEPTH = 1400; // 手前の地面に道の絵を薄く敷く奥行き  // 奥行き方向のくねりの周期
 export const W = 0.35; // 世界座標で一定の道幅
 export const f = 700;  // 焦点距離（画面幅に対する投影倍率の基準）
 export const H_CAMERA = 0.86; // カメラの高さ（画面の縦横比で補正して投影）
@@ -379,8 +380,10 @@ export function renderMap(view, ctx) {
     const side = hereItem.lat > 0 ? 'left' : 'right';
     const shadows = map.next.map(id => `<span class="gq-face">${ctx.face(id, 'shadow')}</span>`).join('');
     const dues = map.due.map(id => `<span class="gq-face">${ctx.face(id, 'print')}</span>`).join('');
-    herePanel = bb('gq-bb-tsumugi', hereY - 12, 0, `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}">`)
-      + bb(`gq-bb-panel ${side}`, hereY, hereItem.lat, `<div class="gq-here-panel ${side}">
+    // 吹き出しはツムギと同じ層に入れ、ツムギに対して位置を固定する。道がツムギを右に寄せる所では左、左に寄せる所では右。
+    const roadRight = Math.sin(2 * Math.PI * (hereY - 12) / L + PHASE) > 0;
+    const bubbleSide = roadRight ? 'left' : 'right';
+    herePanel = bb('gq-bb-tsumugi', hereY - 12, 0, `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}"><div class="gq-here-panel ${bubbleSide}">
         ${map.next.length ? `<div class="gq-faces" aria-label="この先の紙魚"><span class="gq-arrow" aria-hidden="true">▸</span>${shadows}</div>` : '<p class="gq-top-mark" aria-label="いちばん上">★</p>'}
         ${map.dueCount ? `<div class="gq-faces due" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b class="gq-due-n">${map.dueCount}</b>${dues}</div>` : ''}
       </div>`);
@@ -484,7 +487,7 @@ export function renderMap(view, ctx) {
     el, y: Number(el.dataset.y), lat: Number(el.dataset.lat), shown: true,
     far: el.classList.contains('far'),
     scale: el.classList.contains('gq-bb-ward') ? 0.9 : 1,
-    panel: el.querySelector('.gq-here-panel'),
+    panel: el.classList.contains('gq-bb-panel') ? el.querySelector('.gq-here-panel') : null,
     house: el.querySelector('.gq-house'),
   }));
   const houses = [...view.querySelectorAll('[data-house-ward]')];
@@ -597,15 +600,26 @@ export function renderMap(view, ctx) {
           if (!row) continue;
           const mips = textures.get(wardAt(ranges, row.worldZ));
           if (!mips) continue;
-          const tex = mips[mipLevel(row.dz)];
-          const tileHeight = 512 >> mipLevel(row.dz);
+          // 粗い絵への切り替えはしない（依頼者の判断）。いつも元の絵から写す。
+          const tex = mips[0];
+          const tileHeight = 512;
           const k = tileHeight / 280;
           let v = ((row.worldZ * k) % tileHeight + tileHeight) % tileHeight;
           let remaining = Math.min(tileHeight, Math.max(1, row.dz * k));
           const landing = landings.find(i => row.worldZ >= i.cy-52 && row.worldZ < i.cy);
-          if (landing) { v = tileHeight+(row.worldZ-(landing.cy-52))*96/52/(2**mipLevel(row.dz)); remaining = Math.min(tex.height-v, Math.max(.1,row.dz*96/52/(2**mipLevel(row.dz)))); }
+          if (landing) { v = tileHeight+(row.worldZ-(landing.cy-52))*96/52; remaining = Math.min(tex.height-v, Math.max(.1,row.dz*96/52)); }
           let destY = y;
           const sample = remaining;
+          // 手前の地面：道と同じ絵を、道の外にも薄く敷く（奥へ行くほど消える）。
+          const near = row.worldZ - c;
+          if (near < GROUND_DEPTH && v + remaining <= tileHeight) {
+            paint.globalAlpha = .2 * (1 - near / GROUND_DEPTH);
+            const tw = row.half * 2;
+            for (let gx = row.x - row.half - tw * Math.ceil((row.x - row.half) / tw); gx < Ws; gx += tw) {
+              if (gx + tw > row.x - row.half && gx < row.x + row.half) continue;
+              paint.drawImage(tex, 0, v, tex.width, remaining, gx, y, tw, 1.05);
+            }
+          }
           paint.globalAlpha = roadOpacity(row.worldZ - c);
           paint.fillStyle = '#24394b';
           paint.globalAlpha *= .16;

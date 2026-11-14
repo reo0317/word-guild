@@ -218,3 +218,7 @@
 .gq-house-shadow,.gq-house-warm{-webkit-mask:var(--house-image) center/contain no-repeat;mask:var(--house-image) center/contain no-repeat}
 .gq-house-color{-webkit-mask-image:linear-gradient(to bottom,transparent calc(var(--reveal) - 12%),#000 calc(var(--reveal) + 12%));mask-image:linear-gradient(to bottom,transparent calc(var(--reveal) - 12%),#000 calc(var(--reveal) + 12%))}
 .gq-house[data-reveal="100"] .gq-house-color{-webkit-mask-image:none;mask-image:none}
+
+/* 吹き出しはツムギの横に固定（ツムギと同じ層・同じ縮尺） */
+.gq-bb-tsumugi .gq-here-panel.right{left:46px;top:-104px}
+.gq-bb-tsumugi .gq-here-panel.left{left:-46px;top:-104px;transform:translateX(-100%)}
