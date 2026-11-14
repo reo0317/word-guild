@@ -24,7 +24,7 @@ test('依頼・霧・明日の説明をクリックとキー操作で開き、×
     if (selector.includes('daily')) {
       assert.match(html, /毎日ひとつ、おまけの依頼/);
       assert.match(html, /配達を2回やりとげる　1\/2/);
-    } else if (selector.includes('fog')) assert.match(html, /楕円はあと何回で霧が晴れるか/);
+    } else if (selector.includes('fog')) assert.match(html, /あと何匹で霧が晴れるか/);
     else assert.match(html, /明日戻ってくる紙魚と、その数/);
     onClose();
     assert.deepEqual(trigger.focused, {preventScroll: true});

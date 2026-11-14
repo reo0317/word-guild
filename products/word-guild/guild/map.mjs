@@ -22,6 +22,7 @@ import {visitors, rareStatus} from './rare.mjs';
 import {esc, fab, mapButton, waxButton, miniHouse} from './dom.mjs';
 import {artBox, HOUSE_ART} from './art.mjs';
 import {streakNow, DAILY_TEXT} from './daily.mjs';
+import {HEAVY_DUE} from './srs.mjs';
 import {WARDS} from './chara-svg.mjs';
 
 // 保存できない環境でも、同じ霧の間は案内を繰り返さない。
@@ -231,7 +232,7 @@ export function infoDialog(title, text, ovals = false) {
 export function bindInfo(view, daily) {
   const descriptions = [
     ['.gq-daily[role="button"]', '今日の依頼', '毎日ひとつ、おまけの依頼が出ます。配達しながら達成すると印がつきます。依頼は日ごとに変わります。' + (daily ? `\n\n${DAILY_TEXT(daily)}　${Math.min(daily.count, daily.goal)}/${daily.goal}` : '')],
-    ['.gq-fog-count', '霧の配達', '戻ってきた紙魚が増えると霧が出ます。霧の配達では前に会った言葉を多めに届けます。楕円はあと何回で霧が晴れるかの数です。'],
+    ['.gq-fog-count', '霧の配達', '戻ってきた紙魚が増えると霧が出ます。霧の配達では前に会った言葉を多めに届けます。戻ってきた紙魚があと何匹で霧が晴れるかを表示しています。楕円は霧の濃さです。'],
     ['.gq-tomorrow', '明日戻ってくる紙魚', '前に倒した紙魚は、忘れかけたころに戻ってきます。ここに並ぶのは明日戻ってくる紙魚と、その数です。'],
   ];
   for (const [selector, title, text] of descriptions) {
@@ -442,7 +443,7 @@ export function renderMap(view, ctx) {
           <path class="edge" id="gq-r-edge"/><path class="center" id="gq-r-center"/>
         </svg>
         ${nodes}${herePanel}${post}${lighthouse}
-        ${map.fog ? `<span class="gq-fog-count" role="button" tabindex="0">${'<i></i>'.repeat(Math.min(6, Math.ceil(map.dueCount / 9)))}霧の配達 あと${Math.ceil(map.dueCount / 9)}回</span><i class="gq-fogband" aria-hidden="true" style="--d:${fogDensity.toFixed(2)}"></i>` : ''}
+        ${map.fog ? `<span class="gq-fog-count" role="button" tabindex="0">${'<i></i>'.repeat(Math.min(6, Math.ceil(map.dueCount / 9)))}霧が晴れるまで 紙魚あと${Math.max(1, map.dueCount - HEAVY_DUE + 1)}匹</span><i class="gq-fogband" aria-hidden="true" style="--d:${fogDensity.toFixed(2)}"></i>` : ''}
       </div>
     </div></div>
     <div class="gq-map-foot">

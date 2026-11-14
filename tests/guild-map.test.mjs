@@ -431,7 +431,7 @@ test('霧の地図を描いた次のフレームで案内を開き、再描画�
     renderMap(view, ctx);
     assert.equal(opened, 0);
     assert.match(view.innerHTML, /<dialog class="gq-fog-intro"/);
-    assert.match(view.innerHTML, /霧の配達 あと3回<\/span>/);
+    assert.match(view.innerHTML, /霧が晴れるまで 紙魚あと8匹<\/span>/);
     assert.match(view.innerHTML, /class="gq-wax fog"/);
     frames.splice(0).forEach(fn=>fn());
     assert.equal(opened, 1);
