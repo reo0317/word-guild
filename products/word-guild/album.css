@@ -106,6 +106,6 @@
 
 .gq-collected-sheet{grid-auto-flow:row;grid-template-columns:repeat(5,minmax(0,1fr))}
 
-.gq-stamp-shelf{min-height:550px}
-.gq-stamp-shelf h3{margin:8px 0;font-size:13px}
+.gq-stamp-shelf:has(> .gq-sheet:empty){min-height:min(121vw,540px)} /* 描く前だけ高さを仮置き */
+.gq-stamp-shelf{padding-top:16px} /* 街灯ごとの見出しは出さず、すき間だけ空ける */
 .gq-collected-sheet .stamp:disabled{cursor:default}

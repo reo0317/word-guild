@@ -372,7 +372,7 @@ export function openAlbum(container, deps = {}) {
       const shelves = albumPages(stamps.map(({word}) => word));
       const got = collectedStamps(words, rares, progress).length;
       container.innerHTML = `<div class="gq-album-top">${backButton}<span class="gq-album-total">切手帳 <b>${got}</b>/${stamps.length}</span></div>
-        <div class="gq-album-body">${shelves.map(page => `<section class="gq-stamp-shelf" data-stamp-shelf="${page.shelf}"><h3>${page.ch}区 · ${page.shelf}</h3><div class="gq-sheet gq-collected-sheet"></div></section>`).join('')}</div>`;
+        <div class="gq-album-body">${shelves.map(page => `<section class="gq-stamp-shelf" data-stamp-shelf="${page.shelf}"><div class="gq-sheet gq-collected-sheet"></div></section>`).join('')}</div>`;
       const body = container.querySelector('.gq-album-body');
       const draw = section => {
         const shelf = Number(section.dataset.stampShelf);

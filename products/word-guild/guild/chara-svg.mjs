@@ -182,7 +182,7 @@ export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = tr
 export function stampNumber(word) {
   const rare = /^r/.test(word.id);
   const ordinal = (Number(word.id.replace(/^\D+/, '')) - 1) % (rare ? 5 : 25) + 1;
-  return `${word.shelf}-${rare ? '夜' : ''}${ordinal}`;
+  return `${word.shelf}-${rare ? 'N' : ''}${ordinal}`;
 }
 
 export function stampHtml(word, spec, {state = 'print', ward = word.ch || 1, base = '', size = 'sm', unify = true} = {}) {

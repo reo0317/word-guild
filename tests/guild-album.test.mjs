@@ -90,7 +90,7 @@ test('全切手は未取得も含め1680枚、街灯ごとに通常25枚と夜5�
 test('切手番号は小型・拡大・影とも街灯内の順番、夜は1〜5', async () => {
   const {stampHtml, stampNumber} = await import('../products/word-guild/guild/chara-svg.mjs');
   const {charaSpec} = await import('../products/word-guild/guild/chara.mjs');
-  for (const [word, number] of [[words[0], '1-1'], [words[24], '1-25'], [words[25], '2-1'], [words[1399], '56-25'], [{id:'r0280', shelf:56,w:'night',ja:'夜'}, '56-夜5']]) {
+  for (const [word, number] of [[words[0], '1-1'], [words[24], '1-25'], [words[25], '2-1'], [words[1399], '56-25'], [{id:'r0280', shelf:56,w:'night',ja:'夜'}, '56-N5']]) {
     assert.equal(stampNumber(word), number);
     for (const state of ['shadow', 'print', 'gold']) for (const size of ['sm', 'lg']) {
       assert.ok(stampHtml(word, charaSpec(word), {state, size}).includes(`<span class="val">${number}</span>`));
