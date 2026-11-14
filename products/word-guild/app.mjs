@@ -31,10 +31,8 @@ function title() {
     <div class="kp-foot">
       <button class="primary" id="kp-start" type="button">${returning ? 'つづきから' : 'はじめる'}</button>
       <button class="text-button" id="kp-sound" type="button" aria-pressed="${soundOn}"></button>
-      ${returning ? '<button class="text-button" id="kp-story" type="button">はじまりの物語</button>' : ''}
     </div>`;
-  // オープニングの物語は、つづきから遊ぶ人もあとで見返せる（見終わるとタイトルへ戻る）。
-  view.querySelector('#kp-story')?.addEventListener('click', () => { unlockSound(); opening(0, true); });
+
   view.querySelector('#kp-sound').insertAdjacentHTML('afterend', `<button type="button" class="kp-switch" id="kp-speech" aria-pressed="${guild.speechEnabled()}">読みあげ ${guild.speechEnabled() ? 'オン' : 'オフ'}</button>`);
   view.querySelector('#kp-speech').onclick = event => {
     guild.setSpeech(!guild.speechEnabled());

@@ -340,7 +340,7 @@ test('今日の依頼は全文と進捗を表示し、印と達成表示を保�
         const node = {style: {}, clientWidth: 390, addEventListener() {}, setAttribute() {}};
         const view = {innerHTML: '', querySelector: () => ({...node}), querySelectorAll: () => []};
         renderMap(view, {map: buildMap(words, progress, 20000), today: 20000, progress, total: 1400, face: () => '', tsumugi: '', letterOf: () => ({}), on: {}});
-        assert.ok(view.innerHTML.includes(`<i aria-hidden="true">${mark}</i>${({revenge:'戻ってきた紙魚を10体倒す', fresh:'新しい言葉を10語見つける', clean:'ヒントなしで10語答える', finish:'配達を10回やりとげる'})[kind]}<b>${done ? 10 : 0}/10</b>`));
+        assert.ok(view.innerHTML.includes(`<i aria-hidden="true">${mark}</i>${({revenge:'戻った紙魚を10体倒す', fresh:'新しい言葉を10語学ぶ', clean:'ヒントなし10語正解', finish:'配達を10回やりとげる'})[kind]}<b>${done ? 10 : 0}/10</b>`));
         assert.ok(view.innerHTML.includes(`class="gq-daily ${done ? 'done' : ''}"`));
       }
     }

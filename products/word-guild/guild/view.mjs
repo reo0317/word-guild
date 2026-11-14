@@ -205,7 +205,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     pop.className = 'gq-pop';
     pop.setAttribute('role', 'dialog');
     pop.setAttribute('aria-modal', 'true');
-    pop.innerHTML = `<div class="gq-pop-card"><div class="gq-pop-letter">${letterHtml(letter, {face: faceOf, shadowLines: shadowLinesOf(letter), lit: lamp?.lit === lamp?.total})}${ps ? postscriptHtml(ps) : ''}</div>
+    pop.innerHTML = `<button type="button" class="gq-pop-x" data-act="close" aria-label="とじる">×</button><div class="gq-pop-card"><div class="gq-pop-letter">${letterHtml(letter, {face: faceOf, shadowLines: shadowLinesOf(letter), lit: lamp?.lit === lamp?.total})}${ps ? postscriptHtml(ps) : ''}</div>
       <div class="gq-pop-footer">${lamp?.done ? `<div class="gq-night-shadows" aria-label="まれびとの切手">${nightStamps}</div>` : ''}
       <div class="gq-pop-acts">${lamp?.done ? waxButton({label: '再配達', id: 'gq-return', cls: 'return'}) : ''}${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}${fab({icon: 'album', label: '切手帳', attrs: 'data-act="album"'})}</div></div></div>`;
     const close = () => { pop.remove(); if (popEl === pop) popEl = null; };
@@ -225,7 +225,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     };
     view.append(pop);
     popEl = pop;
-    pop.querySelector('[data-act="close"]').focus({preventScroll: true});
+    pop.querySelector('.gq-pop-acts [data-act="close"]').focus({preventScroll: true});
   }
 
   // ---------- 地図 ----------

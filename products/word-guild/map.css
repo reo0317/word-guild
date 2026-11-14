@@ -120,7 +120,7 @@
 @media(prefers-reduced-motion:reduce){.gq-house-sparks{animation:none;opacity:.7}}
 
 /* 本文は全行を表示し、通常サイズの切手を操作の左に重ねる。 */
-.gq-pop-letter{flex:0 0 auto;overflow:visible}
+.gq-pop-letter{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;touch-action:pan-y}
 .gq-pop-footer{display:flex;align-items:center;justify-content:center;gap:8px;flex:0 0 auto}
 .gq-pop-footer > .gq-night-shadows{position:relative;display:block;flex:0 0 108px;height:100px;margin:0}
 .gq-pop .gq-night-shadows .stamp{position:absolute;top:8px;left:2px;width:56px;transform:rotate(-12deg);transform-origin:50% 85%}
@@ -222,3 +222,8 @@
 /* 吹き出しはツムギの横に固定（ツムギと同じ層・同じ縮尺） */
 .gq-bb-tsumugi .gq-here-panel.right{left:46px;top:-104px}
 .gq-bb-tsumugi .gq-here-panel.left{left:-46px;top:-104px;transform:translateX(-100%)}
+
+/* 長い手紙でも戻れるよう、右上にも閉じるボタン */
+.gq-pop-card{position:relative}
+.gq-pop-x{position:absolute;top:max(8px,env(safe-area-inset-top));right:max(8px,env(safe-area-inset-right));z-index:2;width:40px;height:40px;border-radius:50%;border:2px solid var(--ink);background:var(--paper-hi);color:var(--ink);font-size:22px;line-height:1;font-weight:800;box-shadow:0 2px 0 var(--ink);cursor:pointer}
+.gq-pop .gq-pop-x{border-radius:50%}
