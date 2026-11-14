@@ -62,10 +62,10 @@ test('worker bypasses audio, Range, foreign origins and non-GET; navigation uses
   assert.equal(calls.at(-1)[2].ignoreSearch, true);
 });
 
-test('全区の道・小物・門をオフライン用リストに含める', async () => {
+test('全区の道・門をオフライン用リストに含める', async () => {
   const {files}=await shellMetadata();
   for(let ch=1;ch<=6;ch++) {
-    for(const path of [`road/road-${ch}`,`road/props-${ch}`,`gate-${ch}`,`gate-${ch}-door-l`,`gate-${ch}-door-r`])
+    for(const path of [`road/road-${ch}`,`gate-${ch}`,`gate-${ch}-door-l`,`gate-${ch}-door-r`])
       assert.ok(files.includes(`./art/${path}.webp`));
   }
 });

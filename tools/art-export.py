@@ -149,7 +149,7 @@ def export_map():
     dest.mkdir(exist_ok=True)
     available = {'roads': [], 'gates': [], 'props': []}
     for n in range(1,7):
-        for kind in ('road', 'gate', 'props'):
+        for kind in ('road', 'gate'):  # 道ばたの小物は使わない（依頼者の判断）
             try:
                 path = WORK / f'{kind}-{n}.{"webp" if kind == "road" else "png"}'
                 with Image.open(path) as source:

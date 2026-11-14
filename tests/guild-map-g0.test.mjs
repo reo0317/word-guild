@@ -51,7 +51,7 @@ test('G0の道と門だけを書き出し、容量制限に収まる',async()=>{
 test('全6区の書き出し画像は容量制限と合計1.2MBを守る',async()=>{
   let total=0;
   for(let ch=1;ch<=6;ch++) {
-    for(const [path,kb] of [[`road/road-${ch}`,45],[`road/props-${ch}`,70],[`gate-${ch}`,70],[`gate-${ch}-door`,40],[`gate-${ch}-door-l`,40],[`gate-${ch}-door-r`,40]]) {
+    for(const [path,kb] of [[`road/road-${ch}`,45],[`gate-${ch}`,70],[`gate-${ch}-door`,40],[`gate-${ch}-door-l`,40],[`gate-${ch}-door-r`,40]]) {
       const size=(await stat(new URL(`../products/word-guild/art/${path}.webp`,import.meta.url))).size;
       assert.ok(size<=kb*1024,`${path}: ${size}`); total+=size;
     }
