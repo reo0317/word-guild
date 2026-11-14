@@ -19,7 +19,7 @@ import {visitors, rareStatus} from './rare.mjs';
 //   ctx.on        {go, gate, lamp, album, settings, title, notice}
 //
 // 遠近：スクロール量をカメラの前進距離として、同じ世界座標の道を投影し直す。
-import {esc, fab, waxButton, miniHouse} from './dom.mjs';
+import {esc, fab, mapButton, waxButton, miniHouse} from './dom.mjs';
 import {artBox, HOUSE_ART} from './art.mjs';
 import {streakNow, DAILY_TEXT} from './daily.mjs';
 import {WARDS} from './chara-svg.mjs';
@@ -418,7 +418,7 @@ export function renderMap(view, ctx) {
   const tomorrow = map.tomorrow;
   const tomorrowFaces = tomorrow.slice(0, 3).map(id => `<span class="gq-face s">${ctx.face(id, 'print')}</span>`).join('');
   const fogDensity = Math.min(0.88, 0.3 + map.dueCount / 70);
-  const noticeFab = ctx.notice
+  const noticeFab = ctx.notice?.act === 'update'
     ? fab({icon: ctx.notice.act === 'update' ? 'info' : 'export', label: ctx.notice.label, cls: 'notice', attrs: 'id="gq-notice"'}) : '';
 
   view.className = 'gq gq-map';
@@ -452,11 +452,11 @@ export function renderMap(view, ctx) {
         ${tomorrow.length ? `<span class="gq-tomorrow" role="button" tabindex="0" aria-label="明日戻ってくる紙魚 ${tomorrow.length} 匹"><small>明日</small><span class="gq-faces">${tomorrowFaces}</span><b>${tomorrow.length}</b></span>` : ''}
       </div>
       <div class="gq-dock">
-        ${fab({icon: 'album', label: '切手帳', attrs: 'id="gq-album"'})}
-        ${fab({icon: 'gear', label: '設定', attrs: 'id="gq-settings"'})}
+        ${mapButton({kind: 'album', label: '切手帳', id: 'gq-album'})}
+        ${mapButton({kind: 'gear', label: '設定', id: 'gq-settings', badge: ctx.notice?.act === 'settings'})}
         ${waxButton({label: openGate ? `${openGate.ch}区の<br>門へ` : map.fog ? '霧を<br>払う' : '配達に<br>出る', id: 'gq-go', cls: map.fog ? 'fog' : ''})}
         ${openGate ? fab({icon: 'gate', label: `${openGate.ch}区の門`, cls: 'glow', attrs: `id="gq-gate" data-gate="${openGate.ch}"`}) : ''}
-        ${fab({icon: 'title', label: 'タイトル', attrs: 'id="gq-title"'})}
+        ${mapButton({kind: 'title', label: 'タイトル', id: 'gq-title'})}
         ${noticeFab}
       </div>
     </div>`;

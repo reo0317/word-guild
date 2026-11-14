@@ -127,3 +127,16 @@ test('行が完成した時だけ音と短い点灯演出。reduced-motion で�
     assert.equal(ring.hidden, false);
   }
 });
+
+test('地図の札は専用のSVG輪郭と名前を持ち、設定だけに書き出しの朱点を付けられる', async () => {
+  const {mapButton} = await import('../products/word-guild/guild/dom.mjs');
+  for (const [kind, label, id] of [['album', '切手帳', 'gq-album'], ['gear', '設定', 'gq-settings'], ['title', 'タイトル', 'gq-title']]) {
+    const html = mapButton({kind, label, id, badge: kind === 'gear'});
+    assert.ok(html.includes(`id="${id}"`));
+    assert.ok(html.includes(`<small>${label}</small>`));
+    assert.match(html, /gq-button-shadow/);
+    assert.match(html, /gq-button-face/);
+    assert.doesNotMatch(html, /gq-disc|filter|mask|clip-path/);
+    assert.equal(html.includes('aria-label="書き出しのおすすめ"'), kind === 'gear');
+  }
+});

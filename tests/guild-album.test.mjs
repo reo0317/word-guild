@@ -62,3 +62,15 @@ test('設定：書き出し → 読み込みで同じ進捗、要約が並ぶ、
   for (const error of ['empty', 'format', 'checksum', 'data']) assert.ok(IMPORT_ERRORS[error]);
   assert.equal(importText('').error, 'empty');
 });
+
+test('切手だけ：通常とまれびとを区・街灯順に集め、未収集を除く', async () => {
+  const {collectedStamps} = await import('../products/word-guild/guild/album.mjs');
+  const normal = [{id: 'b', ch: 2, shelf: 7}, {id: 'a', ch: 1, shelf: 2}, {id: 'unseen', ch: 1, shelf: 1}];
+  const rares = [{id: 'r2', ch: 2, shelf: 7}, {id: 'r1', ch: 1, shelf: 1}, {id: 'hidden', ch: 1, shelf: 1}];
+  const state = {box: 3, restored: true};
+  const progress = {words: {a: state, b: state}, rares: {r1: state, r2: state}};
+  const stamps = collectedStamps(normal, rares, progress);
+  assert.deepEqual(stamps.map(s => s.word.id), ['r1', 'a', 'b', 'r2']);
+  assert.deepEqual(stamps.map(s => s.rare), [true, false, false, true]);
+  assert.deepEqual(collectedStamps(normal, rares, {}), []);
+});

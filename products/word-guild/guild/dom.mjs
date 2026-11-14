@@ -173,6 +173,30 @@ export function fab({icon: name, label, caption = true, cls = '', attrs = ''}) {
   return `<button type="button" class="gq-fab ${cls}" aria-label="${esc(label)}" ${attrs}><span class="gq-disc">${icon(name)}</span>${caption ? `<small>${esc(label)}</small>` : ''}</button>`;
 }
 
+// 地図の小さな札。影も SVG の輪郭を重ねて描く。
+export function mapButton({kind, label, id, badge = false}) {
+  let shape;
+  if (kind === 'album') {
+    let d = 'M10 3';
+    for (let x = 10; x < 40; x += 6) d += `h1a2 2 0 0 0 4 0h1`;
+    d += 'h0v3';
+    for (let y = 6; y < 42; y += 6) d += 'v1a2 2 0 0 0 0 4v1';
+    d += 'v3';
+    for (let x = 40; x > 10; x -= 6) d += 'h-1a2 2 0 0 0-4 0h-1';
+    d += 'v-3';
+    for (let y = 42; y > 6; y -= 6) d += 'v-1a2 2 0 0 0 0-4v-1';
+    shape = `<path d="${d}Z"/>`;
+  } else if (kind === 'gear') {
+    const points = Array.from({length: 48}, (_, i) => {
+      const a = (i - .5) * Math.PI / 24;
+      const r = i % 4 < 2 ? 23 : 18;
+      return `${25 + Math.cos(a) * r},${25 + Math.sin(a) * r}`;
+    }).join(' ');
+    shape = `<polygon points="${points}"/>`;
+  } else shape = '<path d="M8 46V21a17 17 0 0 1 34 0v25Z"/>';
+  return `<button type="button" class="gq-fab gq-map-button ${kind}" id="${esc(id)}" aria-label="${esc(label)}${badge ? '、書き出しのおすすめ' : ''}"><span class="gq-button-art"><svg viewBox="0 0 50 53" aria-hidden="true"><g class="gq-button-shadow" transform="translate(0 3)">${shape}</g><g class="gq-button-face">${shape}</g>${kind === 'gear' ? '<circle cx="25" cy="25" r="7" fill="#f3ead8" stroke="#1f2a44" stroke-width="2"/>' : ''}</svg>${kind === 'gear' ? '' : icon(kind)}${badge ? '<span class="gq-export-dot" role="img" aria-label="書き出しのおすすめ"></span>' : ''}</span><small>${esc(label)}</small></button>`;
+}
+
 // 封蝋のボタン（主ボタン）。波打つ縁の赤い蝋に、文字を押す。
 const WAX_POINTS = Array.from({length: 56}, (_, k) => {
   const angle = k / 56 * Math.PI * 2;
