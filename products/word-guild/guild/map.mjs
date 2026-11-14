@@ -140,7 +140,7 @@ export function roadRow(width, height, y, camera = 0) {
     dz: z * z / (height * H_CAMERA * f)};
 }
 export function mipLevel(dz) {
-  return Math.max(0, Math.min(5, Math.ceil(Math.log2(Math.max(1, dz * 512 / 280 / 2)))));
+  return Math.max(0, Math.min(5, Math.floor(Math.log2(Math.max(1, dz * 512 / 280 / 2)))));
 }
 export function wardAt(ranges, worldZ) {
   return ranges.find(r => worldZ >= r.start && worldZ < r.end)?.ch ?? null;
@@ -183,10 +183,11 @@ export function panelGeometry(width, height, x, feet, pw, ph, objects, tsumugiSi
   if (tsumugiSize < 70) return null;
   const top = Math.max(8, Math.min(height - ph - 8, feet - tsumugiSize));
   const gap = tsumugiSize / 2 + 6;
+  // 主人公が左半分なら吹き出しは右、右半分なら左。家などとの重なりは許し、主人公とは重ねない。
   const beside = x < width / 2 ? x + gap : x - gap - pw;
   const left = Math.max(8, Math.min(width - pw - 8, beside));
-  const candidates = [{left, top}, {left: 8, top}, {left: width - pw - 8, top}, {left, top: Math.min(height - ph - 8, feet + 12)}];
-  return candidates.find(c => !objects.some(r => c.left < r.right + 8 && c.left + pw > r.left - 8 && c.top < r.bottom + 8 && c.top + ph > r.top - 8)) ?? null;
+  const candidates = [{left, top}, {left, top: Math.min(height - ph - 8, feet + 12)}];
+  return candidates.find(c => !objects.some(r => c.left < r.right + 8 && c.left + pw > r.left - 8 && c.top < r.bottom + 8 && c.top + ph > r.top - 8)) ?? candidates[0];
 }
 
 const DAILY_SHORT = {revenge: ['↺', '戻ってきた紙魚'], fresh: ['✦', '新しい紙魚'], clean: ['◇', 'ヒントなし'], finish: ['▶', '配達']};
@@ -330,7 +331,7 @@ export function renderMap(view, ctx) {
         data-reveal="${reveal}" style="--reveal:${100 - reveal}%" aria-label="街灯${lamp.shelf}の${letter ? '手紙' : '切手帳'}を開く">
         <span class="gq-house-fallback" aria-hidden="true">${miniHouse()}</span>
         <span class="gq-house-art" aria-hidden="true"><i class="gq-house-halo"></i><span class="gq-house-image"><i class="gq-house-shadow"></i>
-        <span class="gq-house-reveal"><img class="gq-house-color" alt="" width="140" height="140" decoding="async"></span>
+        <img class="gq-house-color" alt="" width="140" height="140" decoding="async">
         <i class="gq-house-warm"></i></span><i class="gq-house-sparks"></i></span>
         ${visiting.has(lamp.shelf) ? '<span class="gq-visitor" aria-label="まれびとが来ています">✦</span>' : ''}
         ${done ? `<span class="gq-house-stars ${stars?.complete ? 'joined' : ''} ${stars?.gold === 5 ? 'gold' : ''}" aria-label="夜の切手 ${stars?.met ?? 0}/5">${Array.from({length: 5}, (_, i) => `<i class="${i < (stars?.met ?? 0) ? 'met' : ''}">★</i>`).join('')}</span>` : ''}

@@ -209,11 +209,12 @@ test('前進中も道は画面内に収まり、家は余白の広い道の外�
   }
 });
 
-test('家はmaskを使わず下から段階的に着色する', async () => {
+test('家の境目は24%のグラデーションで、未配達と全着色は端まで描き分ける', async () => {
   const css = await readFile(new URL('../products/word-guild/map.css', import.meta.url), 'utf8');
-  assert.match(css, /height:calc\(100% - var\(--reveal\)\);overflow:hidden/);
+  assert.match(css, /-webkit-mask-image:linear-gradient\(to bottom,transparent calc\(var\(--reveal\) - 12%\),#000 calc\(var\(--reveal\) \+ 12%\)\)/);
   assert.match(css, /\[data-reveal="0"\] .gq-house-color\{visibility:hidden\}/);
-  assert.doesNotMatch(css, /(?:filter|mask(?:-image)?|clip-path)\s*:/);
+  assert.match(css, /\[data-reveal="100"\] .gq-house-color\{-webkit-mask-image:none;mask-image:none\}/);
+  assert.doesNotMatch(css, /(?:^|[;{])\s*filter\s*:/);
   assert.match(css, /\.gq-road-svg path\{animation:none;transition:none;transform:none\}/);
 });
 

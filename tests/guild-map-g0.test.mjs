@@ -62,7 +62,7 @@ test('全6区の書き出し画像は容量制限と合計1.2MBを守る',async(
 
 test('全区の門は家と同じ指数で遠方ほど小さくなり、開いた扉は開口内に留まる', async () => {
   const css = await readFile(new URL('../products/word-guild/map.css', import.meta.url), 'utf8');
-  assert.doesNotMatch(css, /(?:filter|mask|clip-path)\s*:/);
+  assert.doesNotMatch(css, /(?:^|[;{])\s*(?:filter|clip-path)\s*:/m);
   assert.doesNotMatch(css, /gq-gate-door-[lr]\{transform:scaleX\(-/);
   assert.match(css, /cleared \.gq-gate-door-l\{transform:scaleX\(\.16\)/);
   assert.match(css, /cleared \.gq-gate-door-r\{transform:scaleX\(\.16\)/);
