@@ -708,7 +708,8 @@ export function renderMap(view, ctx) {
       }
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${displayScale.toFixed(3)})`;
       b.el.style.opacity = String(fade);
-      b.el.style.zIndex = b.panel ? '203' : String(Math.round(s * 100));
+      // 重なり順は奥行きの距離で決める（1単位ごと）。遠くで縮尺を丸めると同じ値になり、順が入れかわってちらつくため。
+      b.el.style.zIndex = b.panel ? '199999' : String(Math.max(1, 100000 - Math.round(r)));
     }
 
     // レイアウトの測定は初期表示・リサイズ・スクロール停止時だけ。
