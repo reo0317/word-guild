@@ -38,7 +38,7 @@ export function announceFog(fog, storage) {
   return Boolean(fog) && !seen;
 }
 
-const H = {post: 170, ward: 64, step: 54, lamp: 92, gate: 112, top: 180};
+const H = {post: 170, ward: 150, step: 54, lamp: 92, gate: 112, top: 180};
 const HORIZON = 0.14;  // 地平線の高さ（道の枠の高さに対する割合）
 // 世界座標の単位は任意。f は画面幅を単位とする焦点距離。
 export const A = 0.225; // 中心線の横振幅（最接近時、道の外縁が画面の10%まで来る）
@@ -242,7 +242,7 @@ function layout(map) {
   add('post', H.post, {}, H.post);
   let k = 0;
   map.wards.forEach((ward, wi) => {
-    add('ward', H.ward, {ward, wi}, H.ward / 2);
+    add('ward', H.ward, {ward, wi}, H.ward - 30); // 門の絵と重ならないよう、門の少し先に区の名札
     for (const lamp of ward.lamps) {
       lamp.steps.forEach((step, si) => {
         const isHere = Boolean(here) && !here.gate && here.ch === ward.ch && here.shelf === lamp.shelf && here.step === si + 1;
