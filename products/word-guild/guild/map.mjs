@@ -39,7 +39,7 @@ export function announceFog(fog, storage) {
   return Boolean(fog) && !seen;
 }
 
-const H = {post: 170, ward: 64, step: 54, lamp: 92, gate: 112, top: 180};
+const H = {post: 170, ward: 64, step: 54, lamp: 92, gate: 200, top: 180};
 const HORIZON = 0.14;  // 地平線の高さ（道の枠の高さに対する割合）
 // 世界座標の単位は任意。f は画面幅を単位とする焦点距離。
 export const A = 0.225; // 中心線の横振幅（最接近時、道の外縁が画面の10%まで来る）
@@ -277,7 +277,7 @@ function layout(map) {
       add('lamp', H.lamp, {ward, lamp, k: k++});
     }
     if (here?.gate && here.ch === ward.ch) add('gate-front', 0, {ward, isHere: true}, 0);
-    add('gate', H.gate, {ward, k: k++});
+    add('gate', H.gate, {ward, k: k++}, H.gate - 50); // 門は区の最後の街灯の札よりはっきり奥に置く（重なり順がちらつかない）
   });
   add('top', H.top, {}, H.top - 70);
   let start = 0;
@@ -358,7 +358,7 @@ export function renderMap(view, ctx) {
           <i class="gq-gate-fallback" aria-hidden="true"></i><img class="gq-gate-frame" src="art/gate-${ward.ch}.webp" alt="" width="512" height="512">
           <img class="gq-gate-door gq-gate-door-l" src="art/gate-${ward.ch}-door-l.webp" alt="">
           <img class="gq-gate-door gq-gate-door-r" src="art/gate-${ward.ch}-door-r.webp" alt="">
-          <span class="gq-gate-number">${ward.ch}</span><i class="gq-gate-mist a"></i><i class="gq-gate-mist b"></i>${ward.gate === 'open' ? '<b class="gq-gate-card" aria-hidden="true">•</b>' : ''}${archText}</${tag}>${archText ? '' : gateTag}`);
+          <i class="gq-gate-mist a"></i><i class="gq-gate-mist b"></i>${ward.gate === 'open' ? '<b class="gq-gate-card" aria-hidden="true">•</b>' : ''}${archText}</${tag}>${archText ? '' : gateTag}`);
       }
       const label = {hidden: '', open: `${ward.ch}区`, cleared: '✓'}[ward.gate];
       const tag = ward.gate === 'open' ? 'button' : 'div';
