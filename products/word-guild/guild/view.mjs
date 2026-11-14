@@ -1004,7 +1004,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       </div>
       <div class="gq-dock gq-result-dock">
         ${fab({icon: returning ? 'next' : 'home', label: returning ? 'つぎの石段へ' : 'トップへ', attrs: 'id="gq-guild"'})}
-        ${waxButton({label: primary, id: 'gq-again'})}
+        ${waxButton({label: primary, id: 'gq-again', cls: !returning && after.fog ? 'fog' : ''})}
         ${fab({icon: 'album', label: '切手帳', attrs: 'id="gq-album"'})}
         ${nextGate && !gateNext ? fab({icon: 'gate', label: `${nextGate.ch}区の門`, cls: 'glow', attrs: 'id="gq-gate"'}) : ''}
       </div>`;
