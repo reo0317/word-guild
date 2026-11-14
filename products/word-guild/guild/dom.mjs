@@ -196,7 +196,7 @@ export function mapButton({kind, label, id, badge = false}) {
     }).join(' ');
     shape = `<polygon points="${points}"/>`;
   } else shape = '<path d="M8 46V21a17 17 0 0 1 34 0v25Z"/>';
-  return `<button type="button" class="gq-fab gq-map-button ${kind}" id="${esc(id)}" aria-label="${esc(label)}${badge ? '、書き出しのおすすめ' : ''}"><span class="gq-button-art"><svg viewBox="0 0 50 53" aria-hidden="true"><g class="gq-button-shadow" transform="translate(0 3)">${shape}</g><g class="gq-button-face">${shape}</g>${kind === 'gear' ? '<circle cx="25" cy="25" r="7" fill="#f3ead8" stroke="#1f2a44" stroke-width="2"/>' : ''}</svg>${['gear', 'letter'].includes(kind) ? '' : icon(kind)}${badge ? '<span class="gq-export-dot" role="img" aria-label="書き出しのおすすめ"></span>' : ''}</span><small>${esc(label)}</small></button>`;
+  return `<button type="button" class="gq-fab gq-map-button ${kind}" id="${esc(id)}" aria-label="${esc(label)}${badge ? '、書き出しのおすすめ' : ''}"><span class="gq-button-art"><img data-map-button-image src="art/btn-${kind === 'gear' ? 'settings' : kind}.webp" alt="" width="128" height="128" decoding="async"><svg viewBox="0 0 50 53" aria-hidden="true"><g class="gq-button-shadow" transform="translate(0 3)">${shape}</g><g class="gq-button-face">${shape}</g>${kind === 'gear' ? '<circle cx="25" cy="25" r="7" fill="#f3ead8" stroke="#1f2a44" stroke-width="2"/>' : ''}</svg>${['gear', 'letter'].includes(kind) ? '' : icon(kind)}${badge ? '<span class="gq-export-dot" role="img" aria-label="書き出しのおすすめ"></span>' : ''}</span><small>${esc(label)}</small></button>`;
 }
 
 // 封蝋のボタン（主ボタン）。波打つ縁の赤い蝋に、文字を押す。

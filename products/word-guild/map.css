@@ -66,8 +66,9 @@
 .gq-pin.sealed .mp{width:36px;height:45px}
 
 /* ツムギの頭上：今の行（霧のかすれ入り）を1行で。画面の幅に収まるよう map.mjs が位置を決める。 */
-.gq-post{position:absolute;left:-120px;top:-130px;width:240px;height:130px;border:3px solid var(--ink);border-radius:14px;background:var(--fog)}
-.gq-post-art{position:absolute;inset:0;border:0;border-radius:11px}
+.gq-post{position:absolute;left:0;top:0;width:256px;height:256px;transform-origin:0 0;cursor:pointer}
+.gq-post-art{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.gq-post:focus-visible{outline:2px solid var(--seal);outline-offset:4px}
 .gq-guide{position:absolute;left:8px;bottom:-6px;display:flex;align-items:flex-end;gap:4px}.gq-face-hatori{flex:0 0 72px;height:72px}
 .gq-top-block{position:absolute;left:-300px;bottom:-18px;width:600px;height:600px;pointer-events:none}
 .gq-top-block img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
@@ -229,3 +230,5 @@
 .gq-map-foot .gq-dock>.gq-wax{width:70px;height:70px}
 .gq-map-foot .gq-dock>.gq-wax span{font-size:13px}
 .gq-map-foot .gq-dock>.gq-fab .gq-disc{width:36px;height:36px}
+
+.gq-post.door-flipped .gq-post-art{transform:scaleX(-1)}

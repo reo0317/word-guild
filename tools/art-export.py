@@ -59,6 +59,37 @@ def save_webp(im, path, limit_kb):
     return path.stat().st_size // 1024
 
 
+def export_map_front():
+    """郵便局・地図ボタンと導入区間の道だけを書き出す。"""
+    for name, size, limit in [('post-front', 256, 40)] + [(f'btn-{kind}', 128, 15) for kind in ('letter', 'album', 'settings', 'title')]:
+        with Image.open(WORK / f'{name}.png') as source:
+            im = to_square(key_out_green(source), size=size, margin=0.02)
+        target = OUT / f'{name}.webp'
+        print(name, save_webp(im, target, limit), 'KB')
+        assert target.stat().st_size <= limit * 1024
+    export_road(0)
+
+
+def export_road(n):
+    dest = OUT / 'road'
+    dest.mkdir(exist_ok=True)
+    with Image.open(WORK / f'road-{n}.webp') as source:
+        im = source.convert('RGBA').resize((256,608), Image.LANCZOS)
+    original = im.copy()
+    for y in range(16):
+        blend = Image.blend(original.crop((0,y,256,y+1)), original.crop((0,511-y,256,512-y)), .5)
+        for row in (y,511-y):
+            im.paste(Image.blend(original.crop((0,row,256,row+1)),blend,(1-y/16)**2),(0,row))
+    target = dest / f'road-{n}.webp'
+    for colors in (128,64,32,16):
+        im.quantize(colors).convert('RGBA').save(target,'WEBP',lossless=True,method=6)
+        if target.stat().st_size <= 45*1024: break
+    assert target.stat().st_size <= 45*1024
+    with Image.open(target) as check:
+        assert check.crop((0,0,256,1)).tobytes() == check.crop((0,511,256,512)).tobytes()
+    print('road', n, target.stat().st_size, 'bytes')
+
+
 def export_words():
     dest = OUT / 'word'
     dest.mkdir(parents=True, exist_ok=True)
@@ -173,6 +204,8 @@ def export_map():
     dest.mkdir(exist_ok=True)
     available = {'roads': [], 'gates': [], 'props': []}
     arches = {}
+    export_map_front()
+    available['roads'].append(0)
     export_lighthouse()
     for n in range(1,7):
         for kind in ('road', 'gate'):  # 道ばたの小物は使わない（依頼者の判断）
@@ -182,18 +215,7 @@ def export_map():
                     source.load()
                     im = source.convert('RGBA')
                 if kind == 'road':
-                    im = im.resize((256,608), Image.LANCZOS)
-                    original = im.copy()
-                    for y in range(16):
-                        blend = Image.blend(original.crop((0,y,256,y+1)), original.crop((0,511-y,256,512-y)), .5)
-                        for row in (y,511-y):
-                            im.paste(Image.blend(original.crop((0,row,256,row+1)),blend,(1-y/16)**2),(0,row))
-                    target = dest / f'road-{n}.webp'
-                    for colors in (128,64,32,16):
-                        im.quantize(colors).convert('RGBA').save(target,'WEBP',lossless=True,method=6)
-                        if target.stat().st_size <= 45*1024: break
-                    with Image.open(target) as check:
-                        assert check.crop((0,0,256,1)).tobytes() == check.crop((0,511,256,512)).tobytes()
+                    export_road(n)
                     available['roads'].append(n)
                 elif kind == 'props':
                     source = key_out_green(im)
@@ -235,7 +257,11 @@ def main():
     parser.add_argument('--word', action='store_true', help='単語の意味の絵だけを書き出す')
     parser.add_argument('--map', action='store_true', help='全区の道・門・小物を書き出す')
     parser.add_argument('--map2', action='store_true', help='2区の道と門だけを書き出す')
+    parser.add_argument('--map-front', action='store_true', help='郵便局・地図ボタン・導入の道を書き出す')
     args = parser.parse_args()
+    if args.map_front:
+        export_map_front()
+        return
     if args.map:
         export_map()
         return

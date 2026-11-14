@@ -267,7 +267,7 @@ function postmark(day) {
 }
 
 // 道の上の位置を下から積んで決める。y は「郵便局からの距離」。
-function layout(map) {
+export function layout(map) {
   const items = [];
   let y = 0;
   const add = (type, h, data = {}, cy = h / 2) => {
@@ -290,7 +290,7 @@ function layout(map) {
     add('gate', H.gate, {ward, k: k++}, H.gate - 50); // 門は区の最後の街灯の札よりはっきり奥に置く（重なり順がちらつかない）
   });
   add('top', H.top, {}, H.top - 70);
-  let start = 0;
+  let start = H.post;
   const gates = items.filter(i => i.type === 'gate');
   const ranges = gates.map((i, n) => {
     // 最後の門（6区）の先、灯台までの道も6区の絵で敷く。
@@ -298,6 +298,7 @@ function layout(map) {
     start = i.cy;
     return range;
   });
+  ranges.unshift({ch: 0, start: -Infinity, end: H.post});
   return {items, total: y, ranges};
 }
 
@@ -403,7 +404,7 @@ export function renderMap(view, ctx) {
   }
 
   // 1区の手前の郵便局。押すと「はじまりの物語」を見返せる。
-  const post = bb('gq-bb-post', 14, 0, `<div class="gq-post" role="button" tabindex="0" data-story aria-label="郵便局：はじまりの物語を見る">${artBox('post', 'gq-post-art')}
+  const post = bb('gq-bb-post', 14, 0, `<div class="gq-post" role="button" tabindex="0" data-story aria-label="郵便局：はじまりの物語を見る"><img class="gq-post-art" src="art/post-front.webp" alt="" width="256" height="256" decoding="async">
     <div class="gq-guide">${artBox('hatoriSmile', 'gq-face-hatori')}${map.dueCount ? `<span class="gq-due-badge" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b>${map.dueCount}</b></span>` : ''}</div></div>`);
   const lighthouse = bb('gq-bb-top', roadEnd, 0, `<div class="gq-top-block" role="img" aria-label="道の終点の灯台">${night.complete ? '<span class="gq-full-stars" aria-label="夜の切手がすべてそろいました">✦ ⋆ ✧ ⋆ ✦</span>' : ''}<i class="gq-lighthouse-beam" aria-hidden="true"></i><img src="art/lighthouse.webp" data-lighthouse alt="" width="600" height="600" decoding="async"></div>`);
 
@@ -468,6 +469,12 @@ export function renderMap(view, ctx) {
     const openStory = () => window.dispatchEvent(new CustomEvent('wg:story'));
     storyDoor.onclick = openStory;
     storyDoor.onkeydown = event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openStory(); } };
+  }
+  for (const img of view.querySelectorAll('[data-map-button-image]')) {
+    const show = () => img.parentElement.classList.add('image-loaded');
+    img.onload = show;
+    img.onerror = () => img.parentElement.classList.remove('image-loaded');
+    if (img.complete && img.naturalWidth) show();
   }
   const tower = view.querySelector('[data-lighthouse]');
   if (tower) tower.onerror = () => { tower.onerror = null; tower.src = 'art/house-48.webp'; };
@@ -561,13 +568,13 @@ export function renderMap(view, ctx) {
     const full = ribbon(roadEnd, 1);
     let edge = '', previousEdge = false;
     for (const p of roadPoints(Ws,Hs,visibleEnd,c)) {
-      const ch=wardAt(ranges,p.worldZ), show=!(textures.has(ch) && (ch===1 || ch===6));
+      const ch=wardAt(ranges,p.worldZ), show=!(textures.has(ch) && (ch===0 || ch===1 || ch===6));
       if(show) edge += `${previousEdge?'L':'M'}${fmt([p.x-p.half,p.y])}`;
       previousEdge=show;
     }
     previousEdge=false;
     for (const p of roadPoints(Ws,Hs,visibleEnd,c)) {
-      const ch=wardAt(ranges,p.worldZ), show=!(textures.has(ch) && (ch===1 || ch===6));
+      const ch=wardAt(ranges,p.worldZ), show=!(textures.has(ch) && (ch===0 || ch===1 || ch===6));
       if(show) edge += `${previousEdge?'L':'M'}${fmt([p.x+p.half,p.y])}`;
       previousEdge=show;
     }
@@ -665,7 +672,7 @@ export function renderMap(view, ctx) {
     }
     const active = wardAt(ranges, c) ?? 1;
     for (const ch of [active-1,active,active+1]) {
-      if (!paint || typeof Image === 'undefined' || ch < 1 || ch > 6 || requested.has(ch)) continue;
+      if (!paint || typeof Image === 'undefined' || ch < 0 || ch > 6 || requested.has(ch)) continue;
       requested.add(ch);
       if (MAP_ART.roads.includes(ch)) {
         const texture = new Image();
@@ -712,6 +719,17 @@ export function renderMap(view, ctx) {
       const displayScale = b.panel ? 1 : pin ? tsumugiScale(s, initialTsumugiScale)
         : top ? Math.min(280, 320 * s ** .6) / 600
         : b.el.classList.contains('gq-bb-gate') ? gateScale(s) : objectScale(s * b.scale);
+      if (post) {
+        // 玄関が左寄りの絵を道の右に置く。家と同じ遠近で約1.3倍。
+        const p = project(b.y);
+        // 道の左右で広い方に建てる。家と同じく、はみ出す分は画面の外へ出てよい（小さく潰さない）。
+        const right = Ws - p.x - p.half >= p.x - p.half;
+        const size = 1.3 * Math.max(36, Math.min(140, 132 * Math.min(1, p.scale) ** .6));
+        const building = b.el.querySelector('.gq-post');
+        building.classList.toggle('door-flipped', !right);
+        const dx = right ? p.half + 8 : -p.half - 8 - size;
+        building.style.transform = `translate(${(dx / displayScale).toFixed(2)}px,${(-size * .85 / displayScale).toFixed(2)}px) scale(${(size / (256 * displayScale)).toFixed(3)})`;
+      }
       if (b.house) {
         const current = Number(b.house.dataset.shelf) === map.here?.shelf;
         const {size, offset, side} = houseGeometry(Ws, project(b.y), current);
