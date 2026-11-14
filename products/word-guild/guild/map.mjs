@@ -3,7 +3,7 @@ import {isRestored} from './srs.mjs';
 import {visitors, rareStatus} from './rare.mjs';
 // 道の地図（トップの画面）。手前（下）から奥（上）へ、遠近のついた道が続く。
 // 手前が近くて大きく、奥へ行くほど小さく霧にかすむ。今いる石段は手前寄りに見える。
-// DOM は container.innerHTML に描くだけで、ゲームの進行や保存には触らない。押されたものは ctx.on の関数に渡す。
+// DOM は container.innerHTML に描く。霧の案内の表示済み状態だけ保存し、操作は ctx.on に渡す。
 //
 // renderMap(view, ctx)
 //   ctx.map       stages.mjs の buildMap の結果
@@ -22,6 +22,21 @@ import {esc, fab, waxButton, miniHouse} from './dom.mjs';
 import {artBox, HOUSE_ART} from './art.mjs';
 import {streakNow} from './daily.mjs';
 import {WARDS} from './chara-svg.mjs';
+
+// 保存できない環境でも、同じ霧の間は案内を繰り返さない。
+let fogAnnounced = false;
+export function announceFog(fog, storage) {
+  const key = 'wordGuild.map.fogAnnounced';
+  let seen = fogAnnounced;
+  try {
+    storage ??= globalThis.localStorage;
+    seen = storage?.getItem(key) === '1' || seen;
+    if (fog) storage?.setItem(key, '1');
+    else storage?.removeItem(key);
+  } catch { /* 保存不可の場合はメモリで保持する。 */ }
+  fogAnnounced = Boolean(fog);
+  return Boolean(fog) && !seen;
+}
 
 const H = {post: 170, ward: 64, step: 54, lamp: 92, gate: 112, top: 180};
 const HORIZON = 0.14;  // 地平線の高さ（道の枠の高さに対する割合）
@@ -300,7 +315,7 @@ export function renderMap(view, ctx) {
     const side = hereItem.lat > 0 ? 'left' : 'right';
     const shadows = map.next.map(id => `<span class="gq-face">${ctx.face(id, 'shadow')}</span>`).join('');
     const dues = map.due.map(id => `<span class="gq-face">${ctx.face(id, 'print')}</span>`).join('');
-    herePanel = bb('gq-bb-tsumugi', hereY - 100, 0, `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}">`)
+    herePanel = bb('gq-bb-tsumugi', hereY - 12, 0, `<img class="gq-tsumugi-pin" alt="" src="${esc(ctx.tsumugi)}">`)
       + bb(`gq-bb-panel ${side}`, hereY, hereItem.lat, `<div class="gq-here-panel ${side}">
         ${map.next.length ? `<div class="gq-faces" aria-label="この先の紙魚"><span class="gq-arrow" aria-hidden="true">▸</span>${shadows}</div>` : '<p class="gq-top-mark" aria-label="いちばん上">★</p>'}
         ${map.dueCount ? `<div class="gq-faces due" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b class="gq-due-n">${map.dueCount}</b>${dues}</div>` : ''}
@@ -347,7 +362,7 @@ export function renderMap(view, ctx) {
           <path class="edge" id="gq-r-edge"/><path class="center" id="gq-r-center"/>
         </svg>
         ${nodes}${herePanel}${post}${lighthouse}
-        ${map.fog ? `<span class="gq-fog-count">${'<i></i>'.repeat(Math.min(6, Math.ceil(map.dueCount / 9)))}霧の配達 あと${Math.ceil(map.dueCount / 9)}回（目安）</span><i class="gq-fogband" aria-hidden="true" style="--d:${fogDensity.toFixed(2)}"></i>` : ''}
+        ${map.fog ? `<span class="gq-fog-count">${'<i></i>'.repeat(Math.min(6, Math.ceil(map.dueCount / 9)))}霧の配達 あと${Math.ceil(map.dueCount / 9)}回</span><i class="gq-fogband" aria-hidden="true" style="--d:${fogDensity.toFixed(2)}"></i>` : ''}
       </div>
     </div></div>
     <div class="gq-map-foot">
@@ -366,6 +381,13 @@ export function renderMap(view, ctx) {
       </div>
     </div>`;
 
+  const fogIntro = announceFog(map.fog);
+  if (fogIntro) view.insertAdjacentHTML('beforeend', `<dialog class="gq-fog-intro" aria-labelledby="gq-fog-title" aria-describedby="gq-fog-text">
+    <div class="gq-fog-ovals" aria-hidden="true"><i></i><i></i><i></i></div>
+    <h2 id="gq-fog-title">霧が出ました</h2>
+    <p id="gq-fog-text">戻ってきた紙魚が増えています。<br>霧の配達で、前に会った言葉を多めに届けます。</p>
+    <form method="dialog"><button type="submit" aria-label="とじる" autofocus>×</button></form>
+  </dialog>`);
   const $ = s => view.querySelector(s);
   $('#gq-go').onclick = () => openGate ? on.gate(openGate.ch) : on.go();
   $('#gq-album').onclick = () => on.album();
@@ -556,27 +578,12 @@ export function renderMap(view, ctx) {
       }
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${displayScale.toFixed(3)})`;
       b.el.style.opacity = String(fade);
-      b.el.style.zIndex = b.panel ? '203' : pin ? '202' : String(Math.round(s * 100));
+      b.el.style.zIndex = b.panel ? '203' : String(Math.round(s * 100));
     }
 
     // レイアウトの測定は初期表示・リサイズ・スクロール停止時だけ。
     placePanel = () => {
     if (!stage.isConnected) return;
-    const obstacles = boards.filter(b => b.shown && (b.house || b.el.classList.contains('gq-bb-gate')))
-      .map(b => (b.house ?? b.el.querySelector('.gq-gate') ?? b.el).getBoundingClientRect());
-    const pinBoard = boards.find(b => b.shown && b.el.classList.contains('gq-bb-tsumugi'));
-    const pinImage = pinBoard?.el.querySelector('.gq-tsumugi-pin');
-    if (pinImage) {
-      pinImage.style.transform = '';
-      const r = pinImage.getBoundingClientRect();
-      const host = stage.getBoundingClientRect();
-      // 道の外へ横にはずらさない。重なりは道に沿って手前へよけ、よけきれなければそのまま前に立つ。
-      const candidates = [{x:0,y:0}, {x:0,y:60}, {x:0,y:110}];
-      const spot = candidates.find(({x,y}) => r.left+x >= host.left && r.right+x <= host.right && r.top+y >= host.top && r.bottom+y <= host.bottom
-        && !obstacles.some(o => r.left+x < o.right+8 && r.right+x > o.left-8 && r.top+y < o.bottom+8 && r.bottom+y > o.top-8));
-      pinImage.style.visibility = '';
-      if (spot) pinImage.style.transform = `translate(${spot.x}px,${spot.y}px)`;
-    }
     const panelBoard = boards.find(b => b.panel && b.shown);
     if (panelBoard) {
       const p = project(panelBoard.y);
@@ -625,7 +632,7 @@ export function renderMap(view, ctx) {
     svg.setAttribute('viewBox', `0 0 ${Ws} ${Hs}`);
     road.scrollTop = total - cameraAt;
     if (initialTsumugiScale === null) {
-      initialTsumugiScale = projectRoad(Ws, Hs, hereY - 100,
+      initialTsumugiScale = projectRoad(Ws, Hs, hereY - 12,
         Math.min(total, Math.max(-1400, total - road.scrollTop))).scale;
     }
     update();
@@ -637,7 +644,10 @@ export function renderMap(view, ctx) {
     panelTimer = setTimeout(() => { if (frame) { cancelAnimationFrame(frame); update(); } placePanel(); }, 140);
   }, {passive: true});
   measure();
-  requestAnimationFrame(measure);
+  requestAnimationFrame(() => {
+    measure();
+    if (fogIntro && view.isConnected) $('.gq-fog-intro')?.showModal();
+  });
   if (typeof ResizeObserver !== 'undefined') new ResizeObserver(measure).observe(road);
 }
 

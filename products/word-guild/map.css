@@ -165,3 +165,20 @@
 .gq-gate-art.hidden{opacity:.8}
 .gq-gate-art.hidden::after{content:"";position:absolute;inset:45% 0 0;background:radial-gradient(ellipse,var(--fog-lt),transparent 75%);opacity:.8}
 .gq-gate-card{position:absolute;left:48%;top:60%;width:10px;height:14px;background:var(--paper-hi);color:var(--seal);font-size:12px;line-height:14px;transform:rotate(4deg)}
+
+/* 霧の配達も、通常の封蝋と同じ輪郭・寸法。 */
+.gq-wax.fog{color:#1f2a44}
+.gq-wax.fog polygon{fill:#9fb3bf;stroke:#1f2a44}
+.gq-wax.fog circle{stroke:#1f2a4466}
+.gq-wax.fog::after{content:"";position:absolute;inset:17%;border-radius:50%;pointer-events:none;background:radial-gradient(ellipse 48% 17% at 40% 30%,#ffffff55 95%,transparent),radial-gradient(ellipse 48% 14% at 60% 64%,#1f2a4422 95%,transparent)}
+.gq-wax.fog span{z-index:1;text-shadow:none}
+.gq-fog-intro{box-sizing:border-box;width:calc(100% - 40px);max-width:320px;padding:22px 18px 16px;border:2px solid #1f2a44;border-radius:22px;background:var(--paper,#fff9ed);color:#1f2a44;text-align:center}
+.gq-fog-intro::backdrop{background:#1f2a4466}
+.gq-fog-intro h2{font-size:19px;margin:10px 0}
+.gq-fog-intro p{font-size:14px;line-height:1.8;margin:0 0 14px}
+.gq-fog-intro form{margin:0}
+.gq-fog-intro button{width:44px;height:44px;padding:0;border:2px solid #1f2a44;border-radius:50%;background:#9fb3bf;color:#1f2a44;font-size:26px}
+.gq-fog-ovals{position:relative;width:140px;height:48px;margin:auto}
+.gq-fog-ovals i{position:absolute;width:100px;height:20px;border-radius:50%;background:#9fb3bf88;left:0;top:4px}
+.gq-fog-ovals i:nth-child(2){left:40px;top:16px}
+.gq-fog-ovals i:nth-child(3){left:12px;top:28px}

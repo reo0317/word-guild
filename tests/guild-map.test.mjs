@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {HOUSE_ART} from '../products/word-guild/guild/art.mjs';
-import {remainingSteps, renderMap, houseFlipped, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, lighthouseVisible, LIGHTHOUSE_DISTANCE, roadPoints, roadOpacity, FADE_START, DRAW_DISTANCE, A, L, W, f} from '../products/word-guild/guild/map.mjs';
+import {announceFog, remainingSteps, renderMap, houseFlipped, panelGeometry, houseGeometry, projectRoad, skyGeometry, WARD_VANISHING, tsumugiScale, objectScale, roadAmplitude, lighthouseOpacity, lighthouseVisible, LIGHTHOUSE_DISTANCE, roadPoints, roadOpacity, FADE_START, DRAW_DISTANCE, A, L, W, f} from '../products/word-guild/guild/map.mjs';
 import {buildMap} from '../products/word-guild/guild/stages.mjs';
 
 const words = JSON.parse(await readFile(new URL('../products/word-guild/data/words.json', import.meta.url)));
@@ -107,6 +107,7 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
   const panel = {style:{}, offsetWidth:130, offsetHeight:80};
   const panelBoard = {style:{}, classList:{contains:()=>false}, querySelector:sel=>sel === '.gq-here-panel' ? panel : null};
   const lamps = [];
+  const depthHouses = [-30, 30].map(() => ({style:{}, classList:{contains:()=>false}, querySelector:()=>null}));
   const sky = {style:{}, dataset:{ward:'1'}, classList:{toggle(){}}};
   const nodes = {'#gq-road':road, '#gq-stage':{style:{}, isConnected:true, getBoundingClientRect:()=>({left:0,top:44})}};
   const view = {innerHTML:'', querySelector(selector) {
@@ -121,7 +122,8 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
       lamps.push({style:{}, dataset:{y:lamp[1],lat:lamp[2]}, classList:{contains:()=>false}, querySelector:()=>null});
     }
     for (const node of [pin, ...lamps]) node.querySelectorAll = () => [];
-    return [pin, panelBoard, ...lamps];
+    depthHouses.forEach((house, i) => { house.dataset = {y:String(Number(pin.dataset.y) + (i ? 30 : -30)), lat:"0"}; });
+    return [pin, panelBoard, ...lamps, ...depthHouses];
   }};
   const oldWindow = globalThis.window, oldRAF = globalThis.requestAnimationFrame;
   globalThis.window = {innerHeight:874};
@@ -157,6 +159,9 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
       >= projectRoad(402,710,initialCamera + DRAW_DISTANCE,initialCamera).y);
     const initialScroll = road.scrollTop;
     assert.equal(scale(), 1);
+    assert.ok(Number(depthHouses[0].style.zIndex) > Number(pin.style.zIndex));
+    assert.ok(Number(depthHouses[1].style.zIndex) < Number(pin.style.zIndex));
+    assert.equal(panelBoard.style.zIndex, "203");
     assert.equal(sky.style.top, `${skyGeometry(402,710,1).top}px`);
     // 初回の再計測でも基準倍率を変えない。
     scheduled();
@@ -385,4 +390,62 @@ test('門が開いた地図の封蝋から門の配達へ進む', () => {
     nodes.get('#gq-go').onclick();
     assert.equal(chosen,1);
   } finally { globalThis.requestAnimationFrame = old; }
+});
+
+
+test('霧の案内は再描画・保存後も一度だけで、晴れたら次の霧で案内する', () => {
+  const data = new Map();
+  const storage = {getItem:k=>data.get(k),setItem:(k,v)=>data.set(k,v),removeItem:k=>data.delete(k)};
+  announceFog(false, storage);
+  assert.equal(announceFog(true, storage), true);
+  assert.equal(announceFog(true, storage), false);
+  announceFog(false, {removeItem(){}}); // メモリだけリセットして保存からの復元を確認。
+  assert.equal(announceFog(true, storage), false);
+  assert.equal(announceFog(false, storage), false);
+  assert.equal(announceFog(true, storage), true);
+  const blocked = {getItem(){throw Error('blocked');}, removeItem(){throw Error('blocked');}};
+  announceFog(false, blocked);
+  assert.equal(announceFog(true, blocked), true);
+  assert.equal(announceFog(true, blocked), false);
+  announceFog(false, storage);
+});
+
+test('霧の地図を描いた次のフレームで案内を開き、再描画では追加しない', () => {
+  const oldRAF = globalThis.requestAnimationFrame;
+  const frames = [];
+  const storage = {removeItem(){}};
+  announceFog(false, storage);
+  globalThis.requestAnimationFrame = fn => {frames.push(fn); return 1;};
+  try {
+    let opened = 0;
+    const nodes = new Map();
+    const view = {innerHTML:'', isConnected:true,
+      insertAdjacentHTML(_, html){this.innerHTML += html;},
+      querySelector(s) {
+        if (!nodes.has(s)) nodes.set(s, {style:{},addEventListener(){},setAttribute(){},showModal(){opened++;}});
+        return nodes.get(s);
+      }, querySelectorAll:()=>[]};
+    const progress = {words:{},gates:[]};
+    const map = buildMap(words,progress,20000);
+    map.fog = true; map.dueCount = 27;
+    const ctx = {map,progress,today:20000,total:1400,face:()=>'',tsumugi:'',on:{}};
+    renderMap(view, ctx);
+    assert.equal(opened, 0);
+    assert.match(view.innerHTML, /<dialog class="gq-fog-intro"/);
+    assert.match(view.innerHTML, /霧の配達 あと3回<\/span>/);
+    assert.match(view.innerHTML, /class="gq-wax fog"/);
+    frames.splice(0).forEach(fn=>fn());
+    assert.equal(opened, 1);
+    renderMap(view, ctx);
+    assert.doesNotMatch(view.innerHTML, /<dialog/);
+    frames.splice(0).forEach(fn=>fn());
+    assert.equal(opened, 1);
+    map.fog = false; renderMap(view, ctx);
+    map.fog = true; renderMap(view, ctx);
+    frames.splice(0).forEach(fn=>fn());
+    assert.equal(opened, 2);
+  } finally {
+    globalThis.requestAnimationFrame = oldRAF;
+    announceFog(false, storage);
+  }
 });
