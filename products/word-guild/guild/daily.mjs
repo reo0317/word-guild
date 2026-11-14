@@ -77,10 +77,10 @@ export function streakNow(streak, today) {
 export function DAILY_TEXT(daily) {
   if (!daily) return '';
   switch (daily.kind) {
-    case 'revenge': return `戻ってきた敵を${daily.goal}体倒す`;
+    case 'revenge': return `戻ってきた紙魚を${daily.goal}体倒す`;
     case 'fresh': return `新しい言葉を${daily.goal}語見つける`;
     case 'clean': return `ヒントなしで${daily.goal}語答える`;
-    case 'finish': return `クエストを${daily.goal}回やりとげる`;
+    case 'finish': return `配達を${daily.goal}回やりとげる`;
     default: return '';
   }
 }

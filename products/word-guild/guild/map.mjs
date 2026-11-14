@@ -20,7 +20,7 @@ import {visitors, rareStatus} from './rare.mjs';
 // 遠近：スクロール量をカメラの前進距離として、同じ世界座標の道を投影し直す。
 import {esc, fab, waxButton, miniHouse} from './dom.mjs';
 import {artBox, HOUSE_ART} from './art.mjs';
-import {streakNow} from './daily.mjs';
+import {streakNow, DAILY_TEXT} from './daily.mjs';
 import {WARDS} from './chara-svg.mjs';
 
 // 保存できない環境でも、同じ霧の間は案内を繰り返さない。
@@ -177,11 +177,42 @@ export function dailyLine(daily) {
   return `${body}　${Math.min(daily.count, daily.goal)}/${daily.goal}`;
 }
 
-// 速達の短い表示：{mark, name, count, goal}。説明の文章は出さず、印と数にする。
+// 今日の依頼：印・DAILY_TEXT の全文・進捗。
 export function dailyBrief(daily) {
   if (!daily) return null;
-  const [mark, name] = DAILY_SHORT[daily.kind] ?? ['', ''];
-  return {mark, name, count: Math.min(daily.count, daily.goal), goal: daily.goal};
+  const [mark] = DAILY_SHORT[daily.kind] ?? ['', ''];
+  return {mark, name: DAILY_TEXT(daily), count: Math.min(daily.count, daily.goal), goal: daily.goal};
+}
+
+export function infoDialog(title, text, ovals = false) {
+  return `<dialog class="gq-fog-intro" aria-labelledby="gq-fog-title" aria-describedby="gq-fog-text">
+    ${ovals ? '<div class="gq-fog-ovals" aria-hidden="true"><i></i><i></i><i></i></div>' : ''}
+    <h2 id="gq-fog-title">${esc(title)}</h2>
+    <p id="gq-fog-text" style="white-space:pre-line">${esc(text)}</p>
+    <form method="dialog"><button type="submit" aria-label="とじる" autofocus>×</button></form>
+  </dialog>`;
+}
+
+export function bindInfo(view, daily) {
+  const descriptions = [
+    ['.gq-daily[role="button"]', '今日の依頼', '毎日ひとつ、おまけの依頼が出ます。配達しながら達成すると印がつきます。依頼は日ごとに変わります。' + (daily ? `\n\n${DAILY_TEXT(daily)}　${Math.min(daily.count, daily.goal)}/${daily.goal}` : '')],
+    ['.gq-fog-count', '霧の配達', '戻ってきた紙魚が増えると霧が出ます。霧の配達では前に会った言葉を多めに届けます。楕円はあと何回で霧が晴れるかの数です。'],
+    ['.gq-tomorrow', '明日戻ってくる紙魚', '前に倒した紙魚は、忘れかけたころに戻ってきます。ここに並ぶのは明日戻ってくる紙魚と、その数です。'],
+  ];
+  for (const [selector, title, text] of descriptions) {
+    const trigger = view.querySelector(selector);
+    if (!trigger) continue;
+    trigger.onclick = () => {
+      view.querySelector('.gq-fog-intro')?.remove();
+      view.insertAdjacentHTML('beforeend', infoDialog(title, text));
+      const dialog = view.querySelector('.gq-fog-intro');
+      dialog.addEventListener('close', () => trigger.focus({preventScroll: true}), {once: true});
+      dialog.showModal();
+    };
+    trigger.onkeydown = event => {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); trigger.onclick(); }
+    };
+  }
 }
 
 // 直近7日（左が6日前、右が今日）の消印。streak は {count, last, best}。
@@ -362,14 +393,14 @@ export function renderMap(view, ctx) {
           <path class="edge" id="gq-r-edge"/><path class="center" id="gq-r-center"/>
         </svg>
         ${nodes}${herePanel}${post}${lighthouse}
-        ${map.fog ? `<span class="gq-fog-count">${'<i></i>'.repeat(Math.min(6, Math.ceil(map.dueCount / 9)))}霧の配達 あと${Math.ceil(map.dueCount / 9)}回</span><i class="gq-fogband" aria-hidden="true" style="--d:${fogDensity.toFixed(2)}"></i>` : ''}
+        ${map.fog ? `<span class="gq-fog-count" role="button" tabindex="0">${'<i></i>'.repeat(Math.min(6, Math.ceil(map.dueCount / 9)))}霧の配達 あと${Math.ceil(map.dueCount / 9)}回</span><i class="gq-fogband" aria-hidden="true" style="--d:${fogDensity.toFixed(2)}"></i>` : ''}
       </div>
     </div></div>
     <div class="gq-map-foot">
       ${ctx.warn ? `<p class="gq-warn">${esc(ctx.warn)}</p>` : ''}
       <div class="gq-chips">
-        ${brief ? `<span class="gq-daily ${progress.daily.done ? 'done' : ''}" aria-label="今日の速達 ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>今日の速達・${esc(brief.name)}<b>${brief.count}/${brief.goal}</b></span>` : ''}
-        ${tomorrow.length ? `<span class="gq-tomorrow" aria-label="明日戻ってくる紙魚 ${tomorrow.length} 匹"><small>明日</small><span class="gq-faces">${tomorrowFaces}</span><b>${tomorrow.length}</b></span>` : ''}
+        ${brief ? `<span class="gq-daily ${progress.daily.done ? 'done' : ''}" role="button" tabindex="0" aria-label="${esc(brief.name)} ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>${esc(brief.name)}<b>${brief.count}/${brief.goal}</b></span>` : ''}
+        ${tomorrow.length ? `<span class="gq-tomorrow" role="button" tabindex="0" aria-label="明日戻ってくる紙魚 ${tomorrow.length} 匹"><small>明日</small><span class="gq-faces">${tomorrowFaces}</span><b>${tomorrow.length}</b></span>` : ''}
       </div>
       <div class="gq-dock">
         ${fab({icon: 'album', label: '切手帳', attrs: 'id="gq-album"'})}
@@ -382,12 +413,8 @@ export function renderMap(view, ctx) {
     </div>`;
 
   const fogIntro = announceFog(map.fog);
-  if (fogIntro) view.insertAdjacentHTML('beforeend', `<dialog class="gq-fog-intro" aria-labelledby="gq-fog-title" aria-describedby="gq-fog-text">
-    <div class="gq-fog-ovals" aria-hidden="true"><i></i><i></i><i></i></div>
-    <h2 id="gq-fog-title">霧が出ました</h2>
-    <p id="gq-fog-text">戻ってきた紙魚が増えています。<br>霧の配達で、前に会った言葉を多めに届けます。</p>
-    <form method="dialog"><button type="submit" aria-label="とじる" autofocus>×</button></form>
-  </dialog>`);
+  if (fogIntro) view.insertAdjacentHTML('beforeend', infoDialog('霧が出ました', '戻ってきた紙魚が増えています。霧の配達で、前に会った言葉を多めに届けます。', true));
+  bindInfo(view, progress.daily);
   const $ = s => view.querySelector(s);
   $('#gq-go').onclick = () => openGate ? on.gate(openGate.ch) : on.go();
   $('#gq-album').onclick = () => on.album();

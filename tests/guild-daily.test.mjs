@@ -129,8 +129,8 @@ test('streakNow：昨日までなら count、それより前なら0', () => {
 });
 
 test('DAILY_TEXT：種類ごとの文面', () => {
-  assert.equal(DAILY_TEXT({kind: 'revenge', goal: 8}), '戻ってきた敵を8体倒す');
+  assert.equal(DAILY_TEXT({kind: 'revenge', goal: 8}), '戻ってきた紙魚を8体倒す');
   assert.equal(DAILY_TEXT({kind: 'fresh', goal: 12}), '新しい言葉を12語見つける');
   assert.equal(DAILY_TEXT({kind: 'clean', goal: 10}), 'ヒントなしで10語答える');
-  assert.equal(DAILY_TEXT({kind: 'finish', goal: 2}), 'クエストを2回やりとげる');
+  assert.equal(DAILY_TEXT({kind: 'finish', goal: 2}), '配達を2回やりとげる');
 });

@@ -397,7 +397,7 @@ export function openAlbum(container, deps = {}) {
       word.classList.remove('hit');
       void word.offsetWidth;
       word.classList.add('hit');
-      word.scrollIntoView({block: 'nearest', behavior: 'smooth'});
+      // 拡大前の一覧のスクロール位置を保つ。
     }
 
     function zoom(id) {

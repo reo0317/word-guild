@@ -17,7 +17,7 @@ import {onUpdateReady, applyUpdate} from './pwa.mjs';
 import {esc, speak, prepareSpeech, setSpeechEnabled, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, helpButton, icon,
   ensureLetterCss, letterHtml, lineBody, lampRing, deliveryLetter, deliveryLineLights, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
 import {showStampZoom, ensureCss as ensureAlbumCss, sceneFor, gateCard, newlyOpenedGate, playOptionalCinema, showPaperCard, sceneCardHtml, blankCardHtml, postscriptHtml, handlePostscriptClick} from './album.mjs';
-import {renderMap, dailyBrief} from './map.mjs';
+import {renderMap, dailyBrief, bindInfo} from './map.mjs';
 
 const POS_LABEL = {v: '動', n: '名', a: '形', o: '他'}; // 色の意味を文字でも示す
 const RESULT_LABEL = {known: '知ってた', correct: '正解', hint: 'ヒント', taught: '教わった', missed: '未回答'};
@@ -993,9 +993,9 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
           ${litNow.length ? `<p class="gq-lit" aria-label="街灯${litNow.join('・')}がともった">✦ ${litNow.join('・')}</p>` : ''}
           ${gateOpened ? `<p class="gq-lit" aria-label="${quest.gate}区の門が開いた"><span aria-hidden="true">${icon('gate', 16)}</span> ${quest.gate}区</p>` : ''}
           <div class="gq-chips">
-            ${brief ? `<span class="gq-daily ${daily.done ? 'done' : ''}" aria-label="今日の速達 ${esc(brief.name)} ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>今日の速達・${esc(brief.name)}<b>${brief.count}/${brief.goal}</b></span>` : ''}
+            ${brief ? `<span class="gq-daily ${daily.done ? 'done' : ''}" role="button" tabindex="0" aria-label="${esc(brief.name)} ${brief.count}/${brief.goal}"><i aria-hidden="true">${brief.mark}</i>${esc(brief.name)}<b>${brief.count}/${brief.goal}</b></span>` : ''}
             ${outcome.streakUp ? `<span class="gq-daily"><b>${outcome.streak}</b>日連続</span>` : ''}
-            ${tomorrow.length ? `<span class="gq-tomorrow" aria-label="明日戻ってくる紙魚 ${tomorrow.length} 匹"><small>明日</small><span class="gq-faces">${tomorrowFaces}</span><b>${tomorrow.length}</b></span>` : ''}
+            ${tomorrow.length ? `<span class="gq-tomorrow" role="button" tabindex="0" aria-label="明日戻ってくる紙魚 ${tomorrow.length} 匹"><small>明日</small><span class="gq-faces">${tomorrowFaces}</span><b>${tomorrow.length}</b></span>` : ''}
           </div>
           ${saveFailed ? '<p class="gq-warn">保存できません。この起動中はプレイできます。</p>' : ''}
           <details class="gq-detail"><summary>語の一覧</summary><ul class="gq-results" aria-label="今回の語">${outcome.entries.map(resultRow).join('')}</ul></details>
@@ -1007,6 +1007,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         ${fab({icon: 'album', label: '切手帳', attrs: 'id="gq-album"'})}
         ${nextGate && !gateNext ? fab({icon: 'gate', label: `${nextGate.ch}区の門`, cls: 'glow', attrs: 'id="gq-gate"'}) : ''}
       </div>`;
+    bindInfo(view, daily);
     $('#gq-again').onclick = () => returning ? showMap() : (after.fog || !nextGate ? startQuest() : startQuest({gate: nextGate.ch}));
     $('#gq-guild').onclick = returning ? () => startQuest() : showMap;
     $('#gq-album').onclick = () => openAlbumAt(lvEnd ? shelf : after.here?.shelf);

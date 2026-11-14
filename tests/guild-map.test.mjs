@@ -331,7 +331,7 @@ test('家と門に重ならない位置へ出し、小さいツムギでは隠�
 });
 
 
-test('トップの速達ラベルは依頼の種類によらず今日の速達で、印と達成表示を保つ', () => {
+test('今日の依頼は全文と進捗を表示し、印と達成表示を保つ', () => {
   const old = globalThis.requestAnimationFrame;
   globalThis.requestAnimationFrame = () => 1;
   try {
@@ -341,7 +341,7 @@ test('トップの速達ラベルは依頼の種類によらず今日の速達�
         const node = {style: {}, clientWidth: 390, addEventListener() {}, setAttribute() {}};
         const view = {innerHTML: '', querySelector: () => ({...node}), querySelectorAll: () => []};
         renderMap(view, {map: buildMap(words, progress, 20000), today: 20000, progress, total: 1400, face: () => '', tsumugi: '', letterOf: () => ({}), on: {}});
-        assert.ok(view.innerHTML.includes(`<i aria-hidden="true">${mark}</i>今日の速達・${({revenge:'戻ってきた紙魚', fresh:'新しい紙魚', clean:'ヒントなし', finish:'配達'})[kind]}<b>${done ? 10 : 0}/10</b>`));
+        assert.ok(view.innerHTML.includes(`<i aria-hidden="true">${mark}</i>${({revenge:'戻ってきた紙魚を10体倒す', fresh:'新しい言葉を10語見つける', clean:'ヒントなしで10語答える', finish:'配達を10回やりとげる'})[kind]}<b>${done ? 10 : 0}/10</b>`));
         assert.ok(view.innerHTML.includes(`class="gq-daily ${done ? 'done' : ''}"`));
       }
     }
