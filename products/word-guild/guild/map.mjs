@@ -39,7 +39,7 @@ export function announceFog(fog, storage) {
   return Boolean(fog) && !seen;
 }
 
-const H = {post: 170, ward: 64, step: 54, lamp: 92, gate: 200, top: 180};
+const H = {post: 170, ward: 64, step: 54, lamp: 92, gate: 200, top: 520}; // top：6区の門から灯台までの道を少し長く
 const HORIZON = 0.14;  // 地平線の高さ（道の枠の高さに対する割合）
 // 世界座標の単位は任意。f は画面幅を単位とする焦点距離。
 export const A = 0.225; // 中心線の横振幅（最接近時、道の外縁が画面の10%まで来る）
@@ -101,8 +101,11 @@ export const WARD_VANISHING = {
 // cover による切り抜きを避け、絵の消失点を投影の消失点へ移す。
 export function skyGeometry(width, height, ward) {
   const point = WARD_VANISHING[Math.min(ward, 6)] ?? WARD_VANISHING[1];
-  const imageWidth = Math.max(width * .5 / point.x, width * .5 / (1 - point.x));
-  const imageHeight = imageWidth * 2 / 3;
+  // 試し：どの区でも背景の下端が同じ高さに来るように大きさをそろえる（左右に隙間は作らない）。
+  const need = p => Math.max(width * .5 / p.x, width * .5 / (1 - p.x)) * 2 / 3 * (1 - p.y);
+  const bottom = Math.max(...Object.values(WARD_VANISHING).map(need));
+  const imageHeight = bottom / (1 - point.y);
+  const imageWidth = imageHeight * 3 / 2;
   return {left: width * .5 - imageWidth * point.x, top: height * HORIZON - imageHeight * point.y,
     width: imageWidth, height: imageHeight};
 }
@@ -283,8 +286,10 @@ function layout(map) {
   });
   add('top', H.top, {}, H.top - 70);
   let start = 0;
-  const ranges = items.filter(i => i.type === 'gate').map(i => {
-    const range = {ch: i.ward.ch, start, end: i.cy};
+  const gates = items.filter(i => i.type === 'gate');
+  const ranges = gates.map((i, n) => {
+    // 最後の門（6区）の先、灯台までの道も6区の絵で敷く。
+    const range = {ch: i.ward.ch, start, end: n === gates.length - 1 ? y : i.cy};
     start = i.cy;
     return range;
   });
