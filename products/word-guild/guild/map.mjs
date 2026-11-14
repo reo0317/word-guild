@@ -570,10 +570,11 @@ export function renderMap(view, ctx) {
       pinImage.style.transform = '';
       const r = pinImage.getBoundingClientRect();
       const host = stage.getBoundingClientRect();
-      const candidates = [{x:0,y:0}, {x:0,y:100}, {x:0,y:150}, {x:100,y:80}, {x:-100,y:80}];
+      // 道の外へ横にはずらさない。重なりは道に沿って手前へよけ、よけきれなければそのまま前に立つ。
+      const candidates = [{x:0,y:0}, {x:0,y:60}, {x:0,y:110}];
       const spot = candidates.find(({x,y}) => r.left+x >= host.left && r.right+x <= host.right && r.top+y >= host.top && r.bottom+y <= host.bottom
         && !obstacles.some(o => r.left+x < o.right+8 && r.right+x > o.left-8 && r.top+y < o.bottom+8 && r.bottom+y > o.top-8));
-      pinImage.style.visibility = spot ? '' : 'hidden';
+      pinImage.style.visibility = '';
       if (spot) pinImage.style.transform = `translate(${spot.x}px,${spot.y}px)`;
     }
     const panelBoard = boards.find(b => b.panel && b.shown);
