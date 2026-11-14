@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
-import {roadRow, projectRoad, mipLevel, wardAt, gateDoorRect, propsFor} from '../products/word-guild/guild/map.mjs';
+import {roadRow, projectRoad, mipLevel, wardAt, gateDoorRect, propsFor, gateScale, gateArchPath, roadOpacity, FADE_START} from '../products/word-guild/guild/map.mjs';
 
 test('行の逆投影はスマホの縦横とカメラ移動後も元の位置へ戻る', () => {
   for (const [w,h] of [[390,700],[360,500],[844,320]]) {
@@ -57,4 +57,28 @@ test('全6区の書き出し画像は容量制限と合計1.2MBを守る',async(
     }
   }
   assert.ok(total<=1200000,`${total} bytes`);
+});
+
+
+test('全区の門は家と同じ指数で遠方ほど小さくなり、開いた扉は開口内に留まる', async () => {
+  const css = await readFile(new URL('../products/word-guild/map.css', import.meta.url), 'utf8');
+  assert.doesNotMatch(css, /(?:filter|mask|clip-path)\s*:/);
+  assert.doesNotMatch(css, /gq-gate-door-[lr]\{transform:scaleX\(-/);
+  assert.match(css, /cleared \.gq-gate-door-l\{transform:scaleX\(\.16\)/);
+  assert.match(css, /cleared \.gq-gate-door-r\{transform:scaleX\(\.16\)/);
+  for (let ch = 1; ch <= 6; ch++) {
+    let previous = Infinity;
+    for (let distance = 0; distance <= 7200; distance += 10) {
+      const size = 232 * gateScale(projectRoad(390, 700, distance).scale);
+      assert.ok(size <= previous); previous = size;
+    }
+    const {x, width} = gateDoorRect(ch);
+    const leftEnd = x + width / 2 * .16;
+    const rightStart = x + width - width / 2 * .16;
+    assert.ok(x < leftEnd && leftEnd < rightStart && rightStart < x + width);
+    assert.equal(Boolean(gateArchPath(ch)), ch < 6);
+  }
+  assert.equal(FADE_START, 5040);
+  assert.equal(roadOpacity(2520), 1);
+  assert.ok((await stat(new URL('../products/word-guild/art/lighthouse.webp',import.meta.url))).size <= 70 * 1024);
 });

@@ -1,4 +1,4 @@
-import {MAP_ART, GATE_RECTS} from '../art/map-art.mjs';
+import {MAP_ART, GATE_RECTS, GATE_ARCHES} from '../art/map-art.mjs';
 import HOUSE_DOORS from '../data/house-doors.json' with {type: 'json'};
 import {isRestored} from './srs.mjs';
 import {visitors, rareStatus} from './rare.mjs';
@@ -49,13 +49,22 @@ export const f = 700;  // 焦点距離（画面幅に対する投影倍率の基
 export const H_CAMERA = 0.86; // カメラの高さ（画面の縦横比で補正して投影）
 const Z_NEAR = 700;    // 下端での最短距離。これより近い地面は描かない
 const PHASE = Math.PI / 2;
-export const DRAW_DISTANCE = 3600;
+export const DRAW_DISTANCE = 7200;
 export const FADE_START = DRAW_DISTANCE * .7;
 // SVG の画面 y 方向のグラデーションと同じ透視投影上の透明度。
 export function roadOpacity(distance) {
   const scale = d => f / (d + Z_NEAR);
   return Math.max(0, Math.min(1,
     (scale(distance) - scale(DRAW_DISTANCE)) / (scale(FADE_START) - scale(DRAW_DISTANCE))));
+}
+export function gateScale(scale) {
+  return Math.max(36 / 132, Math.min(140 / 132, Math.min(1, scale) ** .6));
+}
+export function gateArchPath(ch) {
+  const a = GATE_ARCHES[ch];
+  if (!a) return null;
+  const [x, y, r] = a;
+  return `M${x-r} ${y}A${r} ${r} 0 0 1 ${x+r} ${y}`;
 }
 export const LIGHTHOUSE_DISTANCE = H.step * 10;
 
@@ -72,7 +81,7 @@ export function roadPoints(width, height, end, camera = 0) {
   const cap = Math.max(camera, Math.min(end, camera + DRAW_DISTANCE));
   const near = projectRoad(width, height, camera, camera);
   const far = projectRoad(width, height, cap, camera);
-  const count = Math.max(1, Math.ceil((near.y - far.y) * 3));
+  const count = Math.max(1, Math.ceil((near.y - far.y) * 8));
   return Array.from({length: count + 1}, (_, i) => {
     const scale = near.scale + (far.scale - near.scale) * i / count;
     const worldZ = i === count ? cap : Math.min(cap, camera + f / scale - Z_NEAR);
@@ -321,7 +330,7 @@ export function renderMap(view, ctx) {
         data-reveal="${reveal}" style="--reveal:${100 - reveal}%" aria-label="街灯${lamp.shelf}の${letter ? '手紙' : '切手帳'}を開く">
         <span class="gq-house-fallback" aria-hidden="true">${miniHouse()}</span>
         <span class="gq-house-art" aria-hidden="true"><i class="gq-house-halo"></i><span class="gq-house-image"><i class="gq-house-shadow"></i>
-        <img class="gq-house-color" alt="" width="140" height="140" decoding="async">
+        <span class="gq-house-reveal"><img class="gq-house-color" alt="" width="140" height="140" decoding="async"></span>
         <i class="gq-house-warm"></i></span><i class="gq-house-sparks"></i></span>
         ${visiting.has(lamp.shelf) ? '<span class="gq-visitor" aria-label="まれびとが来ています">✦</span>' : ''}
         ${done ? `<span class="gq-house-stars ${stars?.complete ? 'joined' : ''} ${stars?.gold === 5 ? 'gold' : ''}" aria-label="夜の切手 ${stars?.met ?? 0}/5">${Array.from({length: 5}, (_, i) => `<i class="${i < (stars?.met ?? 0) ? 'met' : ''}">★</i>`).join('')}</span>` : ''}
@@ -340,8 +349,8 @@ export function renderMap(view, ctx) {
       const gateTag = nextWard ? `<div class="gq-ward-tag gq-gate-tag"><b>${nextWard.ch}区</b> ${esc(nextWard.name)}</div>` : '';
       if (MAP_ART.gates.includes(ward.ch)) {
         const r = gateDoorRect(ward.ch);
-        // 2区の門（3区へ）は、門と背景がつくる半円の外側に沿って、次の区の名前を大きく書く。
-        const archText = ward.ch === 2 && nextWard ? `<svg class="gq-gate-arch" viewBox="0 0 512 512" aria-hidden="true"><path id="gq-arch-${ward.ch}" d="M30 300A226 216 0 0 1 482 300" fill="none"/><text><textPath href="#gq-arch-${ward.ch}" startOffset="50%" text-anchor="middle">${nextWard.ch}区 ${esc(nextWard.name)}</textPath></text></svg>` : '';
+        const path = gateArchPath(ward.ch);
+        const archText = path && nextWard ? `<svg class="gq-gate-arch" viewBox="0 0 512 512" aria-hidden="true"><path id="gq-arch-${ward.ch}" d="${path}" fill="none"/><text><textPath href="#gq-arch-${ward.ch}" startOffset="50%" text-anchor="middle">${nextWard.ch}区 ${esc(nextWard.name)}</textPath></text></svg>` : '';
         const tag = ward.gate === 'open' ? 'button' : 'div';
         return bb(`gq-bb-gate${far}`, item.cy, item.lat,
           `<${tag} class="gq-gate gq-gate-art ${ward.gate}" style="--door-x:${r.x*100}%;--door-y:${r.y*100}%;--door-w:${r.width*50}%;--door-h:${r.height*100}%" aria-label="${ward.ch}区の門${ward.gate === 'cleared' ? '（通過済み）' : ''}" ${tag === 'button' ? 'type="button" data-gate="' + ward.ch + '"' : ''}>
@@ -378,7 +387,7 @@ export function renderMap(view, ctx) {
 
   const post = bb('gq-bb-post', 14, 0, `<div class="gq-post">${artBox('post', 'gq-post-art')}
     <div class="gq-guide">${artBox('hatoriSmile', 'gq-face-hatori')}${map.dueCount ? `<span class="gq-due-badge" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b>${map.dueCount}</b></span>` : ''}</div></div>`);
-  const lighthouse = bb('gq-bb-top', roadEnd, 0, `<div class="gq-top-block" role="img" aria-label="道の終点の灯台">${night.complete ? '<span class="gq-full-stars" aria-label="夜の切手がすべてそろいました">✦ ⋆ ✧ ⋆ ✦</span>' : ''}<i class="gq-lighthouse-beam" aria-hidden="true"></i><img src="art/house-48.webp" alt="" width="600" height="600" decoding="async"></div>`);
+  const lighthouse = bb('gq-bb-top', roadEnd, 0, `<div class="gq-top-block" role="img" aria-label="道の終点の灯台">${night.complete ? '<span class="gq-full-stars" aria-label="夜の切手がすべてそろいました">✦ ⋆ ✧ ⋆ ✦</span>' : ''}<i class="gq-lighthouse-beam" aria-hidden="true"></i><img src="art/lighthouse.webp" data-lighthouse alt="" width="600" height="600" decoding="async"></div>`);
 
   const skies = [...new Set(map.wards.map(w => w.ch))].map(ch => `<div class="gq-sky-art" data-ward="${ch}">${artBox(`ward${Math.min(ch, 6)}`, 'gq-sky-img')}${night.wards[ch]?.complete ? constellation(ch) : ''}</div>`).join('');
   // カメラの先にある区を調べるための、区ごとの始まりの y
@@ -435,6 +444,9 @@ export function renderMap(view, ctx) {
       </div>
     </div>`;
 
+  const tower = view.querySelector('[data-lighthouse]');
+  if (tower) tower.onerror = () => { tower.onerror = null; tower.src = 'art/house-48.webp'; };
+
   const fogIntro = announceFog(map.fog);
   if (fogIntro) view.insertAdjacentHTML('beforeend', infoDialog('霧が出ました', '戻ってきた紙魚が増えています。霧の配達で、前に会った言葉を多めに届けます。', true));
   bindInfo(view, progress.daily);
@@ -454,8 +466,7 @@ export function renderMap(view, ctx) {
   const svg = $('#gq-road-svg');
   const landings = items.filter(i=>i.type==='lamp');
   const canvas = $('#gq-road-cv');
-  const textures = new Map(), requested = new Set(), props = new Map();
-  const scenery = map.wards.flatMap(ward => propsFor({...ward, lamps:ward.lamps.map(lamp=>({...lamp,cy:items.find(i=>i.type==='lamp' && i.lamp===lamp)?.cy}))}).map(prop => ({...prop, ch:ward.ch, item:items.find(i => i.ward === ward && i.lamp?.shelf === prop.shelf && (prop.si === null ? i.type === 'lamp' : i.type === 'step' && i.si === prop.si))})));
+  const textures = new Map(), requested = new Set();
   view.querySelectorAll('.gq-gate-art').forEach(gate => {
     const imgs = [...gate.querySelectorAll('img')];
     const fail = () => {
@@ -629,10 +640,7 @@ export function renderMap(view, ctx) {
         };
         texture.src = `art/road/road-${ch}.webp`;
       }
-      if (MAP_ART.props.includes(ch)) {
-        const image = new Image(); image.onload=()=>{if(stage.isConnected){props.set(ch,image);schedule();}};
-        image.src=`art/road/props-${ch}.webp`;
-      }
+
     }
     if (paint) {
       const glow = (worldZ, strength) => {
@@ -650,8 +658,7 @@ export function renderMap(view, ctx) {
 
     // 道の上の物：位置と大きさと霧のかかり方を決める。
     for (const b of boards) {
-      const isLighthouse = b.el.classList.contains('gq-bb-top');
-      const r = isLighthouse && nearLighthouse ? Math.max(0, Math.min(DRAW_DISTANCE * .6, b.y - c)) : b.y - c;
+      const r = b.y - c;
       const s = sOf(r);
       const top = b.el.classList.contains('gq-bb-top');
       const post = b.el.classList.contains('gq-bb-post');
@@ -664,7 +671,8 @@ export function renderMap(view, ctx) {
       const fade = roadOpacity(r);
       const sx = X(b.y, s);
       const displayScale = b.panel ? 1 : pin ? tsumugiScale(s, initialTsumugiScale)
-        : top ? objectScale(Math.min(240, 600 * s ** .6) / 600) : objectScale(s * b.scale);
+        : top ? Math.min(280, 320 * s ** .6) / 600
+        : b.el.classList.contains('gq-bb-gate') ? gateScale(s) : objectScale(s * b.scale);
       if (b.house) {
         const current = Number(b.house.dataset.shelf) === map.here?.shelf;
         const {size, offset, side} = houseGeometry(Ws, project(b.y), current);
@@ -695,26 +703,6 @@ export function renderMap(view, ctx) {
 
     };
     placePanel();
-    if (paint) {
-      const host=stage.getBoundingClientRect();
-      const obstacles=boards.filter(b=>b.shown && (b.house || b.panel || b.el.classList.contains('gq-bb-tsumugi'))).map(b=>(b.house ?? b.panel ?? b.el).getBoundingClientRect()).map(r=>({left:r.left-host.left,right:r.right-host.left,top:r.top-host.top,bottom:r.bottom-host.top}));
-      const visible=scenery.filter(p=>p.item && p.item.cy>=c && p.item.cy<=visibleEnd).sort((a,b)=>b.item.cy-a.item.cy).slice(0,40);
-      for (const prop of visible) {
-        const image=props.get(prop.ch); if(!image) continue;
-        const p=project(prop.item.cy), size=110*p.scale;
-        const side=prop.side==='right'?1:-1;
-        const x=p.x+side*p.half*1.44;
-        if(obstacles.some(r=>x+size/2>r.left-6 && x-size/2<r.right+6 && p.y>r.top-6 && p.y-size<r.bottom+6)) continue;
-        paint.globalAlpha=roadOpacity(prop.item.cy-c);
-        paint.drawImage(image,(prop.kind%3)*256,Math.floor(prop.kind/3)*256,256,256,x-size/2,p.y-size,size,size);
-        if(prop.kind===0 && prop.item.lamp.lit===prop.item.lamp.total) {
-          const radius=size*.12, light=paint.createRadialGradient(x,p.y-size*.78,0,x,p.y-size*.78,radius);
-          light.addColorStop(0,'rgba(242,184,75,.8)');light.addColorStop(1,'rgba(242,184,75,0)');
-          paint.fillStyle=light;paint.fillRect(x-radius,p.y-size*.78-radius,radius*2,radius*2);
-        }
-      }
-      paint.globalAlpha=1;
-    }
     // カメラの少し先にある区の絵を、背景に出す。
     let ward = wardStarts[0]?.ch ?? 1;
     for (const w of wardStarts) if (w.y <= c + 500) ward = w.ch;

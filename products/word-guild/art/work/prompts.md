@@ -2312,3 +2312,7 @@ Subject: Keshikasu in a mask with a small mirror and tool looking into a patient
 
 Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached reference character Keshikasu precisely: eraser debris creature, gray-blue craggy round body, cream face and claws, yellow eyes, dark navy jagged mouth, red wisps, paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
 Subject: productivity: Keshikasu at a fast assembly line producing many items quickly, a pile of goods.
+
+
+## lighthouse.png
+6区の門の絵を画風の参照に、紙と活版の版画風、太い紺線、平らな色面、紙の質感で、中央に全身の立派な灯台を大きく描く。1536×1536。白い高い塔に紺の縞か石積み、金色に光るランプ室とバルコニー、小さな石の土台と岩。紺 #1f2a44、霧 #9fb3bf、紙 #f3ead8、灯 #e7b04a、少しの朱 #c8462f。背景は純粋な #00ff00、影や地面の広がりなし。光の筋、文字、数字、記号なし。

@@ -143,11 +143,37 @@ GATE_RECTS = {1:(.30,.48,.40,.35), 2:(500/1536,700/1536,536/1536,490/1536),
               3:(.28,.52,.43,.34), 4:(.28,.51,.44,.35),
               5:(.29,.49,.42,.38), 6:(.31,.51,.38,.34)}
 
+def gate_arch(im, n):
+    """上端の不透明輪郭を包含する半円。灯・飾りと文字の縁に14pxの間隔。"""
+    import math
+    alpha = im.resize((512, 512), Image.LANCZOS).getchannel('A')
+    cx, cy = {1: (256, 330), 2: (256, 320), 3: (256, 320),
+              4: (256, 340), 5: (256, 330)}[n]
+    contour = []
+    for x in range(512):
+        for y in range(cy):
+            if alpha.getpixel((x, y)) > 128:
+                contour.append(math.hypot(x-cx, y-cy))
+                break
+    return [cx, cy, math.ceil(max(contour)) + 14]
+
+
+def export_lighthouse():
+    path = WORK / 'lighthouse.png'
+    if path.exists():
+        with Image.open(path) as source:
+            im = to_square(key_out_green(source))
+        save_webp(im, OUT / 'lighthouse.webp', 70)
+        assert (OUT / 'lighthouse.webp').stat().st_size <= 70 * 1024
+
+
 def export_map():
     import json
     dest = OUT / 'road'
     dest.mkdir(exist_ok=True)
     available = {'roads': [], 'gates': [], 'props': []}
+    arches = {}
+    export_lighthouse()
     for n in range(1,7):
         for kind in ('road', 'gate'):  # 道ばたの小物は使わない（依頼者の判断）
             try:
@@ -185,6 +211,8 @@ def export_map():
                     available['props'].append(n)
                 else:
                     im = remove_alpha_specks(im)
+                    if n < 6:
+                        arches[n] = gate_arch(im, n)
                     x,y,w,h = GATE_RECTS[n]
                     x0,y0,x1,y1 = round(x*im.width),round(y*im.height),round((x+w)*im.width),round((y+h)*im.height)
                     mid=(x0+x1)//2
@@ -199,7 +227,7 @@ def export_map():
                 print(kind,n,'OK')
             except (OSError,ValueError,AssertionError) as error:
                 print(kind,n,'従来表示:',error)
-    (OUT / 'map-art.mjs').write_text('export const MAP_ART = '+json.dumps(available)+';\nexport const GATE_RECTS = '+json.dumps(GATE_RECTS)+';\n')
+    (OUT / 'map-art.mjs').write_text('export const MAP_ART = '+json.dumps(available)+';\nexport const GATE_RECTS = '+json.dumps(GATE_RECTS)+';\nexport const GATE_ARCHES = '+json.dumps(arches)+';\n')
 
 
 def main():

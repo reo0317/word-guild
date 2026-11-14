@@ -143,7 +143,7 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
       assert.ok(base.includes(`${(terminal.x - terminal.half).toFixed(1)} ${terminal.y.toFixed(1)}`));
       assert.ok(base.includes(`${(terminal.x + terminal.half).toFixed(1)} ${terminal.y.toFixed(1)}`));
     };
-    assert.match(view.innerHTML, /<img src="art\/house-48.webp"/);
+    assert.match(view.innerHTML, /<img src="art\/lighthouse.webp"/);
     assert.doesNotMatch(view.innerHTML, /<svg viewBox="0 0 120 150"/);
     checkRoadEnd();
     assert.equal(panelBoard.hidden, false);
@@ -209,12 +209,11 @@ test('前進中も道は画面内に収まり、家は余白の広い道の外�
   }
 });
 
-test('家の境目は24%のグラデーションで、未配達と全着色は端まで描き分ける', async () => {
+test('家はmaskを使わず下から段階的に着色する', async () => {
   const css = await readFile(new URL('../products/word-guild/map.css', import.meta.url), 'utf8');
-  assert.match(css, /-webkit-mask-image:linear-gradient\(to bottom,transparent calc\(var\(--reveal\) - 12%\),#000 calc\(var\(--reveal\) \+ 12%\)\)/);
+  assert.match(css, /height:calc\(100% - var\(--reveal\)\);overflow:hidden/);
   assert.match(css, /\[data-reveal="0"\] .gq-house-color\{visibility:hidden\}/);
-  assert.match(css, /\[data-reveal="100"\] .gq-house-color\{-webkit-mask-image:none;mask-image:none\}/);
-  assert.doesNotMatch(css, /(?:^|[;{])\s*filter\s*:/);
+  assert.doesNotMatch(css, /(?:filter|mask(?:-image)?|clip-path)\s*:/);
   assert.match(css, /\.gq-road-svg path\{animation:none;transition:none;transform:none\}/);
 });
 
@@ -301,7 +300,7 @@ test('吹き出しは中央より左のツムギの右、中央以降のツム�
 });
 
 test('打ち切り地点まで世界座標の sin の振幅を保つ', () => {
-  assert.ok(DRAW_DISTANCE >= 3200 && DRAW_DISTANCE <= 3600);
+  assert.ok(DRAW_DISTANCE >= 6400 && DRAW_DISTANCE <= 7200);
   for (const camera of [0, 137, 550, 1100]) {
     for (let d = 0; d <= DRAW_DISTANCE; d += 25) {
       const p = projectRoad(390, 680, camera + d, camera);
