@@ -101,13 +101,17 @@ export const WARD_VANISHING = {
 // cover による切り抜きを避け、絵の消失点を投影の消失点へ移す。
 export function skyGeometry(width, height, ward) {
   const point = WARD_VANISHING[Math.min(ward, 6)] ?? WARD_VANISHING[1];
-  // 試し：どの区でも背景の下端が同じ高さに来るように大きさをそろえる（左右に隙間は作らない）。
-  const need = p => Math.max(width * .5 / p.x, width * .5 / (1 - p.x)) * 2 / 3 * (1 - p.y);
-  const bottom = Math.max(...Object.values(WARD_VANISHING).map(need));
-  const imageHeight = bottom / (1 - point.y);
-  const imageWidth = imageHeight * 3 / 2;
+  const imageWidth = Math.max(width * .5 / point.x, width * .5 / (1 - point.x));
+  const imageHeight = imageWidth * 2 / 3;
   return {left: width * .5 - imageWidth * point.x, top: height * HORIZON - imageHeight * point.y,
     width: imageWidth, height: imageHeight};
+}
+
+// 試し：背景の下端を、いちばん下端が高い区（縦幅がいちばん小さい区）にそろえる。大きさは変えず、下を切り取る。
+export function skyCropHeight(width, height, ward) {
+  const g = skyGeometry(width, height, ward);
+  const bottom = Math.min(...Object.keys(WARD_VANISHING).map(k => { const o = skyGeometry(width, height, Number(k)); return o.top + o.height; }));
+  return Math.max(0, Math.min(g.height, bottom - g.top));
 }
 
 export function tsumugiScale(scale, initialScale) {
@@ -757,6 +761,9 @@ export function renderMap(view, ctx) {
     for (const layer of skyLayers) {
       const geometry = skyGeometry(Ws, Hs, Number(layer.dataset.ward));
       for (const [key, value] of Object.entries(geometry)) layer.style[key] = `${value}px`;
+      // 絵は元の大きさのまま、枠の高さだけ詰めて下を切る。
+      layer.style.setProperty('--sky-h', `${geometry.height}px`);
+      layer.style.height = `${skyCropHeight(Ws, Hs, Number(layer.dataset.ward))}px`;
     }
     if (cameraAt === null) {
       // ツムギの中心を画面の58.5%へ。足元は同じ石段の投影点に固定する。

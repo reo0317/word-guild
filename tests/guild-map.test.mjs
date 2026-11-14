@@ -108,7 +108,7 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
   const panelBoard = {style:{}, classList:{contains:()=>false}, querySelector:sel=>sel === '.gq-here-panel' ? panel : null};
   const lamps = [];
   const depthHouses = [-30, 30].map(() => ({style:{}, classList:{contains:()=>false}, querySelector:()=>null}));
-  const sky = {style:{}, dataset:{ward:'1'}, classList:{toggle(){}}};
+  const sky = {style:{setProperty(k,v){this[k]=v;}}, dataset:{ward:'1'}, classList:{toggle(){}}};
   const nodes = {'#gq-road':road, '#gq-stage':{style:{}, isConnected:true, getBoundingClientRect:()=>({left:0,top:44})}};
   const view = {innerHTML:'', querySelector(selector) {
     return nodes[selector] ??= {style:{}, attrs:{}, setAttribute(k,v){this.attrs[k]=v;}};
