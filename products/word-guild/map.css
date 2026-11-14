@@ -182,3 +182,5 @@
 .gq-fog-ovals i{position:absolute;width:100px;height:20px;border-radius:50%;background:#9fb3bf88;left:0;top:4px}
 .gq-fog-ovals i:nth-child(2){left:40px;top:16px}
 .gq-fog-ovals i:nth-child(3){left:12px;top:28px}
+
+.gq-gate-tag{top:-200px;z-index:1;pointer-events:none}.gq-bb-gate .gq-gate:not(.gq-gate-art)~.gq-gate-tag{top:-78px}

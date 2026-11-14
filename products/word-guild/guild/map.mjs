@@ -38,7 +38,7 @@ export function announceFog(fog, storage) {
   return Boolean(fog) && !seen;
 }
 
-const H = {post: 170, ward: 150, step: 54, lamp: 92, gate: 112, top: 180};
+const H = {post: 170, ward: 64, step: 54, lamp: 92, gate: 112, top: 180};
 const HORIZON = 0.14;  // 地平線の高さ（道の枠の高さに対する割合）
 // 世界座標の単位は任意。f は画面幅を単位とする焦点距離。
 export const A = 0.225; // 中心線の横振幅（最接近時、道の外縁が画面の10%まで来る）
@@ -242,7 +242,7 @@ function layout(map) {
   add('post', H.post, {}, H.post);
   let k = 0;
   map.wards.forEach((ward, wi) => {
-    add('ward', H.ward, {ward, wi}, H.ward - 30); // 門の絵と重ならないよう、門の少し先に区の名札
+    add('ward', H.ward, {ward, wi}, H.ward / 2);
     for (const lamp of ward.lamps) {
       lamp.steps.forEach((step, si) => {
         const isHere = Boolean(here) && !here.gate && here.ch === ward.ch && here.shelf === lamp.shelf && here.step === si + 1;
@@ -319,6 +319,9 @@ export function renderMap(view, ctx) {
     }
     if (item.type === 'gate') {
       const {ward} = item;
+      // 次の区の名札は門の足もとに付ける（門の絵と重ならない）。
+      const nextWard = map.wards[map.wards.indexOf(ward) + 1];
+      const gateTag = nextWard ? `<div class="gq-ward-tag gq-gate-tag"><b>${nextWard.ch}区</b> ${esc(nextWard.name)}</div>` : '';
       if (ward.ch === 2) {
         const tag = ward.gate === 'open' ? 'button' : 'div';
         return bb(`gq-bb-gate${far}`, item.cy, item.lat,
@@ -326,15 +329,16 @@ export function renderMap(view, ctx) {
           <img class="gq-gate-frame" src="art/gate-2.webp" alt="" width="512" height="512">
           <img class="gq-gate-door gq-gate-door-l" src="art/gate-2-door-l.webp" alt="">
           <img class="gq-gate-door gq-gate-door-r" src="art/gate-2-door-r.webp" alt="">
-          ${ward.gate === 'open' ? '<b class="gq-gate-card" aria-hidden="true">•</b>' : ''}</${tag}>`);
+          ${ward.gate === 'open' ? '<b class="gq-gate-card" aria-hidden="true">•</b>' : ''}</${tag}>${gateTag}`);
       }
       const label = {hidden: '', open: `${ward.ch}区`, cleared: '✓'}[ward.gate];
       const tag = ward.gate === 'open' ? 'button' : 'div';
       return bb(`gq-bb-gate${far}`, item.cy, item.lat,
         `<${tag} ${tag === 'button' ? 'type="button" data-gate="' + ward.ch + '"' : ''} class="gq-gate ${ward.gate}"
-        ${ward.gate === 'open' ? `aria-label="${ward.ch}区の門へ"` : ''}><i aria-hidden="true"></i>${label ? `<span>${label}</span>` : ''}</${tag}>`);
+        ${ward.gate === 'open' ? `aria-label="${ward.ch}区の門へ"` : ''}><i aria-hidden="true"></i>${label ? `<span>${label}</span>` : ''}</${tag}>${gateTag}`);
     }
     if (item.type === 'ward') {
+      if (item.wi > 0) return ''; // 2区から先の名札は前の区の門の足もと
       return bb('gq-bb-ward', item.cy, -0.8, `<div class="gq-ward-tag"><b>${item.ward.ch}区</b> ${esc(item.ward.name)}</div>`);
     }
     return '';
