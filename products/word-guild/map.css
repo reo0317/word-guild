@@ -208,4 +208,4 @@
 .gq-pm.daily circle{stroke:#e7b04a;stroke-width:2;stroke-dasharray:none}
 
 /* 今日の依頼を達成した日：金の封蝋の消印 */
-.gq-pm.daily svg{overflow:visible}.gq-pm.daily circle:first-of-type{fill:#f3d366;stroke:#b98512;stroke-width:2.4}.gq-pm.daily circle:nth-of-type(2){fill:none;stroke:#fff6d0;stroke-width:1.2}.gq-pm.daily text{fill:#5a3d00;font-weight:800}.gq-pm.daily .gq-pm-star{fill:#c8462f;stroke:#fff;stroke-width:1}.gq-pm.daily{filter:none;box-shadow:none}.gq-pm.daily svg{animation:none}
+.gq-pm.daily svg{overflow:visible}.gq-pm.daily circle:first-of-type{fill:#f3d366;stroke:#b98512;stroke-width:2.4}.gq-pm.daily circle:nth-of-type(2){fill:none;stroke:#fff6d0;stroke-width:1.2}.gq-pm.daily text{fill:#5a3d00;font-weight:800}.gq-pm.daily .gq-pm-star{fill:#c8462f;stroke:#fff;stroke-width:1}
