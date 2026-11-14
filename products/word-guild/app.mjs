@@ -77,10 +77,17 @@ function opening(step = 0, replay = false) {
       <span class="kp-text">${page.lines.map(line => `<span>${line}</span>`).join('')}</span>
       <small aria-hidden="true">${step + 1} / ${OPENING.length}　タップで${last ? (replay ? 'もどる' : 'はじめる') : '次へ'}</small>
     </button>`;
-  const finish = () => { if (replay) { title(); return; } music.sfx('stamp'); guild.open({first: true}); };
+  const finish = () => {
+    if (replay === 'map') { guild.open(); return; }
+    if (replay) { title(); return; }
+    music.sfx('stamp'); guild.open({first: true});
+  };
   view.querySelector('#kp-skip').onclick = finish;
   view.querySelector('#kp-next').onclick = () => (last ? finish() : opening(step + 1, replay));
 }
+
+// 地図の郵便局を押すと、はじまりの物語を見返して地図へ戻る。
+window.addEventListener('wg:story', () => opening(0, 'map'));
 
 if (params.get('guild') === '1') guild.open();
 else title();

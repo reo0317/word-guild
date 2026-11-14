@@ -392,7 +392,8 @@ export function renderMap(view, ctx) {
       </div>`);
   }
 
-  const post = bb('gq-bb-post', 14, 0, `<div class="gq-post">${artBox('post', 'gq-post-art')}
+  // 1区の手前の郵便局。押すと「はじまりの物語」を見返せる。
+  const post = bb('gq-bb-post', 14, 0, `<div class="gq-post" role="button" tabindex="0" data-story aria-label="郵便局：はじまりの物語を見る">${artBox('post', 'gq-post-art')}
     <div class="gq-guide">${artBox('hatoriSmile', 'gq-face-hatori')}${map.dueCount ? `<span class="gq-due-badge" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b>${map.dueCount}</b></span>` : ''}</div></div>`);
   const lighthouse = bb('gq-bb-top', roadEnd, 0, `<div class="gq-top-block" role="img" aria-label="道の終点の灯台">${night.complete ? '<span class="gq-full-stars" aria-label="夜の切手がすべてそろいました">✦ ⋆ ✧ ⋆ ✦</span>' : ''}<i class="gq-lighthouse-beam" aria-hidden="true"></i><img src="art/lighthouse.webp" data-lighthouse alt="" width="600" height="600" decoding="async"></div>`);
 
@@ -451,6 +452,12 @@ export function renderMap(view, ctx) {
       </div>
     </div>`;
 
+  const storyDoor = view.querySelector('[data-story]');
+  if (storyDoor) {
+    const openStory = () => window.dispatchEvent(new CustomEvent('wg:story'));
+    storyDoor.onclick = openStory;
+    storyDoor.onkeydown = event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openStory(); } };
+  }
   const tower = view.querySelector('[data-lighthouse]');
   if (tower) tower.onerror = () => { tower.onerror = null; tower.src = 'art/house-48.webp'; };
 
@@ -682,7 +689,7 @@ export function renderMap(view, ctx) {
       const top = b.el.classList.contains('gq-bb-top');
       const post = b.el.classList.contains('gq-bb-post');
       const pin = b.el.classList.contains('gq-bb-tsumugi');
-      if (r < 0 || r >= DRAW_DISTANCE || (top && !nearLighthouse && c < camMax - 300) || (post && (Math.abs(hereY - b.y) > 600 || r > 850)) || Y(s) > Hs + 140) {
+      if (r < 0 || r >= DRAW_DISTANCE || (top && !nearLighthouse && c < camMax - 300) || false || Y(s) > Hs + 140) {
         b.el.hidden = true; b.el.style.display = 'none'; b.shown = false;
         continue;
       }
