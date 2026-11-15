@@ -412,9 +412,3 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-button-art.image-loaded>img{display:block}
 .gq-button-art.image-loaded>svg{visibility:hidden}
 
-/* 横向き：iPhone の Safari は向きを固定できないので、縦に戻すよう案内してゲームを隠す（キーボード表示中の低い画面は対象外） */
-.rotate-back{display:none}
-@media (orientation:landscape) and (max-height:500px) and (pointer:coarse){
-  .rotate-back{position:fixed;inset:0;z-index:2147483647;display:grid;place-content:center;justify-items:center;gap:12px;background:var(--ink);color:#f3ead8;font-size:18px;font-weight:800}
-  main{visibility:hidden}
-}
