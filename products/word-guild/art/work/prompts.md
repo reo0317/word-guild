@@ -5440,3 +5440,23 @@ Subject: Atenashi (atenashi.png) squirting a fine mist from a bottle on plants. 
 
 Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi character: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its envelope shape, colors and single eye face. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols.
 Subject: Atenashi (atenashi.png) clamping two sheets together with a metal pin. Show only the character and relevant props, no background scenery.
+
+## 単語の絵：c2-126
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached ケシカス (keshikasu.png) exactly in shape, color, face and paper and letterpress ink printmaking style, thick dark navy outlines, flat discrete color shapes and textured paper. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: ケシカス (keshikasu.png), holding a folded route map with several stops marked on a trip, with a train ticket and a small hotel model as props.
+
+## 単語の絵：c2-127
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached ケシカス (keshikasu.png) in shape, color, face and paper and letterpress ink printmaking style, thick dark navy outlines, flat discrete color shapes and textured paper. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: ケシカス (keshikasu.png), at an office desk, with rows of miniature desks, computers and a coffee machine as isolated props representing a workplace.
+
+## 単語の絵：c2-128
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached ケシカス (keshikasu.png) in shape, color, face and paper and letterpress ink printmaking style, thick dark navy outlines, flat discrete color shapes and textured paper. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: ケシカス (keshikasu.png), wearing a hard hat and holding a blueprint and a ruler, directing a building crew, with a small building model as a prop.
+
+## 単語の絵：c2-129
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached ケシカス (keshikasu.png) in shape, color, face and paper and letterpress ink printmaking style, thick dark navy outlines, flat discrete color shapes and textured paper. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: ケシカス (keshikasu.png), wearing a white coat, mixing bubbling flasks and test tubes as laboratory props.
