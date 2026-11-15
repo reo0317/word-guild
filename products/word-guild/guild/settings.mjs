@@ -18,7 +18,7 @@ import {STORAGE_KEY, exportText, importText, saveProgress, backupProgress, resto
 import {todayNumber} from './srs.mjs';
 import {isStandalone, onUpdateReady, applyUpdate} from './pwa.mjs';
 import {renderCredits} from './library.mjs';
-import {esc, setSpeechEnabled} from './dom.mjs';
+import {esc, setSpeechEnabled, waxButton} from './dom.mjs';
 
 const SOUND_KEY = 'kiriharePost.sound';
 const CSS_URL = new URL('../album.css', import.meta.url).href;
@@ -73,25 +73,30 @@ export function openSettings(container, deps = {}) {
   container.className = 'gq gq-settings';
   container.innerHTML = `
     <p class="eyebrow">設定</p>
-    <section><div class="gq-switch"><h3>曲と効果音</h3><button type="button" id="gs-sound" aria-pressed="${soundOn}"></button></div></section>
-    <section><div class="gq-switch"><h3>読みあげ</h3><button type="button" id="gs-speech" aria-pressed="${progress.settings.speech !== false}">${progress.settings.speech !== false ? 'オン' : 'オフ'}</button></div></section>
-    <section><h3>新出語数</h3><div class="row">${[[4,'🌱 ゆっくり'],[6,'🌿 ふつう'],[8,'🌳 たくさん']].map(([n,label]) => `<button type="button" data-fresh="${n}" aria-pressed="${progress.settings.fresh === n}">${label}</button>`).join('')}</div></section>
+    <section><div class="gq-switch"><h3>曲と効果音</h3><button type="button" class="gs-toggle" aria-label="曲と効果音" id="gs-sound" aria-pressed="${soundOn}"></button></div></section>
+    <section><div class="gq-switch"><h3>読みあげ</h3><button type="button" class="gs-toggle" aria-label="読みあげ" id="gs-speech" aria-pressed="${progress.settings.speech !== false}">${progress.settings.speech !== false ? 'オン' : 'オフ'}</button></div></section>
+    <section><h3>新出語数</h3><div class="gs-fresh" role="group" aria-label="新出語数">${[[4,'🌱 ゆっくり'],[6,'🌿 ふつう'],[8,'🌳 たくさん']].map(([n,label]) => `<button type="button" class="gs-ticket" data-fresh="${n}" aria-pressed="${progress.settings.fresh === n}">${label}</button>`).join('')}</div></section>
     <section><h3>保存の書き出し</h3>
       <p class="note">最後に書き出した日：<span id="gs-exday">${esc(exportDay())}</span></p>
       <textarea id="gs-out" readonly rows="3" aria-label="書き出した文字列" hidden></textarea>
-      <div class="row"><button type="button" id="gs-export" ${deps.dev ? 'disabled' : ''}>書き出す</button><button type="button" id="gs-copy" disabled>コピー</button></div>
+      <div class="row">${waxButton({label: '書き出す', id: 'gs-export'})}${waxButton({label: 'コピー', id: 'gs-copy'})}</div>
       <p class="msg" id="gs-exmsg" role="status"></p></section>
     <section><h3>保存の読み込み</h3>
       <textarea id="gs-in" rows="3" placeholder="書き出した文字列を貼り付け" aria-label="読み込む文字列"></textarea>
-      <div class="row"><button type="button" id="gs-check" ${writable ? '' : 'disabled'}>確かめる</button></div>
+      <div class="row">${waxButton({label: '確かめる', id: 'gs-check'})}</div>
       <div id="gs-result" role="status"></div>
-      <div class="row"><button type="button" id="gs-restore" ${writable && storage && hasBackup(storage) ? '' : 'hidden'}>読み込む前の進捗に戻す</button></div></section>
-    <section><h3>Safari とホーム画面アプリ</h3>
-      <p>Safari とホーム画面アプリの進捗は別々です。引き継ぐには：Safari で「書き出す」→ ホーム画面に追加 → アプリで読み込み。</p>
-      ${isStandalone() ? '' : '<p>追加：共有ボタン →「ホーム画面に追加」。Safari のタブだけだと、7日間開かないと保存が消えることがあります。</p>'}
-      ${deps.dev ? '<p class="note">いまは保存しないモードなので、書き出しと読み込みは使えません。</p>' : ''}</section>
-    <section id="gs-update" hidden><p>新しい版があります。</p><div class="row"><button type="button" id="gs-apply">更新</button></div></section>
-    <div class="row"><button class="text-button" type="button" id="gs-credits">クレジット</button><button class="text-button" type="button" id="gs-back">← トップへ</button></div>`;
+      <div class="row">${waxButton({label: '控えに<br>戻す', id: 'gs-restore'})}</div></section>
+    <details class="gs-help"><summary>Safari とホーム画面アプリ</summary>
+      <p>進捗は別々です。「書き出す」→ アプリで読み込み。</p>
+      ${isStandalone() ? '' : '<p>追加は共有 →「ホーム画面に追加」。Safari では長く開かないと保存が消える場合があります。</p>'}
+      ${deps.dev ? '<p class="note">保存しないモードです。</p>' : ''}</details>
+    <section id="gs-update" hidden><p>新しい版があります。</p><div class="row">${waxButton({label: '更新', id: 'gs-apply'})}</div></section>
+    <div class="row gs-footer"><button class="text-button" type="button" id="gs-credits">クレジット</button><button class="text-button" type="button" id="gs-back">トップへ</button></div>`;
+
+  $('#gs-export').disabled = Boolean(deps.dev);
+  $('#gs-copy').disabled = true;
+  $('#gs-check').disabled = !writable;
+  $('#gs-restore').hidden = !(writable && hasBackup(storage));
 
   const paintSound = () => { const b = $('#gs-sound'); if (b) { b.textContent = soundOn ? 'オン' : 'オフ'; b.setAttribute('aria-pressed', soundOn); } };
   function paintUpdate() { const s = $('#gs-update'); if (s) s.hidden = !updateReady; }
@@ -134,7 +139,7 @@ export function openSettings(container, deps = {}) {
     if (storage) saveProgress(storage, progress);
     deps.onProgress?.(progress);
     $('#gs-exday').textContent = exportDay();
-    say('#gs-exmsg', '書き出しました。「コピー」を押して、メモなどに貼り付けて残してください。');
+    say('#gs-exmsg', '書き出しました。コピーして保管してください。');
   };
   $('#gs-copy').onclick = async () => {
     const out = $('#gs-out');
@@ -161,7 +166,7 @@ export function openSettings(container, deps = {}) {
       <tr><th>クエスト</th><td>${now.quests}回</td><td>${next.quests}回</td></tr>
       <tr><th>連続</th><td>${now.streak}日</td><td>${next.streak}日</td></tr></table>
       
-      <div class="row"><button type="button" id="gs-replace">この進捗に置きかえる</button></div>`;
+      <div class="row">${waxButton({label: '置きかえる', id: 'gs-replace'})}</div>`;
     $('#gs-replace').onclick = () => {
       // 控えと本保存の両方が成功してから置きかえる。失敗したら何も変えない
       let hadSaved = false;

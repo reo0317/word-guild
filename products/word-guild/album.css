@@ -73,22 +73,41 @@
 .gq-ex{margin:0;font-size:14px;line-height:1.5;font-weight:700}.gq-ex small{display:block;font-size:12px;color:var(--sub);font-weight:500}
 .gq-zoom-actions{display:flex;gap:22px;margin-top:6px}
 
-/* 設定 */
-.gq-settings{overflow:auto}
-.gq-settings section{display:grid;gap:6px;padding:10px;border:2px solid var(--ink);border-radius:10px;background:var(--paper-hi,#fbf6ea);flex-shrink:0}
+/* 設定：紙札と小さな封蝋 */
+.gq-settings{overflow:auto;gap:12px;padding-bottom:24px}
+.gq-settings section,.gq-settings .gs-help{display:grid;gap:12px;padding:14px;border:1px solid #b9ab90;border-radius:5px 12px 6px 10px;background:var(--paper-hi,#fbf6ea);box-shadow:0 3px 0 #1f2a4418;flex-shrink:0}
 .gq-settings h3{margin:0;font-family:var(--serif);font-size:15px}
 .gq-settings p{margin:0;font-size:12px;line-height:1.6}
 .gq-settings .note{color:var(--sub)}
-.gq-settings textarea{width:100%;min-height:84px;resize:vertical;font:12px/1.4 ui-monospace,monospace;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:8px;padding:6px;word-break:break-all;box-sizing:border-box}
-.gq-settings .row{display:flex;gap:10px;flex-wrap:wrap}
-/* 荷札の形（左が丸く、紐の穴つき）。横長の四角にしない。 */
-.gq-settings .row button:not(.text-button){position:relative;min-height:46px;min-width:76px;padding:8px 14px 8px 28px;border-radius:23px 8px 8px 23px;background:var(--lamp-lt)}
-.gq-settings .row button:not(.text-button)::before{content:"";position:absolute;left:12px;top:50%;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;border:2px solid var(--ink);background:var(--paper-hi)}
-.gq-settings button:disabled{opacity:.4}
+.gq-settings textarea{width:100%;min-height:72px;resize:vertical;font:12px/1.5 ui-monospace,monospace;color:var(--ink);background:#fffdf7;border:1px solid #b9ab90;border-radius:5px;padding:8px;word-break:break-all;box-sizing:border-box}
+.gq-settings .row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.gq-settings .row:has(>button[hidden]):not(:has(>button:not([hidden]))),.gq-settings .msg:empty{display:none}
+.gq-settings .gq-wax{width:76px;height:76px;min-width:0;min-height:0;padding:0;background:none;box-shadow:none}
+.gq-settings .gq-wax span{font-size:12px;letter-spacing:0}
+.gq-settings .gq-wax polygon{fill:#c8462f}
+.gq-settings .gq-wax:disabled{opacity:1;color:#8c877b;cursor:default}
+.gq-settings .gq-wax:disabled polygon{fill:#ede3cf;stroke:#b9ab90}
+.gq-settings .gq-wax:disabled circle{stroke:#b9ab90}
+.gq-settings .gq-wax:disabled span{text-shadow:none}
 .gq-settings .msg{font-weight:700}.gq-settings .msg.err{color:var(--seal)}
+.gq-switch{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.gq-settings .gs-toggle{position:relative;width:94px;height:44px;min-width:94px;min-height:44px;border:2px solid var(--ink);border-radius:24px;padding:0 9px 0 38px;background:#9fb3bf;box-shadow:0 2px 0 #1f2a4433;font-size:12px}
+.gq-settings .gs-toggle::before{content:"";position:absolute;left:4px;top:4px;width:30px;height:30px;border:1px solid var(--ink);border-radius:50%;background:#fbf6ea;box-shadow:inset 0 -3px 0 #d9cdb5;transition:transform .18s ease}
+.gq-settings .gs-toggle[aria-pressed=true]{background:#e7b04a;padding:0 38px 0 9px}
+.gq-settings .gs-toggle[aria-pressed=true]::before{transform:translateX(50px)}
+.gq-settings .gs-fresh{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.gq-settings .gs-ticket{position:relative;min-width:0;min-height:76px;padding:10px 2px 22px;border:1px solid #b9ab90;border-radius:3px 8px 3px 8px;background:#f3ead8;box-shadow:0 3px 0 #d5c8ae;font-size:12px;white-space:nowrap}
+.gq-settings .gs-ticket[aria-pressed=true]{border:2px solid #c8462f;background:#fff8e8;box-shadow:0 3px 0 #c8462f33}
+.gq-settings .gs-ticket[aria-pressed=true]::after{content:"✓";position:absolute;bottom:4px;left:calc(50% - 9px);width:18px;height:18px;display:grid;place-items:center;border-radius:44% 52% 45% 50%;background:#c8462f;color:#fff8e8;font-size:12px;box-shadow:0 1px 0 #7c3025}
+.gq-settings .gs-help summary{font-family:var(--serif);font-size:13px;font-weight:700;cursor:pointer;min-height:24px;align-content:center}
+.gq-settings .gs-help[open] summary{margin-bottom:8px}
+.gq-settings .gs-help p+p{margin-top:6px}
+.gq-settings .gs-footer{justify-content:center;padding:4px 0}
+.gq-settings .gs-footer button{width:76px;height:76px;min-width:0;padding:0;border:1px solid #b9ab90;border-radius:50%;background:var(--paper-hi);box-shadow:0 3px 0 #d5c8ae;font-size:12px;text-decoration:none}
+.gq-settings button:focus-visible,.gq-settings summary:focus-visible{outline:3px solid #c8462f;outline-offset:3px}
 .gq-compare{width:100%;border-collapse:collapse;font-size:12px}
 .gq-compare th,.gq-compare td{border:1px solid var(--fog);padding:4px 6px;text-align:center}
-.gq-switch{display:flex;justify-content:space-between;align-items:center;gap:8px}.gq-switch button{width:58px;height:58px;padding:0;border-radius:50%;font-size:14px}.gq-switch button[aria-pressed=true]{background:var(--lamp)}
+@media(prefers-reduced-motion:reduce){.gq-settings .gs-toggle::before{transition:none}}
 .gq-album [hidden],.gq-settings [hidden]{display:none!important}
 
 /* 通（物語の紙）。見た目の本体は letter.css */
