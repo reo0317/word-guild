@@ -13,14 +13,19 @@
 | `tsumugi-apose-front.png` | ツムギ | A ポーズの正面 |
 | `tsumugi-left.png` | ツムギ | 左向きの横 |
 | `tsumugi-back.png` | ツムギ | 後ろ |
+| `tsumugi-right.png` | ツムギ | 右向きの横 |
 | `hatori-apose-front.png` | ハトリ局長 | A ポーズの正面 |
 | `hatori-left.png` | ハトリ局長 | 左向きの横 |
 | `hatori-back.png` | ハトリ局長 | 後ろ |
+| `hatori-right.png` | ハトリ局長 | 右向きの横 |
 | `fuurou-left.png` | フウロウ | 左向きの横 |
 | `fuurou-back.png` | フウロウ | 後ろ |
+| `fuurou-spread-front.png` | フウロウ | 羽を広げた正面 |
+| `fuurou-spread-left.png` | フウロウ | 羽を広げた左向きの横（羽の形は要確認） |
+| `fuurou-spread-back.png` | フウロウ | 羽を広げた後ろ |
+| `fuurou-spread-right.png` | フウロウ | 羽を広げた右向きの横（羽の形は要確認） |
 
 - **多方向から作るのがおすすめ。** Tripo の多方向入力は 2〜4 枚（正面は必須）で、正面・左・後ろ・右の4方向をそろえると形と色の写りがよくなる（公式の手引きによる）。正面1枚だけでも作れるが、横と後ろは推測になる。
-- 右向き（`*-right.png`）とフウロウの羽を広げた絵は、画像生成の上限が戻ってから足す（11/16 8:05 以降）。
 - 人型は腕を体から離した A ポーズの正面（`*-apose-front.png`）を正面として使う。
 - **フウロウは羽を広げた姿（T ポーズのように左右へ水平に広げる）で作る。** 羽をたたんだ姿だと体と一体の形になり、羽ばたかせられない。`fuurou-spread-front.png`・`-left`・`-back`・`-right` を使う。
 
