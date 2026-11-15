@@ -75,7 +75,7 @@ export function openSettings(container, deps = {}) {
     <p class="eyebrow">設定</p>
     <section><div class="gq-switch"><h3>曲と効果音</h3><button type="button" class="gs-toggle" aria-label="曲と効果音" id="gs-sound" aria-pressed="${soundOn}"></button></div></section>
     <section><div class="gq-switch"><h3>読みあげ</h3><button type="button" class="gs-toggle" aria-label="読みあげ" id="gs-speech" aria-pressed="${progress.settings.speech !== false}">${progress.settings.speech !== false ? 'オン' : 'オフ'}</button></div></section>
-    <section><h3>新出語数</h3><div class="gs-fresh" role="group" aria-label="新出語数">${[[4,'🌱 ゆっくり'],[6,'🌿 ふつう'],[8,'🌳 たくさん']].map(([n,label]) => `<button type="button" class="gs-ticket" data-fresh="${n}" aria-pressed="${progress.settings.fresh === n}">${label}</button>`).join('')}</div></section>
+    <section><h3>新出語数</h3><div class="gs-fresh" role="group" aria-label="新出語数">${[[4,'🌱 すくなめ'],[6,'🌿 ふつう'],[8,'🌳 たくさん']].map(([n,label]) => `<button type="button" class="gs-ticket" data-fresh="${n}" aria-pressed="${progress.settings.fresh === n}">${label}</button>`).join('')}</div></section>
     <section><h3>保存の書き出し</h3>
       <p class="note">最後に書き出した日：<span id="gs-exday">${esc(exportDay())}</span></p>
       <textarea id="gs-out" readonly rows="3" aria-label="書き出した文字列" hidden></textarea>
