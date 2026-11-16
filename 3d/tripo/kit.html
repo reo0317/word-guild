@@ -22,6 +22,7 @@ p{margin:0}
 .tag header{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
 .chip{font-size:12px;font-weight:700;letter-spacing:.04em;padding:2px 10px;border-radius:999px;border:1.5px solid var(--ink)}
 .chip.rig{background:var(--lamp);color:#1f2a44;border-color:#1f2a44}
+.grid.one{grid-template-columns:minmax(0,1fr);max-width:420px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 @media (min-width:560px){.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}}
 figure{margin:0;display:grid;gap:4px}
@@ -52,22 +53,16 @@ ol.steps li::before{content:counter(s);width:30px;height:30px;border-radius:50%;
   </section>
 
   <section class="tag" aria-labelledby="t-tsumugi">
-    <header><h2 id="t-tsumugi">ツムギ</h2><span class="chip">4方向で作る</span><span class="chip rig">骨入れ：人型（Biped）</span></header>
-    <div class="grid four">
-      <figure><img src="img/tsumugi-apose-front.png" alt="ツムギ 正面（Aポーズ）"><figcaption><b>正面</b><span>Front</span></figcaption></figure>
-      <figure><img src="img/tsumugi-left.png" alt="ツムギ 左向き"><figcaption><b>左</b><span>Left</span></figcaption></figure>
-      <figure><img src="img/tsumugi-back.png" alt="ツムギ 後ろ"><figcaption><b>後ろ</b><span>Back</span></figcaption></figure>
-      <figure><img src="img/tsumugi-right.png" alt="ツムギ 右向き"><figcaption><b>右</b><span>Right</span></figcaption></figure>
+    <header><h2 id="t-tsumugi">ツムギ</h2><span class="chip">正面1枚で作る（Tポーズ）</span><span class="chip rig">骨入れ：人型（Biped）</span></header>
+    <div class="grid one">
+      <figure><img src="img/tsumugi-tpose.png" alt="ツムギ 正面（Tポーズ）"><figcaption><b>正面</b><span>Front</span></figcaption></figure>
     </div>
   </section>
 
   <section class="tag" aria-labelledby="t-hatori">
-    <header><h2 id="t-hatori">ハトリ局長</h2><span class="chip">4方向で作る</span><span class="chip rig">骨入れ：人型（Biped）</span></header>
-    <div class="grid four">
-      <figure><img src="img/hatori-apose-front.png" alt="ハトリ局長 正面（Aポーズ）"><figcaption><b>正面</b><span>Front</span></figcaption></figure>
-      <figure><img src="img/hatori-left.png" alt="ハトリ局長 左向き"><figcaption><b>左</b><span>Left</span></figcaption></figure>
-      <figure><img src="img/hatori-back.png" alt="ハトリ局長 後ろ"><figcaption><b>後ろ</b><span>Back</span></figcaption></figure>
-      <figure><img src="img/hatori-right.png" alt="ハトリ局長 右向き"><figcaption><b>右</b><span>Right</span></figcaption></figure>
+    <header><h2 id="t-hatori">ハトリ局長</h2><span class="chip">正面1枚で作る（Tポーズ）</span><span class="chip rig">骨入れ：人型（Biped）</span></header>
+    <div class="grid one">
+      <figure><img src="img/hatori-tpose.png" alt="ハトリ局長 正面（Tポーズ）"><figcaption><b>正面</b><span>Front</span></figcaption></figure>
     </div>
   </section>
 
@@ -90,7 +85,7 @@ ol.steps li::before{content:counter(s);width:30px;height:30px;border-radius:50%;
     <header><h2 id="t-steps">Tripo での作り方</h2></header>
     <ol class="steps">
       <li><div><h3>Tripo を開いてログイン</h3><p>studio.tripo3d.ai（スマホでもブラウザーで開けます）。</p></div></li>
-      <li><div><h3>「画像から3D」で多方向（Multi-view）を選ぶ</h3><p>正面の枠は必ず埋めます。ツムギと局長は正面・左・後ろ・右の4枚、フウロウは正面と後ろの2枚を、それぞれの向きの枠に入れます。</p></div></li>
+      <li><div><h3>「画像から3D」を選ぶ</h3><p>ツムギと局長は <b>1枚（Single image）</b> で、Tポーズの正面を入れます。フウロウは <b>多方向（Multi-view）</b> で、正面と後ろの枠に入れます。</p></div></li>
       <li><div><h3>設定をして作る</h3>
         <dl class="settings">
           <dt>テクスチャ</dt><dd>あり（絵の色を写す）</dd>
