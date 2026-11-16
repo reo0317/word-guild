@@ -67,25 +67,21 @@ ol.steps li::before{content:counter(s);width:30px;height:30px;border-radius:50%;
   </section>
 
   <section class="tag" aria-labelledby="t-fuurou">
-    <header><h2 id="t-fuurou">フウロウ</h2><span class="chip">正面と後ろの2枚で作る</span><span class="chip rig">骨入れ：鳥（Avian）</span></header>
-    <div class="grid">
+    <header><h2 id="t-fuurou">フウロウ</h2><span class="chip">4方向で作る</span><span class="chip rig">骨入れ：鳥（Avian）</span></header>
+    <div class="grid four">
       <figure><img src="img/fuurou-wing-front.png" alt="フウロウ 羽を広げた正面"><figcaption><b>正面</b><span>Front</span></figcaption></figure>
+      <figure><img src="img/fuurou-wing-left.png" alt="フウロウ 左向き"><figcaption><b>左</b><span>Left</span></figcaption></figure>
       <figure><img src="img/fuurou-wing-back.png" alt="フウロウ 羽を広げた後ろ"><figcaption><b>後ろ</b><span>Back</span></figcaption></figure>
+      <figure><img src="img/fuurou-wing-right.png" alt="フウロウ 右向き"><figcaption><b>右</b><span>Right</span></figcaption></figure>
     </div>
-    <p class="note">ライティングを除去はオフ、ポリゴン数は2万、トポロジーは四角形。横向きの2枚は斜め前から見た絵になっていて、羽の向きが正面と少し合わないので、まずは使わずに作ってください。</p>
-    <details><summary>横向きの絵（参考）</summary>
-      <div class="grid" style="margin-top:10px">
-        <figure><img src="img/fuurou-wing-left.png" alt="フウロウ 左向き（参考）"><figcaption><b>左</b><span>参考</span></figcaption></figure>
-        <figure><img src="img/fuurou-wing-right.png" alt="フウロウ 右向き（参考）"><figcaption><b>右</b><span>参考</span></figcaption></figure>
-      </div>
-    </details>
+    <p class="note">多方向（Multi-view）で4枚を向きの枠に入れます。左はくちばしが左を向いた絵、右はくちばしが右を向いた絵です。ライティングを除去はオフ、ポリゴン数は2万、トポロジーは四角形。</p>
   </section>
 
   <section class="tag" aria-labelledby="t-steps">
     <header><h2 id="t-steps">Tripo での作り方</h2></header>
     <ol class="steps">
       <li><div><h3>Tripo を開いてログイン</h3><p>studio.tripo3d.ai（スマホでもブラウザーで開けます）。</p></div></li>
-      <li><div><h3>「画像から3D」を選ぶ</h3><p>ツムギと局長は <b>1枚（Single image）</b> で、Tポーズの正面を入れます。フウロウは <b>多方向（Multi-view）</b> で、正面と後ろの枠に入れます。</p></div></li>
+      <li><div><h3>「画像から3D」を選ぶ</h3><p>ツムギと局長は <b>1枚（Single image）</b> で、Tポーズの正面を入れます。フウロウは <b>多方向（Multi-view）</b> で、正面・左・後ろ・右の枠に入れます。</p></div></li>
       <li><div><h3>設定をして作る</h3>
         <dl class="settings">
           <dt>テクスチャ</dt><dd>あり（絵の色を写す）</dd>
