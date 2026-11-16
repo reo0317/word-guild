@@ -5460,3 +5460,709 @@ Subject: ケシカス (keshikasu.png), wearing a hard hat and holding a blueprin
 
 Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached ケシカス (keshikasu.png) in shape, color, face and paper and letterpress ink printmaking style, thick dark navy outlines, flat discrete color shapes and textured paper. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
 Subject: ケシカス (keshikasu.png), wearing a white coat, mixing bubbling flasks and test tubes as laboratory props.
+
+
+## 単語の絵：c6-230
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） squeezing white sunscreen lotion onto its arms, with a sunscreen bottle and sun motif. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-231
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） doing a morning stretch and drinking a healthy juice, with a heart-shaped prop. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-232
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） filling in a practice workbook with a pencil; blank pages without writing. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-233
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） standing by a tall wooden bookcase full of books. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-234
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） cleaning a spotless shiny kitchen sink with a sponge, everything clean. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-235
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） as a game show contestant at a blank podium pressing a big buzzer. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-236
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） returning a lost wallet to its owner, with a tiny angel and devil on its shoulders, choosing what is right. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-237
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） holding a bowl of vegetables and fruit and a glass of water, glowing with health. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-238
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） carrying water one tiny cup at a time to fill a bathtub, while a bucket with holes leaks water, wasting effort. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-239
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） pouring a bottle of water into a large measuring jug with unnumbered level marks. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-240
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） sadly holding an empty purse beside a miniature shuttered shop prop and dwindling coins, economic hard times. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-241
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） pointing at a long row of small blank milestone flags on a project schedule board. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-242
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） waiting for a late bus, looking at a clock beside a wobbly broken chair, can't be counted on. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-243
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） receiving a bouquet and enthusiastic applause after a performance, bowing proudly. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-244
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） coughing persistently with a long stack of blank calendar pages and a bottle of pills, suggesting a long-lasting condition. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-245
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） watching a small old model house rot, with peeling paint and a sagging roof, getting worse. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-246
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） standing beside its parent creature that looks exactly the same, same face and shape, both visibly resembling one another. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-247
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） caught sneaking through a locked door as a guard stops it with an outstretched hand, no permission. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-248
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） stepping across a red boundary ribbon while a guard blows a whistle, breaking a rule. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-249
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） pulling an electrical plug and cord out of a wall socket with a satisfied face. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c6-250
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: オシミ（oshimi.png） attending a video meeting on a laptop with small faces of coworkers on the screen. Preserve its crown, many golden eyes, red mouth, navy body and claws. No background scenery.
+
+## 単語の絵：c5-217
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) using a cordless power drill with a visible battery pack and no wire. Only props, no scenery.
+
+## 単語の絵：c5-218
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) enjoying luxury with a golden velvet chair, chandelier and champagne bottle. Only props, no scenery.
+
+## 単語の絵：c5-219
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) gazing longingly at a shiny desirable dream house model with a sparkling eye. Only props, no scenery.
+
+## 単語の絵：c5-220
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) comparing two blank receipts of visibly different lengths, scratching its head at the discrepancy. Only props, no scenery.
+
+## 単語の絵：c5-221
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) dispatching repair teams by handheld radio, with small repair vans as props. Only props, no scenery.
+
+## 単語の絵：c5-222
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) holding a shiny new gadget with a conspicuous large crack in its side, disappointed at its downside. Only props, no scenery.
+
+## 単語の絵：c5-223
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) yawning with boredom beside a drooping flower and a blank clock, listening to a dull lecture. Only props, no scenery.
+
+## 単語の絵：c5-224
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) saving fuel and coins with a small hybrid car and a coin jar, thrifty. Only props, no scenery.
+
+## 単語の絵：c5-225
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) carefully cutting a cake into equal pieces and spreading butter evenly. Only props, no scenery.
+
+## 単語の絵：c5-226
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) standing on a top podium wearing a blank gold medal and holding a sparkling trophy, best quality. Only props, no scenery.
+
+## 単語の絵：c5-227
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) guarding a closed club door and holding a blank membership card, exclusive entry. Only props, no scenery.
+
+## 単語の絵：c5-228
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) waving a tearful goodbye from a toy train carriage with a blank banner. Only props, no scenery.
+
+## 単語の絵：c5-229
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) slumped exhausted at a desk with a heavy eyelid, dark circles and an empty battery prop. Only props, no scenery.
+
+## 単語の絵：c5-230
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) examining a blank ledger, coins and simple unlabelled bars at an official desk, planning a yearly budget. Only props, no scenery.
+
+## 単語の絵：c5-231
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) standing proudly with a row of identical miniature delivery trucks, a company fleet. Only props, no scenery.
+
+## 単語の絵：c5-232
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) scooping white flour from an unlabelled bag into a bowl with a rolling pin. Only props, no scenery.
+
+## 単語の絵：c5-233
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) holding a lantern amid a few curling white mist wisps, peering through fog. Only props, no scenery.
+
+## 単語の絵：c5-234
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) wearing a tuxedo and giving a stiff formal bow beside a podium and blank speech sheet. Only props, no scenery.
+
+## 単語の絵：c5-235
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) measuring a tiny pinch of salt on a small blank scale, showing light weight. Only props, no scenery.
+
+## 単語の絵：c5-236
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) reading a small blank guide book of workplace rules, with a blank employee badge. Only props, no scenery.
+
+## 単語の絵：c5-237
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) listening to music with oversized headphones covering its ears. Only props, no scenery.
+
+## 単語の絵：c5-238
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) warming its hands before a glowing orange electric heater. Only props, no scenery.
+
+## 単語の絵：c5-239
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) putting on a protective bicycle helmet beside a bicycle. Only props, no scenery.
+
+## 単語の絵：c5-240
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) hiking with a backpack and walking stick, stepping uphill on a small rock prop. Only props, no scenery.
+
+## 単語の絵：c5-241
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) sleeping in the cold on a bench with a bundle of belongings and a blank cardboard box, without a home. Only props, no scenery.
+
+## 単語の絵：c5-242
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) flicking a small flame from a pocket lighter to light a candle. Only props, no scenery.
+
+## 単語の絵：c5-243
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) shouting loudly into an oversized megaphone with visible curved sound waves. Only props, no scenery.
+
+## 単語の絵：c5-244
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) standing guard faithfully beside its king, hand on heart, with crown and shield props. Only props, no scenery.
+
+## 単語の絵：c5-245
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) heating a bowl of food inside a small microwave oven with a glowing light and blank controls. Only props, no scenery.
+
+## 単語の絵：c5-246
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) pointing at a rabbit while imagining a cat in a blank thought bubble, mistaken identity. Only props, no scenery.
+
+## 単語の絵：c5-247
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) arranging a perfectly folded pile of shirts and neatly aligned blank books on a clean desk. Only props, no scenery.
+
+## 単語の絵：c5-248
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) standing as a chosen award candidate beside a ballot box, blank ballot and trophy. Only props, no scenery.
+
+## 単語の絵：c5-249
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) making a decision official by pressing a formal blank stamp on a blank document. Only props, no scenery.
+
+## 単語の絵：c5-250
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Preserve Atenashi's envelope shape, vermilion ink, single yellow eye and sad face. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Atenashi (atenashi.png) posing in a complete matching outfit from hat to shoes beside a small wardrobe. Only props, no scenery.
+
+## 単語の絵：c6-086
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) digging among shelves of boxes and mops, a supply storage room represented only by props.
+
+## 単語の絵：c6-087
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) handing coins from a government bag to a farmer to make bread cheaper
+
+## 単語の絵：c6-088
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) squinting suspiciously at a stranger with a magnifying glass
+
+## 単語の絵：c6-089
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) licking its lips over a delicious steaming plate
+
+## 単語の絵：c6-090
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) raising both thumbs with a big smile, great.
+
+## 単語の絵：c6-091
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) walking through a tunnel with a mole and pipes, represented only by props.
+
+## 単語の絵：c6-092
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) holding a stack of overdue bills and an empty wallet
+
+## 単語の絵：c6-093
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) spiking a volleyball over a net
+
+## 単語の絵：c6-094
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) rolling in a wheelchair with big wheels
+
+## 単語の絵：c6-095
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) offering a free cake to anyone, arm extended toward a crowd
+
+## 単語の絵：c6-096
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) knitting a warm sweater from fluffy yarn next to a sheep
+
+## 単語の絵：c6-097
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) ironing a creased shirt with many folds
+
+## 単語の絵：c6-098
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) hitting the exact center of a target with an arrow
+
+## 単語の絵：c6-099
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) shrugging and carrying on in rain with a broken umbrella
+
+## 単語の絵：c6-100
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) nibbling a small starter dish of olives and cheese before a main meal
+
+## 単語の絵：c6-101
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) watching a curved rainbow and bouncing ball tracing a curved path
+
+## 単語の絵：c6-102
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) singing in front of judges at a table
+
+## 単語の絵：c6-103
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) carrying a school bag on its back with straps
+
+## 単語の絵：c6-104
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) in a gown dancing with a partner under a chandelier
+
+## 単語の絵：c6-105
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) gaining health and a smile from a fresh apple and exercise
+
+## 単語の絵：c6-106
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) reading a thick book with a portrait of a famous person on its cover
+
+## 単語の絵：c6-107
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) boarding a train holding a ticket
+
+## 単語の絵：c6-108
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) sweeping with a long handled brush
+
+## 単語の絵：c6-109
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) eating a burger with melted cheese oozing
+
+## 単語の絵：c6-110
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) shivering in a light jacket in a crisp breeze with a thin cloud of breath
+
+## 単語の絵：c6-111
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) juggling with a trapeze, clown and elephant as small props
+
+## 単語の絵：c6-112
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) complimenting a blushing friend on a new haircut
+
+## 単語の絵：c6-113
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) leaving boxes of goods with a shopkeeper to sell on its behalf
+
+## 単語の絵：c6-114
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) pointing at a large map and a vast landmass
+
+## 単語の絵：c6-115
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) protecting a book with a lock from a copying pirate creature
+
+## 単語の絵：c6-116
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) walking beside a cow and a small barn model, countryside
+
+## 単語の絵：c6-117
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) operating a wrecking machine swinging a ball through an old building model
+
+## 単語の絵：c6-118
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) meeting with a small team around a table, separate groups nearby
+
+## 単語の絵：c6-119
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) on its knees reaching up with tears, desperately needing help
+
+## 単語の絵：c6-120
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) beside a completely destroyed miniature town flattened by a storm
+
+## 単語の絵：c6-121
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) plugging a testing device into a car engine to find the problem
+
+## 単語の絵：c6-122
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) drawing a diagram of boxes and connectors on a blank whiteboard
+
+## 単語の絵：c6-123
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) holding a sparkling cut gem up to the light
+
+## 単語の絵：c6-124
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) turning a switch off, making a device stop working
+
+## 単語の絵：c6-125
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached オシミ (oshimi.png) exactly in shape, colors, crown and many-eyed face: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or other symbols.
+Subject: オシミ (oshimi.png) turning its face away from rotten food, grossed out
+
+## 単語の絵：c4-205
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) collecting scattered notes and pages into one neat book on a desk.
+
+## 単語の絵：c4-206
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) fixing a wrong answer on a test with a red pen.
+
+## 単語の絵：c4-207
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) adding stickers and its own parts to a plain phone case and a bike to fit its own taste, tailoring.
+
+## 単語の絵：c4-208
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) practicing a violin every night through a window with callused fingers, committed.
+
+## 単語の絵：c4-209
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) as a doctor looking at an X-ray and telling the cause of a cough.
+
+## 単語の絵：c4-210
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) taking a product off a shelf and putting a closed sign with a line crossed out, no longer made.
+
+## 単語の絵：c4-211
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) loading plates into a machine under the counter that sprays water.
+
+## 単語の絵：c4-212
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) standing on cracked dry earth with a wilted plant and a blazing sun, no rain.
+
+## 単語の絵：c4-213
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) turning off lights and clipping coupons to save every coin in a piggy bank.
+
+## 単語の絵：c4-214
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) being served the main course on a large plate by a waiter, a steak and sides.
+
+## 単語の絵：c4-215
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) watching bright bursts of color explode in the night sky.
+
+## 単語の絵：c4-216
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) on a long train loaded with heavy goods rolling with a rail yard.
+
+## 単語の絵：c4-217
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) cooking sizzling potatoes in a pan of hot oil.
+
+## 単語の絵：c4-218
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) holding a big jug of milk bigger than itself for measuring liquid.
+
+## 単語の絵：c4-219
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) in a straw hat watering flowers and trimming hedges with shears.
+
+## 単語の絵：c4-220
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) dreaming of a perfect house in a cloud above its head, wishing the best case.
+
+## 単語の絵：c4-221
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) receiving a bill where tax and service are all included in one price, everything in.
+
+## 単語の絵：c4-222
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) with a tiny blanket that cannot cover both its head and feet, not enough.
+
+## 単語の絵：c4-223
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) on its first lesson at a beginner class with simple basics on a board.
+
+## 単語の絵：c4-224
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) in a garage buried under old broken stuff and rusty parts.
+
+## 単語の絵：c4-225
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) in a bow tie bowing politely to a lady creature at a shop, addressing a lady.
+
+## 単語の絵：c4-226
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) looking at a car dashboard that shows how far it drove with a road behind.
+
+## 単語の絵：c4-227
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) covering its ears in a loud room with a blaring band and drums.
+
+## 単語の絵：c4-228
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) holding a flat metal cooking pot with a handle over a stove.
+
+## 単語の絵：c4-229
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) carrying a brown paper box tied with string to the post office.
+
+## 単語の絵：c4-230
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) twirling spaghetti on a fork with a red sauce.
+
+## 単語の絵：c4-231
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) picking up a thin weekly magazine from a rack of issues.
+
+## 単語の絵：c4-232
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) swallowing a small round tablet with water.
+
+## 単語の絵：c4-233
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) lifting a small foldable radio by a handle and carrying it easily.
+
+## 単語の絵：c4-234
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) standing at the door exactly when the clock strikes with a pocket watch, never late.
+
+## 単語の絵：c4-235
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) happily playing a game of catch in a park, free-time fun.
+
+## 単語の絵：c4-236
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) sighing in comfort as a heavy backpack is lifted off its shoulders, pain going away.
+
+## 単語の絵：c4-237
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) looking at a sticky note on a fridge and a ringing alarm clock, a gentle nudge.
+
+## 単語の絵：c4-238
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png)s whispering behind their hands in a circle, a gossip spreading from ear to ear.
+
+## 単語の絵：c4-239
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) wrapping a long woolen scarf around its neck in snow.
+
+## 単語の絵：c4-240
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) on a sandy shore with beach umbrellas and gentle waves.
+
+## 単語の絵：c4-241
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) cutting a long rope in half with scissors, making a long thing short.
+
+## 単語の絵：c4-242
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) baking a one-of-a-kind cake with sparkles made only for a certain guest, for a purpose.
+
+## 単語の絵：c4-243
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) knocking over a cup of juice that runs across a table.
+
+## 単語の絵：c4-244
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) in a wedding ring holding hands with its husband or wife at home.
+
+## 単語の絵：c4-245
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) taking three apples away from a pile of five on a chalkboard.
+
+## 単語の絵：c4-246
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) tapping a flat touch-screen computer in both hands.
+
+## 単語の絵：c4-247
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) straining to lift an enormous block labeled with an elephant on a scale, heavy.
+
+## 単語の絵：c4-248
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) tapping a snack machine that drops a bag of chips into a tray.
+
+## 単語の絵：c4-249
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) balancing on one leg in a stretching pose on a mat, calm.
+
+## 単語の絵：c4-250
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama.png: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Preserve its gray-blue dust-cloud shape, red patches, orange eyes, dark jagged mouth and pale limbs. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: hokoridama (hokoridama.png) at a strange place speaking with a heavy regional way of talking shown by a wavy speech bubble, a foreign accent.
