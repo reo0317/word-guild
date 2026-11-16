@@ -30,11 +30,11 @@ test('遠くほど縮小段階を上げ、門の足元で2区を切り替える'
   assert.deepEqual([999,1000,1999,2000,3000].map(z=>wardAt(ranges,z)),[1,2,2,3,null]);
   const r=gateDoorRect(2);
   assert.ok(r.x>0 && r.y>0 && r.x+r.width<1 && r.y+r.height<1);
-  for (let ch=1;ch<=6;ch++) { const r=gateDoorRect(ch); assert.ok(r.x>=0 && r.y>=0 && r.x+r.width<=1 && r.y+r.height<=1); }
+  for (let ch=0;ch<=6;ch++) { const r=gateDoorRect(ch); assert.ok(r.x>=0 && r.y>=0 && r.x+r.width<=1 && r.y+r.height<=1); }
 });
 
 test('G0の道と門だけを書き出し、容量制限に収まる',async()=>{
-  for(const [path,kb] of [['road/road-2.webp',45],['gate-2.webp',70],['gate-2-door-l.webp',40],['gate-2-door-r.webp',40]]) {
+  for(const [path,kb] of [['gate-0.webp',70],['gate-0-door-l.webp',40],['gate-0-door-r.webp',40],['road/road-2.webp',45],['gate-2.webp',70],['gate-2-door-l.webp',40],['gate-2-door-r.webp',40]]) {
     assert.ok((await stat(new URL('../products/word-guild/art/'+path,import.meta.url))).size<=kb*1024);
   }
   const source=await readFile(new URL('../products/word-guild/guild/map.mjs',import.meta.url),'utf8');
@@ -66,7 +66,7 @@ test('全区の門は家と同じ指数で遠方ほど小さくなり、開い�
   assert.doesNotMatch(css, /gq-gate-door-[lr]\{transform:scaleX\(-/);
   assert.match(css, /cleared \.gq-gate-door-l\{transform:scaleX\(\.16\)/);
   assert.match(css, /cleared \.gq-gate-door-r\{transform:scaleX\(\.16\)/);
-  for (let ch = 1; ch <= 6; ch++) {
+  for (let ch = 0; ch <= 6; ch++) {
     let previous = Infinity;
     for (let distance = 0; distance <= 7200; distance += 10) {
       const size = 232 * gateScale(projectRoad(390, 700, distance).scale);

@@ -170,7 +170,7 @@ def export_map2():
 
 
 # 原画に対する割合。2区は承認済みの切り出しを保持する。
-GATE_RECTS = {1:(.30,.48,.40,.35), 2:(500/1536,700/1536,536/1536,490/1536),
+GATE_RECTS = {0:(500/1536,700/1536,536/1536,490/1536), 1:(.30,.48,.40,.35), 2:(500/1536,700/1536,536/1536,490/1536),
               3:(.28,.52,.43,.34), 4:(.28,.51,.44,.35),
               5:(.29,.49,.42,.38), 6:(.31,.51,.38,.34)}
 
@@ -178,7 +178,7 @@ def gate_arch(im, n):
     """上端の不透明輪郭を包含する半円。灯・飾りと文字の縁に14pxの間隔。"""
     import math
     alpha = im.resize((512, 512), Image.LANCZOS).getchannel('A')
-    cx, cy = {1: (256, 330), 2: (256, 320), 3: (256, 320),
+    cx, cy = {0: (256, 320), 1: (256, 330), 2: (256, 320), 3: (256, 320),
               4: (256, 340), 5: (256, 330)}[n]
     contour = []
     for x in range(512):
@@ -187,6 +187,23 @@ def gate_arch(im, n):
                 contour.append(math.hypot(x-cx, y-cy))
                 break
     return [cx, cy, math.ceil(max(contour)) + 14]
+
+
+def export_gate(n):
+    with Image.open(WORK / f'gate-{n}.png') as source:
+        im = source.convert('RGBA')
+    im = remove_alpha_specks(key_out_green(im) if n == 0 else im)
+    x,y,w,h = GATE_RECTS[n]
+    x0,y0,x1,y1 = round(x*im.width),round(y*im.height),round((x+w)*im.width),round((y+h)*im.height)
+    mid=(x0+x1)//2
+    door=im.crop((x0,y0,x1,y1))
+    save_webp(door.resize((round(w*512),round(h*512)),Image.LANCZOS),OUT / f'gate-{n}-door.webp',40)
+    for side,box in [('l',(x0,y0,mid,y1)),('r',(mid,y0,x1,y1))]:
+        leaf=im.crop(box).resize((round(w*256),round(h*512)),Image.LANCZOS)
+        save_webp(leaf,OUT / f'gate-{n}-door-{side}.webp',40)
+    im.paste((0,0,0,0),(x0,y0,x1,y1))
+    save_webp(im.resize((512,512),Image.LANCZOS),OUT / f'gate-{n}.webp',70)
+    return gate_arch(im, n) if n < 6 else None
 
 
 def export_lighthouse():
@@ -207,8 +224,10 @@ def export_map():
     export_map_front()
     available['roads'].append(0)
     export_lighthouse()
-    for n in range(1,7):
+    for n in range(0,7):
         for kind in ('road', 'gate'):  # 道ばたの小物は使わない（依頼者の判断）
+            if n == 0 and kind == 'road':
+                continue
             try:
                 path = WORK / f'{kind}-{n}.{"webp" if kind == "road" else "png"}'
                 with Image.open(path) as source:
@@ -232,19 +251,9 @@ def export_map():
                     save_webp(im,dest / f'props-{n}.webp',70)
                     available['props'].append(n)
                 else:
-                    im = remove_alpha_specks(im)
-                    if n < 6:
-                        arches[n] = gate_arch(im, n)
-                    x,y,w,h = GATE_RECTS[n]
-                    x0,y0,x1,y1 = round(x*im.width),round(y*im.height),round((x+w)*im.width),round((y+h)*im.height)
-                    mid=(x0+x1)//2
-                    door=im.crop((x0,y0,x1,y1))
-                    save_webp(door.resize((round(w*512),round(h*512)),Image.LANCZOS),OUT / f'gate-{n}-door.webp',40)
-                    for side,box in [('l',(x0,y0,mid,y1)),('r',(mid,y0,x1,y1))]:
-                        leaf=im.crop(box).resize((round(w*256),round(h*512)),Image.LANCZOS)
-                        save_webp(leaf,OUT / f'gate-{n}-door-{side}.webp',40)
-                    im.paste((0,0,0,0),(x0,y0,x1,y1))
-                    save_webp(im.resize((512,512),Image.LANCZOS),OUT / f'gate-{n}.webp',70)
+                    arch = export_gate(n)
+                    if arch:
+                        arches[n] = arch
                     available['gates'].append(n)
                 print(kind,n,'OK')
             except (OSError,ValueError,AssertionError) as error:
@@ -258,7 +267,21 @@ def main():
     parser.add_argument('--map', action='store_true', help='全区の道・門・小物を書き出す')
     parser.add_argument('--map2', action='store_true', help='2区の道と門だけを書き出す')
     parser.add_argument('--map-front', action='store_true', help='郵便局・地図ボタン・導入の道を書き出す')
+    parser.add_argument('--gate', type=int, choices=range(7), help='指定した門だけを書き出す')
     args = parser.parse_args()
+    if args.gate is not None:
+        import json
+        manifest = OUT / 'map-art.mjs'
+        values = [json.loads(line.split(' = ', 1)[1].rstrip(';')) for line in manifest.read_text().splitlines()]
+        available, rects, arches = values
+        n = args.gate
+        arch = export_gate(n)
+        available['gates'] = sorted(set(available['gates'] + [n]))
+        rects[str(n)] = GATE_RECTS[n]
+        if arch:
+            arches[str(n)] = arch
+        manifest.write_text('export const MAP_ART = '+json.dumps(available)+';\nexport const GATE_RECTS = '+json.dumps(rects)+';\nexport const GATE_ARCHES = '+json.dumps(arches)+';\n')
+        return
     if args.map_front:
         export_map_front()
         return

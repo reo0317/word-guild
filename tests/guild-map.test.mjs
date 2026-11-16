@@ -42,6 +42,9 @@ test('家は左右交互で、霧・5段階の色・完成・点灯・金を進�
   try {
     renderMap(view, {map:buildMap(words,progress,20000),today:20000,progress,total:1400,face:()=>'',tsumugi:'',letterOf:()=>({}),on:{lamp:s=>{opened=s;}}});
   } finally {globalThis.requestAnimationFrame=old;}
+  assert.match(view.innerHTML, /<div class="gq-gate gq-gate-art cleared"[^>]*aria-label="1区の門（通過済み）"/);
+  assert.match(view.innerHTML, /href="#gq-arch-0"[^>]*>1区 坂の上の朝市<\/textPath>/);
+  assert.doesNotMatch(view.innerHTML, /class="gq-bb gq-bb-ward/);
   const houses = [...view.innerHTML.matchAll(/class="gq-house ([^"]*)"\s+data-shelf="(\d+)"[^>]*style="--reveal:(\d+)%"/g)];
   assert.equal(houses.length,56);
   assert.match(houses[0][1], /left complete lit gold/);

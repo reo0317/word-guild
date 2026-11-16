@@ -276,6 +276,7 @@ export function layout(map) {
   };
   const here = map.here;
   add('post', H.post, {}, H.post);
+  add('entrance', H.gate, {ward: {ch: 0, gate: 'cleared'}, lat: 0}, H.gate - 50);
   let k = 0;
   map.wards.forEach((ward, wi) => {
     add('ward', H.ward, {ward, wi}, H.ward / 2);
@@ -290,7 +291,8 @@ export function layout(map) {
     add('gate', H.gate, {ward, k: k++}, H.gate - 50); // 門は区の最後の街灯の札よりはっきり奥に置く（重なり順がちらつかない）
   });
   add('top', H.top, {}, H.top - 70);
-  let start = H.post;
+  const entranceY = items.find(i => i.type === 'entrance').cy;
+  let start = entranceY;
   const gates = items.filter(i => i.type === 'gate');
   const ranges = gates.map((i, n) => {
     // 最後の門（6区）の先、灯台までの道も6区の絵で敷く。
@@ -298,7 +300,7 @@ export function layout(map) {
     start = i.cy;
     return range;
   });
-  ranges.unshift({ch: 0, start: -Infinity, end: H.post});
+  ranges.unshift({ch: 0, start: -Infinity, end: entranceY});
   return {items, total: y, ranges};
 }
 
@@ -358,10 +360,10 @@ export function renderMap(view, ctx) {
         aria-label="街灯${lamp.shelf}　切手 ${lamp.got}/${lamp.total}　${letter ? '手紙を開く' : '切手帳を開く'}">
         <b>${lamp.shelf}</b><small>${lamp.got}/${lamp.total}</small>${remain ? `<em>↑${remain}</em>` : ''}</button>${pin}`);
     }
-    if (item.type === 'gate') {
+    if (item.type === 'gate' || item.type === 'entrance') {
       const {ward} = item;
       // 次の区の名札は承認済みの位置（門の上）を保つ。
-      const nextWard = map.wards[map.wards.indexOf(ward) + 1];
+      const nextWard = item.type === 'entrance' ? map.wards[0] : map.wards[map.wards.indexOf(ward) + 1];
       const gateTag = nextWard ? `<div class="gq-ward-tag gq-gate-tag"><b>${nextWard.ch}区</b> ${esc(nextWard.name)}</div>` : '';
       if (MAP_ART.gates.includes(ward.ch)) {
         const r = gateDoorRect(ward.ch);
@@ -369,7 +371,7 @@ export function renderMap(view, ctx) {
         const archText = path && nextWard ? `<svg class="gq-gate-arch" viewBox="0 0 512 512" aria-hidden="true"><path id="gq-arch-${ward.ch}" d="${path}" fill="none"/><text><textPath href="#gq-arch-${ward.ch}" startOffset="50%" text-anchor="middle">${nextWard.ch}区 ${esc(nextWard.name)}</textPath></text></svg>` : '';
         const tag = ward.gate === 'open' ? 'button' : 'div';
         return bb(`gq-bb-gate${far}`, item.cy, item.lat,
-          `<${tag} class="gq-gate gq-gate-art ${ward.gate}" style="--door-x:${r.x*100}%;--door-y:${r.y*100}%;--door-w:${r.width*50}%;--door-h:${r.height*100}%" aria-label="${ward.ch}区の門${ward.gate === 'cleared' ? '（通過済み）' : ''}" ${tag === 'button' ? 'type="button" data-gate="' + ward.ch + '"' : ''}>
+          `<${tag} class="gq-gate gq-gate-art ${ward.gate}" style="--door-x:${r.x*100}%;--door-y:${r.y*100}%;--door-w:${r.width*50}%;--door-h:${r.height*100}%" aria-label="${item.type === 'entrance' ? 1 : ward.ch}区の門${ward.gate === 'cleared' ? '（通過済み）' : ''}" ${tag === 'button' ? 'type="button" data-gate="' + ward.ch + '"' : ''}>
           <i class="gq-gate-fallback" aria-hidden="true"></i><img class="gq-gate-frame" src="art/gate-${ward.ch}.webp" alt="" width="512" height="512">
           <img class="gq-gate-door gq-gate-door-l" src="art/gate-${ward.ch}-door-l.webp" alt="">
           <img class="gq-gate-door gq-gate-door-r" src="art/gate-${ward.ch}-door-r.webp" alt="">
@@ -380,10 +382,6 @@ export function renderMap(view, ctx) {
       return bb(`gq-bb-gate${far}`, item.cy, item.lat,
         `<${tag} ${tag === 'button' ? 'type="button" data-gate="' + ward.ch + '"' : ''} class="gq-gate ${ward.gate}"
         ${ward.gate === 'open' ? `aria-label="${ward.ch}区の門へ"` : ''}><i aria-hidden="true"></i>${label ? `<span>${label}</span>` : ''}</${tag}>${gateTag}`);
-    }
-    if (item.type === 'ward') {
-      if (item.wi > 0) return ''; // 2区から先の名札は前の区の門の足もと
-      return bb('gq-bb-ward', item.cy, -0.8, `<div class="gq-ward-tag"><b>${item.ward.ch}区</b> ${esc(item.ward.name)}</div>`);
     }
     return '';
   }).join('');

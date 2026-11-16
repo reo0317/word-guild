@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile, stat} from 'node:fs/promises';
 import {mapButton} from '../products/word-guild/guild/dom.mjs';
-import {layout, wardAt} from '../products/word-guild/guild/map.mjs';
+import {layout, wardAt, gateArchPath, gateDoorRect} from '../products/word-guild/guild/map.mjs';
 import {MAP_ART} from '../products/word-guild/art/map-art.mjs';
 import {precacheFiles} from '../tools/sw-version.mjs';
 
@@ -39,4 +39,19 @@ test('郵便局から1区開始までだけ0区の道になり、物語と足元
   assert.match(source,/src="art\/post-front.webp"/);
   assert.match(source,/gq-guide/);
   assert.match(source,/gq-due-badge/);
+});
+
+test('1区の入口は郵便局と石段の間にあり、門の足元で道を切り替える', () => {
+  const {items, ranges}=layout({wards:[{ch:1,lamps:[{steps:[{}]}]}]});
+  const post=items.find(i=>i.type==='post');
+  const entrance=items.find(i=>i.type==='entrance');
+  const step=items.find(i=>i.type==='step');
+  assert.ok(14 < entrance.cy && post.cy < entrance.cy && entrance.cy < step.cy);
+  assert.equal(entrance.ward.ch,0);
+  assert.equal(entrance.ward.gate,'cleared');
+  assert.equal(wardAt(ranges,entrance.cy-.01),0);
+  assert.equal(wardAt(ranges,entrance.cy),1);
+  assert.ok(MAP_ART.gates.includes(0));
+  assert.ok(gateArchPath(0));
+  assert.equal(gateDoorRect(0).x,500/1536);
 });

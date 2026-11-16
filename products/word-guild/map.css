@@ -233,3 +233,6 @@
 
 .gq-post.door-flipped .gq-post-art{transform:scaleX(-1)}
 .gq-here-panel .gq-faces{flex-wrap:nowrap}.gq-due-n{white-space:nowrap}
+
+/* 入口の門は常に通行できる装飾。 */
+.gq-gate-art.cleared{cursor:default}
