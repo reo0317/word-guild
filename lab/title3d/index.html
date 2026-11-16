@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>霧晴れ郵便局 — タイトル画面の試作 (3D)</title>
+<style>
+  :root {
+    --navy: #1f2a44; --mist: #9fb3bf; --paper: #f3ead8; --lamp: #e7b04a; --red: #c8462f;
+    --mincho: "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Yu Mincho", "YuMincho",
+              "Noto Serif JP", "Noto Serif CJK JP", "MS PMincho", serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--navy); overflow: hidden; }
+  body { font-family: var(--mincho); -webkit-text-size-adjust: 100%; }
+
+  /* 版画の「紙」。スマホでは画面いっぱい、広い画面では縦長の枠におさめる */
+  #stage {
+    position: relative; margin: 0 auto; overflow: hidden;
+    height: 100vh; height: 100dvh;
+    width: 100vw; max-width: max(calc(100vh * 390 / 844), 480px);
+    background: var(--mist);
+    -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+  }
+  #view { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+  /* 紙のざらつき（乗算）と、刷りのかすれ（白い点） */
+  #grain, #kasure { position: absolute; inset: 0; pointer-events: none; }
+  #grain { mix-blend-mode: multiply; opacity: .9; }
+  #kasure { mix-blend-mode: screen; opacity: .5; }
+  /* 版画の見当わく：紙の余白と紺の一本線 */
+  #frame {
+    position: absolute; inset: 0; pointer-events: none;
+    border: 5px solid var(--paper);
+    box-shadow: inset 0 0 0 2px var(--navy);
+  }
+
+  /* 題字：紺の空から紙の色で抜く */
+  .title {
+    position: absolute; left: 0; right: 0;
+    top: calc(env(safe-area-inset-top, 0px) + 5.2%);
+    text-align: center; pointer-events: none;
+  }
+  .title h1 {
+    display: inline-block; position: relative; margin: 0;
+    font-weight: 800; font-size: min(11.6vw, 5.4vh, 46px); line-height: 1.15;
+    letter-spacing: .09em; padding-left: .09em;
+    color: var(--paper);
+    text-shadow: 2px 3px 0 rgba(31, 42, 68, .9);
+  }
+  .title .seal {
+    position: absolute; right: -1.05em; top: .78em;
+    width: 1.5em; height: 1.5em; font-size: .4em; line-height: 1.5em;
+    letter-spacing: 0; padding: 0; text-shadow: none;
+    background: var(--red); color: var(--paper);
+    border-radius: 14% 22% 16% 20%; transform: rotate(4deg);
+  }
+  .title .sub {
+    margin: .5em 0 0; color: var(--paper);
+    font-size: min(3.5vw, 1.65vh, 14px); letter-spacing: .34em; padding-left: .34em;
+    opacity: .92;
+  }
+  .title .sub::before, .title .sub::after {
+    content: ""; display: inline-block; vertical-align: middle;
+    width: 1.6em; height: 1px; background: var(--paper); margin: 0 .7em; opacity: .8;
+  }
+
+  /* 封蝋のボタン：べた塗り・ぼかしなし */
+  .buttons {
+    position: absolute; left: 0; right: 0;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 3.6%);
+    display: flex; justify-content: center; align-items: flex-end; gap: 5.5%;
+  }
+  .wax {
+    --size: min(17vw, 8.2vh, 68px); --wax: var(--navy); --ring: #36456a; --ink: var(--paper);
+    position: relative; flex: none; width: var(--size); height: var(--size);
+    padding: 0; border: 0; cursor: pointer;
+    font: 700 calc(var(--size) * .21)/1.2 var(--mincho); letter-spacing: .04em;
+    color: var(--ink); background: var(--wax);
+    border-radius: 49% 51% 47% 53% / 52% 47% 53% 48%;
+    box-shadow:
+      inset 0 0 0 calc(var(--size) * .075) var(--wax),
+      inset 0 0 0 calc(var(--size) * .1) var(--ring),
+      0 0 0 2.5px var(--navy),
+      3px 5px 0 2px rgba(31, 42, 68, .55);
+    -webkit-tap-highlight-color: transparent;
+    transition: transform .08s;
+  }
+  .wax::before {  /* 蝋のはみ出し */
+    content: ""; position: absolute; z-index: -1; inset: -7%;
+    background: var(--wax); border-radius: 58% 42% 55% 45% / 44% 57% 43% 56%;
+    box-shadow: 0 0 0 2.5px var(--navy);
+  }
+  .wax span { position: relative; display: block; }
+  .wax:active { transform: translate(2px, 3px) scale(.97); }
+  .wax.main { --size: min(27vw, 13vh, 108px); --wax: var(--red); --ring: #a23420; font-size: calc(var(--size) * .2); }
+  .wax.gold { --wax: var(--lamp); --ring: #c48f2e; --ink: var(--navy); }
+  .wax.main span small { display: block; font-size: .52em; letter-spacing: .22em; opacity: .9; margin-top: .2em; }
+
+  #status {
+    position: absolute; left: 0; right: 0; top: 46%; margin: 0; text-align: center;
+    color: var(--navy); font-size: 14px; letter-spacing: .2em; pointer-events: none;
+    transition: opacity .6s;
+  }
+  #status.done { opacity: 0; }
+  #status.error { color: var(--red); letter-spacing: .05em; padding: 0 2em; }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<main id="stage">
+  <canvas id="view" aria-label="夜明け前の霧の坂道。手紙を持つツムギ、見送る局長、羽ばたくフウロウ"></canvas>
+  <div id="grain"></div>
+  <div id="kasure"></div>
+  <div id="frame"></div>
+
+  <header class="title">
+    <h1>霧晴れ郵便局<span class="seal">郵</span></h1>
+    <p class="sub">ことばを届ける英単語</p>
+  </header>
+
+  <nav class="buttons" aria-label="メニュー">
+    <button class="wax gold" type="button"><span>つづき</span></button>
+    <button class="wax main" type="button"><span>はじめる<small>START</small></span></button>
+    <button class="wax" type="button"><span>せってい</span></button>
+  </nav>
+
+  <p id="status" role="status">読みこみ中…</p>
+</main>
+<script type="module" src="./scene.mjs"></script>
+</body>
+</html>
