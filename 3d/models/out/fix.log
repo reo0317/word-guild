@@ -1,0 +1,77 @@
+11:41:29 | INFO: Data are loaded, start creating Blender stuff
+11:41:29 | INFO: Blender create Mesh node tripo_mesh_ebfa2408-7379-45e4-9fa3-2bb91d5c7c42
+11:41:29 | INFO: glTF import finished in 0.13s
+/home/user/word-guild/3d/blender/fix_models.py:8: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not m.use_nodes:return
+INFO Draco is available, use library at /opt/blender-5.3.0-linux-x64/lib/libbf_intern_draco_bridge.so
+INFO MeshOptimizer is available, use library at /opt/blender-5.3.0-linux-x64/lib/libbf_intern_meshopt_bridge.so
+11:41:29 | INFO: Starting glTF 2.0 export
+11:41:29 | INFO: Extracting primitive: tripo_mesh_ebfa2408-7379-45e4-9fa3-2bb91d5c7c42
+11:41:30 | INFO: Primitives created: 1
+11:41:30 | INFO: Finished glTF 2.0 export in 0.23211026191711426 s
+
+11:41:30 | INFO: Data are loaded, start creating Blender stuff
+11:41:30 | INFO: Blender create Mesh node tripo_mesh_ebfa2408-7379-45e4-9fa3-2bb91d5c7c42
+11:41:30 | INFO: glTF import finished in 0.11s
+/home/user/word-guild/3d/blender/fix_models.py:80: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  sc.view_settings.view_transform='Standard';sc.world=bpy.data.worlds.new('Studio');sc.world.use_nodes=True;sc.world.node_tree.nodes['Background'].inputs[0].default_value=(.8,.8,.8,1);sc.world.node_tree.nodes['Background'].inputs[1].default_value=.65
+00:01.987  render           | Saved: '/home/user/word-guild/3d/models/out/tsumugi-lit-front.png'
+00:02.648  render           | Saved: '/home/user/word-guild/3d/models/out/tsumugi-lit-side.png'
+00:03.373  render           | Saved: '/home/user/word-guild/3d/models/out/tsumugi-lit-back.png'
+/home/user/word-guild/3d/blender/fix_models.py:89: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not m.use_nodes:continue
+00:03.857  render           | Saved: '/home/user/word-guild/3d/models/out/tsumugi-unlit-front.png'
+00:04.322  render           | Saved: '/home/user/word-guild/3d/models/out/tsumugi-unlit-side.png'
+00:04.802  render           | Saved: '/home/user/word-guild/3d/models/out/tsumugi-unlit-back.png'
+REIMPORT_CHECK {"name": "tsumugi", "triangles": 18957, "bones": 65, "original_bones_preserved": true, "textures": [["tripo_image_ebfa2408-7379-45e4-9fa3-2bb91d5c7c42_0_0", [2048, 2048]], ["tripo_node_80b702c7-1489-4f92-b6e5-36218964bbec_Normal_Bake", [2048, 2048]]], "uv_layers": [1]}
+11:41:34 | INFO: Data are loaded, start creating Blender stuff
+11:41:34 | INFO: Blender create Mesh node tripo_mesh_3735098b-ad58-4d50-80a0-a08b4738fd7e
+11:41:34 | INFO: glTF import finished in 0.11s
+/home/user/word-guild/3d/blender/fix_models.py:41: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new('Strap vermilion matte');m.use_nodes=True;m.node_tree.nodes.get('Principled BSDF').inputs['Base Color'].default_value=(.58,.105,.035,1);matte(m);me.materials.append(m)
+11:41:34 | INFO: Starting glTF 2.0 export
+11:41:34 | INFO: Extracting primitive: Back strap ribbon
+11:41:34 | INFO: Primitives created: 1
+11:41:34 | INFO: Extracting primitive: tripo_mesh_3735098b-ad58-4d50-80a0-a08b4738fd7e
+11:41:34 | INFO: Primitives created: 1
+11:41:34 | INFO: Finished glTF 2.0 export in 0.19659829139709473 s
+
+11:41:34 | INFO: Data are loaded, start creating Blender stuff
+11:41:34 | INFO: Blender create Mesh node Back strap ribbon
+11:41:34 | INFO: Blender create Mesh node tripo_mesh_3735098b-ad58-4d50-80a0-a08b4738fd7e
+11:41:34 | INFO: glTF import finished in 0.13s
+00:06.285  render           | Saved: '/home/user/word-guild/3d/models/out/hatori-lit-front.png'
+00:06.936  render           | Saved: '/home/user/word-guild/3d/models/out/hatori-lit-side.png'
+00:07.693  render           | Saved: '/home/user/word-guild/3d/models/out/hatori-lit-back.png'
+00:08.142  render           | Saved: '/home/user/word-guild/3d/models/out/hatori-unlit-front.png'
+00:08.583  render           | Saved: '/home/user/word-guild/3d/models/out/hatori-unlit-side.png'
+00:09.039  render           | Saved: '/home/user/word-guild/3d/models/out/hatori-unlit-back.png'
+REIMPORT_CHECK {"name": "hatori", "triangles": 20053, "bones": 65, "original_bones_preserved": true, "textures": [["hatori_basecolor", [2048, 2048]], ["hatori_normal", [2048, 2048]]], "uv_layers": [0, 1]}
+11:41:38 | INFO: Data are loaded, start creating Blender stuff
+11:41:38 | INFO: Blender create Mesh node tripo_mesh_e6839dcc
+11:41:38 | INFO: glTF import finished in 0.53s
+Info: Applied modifier was not first, result may not be as expected
+WING_VERTICES 2926
+11:41:39 | INFO: Starting glTF 2.0 export
+11:41:39 | INFO: Extracting primitive: tripo_mesh_e6839dcc
+11:41:39 | INFO: Primitives created: 1
+11:41:39 | INFO: Finished glTF 2.0 export in 0.138016939163208 s
+
+11:41:39 | INFO: Data are loaded, start creating Blender stuff
+11:41:39 | INFO: Blender create Mesh node tripo_mesh_e6839dcc
+11:41:39 | INFO: glTF import finished in 0.13s
+00:11.626  render           | Saved: '/home/user/word-guild/3d/models/out/fuurou-lit-front.png'
+00:12.301  render           | Saved: '/home/user/word-guild/3d/models/out/fuurou-lit-side.png'
+00:13.100  render           | Saved: '/home/user/word-guild/3d/models/out/fuurou-lit-back.png'
+00:13.556  render           | Saved: '/home/user/word-guild/3d/models/out/fuurou-unlit-front.png'
+00:14.000  render           | Saved: '/home/user/word-guild/3d/models/out/fuurou-unlit-side.png'
+00:14.491  render           | Saved: '/home/user/word-guild/3d/models/out/fuurou-unlit-back.png'
+00:15.070  render           | Saved: '/home/user/word-guild/3d/models/out/fuurou-flap-up.png'
+00:15.541  render           | Saved: '/home/user/word-guild/3d/models/out/fuurou-flap-up-back.png'
+00:16.084  render           | Saved: '/home/user/word-guild/3d/models/out/fuurou-flap-down.png'
+00:16.562  render           | Saved: '/home/user/word-guild/3d/models/out/fuurou-flap-down-back.png'
+REIMPORT_CHECK {"name": "fuurou", "triangles": 20000, "bones": 42, "original_bones_preserved": true, "textures": [["fuurou_basecolor", [2048, 2048]]], "uv_layers": [1]}
+FLAP_CENTER_DISPLACEMENT up 1.837138534477048e-07
+FLAP_CENTER_DISPLACEMENT down 1.837138534477048e-07
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:31:18)
+pa_write() failed while trying to wake up the mainloop: Operation not permitted

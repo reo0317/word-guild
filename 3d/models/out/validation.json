@@ -1,0 +1,71 @@
+[
+  {
+    "name": "tsumugi",
+    "triangles": 18957,
+    "bones": 65,
+    "original_bones_preserved": true,
+    "textures": [
+      [
+        "tripo_image_ebfa2408-7379-45e4-9fa3-2bb91d5c7c42_0_0",
+        [
+          2048,
+          2048
+        ]
+      ],
+      [
+        "tripo_node_80b702c7-1489-4f92-b6e5-36218964bbec_Normal_Bake",
+        [
+          2048,
+          2048
+        ]
+      ]
+    ],
+    "uv_layers": [
+      1
+    ]
+  },
+  {
+    "name": "hatori",
+    "triangles": 20053,
+    "bones": 65,
+    "original_bones_preserved": true,
+    "textures": [
+      [
+        "hatori_basecolor",
+        [
+          2048,
+          2048
+        ]
+      ],
+      [
+        "hatori_normal",
+        [
+          2048,
+          2048
+        ]
+      ]
+    ],
+    "uv_layers": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "fuurou",
+    "triangles": 20000,
+    "bones": 42,
+    "original_bones_preserved": true,
+    "textures": [
+      [
+        "fuurou_basecolor",
+        [
+          2048,
+          2048
+        ]
+      ]
+    ],
+    "uv_layers": [
+      1
+    ]
+  }
+]
