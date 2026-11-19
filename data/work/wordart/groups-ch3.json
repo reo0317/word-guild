@@ -141,11 +141,18 @@
      "id": "t0262",
      "w": "thorough",
      "tint": 0
-    },
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c3-012-b",
+   "concept": "Nijimi checks a travel bag thoroughly by turning its lining inside out and pinching the last hidden coin from a narrow seam.",
+   "words": [
     {
      "id": "t0384",
      "w": "thoroughly",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "nijimi"
@@ -302,11 +309,18 @@
      "id": "t0275",
      "w": "salesperson",
      "tint": 0
-    },
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c3-025-b",
+   "concept": "Nijimi packs a teapot into an open shipping carton beside a laptop displaying a matching teapot photograph.",
+   "words": [
     {
      "id": "t0323",
      "w": "seller",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "nijimi"
@@ -343,16 +357,30 @@
      "id": "t0278",
      "w": "defect",
      "tint": 0
-    },
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c3-028-b",
+   "concept": "Nijimi tries to pour from a newly unboxed kettle, recoiling as water streams from a hole in its base into the saucer beneath it.",
+   "words": [
     {
      "id": "t0290",
      "w": "defective",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c3-028-c",
+   "concept": "Nijimi holds a lamp with a dark bulb and traces its cord to a frayed break with exposed copper ends.",
+   "words": [
     {
      "id": "t0497",
      "w": "faulty",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "nijimi"
@@ -365,11 +393,18 @@
      "id": "t0279",
      "w": "garbage",
      "tint": 0
-    },
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c3-029-b",
+   "concept": "Nijimi tips a wastebasket full of crumpled paper and empty cans into a larger bin.",
+   "words": [
     {
      "id": "t0385",
      "w": "trash",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "nijimi"
@@ -718,11 +753,18 @@
      "id": "t0310",
      "w": "congratulation",
      "tint": 0
-    },
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c3-058-b",
+   "concept": "Nijimi leans forward to shake a winner’s hand, cupping their clasped hands beside the winner’s oversized gold trophy.",
+   "words": [
     {
      "id": "t0481",
      "w": "congratulate",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "nijimi"
@@ -1881,22 +1923,36 @@
   },
   {
    "g": "c3-155",
-   "concept": "ink creature checking a calendar of twelve months with a big ring around one date, and charts that appear every few months",
+   "concept": "Nijimi points to the single circled event on a full year of calendar pages.",
    "words": [
     {
      "id": "t0411",
      "w": "yearly",
      "tint": 0
-    },
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c3-155-b",
+   "concept": "Nijimi reviews a thick ledger beside a freshly unwrapped annual calendar and a stack of matching worn calendars from past reviews.",
+   "words": [
     {
      "id": "t0297",
      "w": "annually",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c3-155-c",
+   "concept": "Nijimi files a report beneath the third of twelve blank calendar leaves arranged in four clearly separated bundles of three, each paired with its own report folder.",
+   "words": [
     {
      "id": "t0425",
      "w": "quarterly",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "nijimi"
@@ -2737,11 +2793,18 @@
      "id": "t0483",
      "w": "inexpensive",
      "tint": 0
-    },
+    }
+   ],
+   "species": "nijimi"
+  },
+  {
+   "g": "c3-225-b",
+   "concept": "Nijimi drives a compact car carrying a bulging coin purse beside a nearly full fuel tank and a tiny measuring cup of fuel.",
+   "words": [
     {
      "id": "t0365",
      "w": "economical",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "nijimi"

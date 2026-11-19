@@ -6196,3 +6196,313 @@ Subject: The ink creature beams and reaches up to grasp a single oversized glowi
 
 Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached c1-001 ink monster: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or symbols.
 Subject: The ink creature nods confidently with eyes closed and arms folded, standing firmly beside a securely locked treasure chest to convey certainty.
+
+## 単語の絵：c3-012-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Nijimi enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: Nijimi checks a travel bag thoroughly by turning its lining inside out and pinching the last hidden coin from a narrow seam.
+
+## 単語の絵：c3-025-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Nijimi enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: Nijimi packs a teapot into an open shipping carton beside a laptop displaying a matching teapot photograph.
+
+## 単語の絵：c3-028-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Nijimi enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: Nijimi tries to pour from a newly unboxed kettle, recoiling as water streams from a hole in its base into the saucer beneath it.
+
+## 単語の絵：c3-028-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Nijimi enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: Nijimi holds a lamp with a dark bulb and traces its cord to a frayed break with exposed copper ends.
+
+## 単語の絵：c3-029-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Nijimi enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: Nijimi tips a wastebasket full of crumpled paper and empty cans into a larger bin.
+
+## 単語の絵：c3-058-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Nijimi enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: Nijimi leans forward to shake a winner’s hand, cupping their clasped hands beside the winner’s oversized gold trophy.
+
+## 単語の絵：c3-155-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Nijimi enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: Nijimi reviews a thick ledger beside a freshly unwrapped annual calendar and a stack of matching worn calendars from past reviews.
+
+## 単語の絵：c3-155-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Nijimi enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: Nijimi files a report beneath the third of twelve blank calendar leaves arranged in four clearly separated bundles of three, each paired with its own report folder.
+
+## 単語の絵：c3-225-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached Nijimi enemy illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: Nijimi drives a compact car carrying a bulging coin purse beside a nearly full fuel tank and a tiny measuring cup of fuel.
+
+## 単語の絵：c1-004-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: learn: The ink creature copies a tutor’s looping claw movement and proudly holds up its first neatly tied bow.
+
+## 単語の絵：c1-004-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: school: The ink creature wears a satchel and climbs the steps of a little school bus with a pencil tucked behind its ear.
+
+## 単語の絵：c1-005-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: look: The ink creature turns its head and focuses both eyes on a spot on an unfolded map held close in its claws.
+
+## 単語の絵：c1-005-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: view: The ink creature holds up a paper frame filled edge to edge with a miniature panorama of cut-paper ocean waves.
+
+## 単語の絵：c1-007-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: hour: The ink creature slides a finger all the way around a numeral-free clock from its single top peg back to that same peg.
+
+## 単語の絵：c1-007-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: term: The ink creature stretches a ribbon between two clipped calendar leaves attached to the ends of a rolled contract.
+
+## 単語の絵：c1-008-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: today: The ink creature throws open a little shop shutter and taps the exposed front leaf of a tear-off calendar.
+
+## 単語の絵：c1-010-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: month: The ink creature flips an entire grid leaf over the binding of a monthly calendar to reveal the fresh grid beneath.
+
+## 単語の絵：c1-010-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: year: The ink creature closes a thick calendar bound with four seasonal tabs shaped like a bud, a sun, a leaf and a snowflake.
+
+## 単語の絵：c1-010-d
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: age: The ink creature blows out birthday candles beside a framed portrait of itself as a tiny hatchling.
+
+## 単語の絵：c1-016-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: job: The ink creature sits upright for a job interview with a portfolio on its lap facing a recruiter across a tiny desk.
+
+## 単語の絵：c1-018-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: need: The ink creature hangs by one claw from a broken ladder and stretches the other desperately toward a helper’s rope.
+
+## 単語の絵：c1-021-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: offer: The ink creature invites a hesitant shopper to take a parcel while sliding some of the shopper’s coins back.
+
+## 単語の絵：c1-024-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: buy: The ink creature clutches a newly bought blank perforated ticket as a vendor takes its coin.
+
+## 単語の絵：c1-024-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: spend: The ink creature parcels a modest handful of coins into a shopping purse and saves the larger pile in a jar.
+
+## 単語の絵：c1-026-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: price: The ink creature displays a menu board pairing three different fruits with three different stacks of coins.
+
+## 単語の絵：c1-026-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: rate: The ink creature sorts a small extra coin beside each equally sized stack of savings coins to show interest earned per stack.
+
+## 単語の絵：c1-026-d
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: level: The ink creature balances on the middle step of a three-tier practice podium juggling two balls while eyeing a third.
+
+## 単語の絵：c1-030-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: great: The ink creature hoists an enormous trophy overhead as little ink spectators leap up applauding.
+
+## 単語の絵：c1-032-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: large: The ink creature strains to wheel a cart piled high with identical parcels for one enormous order.
+
+## 単語の絵：c1-034-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: far: The ink creature peers through a telescope at a tiny friend waving from the opposite corner of the green field of color.
+
+## 単語の絵：c1-037-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: public: The ink creature opens a rolling library shelf to a varied queue of ink readers and invites everyone to borrow.
+
+## 単語の絵：c1-037-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: group: The ink creature raises a tour pennant as three visitors cluster around it with matching travel bags.
+
+## 単語の絵：c1-037-d
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: member: The ink creature pins a club rosette to its chest and presents the matching membership card at a small gate.
+
+## 単語の絵：c1-042-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: family: The ink creature poses with its grandparent and hatchling in matching bakery aprons holding a single family pie.
+
+## 単語の絵：c1-043-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: meet: The ink creature arrives with a briefcase and extends a hand to greet a client who has just put down a matching briefcase.
+
+## 単語の絵：c1-045-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: house: The ink creature lifts the roof of a model detached house to show its walls and windows to a buyer.
+
+## 単語の絵：c1-045-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: live: The ink creature waters its own potted plant in slippers beside an unpacked moving box and a well-used armchair.
+
+## 単語の絵：c1-045-d
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: room: The ink creature opens a hinged cutaway model of a single meeting room with chairs around one table.
+
+## 単語の絵：c1-046-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: place: The ink creature plants a pennant at the exact meeting spot on a folded pocket map where two friends touch fingertips.
+
+## 単語の絵：c1-046-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: area: The ink creature encircles a broad patch of toy parking spaces with a loop of cord on a tabletop model.
+
+## 単語の絵：c1-049-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: case: The ink creature reaches for a fire blanket as a small pan flares up beside its fallback cooking pot.
+
+## 単語の絵：c1-049-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: fact: The ink creature fits a chipped pottery fragment exactly into a broken jug to prove where it came from.
+
+## 単語の絵：c1-054-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: move: The ink creature carries a packed moving box and a houseplant toward a fresh front-door key.
+
+## 単語の絵：c1-056-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: reason: The ink creature shows a waiting passenger the flat tire on its toy bus to explain the delay.
+
+## 単語の絵：c1-057-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: ask: The ink creature raises one claw and holds out a puzzling loose machine part to an attentive mechanic.
+
+## 単語の絵：c1-059-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: happen: The ink creature recoils as a second popcorn kernel suddenly bursts from the pan beside the first popped kernel.
+
+## 単語の絵：c1-060-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: read: The ink creature follows a picture-only instruction booklet with one claw while fitting a wheel onto a toy.
+
+## 単語の絵：c1-062-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: name: The ink creature introduces itself by tapping the distinctive shell portrait on its name badge.
+
+## 単語の絵：c1-062-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: story: The ink creature tells a success story with an unfolding picture book showing a seed growing into a prize sunflower.
+
+## 単語の絵：c1-063-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: point: The ink creature leans into a discussion and singles out the crucial cracked gear on a tabletop model.
+
+## 単語の絵：c1-063-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: part: The ink creature holds a single wedge just outside its matching gap in a round wooden puzzle.
+
+## 単語の絵：c1-069-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: begin: The ink creature draws back a miniature stage curtain as the first puppet rises for the opening scene.
+
+## 単語の絵：c1-070-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: last: The ink creature reaches toward the sole remaining ticket as a vendor starts closing the ticket hatch.
+
+## 単語の絵：c1-073-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: set: The ink creature clips a vermilion ribbon to one chosen square on a desk calendar while holding an invitation.
+
+## 単語の絵：c1-073-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: stand: The ink creature plants both feet together and stands straight up beside its folded chair.
+
+## 単語の絵：c1-074-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: keep: The ink creature files a dated-looking picture receipt carefully into a well-kept archive of matching slips.
+
+## 単語の絵：c1-079-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: hard: The ink creature squints through a magnifier searching for a tiny lost key in a tangled heap of yarn.
+
+## 単語の絵：c1-080-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: order: The ink creature points out its chosen dumpling on a picture menu as a server holds out an empty order tray.
+
+## 単語の絵：c1-081-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: plan: The ink creature arranges miniature product samples and delivery carts on a planning sheet before any work begins.
+
+## 単語の絵：c1-086-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: train: The ink creature boards a long electric passenger train with linked carriages and a rooftop pantograph.
+
+## 単語の絵：c1-090-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: form: The ink creature fills the empty fields of a preprinted sheet with a pen poised above a blank rectangular box.
+
+## 単語の絵：c1-091-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: next: The ink creature lifts the current weekly calendar strip to reveal the following strip with a packed picnic basket clipped to it.

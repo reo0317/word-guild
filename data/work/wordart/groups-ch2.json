@@ -15,34 +15,48 @@
   },
   {
    "g": "c2-002",
-   "concept": "ink creature lounging on a deck chair on a big cruise ship with sunglasses and a cool drink, ocean around",
+   "concept": "The keshikasu ink creature lounges on a deck chair with sunglasses and a cool drink during its summer break.",
    "words": [
     {
      "id": "t0002",
      "w": "vacation",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-002-b",
+   "concept": "The keshikasu ink creature leans over a miniature ocean liner's bow rail with binoculars, its scarf streaming past the twin funnels.",
+   "words": [
     {
      "id": "t0103",
      "w": "cruise",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
   },
   {
    "g": "c2-003",
-   "concept": "ink creature in a tidy suit and an ink creature carrying many shopping bags out of a store, customers happy",
+   "concept": "The keshikasu ink creature wears a tidy suit and meets a professional who is attending to its request.",
    "words": [
     {
      "id": "t0003",
      "w": "client",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-003-b",
+   "concept": "The keshikasu ink creature hurries along with both claws full of bulging shopping bags and a long baguette poking out.",
+   "words": [
     {
      "id": "t0183",
      "w": "shopper",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -67,11 +81,18 @@
      "id": "t0005",
      "w": "airport",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-005-b",
+   "concept": "The keshikasu ink creature rolls its suitcase between a check-in kiosk and a row of linked boarding seats.",
+   "words": [
     {
      "id": "t0193",
      "w": "terminal",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -84,16 +105,30 @@
      "id": "t0222",
      "w": "paperwork",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-006-b",
+   "concept": "The keshikasu ink creature sorts incoming folders into separate desk trays while wearing an office lanyard.",
+   "words": [
     {
      "id": "t0212",
      "w": "administrative",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-006-c",
+   "concept": "The keshikasu ink creature slips a single small folded note under a colleague's paperweight.",
+   "words": [
     {
      "id": "t0006",
      "w": "memo",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -118,16 +153,30 @@
      "id": "t0008",
      "w": "logical",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-008-b",
+   "concept": "The keshikasu ink creature studies a trail of diminishing wet pawprints while lifting the edge of a box to find their maker.",
+   "words": [
     {
      "id": "t0039",
      "w": "infer",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-008-c",
+   "concept": "The keshikasu ink creature holds up the missing puzzle piece whose shape it has deduced from the gap in a paper pawprint.",
+   "words": [
     {
      "id": "t0068",
      "w": "inference",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -164,11 +213,18 @@
      "id": "t0123",
      "w": "photocopy",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-011-b",
+   "concept": "The keshikasu ink creature opens the side of a hulking copier and pulls out an accordion-folded paper jam.",
+   "words": [
     {
      "id": "t0132",
      "w": "copier",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -229,16 +285,30 @@
      "id": "t0012",
      "w": "sometime",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-016-b",
+   "concept": "The keshikasu ink creature waits with one claw poised over a service bell as the last few grains fall through a tiny hourglass.",
+   "words": [
     {
      "id": "t0129",
      "w": "shortly",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-016-c",
+   "concept": "The keshikasu ink creature ties a ribbon around an invitation beside a still-wrapped party hat and an unopened gift.",
+   "words": [
     {
      "id": "t0086",
      "w": "upcoming",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -263,11 +333,18 @@
      "id": "t0013",
      "w": "supervisor",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-018-b",
+   "concept": "The keshikasu ink creature watches two smaller helpers stack parcels and steadies a tipping box with one claw.",
+   "words": [
     {
      "id": "t0199",
      "w": "supervise",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -292,11 +369,18 @@
      "id": "t0090",
      "w": "instructor",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-020-b",
+   "concept": "The keshikasu ink creature spots a smaller creature lifting a barbell, holding its claws just beneath the bar.",
+   "words": [
     {
      "id": "t0228",
      "w": "trainer",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -333,11 +417,18 @@
      "id": "t0015",
      "w": "goods",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-023-b",
+   "concept": "The keshikasu ink creature hangs a new jacket prominently on a display rack with a blank swing tag.",
+   "words": [
     {
      "id": "t0071",
      "w": "merchandise",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -350,11 +441,18 @@
      "id": "t0060",
      "w": "inventory",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-024-b",
+   "concept": "The keshikasu ink creature steers a pallet jack beneath a tall storage rack loaded with identical cartons.",
+   "words": [
     {
      "id": "t0131",
      "w": "warehouse",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -367,11 +465,18 @@
      "id": "t0016",
      "w": "workshop",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-025-b",
+   "concept": "The keshikasu ink creature takes notes on its lap from a folding audience chair facing a tabletop lectern.",
+   "words": [
     {
      "id": "t0029",
      "w": "seminar",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -384,11 +489,18 @@
      "id": "t0250",
      "w": "presenter",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-026-b",
+   "concept": "The keshikasu ink creature wears padded headphones and speaks into a large suspended radio microphone.",
+   "words": [
     {
      "id": "t0185",
      "w": "announcer",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -419,39 +531,60 @@
   },
   {
    "g": "c2-029",
-   "concept": "ink creature at a counter handing a long paper about money to a customer while another creature holds a paper strip after paying, coins exchanging",
+   "concept": "The keshikasu ink creature hands a customer an itemized bill with payment still due.",
    "words": [
     {
      "id": "t0019",
      "w": "invoice",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-029-b",
+   "concept": "The keshikasu ink creature tucks a long narrow slip from a cash register into its wallet beside its purchase.",
+   "words": [
     {
      "id": "t0033",
      "w": "receipt",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
   },
   {
    "g": "c2-030",
-   "concept": "ink creature holding a folded glossy leaflet and pinning a stack of rolled papers on a notice board while others read",
+   "concept": "The keshikasu ink creature unfolds a glossy illustrated travel leaflet.",
    "words": [
     {
      "id": "t0020",
      "w": "brochure",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-030-b",
+   "concept": "The keshikasu ink creature slides identical folded illustrated issues into a fan of open mailing envelopes.",
+   "words": [
     {
      "id": "t0178",
      "w": "newsletter",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-030-c",
+   "concept": "The keshikasu ink creature pins the latest club circular beside earlier circulars on a small corkboard.",
+   "words": [
     {
      "id": "t0158",
      "w": "bulletin",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -464,11 +597,18 @@
      "id": "t0022",
      "w": "accountant",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-031-b",
+   "concept": "The keshikasu ink creature independently cross-checks a ledger against a bundle of receipts through a magnifying glass.",
+   "words": [
     {
      "id": "t0187",
      "w": "audit",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -487,27 +627,48 @@
   },
   {
    "g": "c2-033",
-   "concept": "ink creature in a neat uniform behind a front counter with a small bell, welcoming a guest and handing over a bag and a key",
+   "concept": "The keshikasu ink creature organizes the papers and supplies behind a service counter.",
    "words": [
     {
      "id": "t0023",
      "w": "clerk",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-033-b",
+   "concept": "The keshikasu ink creature in a flight uniform demonstrates fastening a seat belt beside an airplane seat.",
+   "words": [
     {
      "id": "t0052",
      "w": "attendant",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-033-c",
+   "concept": "The keshikasu ink creature approaches a curved welcome desk and reaches up to ring its brass bell.",
+   "words": [
     {
      "id": "t0046",
      "w": "reception",
-     "tint": 2
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-033-d",
+   "concept": "The keshikasu ink creature behind a hotel counter offers a room key on a large fob with a welcoming bow.",
+   "words": [
     {
      "id": "t0072",
      "w": "receptionist",
-     "tint": 3
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -520,11 +681,18 @@
      "id": "t0024",
      "w": "lobby",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-034-b",
+   "concept": "The keshikasu ink creature sinks into the stitched cushions of an oversized button-tufted leather sofa.",
+   "words": [
     {
      "id": "t0216",
      "w": "sofa",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -549,11 +717,18 @@
      "id": "t0026",
      "w": "résumé",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-036-b",
+   "concept": "The keshikasu ink creature waits nervously on an interview chair clutching a portfolio and straightening its tie.",
+   "words": [
     {
      "id": "t0028",
      "w": "applicant",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -578,33 +753,54 @@
      "id": "t0030",
      "w": "technician",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-038-b",
+   "concept": "The keshikasu ink creature leans over a detached car engine with a socket wrench and an oily rag.",
+   "words": [
     {
      "id": "t0140",
      "w": "mechanic",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-038-c",
+   "concept": "The keshikasu ink creature snaps colored interface tiles into place on a desktop monitor using a mouse.",
+   "words": [
     {
      "id": "t0202",
      "w": "developer",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "keshikasu"
   },
   {
    "g": "c2-039",
-   "concept": "ink creature unrolling a bolt of soft fabric and wearing a warm knitted sweater, needle and scissors",
+   "concept": "The keshikasu ink creature unrolls a bolt of soft fabric beside a pair of scissors.",
    "words": [
     {
      "id": "t0031",
      "w": "cloth",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-039-b",
+   "concept": "The keshikasu ink creature pulls a thick cable-knit wool sweater over its head with one claw emerging from a sleeve.",
+   "words": [
     {
      "id": "t0143",
      "w": "sweater",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -641,11 +837,18 @@
      "id": "t0176",
      "w": "commuter",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-042-b",
+   "concept": "The keshikasu ink creature steps into an open train doorway with a work satchel and a raised commuter pass.",
+   "words": [
     {
      "id": "t0220",
      "w": "commute",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -658,28 +861,42 @@
      "id": "t0035",
      "w": "caller",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-043-b",
+   "concept": "The keshikasu ink creature hooks one claw into a hole on a blank rotary phone dial and turns it.",
+   "words": [
     {
      "id": "t0153",
      "w": "dial",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
   },
   {
    "g": "c2-044",
-   "concept": "ink creature riding a train in a dark tunnel under the ground, a small bus shuttling back and forth between two stops behind it",
+   "concept": "The keshikasu ink creature rides a train through an underground tunnel.",
    "words": [
     {
      "id": "t0036",
      "w": "subway",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-044-b",
+   "concept": "The keshikasu ink creature loads a suitcase onto a short airport minibus with a luggage rack.",
+   "words": [
     {
      "id": "t0204",
      "w": "shuttle",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -692,43 +909,78 @@
      "id": "t0037",
      "w": "luggage",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-045-b",
+   "concept": "The keshikasu ink creature lifts its tagged duffel from a curved baggage carousel.",
+   "words": [
     {
      "id": "t0152",
      "w": "baggage",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-045-c",
+   "concept": "The keshikasu ink creature kneels over an open hard-shell suitcase and presses folded clothes beneath its straps.",
+   "words": [
     {
      "id": "t0062",
      "w": "suitcase",
-     "tint": 2
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-045-d",
+   "concept": "The keshikasu ink creature carries a slim rectangular leather document case with brass clasps to a meeting.",
+   "words": [
     {
      "id": "t0169",
      "w": "briefcase",
-     "tint": 3
+     "tint": 0
     }
    ],
    "species": "keshikasu"
   },
   {
    "g": "c2-046",
-   "concept": "ink creature loading boxes onto a delivery van, a courier creature running with a parcel while a conveyor sends boxes to many shops",
+   "concept": "The keshikasu ink creature loads a batch of boxed goods into a delivery van.",
    "words": [
     {
      "id": "t0038",
      "w": "shipment",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-046-b",
+   "concept": "The keshikasu ink creature in a cycle helmet hands a sealed parcel directly to an outstretched claw.",
+   "words": [
     {
      "id": "t0242",
      "w": "courier",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-046-c",
+   "concept": "The keshikasu ink creature sorts goods from one large shipping crate into three delivery carts.",
+   "words": [
     {
      "id": "t0215",
      "w": "distribution",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -741,11 +993,18 @@
      "id": "t0040",
      "w": "waiter",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-047-b",
+   "concept": "The keshikasu ink creature in a server's apron balances a tray of teacups while leaning closer to hear a guest's order.",
+   "words": [
     {
      "id": "t0200",
      "w": "waitress",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -758,16 +1017,30 @@
      "id": "t0041",
      "w": "rental",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-048-b",
+   "concept": "The keshikasu ink creature accepts an office key while signing a lease beside a miniature office desk.",
+   "words": [
     {
      "id": "t0048",
      "w": "lease",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-048-c",
+   "concept": "The keshikasu ink creature unpacks its belongings at a rented desk with the office key already on its ring.",
+   "words": [
     {
      "id": "t0111",
      "w": "tenant",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -792,16 +1065,30 @@
      "id": "t0043",
      "w": "cafeteria",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-050-b",
+   "concept": "The keshikasu ink creature chooses between an espresso and a pastry at a tiny café table.",
+   "words": [
     {
      "id": "t0105",
      "w": "café",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-050-c",
+   "concept": "The keshikasu ink creature unfolds a napkin on its lap before cutting into a plated dinner with knife and fork.",
+   "words": [
     {
      "id": "t0083",
      "w": "dine",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -820,39 +1107,60 @@
   },
   {
    "g": "c2-052",
-   "concept": "ink creature munching on small treats with a tray of cups of juice and a tall cold drink with a straw",
+   "concept": "The keshikasu ink creature munches on a small afternoon treat.",
    "words": [
     {
      "id": "t0130",
      "w": "snack",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-052-b",
+   "concept": "The keshikasu ink creature offers visitors a tray of small cups and bite-sized sandwiches.",
+   "words": [
     {
      "id": "t0211",
      "w": "refreshment",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-052-c",
+   "concept": "The keshikasu ink creature raises a tall cold glass beaded with condensation and clinking ice.",
+   "words": [
     {
      "id": "t0134",
      "w": "beverage",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "keshikasu"
   },
   {
    "g": "c2-053",
-   "concept": "ink creature holding a slice of cake with cream in one hand and a sandwich stacked with lettuce in the other",
+   "concept": "The keshikasu ink creature holds up a slice of cream cake after a meal.",
    "words": [
     {
      "id": "t0170",
      "w": "dessert",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-053-b",
+   "concept": "The keshikasu ink creature holds a triangular sandwich open to reveal layers of tomato and cheese.",
+   "words": [
     {
      "id": "t0112",
      "w": "sandwich",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -877,11 +1185,18 @@
      "id": "t0047",
      "w": "correctly",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-055-b",
+   "concept": "The keshikasu ink creature compares a parcel's distinctive pictorial door plaque with the matching plaque on a miniature door.",
+   "words": [
     {
      "id": "t0240",
      "w": "verify",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -894,11 +1209,18 @@
      "id": "t0094",
      "w": "valid",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-056-b",
+   "concept": "The keshikasu ink creature presents a matching receipt and a returned kettle as a cashier offers coins back.",
+   "words": [
     {
      "id": "t0150",
      "w": "eligible",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -959,11 +1281,18 @@
      "id": "t0053",
      "w": "subscription",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-061-b",
+   "concept": "The keshikasu ink creature puts a magazine order slip into a mailbox while clutching the sample issue.",
+   "words": [
     {
      "id": "t0206",
      "w": "subscribe",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -976,11 +1305,18 @@
      "id": "t0054",
      "w": "convenient",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-062-b",
+   "concept": "The keshikasu ink creature rolls a heavy suitcase up a portable ramp with one relaxed claw.",
+   "words": [
     {
      "id": "t0149",
      "w": "convenience",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1005,11 +1341,18 @@
      "id": "t0055",
      "w": "manual",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-064-b",
+   "concept": "The keshikasu ink creature unfolds a small illustrated note showing how two unusual hinge pieces fit together.",
+   "words": [
     {
      "id": "t0089",
      "w": "explanatory",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1022,11 +1365,18 @@
      "id": "t0057",
      "w": "garage",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-065-b",
+   "concept": "The keshikasu ink creature opens the driver's door of a rounded automobile with its front wheels turned.",
+   "words": [
     {
      "id": "t0241",
      "w": "automobile",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1057,17 +1407,24 @@
   },
   {
    "g": "c2-068",
-   "concept": "ink creature camping on a green hill with a tent and sitting on a blanket with a basket of food under open sky",
+   "concept": "The keshikasu ink creature sits outside beside a camping tent.",
    "words": [
     {
      "id": "t0061",
      "w": "outdoor",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-068-b",
+   "concept": "The keshikasu ink creature unpacks a wicker hamper onto a checkered cloth and shares bread with a companion.",
+   "words": [
     {
      "id": "t0209",
      "w": "picnic",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1116,11 +1473,18 @@
      "id": "t0065",
      "w": "postpone",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-072-b",
+   "concept": "The keshikasu ink creature lifts a meeting peg out of one pocket of a blank planner and fits it into another.",
+   "words": [
     {
      "id": "t0077",
      "w": "reschedule",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1145,11 +1509,18 @@
      "id": "t0067",
      "w": "umbrella",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-074-b",
+   "concept": "The keshikasu ink creature wrings water from its soaked coat as raindrops bounce off its hood.",
+   "words": [
     {
      "id": "t0235",
      "w": "rainy",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1180,17 +1551,24 @@
   },
   {
    "g": "c2-077",
-   "concept": "ink creature holding a small slim phone in one hand and a thin laptop folded open on its knees, glowing screens",
+   "concept": "The keshikasu ink creature holds a slim cellphone in one claw.",
    "words": [
     {
      "id": "t0069",
      "w": "cellphone",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-077-b",
+   "concept": "The keshikasu ink creature opens a hinged laptop on its knees and taps its unmarked keyboard.",
+   "words": [
     {
      "id": "t0096",
      "w": "laptop",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1215,11 +1593,18 @@
      "id": "t0070",
      "w": "compact",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-079-b",
+   "concept": "The keshikasu ink creature opens a knee-high refrigerator just big enough for one milk bottle.",
+   "words": [
     {
      "id": "t0114",
      "w": "mini",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1244,28 +1629,42 @@
      "id": "t0108",
      "w": "medication",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-081-b",
+   "concept": "The keshikasu ink creature shivers under a quilt with a thermometer and a box of tissues.",
+   "words": [
     {
      "id": "t0225",
      "w": "flu",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
   },
   {
    "g": "c2-082",
-   "concept": "ink creature holding up a small booklet and a card with its photo to a guard at a desk",
+   "concept": "The keshikasu ink creature shows a guard its photo identification card.",
    "words": [
     {
      "id": "t0074",
      "w": "identification",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-082-b",
+   "concept": "The keshikasu ink creature presents an open passport booklet showing its portrait to a border officer's stamp.",
+   "words": [
     {
      "id": "t0084",
      "w": "passport",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1290,16 +1689,30 @@
      "id": "t0075",
      "w": "coupon",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-084-b",
+   "concept": "The keshikasu ink creature triumphantly carries a heaped basket of goods bought with a single coin.",
+   "words": [
     {
      "id": "t0230",
      "w": "bargain",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-084-c",
+   "concept": "The keshikasu ink creature comfortably pays for a plain pair of shoes with several coins still visible in its purse.",
+   "words": [
     {
      "id": "t0218",
      "w": "affordable",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1324,16 +1737,30 @@
      "id": "t0076",
      "w": "depart",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-086-b",
+   "concept": "The keshikasu ink creature waves a handkerchief from the platform as a passenger carriage pulls away.",
+   "words": [
     {
      "id": "t0113",
      "w": "departure",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-086-c",
+   "concept": "The keshikasu ink creature pushes a panic bar and steps through a freestanding emergency door.",
+   "words": [
     {
      "id": "t0101",
      "w": "exit",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1358,11 +1785,18 @@
      "id": "t0079",
      "w": "renovation",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-088-b",
+   "concept": "The keshikasu ink creature rolls fresh paint across one half of a battered reception counter.",
+   "words": [
     {
      "id": "t0124",
      "w": "renovate",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1381,17 +1815,24 @@
   },
   {
    "g": "c2-090",
-   "concept": "ink creature swapping a broken part for a new one and handing back an old pass for a fresh one, old part in a bin",
+   "concept": "The keshikasu ink creature fits a fresh part in place of a broken one.",
    "words": [
     {
      "id": "t0082",
      "w": "replacement",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-090-b",
+   "concept": "The keshikasu ink creature places a fresh contract sheet over the worn copy and stamps the extension.",
+   "words": [
     {
      "id": "t0110",
      "w": "renew",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1434,22 +1875,36 @@
   },
   {
    "g": "c2-094",
-   "concept": "ink creature opening the doors of a tall cabinet and a drawer, clothes hanging in a closet beside",
+   "concept": "The keshikasu ink creature opens the doors of a tall storage cabinet.",
    "words": [
     {
      "id": "t0087",
      "w": "cabinet",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-094-b",
+   "concept": "The keshikasu ink creature parts hanging coats on a rail inside a tall open wardrobe.",
+   "words": [
     {
      "id": "t0118",
      "w": "closet",
-     "tint": 1
-    },
+     "tint": 0
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-094-c",
+   "concept": "The keshikasu ink creature pulls a shallow desk drawer toward itself to reach a hidden pencil.",
+   "words": [
     {
      "id": "t0155",
      "w": "drawer",
-     "tint": 2
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1474,28 +1929,42 @@
      "id": "t0088",
      "w": "appliance",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-096-b",
+   "concept": "The keshikasu ink creature fits the end of an insulated wire into a lamp socket with electrician's pliers.",
+   "words": [
     {
      "id": "t0098",
      "w": "electrical",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
   },
   {
    "g": "c2-097",
-   "concept": "ink creature slotting a small cylinder cell and a printer cartridge into machines, charging, ink drips",
+   "concept": "The keshikasu ink creature slots a small cylindrical battery into a device.",
    "words": [
     {
      "id": "t0165",
      "w": "battery",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-097-b",
+   "concept": "The keshikasu ink creature slides a block-shaped ink cartridge into an open desktop printer.",
+   "words": [
     {
      "id": "t0180",
      "w": "cartridge",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1526,17 +1995,24 @@
   },
   {
    "g": "c2-100",
-   "concept": "ink creature pushing a cart through a big store with food shelves and many shops along a bright hall",
+   "concept": "The keshikasu ink creature pushes a shopping cart past shelves of food.",
    "words": [
     {
      "id": "t0093",
      "w": "supermarket",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-100-b",
+   "concept": "The keshikasu ink creature carries shopping bags between a cluster of distinct miniature shopfronts joined by one arcade.",
+   "words": [
     {
      "id": "t0107",
      "w": "mall",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1549,11 +2025,18 @@
      "id": "t0196",
      "w": "cart",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-101-b",
+   "concept": "The keshikasu ink creature takes the airplane seat directly beside the gap separating two rows of seats.",
+   "words": [
     {
      "id": "t0138",
      "w": "aisle",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1584,17 +2067,24 @@
   },
   {
    "g": "c2-104",
-   "concept": "ink teacher creature handing out a task paper, a student dropping a finished stack into a submission box",
+   "concept": "The keshikasu ink creature hands a worker the sheet for its assigned task.",
    "words": [
     {
      "id": "t0100",
      "w": "assignment",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-104-b",
+   "concept": "The keshikasu ink creature slides a finished folder into a submission tray just before an hourglass runs out.",
+   "words": [
     {
      "id": "t0157",
      "w": "submission",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1655,28 +2145,42 @@
      "id": "t0115",
      "w": "fitness",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-109-b",
+   "concept": "The keshikasu ink creature steps off a treadmill toward a rack of dumbbells with a gym towel around its neck.",
+   "words": [
     {
      "id": "t0160",
      "w": "gym",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
   },
   {
    "g": "c2-110",
-   "concept": "ink creature kicking a ball into a goal net with one foot while swinging a bat at a small ball",
+   "concept": "The keshikasu ink creature kicks a soccer ball toward a goal net.",
    "words": [
     {
      "id": "t0142",
      "w": "soccer",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-110-b",
+   "concept": "The keshikasu ink creature swings a wooden bat at a stitched baseball beside a catcher's mitt.",
+   "words": [
     {
      "id": "t0245",
      "w": "baseball",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1689,11 +2193,18 @@
      "id": "t0175",
      "w": "venue",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-111-b",
+   "concept": "The keshikasu ink creature holds a scale model of a baseball diamond surrounded by tiered spectator seats.",
+   "words": [
     {
      "id": "t0192",
      "w": "stadium",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1718,11 +2229,18 @@
      "id": "t0120",
      "w": "distractor",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-113-b",
+   "concept": "The keshikasu ink creature holds two identical striped mittens side by side and aligns their matching stripes.",
+   "words": [
     {
      "id": "t0207",
      "w": "alike",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1759,11 +2277,18 @@
      "id": "t0127",
      "w": "donation",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-116-b",
+   "concept": "The keshikasu ink creature passes a stack of its own books into a charity collection box.",
+   "words": [
     {
      "id": "t0166",
      "w": "donate",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1812,11 +2337,18 @@
      "id": "t0197",
      "w": "delicious",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-120-b",
+   "concept": "The keshikasu ink creature samples two ice cream scoops, holding a vanilla pod beside one and a strawberry beside the other.",
+   "words": [
     {
      "id": "t0208",
      "w": "flavor",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1829,11 +2361,18 @@
      "id": "t0136",
      "w": "inspection",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-121-b",
+   "concept": "The keshikasu ink creature checks the bolts of a miniature scaffold one by one with a handheld inspection lamp.",
+   "words": [
     {
      "id": "t0139",
      "w": "inspect",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1864,17 +2403,24 @@
   },
   {
    "g": "c2-124",
-   "concept": "ink creature following a cooking guide, putting eggs, flour, milk and tomatoes into a mixing bowl, a cookbook open",
+   "concept": "The keshikasu ink creature sets out eggs and flour beside a mixing bowl.",
    "words": [
     {
      "id": "t0144",
      "w": "ingredient",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-124-b",
+   "concept": "The keshikasu ink creature follows a flour-dusted illustrated recipe card while measuring flour into a mixing bowl.",
+   "words": [
     {
      "id": "t0210",
      "w": "recipe",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1923,11 +2469,18 @@
      "id": "t0148",
      "w": "architect",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-128-b",
+   "concept": "The keshikasu ink creature in a hard hat directs a small bricklaying crew beside a partly assembled wall.",
+   "words": [
     {
      "id": "t0188",
      "w": "contractor",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"
@@ -1964,11 +2517,18 @@
      "id": "t0162",
      "w": "respondent",
      "tint": 0
-    },
+    }
+   ],
+   "species": "keshikasu"
+  },
+  {
+   "g": "c2-131-b",
+   "concept": "The keshikasu ink creature holds a survey sheet with rows of empty response circles and rests a pencil over its first choice.",
+   "words": [
     {
      "id": "t0244",
      "w": "questionnaire",
-     "tint": 1
+     "tint": 0
     }
    ],
    "species": "keshikasu"

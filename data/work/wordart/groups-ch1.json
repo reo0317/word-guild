@@ -97,16 +97,28 @@
           "id": "b0073",
           "w": "study",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-004-b",
+      "concept": "The ink creature copies a tutor’s looping claw movement and proudly holds up its first neatly tied bow.",
+      "words": [
         {
           "id": "b0123",
           "w": "learn",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-004-c",
+      "concept": "The ink creature wears a satchel and climbs the steps of a little school bus with a pencil tucked behind its ear.",
+      "words": [
         {
           "id": "b0049",
           "w": "school",
-          "tint": 2
+          "tint": 0
         }
       ]
     },
@@ -118,16 +130,28 @@
           "id": "b0005",
           "w": "see",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-005-b",
+      "concept": "The ink creature turns its head and focuses both eyes on a spot on an unfolded map held close in its claws.",
+      "words": [
         {
           "id": "b0012",
           "w": "look",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-005-c",
+      "concept": "The ink creature holds up a paper frame filled edge to edge with a miniature panorama of cut-paper ocean waves.",
+      "words": [
         {
           "id": "b0140",
           "w": "view",
-          "tint": 2
+          "tint": 0
         }
       ]
     },
@@ -150,16 +174,28 @@
           "id": "b0004",
           "w": "time",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-007-b",
+      "concept": "The ink creature slides a finger all the way around a numeral-free clock from its single top peg back to that same peg.",
+      "words": [
         {
           "id": "b0112",
           "w": "hour",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-007-c",
+      "concept": "The ink creature stretches a ribbon between two clipped calendar leaves attached to the ends of a rolled contract.",
+      "words": [
         {
           "id": "b0134",
           "w": "term",
-          "tint": 2
+          "tint": 0
         }
       ]
     },
@@ -171,11 +207,17 @@
           "id": "b0018",
           "w": "day",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-008-b",
+      "concept": "The ink creature throws open a little shop shutter and taps the exposed front leaf of a tear-off calendar.",
+      "words": [
         {
           "id": "b0111",
           "w": "today",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -198,21 +240,39 @@
           "id": "b0056",
           "w": "week",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-010-b",
+      "concept": "The ink creature flips an entire grid leaf over the binding of a monthly calendar to reveal the fresh grid beneath.",
+      "words": [
         {
           "id": "b0089",
           "w": "month",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-010-c",
+      "concept": "The ink creature closes a thick calendar bound with four seasonal tabs shaped like a bud, a sun, a leaf and a snowflake.",
+      "words": [
         {
           "id": "b0008",
           "w": "year",
-          "tint": 2
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-010-d",
+      "concept": "The ink creature blows out birthday candles beside a framed portrait of itself as a tiny hatchling.",
+      "words": [
         {
           "id": "b0135",
           "w": "age",
-          "tint": 3
+          "tint": 0
         }
       ]
     },
@@ -279,11 +339,17 @@
           "id": "b0010",
           "w": "work",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-016-b",
+      "concept": "The ink creature sits upright for a job interview with a portfolio on its lap facing a recruiter across a tiny desk.",
+      "words": [
         {
           "id": "b0100",
           "w": "job",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -306,11 +372,17 @@
           "id": "b0013",
           "w": "want",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-018-b",
+      "concept": "The ink creature hangs by one claw from a broken ladder and stretches the other desperately toward a helper’s rope.",
+      "words": [
         {
           "id": "b0019",
           "w": "need",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -344,11 +416,17 @@
           "id": "b0014",
           "w": "give",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-021-b",
+      "concept": "The ink creature invites a hesitant shopper to take a parcel while sliding some of the shopper’s coins back.",
+      "words": [
         {
           "id": "b0104",
           "w": "offer",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -382,16 +460,28 @@
           "id": "b0096",
           "w": "pay",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-024-b",
+      "concept": "The ink creature clutches a newly bought blank perforated ticket as a vendor takes its coin.",
+      "words": [
         {
           "id": "b0108",
           "w": "buy",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-024-c",
+      "concept": "The ink creature parcels a modest handful of coins into a shopping purse and saves the larger pile in a jar.",
+      "words": [
         {
           "id": "b0120",
           "w": "spend",
-          "tint": 2
+          "tint": 0
         }
       ]
     },
@@ -414,21 +504,39 @@
           "id": "b0116",
           "w": "cost",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-026-b",
+      "concept": "The ink creature displays a menu board pairing three different fruits with three different stacks of coins.",
+      "words": [
         {
           "id": "b0141",
           "w": "price",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-026-c",
+      "concept": "The ink creature sorts a small extra coin beside each equally sized stack of savings coins to show interest earned per stack.",
+      "words": [
         {
           "id": "b0150",
           "w": "rate",
-          "tint": 2
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-026-d",
+      "concept": "The ink creature balances on the middle step of a three-tier practice podium juggling two balls while eyeing a third.",
+      "words": [
         {
           "id": "b0124",
           "w": "level",
-          "tint": 3
+          "tint": 0
         }
       ]
     },
@@ -473,11 +581,17 @@
           "id": "b0006",
           "w": "good",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-030-b",
+      "concept": "The ink creature hoists an enormous trophy overhead as little ink spectators leap up applauding.",
+      "words": [
         {
           "id": "b0035",
           "w": "great",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -500,11 +614,17 @@
           "id": "b0070",
           "w": "big",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-032-b",
+      "concept": "The ink creature strains to wheel a cart piled high with identical parcels for one enormous order.",
+      "words": [
         {
           "id": "b0090",
           "w": "large",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -527,11 +647,17 @@
           "id": "b0031",
           "w": "long",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-034-b",
+      "concept": "The ink creature peers through a telescope at a tiny friend waving from the opposite corner of the green field of color.",
+      "words": [
         {
           "id": "b0110",
           "w": "far",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -565,21 +691,39 @@
           "id": "b0007",
           "w": "people",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-037-b",
+      "concept": "The ink creature opens a rolling library shelf to a varied queue of ink readers and invites everyone to borrow.",
+      "words": [
         {
           "id": "b0138",
           "w": "public",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-037-c",
+      "concept": "The ink creature raises a tour pennant as three visitors cluster around it with matching travel bags.",
+      "words": [
         {
           "id": "b0061",
           "w": "group",
-          "tint": 2
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-037-d",
+      "concept": "The ink creature pins a club rosette to its chest and presents the matching membership card at a small gate.",
+      "words": [
         {
           "id": "b0126",
           "w": "member",
-          "tint": 3
+          "tint": 0
         }
       ]
     },
@@ -635,11 +779,17 @@
           "id": "b0142",
           "w": "parent",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-042-b",
+      "concept": "The ink creature poses with its grandparent and hatchling in matching bakery aprons holding a single family pie.",
+      "words": [
         {
           "id": "b0065",
           "w": "family",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -651,11 +801,17 @@
           "id": "b0088",
           "w": "friend",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-043-b",
+      "concept": "The ink creature arrives with a briefcase and extends a hand to greet a client who has just put down a matching briefcase.",
+      "words": [
         {
           "id": "b0043",
           "w": "meet",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -678,21 +834,39 @@
           "id": "b0058",
           "w": "home",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-045-b",
+      "concept": "The ink creature lifts the roof of a model detached house to show its walls and windows to a buyer.",
+      "words": [
         {
           "id": "b0059",
           "w": "house",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-045-c",
+      "concept": "The ink creature waters its own potted plant in slippers beside an unpacked moving box and a well-used armchair.",
+      "words": [
         {
           "id": "b0054",
           "w": "live",
-          "tint": 2
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-045-d",
+      "concept": "The ink creature opens a hinged cutaway model of a single meeting room with chairs around one table.",
+      "words": [
         {
           "id": "b0117",
           "w": "room",
-          "tint": 3
+          "tint": 0
         }
       ]
     },
@@ -704,16 +878,28 @@
           "id": "b0128",
           "w": "city",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-046-b",
+      "concept": "The ink creature plants a pennant at the exact meeting spot on a folded pocket map where two friends touch fingertips.",
+      "words": [
         {
           "id": "b0030",
           "w": "place",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-046-c",
+      "concept": "The ink creature encircles a broad patch of toy parking spaces with a loop of cord on a tabletop model.",
+      "words": [
         {
           "id": "b0085",
           "w": "area",
-          "tint": 2
+          "tint": 0
         }
       ]
     },
@@ -747,16 +933,28 @@
           "id": "b0081",
           "w": "state",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-049-b",
+      "concept": "The ink creature reaches for a fire blanket as a small pan flares up beside its fallback cooking pot.",
+      "words": [
         {
           "id": "b0062",
           "w": "case",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-049-c",
+      "concept": "The ink creature fits a chipped pottery fragment exactly into a broken jug to prove where it came from.",
+      "words": [
         {
           "id": "b0084",
           "w": "fact",
-          "tint": 2
+          "tint": 0
         }
       ]
     },
@@ -812,11 +1010,17 @@
           "id": "b0077",
           "w": "turn",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-054-b",
+      "concept": "The ink creature carries a packed moving box and a houseplant toward a fresh front-door key.",
+      "words": [
         {
           "id": "b0082",
           "w": "move",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -839,11 +1043,17 @@
           "id": "b0021",
           "w": "mean",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-056-b",
+      "concept": "The ink creature shows a waiting passenger the flat tire on its toy bus to explain the delay.",
+      "words": [
         {
           "id": "b0118",
           "w": "reason",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -855,11 +1065,17 @@
           "id": "b0025",
           "w": "call",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-057-b",
+      "concept": "The ink creature raises one claw and holds out a puzzling loose machine part to an attentive mechanic.",
+      "words": [
         {
           "id": "b0042",
           "w": "ask",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -882,11 +1098,17 @@
           "id": "b0029",
           "w": "change",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-059-b",
+      "concept": "The ink creature recoils as a second popcorn kernel suddenly bursts from the pan beside the first popped kernel.",
+      "words": [
         {
           "id": "b0103",
           "w": "happen",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -898,11 +1120,17 @@
           "id": "b0033",
           "w": "write",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-060-b",
+      "concept": "The ink creature follows a picture-only instruction booklet with one claw while fitting a wheel onto a toy.",
+      "words": [
         {
           "id": "b0087",
           "w": "read",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -925,16 +1153,28 @@
           "id": "b0093",
           "w": "word",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-062-b",
+      "concept": "The ink creature introduces itself by tapping the distinctive shell portrait on its name badge.",
+      "words": [
         {
           "id": "b0086",
           "w": "name",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-062-c",
+      "concept": "The ink creature tells a success story with an unfolding picture book showing a seed growing into a prize sunflower.",
+      "words": [
         {
           "id": "b0147",
           "w": "story",
-          "tint": 2
+          "tint": 0
         }
       ]
     },
@@ -946,16 +1186,28 @@
           "id": "b0038",
           "w": "number",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-063-b",
+      "concept": "The ink creature leans into a discussion and singles out the crucial cracked gear on a tabletop model.",
+      "words": [
         {
           "id": "b0040",
           "w": "point",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-063-c",
+      "concept": "The ink creature holds a single wedge just outside its matching gap in a round wooden puzzle.",
+      "words": [
         {
           "id": "b0039",
           "w": "part",
-          "tint": 2
+          "tint": 0
         }
       ]
     },
@@ -1022,11 +1274,17 @@
           "id": "b0044",
           "w": "start",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-069-b",
+      "concept": "The ink creature draws back a miniature stage curtain as the first puppet rises for the opening scene.",
+      "words": [
         {
           "id": "b0075",
           "w": "begin",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -1038,11 +1296,17 @@
           "id": "b0053",
           "w": "end",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-070-b",
+      "concept": "The ink creature reaches toward the sole remaining ticket as a vendor starts closing the ticket hatch.",
+      "words": [
         {
           "id": "b0022",
           "w": "last",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -1076,16 +1340,28 @@
           "id": "b0046",
           "w": "put",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-073-b",
+      "concept": "The ink creature clips a vermilion ribbon to one chosen square on a desk calendar while holding an invitation.",
+      "words": [
         {
           "id": "b0071",
           "w": "set",
-          "tint": 1
-        },
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "c1-073-c",
+      "concept": "The ink creature plants both feet together and stands straight up beside its folded chair.",
+      "words": [
         {
           "id": "b0148",
           "w": "stand",
-          "tint": 2
+          "tint": 0
         }
       ]
     },
@@ -1097,11 +1373,17 @@
           "id": "b0098",
           "w": "hold",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-074-b",
+      "concept": "The ink creature files a dated-looking picture receipt carefully into a well-kept archive of matching slips.",
+      "words": [
         {
           "id": "b0067",
           "w": "keep",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -1157,11 +1439,17 @@
           "id": "b0094",
           "w": "issue",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-079-b",
+      "concept": "The ink creature squints through a magnifier searching for a tiny lost key in a tangled heap of yarn.",
+      "words": [
         {
           "id": "b0143",
           "w": "hard",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -1173,11 +1461,17 @@
           "id": "b0095",
           "w": "market",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-080-b",
+      "concept": "The ink creature points out its chosen dumpling on a picture menu as a server holds out an empty order tray.",
+      "words": [
         {
           "id": "b0092",
           "w": "order",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -1189,11 +1483,17 @@
           "id": "b0097",
           "w": "build",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-081-b",
+      "concept": "The ink creature arranges miniature product samples and delivery carts on a planning sheet before any work begins.",
+      "words": [
         {
           "id": "b0101",
           "w": "plan",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -1249,11 +1549,17 @@
           "id": "b0122",
           "w": "car",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-086-b",
+      "concept": "The ink creature boards a long electric passenger train with linked carriages and a rooftop pantograph.",
+      "words": [
         {
           "id": "b0139",
           "w": "train",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -1298,11 +1604,17 @@
           "id": "b0060",
           "w": "report",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-090-b",
+      "concept": "The ink creature fills the empty fields of a preprinted sheet with a pen poised above a blank rectangular box.",
+      "words": [
         {
           "id": "b0119",
           "w": "form",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
@@ -1314,11 +1626,17 @@
           "id": "b0074",
           "w": "follow",
           "tint": 0
-        },
+        }
+      ]
+    },
+    {
+      "g": "c1-091-b",
+      "concept": "The ink creature lifts the current weekly calendar strip to reveal the following strip with a packed picnic basket clipped to it.",
+      "words": [
         {
           "id": "b0052",
           "w": "next",
-          "tint": 1
+          "tint": 0
         }
       ]
     },
