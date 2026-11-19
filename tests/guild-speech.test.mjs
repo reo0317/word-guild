@@ -28,7 +28,7 @@ test('声の遅延読込、失敗と無反応の再作成、古い発話の失�
   old.onerror(); run(50);
   assert.notEqual(calls.at(-1), old);
   assert.equal(calls.at(-1).voice, synth.voices[0]);
-  run(15000); run(50);
+  run(4000); run(50);
   speaker.speak('dog'); old.onerror(); run(50);
   assert.equal(calls.at(-1).text, 'dog');
 });
@@ -68,4 +68,14 @@ test('読みあげ停止は待機中の発話も取り消す', () => {
   speaker.cancel();
   assert.equal(calls.at(-1), 'cancel');
   assert.equal(calls.filter(c => c.text === 'cat').length, 0);
+});
+
+test('話しはじめた長い発話は、見張りで最初からやり直さない', () => {
+  const {speaker, calls, run} = setup();
+  speaker.speak('a long letter'); run(50);
+  const u = calls.at(-1);
+  u.onstart();
+  const before = calls.filter(x => x.text === 'a long letter').length;
+  assert.throws(() => run(4000));
+  assert.equal(calls.filter(x => x.text === 'a long letter').length, before);
 });

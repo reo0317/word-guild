@@ -83,9 +83,11 @@ export function createSpeaker({synth, Utterance, later = setTimeout, clear = cle
             settled = true; clear(watchdog);
             if (retries < 2) attempt(retries + 1);
           };
+          // 見張りは「話しはじめない」ときだけ。話しはじめたら長い手紙でも最後まで任せる（途中で最初からにしない）。
+          utterance.onstart = () => { clear(watchdog); };
           utterance.onend = () => { settled = true; clear(watchdog); };
-          utterance.onerror = retry;
-          watchdog = later(retry, 15000);
+          utterance.onerror = event => { if (event?.error === 'interrupted' || event?.error === 'canceled') { settled = true; clear(watchdog); return; } retry(); };
+          watchdog = later(() => { if (synth.speaking) return; retry(); }, 4000);
           resume();
           try { synth.speak(utterance); } catch { retry(); }
         }, 50);
