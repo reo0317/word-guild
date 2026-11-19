@@ -6506,3 +6506,403 @@ Subject: form: The ink creature fills the empty fields of a preprinted sheet wit
 
 Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
 Subject: next: The ink creature lifts the current weekly calendar strip to reveal the following strip with a packed picnic basket clipped to it.
+
+## 単語の絵：c2-002-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature leans over a miniature ocean liner's bow rail with binoculars, its scarf streaming past the twin funnels.
+
+## 単語の絵：c2-003-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature hurries along with both claws full of bulging shopping bags and a long baguette poking out.
+
+## 単語の絵：c2-005-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters. Make the kiosk screen completely blank cream paper and omit all signs, pictograms and badges. Use only the physical row of connected seats, suitcase and kiosk.
+Subject: The keshikasu ink creature rolls its suitcase between a check-in kiosk and a row of linked boarding seats.
+
+## 単語の絵：c2-006-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature sorts incoming folders into separate desk trays while wearing an office lanyard.
+
+## 単語の絵：c2-006-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature slips a single small folded note under a colleague's paperweight.
+
+## 単語の絵：c2-008-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature studies a trail of diminishing wet pawprints while lifting the edge of a box to find their maker.
+
+## 単語の絵：c2-008-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature holds up the missing puzzle piece whose shape it has deduced from the gap in a paper pawprint.
+
+## 単語の絵：c2-011-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature opens the side of a hulking copier and pulls out an accordion-folded paper jam.
+
+## 単語の絵：c2-016-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature waits with one claw poised over a service bell as the last few grains fall through a tiny hourglass.
+
+## 単語の絵：c2-016-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature ties a ribbon around an invitation beside a still-wrapped party hat and an unopened gift.
+
+## 単語の絵：c2-018-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature watches two smaller helpers stack parcels and steadies a tipping box with one claw.
+
+## 単語の絵：c2-020-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature spots a smaller creature lifting a barbell, holding its claws just beneath the bar.
+
+## 単語の絵：c2-023-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature hangs a new jacket prominently on a display rack with a blank swing tag.
+
+## 単語の絵：c2-024-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature steers a pallet jack beneath a tall storage rack loaded with identical cartons.
+
+## 単語の絵：c2-025-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature takes notes on its lap from a folding audience chair facing a tabletop lectern.
+
+## 単語の絵：c2-026-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature wears padded headphones and speaks into a large suspended radio microphone.
+
+## 単語の絵：c2-029-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature tucks a long narrow slip from a cash register into its wallet beside its purchase.
+
+## 単語の絵：c2-030-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature slides identical folded illustrated issues into a fan of open mailing envelopes.
+
+## 単語の絵：c2-030-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature pins the latest club circular beside earlier circulars on a small corkboard.
+
+## 単語の絵：c2-031-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature independently cross-checks a ledger against a bundle of receipts through a magnifying glass.
+
+## 単語の絵：c2-033-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature in a flight uniform demonstrates fastening a seat belt beside an airplane seat.
+
+## 単語の絵：c2-033-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature approaches a curved welcome desk and reaches up to ring its brass bell.
+
+## 単語の絵：c2-033-d
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature behind a hotel counter offers a room key on a large fob with a welcoming bow.
+
+## 単語の絵：c2-034-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature sinks into the stitched cushions of an oversized button-tufted leather sofa.
+
+## 単語の絵：c2-036-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature waits nervously on an interview chair clutching a portfolio and straightening its tie.
+
+## 単語の絵：c2-038-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature leans over a detached car engine with a socket wrench and an oily rag.
+
+## 単語の絵：c2-038-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature snaps colored interface tiles into place on a desktop monitor using a mouse.
+
+## 単語の絵：c2-039-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature pulls a thick cable-knit wool sweater over its head with one claw emerging from a sleeve.
+
+## 単語の絵：c2-042-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature steps into an open train doorway with a work satchel and a raised commuter pass.
+
+## 単語の絵：c2-043-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature hooks one claw into a hole on a blank rotary phone dial and turns it.
+
+## 単語の絵：c2-044-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters. Show only a short unmarked airport minibus with an actual roof rack, a single suitcase and the creature lifting it. No road, scenery, signage, pictograms or markings on any surface.
+Subject: The keshikasu ink creature loads a suitcase onto a short airport minibus with a luggage rack.
+
+## 単語の絵：c2-045-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature lifts its tagged duffel from a curved baggage carousel.
+
+## 単語の絵：c2-045-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature kneels over an open hard-shell suitcase and presses folded clothes beneath its straps.
+
+## 単語の絵：c2-045-d
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature carries a slim rectangular leather document case with brass clasps to a meeting.
+
+## 単語の絵：c2-046-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature in a cycle helmet hands a sealed parcel directly to an outstretched claw.
+
+## 単語の絵：c2-046-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature sorts goods from one large shipping crate into three delivery carts.
+
+## 単語の絵：c2-047-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature in a server's apron balances a tray of teacups while leaning closer to hear a guest's order.
+
+## 単語の絵：c2-048-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature accepts an office key while signing a lease beside a miniature office desk.
+
+## 単語の絵：c2-048-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature unpacks its belongings at a rented desk with the office key already on its ring.
+
+## 単語の絵：c2-050-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature chooses between an espresso and a pastry at a tiny café table.
+
+## 単語の絵：c2-050-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature unfolds a napkin on its lap before cutting into a plated dinner with knife and fork.
+
+## 単語の絵：c2-052-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature offers visitors a tray of small cups and bite-sized sandwiches.
+
+## 単語の絵：c2-052-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature raises a tall cold glass beaded with condensation and clinking ice.
+
+## 単語の絵：c2-053-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature holds a triangular sandwich open to reveal layers of tomato and cheese.
+
+## 単語の絵：c2-055-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature compares a parcel's distinctive pictorial door plaque with the matching plaque on a miniature door.
+
+## 単語の絵：c2-056-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature presents a matching receipt and a returned kettle as a cashier offers coins back.
+
+## 単語の絵：c2-061-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature puts a magazine order slip into a mailbox while clutching the sample issue.
+
+## 単語の絵：c2-062-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature rolls a heavy suitcase up a portable ramp with one relaxed claw.
+
+## 単語の絵：c2-064-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature unfolds a small illustrated note showing how two unusual hinge pieces fit together.
+
+## 単語の絵：c2-065-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature opens the driver's door of a rounded automobile with its front wheels turned.
+
+## 単語の絵：c2-068-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature unpacks a wicker hamper onto a checkered cloth and shares bread with a companion.
+
+## 単語の絵：c2-072-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature lifts a meeting peg out of one pocket of a blank planner and fits it into another.
+
+## 単語の絵：c2-074-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature wrings water from its soaked coat as raindrops bounce off its hood.
+
+## 単語の絵：c2-077-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature opens a hinged laptop on its knees and taps its unmarked keyboard.
+
+## 単語の絵：c2-079-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature opens a knee-high refrigerator just big enough for one milk bottle.
+
+## 単語の絵：c2-081-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature shivers under a quilt with a thermometer and a box of tissues.
+
+## 単語の絵：c2-082-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature presents an open passport booklet showing its portrait to a border officer's stamp.
+
+## 単語の絵：c2-084-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature triumphantly carries a heaped basket of goods bought with a single coin.
+
+## 単語の絵：c2-084-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature comfortably pays for a plain pair of shoes with several coins still visible in its purse.
+
+## 単語の絵：c2-086-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature waves a handkerchief from the platform as a passenger carriage pulls away.
+
+## 単語の絵：c2-086-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters. Use only a plain freestanding open door, a wide horizontal push bar and the creature halfway through it. All door surfaces completely blank; omit signs, pictograms, arrows, decals and stripes.
+Subject: The keshikasu ink creature pushes a panic bar and steps through a freestanding emergency door.
+
+## 単語の絵：c2-088-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature rolls fresh paint across one half of a battered reception counter.
+
+## 単語の絵：c2-090-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature places a fresh contract sheet over the worn copy and stamps the extension.
+
+## 単語の絵：c2-094-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature parts hanging coats on a rail inside a tall open wardrobe.
+
+## 単語の絵：c2-094-c
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature pulls a shallow desk drawer toward itself to reach a hidden pencil.
+
+## 単語の絵：c2-096-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature fits the end of an insulated wire into a lamp socket with electrician's pliers.
+
+## 単語の絵：c2-097-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature slides a block-shaped ink cartridge into an open desktop printer.
+
+## 単語の絵：c2-100-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature carries shopping bags between a cluster of distinct miniature shopfronts joined by one arcade.
+
+## 単語の絵：c2-101-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature takes the airplane seat directly beside the gap separating two rows of seats.
+
+## 単語の絵：c2-104-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature slides a finished folder into a submission tray just before an hourglass runs out.
+
+## 単語の絵：c2-109-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature steps off a treadmill toward a rack of dumbbells with a gym towel around its neck.
+
+## 単語の絵：c2-110-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature swings a wooden bat at a stitched baseball beside a catcher's mitt.
+
+## 単語の絵：c2-111-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature holds a scale model of a baseball diamond surrounded by tiered spectator seats.
+
+## 単語の絵：c2-113-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature holds two identical striped mittens side by side and aligns their matching stripes.
+
+## 単語の絵：c2-116-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature passes a stack of its own books into a charity collection box.
+
+## 単語の絵：c2-120-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature samples two ice cream scoops, holding a vanilla pod beside one and a strawberry beside the other.
+
+## 単語の絵：c2-121-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature checks the bolts of a miniature scaffold one by one with a handheld inspection lamp.
+
+## 単語の絵：c2-124-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature follows a flour-dusted illustrated recipe card while measuring flour into a mixing bowl.
+
+## 単語の絵：c2-128-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature in a hard hat directs a small bricklaying crew beside a partly assembled wall.
+
+## 単語の絵：c2-131-b
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: The keshikasu ink creature holds a survey sheet with rows of empty response circles and rests a pencil over its first choice.
