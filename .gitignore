@@ -2,3 +2,4 @@ tools/music/out/_work/
 *.f32
 __pycache__/
 lab/story/story-preview.json
+*.blend1
