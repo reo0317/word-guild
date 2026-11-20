@@ -116,7 +116,10 @@ test('SVG：共有定義は1回、紙魚は状態ごとに作れて、目を重�
   assert.ok(!stampHtml(word, {...spec, kind: 'rare'}, {state: 'shadow'}).includes('✦'));
   const html = stampHtml(word, spec, {state: 'shadow'});
   assert.ok(html.includes('？') && !html.includes(`>${word.w}<`));
-  assert.ok(stampHtml(word, spec, {state: 'print', size: 'lg'}).includes(word.ja));
+  assert.match(html, /viewBox="-24 -24 560 560"/);
+  const large = stampHtml(word, spec, {state: 'print', size: 'lg'});
+  assert.match(large, /viewBox="0 0 512 512"/);
+  assert.ok(large.includes(word.ja));
 });
 
 test('まれびとの仮刷りが参照するフィルターが共有定義にある', async () => {

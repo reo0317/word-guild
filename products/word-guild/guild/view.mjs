@@ -2,7 +2,7 @@ import {isRestored} from './srs.mjs';
 // 地図・配達の画面・結果画面と、盤面の入力。
 // app.mjs からは mountGuild() だけを使う。ゲームの進行は quest.mjs、地図の形は stages.mjs に任せる。
 import {Trace} from './trace.mjs';
-import {artBox, swapArt, artFile} from './art.mjs';
+import {artBox, artFile} from './art.mjs';
 import {loadWords} from './words.mjs';
 import {Quest, HEARTS} from './quest.mjs';
 import {pickSession, pickReturn, groupWords, todayNumber, SESSION_SIZE} from './srs.mjs';
@@ -384,7 +384,6 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         <div class="gq-arena-clip">
           ${artBox(`ward${questWard}`, 'gq-arena-bg')}
           <i class="gq-tint" aria-hidden="true"></i>
-          ${artBox('fuurou', 'gq-owl')}
         </div>
         <div class="gq-mons arriving" id="gq-mons">${quest.slots.map(monMarkup).join('')}</div>
         <ul class="gq-clues" id="gq-clues"></ul>
@@ -760,17 +759,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const clean = quest.slots.find(slot => slot.word.id === result.word.id).hint === 0;
     if (clean) showClip(result.word.id);
     if (clean && result.cleared && clipParts(story, result.word.id, 17)) lastClip = result.word.id;
-    react();
     paintAll();
     if (result.cleared) defeat();
-  }
-
-  // 正解のたびに、フウロウが判を押す。
-  function react() {
-    const owl = $('.gq-owl');
-    swapArt(owl, 'fuurouStamp');
-    pulse(owl, 'stamped');
-    later(450, () => { swapArt(owl, 'fuurou'); });
   }
 
   function defeat() {
@@ -988,7 +978,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
           <div id="gq-env-sec" hidden></div>
         </section>` : ''}
         <section class="gq-res-sec" style="--d:${stampDelay}s">
-          <ul class="gq-stamps" aria-label="今回の切手">${stamps.join('') || '<li class="empty" aria-label="答えた語はありません">－</li>'}</ul>
+          <ul class="gq-stamps${lvStart ? ' mini' : ''}" aria-label="今回の切手">${stamps.join('') || '<li class="empty" aria-label="答えた語はありません">－</li>'}</ul>
         </section>
         ${lvStart ? '' : pageAndRoad(before, after, outcome, changedByShelf, stamps.length, lamps)}
         <section class="gq-res-sec gq-res-last" style="--d:${lvStart ? 0.6 : 0.1 + 0.07 * stamps.length + 2.6}s">

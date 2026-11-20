@@ -64,8 +64,16 @@
 /* 拡大 */
 .gq-zoom{position:absolute;inset:0;z-index:20;display:grid;place-items:center;padding:12px;background:#1f2a44cc;overflow:auto}
 .gq-zoom-card{width:100%;max-width:340px;display:grid;gap:6px;justify-items:center;text-align:center;padding:14px 14px 12px;background:var(--paper);border:2px solid var(--ink);border-radius:12px;box-shadow:0 8px 30px #0006}
-.gq-zoom-stamp{width:min(62%,200px);pointer-events:none}
-.gq-zoom-stamp .stamp.big{width:100%;grid-column:auto}.gq-zoom-stamp .stamp:has(.pic):not(.big){width:100%}
+.gq-zoom-stamp{width:min(80%,220px);pointer-events:none}
+.gq-zoom-stamp:has(.stamp.big){width:min(95%,260px)}
+.gq-zoom-stamp .stamp{width:100%;aspect-ratio:var(--stamp-ratio,1 / 1.04);padding:4px}
+.gq-zoom-stamp .stamp.big{aspect-ratio:var(--stamp-ratio,2 / 1)}
+.gq-zoom-stamp .stamp .in{height:100%;display:grid;grid-template-rows:minmax(0,1fr) auto;padding:2px}
+.gq-zoom-stamp .stamp .pic{aspect-ratio:auto;min-height:0}
+.gq-zoom-stamp .stamp.big .pic svg{left:0;width:100%}
+.gq-zoom-stamp .stamp .val{background:var(--paper);padding:1px 2px;border-radius:2px}
+.gq-zoom-stamp .stamp.rare .val{background:var(--ink)}
+.gq-zoom-stamp .stamp .ja{display:none}
 .gq-zoom-state{margin:0;font-size:11px;color:var(--sub);letter-spacing:.1em}
 .gq-zoom-card h2{margin:0;font-family:var(--serif);font-size:28px;letter-spacing:.06em;overflow-wrap:anywhere}
 .gq-zoom-ja{margin:0;font-size:16px;font-weight:700}.gq-zoom-ja small{font-size:11px;color:var(--sub)}

@@ -140,11 +140,12 @@ const SPARK = (x, y, s, c) => `<path transform="translate(${x} ${y}) scale(${s})
 // ---------- 紙魚の SVG ----------
 // opts: state 'shadow'|'proof'|'print'|'gold'、ward 区の番号（1〜）、base 絵の置き場の前置き（既定 ''）、
 //       unify false で色そろえなし（体の絵の元の色）。
-export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = true} = {}) {
+export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = true, closeup = false} = {}) {
   const w = wardNo(ward);
   const href = esc(base + (spec.wordart ? `art/word/${spec.wordart.g}.webp` : bodyFile(spec.species)));
   const img = filter => `<image href="${href}" width="512" height="512"${filter ? ` filter="url(#${filter})"` : ''}/>`;
-  const open = '<svg class="chara" viewBox="-24 -24 560 560" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">';
+  const viewBox = closeup ? '0 0 512 512' : '-24 -24 560 560';
+  const open = `<svg class="chara" viewBox="${viewBox}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">`;
   const pose = inner => `<g transform="translate(256 490) rotate(${spec.tilt}) scale(${spec.scale}) translate(-256 -490)"><g${spec.flip ? ' transform="translate(512 0) scale(-1 1)"' : ''}>${inner}</g></g>`;
   if (state === 'shadow') return `${open}${pose(img('cg-shadow'))}</svg>`;
 
@@ -192,5 +193,5 @@ export function stampHtml(word, spec, {state = 'print', ward = word.ch || 1, bas
   const shadow = state === 'shadow';
   const classes = ['stamp', `s-${state}`, size === 'lg' ? 'lg' : '', spec.kind === 'big' ? 'big' : '', spec.kind === 'rare' ? 'rare' : ''].filter(Boolean).join(' ');
   const label = shadow ? '？' : esc(word.w);
-  return `<button class="${classes}" data-id="${esc(word.id)}" aria-label="${label}"><div class="in"><span class="val">${stampNumber(word)}</span><div class="pic">${charaSvg(spec, {state, ward, base, unify})}</div><div class="lbl">${label}</div>${size === 'lg' ? `<div class="ja">${shadow ? '？' : esc(word.ja)}</div>` : ''}</div></button>`;
+  return `<button class="${classes}" data-id="${esc(word.id)}" aria-label="${label}"><div class="in"><span class="val">${stampNumber(word)}</span><div class="pic">${charaSvg(spec, {state, ward, base, unify, closeup: size === 'lg'})}</div><div class="lbl">${label}</div>${size === 'lg' ? `<div class="ja">${shadow ? '？' : esc(word.ja)}</div>` : ''}</div></button>`;
 }
