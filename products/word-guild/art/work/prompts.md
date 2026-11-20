@@ -6941,3 +6941,78 @@ Subject: Nijimi celebrates its birthday by placing a fresh candle beside the oth
 
 Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no scenery, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
 Subject: Nijimi slides just one small coin across a hotel reception bell counter and receives a room key with a plain bed-shaped fob.
+
+## 単語の絵（描き直し）：c2-003
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu sits on the client’s side of an architect’s desk and points out a requested change on the model house the architect presents.
+
+## 単語の絵（描き直し）：c2-005
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu towers over a miniature airport, guiding a jet down onto a runway beside the control tower.
+
+## 単語の絵（描き直し）：c2-006
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu bends over a thick sheaf of clipped official forms and signs the last sheet with a fountain pen.
+
+## 単語の絵（描き直し）：c2-008
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu arranges nesting cups in a logical progression from smallest to largest before fitting the last cup over the others.
+
+## 単語の絵（描き直し）：c2-011
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu lifts an oak leaf off a scanner and compares it to its freshly photocopied silhouette.
+
+## 単語の絵（描き直し）：c2-016
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu accepts a spare guest key from a friend for a visit sometime in the future.
+
+## 単語の絵（描き直し）：c2-018
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu sits at the head of a desk while an employee asks its approval for a work decision.
+
+## 単語の絵（描き直し）：c2-020
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu teaches a yoga class by demonstrating a tree pose for a small pupil.
+
+## 単語の絵（描き直し）：c2-023
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu opens a mesh sack of sports goods including a racket, gloves and volleyball.
+
+## 単語の絵（描き直し）：c2-024
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu counts the remaining jam jars in a stock crate using a wooden counting frame.
+
+## 単語の絵（描き直し）：c2-025
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu learns pottery in a workshop where a teacher guides its claws around clay on a wheel.
+
+## 単語の絵（描き直し）：c2-026
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu unveils a working windmill prototype for seated listeners at a guest presentation.
+
+## 単語の絵（描き直し）：c2-029
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu presents a plumbing invoice beside the repaired faucet while its client reaches for a closed purse.
+
+## 単語の絵（描き直し）：c2-030
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu opens a glossy accordion-fold travel brochure illustrated with a sailboat and a mountain lodge.
+
+## 単語の絵（描き直し）：c2-031
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu moves abacus beads while entering business earnings in an accountant's ledger.

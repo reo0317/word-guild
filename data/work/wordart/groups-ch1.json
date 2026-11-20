@@ -3,7 +3,7 @@
   "groups": [
     {
       "g": "c1-001",
-      "concept": "ink blob with a huge open mouth shouting out a big blank speech bubble",
+      "concept": "The ink creature touches its chest and opens its mouth in a small grateful bow to say thank you for a freshly received flower.",
       "words": [
         {
           "id": "b0001",
@@ -47,7 +47,7 @@
     },
     {
       "g": "c1-002",
-      "concept": "ink creature with steam and small gears rising from its head, a glowing light bulb floating above",
+      "concept": "The ink creature rests its chin on one claw and furrows its brow over an unfinished chess position.",
       "words": [
         {
           "id": "b0003",
@@ -91,7 +91,7 @@
     },
     {
       "g": "c1-004",
-      "concept": "ink creature in a mortarboard and round glasses reading a stack of books, a school bell and a pencil behind its ear",
+      "concept": "The ink creature studies at a tiny desk, comparing its open workbook with a set of picture flashcards.",
       "words": [
         {
           "id": "b0073",
@@ -124,7 +124,7 @@
     },
     {
       "g": "c1-005",
-      "concept": "ink creature with one huge eyeball and binoculars, gazing at a faraway scenic hill",
+      "concept": "The ink creature tries on spectacles and suddenly sees a tiny ladybird perched on its nose.",
       "words": [
         {
           "id": "b0005",
@@ -168,7 +168,7 @@
     },
     {
       "g": "c1-007",
-      "concept": "ink creature whose round body is a clock face, holding a small hourglass, tiny gears showing",
+      "concept": "The ink creature checks how much time remains by watching sand trickle through a large hourglass.",
       "words": [
         {
           "id": "b0004",
@@ -201,7 +201,7 @@
     },
     {
       "g": "c1-008",
-      "concept": "ink creature with a big sun for a head, rays around it, cheerful morning pose",
+      "concept": "The ink creature turns a single handheld globe from its sunlit face to its dark side to show one passing day.",
       "words": [
         {
           "id": "b0018",
@@ -234,7 +234,7 @@
     },
     {
       "g": "c1-010",
-      "concept": "ink creature whose body is a torn calendar page with a grid of small blank squares and a birthday candle on top",
+      "concept": "The ink creature opens a weekly pill organizer with exactly seven connected compartments laid out in one straight row.",
       "words": [
         {
           "id": "b0056",
@@ -333,7 +333,7 @@
     },
     {
       "g": "c1-016",
-      "concept": "ink creature wearing a hard hat and holding a wrench and a lunch box, sweat drop",
+      "concept": "The ink creature rolls up its sleeves and scrubs a tall stack of dirty plates with a stiff brush.",
       "words": [
         {
           "id": "b0010",
@@ -366,7 +366,7 @@
     },
     {
       "g": "c1-018",
-      "concept": "ink creature with hungry wide eyes reaching both hands toward a glowing treasure, drooling a little",
+      "concept": "The ink creature presses its cheek against a glass cake dome and gazes longingly at the untouched pastry inside.",
       "words": [
         {
           "id": "b0013",
@@ -410,7 +410,7 @@
     },
     {
       "g": "c1-021",
-      "concept": "ink creature holding out a ribboned gift box with both hands, leaning forward",
+      "concept": "The ink creature releases its warm scarf into the bare hands of a shivering hatchling.",
       "words": [
         {
           "id": "b0014",
@@ -454,7 +454,7 @@
     },
     {
       "g": "c1-024",
-      "concept": "ink creature handing coins across a shop counter and receiving a small bag, coins flying from its purse",
+      "concept": "The ink creature slides its plain bank card into a payment terminal beside an empty dinner plate.",
       "words": [
         {
           "id": "b0096",
@@ -498,7 +498,7 @@
     },
     {
       "g": "c1-026",
-      "concept": "ink creature with a big price tag tied around its neck and a gauge dial on its belly, tiny coin scale beside it",
+      "concept": "The ink creature empties its wallet to cover a plumber’s labor after the repair of a leaking tap.",
       "words": [
         {
           "id": "b0116",
@@ -575,7 +575,7 @@
     },
     {
       "g": "c1-030",
-      "concept": "ink creature giving a big thumbs up with a golden crown and sparkles",
+      "concept": "The ink creature tastes a spoonful of soup and gives the cook a quiet approving thumbs-up.",
       "words": [
         {
           "id": "b0006",
@@ -608,7 +608,7 @@
     },
     {
       "g": "c1-032",
-      "concept": "huge ink creature towering over tiny houses, one foot taller than a tree",
+      "concept": "The ink creature hugs a single strawberry so big that its arms barely reach around it.",
       "words": [
         {
           "id": "b0070",
@@ -641,7 +641,7 @@
     },
     {
       "g": "c1-034",
-      "concept": "very stretched-out snake-like ink creature winding across a long road toward a tiny faraway horizon, holding a telescope",
+      "concept": "The ink creature lifts one end of a very long knitted scarf whose folds loop repeatedly around its feet.",
       "words": [
         {
           "id": "b0031",
@@ -685,7 +685,7 @@
     },
     {
       "g": "c1-037",
-      "concept": "crowd of small ink creatures wearing the same badge ribbons, standing shoulder to shoulder",
+      "concept": "The ink creature stands among local people of different ages carrying groceries, a cane and a baby.",
       "words": [
         {
           "id": "b0007",
@@ -773,7 +773,7 @@
     },
     {
       "g": "c1-042",
-      "concept": "big ink creature holding hands with two small ink creatures, walking together",
+      "concept": "The ink creature tenderly feeds its swaddled hatchling from a nursing bottle.",
       "words": [
         {
           "id": "b0142",
@@ -795,7 +795,7 @@
     },
     {
       "g": "c1-043",
-      "concept": "two ink creatures shaking hands with arms around each other's shoulders, smiling",
+      "concept": "The ink creature and its closest friend share a pair of headphones and smile at each other.",
       "words": [
         {
           "id": "b0088",
@@ -828,7 +828,7 @@
     },
     {
       "g": "c1-045",
-      "concept": "ink creature wearing a little house as a snail-like shell on its back, a chimney with smoke, a lit window",
+      "concept": "The ink creature returns home and hangs its own key beside a framed childhood portrait.",
       "words": [
         {
           "id": "b0058",
