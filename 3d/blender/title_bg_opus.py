@@ -519,16 +519,22 @@ def make_banner(org):
 # ================================================================ 2b. 局舎を石造りの外観へ（post-front.png）
 WALL_Y, WALL_X, EAVE_Z, APEX_Z = 0.02, 2.90, 5.46, 7.55     # 既存の壁面・軒・妻の高さ（局所座標で実測）
 REAR_Y = 6.40
+JETTY, JETTY_Z, APEX2_Z = 0.30, 3.55, 7.80    # 2 階の張り出し・張り出しの高さ・新しい妻の頂
+WING_X = 3.49                                 # 右の仕分け室の妻面（実測）
+OFF = 0.0                                     # 壁面からの追加の出（2 階の張り出し面など）
 
 
 def face_pt(face, u, d, v):
     """壁ごとの 2D 座標（u=横, v=高さ, d=壁からの出）→ 局舎の局所座標。"""
+    d = d + OFF
     if face == 'front':
         return Vector((u, WALL_Y - d, v))
     if face == 'right':
         return Vector((WALL_X + d, u, v))
     if face == 'left':
         return Vector((-WALL_X - d, -u, v))
+    if face == 'wing':
+        return Vector((WING_X + d, u, v))
     raise ValueError(face)
 
 
@@ -777,68 +783,170 @@ def stone_post_office():
         'Clock hands': MA['Post office • Midnight blue timber'], 'Scrolls': MA['Post office • Aged brass'],
         'Swags': MA.get('OPUS 局旗 | Vermilion wool'), 'Sign face': MA['Post office • Ivory enamel'],
         'Sign bracket': MA['Post office • Aged brass'], 'Sign envelope': MA['Post office • Midnight blue timber'],
+        'Parcels': mat_new('OPUS 石造 | Kraft parcels', (0.52, 0.36, 0.18), 0.9),
+        'Sacks': mat_new('OPUS 石造 | Mustard sacks', (0.72, 0.50, 0.12), 0.85),
     }
     P = Parts(org)
 
-    # --- 壁：石積みの箱＋前後の妻（屋根の下に収まる高さ）
+    # --- 壁：1 階の箱＋2 階は前後左右に J だけ張り出した箱と妻（ずっしり見せる）
+    global OFF
+    J, JZ = JETTY, JETTY_Z
+    WX2, FY2, RY2 = WALL_X + J, WALL_Y - J, REAR_Y + J
     bm = P['Walls']
-    for face_y, rev in ((WALL_Y, False), (REAR_Y, True)):
-        pass
-    pent = [(-WALL_X, 0.0), (WALL_X, 0.0), (WALL_X, EAVE_Z), (0.0, APEX_Z), (-WALL_X, EAVE_Z)]
-    f = [bm.verts.new((u, WALL_Y, v)) for u, v in pent]
-    b = [bm.verts.new((u, REAR_Y, v)) for u, v in pent]
-    bm.faces.new(list(reversed(f)))
-    bm.faces.new(b)
-    for i in range(5):
-        j = (i + 1) % 5
-        bm.faces.new((f[i], f[j], b[j], b[i]))
+
+    def slab(poly, y0, y1):
+        f = [bm.verts.new((u, y0, v)) for u, v in poly]
+        b = [bm.verts.new((u, y1, v)) for u, v in poly]
+        bm.faces.new(list(reversed(f)))
+        bm.faces.new(b)
+        for i in range(len(poly)):
+            j = (i + 1) % len(poly)
+            bm.faces.new((f[i], f[j], b[j], b[i]))
+    slab(rect(-WALL_X, 0.0, WALL_X, JZ), WALL_Y, REAR_Y)
+    slab([(-WX2, JZ), (WX2, JZ), (WX2, EAVE_Z), (0.0, APEX2_Z), (-WX2, EAVE_Z)], FY2, RY2)
     # 腰石（青灰）
     prism(P['Plinth'], 'front', rect(-WALL_X - 0.06, 0.0, WALL_X + 0.06, 0.45), -0.02, 0.05)
     for side in ('right', 'left'):
         prism(P['Plinth'], side, rect(-0.05 if side == 'right' else -REAR_Y - 0.05, 0.0,
                                       REAR_Y + 0.05 if side == 'right' else 0.05, 0.45), -0.02, 0.05)
-    # 隅の付け柱（切石）と軒の蛇腹、持ち送り（金）
+    # 1 階の隅柱
     for sgn in (-1, 1):
-        prism(P['Pilasters'], 'front', rect(sgn * WALL_X - 0.30 if sgn > 0 else -WALL_X - 0.05, 0.45,
-                                            WALL_X + 0.05 if sgn > 0 else -WALL_X + 0.30, EAVE_Z - 0.16), 0.0, 0.07)
-    prism(P['Dressed limestone'], 'front', rect(-WALL_X - 0.08, EAVE_Z - 0.16, WALL_X + 0.08, EAVE_Z + 0.02), 0.0, 0.13)
-    # 側面の隅柱（手前と奥）と軒下の帯
+        prism(P['Pilasters'], 'front', rect(WALL_X - 0.35 if sgn > 0 else -WALL_X - 0.05, 0.45,
+                                            WALL_X + 0.05 if sgn > 0 else -WALL_X + 0.35, JZ - 0.40), 0.0, 0.10)
     for side, sg in (('right', 1), ('left', -1)):
         for y0_, y1_ in ((-0.05, 0.30), (REAR_Y - 0.30, REAR_Y + 0.05)):
             a, b = sorted((sg * y0_, sg * y1_))
-            prism(P['Pilasters'], side, rect(a, 0.45, b, EAVE_Z - 0.16), 0.0, 0.07)
-        a, b = sorted((sg * -0.05, sg * (REAR_Y + 0.05)))
-        prism(P['Dressed limestone'], side, rect(a, EAVE_Z - 0.16, b, EAVE_Z - 0.02), 0.0, 0.10)
-        prism(P['Dressed limestone'], side, rect(a, 3.35, b, 3.47), 0.0, 0.08)
-    for uu in (-2.2, -1.1, 0.0, 1.1, 2.2):
-        prism(P['Gilded trim'], 'front', rect(uu - 0.06, EAVE_Z - 0.34, uu + 0.06, EAVE_Z - 0.16), 0.0, 0.11)
+            prism(P['Pilasters'], side, rect(a, 0.45, b, JZ - 0.40), 0.0, 0.10)
+    # 張り出しの持ち送り（3 段の石）と 2 階の床の帯
+    for face, us, skip in (('front', [-2.6, -1.3, 1.3, 2.6], ()),
+                           ('right', [0.35, 1.25, 4.45, 5.35, 6.2], ()),
+                           ('left', [-0.35, -1.25, -2.15, -3.05, -3.95, -4.85, -5.75], ())):
+        for uu in us:
+            for (d1, v0, v1) in ((J, JZ - 0.13, JZ), (J * 0.62, JZ - 0.27, JZ - 0.13), (J * 0.3, JZ - 0.42, JZ - 0.27)):
+                prism(P['Dressed limestone'], face, rect(uu - 0.09, v0, uu + 0.09, v1), 0.0, d1)
+            prism(P['Gilded trim'], face, rect(uu - 0.10, JZ - 0.03, uu + 0.10, JZ), J, J + 0.02)
+    prism(P['Dressed limestone'], 'front', rect(-WX2 - 0.04, JZ, WX2 + 0.04, JZ + 0.16), J, J + 0.07)
+    for side, sg in (('right', 1), ('left', -1)):
+        a, b = sorted((sg * (FY2 - 0.04), sg * (RY2 + 0.04)))
+        prism(P['Dressed limestone'], side, rect(a, JZ, b, JZ + 0.16), J, J + 0.07)
 
-    # --- 1 階：中央の両開きアーチ扉と左右のアーチ窓（日よけ付き）
+    # --- 2 階（張り出し面＝OFF=J）
+    OFF = J
+    for sgn in (-1, 1):
+        prism(P['Pilasters'], 'front', rect(WX2 - 0.32 if sgn > 0 else -WX2 - 0.05, JZ + 0.16,
+                                            WX2 + 0.05 if sgn > 0 else -WX2 + 0.32, EAVE_Z - 0.16), 0.0, 0.07)
+    prism(P['Dressed limestone'], 'front', rect(-WX2 - 0.08, EAVE_Z - 0.16, WX2 + 0.08, EAVE_Z + 0.02), 0.0, 0.13)
+    for side, sg in (('right', 1), ('left', -1)):
+        for y0_, y1_ in ((FY2 - 0.05, FY2 + 0.28), (RY2 - 0.28, RY2 + 0.05)):
+            a, b = sorted((sg * y0_, sg * y1_))
+            prism(P['Pilasters'], side, rect(a, JZ + 0.16, b, EAVE_Z - 0.16), 0.0, 0.07)
+        a, b = sorted((sg * (FY2 - 0.05), sg * (RY2 + 0.05)))
+        prism(P['Dressed limestone'], side, rect(a, EAVE_Z - 0.16, b, EAVE_Z - 0.02), 0.0, 0.10)
+    for uu in (-2.4, -1.2, 0.0, 1.2, 2.4):
+        prism(P['Gilded trim'], 'front', rect(uu - 0.06, EAVE_Z - 0.34, uu + 0.06, EAVE_Z - 0.16), 0.0, 0.11)
+    window(P, 'front', 0.0, 3.95, 1.05, 0.62, 'Night glass')
+    for cx in (-1.90, 1.90):
+        window(P, 'front', cx, 3.98, 0.82, 0.58, 'Night glass')
+    for side, sg in (('right', 1), ('left', -1)):
+        for cy in (1.05, 2.95, 4.85):
+            window(P, side, sg * cy, 4.0, 0.72, 0.50, 'Night glass')
+    CV = 6.42
+    prism(P['Dressed limestone'], 'front', [(0.62 * math.cos(a), CV + 0.62 * math.sin(a))
+                                            for a in [2 * math.pi * k / 36 for k in range(36)]], 0.0, 0.07)
+    prism(P['Clock face'], 'front', [(0.46 * math.cos(a), CV + 0.46 * math.sin(a))
+                                     for a in [2 * math.pi * k / 36 for k in range(36)]], 0.07, 0.09)
+    torus(P['Clock rim'], 'front', 0.0, CV, 0.48, 0.04, 0.10, seg=40)
+    torus(P['Clock rim'], 'front', 0.0, CV, 0.62, 0.025, 0.07, seg=40)
+    for k in range(12):
+        a = math.pi / 2 - 2 * math.pi * k / 12
+        cu, cv = 0.38 * math.cos(a), CV + 0.38 * math.sin(a)
+        prism(P['Clock hands'], 'front', rect(cu - 0.018, cv - 0.018, cu + 0.018, cv + 0.018), 0.09, 0.10)
+    for ang, ln, wd in ((math.radians(150), 0.23, 0.03), (math.radians(30), 0.34, 0.022)):   # 10 時 10 分
+        ex, ev = ln * math.cos(ang), CV + ln * math.sin(ang)
+        nx, nv = -math.sin(ang) * wd, math.cos(ang) * wd
+        prism(P['Clock hands'], 'front', [(nx, CV + nv), (-nx, CV - nv), (ex - nx * 0.4, ev - nv * 0.4),
+                                          (ex + nx * 0.4, ev + nv * 0.4)][::-1], 0.10, 0.115)
+    for sgn in (-1, 1):
+        torus(P['Scrolls'], 'front', sgn * 0.90, CV + 0.02, 0.15, 0.028, 0.06, seg=20, a1=2 * math.pi * 0.85)
+        torus(P['Scrolls'], 'front', sgn * 0.90, CV + 0.02, 0.07, 0.022, 0.06, seg=14)
+        pts = []
+        for i in range(17):
+            t = i / 16
+            pts.append(face_pt('front', sgn * (0.55 + 1.15 * t), 0.08, 5.92 - 0.34 * math.sin(math.pi * t)))
+        tube(P['Swags'], pts, 0.10, rseg=10, flat=0.35)
+        for uu in (sgn * 0.55, sgn * 1.70):
+            prism(P['Awning canvas'], 'front', rect(uu - 0.035, 5.54, uu + 0.035, 5.92), 0.06, 0.12)
+    prism(P['Gilded trim'], 'front', rect(-0.09, APEX2_Z + 0.02, 0.09, APEX2_Z + 0.30), 0.30, 0.48)
+    OFF = 0.0
+
+    # --- 1 階：柱廊（奥行き 32 cm の角柱とアーチ）、扉、ショーウィンドウ
+    AD = 0.32
+    for u0, u1 in ((-WALL_X, -2.555), (-1.345, -0.87), (0.87, 1.345), (2.555, WALL_X)):
+        prism(P['Dressed limestone'], 'front', rect(u0, 0.45, u1, 3.06), 0.0, AD)
+        prism(P['Plinth'], 'front', rect(u0 - 0.03, 0.0, u1 + 0.03, 0.45), 0.0, AD + 0.04)
+        for vv in (1.85, 1.95):
+            pass
+        prism(P['Gilded trim'], 'front', rect(u0 - 0.03, 1.80, u1 + 0.03, 1.90), 0.0, AD + 0.03)
+    for cx, w, sp in ((-1.95, 1.21, 1.85), (1.95, 1.21, 1.85), (0.0, 1.74, 1.95)):
+        ring(P['Arch surrounds'], 'front', cx, sp, w, 0.0, 0.15, 0.0, AD)
+        kt = sp + w / 2 + 0.15
+        prism(P['Gilded trim'], 'front', [(cx - 0.09, kt - 0.17), (cx + 0.09, kt - 0.17), (cx + 0.12, kt + 0.06),
+                                          (cx - 0.12, kt + 0.06)], 0.0, AD + 0.03)
+        # 柱廊のアーチの上（庇の下まで）を壁でふさぐ
+        top = 3.06
+        r = w / 2 + 0.15
+        for side_ in (-1, 1):
+            poly = [(cx + side_ * r, sp)]
+            for k in range(0, 8):
+                a = (math.pi / 2) * (k / 7)
+                poly.append((cx + side_ * r * math.cos(a), sp + r * math.sin(a)))
+            poly += [(cx, top), (cx + side_ * r, top)]
+            if side_ > 0:
+                poly = list(reversed(poly))
+            prism(P['Walls'], 'front', poly, 0.0, AD - 0.02)
     DV, DW, DH = 0.18, 1.40, 1.77          # 扉の下端・幅・肩の高さ → 頂部 2.65
     ring(P['Arch surrounds'], 'front', 0.0, DV, DW, DH, 0.17, 0.0, 0.11)
     torus(P['Gilded trim'], 'front', 0.0, DV + DH, DW / 2 + 0.02, 0.025, 0.11, seg=24, a0=0.0, a1=math.pi)
     prism(P['Door leaves'], 'front', rect(-DW / 2, DV, DW / 2, DV + DH), -0.01, 0.025)
     prism(P['Lit glass'], 'front', arch_curve(0.0, DV + DH - 0.001, DW, 0.0)[1:-1], 0.0, 0.012)
     prism(P['Glazing bars'], 'front', rect(-DW / 2, DV + DH - 0.03, DW / 2, DV + DH + 0.03), 0.01, 0.045)
-    for k in range(1, 6):          # 欄間の放射状の桟
+    for k in range(1, 6):
         a = math.pi * k / 6
         cu, cv = 0.0, DV + DH
         ex, ev = cu + (DW / 2) * math.cos(a), cv + (DW / 2) * math.sin(a)
         nx, nv = -math.sin(a) * 0.018, math.cos(a) * 0.018
         prism(P['Glazing bars'], 'front', [(cu + nx, cv + nv), (cu - nx, cv - nv), (ex - nx, ev - nv), (ex + nx, ev + nv)][::-1], 0.012, 0.04)
     prism(P['Glazing bars'], 'front', rect(-0.02, DV, 0.02, DV + DH), 0.025, 0.05)
-    for sgn in (-1, 1):            # 扉の鏡板と金の把手
+    for sgn in (-1, 1):
         for v0, v1 in ((DV + 0.12, DV + 0.80), (DV + 0.92, DV + DH - 0.10)):
             prism(P['Glazing bars'], 'front', rect(sgn * 0.08 if sgn > 0 else -DW / 2 + 0.09, v0,
                                                     DW / 2 - 0.09 if sgn > 0 else -0.08, v1), 0.025, 0.04)
         prism(P['Gilded trim'], 'front', rect(sgn * 0.05 - 0.025, DV + 0.95, sgn * 0.05 + 0.025, DV + 1.12), 0.025, 0.07)
     for cx in (-1.95, 1.95):
-        window(P, 'front', cx, 0.80, 0.95, 1.05, 'Lit glass', awning=True)
+        window(P, 'front', cx, 0.80, 0.95, 0.95, 'Lit glass', awning=True)
+        # ショーウィンドウの荷物：小包の山と麻袋
+        for (u0, w0, h0, d0) in ((-0.36, 0.22, 0.16, 0.03), (-0.33, 0.17, 0.13, 0.04), (-0.12, 0.20, 0.14, 0.03)):
+            prism(P['Parcels'], 'front', rect(cx + u0, 0.80 + (0.16 if d0 == 0.04 else 0.0), cx + u0 + w0,
+                                              0.80 + h0 + (0.16 if d0 == 0.04 else 0.0)), d0, d0 + 0.16)
+        for (u0, rr) in ((0.16, 0.12), (0.34, 0.10)):
+            sph = bmesh.ops.create_uvsphere(P['Sacks'], u_segments=12, v_segments=8, radius=1.0)
+            c = face_pt('front', cx + u0, 0.12, 0.80 + rr * 0.95)
+            for v in sph['verts']:
+                v.co = c + Vector((v.co.x * rr, v.co.y * rr * 0.8, v.co.z * rr * (1.15 if v.co.z > 0 else 0.95)))
+            tie = face_pt('front', cx + u0, 0.12, 0.80 + rr * 2.0)
+            cone = bmesh.ops.create_cone(P['Sacks'], cap_ends=True, segments=8, radius1=rr * 0.35, radius2=rr * 0.12,
+                                         depth=rr * 0.5)
+            for v in cone['verts']:
+                v.co = v.co + tie
+    # 側面の 1 階窓
+    for side, sg in (('right', 1), ('left', -1)):
+        window(P, side, sg * 0.95, 0.85, 0.70, 0.95, 'Lit glass')
+    window(P, 'left', -2.60, 0.85, 0.70, 0.95, 'Lit glass')
 
-    # --- 1 階と 2 階の間の朱瓦の庇（絵の下屋根）
+    # --- 1 階と 2 階の間の朱瓦の庇（張り出しの下に差し込む）
     bm = P['Skirt roof']
     nu, nd = 96, 6
-    D0, D1, Z0, Z1 = 0.0, 0.88, 3.48, 3.06
+    D0, D1, Z0, Z1 = 0.0, 0.95, JZ - 0.05, 3.06
     grid = []
     for j in range(nd + 1):
         row = []
@@ -852,75 +960,26 @@ def stone_post_office():
         for i in range(nu):
             bm.faces.new((grid[j][i], grid[j + 1][i], grid[j + 1][i + 1], grid[j][i + 1]))
     prism(P['Gilded trim'], 'front', rect(-WALL_X - 0.15, Z1 - 0.13, WALL_X + 0.15, Z1 - 0.02), D1 - 0.06, D1 + 0.01)
-    for uu in (-2.7, -1.3, 1.3, 2.7):
-        prism(P['Gilded trim'], 'front', [(uu - 0.05, Z1 - 0.40), (uu + 0.05, Z1 - 0.40), (uu + 0.05, Z1 - 0.05),
-                                          (uu - 0.05, Z1 - 0.05)], 0.0, 0.10)
-        prism(P['Gilded trim'], 'front', rect(uu - 0.05, Z1 - 0.13, uu + 0.05, Z1 - 0.02), 0.0, D1 - 0.05)
 
-    # --- 2 階：アーチ窓 3 つ（中央を大きく）
-    window(P, 'front', 0.0, 3.80, 0.95, 0.65, 'Night glass')
-    for cx in (-1.75, 1.75):
-        window(P, 'front', cx, 3.85, 0.75, 0.62, 'Night glass')
-    # 側面のアーチ窓（右は仕分け室の下屋を避けて 2 階のみ＋手前 1 階）
-    # face_pt の 'left' は u = -y（外から見て左→右）なので y 座標を負にして渡す
-    for side, sg in (('right', 1), ('left', -1)):
-        for cy in (1.05, 2.95, 4.85):
-            window(P, side, sg * cy, 3.95, 0.70, 0.52, 'Night glass')
-        window(P, side, sg * 0.95, 0.85, 0.70, 0.95, 'Lit glass')
-    window(P, 'left', -2.60, 0.85, 0.70, 0.95, 'Lit glass')
+    # --- 右の張り出した部屋（仕分け室）の妻面：石で覆ってアーチ窓に
+    prism(P['Walls'], 'wing', rect(1.95, 0.45, 3.87, 2.95), 0.0, 0.17)
+    prism(P['Plinth'], 'wing', rect(1.93, 0.0, 3.89, 0.45), 0.0, 0.21)
+    OFF = 0.17
+    window(P, 'wing', 2.91, 0.85, 0.90, 0.95, 'Lit glass', awning=True)
+    OFF = 0.0
 
-    # --- 妻の丸い時計（飾り輪・渦巻き・朱の垂れ幕）
-    CV = 6.30
-    prism(P['Dressed limestone'], 'front', [(0.60 * math.cos(a), CV + 0.60 * math.sin(a))
-                                            for a in [2 * math.pi * k / 36 for k in range(36)]], 0.0, 0.07)
-    prism(P['Clock face'], 'front', [(0.44 * math.cos(a), CV + 0.44 * math.sin(a))
-                                     for a in [2 * math.pi * k / 36 for k in range(36)]], 0.07, 0.09)
-    torus(P['Clock rim'], 'front', 0.0, CV, 0.46, 0.04, 0.10, seg=40)
-    torus(P['Clock rim'], 'front', 0.0, CV, 0.60, 0.025, 0.07, seg=40)
-    for k in range(12):
-        a = math.pi / 2 - 2 * math.pi * k / 12
-        cu, cv = 0.36 * math.cos(a), CV + 0.36 * math.sin(a)
-        prism(P['Clock hands'], 'front', rect(cu - 0.018, cv - 0.018, cu + 0.018, cv + 0.018), 0.09, 0.10)
-    for ang, ln, wd in ((math.radians(150), 0.22, 0.03), (math.radians(30), 0.33, 0.022)):   # 10 時 10 分
-        ex, ev = ln * math.cos(ang), CV + ln * math.sin(ang)
-        nx, nv = -math.sin(ang) * wd, math.cos(ang) * wd
-        prism(P['Clock hands'], 'front', [(nx, CV + nv), (-nx, CV - nv), (ex - nx * 0.4, ev - nv * 0.4),
-                                          (ex + nx * 0.4, ev + nv * 0.4)][::-1], 0.10, 0.115)
-    for sgn in (-1, 1):
-        torus(P['Scrolls'], 'front', sgn * 0.86, CV + 0.02, 0.15, 0.028, 0.06, seg=20,
-              a0=0.0 if sgn > 0 else math.pi * 0.0, a1=2 * math.pi * 0.85)
-        torus(P['Scrolls'], 'front', sgn * 0.86, CV + 0.02, 0.07, 0.022, 0.06, seg=14)
-        # 垂れ幕：時計の両脇から軒の上へ弧を描いて垂れる
-        pts = []
-        for i in range(17):
-            t = i / 16
-            uu = sgn * (0.52 + 1.05 * t)
-            vv = 5.86 - 0.32 * math.sin(math.pi * t)
-            pts.append(face_pt('front', uu, 0.08, vv))
-        tube(P['Swags'], pts, 0.10, rseg=10, flat=0.35)
-        for uu in (sgn * 0.52, sgn * 1.57):
-            prism(P['Awning canvas'], 'front', rect(uu - 0.035, 5.50, uu + 0.035, 5.86), 0.06, 0.12)
-    prism(P['Gilded trim'], 'front', rect(-0.09, APEX_Z + 0.02, 0.09, APEX_Z + 0.28), 0.25, 0.43)
-
-    # --- 右手の封筒の吊り看板（金の渦巻き金具・鎖）
+    # --- 右手の封筒の吊り看板（張り出した 2 階の角から）
     bm = P['Sign bracket']
-    y0 = WALL_Y - 0.18
-    tube(bm, [Vector((WALL_X - 0.02 + 1.10 * t, y0, 4.86)) for t in (0, 0.5, 1)], 0.028)
-    tube(bm, [Vector((WALL_X - 0.02 + 0.70 * t, y0, 4.40 + 0.46 * t ** 0.7)) for t in (0, 0.25, 0.5, 0.75, 1)], 0.022)
-    sb = P['Sign bracket']
-    for cxs, rr in ((WALL_X + 0.30, 0.16), (WALL_X + 0.30, 0.08)):
-        rows = []
-    torus_bm = P['Scrolls']
-    for (cu, cv, R) in ((3.20, 4.66, 0.15), (3.20, 4.66, 0.07), (4.02, 4.94, 0.09)):
-        verts = []
-        for i in range(25):
-            a = 2 * math.pi * 0.85 * i / 24
-            verts.append(Vector((cu + R * math.cos(a), y0, cv + R * math.sin(a))))
-        tube(torus_bm, verts, 0.02)
-    prism(P['Sign bracket'], 'front', rect(WALL_X - 0.04, 4.30, WALL_X + 0.04, 4.98), 0.10, 0.26)
-    SX, SZ = 3.48, 4.18
-    for cu in (SX - 0.28, SX + 0.28):
-        tube(P['Sign bracket'], [Vector((cu, y0, 4.85)), Vector((cu, y0, SZ + 0.29))], 0.012, rseg=6)
+    y0 = FY2 - 0.18
+    tube(bm, [Vector((WX2 - 0.02 + 1.10 * t, y0, 4.92)) for t in (0, 0.5, 1)], 0.028)
+    tube(bm, [Vector((WX2 - 0.02 + 0.70 * t, y0, 4.46 + 0.46 * t ** 0.7)) for t in (0, 0.25, 0.5, 0.75, 1)], 0.022)
+    for (cu, cv, R) in ((WX2 + 0.30, 4.72, 0.15), (WX2 + 0.30, 4.72, 0.07), (WX2 + 1.12, 5.00, 0.09)):
+        verts = [Vector((cu + R * math.cos(2 * math.pi * 0.85 * i / 24), y0, cv + R * math.sin(2 * math.pi * 0.85 * i / 24)))
+                 for i in range(25)]
+        tube(P['Scrolls'], verts, 0.02)
+    OFF = J
+    prism(P['Sign bracket'], 'front', rect(WX2 - 0.04, 4.36, WX2 + 0.04, 5.04), 0.10, 0.26)
+    SX, SZ = WX2 + 0.58, 4.24
     ell = [(SX + 0.44 * math.cos(a), SZ + 0.31 * math.sin(a)) for a in [2 * math.pi * k / 40 for k in range(40)]]
     prism(P['Sign face'], 'front', ell, 0.18 - 0.03, 0.18 + 0.03)
     torus(P['Sign bracket'], 'front', SX, SZ, 0.44, 0.03, 0.18, seg=40, sv=0.31 / 0.44)
@@ -935,13 +994,38 @@ def stone_post_office():
             e0, e1 = (d1 + 0.004, d1 + 0.008) if sgn > 0 else (d0 - 0.008, d0 - 0.004)
             prism(P['Sign envelope'], 'front', [(pu + nn.x, pv + nn.y), (pu - nn.x, pv - nn.y),
                                                 (qu - nn.x, qv - nn.y), (qu + nn.x, qv + nn.y)][::-1], e0, e1)
+    OFF = 0.0
+    for cu in (SX - 0.28, SX + 0.28):
+        tube(P['Sign bracket'], [Vector((cu, y0, 4.91)), Vector((cu, y0, SZ + 0.29))], 0.012, rseg=6)
+
+    # --- 屋根・煙突を張り出しに合わせて広げる。雨どい（旧外壁の位置）は外す
+    piv = Vector((0.0, 3.225, 5.35))
+    S_ = Matrix.Translation(piv) @ Matrix.Diagonal((1.091, 1.082, 1.09, 1.0)) @ Matrix.Translation(-piv)
+    for n in ('局舎二階 | 水筋の通る桟瓦', '郵便局 | Bargeboards, rafters and eaves', '郵便局 | Rounded fired-clay ridge caps'):
+        for o in OB:
+            if o.name.startswith(n) and not o.get('opus_scaled'):
+                o.matrix_basis = S_ @ o.matrix_basis
+                o['opus_scaled'] = True
+    ch = OB['郵便局 | Capped masonry chimney']
+    if not ch.get('opus_scaled'):
+        ch.matrix_basis = Matrix.Translation((0.0, 0.0, 0.24)) @ ch.matrix_basis
+        ch['opus_scaled'] = True
+    for o in OB:
+        if o.name.startswith('局舎 | Coastal eaves gutters'):
+            o.hide_render = o.hide_viewport = True
+    # 灯は柱廊の柱の前面へ
+    for n in ('郵便局 | Brass wall lantern', 'OPUS 玄関 | Brass wall lantern R'):
+        o = OB[n]
+        if not o.get('opus_moved'):
+            o.matrix_basis = Matrix.Translation((0.0, -AD, 0.12)) @ o.matrix_basis
+            o['opus_moved'] = True
     P.build(mats)
 
     # --- 局旗は絵と同じ左手へ（x を鏡映）
     for o in OB:
         if o.name.startswith('OPUS 局旗') and not o.get('opus_mirrored'):
             # 親（局舎原点）の局所空間で鏡映（matrix_world は作成直後で未更新のため使わない）
-            o.matrix_basis = Matrix.Scale(-1, 4, (1, 0, 0)) @ o.matrix_basis
+            o.matrix_basis = Matrix.Translation((-JETTY - 0.02, -0.10, 0.06)) @ Matrix.Scale(-1, 4, (1, 0, 0)) @ o.matrix_basis
             o['opus_mirrored'] = True
     log(f'post office rebuilt as stone: hid {n_hidden} half-timber parts; arched door/windows, '
         f'skirt roof, gable clock, swags, envelope sign, banner moved left')
