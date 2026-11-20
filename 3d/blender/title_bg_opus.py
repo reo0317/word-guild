@@ -209,26 +209,31 @@ def soften_rocks():
         o = OB.get(n)
         if not o:
             continue
-        if 'opus_bevel' not in o.modifiers:
-            b = o.modifiers.new('opus_bevel', 'BEVEL')
-            b.width = 0.03
-            b.segments = 2
-            b.limit_method = 'ANGLE'
-            b.angle_limit = math_radians(35)
-            # 平らな多面体を細かく割り、雲状ノイズで割れ肌の凹凸をつける
-            sd = o.modifiers.new('opus_split', 'SUBSURF')
-            sd.subdivision_type = 'SIMPLE'
+        if 'opus_round' not in o.modifiers:
+            # 角ばった多面体 → 細分化で丸め、大小 2 段のノイズで割れ肌の凹凸
+            sd = o.modifiers.new('opus_round', 'SUBSURF')
+            sd.subdivision_type = 'CATMULL_CLARK'
             sd.levels = sd.render_levels = 3
-            tex = bpy.data.textures.get('OPUS 岩肌') or bpy.data.textures.new('OPUS 岩肌', 'CLOUDS')
-            tex.noise_scale = 0.22
-            tex.noise_depth = 4
-            tex.noise_basis = 'VORONOI_F2'
-            dp = o.modifiers.new('opus_grain', 'DISPLACE')
-            dp.texture = tex
-            dp.texture_coords = 'GLOBAL'
-            dp.strength = 0.07
-            dp.mid_level = 0.5
-        o.data.set_sharp_from_angle(angle=math_radians(48))
+            sd.boundary_smooth = 'PRESERVE_CORNERS'
+            big = bpy.data.textures.get('OPUS 岩の起伏') or bpy.data.textures.new('OPUS 岩の起伏', 'CLOUDS')
+            big.noise_scale = 0.45
+            big.noise_depth = 2
+            fine = bpy.data.textures.get('OPUS 岩肌') or bpy.data.textures.new('OPUS 岩肌', 'CLOUDS')
+            fine.noise_scale = 0.09
+            fine.noise_depth = 3
+            fine.noise_basis = 'VORONOI_F2'
+            for nm, tex, st in (('opus_lumps', big, 0.12), ('opus_grain', fine, 0.03)):
+                dp = o.modifiers.new(nm, 'DISPLACE')
+                dp.texture = tex
+                dp.texture_coords = 'GLOBAL'
+                dp.strength = st
+                dp.mid_level = 0.5
+        for p in o.data.polygons:
+            p.use_smooth = True
+        if hasattr(o.data, 'sharp_edge') or 'sharp_edge' in o.data.attributes:
+            a = o.data.attributes.get('sharp_edge')
+            if a:
+                o.data.attributes.remove(a)
     # 椿：低ポリの球が縞に見える → 細分化してなめらかに
     o = OB.get('石段の椿 | Camellia at the margin of the steps')
     if o:
@@ -237,7 +242,7 @@ def soften_rocks():
         if 'opus_subd' not in o.modifiers:
             sd = o.modifiers.new('opus_subd', 'SUBSURF')
             sd.levels = sd.render_levels = 1
-    log('rocks bevelled + angle-smoothed; camellia subdivided')
+    log('rocks rounded (Catmull-Clark x3 + two-scale displacement); camellia subdivided')
 
 
 def math_radians(d):
@@ -248,7 +253,8 @@ def fix_plaza_joints():
     """敷石の目地が点線状にちらつく：目地の底が 7 cm 下の暗い面で、細い隙間が途切れて見えていた。
     敷石の上面を写した目地床（0.7 mm 下、各石を 4 cm 広げる）を敷き、目地を一定の石灰色の線にする。"""
     m = MA['海辺の広場 | Lime pointing']
-    set_ramp(m, [(0.33, 0.31, 0.26), (0.40, 0.37, 0.31)])
+    # 目地は敷石より十分暗い色に（線として読める濃さ）
+    set_ramp(m, [(0.085, 0.080, 0.070), (0.12, 0.11, 0.095)])
     src = OB['広場 | Oyster sandstone flags']
     if 'OPUS 広場 | Mortar bed' in OB:
         return
@@ -376,7 +382,8 @@ def post_office():
     gran = MA['Post office • Foundation course 2']
     # 玄関の踏み石（絵の玄関階段に相当。扉の敷居 9 cm に合わせる）
     if 'OPUS 玄関 | Granite door step' not in OB:
-        local_box('OPUS 玄関 | Granite door step', org, (-1.12, -0.80, 0.0), (1.12, -0.26, 0.09), gran)
+        local_box('OPUS 玄関 | Granite door step', org, (-1.30, -1.00, 0.0), (1.30, 0.02, 0.09), gran)
+        local_box('OPUS 玄関 | Granite door step 2', org, (-1.05, -0.62, 0.09), (1.05, 0.02, 0.18), gran)
 
     # 扉の右にもう一灯（絵では扉の両脇に灯）
     lan = OB['郵便局 | Brass wall lantern']
@@ -489,6 +496,429 @@ def make_banner(org):
     fl = OB.new('OPUS 局旗 | Envelope flap', flap)
     org.users_collection[0].objects.link(fl)
     fl.parent = org
+
+
+# ================================================================ 2b. 局舎を石造りの外観へ（post-front.png）
+WALL_Y, WALL_X, EAVE_Z, APEX_Z = 0.02, 2.90, 5.46, 7.55     # 既存の壁面・軒・妻の高さ（局所座標で実測）
+REAR_Y = 6.40
+
+
+def face_pt(face, u, d, v):
+    """壁ごとの 2D 座標（u=横, v=高さ, d=壁からの出）→ 局舎の局所座標。"""
+    if face == 'front':
+        return Vector((u, WALL_Y - d, v))
+    if face == 'right':
+        return Vector((WALL_X + d, u, v))
+    if face == 'left':
+        return Vector((-WALL_X - d, -u, v))
+    raise ValueError(face)
+
+
+def prism(bm, face, poly, d0, d1):
+    """壁面上の 2D 多角形（反時計回り）を d0〜d1 だけ押し出した柱体。"""
+    back = [bm.verts.new(face_pt(face, u, d0, v)) for u, v in poly]
+    front = [bm.verts.new(face_pt(face, u, d1, v)) for u, v in poly]
+    n = len(poly)
+    try:
+        bm.faces.new(front)
+        bm.faces.new(list(reversed(back)))
+    except ValueError:
+        pass
+    for i in range(n):
+        j = (i + 1) % n
+        try:
+            bm.faces.new((back[i], back[j], front[j], front[i]))
+        except ValueError:
+            pass
+
+
+def rect(u0, v0, u1, v1):
+    return [(u0, v0), (u1, v0), (u1, v1), (u0, v1)]
+
+
+def arch_curve(cx, vb, w, hr, off=0.0, n=14):
+    """半円アーチの開口の輪郭（左下→左肩→半円→右肩→右下）。off は外側への広がり。"""
+    r = w / 2 + off
+    pts = [(cx - r, vb), (cx - r, vb + hr)]
+    for k in range(1, n):
+        a = math.pi - math.pi * k / n
+        pts.append((cx + r * math.cos(a), vb + hr + r * math.sin(a)))
+    pts += [(cx + r, vb + hr), (cx + r, vb)]
+    return pts
+
+
+def ring(bm, face, cx, vb, w, hr, t, d0, d1, n=14):
+    inner = arch_curve(cx, vb, w, hr, 0.0, n)
+    outer = arch_curve(cx, vb, w, hr, t, n)
+    for i in range(len(inner) - 1):
+        prism(bm, face, [inner[i], outer[i], outer[i + 1], inner[i + 1]][::-1] if i < 0 else
+              [inner[i], inner[i + 1], outer[i + 1], outer[i]], d0, d1)
+
+
+class Parts:
+    """材質ごとに 1 つのメッシュへまとめて作る。"""
+
+    def __init__(self, org):
+        self.org = org
+        self.bms = {}
+
+    def __getitem__(self, key):
+        if key not in self.bms:
+            self.bms[key] = bmesh.new()
+        return self.bms[key]
+
+    def build(self, mats):
+        for key, bm in self.bms.items():
+            name = f'OPUS 石造 | {key}'
+            old = OB.get(name)
+            if old:
+                bpy.data.objects.remove(old)
+            bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-5)
+            bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+            me = bpy.data.meshes.new(name)
+            bm.to_mesh(me)
+            bm.free()
+            me.materials.append(mats[key])
+            o = OB.new(name, me)
+            self.org.users_collection[0].objects.link(o)
+            o.parent = self.org
+            o.matrix_parent_inverse = Matrix()
+            o.pass_index = 1
+            if key in ('Clock rim', 'Scrolls', 'Swags', 'Sign bracket'):
+                for p in me.polygons:
+                    p.use_smooth = True
+
+
+def ashlar(m, c1, c2, mortar, bw=0.46, rh=0.23, bump=0.35):
+    """切石積み：局舎の局所座標（壁の横方向 = x+y、縦 = z）に Brick テクスチャ。"""
+    t = m.node_tree
+    for n in list(t.nodes):
+        if n.type not in ('BSDF_PRINCIPLED', 'OUTPUT_MATERIAL') and not n.name.startswith('OPUS fog'):
+            t.nodes.remove(n)
+    N, L = nodes(t)
+    p = principled(m)
+    p.inputs['Roughness'].default_value = 0.88
+    tc = N('ShaderNodeTexCoord', (-1400, 0))
+    sep = N('ShaderNodeSeparateXYZ', (-1200, 0))
+    L(tc.outputs['Object'], sep.inputs[0])
+    u = mth(N, L, 'ADD', sep.outputs['X'], sep.outputs['Y'], (-1000, 0))
+    vec = N('ShaderNodeCombineXYZ', (-850, 0))
+    L(u, vec.inputs['X'])
+    L(sep.outputs['Z'], vec.inputs['Y'])
+    br = N('ShaderNodeTexBrick', (-650, 0), Scale=1.0, **{'Mortar Size': 0.018, 'Mortar Smooth': 0.3,
+                                                          'Brick Width': bw, 'Row Height': rh})
+    br.offset = 0.5
+    br.inputs['Color1'].default_value = (*c1, 1)
+    br.inputs['Color2'].default_value = (*c2, 1)
+    br.inputs['Mortar'].default_value = (*mortar, 1)
+    L(vec.outputs[0], br.inputs['Vector'])
+    noi = N('ShaderNodeTexNoise', (-650, -300), Scale=6.0, Detail=6.0, Roughness=0.6)
+    L(tc.outputs['Object'], noi.inputs['Vector'])
+    vr = N('ShaderNodeMapRange', (-450, -300), **{'To Min': 0.86, 'To Max': 1.08})
+    L(noi.outputs['Fac'], vr.inputs['Value'])
+    mul = N('ShaderNodeMix', (-250, 0), _data_type='RGBA', _blend_type='MULTIPLY')
+    mul.inputs['Factor'].default_value = 1.0
+    L(br.outputs['Color'], mul.inputs[6])
+    L(vr.outputs[0], mul.inputs[7])
+    L(mul.outputs[2], p.inputs['Base Color'])
+    inv = mth(N, L, 'SUBTRACT', 1.0, br.outputs['Fac'], (-450, -550))
+    hb = mth(N, L, 'ADD', inv, mth(N, L, 'MULTIPLY', noi.outputs['Fac'], 0.25, (-450, -700)), (-300, -600))
+    b = N('ShaderNodeBump', (-150, -500), Strength=bump, Distance=0.015)
+    L(hb, b.inputs['Height'])
+    L(b.outputs['Normal'], p.inputs['Normal'])
+
+
+def mat_new(name, col, rough=0.8, metal=0.0, emit=None, emit_strength=0.0):
+    m = MA.get(name) or MA.new(name)
+    m.use_nodes = True
+    p = principled(m)
+    p.inputs['Base Color'].default_value = (*col, 1)
+    p.inputs['Roughness'].default_value = rough
+    p.inputs['Metallic'].default_value = metal
+    if emit:
+        p.inputs['Emission Color'].default_value = (*emit, 1)
+        p.inputs['Emission Strength'].default_value = emit_strength
+    return m
+
+
+def torus(bm, face, cu, cv, R, r, d, seg=28, rseg=8, sx=1.0, sv=1.0, a0=0.0, a1=2 * math.pi):
+    """壁面に平行な輪（楕円・部分弧も可）。"""
+    closed = abs(a1 - a0 - 2 * math.pi) < 1e-6
+    n = seg if closed else seg + 1
+    rows = []
+    for i in range(n):
+        a = a0 + (a1 - a0) * i / seg
+        c = Vector((cu + R * sx * math.cos(a), cv + R * sv * math.sin(a)))
+        dirv = Vector((math.cos(a), math.sin(a)))
+        row = []
+        for j in range(rseg):
+            b = 2 * math.pi * j / rseg
+            uv = c + dirv * (r * math.cos(b))
+            row.append(bm.verts.new(face_pt(face, uv.x, d + r * math.sin(b), uv.y)))
+        rows.append(row)
+    for i in range(n if closed else n - 1):
+        A, B = rows[i], rows[(i + 1) % n]
+        for j in range(rseg):
+            k = (j + 1) % rseg
+            bm.faces.new((A[j], B[j], B[k], A[k]))
+
+
+def tube(bm, pts, r, rseg=8, flat=1.0):
+    """3D 点列に沿った管（垂れ幕は flat で平たく）。"""
+    rows = []
+    for i, p in enumerate(pts):
+        tng = (pts[min(i + 1, len(pts) - 1)] - pts[max(i - 1, 0)]).normalized()
+        side = tng.cross(Vector((0, 1, 0)))
+        if side.length < 1e-4:
+            side = Vector((1, 0, 0))
+        side.normalize()
+        up = side.cross(tng).normalized()
+        row = []
+        for j in range(rseg):
+            b = 2 * math.pi * j / rseg
+            row.append(bm.verts.new(p + side * (r * math.cos(b)) + up * (r * flat * math.sin(b))))
+        rows.append(row)
+    for i in range(len(rows) - 1):
+        for j in range(rseg):
+            k = (j + 1) % rseg
+            bm.faces.new((rows[i][j], rows[i + 1][j], rows[i + 1][k], rows[i][k]))
+
+
+def window(P, face, cx, vb, w, hr, glass, awning=False, t=0.13, mull=True):
+    ring(P['Arch surrounds'], face, cx, vb, w, hr, t, 0.0, 0.10)
+    P[glass] and prism(P[glass], face, arch_curve(cx, vb, w, hr, 0.0)[:-1], 0.0, 0.012)
+    # 窓の格子（紺）
+    if mull:
+        top = vb + hr + w / 2
+        prism(P['Glazing bars'], face, rect(cx - 0.022, vb, cx + 0.022, top - 0.01), 0.012, 0.04)
+        for k in (1, 2):
+            vv = vb + hr * k / 3
+            prism(P['Glazing bars'], face, rect(cx - w / 2, vv - 0.02, cx + w / 2, vv + 0.02), 0.012, 0.04)
+        prism(P['Glazing bars'], face, rect(cx - w / 2, vb + hr - 0.02, cx + w / 2, vb + hr + 0.02), 0.012, 0.04)
+    # 要石・迫元（金）と窓台
+    kt = vb + hr + w / 2 + t
+    prism(P['Gilded trim'], face, [(cx - 0.08, kt - t - 0.02), (cx + 0.08, kt - t - 0.02), (cx + 0.11, kt + 0.10),
+                                   (cx - 0.11, kt + 0.10)], 0.0, 0.13)
+    for sgn in (-1, 1):
+        uu = cx + sgn * (w / 2 + t / 2)
+        prism(P['Gilded trim'], face, rect(uu - t / 2 - 0.02, vb + hr - 0.07, uu + t / 2 + 0.02, vb + hr), 0.0, 0.12)
+    prism(P['Dressed limestone'], face, rect(cx - w / 2 - t - 0.05, vb - 0.10, cx + w / 2 + t + 0.05, vb), 0.0, 0.14)
+    if awning:
+        # 絵の白い日よけ（縁が波形）
+        bm = P['Awning canvas']
+        v0, v1 = vb + hr + 0.05, vb + hr - 0.22
+        u0, u1 = cx - w / 2 + 0.01, cx + w / 2 - 0.01
+        a = [bm.verts.new(face_pt(face, u0, 0.012, v0)), bm.verts.new(face_pt(face, u1, 0.012, v0)),
+             bm.verts.new(face_pt(face, u1, 0.24, v1 + 0.08)), bm.verts.new(face_pt(face, u0, 0.24, v1 + 0.08))]
+        bm.faces.new(a)
+        edge = []
+        k = 5
+        for i in range(k * 6 + 1):
+            uu = u0 + (u1 - u0) * i / (k * 6)
+            ph = (i % 6) / 6
+            edge.append((uu, v1 + 0.05 * (1 - math.sin(ph * math.pi))))
+        poly = [(u0, v1 + 0.08)] + edge[::-1][::-1] + [(u1, v1 + 0.08)]
+        poly = [(u0, v1 + 0.08), (u1, v1 + 0.08)] + edge[::-1]
+        prism(bm, face, [(uu, vv) for uu, vv in reversed(poly)], 0.235, 0.245)
+
+
+def stone_post_office():
+    org = OB['局舎 | Building origin']
+    # --- 木組みの外観を外す（形はスクリプトで作り直す。元の物体は残して非表示）
+    hide = ['郵便局 | Limewashed walls and granite footings', '郵便局 | Half-timbered structure and gable truss',
+            '郵便局 | Double doors and fanlight', '郵便局 | Amber windows and painted sashes',
+            '局舎 | Folded copper porch roof and timber brackets', '局舎 | Carved porch knees and brass entrance hardware',
+            '局舎二階 | 海辺の事務室 | Upper walls, rebated casements', '局舎二階 | 三面出窓 | Harbour desk oriel, glazing and frames',
+            '局舎二階 | 軒の扁額 | Lacquered entrance nameboard', '局舎 | 霧晴れ郵便局・金文字',
+            '局舎 | Ridge saddle and clock cabinet', '局舎 | Seamed copper clock roof and brass finial',
+            '局舎 | Four porcelain dials, chapter marks and blued hands',
+            '袖看板 | Double-sided vermilion enamel', '袖看板 | Ivory postal marks', '袖看板 | Blackened bronze bracket']
+    n_hidden = 0
+    for o in OB:
+        if any(o.name.startswith(h[:30]) for h in hide):
+            o.hide_render = o.hide_viewport = True
+            n_hidden += 1
+
+    # --- 材質
+    stone = MA['Post office • Limewash']
+    ashlar(stone, (0.82, 0.74, 0.58), (0.68, 0.61, 0.48), (0.55, 0.51, 0.44))
+    plinth = MA.get('OPUS 石造 | Blue-grey plinth') or MA.new('OPUS 石造 | Blue-grey plinth')
+    plinth.use_nodes = True
+    ashlar(plinth, (0.27, 0.31, 0.37), (0.22, 0.26, 0.32), (0.15, 0.16, 0.18), bw=0.55, rh=0.22, bump=0.5)
+    lime = mat_new('OPUS 石造 | Dressed limestone', (0.86, 0.80, 0.68), 0.8)
+    weather(lime, var=0.10, scale=5.0, bump=0.15)
+    mats = {
+        'Walls': stone, 'Plinth': plinth, 'Dressed limestone': lime, 'Arch surrounds': lime, 'Pilasters': lime,
+        'Gilded trim': MA['Post office • Aged brass'], 'Glazing bars': MA['Post office • Midnight blue timber'],
+        'Lit glass': MA['Post office • Honey glass 1'],
+        'Night glass': mat_new('OPUS 石造 | Night-blue glass', (0.035, 0.055, 0.11), 0.12, 0.0),
+        'Door leaves': MA['Post office • Midnight blue timber'],
+        'Awning canvas': mat_new('OPUS 石造 | Awning canvas', (0.84, 0.79, 0.67), 0.9),
+        'Skirt roof': MA['Post office • Fired clay 3'],
+        'Clock face': MA['塔時計 | Porcelain dial'], 'Clock rim': MA['Post office • Aged brass'],
+        'Clock hands': MA['Post office • Midnight blue timber'], 'Scrolls': MA['Post office • Aged brass'],
+        'Swags': MA.get('OPUS 局旗 | Vermilion wool'), 'Sign face': MA['Post office • Ivory enamel'],
+        'Sign bracket': MA['Post office • Aged brass'], 'Sign envelope': MA['Post office • Midnight blue timber'],
+    }
+    P = Parts(org)
+
+    # --- 壁：石積みの箱＋前後の妻（屋根の下に収まる高さ）
+    bm = P['Walls']
+    for face_y, rev in ((WALL_Y, False), (REAR_Y, True)):
+        pass
+    pent = [(-WALL_X, 0.0), (WALL_X, 0.0), (WALL_X, EAVE_Z), (0.0, APEX_Z), (-WALL_X, EAVE_Z)]
+    f = [bm.verts.new((u, WALL_Y, v)) for u, v in pent]
+    b = [bm.verts.new((u, REAR_Y, v)) for u, v in pent]
+    bm.faces.new(list(reversed(f)))
+    bm.faces.new(b)
+    for i in range(5):
+        j = (i + 1) % 5
+        bm.faces.new((f[i], f[j], b[j], b[i]))
+    # 腰石（青灰）
+    prism(P['Plinth'], 'front', rect(-WALL_X - 0.06, 0.0, WALL_X + 0.06, 0.45), -0.02, 0.05)
+    for side in ('right', 'left'):
+        prism(P['Plinth'], side, rect(-0.05 if side == 'right' else -REAR_Y - 0.05, 0.0,
+                                      REAR_Y + 0.05 if side == 'right' else 0.05, 0.45), -0.02, 0.05)
+    # 隅の付け柱（切石）と軒の蛇腹、持ち送り（金）
+    for sgn in (-1, 1):
+        prism(P['Pilasters'], 'front', rect(sgn * WALL_X - 0.30 if sgn > 0 else -WALL_X - 0.05, 0.45,
+                                            WALL_X + 0.05 if sgn > 0 else -WALL_X + 0.30, EAVE_Z - 0.16), 0.0, 0.07)
+    prism(P['Dressed limestone'], 'front', rect(-WALL_X - 0.08, EAVE_Z - 0.16, WALL_X + 0.08, EAVE_Z + 0.02), 0.0, 0.13)
+    for uu in (-2.2, -1.1, 0.0, 1.1, 2.2):
+        prism(P['Gilded trim'], 'front', rect(uu - 0.06, EAVE_Z - 0.34, uu + 0.06, EAVE_Z - 0.16), 0.0, 0.11)
+
+    # --- 1 階：中央の両開きアーチ扉と左右のアーチ窓（日よけ付き）
+    DV, DW, DH = 0.18, 1.40, 1.77          # 扉の下端・幅・肩の高さ → 頂部 2.65
+    ring(P['Arch surrounds'], 'front', 0.0, DV, DW, DH, 0.17, 0.0, 0.11)
+    torus(P['Gilded trim'], 'front', 0.0, DV + DH, DW / 2 + 0.02, 0.025, 0.11, seg=24, a0=0.0, a1=math.pi)
+    prism(P['Door leaves'], 'front', rect(-DW / 2, DV, DW / 2, DV + DH), -0.01, 0.025)
+    prism(P['Lit glass'], 'front', arch_curve(0.0, DV + DH - 0.001, DW, 0.0)[1:-1], 0.0, 0.012)
+    prism(P['Glazing bars'], 'front', rect(-DW / 2, DV + DH - 0.03, DW / 2, DV + DH + 0.03), 0.01, 0.045)
+    for k in range(1, 6):          # 欄間の放射状の桟
+        a = math.pi * k / 6
+        cu, cv = 0.0, DV + DH
+        ex, ev = cu + (DW / 2) * math.cos(a), cv + (DW / 2) * math.sin(a)
+        nx, nv = -math.sin(a) * 0.018, math.cos(a) * 0.018
+        prism(P['Glazing bars'], 'front', [(cu + nx, cv + nv), (cu - nx, cv - nv), (ex - nx, ev - nv), (ex + nx, ev + nv)][::-1], 0.012, 0.04)
+    prism(P['Glazing bars'], 'front', rect(-0.02, DV, 0.02, DV + DH), 0.025, 0.05)
+    for sgn in (-1, 1):            # 扉の鏡板と金の把手
+        for v0, v1 in ((DV + 0.12, DV + 0.80), (DV + 0.92, DV + DH - 0.10)):
+            prism(P['Glazing bars'], 'front', rect(sgn * 0.08 if sgn > 0 else -DW / 2 + 0.09, v0,
+                                                    DW / 2 - 0.09 if sgn > 0 else -0.08, v1), 0.025, 0.04)
+        prism(P['Gilded trim'], 'front', rect(sgn * 0.05 - 0.025, DV + 0.95, sgn * 0.05 + 0.025, DV + 1.12), 0.025, 0.07)
+    for cx in (-1.95, 1.95):
+        window(P, 'front', cx, 0.80, 0.95, 1.05, 'Lit glass', awning=True)
+
+    # --- 1 階と 2 階の間の朱瓦の庇（絵の下屋根）
+    bm = P['Skirt roof']
+    nu, nd = 96, 6
+    D0, D1, Z0, Z1 = 0.0, 0.88, 3.48, 3.06
+    grid = []
+    for j in range(nd + 1):
+        row = []
+        for i in range(nu + 1):
+            u = -WALL_X - 0.15 + (2 * WALL_X + 0.30) * i / nu
+            d = D0 + (D1 - D0) * j / nd
+            v = Z0 + (Z1 - Z0) * j / nd + 0.035 * abs(math.sin(math.pi * u / 0.24))
+            row.append(bm.verts.new(face_pt('front', u, d, v)))
+        grid.append(row)
+    for j in range(nd):
+        for i in range(nu):
+            bm.faces.new((grid[j][i], grid[j + 1][i], grid[j + 1][i + 1], grid[j][i + 1]))
+    prism(P['Gilded trim'], 'front', rect(-WALL_X - 0.15, Z1 - 0.13, WALL_X + 0.15, Z1 - 0.02), D1 - 0.06, D1 + 0.01)
+    for uu in (-2.7, -1.3, 1.3, 2.7):
+        prism(P['Gilded trim'], 'front', [(uu - 0.05, Z1 - 0.40), (uu + 0.05, Z1 - 0.40), (uu + 0.05, Z1 - 0.05),
+                                          (uu - 0.05, Z1 - 0.05)], 0.0, 0.10)
+        prism(P['Gilded trim'], 'front', rect(uu - 0.05, Z1 - 0.13, uu + 0.05, Z1 - 0.02), 0.0, D1 - 0.05)
+
+    # --- 2 階：アーチ窓 3 つ（中央を大きく）
+    window(P, 'front', 0.0, 3.80, 0.95, 0.65, 'Night glass')
+    for cx in (-1.75, 1.75):
+        window(P, 'front', cx, 3.85, 0.75, 0.62, 'Night glass')
+    # 側面のアーチ窓（右は仕分け室の下屋を避けて 2 階のみ＋手前 1 階）
+    # face_pt の 'left' は u = -y（外から見て左→右）なので y 座標を負にして渡す
+    for side, sg in (('right', 1), ('left', -1)):
+        for cy in (1.05, 2.95, 4.85):
+            window(P, side, sg * cy, 3.95, 0.70, 0.52, 'Night glass')
+        window(P, side, sg * 0.95, 0.85, 0.70, 0.95, 'Lit glass')
+    window(P, 'left', -2.60, 0.85, 0.70, 0.95, 'Lit glass')
+
+    # --- 妻の丸い時計（飾り輪・渦巻き・朱の垂れ幕）
+    CV = 6.30
+    prism(P['Dressed limestone'], 'front', [(0.60 * math.cos(a), CV + 0.60 * math.sin(a))
+                                            for a in [2 * math.pi * k / 36 for k in range(36)]], 0.0, 0.07)
+    prism(P['Clock face'], 'front', [(0.44 * math.cos(a), CV + 0.44 * math.sin(a))
+                                     for a in [2 * math.pi * k / 36 for k in range(36)]], 0.07, 0.09)
+    torus(P['Clock rim'], 'front', 0.0, CV, 0.46, 0.04, 0.10, seg=40)
+    torus(P['Clock rim'], 'front', 0.0, CV, 0.60, 0.025, 0.07, seg=40)
+    for k in range(12):
+        a = math.pi / 2 - 2 * math.pi * k / 12
+        cu, cv = 0.36 * math.cos(a), CV + 0.36 * math.sin(a)
+        prism(P['Clock hands'], 'front', rect(cu - 0.018, cv - 0.018, cu + 0.018, cv + 0.018), 0.09, 0.10)
+    for ang, ln, wd in ((math.radians(150), 0.22, 0.03), (math.radians(30), 0.33, 0.022)):   # 10 時 10 分
+        ex, ev = ln * math.cos(ang), CV + ln * math.sin(ang)
+        nx, nv = -math.sin(ang) * wd, math.cos(ang) * wd
+        prism(P['Clock hands'], 'front', [(nx, CV + nv), (-nx, CV - nv), (ex - nx * 0.4, ev - nv * 0.4),
+                                          (ex + nx * 0.4, ev + nv * 0.4)][::-1], 0.10, 0.115)
+    for sgn in (-1, 1):
+        torus(P['Scrolls'], 'front', sgn * 0.86, CV + 0.02, 0.15, 0.028, 0.06, seg=20,
+              a0=0.0 if sgn > 0 else math.pi * 0.0, a1=2 * math.pi * 0.85)
+        torus(P['Scrolls'], 'front', sgn * 0.86, CV + 0.02, 0.07, 0.022, 0.06, seg=14)
+        # 垂れ幕：時計の両脇から軒の上へ弧を描いて垂れる
+        pts = []
+        for i in range(17):
+            t = i / 16
+            uu = sgn * (0.52 + 1.05 * t)
+            vv = 5.86 - 0.32 * math.sin(math.pi * t)
+            pts.append(face_pt('front', uu, 0.08, vv))
+        tube(P['Swags'], pts, 0.10, rseg=10, flat=0.35)
+        for uu in (sgn * 0.52, sgn * 1.57):
+            prism(P['Awning canvas'], 'front', rect(uu - 0.035, 5.50, uu + 0.035, 5.86), 0.06, 0.12)
+    prism(P['Gilded trim'], 'front', rect(-0.09, APEX_Z + 0.02, 0.09, APEX_Z + 0.28), 0.25, 0.43)
+
+    # --- 右手の封筒の吊り看板（金の渦巻き金具・鎖）
+    bm = P['Sign bracket']
+    y0 = WALL_Y - 0.18
+    tube(bm, [Vector((WALL_X - 0.02 + 1.10 * t, y0, 4.86)) for t in (0, 0.5, 1)], 0.028)
+    tube(bm, [Vector((WALL_X - 0.02 + 0.70 * t, y0, 4.40 + 0.46 * t ** 0.7)) for t in (0, 0.25, 0.5, 0.75, 1)], 0.022)
+    sb = P['Sign bracket']
+    for cxs, rr in ((WALL_X + 0.30, 0.16), (WALL_X + 0.30, 0.08)):
+        rows = []
+    torus_bm = P['Scrolls']
+    for (cu, cv, R) in ((3.20, 4.66, 0.15), (3.20, 4.66, 0.07), (4.02, 4.94, 0.09)):
+        verts = []
+        for i in range(25):
+            a = 2 * math.pi * 0.85 * i / 24
+            verts.append(Vector((cu + R * math.cos(a), y0, cv + R * math.sin(a))))
+        tube(torus_bm, verts, 0.02)
+    prism(P['Sign bracket'], 'front', rect(WALL_X - 0.04, 4.30, WALL_X + 0.04, 4.98), 0.10, 0.26)
+    SX, SZ = 3.48, 4.18
+    for cu in (SX - 0.28, SX + 0.28):
+        tube(P['Sign bracket'], [Vector((cu, y0, 4.85)), Vector((cu, y0, SZ + 0.29))], 0.012, rseg=6)
+    ell = [(SX + 0.44 * math.cos(a), SZ + 0.31 * math.sin(a)) for a in [2 * math.pi * k / 40 for k in range(40)]]
+    prism(P['Sign face'], 'front', ell, 0.18 - 0.03, 0.18 + 0.03)
+    torus(P['Sign bracket'], 'front', SX, SZ, 0.44, 0.03, 0.18, seg=40, sv=0.31 / 0.44)
+    for dd, sgn in ((0.18 - 0.032, -1), (0.18 + 0.032, 1)):
+        d0, d1 = (dd, dd + 0.006) if sgn > 0 else (dd - 0.006, dd)
+        prism(P['Sign envelope'], 'front', rect(SX - 0.21, SZ - 0.14, SX + 0.21, SZ + 0.14), d0, d1)
+        prism(P['Sign face'], 'front', rect(SX - 0.18, SZ - 0.11, SX + 0.18, SZ + 0.11),
+              d1 if sgn > 0 else d0 - 0.004, (d1 + 0.004) if sgn > 0 else d0)
+        for (pu, pv), (qu, qv) in (((SX - 0.17, SZ + 0.10), (SX, SZ - 0.02)), ((SX, SZ - 0.02), (SX + 0.17, SZ + 0.10))):
+            dv = Vector((qu - pu, qv - pv)).normalized()
+            nn = Vector((-dv.y, dv.x)) * 0.014
+            e0, e1 = (d1 + 0.004, d1 + 0.008) if sgn > 0 else (d0 - 0.008, d0 - 0.004)
+            prism(P['Sign envelope'], 'front', [(pu + nn.x, pv + nn.y), (pu - nn.x, pv - nn.y),
+                                                (qu - nn.x, qv - nn.y), (qu + nn.x, qv + nn.y)][::-1], e0, e1)
+    P.build(mats)
+
+    # --- 局旗は絵と同じ左手へ（x を鏡映）
+    for o in OB:
+        if o.name.startswith('OPUS 局旗') and not o.get('opus_mirrored'):
+            # 親（局舎原点）の局所空間で鏡映（matrix_world は作成直後で未更新のため使わない）
+            o.matrix_basis = Matrix.Scale(-1, 4, (1, 0, 0)) @ o.matrix_basis
+            o['opus_mirrored'] = True
+    log(f'post office rebuilt as stone: hid {n_hidden} half-timber parts; arched door/windows, '
+        f'skirt roof, gable clock, swags, envelope sign, banner moved left')
 
 
 # ================================================================ 3. 空・霧・光
@@ -714,6 +1144,7 @@ soften_rocks()
 fix_plaza_joints()
 naturalize()
 post_office()
+stone_post_office()
 light()
 sky()
 fog()
