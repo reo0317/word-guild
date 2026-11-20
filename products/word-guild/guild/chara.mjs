@@ -12,7 +12,7 @@ if (typeof window !== 'undefined') {
     if (response.ok) wordart = await response.json();
   } catch { /* 意味の絵は任意 */ }
 }
-const validArt = art => art && /^c[1-9]\d*-\d+$/.test(art.g) && Number.isInteger(art.tint) && art.tint >= 0 && art.tint <= 3;
+const validArt = art => art && /^c[1-9]\d*-\d+(-[a-z])?$/.test(art.g) && Number.isInteger(art.tint) && art.tint >= 0 && art.tint <= 3;
 
 export const CATEGORIES = ['money', 'work', 'person', 'time', 'place', 'move', 'food', 'doc',
   'goods', 'tool', 'nature', 'body', 'mind', 'number', 'action', 'state'];
