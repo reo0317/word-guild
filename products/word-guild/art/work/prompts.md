@@ -7016,3 +7016,1468 @@ Subject: Keshikasu opens a glossy accordion-fold travel brochure illustrated wit
 
 Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
 Subject: Keshikasu moves abacus beads while entering business earnings in an accountant's ledger.
+
+## 単語の絵：r0020
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The ink creature pinches coarse grains from a cellar marked with a salt-shaker pictogram onto a fried egg.
+
+## 単語の絵：r0021
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The ink creature pulls in a fishing line from a tiny wooden rowboat with two oars.
+
+## 単語の絵：r0022
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The ink creature spreads its claws over a globe to show how much of it is covered by one vast blue ocean.
+
+## 単語の絵：r0023
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The ink creature braces with both claws raised as a single curling crest of water towers above it.
+
+## 単語の絵：r0024
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The ink creature walks along the waterline on a small cutaway strip of pebbles and wet sand.
+
+## 単語の絵：r0025
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The ink creature grips the handle of a broad kitchen knife as its blade halves an apple.
+
+## 単語の絵：r0026
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The ink creature presents a notched railway ticket to a conductor holding a ticket punch.
+
+## 単語の絵：r0027
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The ink creature traces a long dotted itinerary with several stops on a folded map beside its scuffed suitcase.
+
+## 単語の絵：r0028
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The ink creature waits behind the safety stripe on a cutaway raised platform beside an open train door.
+
+## 単語の絵：r0029
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The ink creature dozes upright in a train seat with a travel bag tucked under its knees.
+
+## 単語の絵：r0030
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the five attached enemy illustrations: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The ink creature taps a detached steel rail with a small hammer to show its distinctive profile.
+
+## 単語の絵（描き直し）：c1-046
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature cradles a miniature city of densely packed apartment towers surrounding a domed city hall in its cupped hands.
+
+## 単語の絵（描き直し）：c1-054
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature banks its bicycle sharply left around a single traffic cone, twisting the handlebars into the turn.
+
+## 単語の絵（描き直し）：c1-057
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature dials a client's number on a plain unmarked rotary telephone with the receiver pressed to its ear.
+
+## 単語の絵（描き直し）：c1-060
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature bends over a blank report sheet with a fountain pen poised at the top and an open inkwell beside its wrist.
+
+## 単語の絵（描き直し）：c1-062
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature learns the word for pear by holding a real pear to its mouth and slowly shaping the sound while a small pupil watches its lips.
+
+## 単語の絵（描き直し）：c1-063
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature counts a large heap of shells by sliding the beads of a handheld abacus.
+
+## 単語の絵（描き直し）：c1-069
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature strikes a meeting gong to call the seated participants to attention.
+
+## 単語の絵（描き直し）：c1-073
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature crouches and gently lowers a ceramic bowl onto a woven mat with both claws just releasing its rim.
+
+## 単語の絵（描き直し）：c1-074
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature hosts a meeting at a round table, inviting each of three seated delegates to take a turn speaking.
+
+## 単語の絵（描き直し）：c1-079
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature discovers a major plumbing problem as water gushes through a wide split in a large pipe despite its attempts to cover the leak.
+
+## 単語の絵（描き直し）：c1-080
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature weighs apples for a shopper at its market stall between neighboring baskets of produce.
+
+## 単語の絵（描き直し）：c1-081
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature builds a factory chimney by bedding a brick into wet mortar with a mason's trowel.
+
+## 単語の絵（描き直し）：c1-086
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature swings open the driver's door of a compact four-wheeled company sedan and holds up its car key.
+
+## 単語の絵（描き直し）：c1-091
+
+Use case: illustration-story. Game enemy illustration, one full-body ink creature centered large in square composition. Match attached ink creature: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, slightly cute spooky ink stains with white eyes. Palette navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The ink creature follows the safety rules by fastening its hard hat before stepping through a construction gate beside a spare helmet.
+
+## 単語の絵：r0051
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish pulls a hidden cord to tip a bucket of confetti onto an unsuspecting friend.
+
+## 単語の絵：r0052
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish tilts its head with a warm smile and wins over two listeners who lean in with smiles of their own.
+
+## 単語の絵：r0053
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish reclines in a plush armchair with a crown, a jeweled goblet and a tray of treats.
+
+## 単語の絵：r0054
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish forces a grin in a handheld mirror while a tear runs down one cheek.
+
+## 単語の絵：r0055
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish passes off a painted pebble as a gem by hiding the chipped back from a buyer.
+
+## 単語の絵：r0056
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish raises a steaming mug of black coffee from beside a little pile of roasted beans.
+
+## 単語の絵：r0057
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish unfolds a stiff card with rows of dish pictures and prices and points to a choice.
+
+## 単語の絵：r0058
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish pours a ribbon of thick cream from a tiny jug onto a serving of berries.
+
+## 単語の絵：r0059
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish leans across a cafe table toward a friend as both gesture and trade little speech bubbles.
+
+## 単語の絵：r0060
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish samples a lemon drop and puckers sharply with a sparkle at the tip of its tongue.
+
+## 単語の絵：r0061
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish sniffs a single yellow flower with a round center and broad petals.
+
+## 単語の絵：r0062
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish offers one red rose by its thorny stem with its other claw over its heart.
+
+## 単語の絵：r0063
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish presses a single large seed into a small pot of soil with a fingertip.
+
+## 単語の絵：r0064
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish brushes its claws through a low tuft of dew-covered grass with long narrow blades.
+
+## 単語の絵：r0065
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish holds a pink petal against a fan of matching pink color swatches.
+
+## 単語の絵：r0066
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish snaps a square off a scored bar of dark chocolate with its wrapper peeled back.
+
+## 単語の絵：r0067
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish takes a bite of honey-drizzled cake and closes its eyes in a smile as sugar sparkles gather near its mouth.
+
+## 単語の絵：r0068
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish leaps with both claws thrown up and its mouth wide in a thrilled grin.
+
+## 単語の絵：r0069
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish holds a glossy photographic print with crisp detail and a white border by its corners.
+
+## 単語の絵：r0070
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish pokes at a floating gray cloud with a soft billowing outline.
+
+## 単語の絵：r0071
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish extends a handheld microphone toward an eyewitness and jots down the answer on a pocket pad.
+
+## 単語の絵：r0072
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish leans over a marked-up page proof and crosses out a repeated line with a red pencil.
+
+## 単語の絵：r0073
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish collects interview notes and photographs into a long feature at a newspaper desk.
+
+## 単語の絵：r0074
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish speaks into a studio microphone as transmission rings radiate from a small antenna.
+
+## 単語の絵：r0075
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish holds up a newspaper and frames one narrow vertical article with a recurring byline portrait.
+
+## 単語の絵：r0076
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish ties a boat to a mooring post on a miniature enclosed harbor model with a curved breakwater.
+
+## 単語の絵：r0077
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish holds up an umbrella as slanting drops splash off its rim and gather under its boots.
+
+## 単語の絵：r0078
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish cups a large cratered crescent moon in both claws as though holding a cutout.
+
+## 単語の絵：r0079
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish wears a headset in a compact aircraft cockpit and grips the control yoke.
+
+## 単語の絵：r0080
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu paper monster reference: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, white eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols except the explicitly requested visual motif; no existing characters.
+Subject: The keshikasu paper silverfish leans from the cab of a white cargo truck with a big rectangular bed.
+
+## 単語の絵（描き直し）：c2-033
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu kneels beside an open filing drawer and slips a loose office document into the matching tabbed folder.
+
+## 単語の絵（描き直し）：c2-034
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu wheels a bellhop trolley through the revolving entrance of a hotel lobby toward a freestanding reception counter.
+
+## 単語の絵（描き直し）：c2-036
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu submits a single oversized résumé bearing its portrait and tiny illustrations of its past work.
+
+## 単語の絵（描き直し）：c2-038
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu wears lab goggles and uses a pipette to dispense a precise sample into a rack of test tubes.
+
+## 単語の絵（描き直し）：c2-039
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu holds up a floppy square of woven cloth by two corners so its hem and soft folds are clearly visible.
+
+## 単語の絵（描き直し）：c2-042
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu pedals to work in a tie with a lunch tin clipped to its bicycle rack.
+
+## 単語の絵（描き直し）：c2-043
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu speaks into a handheld cordless phone while a second handset lights up unanswered in its cradle.
+
+## 単語の絵（描き直し）：c2-044
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu peers from the front window of a subway train emerging from a cutaway underground tunnel.
+
+## 単語の絵（描き直し）：c2-045
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu pushes a luggage trolley piled high with mismatched travel trunks and rolled sleeping bags.
+
+## 単語の絵（描き直し）：c2-046
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu tightens the final strap around a single pallet of boxed goods ready for shipment.
+
+## 単語の絵（描き直し）：c2-047
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu wears a dinner jacket and bow tie as it lifts a silver cloche to serve a guest a roast.
+
+## 単語の絵（描き直し）：c2-048
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu rents out a pair of ice skates from a rack of matching pairs in exchange for coins.
+
+## 単語の絵（描き直し）：c2-050
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu slides a compartment tray along a cafeteria serving rail beneath steaming food pans.
+
+## 単語の絵（描き直し）：c2-052
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu peels back the wrapper of a small granola bar and takes a bite during a break.
+
+## 単語の絵（描き直し）：c2-053
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu dips a little spoon into a caramel pudding served on a scalloped dessert plate.
+
+## 単語の絵（描き直し）：c2-055
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu correctly fits the final triangular wooden block into the matching opening of a shape sorter.
+
+## 単語の絵（描き直し）：c2-056
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu feeds an intact admission ticket into a turnstile that swings open to let it pass.
+
+## 単語の絵（描き直し）：c2-061
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu adds a newly delivered bird magazine to a sequence of matching issues with different birds on their covers.
+
+## 単語の絵（描き直し）：c2-062
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu carries a full laundry basket through a convenient swinging door by gently nudging it with one hip.
+
+## 単語の絵（描き直し）：c2-064
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu consults a thick illustrated sewing-machine manual propped open beside the matching machine.
+
+## 単語の絵（描き直し）：c2-065
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu lifts the roller door of a miniature garage to reveal a parked car tucked inside.
+
+## 単語の絵（描き直し）：c2-068
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu reclines in an outdoor deck chair beneath a large freestanding patio parasol.
+
+## 単語の絵（描き直し）：c2-072
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu postpones a puppet show by closing the little stage curtain while the eager audience is still arriving.
+
+## 単語の絵（描き直し）：c2-074
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu pushes up the runner of an oversized vermilion umbrella to spread its ribs overhead.
+
+## 単語の絵（描き直し）：c2-077
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu presses the side button of a pocket-sized touchscreen cellphone with a visible camera lens on its back.
+
+## 単語の絵（描き直し）：c2-079
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu parks a compact two-seat car snugly between two closely spaced bollards.
+
+## 単語の絵（描き直し）：c2-081
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu presses a single tablet from a medication blister pack into its waiting palm.
+
+## 単語の絵（描き直し）：c2-082
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu raises its rigid employee photo identification badge on a lanyard beside its matching face.
+
+## 単語の絵（描き直し）：c2-084
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu tears a perforated coupon bearing a croissant picture from a booklet and presents it to a baker.
+
+## 単語の絵（描き直し）：c2-086
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu casts off a mooring rope and pushes its little sailboat away from the dock.
+
+## 単語の絵（描き直し）：c2-088
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu reveals a dollhouse midway through renovation with fresh parquet replacing splintered floorboards.
+
+## 単語の絵（描き直し）：c2-090
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu holds a new stroller wheel beside the broken wheel it will replace.
+
+## 単語の絵（描き直し）：c2-094
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu swings open both doors of a wall-mounted kitchen cabinet to reveal neatly stacked dishes.
+
+## 単語の絵（描き直し）：c2-096
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu operates an electric stand mixer with a large whisk and a bowl of batter.
+
+## 単語の絵（描き直し）：c2-097
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu holds a giant cylindrical battery with a raised metal terminal beside an open flashlight.
+
+## 単語の絵（描き直し）：c2-100
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu unloads groceries onto a supermarket checkout belt beside a produce scale.
+
+## 単語の絵（描き直し）：c2-101
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu tips an empty wire shopping cart onto its rear casters to free a stuck front wheel.
+
+## 単語の絵（描き直し）：c2-104
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu assigns a paint job to one helper and a sweeping job to another by handing each the appropriate tool.
+
+## 単語の絵（描き直し）：c2-109
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu practices fitness by skipping rope with both feet airborne and its forehead beaded with sweat.
+
+## 単語の絵（描き直し）：c2-110
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu traps a paneled soccer ball under one cleated foot in front of a small goal.
+
+## 単語の絵（描き直し）：c2-111
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu opens the velvet curtains of a miniature concert venue to reveal a grand piano facing rows of chairs.
+
+## 単語の絵（描き直し）：c2-113
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu reaches for a shiny decoy fishing lure while the real fish slips past its other claw.
+
+## 単語の絵（描き直し）：c2-116
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu cradles a donated bundle of blankets tied with a ribbon at an animal shelter beside two shivering puppies.
+
+## 単語の絵（描き直し）：c2-120
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu savors a mouthful of steaming dumpling with closed eyes and a broad contented smile.
+
+## 単語の絵（描き直し）：c2-121
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu conducts a bicycle safety inspection by squeezing a brake lever while checking the pads against the rim.
+
+## 単語の絵（描き直し）：c2-124
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu holds up the main ingredient for pumpkin soup, a large cut pumpkin beside a steaming pot.
+
+## 単語の絵（描き直し）：c2-128
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu uses a drafting triangle to draw a floor plan beside its scale model of the same house.
+
+## 単語の絵（描き直し）：c2-131
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match attached Keshikasu: round blue-gray eraser shavings, ivory face and claws, amber eyes, jagged navy mouth and vermilion curls. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes and textured paper. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, ground, scenery or pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: Keshikasu responds to a survey interviewer by speaking into a handheld microphone and indicating its preferred fabric sample.
+
+## 単語の絵：r0181
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish fluffs a pillow on a bed beside a bedside lamp and a small dresser on a cutaway floor panel.
+
+## 単語の絵：r0182
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish sets down its work bag and checks a clock beside a small tabletop sunset dial.
+
+## 単語の絵：r0183
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish rings a desk bell while a rack of matching numbered room keys hangs on the freestanding reception counter.
+
+## 単語の絵：r0184
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish stretches in slippers beside a ringing alarm clock and a small tabletop sunrise dial.
+
+## 単語の絵：r0185
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish sleeps with closed eyes and a slack jaw under a blanket with a pillow under its head.
+
+## 単語の絵：r0186
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish stands in a spray of downward water from a showerhead and scrubs its face.
+
+## 単語の絵：r0187
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish sinks up to its neck in foam inside a freestanding clawfoot tub.
+
+## 単語の絵：r0188
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish serves an evening roast at a table laid for guests with a candlestick at the center.
+
+## 単語の絵：r0189
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish tightens a bolt on a cracked hanging sign until the two pieces fit together.
+
+## 単語の絵：r0190
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish opens its own numbered door onto a cutaway unit with a sofa and tiny kitchenette inside.
+
+## 単語の絵：r0191
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish wears a camera around its neck and consults a sightseeing map printed with landmark icons.
+
+## 単語の絵：r0192
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish takes a diner's order beside a laid table while wearing a waiter's apron and holding a small pad.
+
+## 単語の絵：r0193
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish rides a ferry model with its suitcase beside a long dotted route on a folded chart.
+
+## 単語の絵：r0194
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish carries a suitcase and presents a passport while stepping from one flag marker toward a different flag.
+
+## 単語の絵：r0195
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish studies a fossil mounted in a glass exhibit case with a small specimen plaque.
+
+## 単語の絵：r0196
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish holds up one claw and watches the marked hand of a stopwatch sweep through one sixty-second interval.
+
+## 単語の絵：r0197
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish stands beside a miniature station entrance with a rail emblem, departure board and ticket window.
+
+## 単語の絵：r0198
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish reaches up to adjust the hands on a large round analog clock.
+
+## 単語の絵：r0199
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish leans out of the first of several bumper-to-bumper cars lined up behind a traffic light.
+
+## 単語の絵：r0200
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish runs a claw along one highlighted line with turns between two pins on a simple street map.
+
+## 単語の絵：r0201
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish wears a matching jersey and joins its teammates in a tight pregame huddle.
+
+## 単語の絵：r0202
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish places a food parcel in a donation basket and helps hand supplies to a family.
+
+## 単語の絵：r0203
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish steps back cautiously from an unfamiliar figure offering a handshake.
+
+## 単語の絵：r0204
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish wears a tall cook's hat and tastes from a ladle over a simmering galley pot.
+
+## 単語の絵：r0205
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish inspects an old broad-hulled cargo steamer model with a riveted hull and rust-streaked funnel.
+
+## 単語の絵：r0206
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish hauls a rope to unfurl a broad triangular canvas sail on a detached mast.
+
+## 単語の絵：r0207
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish holds up a snapshot as an earlier event reappears in a thought bubble with the same figures clearly recognizable.
+
+## 単語の絵：r0208
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish sleeps on a pillow with a fantastical scene of itself riding a fish inside a dream bubble.
+
+## 単語の絵：r0209
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish stands at the bow of a large ocean liner prop with rows of portholes glowing in the night.
+
+## 単語の絵：r0210
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish grins as it sets out with a compass and a pack toward a question mark on a treasure map.
+
+## 単語の絵：r0211
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish claps both claws over its ears beside a blaring speaker with jagged sound waves.
+
+## 単語の絵：r0212
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish carries a lamp along a cutaway strip of corridor between repeated doorframes receding in a row.
+
+## 単語の絵：r0213
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish uses a dolly to move a chair with a small chest of drawers and a table grouped beside it.
+
+## 単語の絵：r0214
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish hands a frowning clerk a written grievance marked with a crossed-out loudspeaker.
+
+## 単語の絵：r0215
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish holds one claw to its lips as a companion reads peacefully beside it.
+
+## 単語の絵：r0216
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish holds up a magnified footprint that matches the sole of a boot beside it.
+
+## 単語の絵：r0217
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish marches with two neighbors holding raised placards and wearing determined expressions.
+
+## 単語の絵：r0218
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish picks up a letter from its own numbered mailbox while holding the key to the matching door.
+
+## 単語の絵：r0219
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish waves two groups inward until they converge around one meeting table.
+
+## 単語の絵：r0220
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish joins neighbors in placing their house tokens around one shared town hall token.
+
+## 単語の絵：r0221
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish compares unfamiliar coins and banknotes bearing a foreign emblem at a cash exchange tray.
+
+## 単語の絵：r0222
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish pulls open the curtains on a miniature theater stage framed by rows of empty seats.
+
+## 単語の絵：r0223
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish wears a striped uniform and grips the bars of a locked cell door.
+
+## 単語の絵：r0224
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish shakes its head and crosses its claws as an accuser points at it beside a broken vase.
+
+## 単語の絵：r0225
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish takes a purchase home while the shopkeeper writes the amount owed in a ledger and leaves the till shut.
+
+## 単語の絵：r0226
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish presses a stamp into a soft wax seal on the flap of a letter.
+
+## 単語の絵：r0227
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish holds up a top-rating card and smiles proudly as its crew completes a precise maneuver together.
+
+## 単語の絵：r0228
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached atenashi illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern, no scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The atenashi paper silverfish sets a heavy bag on a scale and squints at the swinging needle.
+
+## 単語の絵：r0231
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish places one foot in front of the other along a narrow strip of stepping stones between two tufts.
+
+## 単語の絵：r0232
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish freezes with wide eyes and grips the edge just as a cracked ledge crumbles below its feet.
+
+## 単語の絵：r0233
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish consults a freestanding weather board crowded with rain, wind and storm icons.
+
+## 単語の絵：r0234
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish leans forward and plants a claw on a sharply tilted ramp to keep from sliding back.
+
+## 単語の絵：r0235
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish plants a small flag atop a rounded knoll shown as a freestanding cutaway mound.
+
+## 単語の絵：r0236
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish tips one soaked lace-up shoe to let water drip from its toe.
+
+## 単語の絵：r0237
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish taps a shiny metal door panel to make it ring, showing exposed metallic edges and rivets.
+
+## 単語の絵：r0238
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish opens a bank account ledger with its name line filled and slides in its first deposit.
+
+## 単語の絵：r0239
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish places a steady claw on a frightened friend's shoulder and gestures toward the secure safety buckle.
+
+## 単語の絵：r0240
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish strikes a thick steel rail sample with a hammer, sending sparks from its hard machined edge.
+
+## 単語の絵：r0241
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish grabs its scarf as a gust whips it sideways and blows loose pages away.
+
+## 単語の絵：r0242
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish receives a small coin purse from the keeper after returning a lost key.
+
+## 単語の絵：r0243
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish huddles in a coat with worn patches beside an empty cupboard and a bare coin purse.
+
+## 単語の絵：r0244
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish floats a paper boat on a shallow tray of water as smooth as glass and rests both claws peacefully on the rim.
+
+## 単語の絵：r0245
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish cranes its neck at a tall narrow tower model and reaches up to point to the tiny lookout at the top.
+
+## 単語の絵：r0246
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish leans toward a portable radio and turns the tuning knob beneath its long antenna.
+
+## 単語の絵：r0247
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish kneels on a cutaway panel of bare wooden floorboards and polishes one plank.
+
+## 単語の絵：r0248
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish sits still with another creature while an hourglass drains between their closed mouths.
+
+## 単語の絵：r0249
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish unrolls a rich red carpet with a fringed edge, revealing its soft pile.
+
+## 単語の絵：r0250
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish jerks back and spills tea as a jack-in-the-box springs open in front of it.
+
+## 単語の絵：r0251
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish slouches in a chair with feet up while a pile of unfinished work sits within reach.
+
+## 単語の絵：r0252
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish pats a worker on the back and points approvingly to the neatly completed work.
+
+## 単語の絵：r0253
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish claps from the front of several rows of seated spectators all facing the same direction.
+
+## 単語の絵：r0254
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish acts out an anguished farewell in costume while a fellow actor brandishes an oar as a stage prop.
+
+## 単語の絵：r0255
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish straightens a framed painting on a freestanding gallery panel next to other exhibited pictures.
+
+## 単語の絵：r0256
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish polishes a tarnished silver spoon to reveal a bright cool sheen on one half.
+
+## 単語の絵：r0257
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish loops a friendship ribbon into an infinity sign around its own claw and a friend's.
+
+## 単語の絵：r0258
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish presses the send button on a message with an envelope icon on its laptop.
+
+## 単語の絵：r0259
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish presses a button on a clock with large segmented digits lighting up on its screen.
+
+## 単語の絵：r0260
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish lowers its head and hides its flushed face behind both claws as its broken promise card falls to the ground.
+
+## 単語の絵：r0261
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish reports for an assigned watch with a solemn expression and a signed duty roster in its claw.
+
+## 単語の絵：r0262
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish chisels a permanent mark into a thick stone plaque and brushes the dust out of the deep groove.
+
+## 単語の絵：r0263
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish clutches a cut purse strap and points to its emptied pouch while giving a theft report.
+
+## 単語の絵：r0264
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish raises two maritime signal flags in a precise pose toward a tiny ship prop.
+
+## 単語の絵：r0265
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish holds its growling belly and stares longingly at an empty plate.
+
+## 単語の絵：r0266
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish reaches eagerly for a glass of water with a dry tongue out and beads of sweat on its face.
+
+## 単語の絵：r0267
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish wrings its claws while eyeing a thought bubble of an overdue boat and glancing at a clock.
+
+## 単語の絵：r0268
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish compares two dated price tags on the same basket of groceries and holds up many more coins for the later price.
+
+## 単語の絵：r0269
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish stands with a closed tool bag in a line of job seekers at a counter displaying empty vacancy slots.
+
+## 単語の絵：r0270
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish reels backward wide-eyed as a startling letter slips out of its claws.
+
+## 単語の絵：r0271
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish taps its temple and smiles as it recognizes the wrapped gift pictured in a thought bubble.
+
+## 単語の絵：r0272
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish walks shoulder to shoulder with a close friend as they share one long knitted scarf.
+
+## 単語の絵：r0273
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish clasps both claws over its heart and smiles warmly at the friend who mended its coat.
+
+## 単語の絵：r0274
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached oshimi paper silverfish: many golden eyes, cream crown, dark ink body and claws. Paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no scenery, no shadows, no ground plane, no pattern. No green in the subject. No text, letters, numerals or symbols.
+Subject: The oshimi paper silverfish removes its cap and bows its head to an elder holding a staff.
+
+## 単語の絵：r0081
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The nijimi paper silverfish strains to lift a single heavy parcel wrapped tightly in string.
+
+## 単語の絵：r0082
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish slides a box onto a labeled shelf among neatly stacked crates and locks the shelf door.
+
+## 単語の絵：r0083
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish checks the straps across a towering stack of crates already secured on a flatbed.
+
+## 単語の絵：r0084
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish uses a handcart to roll two boxes from a loading ramp toward a waiting van.
+
+## 単語の絵：r0085
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish pushes a fish crate from a home flag across a dividing line onto an outbound cargo ship.
+
+## 単語の絵：r0086
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish presses keys on a calculator beside two price tags and points at the total.
+
+## 単語の絵：r0087
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish pins a timetable to a small board and moves a task card into its hour slot.
+
+## 単語の絵：r0088
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish slumps beside an unmoving train pictogram and an overdue clock with its planned time marked.
+
+## 単語の絵：r0089
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish pulls a fresh crate of lamps off an arriving ship toward a dock marked with its home flag.
+
+## 単語の絵：r0090
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish dashes forward clutching a watch with speed lines trailing behind its feet.
+
+## 単語の絵：r0091
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish straddles a boundary stripe between two short barrier posts bearing different national flags.
+
+## 単語の絵：r0092
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish peers through a magnifier at the contents of an open box and lifts one piece for inspection.
+
+## 単語の絵：r0093
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish narrows its eyes at a companion whose hidden claw pokes out from behind its back.
+
+## 単語の絵：r0094
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish holds up a signed pass with a dock pictogram and a large official stamp to a guard.
+
+## 単語の絵：r0095
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish raises a freshly signed proclamation beside a new flag while addressing two listeners from a lectern.
+
+## 単語の絵：r0096
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish skids on a small slick patch of ice with feet shooting forward and claws flung up.
+
+## 単語の絵：r0097
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish pushes a wet mop over a small tile panel with soap suds trailing behind it.
+
+## 単語の絵：r0098
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish recoils at a tile panel covered in muddy boot prints and sticky smears.
+
+## 単語の絵：r0099
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish tests an unsteady plank with one toe before committing its weight, gripping a rail tightly.
+
+## 単語の絵：r0100
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish waves both claws and calls out to two crewmates nearing a hazard marker.
+
+## 単語の絵：r0101
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish opens a pay envelope beside a calendar with one payday circled each month.
+
+## 単語の絵：r0102
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish stacks the same number of coins into each hour slot on a shift timecard.
+
+## 単語の絵：r0103
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish fans banknotes over a handful of loose coins at a counter.
+
+## 単語の絵：r0104
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish looks ruefully at several receipts while dropping the last coins from its purse.
+
+## 単語の絵：r0105
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish slides coins across a counter toward a waiting seller who holds out a receipt.
+
+## 単語の絵：r0106
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish places its treasured key in a friend's open claw and relaxes into a confident smile.
+
+## 単語の絵：r0107
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish returns a dropped wallet with every banknote still poking out of it.
+
+## 単語の絵：r0108
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish takes its assigned watch at a ship's bell while the rest of the crew sleeps.
+
+## 単語の絵：r0109
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish stands chin up and chest out while polishing a dock emblem it earned.
+
+## 単語の絵：r0110
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish hangs its head over a broken keepsake beside an unused roll of protective padding.
+
+## 単語の絵：r0111
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish holds a stamped policy with a ship emblem above a small damaged boat and an incoming reimbursement.
+
+## 単語の絵：r0112
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish jumps back as a rolling cargo cart accidentally bumps into another and scatters its boxes.
+
+## 単語の絵：r0113
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish points out what it saw to an investigator while an eye-shaped inset shows the collision.
+
+## 単語の絵：r0114
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish coughs into a sleeve as a dark billowing plume curls from a smoking ember.
+
+## 単語の絵：r0115
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish stares in horror at a broken miniature pier with several wrecked boats piled against it.
+
+## 単語の絵：r0116
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish hauls on one ship's line in unison with two shipmates wearing matching caps.
+
+## 単語の絵：r0117
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish leans into slashing rain as lightning strikes beside its wind-bent umbrella.
+
+## 単語の絵：r0118
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish kneels on a rescue float and hauls a stranded sailor up by a thrown lifeline.
+
+## 単語の絵：r0119
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish spins a detached spoked bicycle wheel held upright by its axle.
+
+## 単語の絵：r0120
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish gropes forward with its claws stretched wide beside a snuffed lantern and a tiny patch of surrounding black.
+
+## 単語の絵：r0121
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish signals its fleet to pull back with a canoe already turning away from a dock marker.
+
+## 単語の絵：r0122
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish hands its badge and keys back across a desk and walks away holding its farewell letter.
+
+## 単語の絵：r0123
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish stares at a ledger showing a large negative balance beside an empty cash tin.
+
+## 単語の絵：r0124
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish turns its back and walks away from a broken boat and its belongings left on a small dock plank.
+
+## 単語の絵：r0125
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish strikes a bold cross through a lease form and stamps it void.
+
+## 単語の絵：r0126
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish wears a ceremonial town sash and holds an oversized municipal key while receiving a delegation.
+
+## 単語の絵：r0127
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish holds out a white box wrapped in ribbon with both claws and a smile.
+
+## 単語の絵：r0128
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi paper silverfish illustration: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols. Depict any marked props through blank shapes, physical objects and gesture alone.
+Subject: The nijimi paper silverfish stands at attention as a ribbon is cut between two ceremonial posts.
+
+## 単語の絵：r0131
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish leans on a rectangular writing desk with drawers and a pencil cup.
+
+## 単語の絵：r0132
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish stands on the guest side of a reception counter wearing a visitor badge.
+
+## 単語の絵：r0133
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish writes its details into an open sign-in ledger and receives a numbered badge.
+
+## 単語の絵：r0134
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish raises a megaphone and holds up a new notice for two listeners turning toward it.
+
+## 単語の絵：r0135
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish points at a posted safety-rule pictogram requiring a helmet and puts its own helmet on.
+
+## 単語の絵：r0136
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish sits at the head of a small boardroom table in a suit and approves a proposal with a raised claw.
+
+## 単語の絵：r0137
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish sorts appointment cards and hands a stack of messages to its director while holding a telephone.
+
+## 単語の絵：r0138
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish holds a share certificate and slips a vote into a company ballot box.
+
+## 単語の絵：r0139
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish unlocks a cutaway storefront model with a till and merchandise displays visible inside.
+
+## 単語の絵：r0140
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish politely holds out a room request slip with both claws toward a clerk beside a row of keys.
+
+## 単語の絵：r0141
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish holds a guiding lantern high and points forward as a group follows its lead.
+
+## 単語の絵：r0142
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish presents its town membership card and casts a ballot in a municipal ballot box.
+
+## 単語の絵：r0143
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish grimaces at a signed IOU while counting too few coins to repay it.
+
+## 単語の絵：r0144
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish outlines one clearly bounded block of addresses on a folded town map.
+
+## 単語の絵：r0145
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish looks at the empty chair and untouched place card beside it and checks off another day on a calendar.
+
+## 単語の絵：r0146
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish swings open a cage door and watches a bird fly free.
+
+## 単語の絵：r0147
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish holds a closed personal diary to its chest and turns it away from a curious onlooker.
+
+## 単語の絵：r0148
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish shakes claws with a partner across a single document bearing both signatures.
+
+## 単語の絵：r0149
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish stamps a fixed price pledge beside the same price tag on a scale and presents it confidently to a buyer.
+
+## 単語の絵：r0150
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish signs a loan form with a house icon while receiving a key across a bank counter.
+
+## 単語の絵：r0151
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish divides the town's available coins into separate trays marked with streetlight, road and library icons.
+
+## 単語の絵：r0152
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish takes minutes at a round table where three appointed members raise their claws to vote.
+
+## 単語の絵：r0153
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish posts a long-term plan with a series of checkpoints leading to a streetlight icon.
+
+## 単語の絵：r0154
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish pins a new leadership badge on a colleague and hands over the office key.
+
+## 単語の絵：r0155
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish arranges specimen jars beside a microscope under a shared research institute seal.
+
+## 単語の絵：r0156
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish points to a shattered window and torn roof on a small house model while holding a damage checklist.
+
+## 単語の絵：r0157
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish rushes forward with a bucket as flames roar out of a cutaway building's window.
+
+## 単語の絵：r0158
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish peers with wide eyes inside a miniature unlit room where the light switch is off.
+
+## 単語の絵：r0159
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish slams a large emergency alarm button as its warning beacon flashes.
+
+## 単語の絵：r0160
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish holds a single piece of firewood with tongs as bright flame eats through one end.
+
+## 単語の絵：r0161
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish holds an open law book and presents a client's papers at a small courtroom lectern.
+
+## 単語の絵：r0162
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish pastes a large poster of the lamp it sells onto a freestanding advertising board.
+
+## 単語の絵：r0163
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish waits at a barrier while a guard gives a green go-ahead gesture and lifts the gate.
+
+## 単語の絵：r0164
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish steps up a rung on a small career ladder as a supervisor pins on a higher-ranking badge.
+
+## 単語の絵：r0165
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish cups both claws around its wide-open mouth with big jagged sound lines bursting out.
+
+## 単語の絵：r0166
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish fits the last unusual part into its first working hand lamp beside a sketch full of crossed-out drafts.
+
+## 単語の絵：r0167
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish turns the crank of a small geared gadget that neatly raises a little folding arm.
+
+## 単語の絵：r0168
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish sits at a small workstation with an inbox, telephone and filing cabinet close at claw.
+
+## 単語の絵：r0169
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish pulls a dated archival card from a box of filed town entries and displays its neat rows.
+
+## 単語の絵：r0170
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish pricks up its ears at a voice coming from a telephone and smiles in recognition at a friend's portrait.
+
+## 単語の絵：r0171
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish checks off a printer, telephone and computer arranged together on an office supply cart.
+
+## 単語の絵：r0172
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish lays a hand over its heart and pledges a lifetime of work beside its apron and a stack of years on calendar cards.
+
+## 単語の絵：r0173
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish signs a formal contract while the other party holds a pen ready above a second signature line.
+
+## 単語の絵：r0174
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish observes a worker completing a task and marks a scored checklist on a clipboard.
+
+## 単語の絵：r0175
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish oils the moving hinge of a working street lamp assembly while checking its service checklist.
+
+## 単語の絵：r0176
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish sniffs a keepsake and watches a picture of its old front door resurface in a thought bubble.
+
+## 単語の絵：r0177
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish writes a dated first-person entry in a personal journal open beside a small loose calendar.
+
+## 単語の絵：r0178
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish lifts the lid from a steaming tray piled with a mix of hot foods.
+
+## 単語の絵：r0179
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish sits down to one complete place setting with a main course, side dish and cup.
+
+## 単語の絵：r0180
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached hokoridama: curled grey paper body, dark navy outlines, amber eyes, vermilion stains, pale limbs. Paper and letterpress ink printmaking, flat discrete color shapes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern or scenery. No green in the subject. No text, letters, numerals or symbols.
+Subject: The hokoridama paper silverfish clips the same report icon onto the same weekday in each successive row of a calendar.
