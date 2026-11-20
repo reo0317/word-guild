@@ -137,6 +137,6 @@
 .gs-speech details{font-size:12px;line-height:1.5}
 .gs-speech summary{width:fit-content;cursor:pointer}
 .gs-speech details p{margin-top:4px}
-/* 横長の大物の拡大だけ、絵をひと回り大きく（はみ出しは枠の中で切る） */
+/* 横長の大物の拡大だけ、絵を少し大きく（枠の中に少し余白が残る範囲） */
 .gq-album .gq-zoom-stamp .stamp.big .pic{overflow:hidden}
-.gq-album .gq-zoom-stamp .stamp.big .pic svg{transform:scale(1.35);transform-origin:50% 55%}
+.gq-album .gq-zoom-stamp .stamp.big .pic svg{transform:scale(1.15);transform-origin:50% 50%}
