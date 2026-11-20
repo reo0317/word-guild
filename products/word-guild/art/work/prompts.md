@@ -6906,3 +6906,38 @@ Subject: The keshikasu ink creature in a hard hat directs a small bricklaying cr
 
 Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached keshikasu.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
 Subject: The keshikasu ink creature holds a survey sheet with rows of empty response circles and rests a pencil over its first choice.
+
+## 単語の絵：c3-012
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no scenery, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: Nijimi gives a pocket watch a thorough inspection with a jeweler’s loupe, arranging every dismantled gear and spring in order from the lid to the bare case.
+
+## 単語の絵：c3-025
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no scenery, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: Nijimi wears a shop apron and kneels to fit a polished shoe onto a seated customer’s outstretched foot.
+
+## 単語の絵：c3-028
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no scenery, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: Nijimi holds an oversized freshly cast cog face-on and points to the single misshapen tooth fused to its neighbor.
+
+## 単語の絵：c3-029
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no scenery, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: Nijimi pinches its nose while carrying an open garbage bag brimming with a banana peel, eggshells and a gnawed apple core.
+
+## 単語の絵：c3-058
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no scenery, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: Nijimi beams beneath a huge bouquet wrapped in festive ribbon presented by proud family hands at its graduation.
+
+## 単語の絵：c3-155
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no scenery, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: Nijimi celebrates its birthday by placing a fresh candle beside the others on a single frosted birthday cake.
+
+## 単語の絵：c3-225
+
+Use case: illustration-story. Game enemy illustration, one full-body monster centered large in square composition. Match the attached nijimi.png as the protagonist: paper and letterpress ink printmaking, thick dark navy outlines, flat discrete color shapes, textured paper and ink stains come alive as a slightly cute spooky monster, amber eyes. Palette primarily navy #1f2a44, mist #9fb3bf, paper #f3ead8, a little vermilion #c8462f. Make the meaning instantly recognizable through oversized clear motifs. Pure flat solid chroma green #00ff00 background, no shadows, no ground, no scenery, no pattern. No green in the subject. No text, letters, numerals or other symbols anywhere; no existing characters.
+Subject: Nijimi slides just one small coin across a hotel reception bell counter and receives a room key with a plain bed-shaped fob.

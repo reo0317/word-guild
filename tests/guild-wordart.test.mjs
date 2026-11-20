@@ -5,10 +5,26 @@ import {tmpdir} from 'node:os';
 import {pathToFileURL} from 'node:url';
 import {buildWordart} from '../tools/build-wordart.mjs';
 import {charaSpec, pageSpecs} from '../products/word-guild/guild/chara.mjs';
-import {charaSvg, charaDefs} from '../products/word-guild/guild/chara-svg.mjs';
+import {charaSvg, charaDefs, stampHtml} from '../products/word-guild/guild/chara-svg.mjs';
 
 const word = {id: 'example', w: 'say', ch: 1};
 const arts = {example: {g: 'c1-001', tint: 0}};
+
+test('まれびとの絵を夜色と星で刷り、切手の種別を保つ', () => {
+  const rare = {id: 'r0001', w: 'envelope', ja: '封筒', ch: 1, shelf: 1};
+  const art = {g: rare.id, tint: 0};
+  const spec = charaSpec(rare, 'talk', {[rare.id]: art});
+  assert.equal(spec.kind, 'rare');
+  assert.deepEqual(spec.wordart, art);
+  const svg = charaSvg(spec);
+  assert.match(svg, /art\/word\/r0001\.webp/);
+  assert.match(svg, /cg-t-rare/);
+  assert.match(svg, /cg-rare-edge/);
+  assert.match(svg, /rare-overprint/);
+  assert.doesNotMatch(svg, /cg-m-|art\/body-/);
+  assert.match(stampHtml(rare, spec, {state: 'gold'}), /class="stamp s-gold rare"/);
+  assert.match(charaSvg(charaSpec(rare, 'talk', {})), /cg-pt-star/);
+});
 
 test('意味の絵を優先し、持ち物と模様を付けず、分類の体にも戻れる', () => {
   const fallback = charaSpec(word, 'action', {});
@@ -75,7 +91,12 @@ test('ビルドは全区を読み、webp のある語だけ出力する', async 
       ]}));
       await writeFile(new URL(`products/word-guild/art/word/c${ch}-001.webp`, root), 'fixture');
     }
-    const expected = {b1: {g: 'c1-001', tint: 0}, b2: {g: 'c2-001', tint: 1}};
+    await writeFile(new URL('data/work/wordart/groups-rare.json', root), JSON.stringify({groups: [
+      {g: 'r0001', words: [{id: 'r0001', tint: 0}]},
+      {g: 'r0002', words: [{id: 'r0002', tint: 0}]},
+    ]}));
+    await writeFile(new URL('products/word-guild/art/word/r0001.webp', root), 'fixture');
+    const expected = {b1: {g: 'c1-001', tint: 0}, b2: {g: 'c2-001', tint: 1}, r0001: {g: 'r0001', tint: 0}};
     assert.deepEqual(await buildWordart(root), expected);
     assert.deepEqual(JSON.parse(await readFile(new URL('products/word-guild/data/wordart.json', root))), expected);
   } finally { await rm(temp, {recursive: true, force: true}); }

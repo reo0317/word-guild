@@ -170,6 +170,9 @@ export function charaSvg(spec, {state = 'print', ward = 1, base = '', unify = tr
     if (pattern && pattern !== 'plain') over += `<rect width="512" height="512" fill="url(#cg-pt-${pattern})" mask="${mask}" opacity="0.26"/>`;
     over += `<rect width="512" height="512" fill="url(#cg-ht)" mask="${mask}" opacity="0.28"/>`;
   }
+  if (rare && spec.wordart && !proof && unify) {
+    over = `<g class="rare-overprint" opacity="0.65">${SPARK(160, 205, 0.55, NIGHT.tint)}${SPARK(350, 340, 0.45, NIGHT.tint)}</g>`;
+  }
   let deco = '';
   if (rare) deco += SPARK(70, 90, 1.1, NIGHT.tint) + SPARK(450, 120, 0.8, NIGHT.tint) + SPARK(110, 400, 0.7, NIGHT.tint) + SPARK(420, 60, 0.55, NIGHT.tint);
   if (state === 'gold') deco += SPARK(60, 440, 0.9, '#f0c23c') + SPARK(455, 90, 0.7, '#f0c23c');

@@ -1,0 +1,3334 @@
+{
+  "groups": [
+    {
+      "g": "r0001",
+      "concept": "The ink creature holds up a large blue envelope with its triangular flap facing the viewer.",
+      "words": [
+        {
+          "id": "r0001",
+          "w": "envelope",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0002",
+      "concept": "The ink creature licks the back of an oversized postage stamp with a clearly perforated edge.",
+      "words": [
+        {
+          "id": "r0002",
+          "w": "stamp",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0003",
+      "concept": "The ink creature wears a courier cap and hands a tied parcel directly to a recipient reaching for it.",
+      "words": [
+        {
+          "id": "r0003",
+          "w": "deliver",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0004",
+      "concept": "The ink creature opens a red mailbox and scoops up the bundle of letters inside.",
+      "words": [
+        {
+          "id": "r0004",
+          "w": "mail",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0005",
+      "concept": "The ink creature cups one claw around its mouth to whisper into a friend's ear while both glance aside.",
+      "words": [
+        {
+          "id": "r0005",
+          "w": "secret",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0006",
+      "concept": "The ink creature buys a train ticket with a single tiny coin and beams at the bargain.",
+      "words": [
+        {
+          "id": "r0006",
+          "w": "cheap",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0007",
+      "concept": "The ink creature peels a higher price sticker off a box to reveal a lower price underneath.",
+      "words": [
+        {
+          "id": "r0007",
+          "w": "discount",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0008",
+      "concept": "The ink creature gapes at the towering pile of coins demanded for a jeweled watch.",
+      "words": [
+        {
+          "id": "r0008",
+          "w": "expensive",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0009",
+      "concept": "The ink creature tries one tiny spoonful from a tray of bite-sized tasting cups.",
+      "words": [
+        {
+          "id": "r0009",
+          "w": "sample",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0010",
+      "concept": "The ink creature threads a string through a large paper label and ties it to a jar.",
+      "words": [
+        {
+          "id": "r0010",
+          "w": "label",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0011",
+      "concept": "The ink creature holds a freshly sliced loaf to its nose with its eyes closed.",
+      "words": [
+        {
+          "id": "r0011",
+          "w": "bread",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0012",
+      "concept": "The ink creature leans in to blow out the candles on a tall birthday cake.",
+      "words": [
+        {
+          "id": "r0012",
+          "w": "cake",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0013",
+      "concept": "The ink creature ties on an apron beside a compact stove, sink and hanging ladle.",
+      "words": [
+        {
+          "id": "r0013",
+          "w": "kitchen",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0014",
+      "concept": "The ink creature arrives in a party hat clutching flowers as the host holds open a freestanding door.",
+      "words": [
+        {
+          "id": "r0014",
+          "w": "guest",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0015",
+      "concept": "The ink creature lays a wedge-shaped slice of holey cheese over a piece of toast.",
+      "words": [
+        {
+          "id": "r0015",
+          "w": "cheese",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0016",
+      "concept": "The ink creature warms its claws around a glass of white milk while a cow-marked carton stands beside it.",
+      "words": [
+        {
+          "id": "r0016",
+          "w": "milk",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0017",
+      "concept": "The ink creature tips a spoonful of sparkling sugar crystals over a teacup with a spoonful already dissolved.",
+      "words": [
+        {
+          "id": "r0017",
+          "w": "sugar",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0018",
+      "concept": "The ink creature lifts toast from a plate of eggs beside a ringing sunrise alarm clock.",
+      "words": [
+        {
+          "id": "r0018",
+          "w": "breakfast",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0019",
+      "concept": "The ink creature cradles a deep round soup bowl with both claws and peers over its rim.",
+      "words": [
+        {
+          "id": "r0019",
+          "w": "bowl",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0020",
+      "concept": "The ink creature pinches coarse grains from a cellar marked with a salt-shaker pictogram onto a fried egg.",
+      "words": [
+        {
+          "id": "r0020",
+          "w": "salt",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0021",
+      "concept": "The ink creature pulls in a fishing line from a tiny wooden rowboat with two oars.",
+      "words": [
+        {
+          "id": "r0021",
+          "w": "boat",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0022",
+      "concept": "The ink creature spreads its claws over a globe to show how much of it is covered by one vast blue ocean.",
+      "words": [
+        {
+          "id": "r0022",
+          "w": "ocean",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0023",
+      "concept": "The ink creature braces with both claws raised as a single curling crest of water towers above it.",
+      "words": [
+        {
+          "id": "r0023",
+          "w": "wave",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0024",
+      "concept": "The ink creature walks along the waterline on a small cutaway strip of pebbles and wet sand.",
+      "words": [
+        {
+          "id": "r0024",
+          "w": "shore",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0025",
+      "concept": "The ink creature grips the handle of a broad kitchen knife as its blade halves an apple.",
+      "words": [
+        {
+          "id": "r0025",
+          "w": "knife",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0026",
+      "concept": "The ink creature presents a notched railway ticket to a conductor holding a ticket punch.",
+      "words": [
+        {
+          "id": "r0026",
+          "w": "ticket",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0027",
+      "concept": "The ink creature traces a long dotted itinerary with several stops on a folded map beside its scuffed suitcase.",
+      "words": [
+        {
+          "id": "r0027",
+          "w": "journey",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0028",
+      "concept": "The ink creature waits behind the safety stripe on a cutaway raised platform beside an open train door.",
+      "words": [
+        {
+          "id": "r0028",
+          "w": "platform",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0029",
+      "concept": "The ink creature dozes upright in a train seat with a travel bag tucked under its knees.",
+      "words": [
+        {
+          "id": "r0029",
+          "w": "passenger",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0030",
+      "concept": "The ink creature taps a detached steel rail with a small hammer to show its distinctive profile.",
+      "words": [
+        {
+          "id": "r0030",
+          "w": "rail",
+          "tint": 0
+        }
+      ]
+    },
+    {
+      "g": "r0031",
+      "concept": "The keshikasu paper silverfish turns the crank on a tabletop press as inked sheets slide out.",
+      "words": [
+        {
+          "id": "r0031",
+          "w": "printer",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0032",
+      "concept": "The keshikasu paper silverfish browses a ring-bound booklet of numbered product pictures arranged in neat rows.",
+      "words": [
+        {
+          "id": "r0032",
+          "w": "catalog",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0033",
+      "concept": "The keshikasu paper silverfish takes a call at a publishing desk while waving a marked manuscript through to a stack of finished books.",
+      "words": [
+        {
+          "id": "r0033",
+          "w": "publisher",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0034",
+      "concept": "The keshikasu paper silverfish sets a book with a circled printing number one beside a later printing of the same book with a revised cover.",
+      "words": [
+        {
+          "id": "r0034",
+          "w": "edition",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0035",
+      "concept": "The keshikasu paper silverfish writes back on a fresh sheet while keeping an opened incoming letter under its other claw.",
+      "words": [
+        {
+          "id": "r0035",
+          "w": "reply",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0036",
+      "concept": "The keshikasu paper silverfish wraps a long white coat around itself and pulls its wide collar up to its cheeks.",
+      "words": [
+        {
+          "id": "r0036",
+          "w": "coat",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0037",
+      "concept": "The keshikasu paper silverfish patches the elbow of a short zippered jacket spread across its lap.",
+      "words": [
+        {
+          "id": "r0037",
+          "w": "jacket",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0038",
+      "concept": "The keshikasu paper silverfish pulls a needle and thread through a large four-hole button.",
+      "words": [
+        {
+          "id": "r0038",
+          "w": "button",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0039",
+      "concept": "The keshikasu paper silverfish turns an empty trouser pocket inside out with a puzzled frown.",
+      "words": [
+        {
+          "id": "r0039",
+          "w": "pocket",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0040",
+      "concept": "The keshikasu paper silverfish holds out the pleated hem of a long skirt as it twirls.",
+      "words": [
+        {
+          "id": "r0040",
+          "w": "skirt",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0041",
+      "concept": "The keshikasu paper silverfish measures a dose from a medicine bottle into a marked cup.",
+      "words": [
+        {
+          "id": "r0041",
+          "w": "medicine",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0042",
+      "concept": "The keshikasu paper silverfish pulls up its sleeve and points out a light rash to a clinician inspecting the spots.",
+      "words": [
+        {
+          "id": "r0042",
+          "w": "symptom",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0043",
+      "concept": "The keshikasu paper silverfish hunches over and coughs into its elbow with its eyes squeezed shut.",
+      "words": [
+        {
+          "id": "r0043",
+          "w": "cough",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0044",
+      "concept": "The keshikasu paper silverfish wears a nursing badge and checks a patient's temperature while holding a chart.",
+      "words": [
+        {
+          "id": "r0044",
+          "w": "nurse",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0045",
+      "concept": "The keshikasu paper silverfish winces and grips a stubbed toe with a sharp burst of lines around it.",
+      "words": [
+        {
+          "id": "r0045",
+          "w": "pain",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0046",
+      "concept": "The keshikasu paper silverfish sinks into a thick novel with a character portrait on its cover and a ribbon bookmark halfway through.",
+      "words": [
+        {
+          "id": "r0046",
+          "w": "novel",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0047",
+      "concept": "The keshikasu paper silverfish turns to a new section of an open book with a large chapter number above its first block of text.",
+      "words": [
+        {
+          "id": "r0047",
+          "w": "chapter",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0048",
+      "concept": "The keshikasu paper silverfish recites short lines from a book in rolling rhythms while tapping a beat with one claw.",
+      "words": [
+        {
+          "id": "r0048",
+          "w": "poetry",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0049",
+      "concept": "The keshikasu paper silverfish opens a storybook and gestures toward an imaginary dragon rising from its pages.",
+      "words": [
+        {
+          "id": "r0049",
+          "w": "fiction",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0050",
+      "concept": "The keshikasu paper silverfish writes a short personal reflection at a writing pad beside the childhood photograph that inspired it.",
+      "words": [
+        {
+          "id": "r0050",
+          "w": "essay",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0051",
+      "concept": "The keshikasu paper silverfish pulls a hidden cord to tip a bucket of confetti onto an unsuspecting friend.",
+      "words": [
+        {
+          "id": "r0051",
+          "w": "trick",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0052",
+      "concept": "The keshikasu paper silverfish tilts its head with a warm smile and wins over two listeners who lean in with smiles of their own.",
+      "words": [
+        {
+          "id": "r0052",
+          "w": "charm",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0053",
+      "concept": "The keshikasu paper silverfish reclines in a plush armchair with a crown, a jeweled goblet and a tray of treats.",
+      "words": [
+        {
+          "id": "r0053",
+          "w": "luxury",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0054",
+      "concept": "The keshikasu paper silverfish forces a grin in a handheld mirror while a tear runs down one cheek.",
+      "words": [
+        {
+          "id": "r0054",
+          "w": "pretend",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0055",
+      "concept": "The keshikasu paper silverfish passes off a painted pebble as a gem by hiding the chipped back from a buyer.",
+      "words": [
+        {
+          "id": "r0055",
+          "w": "fool",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0056",
+      "concept": "The keshikasu paper silverfish raises a steaming mug of black coffee from beside a little pile of roasted beans.",
+      "words": [
+        {
+          "id": "r0056",
+          "w": "coffee",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0057",
+      "concept": "The keshikasu paper silverfish unfolds a stiff card with rows of dish pictures and prices and points to a choice.",
+      "words": [
+        {
+          "id": "r0057",
+          "w": "menu",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0058",
+      "concept": "The keshikasu paper silverfish pours a ribbon of thick cream from a tiny jug onto a serving of berries.",
+      "words": [
+        {
+          "id": "r0058",
+          "w": "cream",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0059",
+      "concept": "The keshikasu paper silverfish leans across a cafe table toward a friend as both gesture and trade little speech bubbles.",
+      "words": [
+        {
+          "id": "r0059",
+          "w": "chat",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0060",
+      "concept": "The keshikasu paper silverfish samples a lemon drop and puckers sharply with a sparkle at the tip of its tongue.",
+      "words": [
+        {
+          "id": "r0060",
+          "w": "taste",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0061",
+      "concept": "The keshikasu paper silverfish sniffs a single yellow flower with a round center and broad petals.",
+      "words": [
+        {
+          "id": "r0061",
+          "w": "flower",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0062",
+      "concept": "The keshikasu paper silverfish offers one red rose by its thorny stem with its other claw over its heart.",
+      "words": [
+        {
+          "id": "r0062",
+          "w": "rose",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0063",
+      "concept": "The keshikasu paper silverfish presses a single large seed into a small pot of soil with a fingertip.",
+      "words": [
+        {
+          "id": "r0063",
+          "w": "seed",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0064",
+      "concept": "The keshikasu paper silverfish brushes its claws through a low tuft of dew-covered grass with long narrow blades.",
+      "words": [
+        {
+          "id": "r0064",
+          "w": "grass",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0065",
+      "concept": "The keshikasu paper silverfish holds a pink petal against a fan of matching pink color swatches.",
+      "words": [
+        {
+          "id": "r0065",
+          "w": "pink",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0066",
+      "concept": "The keshikasu paper silverfish snaps a square off a scored bar of dark chocolate with its wrapper peeled back.",
+      "words": [
+        {
+          "id": "r0066",
+          "w": "chocolate",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0067",
+      "concept": "The keshikasu paper silverfish takes a bite of honey-drizzled cake and closes its eyes in a smile as sugar sparkles gather near its mouth.",
+      "words": [
+        {
+          "id": "r0067",
+          "w": "sweet",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0068",
+      "concept": "The keshikasu paper silverfish leaps with both claws thrown up and its mouth wide in a thrilled grin.",
+      "words": [
+        {
+          "id": "r0068",
+          "w": "delight",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0069",
+      "concept": "The keshikasu paper silverfish holds a glossy photographic print with crisp detail and a white border by its corners.",
+      "words": [
+        {
+          "id": "r0069",
+          "w": "photograph",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0070",
+      "concept": "The keshikasu paper silverfish pokes at a floating gray cloud with a soft billowing outline.",
+      "words": [
+        {
+          "id": "r0070",
+          "w": "cloud",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0071",
+      "concept": "The keshikasu paper silverfish extends a handheld microphone toward an eyewitness and jots down the answer on a pocket pad.",
+      "words": [
+        {
+          "id": "r0071",
+          "w": "reporter",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0072",
+      "concept": "The keshikasu paper silverfish leans over a marked-up page proof and crosses out a repeated line with a red pencil.",
+      "words": [
+        {
+          "id": "r0072",
+          "w": "editor",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0073",
+      "concept": "The keshikasu paper silverfish collects interview notes and photographs into a long feature at a newspaper desk.",
+      "words": [
+        {
+          "id": "r0073",
+          "w": "journalist",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0074",
+      "concept": "The keshikasu paper silverfish speaks into a studio microphone as transmission rings radiate from a small antenna.",
+      "words": [
+        {
+          "id": "r0074",
+          "w": "broadcast",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0075",
+      "concept": "The keshikasu paper silverfish holds up a newspaper and frames one narrow vertical article with a recurring byline portrait.",
+      "words": [
+        {
+          "id": "r0075",
+          "w": "column",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0076",
+      "concept": "The keshikasu paper silverfish ties a boat to a mooring post on a miniature enclosed harbor model with a curved breakwater.",
+      "words": [
+        {
+          "id": "r0076",
+          "w": "harbor",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0077",
+      "concept": "The keshikasu paper silverfish holds up an umbrella as slanting drops splash off its rim and gather under its boots.",
+      "words": [
+        {
+          "id": "r0077",
+          "w": "rain",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0078",
+      "concept": "The keshikasu paper silverfish cups a large cratered crescent moon in both claws as though holding a cutout.",
+      "words": [
+        {
+          "id": "r0078",
+          "w": "moon",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0079",
+      "concept": "The keshikasu paper silverfish wears a headset in a compact aircraft cockpit and grips the control yoke.",
+      "words": [
+        {
+          "id": "r0079",
+          "w": "pilot",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0080",
+      "concept": "The keshikasu paper silverfish leans from the cab of a white cargo truck with a big rectangular bed.",
+      "words": [
+        {
+          "id": "r0080",
+          "w": "truck",
+          "tint": 0
+        }
+      ],
+      "species": "keshikasu"
+    },
+    {
+      "g": "r0081",
+      "concept": "The nijimi paper silverfish strains to lift a single heavy parcel wrapped tightly in string.",
+      "words": [
+        {
+          "id": "r0081",
+          "w": "package",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0082",
+      "concept": "The nijimi paper silverfish slides a box onto a labeled shelf among neatly stacked crates and locks the shelf door.",
+      "words": [
+        {
+          "id": "r0082",
+          "w": "storage",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0083",
+      "concept": "The nijimi paper silverfish checks the straps across a towering stack of crates already secured on a flatbed.",
+      "words": [
+        {
+          "id": "r0083",
+          "w": "load",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0084",
+      "concept": "The nijimi paper silverfish uses a handcart to roll two boxes from a loading ramp toward a waiting van.",
+      "words": [
+        {
+          "id": "r0084",
+          "w": "transport",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0085",
+      "concept": "The nijimi paper silverfish pushes a fish crate from a home flag across a dividing line onto an outbound cargo ship.",
+      "words": [
+        {
+          "id": "r0085",
+          "w": "export",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0086",
+      "concept": "The nijimi paper silverfish presses keys on a calculator beside two price tags and points at the total.",
+      "words": [
+        {
+          "id": "r0086",
+          "w": "calculate",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0087",
+      "concept": "The nijimi paper silverfish pins a timetable to a small board and moves a task card into its hour slot.",
+      "words": [
+        {
+          "id": "r0087",
+          "w": "schedule",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0088",
+      "concept": "The nijimi paper silverfish slumps beside an unmoving train pictogram and an overdue clock with its planned time marked.",
+      "words": [
+        {
+          "id": "r0088",
+          "w": "delay",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0089",
+      "concept": "The nijimi paper silverfish pulls a fresh crate of lamps off an arriving ship toward a dock marked with its home flag.",
+      "words": [
+        {
+          "id": "r0089",
+          "w": "import",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0090",
+      "concept": "The nijimi paper silverfish dashes forward clutching a watch with speed lines trailing behind its feet.",
+      "words": [
+        {
+          "id": "r0090",
+          "w": "hurry",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0091",
+      "concept": "The nijimi paper silverfish straddles a boundary stripe between two short barrier posts bearing different national flags.",
+      "words": [
+        {
+          "id": "r0091",
+          "w": "border",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0092",
+      "concept": "The nijimi paper silverfish peers through a magnifier at the contents of an open box and lifts one piece for inspection.",
+      "words": [
+        {
+          "id": "r0092",
+          "w": "examine",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0093",
+      "concept": "The nijimi paper silverfish narrows its eyes at a companion whose hidden claw pokes out from behind its back.",
+      "words": [
+        {
+          "id": "r0093",
+          "w": "suspect",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0094",
+      "concept": "The nijimi paper silverfish holds up a signed pass with a dock pictogram and a large official stamp to a guard.",
+      "words": [
+        {
+          "id": "r0094",
+          "w": "permit",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0095",
+      "concept": "The nijimi paper silverfish raises a freshly signed proclamation beside a new flag while addressing two listeners from a lectern.",
+      "words": [
+        {
+          "id": "r0095",
+          "w": "declare",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0096",
+      "concept": "The nijimi paper silverfish skids on a small slick patch of ice with feet shooting forward and claws flung up.",
+      "words": [
+        {
+          "id": "r0096",
+          "w": "slip",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0097",
+      "concept": "The nijimi paper silverfish pushes a wet mop over a small tile panel with soap suds trailing behind it.",
+      "words": [
+        {
+          "id": "r0097",
+          "w": "wash",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0098",
+      "concept": "The nijimi paper silverfish recoils at a tile panel covered in muddy boot prints and sticky smears.",
+      "words": [
+        {
+          "id": "r0098",
+          "w": "dirty",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0099",
+      "concept": "The nijimi paper silverfish tests an unsteady plank with one toe before committing its weight, gripping a rail tightly.",
+      "words": [
+        {
+          "id": "r0099",
+          "w": "careful",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0100",
+      "concept": "The nijimi paper silverfish waves both claws and calls out to two crewmates nearing a hazard marker.",
+      "words": [
+        {
+          "id": "r0100",
+          "w": "warn",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0101",
+      "concept": "The nijimi paper silverfish opens a pay envelope beside a calendar with one payday circled each month.",
+      "words": [
+        {
+          "id": "r0101",
+          "w": "salary",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0102",
+      "concept": "The nijimi paper silverfish stacks the same number of coins into each hour slot on a shift timecard.",
+      "words": [
+        {
+          "id": "r0102",
+          "w": "wage",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0103",
+      "concept": "The nijimi paper silverfish fans banknotes over a handful of loose coins at a counter.",
+      "words": [
+        {
+          "id": "r0103",
+          "w": "cash",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0104",
+      "concept": "The nijimi paper silverfish looks ruefully at several receipts while dropping the last coins from its purse.",
+      "words": [
+        {
+          "id": "r0104",
+          "w": "expense",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0105",
+      "concept": "The nijimi paper silverfish slides coins across a counter toward a waiting seller who holds out a receipt.",
+      "words": [
+        {
+          "id": "r0105",
+          "w": "payment",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0106",
+      "concept": "The nijimi paper silverfish places its treasured key in a friend's open claw and relaxes into a confident smile.",
+      "words": [
+        {
+          "id": "r0106",
+          "w": "trust",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0107",
+      "concept": "The nijimi paper silverfish returns a dropped wallet with every banknote still poking out of it.",
+      "words": [
+        {
+          "id": "r0107",
+          "w": "honest",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0108",
+      "concept": "The nijimi paper silverfish takes its assigned watch at a ship's bell while the rest of the crew sleeps.",
+      "words": [
+        {
+          "id": "r0108",
+          "w": "duty",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0109",
+      "concept": "The nijimi paper silverfish stands chin up and chest out while polishing a dock emblem it earned.",
+      "words": [
+        {
+          "id": "r0109",
+          "w": "proud",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0110",
+      "concept": "The nijimi paper silverfish hangs its head over a broken keepsake beside an unused roll of protective padding.",
+      "words": [
+        {
+          "id": "r0110",
+          "w": "regret",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0111",
+      "concept": "The nijimi paper silverfish holds a stamped policy with a ship emblem above a small damaged boat and an incoming reimbursement.",
+      "words": [
+        {
+          "id": "r0111",
+          "w": "insurance",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0112",
+      "concept": "The nijimi paper silverfish jumps back as a rolling cargo cart accidentally bumps into another and scatters its boxes.",
+      "words": [
+        {
+          "id": "r0112",
+          "w": "accident",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0113",
+      "concept": "The nijimi paper silverfish points out what it saw to an investigator while an eye-shaped inset shows the collision.",
+      "words": [
+        {
+          "id": "r0113",
+          "w": "witness",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0114",
+      "concept": "The nijimi paper silverfish coughs into a sleeve as a dark billowing plume curls from a smoking ember.",
+      "words": [
+        {
+          "id": "r0114",
+          "w": "smoke",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0115",
+      "concept": "The nijimi paper silverfish stares in horror at a broken miniature pier with several wrecked boats piled against it.",
+      "words": [
+        {
+          "id": "r0115",
+          "w": "disaster",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0116",
+      "concept": "The nijimi paper silverfish hauls on one ship's line in unison with two shipmates wearing matching caps.",
+      "words": [
+        {
+          "id": "r0116",
+          "w": "crew",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0117",
+      "concept": "The nijimi paper silverfish leans into slashing rain as lightning strikes beside its wind-bent umbrella.",
+      "words": [
+        {
+          "id": "r0117",
+          "w": "storm",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0118",
+      "concept": "The nijimi paper silverfish kneels on a rescue float and hauls a stranded sailor up by a thrown lifeline.",
+      "words": [
+        {
+          "id": "r0118",
+          "w": "rescue",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0119",
+      "concept": "The nijimi paper silverfish spins a detached spoked bicycle wheel held upright by its axle.",
+      "words": [
+        {
+          "id": "r0119",
+          "w": "wheel",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0120",
+      "concept": "The nijimi paper silverfish gropes forward with its claws stretched wide beside a snuffed lantern and a tiny patch of surrounding black.",
+      "words": [
+        {
+          "id": "r0120",
+          "w": "darkness",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0121",
+      "concept": "The nijimi paper silverfish signals its fleet to pull back with a canoe already turning away from a dock marker.",
+      "words": [
+        {
+          "id": "r0121",
+          "w": "withdraw",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0122",
+      "concept": "The nijimi paper silverfish hands its badge and keys back across a desk and walks away holding its farewell letter.",
+      "words": [
+        {
+          "id": "r0122",
+          "w": "resign",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0123",
+      "concept": "The nijimi paper silverfish stares at a ledger showing a large negative balance beside an empty cash tin.",
+      "words": [
+        {
+          "id": "r0123",
+          "w": "deficit",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0124",
+      "concept": "The nijimi paper silverfish turns its back and walks away from a broken boat and its belongings left on a small dock plank.",
+      "words": [
+        {
+          "id": "r0124",
+          "w": "abandon",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0125",
+      "concept": "The nijimi paper silverfish strikes a bold cross through a lease form and stamps it void.",
+      "words": [
+        {
+          "id": "r0125",
+          "w": "cancel",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0126",
+      "concept": "The nijimi paper silverfish wears a ceremonial town sash and holds an oversized municipal key while receiving a delegation.",
+      "words": [
+        {
+          "id": "r0126",
+          "w": "mayor",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0127",
+      "concept": "The nijimi paper silverfish holds out a white box wrapped in ribbon with both claws and a smile.",
+      "words": [
+        {
+          "id": "r0127",
+          "w": "gift",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0128",
+      "concept": "The nijimi paper silverfish stands at attention as a ribbon is cut between two ceremonial posts.",
+      "words": [
+        {
+          "id": "r0128",
+          "w": "ceremony",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0129",
+      "concept": "The nijimi paper silverfish reaches for a morsel under a raised cage held up by a trigger stick.",
+      "words": [
+        {
+          "id": "r0129",
+          "w": "trap",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0130",
+      "concept": "The nijimi paper silverfish steps forward to shake an arriving guest's claw with its free claw raised in welcome.",
+      "words": [
+        {
+          "id": "r0130",
+          "w": "greet",
+          "tint": 0
+        }
+      ],
+      "species": "nijimi"
+    },
+    {
+      "g": "r0131",
+      "concept": "The hokoridama paper silverfish leans on a rectangular writing desk with drawers and a pencil cup.",
+      "words": [
+        {
+          "id": "r0131",
+          "w": "desk",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0132",
+      "concept": "The hokoridama paper silverfish stands on the guest side of a reception counter wearing a visitor badge.",
+      "words": [
+        {
+          "id": "r0132",
+          "w": "visitor",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0133",
+      "concept": "The hokoridama paper silverfish writes its details into an open sign-in ledger and receives a numbered badge.",
+      "words": [
+        {
+          "id": "r0133",
+          "w": "register",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0134",
+      "concept": "The hokoridama paper silverfish raises a megaphone and holds up a new notice for two listeners turning toward it.",
+      "words": [
+        {
+          "id": "r0134",
+          "w": "announce",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0135",
+      "concept": "The hokoridama paper silverfish points at a posted safety-rule pictogram requiring a helmet and puts its own helmet on.",
+      "words": [
+        {
+          "id": "r0135",
+          "w": "regulation",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0136",
+      "concept": "The hokoridama paper silverfish sits at the head of a small boardroom table in a suit and approves a proposal with a raised claw.",
+      "words": [
+        {
+          "id": "r0136",
+          "w": "executive",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0137",
+      "concept": "The hokoridama paper silverfish sorts appointment cards and hands a stack of messages to its director while holding a telephone.",
+      "words": [
+        {
+          "id": "r0137",
+          "w": "secretary",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0138",
+      "concept": "The hokoridama paper silverfish holds a share certificate and slips a vote into a company ballot box.",
+      "words": [
+        {
+          "id": "r0138",
+          "w": "shareholder",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0139",
+      "concept": "The hokoridama paper silverfish unlocks a cutaway storefront model with a till and merchandise displays visible inside.",
+      "words": [
+        {
+          "id": "r0139",
+          "w": "commercial",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0140",
+      "concept": "The hokoridama paper silverfish politely holds out a room request slip with both claws toward a clerk beside a row of keys.",
+      "words": [
+        {
+          "id": "r0140",
+          "w": "request",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0141",
+      "concept": "The hokoridama paper silverfish holds a guiding lantern high and points forward as a group follows its lead.",
+      "words": [
+        {
+          "id": "r0141",
+          "w": "leader",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0142",
+      "concept": "The hokoridama paper silverfish presents its town membership card and casts a ballot in a municipal ballot box.",
+      "words": [
+        {
+          "id": "r0142",
+          "w": "citizen",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0143",
+      "concept": "The hokoridama paper silverfish grimaces at a signed IOU while counting too few coins to repay it.",
+      "words": [
+        {
+          "id": "r0143",
+          "w": "debt",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0144",
+      "concept": "The hokoridama paper silverfish outlines one clearly bounded block of addresses on a folded town map.",
+      "words": [
+        {
+          "id": "r0144",
+          "w": "district",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0145",
+      "concept": "The hokoridama paper silverfish looks at the empty chair and untouched place card beside it and checks off another day on a calendar.",
+      "words": [
+        {
+          "id": "r0145",
+          "w": "absence",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0146",
+      "concept": "The hokoridama paper silverfish swings open a cage door and watches a bird fly free.",
+      "words": [
+        {
+          "id": "r0146",
+          "w": "release",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0147",
+      "concept": "The hokoridama paper silverfish holds a closed personal diary to its chest and turns it away from a curious onlooker.",
+      "words": [
+        {
+          "id": "r0147",
+          "w": "private",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0148",
+      "concept": "The hokoridama paper silverfish shakes claws with a partner across a single document bearing both signatures.",
+      "words": [
+        {
+          "id": "r0148",
+          "w": "agreement",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0149",
+      "concept": "The hokoridama paper silverfish stamps a fixed price pledge beside the same price tag on a scale and presents it confidently to a buyer.",
+      "words": [
+        {
+          "id": "r0149",
+          "w": "guarantee",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0150",
+      "concept": "The hokoridama paper silverfish signs a loan form with a house icon while receiving a key across a bank counter.",
+      "words": [
+        {
+          "id": "r0150",
+          "w": "mortgage",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0151",
+      "concept": "The hokoridama paper silverfish divides the town's available coins into separate trays marked with streetlight, road and library icons.",
+      "words": [
+        {
+          "id": "r0151",
+          "w": "budget",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0152",
+      "concept": "The hokoridama paper silverfish takes minutes at a round table where three appointed members raise their claws to vote.",
+      "words": [
+        {
+          "id": "r0152",
+          "w": "committee",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0153",
+      "concept": "The hokoridama paper silverfish posts a long-term plan with a series of checkpoints leading to a streetlight icon.",
+      "words": [
+        {
+          "id": "r0153",
+          "w": "policy",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0154",
+      "concept": "The hokoridama paper silverfish pins a new leadership badge on a colleague and hands over the office key.",
+      "words": [
+        {
+          "id": "r0154",
+          "w": "appoint",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0155",
+      "concept": "The hokoridama paper silverfish arranges specimen jars beside a microscope under a shared research institute seal.",
+      "words": [
+        {
+          "id": "r0155",
+          "w": "institution",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0156",
+      "concept": "The hokoridama paper silverfish points to a shattered window and torn roof on a small house model while holding a damage checklist.",
+      "words": [
+        {
+          "id": "r0156",
+          "w": "damage",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0157",
+      "concept": "The hokoridama paper silverfish rushes forward with a bucket as flames roar out of a cutaway building's window.",
+      "words": [
+        {
+          "id": "r0157",
+          "w": "fire",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0158",
+      "concept": "The hokoridama paper silverfish peers with wide eyes inside a miniature unlit room where the light switch is off.",
+      "words": [
+        {
+          "id": "r0158",
+          "w": "dark",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0159",
+      "concept": "The hokoridama paper silverfish slams a large emergency alarm button as its warning beacon flashes.",
+      "words": [
+        {
+          "id": "r0159",
+          "w": "emergency",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0160",
+      "concept": "The hokoridama paper silverfish holds a single piece of firewood with tongs as bright flame eats through one end.",
+      "words": [
+        {
+          "id": "r0160",
+          "w": "burn",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0161",
+      "concept": "The hokoridama paper silverfish holds an open law book and presents a client's papers at a small courtroom lectern.",
+      "words": [
+        {
+          "id": "r0161",
+          "w": "lawyer",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0162",
+      "concept": "The hokoridama paper silverfish pastes a large poster of the lamp it sells onto a freestanding advertising board.",
+      "words": [
+        {
+          "id": "r0162",
+          "w": "advertise",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0163",
+      "concept": "The hokoridama paper silverfish waits at a barrier while a guard gives a green go-ahead gesture and lifts the gate.",
+      "words": [
+        {
+          "id": "r0163",
+          "w": "permission",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0164",
+      "concept": "The hokoridama paper silverfish steps up a rung on a small career ladder as a supervisor pins on a higher-ranking badge.",
+      "words": [
+        {
+          "id": "r0164",
+          "w": "promotion",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0165",
+      "concept": "The hokoridama paper silverfish cups both claws around its wide-open mouth with big jagged sound lines bursting out.",
+      "words": [
+        {
+          "id": "r0165",
+          "w": "shout",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0166",
+      "concept": "The hokoridama paper silverfish fits the last unusual part into its first working hand lamp beside a sketch full of crossed-out drafts.",
+      "words": [
+        {
+          "id": "r0166",
+          "w": "invent",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0167",
+      "concept": "The hokoridama paper silverfish turns the crank of a small geared gadget that neatly raises a little folding arm.",
+      "words": [
+        {
+          "id": "r0167",
+          "w": "device",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0168",
+      "concept": "The hokoridama paper silverfish sits at a small workstation with an inbox, telephone and filing cabinet close at claw.",
+      "words": [
+        {
+          "id": "r0168",
+          "w": "office",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0169",
+      "concept": "The hokoridama paper silverfish pulls a dated archival card from a box of filed town entries and displays its neat rows.",
+      "words": [
+        {
+          "id": "r0169",
+          "w": "record",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0170",
+      "concept": "The hokoridama paper silverfish pricks up its ears at a voice coming from a telephone and smiles in recognition at a friend's portrait.",
+      "words": [
+        {
+          "id": "r0170",
+          "w": "familiar",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0171",
+      "concept": "The hokoridama paper silverfish checks off a printer, telephone and computer arranged together on an office supply cart.",
+      "words": [
+        {
+          "id": "r0171",
+          "w": "equipment",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0172",
+      "concept": "The hokoridama paper silverfish lays a hand over its heart and pledges a lifetime of work beside its apron and a stack of years on calendar cards.",
+      "words": [
+        {
+          "id": "r0172",
+          "w": "dedicate",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0173",
+      "concept": "The hokoridama paper silverfish signs a formal contract while the other party holds a pen ready above a second signature line.",
+      "words": [
+        {
+          "id": "r0173",
+          "w": "contract",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0174",
+      "concept": "The hokoridama paper silverfish observes a worker completing a task and marks a scored checklist on a clipboard.",
+      "words": [
+        {
+          "id": "r0174",
+          "w": "evaluate",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0175",
+      "concept": "The hokoridama paper silverfish oils the moving hinge of a working street lamp assembly while checking its service checklist.",
+      "words": [
+        {
+          "id": "r0175",
+          "w": "maintenance",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0176",
+      "concept": "The hokoridama paper silverfish sniffs a keepsake and watches a picture of its old front door resurface in a thought bubble.",
+      "words": [
+        {
+          "id": "r0176",
+          "w": "remind",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0177",
+      "concept": "The hokoridama paper silverfish writes a dated first-person entry in a personal journal open beside a small loose calendar.",
+      "words": [
+        {
+          "id": "r0177",
+          "w": "journal",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0178",
+      "concept": "The hokoridama paper silverfish lifts the lid from a steaming tray piled with a mix of hot foods.",
+      "words": [
+        {
+          "id": "r0178",
+          "w": "food",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0179",
+      "concept": "The hokoridama paper silverfish sits down to one complete place setting with a main course, side dish and cup.",
+      "words": [
+        {
+          "id": "r0179",
+          "w": "meal",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0180",
+      "concept": "The hokoridama paper silverfish clips the same report icon onto the same weekday in each successive row of a calendar.",
+      "words": [
+        {
+          "id": "r0180",
+          "w": "weekly",
+          "tint": 0
+        }
+      ],
+      "species": "hokoridama"
+    },
+    {
+      "g": "r0181",
+      "concept": "The atenashi paper silverfish fluffs a pillow on a bed beside a bedside lamp and a small dresser on a cutaway floor panel.",
+      "words": [
+        {
+          "id": "r0181",
+          "w": "bedroom",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0182",
+      "concept": "The atenashi paper silverfish sets down its work bag and checks a clock beside a small tabletop sunset dial.",
+      "words": [
+        {
+          "id": "r0182",
+          "w": "evening",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0183",
+      "concept": "The atenashi paper silverfish rings a desk bell while a rack of matching numbered room keys hangs on the freestanding reception counter.",
+      "words": [
+        {
+          "id": "r0183",
+          "w": "hotel",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0184",
+      "concept": "The atenashi paper silverfish stretches in slippers beside a ringing alarm clock and a small tabletop sunrise dial.",
+      "words": [
+        {
+          "id": "r0184",
+          "w": "morning",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0185",
+      "concept": "The atenashi paper silverfish sleeps with closed eyes and a slack jaw under a blanket with a pillow under its head.",
+      "words": [
+        {
+          "id": "r0185",
+          "w": "sleep",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0186",
+      "concept": "The atenashi paper silverfish stands in a spray of downward water from a showerhead and scrubs its face.",
+      "words": [
+        {
+          "id": "r0186",
+          "w": "shower",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0187",
+      "concept": "The atenashi paper silverfish sinks up to its neck in foam inside a freestanding clawfoot tub.",
+      "words": [
+        {
+          "id": "r0187",
+          "w": "bath",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0188",
+      "concept": "The atenashi paper silverfish serves an evening roast at a table laid for guests with a candlestick at the center.",
+      "words": [
+        {
+          "id": "r0188",
+          "w": "dinner",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0189",
+      "concept": "The atenashi paper silverfish tightens a bolt on a cracked hanging sign until the two pieces fit together.",
+      "words": [
+        {
+          "id": "r0189",
+          "w": "repair",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0190",
+      "concept": "The atenashi paper silverfish opens its own numbered door onto a cutaway unit with a sofa and tiny kitchenette inside.",
+      "words": [
+        {
+          "id": "r0190",
+          "w": "apartment",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0191",
+      "concept": "The atenashi paper silverfish wears a camera around its neck and consults a sightseeing map printed with landmark icons.",
+      "words": [
+        {
+          "id": "r0191",
+          "w": "tourist",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0192",
+      "concept": "The atenashi paper silverfish takes a diner's order beside a laid table while wearing a waiter's apron and holding a small pad.",
+      "words": [
+        {
+          "id": "r0192",
+          "w": "restaurant",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0193",
+      "concept": "The atenashi paper silverfish rides a ferry model with its suitcase beside a long dotted route on a folded chart.",
+      "words": [
+        {
+          "id": "r0193",
+          "w": "travel",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0194",
+      "concept": "The atenashi paper silverfish carries a suitcase and presents a passport while stepping from one flag marker toward a different flag.",
+      "words": [
+        {
+          "id": "r0194",
+          "w": "abroad",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0195",
+      "concept": "The atenashi paper silverfish studies a fossil mounted in a glass exhibit case with a small specimen plaque.",
+      "words": [
+        {
+          "id": "r0195",
+          "w": "museum",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0196",
+      "concept": "The atenashi paper silverfish holds up one claw and watches the marked hand of a stopwatch sweep through one sixty-second interval.",
+      "words": [
+        {
+          "id": "r0196",
+          "w": "minute",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0197",
+      "concept": "The atenashi paper silverfish stands beside a miniature station entrance with a rail emblem, departure board and ticket window.",
+      "words": [
+        {
+          "id": "r0197",
+          "w": "station",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0198",
+      "concept": "The atenashi paper silverfish reaches up to adjust the hands on a large round analog clock.",
+      "words": [
+        {
+          "id": "r0198",
+          "w": "clock",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0199",
+      "concept": "The atenashi paper silverfish leans out of the first of several bumper-to-bumper cars lined up behind a traffic light.",
+      "words": [
+        {
+          "id": "r0199",
+          "w": "traffic",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0200",
+      "concept": "The atenashi paper silverfish runs a claw along one highlighted line with turns between two pins on a simple street map.",
+      "words": [
+        {
+          "id": "r0200",
+          "w": "route",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0201",
+      "concept": "The atenashi paper silverfish wears a matching jersey and joins its teammates in a tight pregame huddle.",
+      "words": [
+        {
+          "id": "r0201",
+          "w": "team",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0202",
+      "concept": "The atenashi paper silverfish places a food parcel in a donation basket and helps hand supplies to a family.",
+      "words": [
+        {
+          "id": "r0202",
+          "w": "charity",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0203",
+      "concept": "The atenashi paper silverfish steps back cautiously from an unfamiliar figure offering a handshake.",
+      "words": [
+        {
+          "id": "r0203",
+          "w": "stranger",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0204",
+      "concept": "The atenashi paper silverfish wears a tall cook's hat and tastes from a ladle over a simmering galley pot.",
+      "words": [
+        {
+          "id": "r0204",
+          "w": "cook",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0205",
+      "concept": "The atenashi paper silverfish inspects an old broad-hulled cargo steamer model with a riveted hull and rust-streaked funnel.",
+      "words": [
+        {
+          "id": "r0205",
+          "w": "vessel",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0206",
+      "concept": "The atenashi paper silverfish hauls a rope to unfurl a broad triangular canvas sail on a detached mast.",
+      "words": [
+        {
+          "id": "r0206",
+          "w": "sail",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0207",
+      "concept": "The atenashi paper silverfish holds up a snapshot as an earlier event reappears in a thought bubble with the same figures clearly recognizable.",
+      "words": [
+        {
+          "id": "r0207",
+          "w": "memory",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0208",
+      "concept": "The atenashi paper silverfish sleeps on a pillow with a fantastical scene of itself riding a fish inside a dream bubble.",
+      "words": [
+        {
+          "id": "r0208",
+          "w": "dream",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0209",
+      "concept": "The atenashi paper silverfish stands at the bow of a large ocean liner prop with rows of portholes glowing in the night.",
+      "words": [
+        {
+          "id": "r0209",
+          "w": "ship",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0210",
+      "concept": "The atenashi paper silverfish grins as it sets out with a compass and a pack toward a question mark on a treasure map.",
+      "words": [
+        {
+          "id": "r0210",
+          "w": "adventure",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0211",
+      "concept": "The atenashi paper silverfish claps both claws over its ears beside a blaring speaker with jagged sound waves.",
+      "words": [
+        {
+          "id": "r0211",
+          "w": "noise",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0212",
+      "concept": "The atenashi paper silverfish carries a lamp along a cutaway strip of corridor between repeated doorframes receding in a row.",
+      "words": [
+        {
+          "id": "r0212",
+          "w": "hall",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0213",
+      "concept": "The atenashi paper silverfish uses a dolly to move a chair with a small chest of drawers and a table grouped beside it.",
+      "words": [
+        {
+          "id": "r0213",
+          "w": "furniture",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0214",
+      "concept": "The atenashi paper silverfish hands a frowning clerk a written grievance marked with a crossed-out loudspeaker.",
+      "words": [
+        {
+          "id": "r0214",
+          "w": "complaint",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0215",
+      "concept": "The atenashi paper silverfish holds one claw to its lips as a companion reads peacefully beside it.",
+      "words": [
+        {
+          "id": "r0215",
+          "w": "quiet",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0216",
+      "concept": "The atenashi paper silverfish holds up a magnified footprint that matches the sole of a boot beside it.",
+      "words": [
+        {
+          "id": "r0216",
+          "w": "evidence",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0217",
+      "concept": "The atenashi paper silverfish marches with two neighbors holding raised placards and wearing determined expressions.",
+      "words": [
+        {
+          "id": "r0217",
+          "w": "protest",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0218",
+      "concept": "The atenashi paper silverfish picks up a letter from its own numbered mailbox while holding the key to the matching door.",
+      "words": [
+        {
+          "id": "r0218",
+          "w": "resident",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0219",
+      "concept": "The atenashi paper silverfish waves two groups inward until they converge around one meeting table.",
+      "words": [
+        {
+          "id": "r0219",
+          "w": "gather",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0220",
+      "concept": "The atenashi paper silverfish joins neighbors in placing their house tokens around one shared town hall token.",
+      "words": [
+        {
+          "id": "r0220",
+          "w": "community",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0221",
+      "concept": "The atenashi paper silverfish compares unfamiliar coins and banknotes bearing a foreign emblem at a cash exchange tray.",
+      "words": [
+        {
+          "id": "r0221",
+          "w": "currency",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0222",
+      "concept": "The atenashi paper silverfish pulls open the curtains on a miniature theater stage framed by rows of empty seats.",
+      "words": [
+        {
+          "id": "r0222",
+          "w": "theater",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0223",
+      "concept": "The atenashi paper silverfish wears a striped uniform and grips the bars of a locked cell door.",
+      "words": [
+        {
+          "id": "r0223",
+          "w": "prison",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0224",
+      "concept": "The atenashi paper silverfish shakes its head and crosses its claws as an accuser points at it beside a broken vase.",
+      "words": [
+        {
+          "id": "r0224",
+          "w": "deny",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0225",
+      "concept": "The atenashi paper silverfish takes a purchase home while the shopkeeper writes the amount owed in a ledger and leaves the till shut.",
+      "words": [
+        {
+          "id": "r0225",
+          "w": "credit",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0226",
+      "concept": "The atenashi paper silverfish presses a stamp into a soft wax seal on the flap of a letter.",
+      "words": [
+        {
+          "id": "r0226",
+          "w": "seal",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0227",
+      "concept": "The atenashi paper silverfish holds up a top-rating card and smiles proudly as its crew completes a precise maneuver together.",
+      "words": [
+        {
+          "id": "r0227",
+          "w": "excellent",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0228",
+      "concept": "The atenashi paper silverfish sets a heavy bag on a scale and squints at the swinging needle.",
+      "words": [
+        {
+          "id": "r0228",
+          "w": "weigh",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0229",
+      "concept": "The atenashi paper silverfish holds an official sheet upright displaying neat fields, a signature and an embossed seal.",
+      "words": [
+        {
+          "id": "r0229",
+          "w": "document",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0230",
+      "concept": "The atenashi paper silverfish pinches the corner of a large completely blank sheet so its thin edge curls into view.",
+      "words": [
+        {
+          "id": "r0230",
+          "w": "paper",
+          "tint": 0
+        }
+      ],
+      "species": "atenashi"
+    },
+    {
+      "g": "r0231",
+      "concept": "The oshimi paper silverfish places one foot in front of the other along a narrow strip of stepping stones between two tufts.",
+      "words": [
+        {
+          "id": "r0231",
+          "w": "path",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0232",
+      "concept": "The oshimi paper silverfish freezes with wide eyes and grips the edge just as a cracked ledge crumbles below its feet.",
+      "words": [
+        {
+          "id": "r0232",
+          "w": "danger",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0233",
+      "concept": "The oshimi paper silverfish consults a freestanding weather board crowded with rain, wind and storm icons.",
+      "words": [
+        {
+          "id": "r0233",
+          "w": "weather",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0234",
+      "concept": "The oshimi paper silverfish leans forward and plants a claw on a sharply tilted ramp to keep from sliding back.",
+      "words": [
+        {
+          "id": "r0234",
+          "w": "slope",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0235",
+      "concept": "The oshimi paper silverfish plants a small flag atop a rounded knoll shown as a freestanding cutaway mound.",
+      "words": [
+        {
+          "id": "r0235",
+          "w": "hill",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0236",
+      "concept": "The oshimi paper silverfish tips one soaked lace-up shoe to let water drip from its toe.",
+      "words": [
+        {
+          "id": "r0236",
+          "w": "shoe",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0237",
+      "concept": "The oshimi paper silverfish taps a shiny metal door panel to make it ring, showing exposed metallic edges and rivets.",
+      "words": [
+        {
+          "id": "r0237",
+          "w": "metal",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0238",
+      "concept": "The oshimi paper silverfish opens a bank account ledger with its name line filled and slides in its first deposit.",
+      "words": [
+        {
+          "id": "r0238",
+          "w": "account",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0239",
+      "concept": "The oshimi paper silverfish places a steady claw on a frightened friend's shoulder and gestures toward the secure safety buckle.",
+      "words": [
+        {
+          "id": "r0239",
+          "w": "assure",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0240",
+      "concept": "The oshimi paper silverfish strikes a thick steel rail sample with a hammer, sending sparks from its hard machined edge.",
+      "words": [
+        {
+          "id": "r0240",
+          "w": "steel",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0241",
+      "concept": "The oshimi paper silverfish grabs its scarf as a gust whips it sideways and blows loose pages away.",
+      "words": [
+        {
+          "id": "r0241",
+          "w": "wind",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0242",
+      "concept": "The oshimi paper silverfish receives a small coin purse from the keeper after returning a lost key.",
+      "words": [
+        {
+          "id": "r0242",
+          "w": "reward",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0243",
+      "concept": "The oshimi paper silverfish huddles in a coat with worn patches beside an empty cupboard and a bare coin purse.",
+      "words": [
+        {
+          "id": "r0243",
+          "w": "poverty",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0244",
+      "concept": "The oshimi paper silverfish floats a paper boat on a shallow tray of water as smooth as glass and rests both claws peacefully on the rim.",
+      "words": [
+        {
+          "id": "r0244",
+          "w": "calm",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0245",
+      "concept": "The oshimi paper silverfish cranes its neck at a tall narrow tower model and reaches up to point to the tiny lookout at the top.",
+      "words": [
+        {
+          "id": "r0245",
+          "w": "tower",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0246",
+      "concept": "The oshimi paper silverfish leans toward a portable radio and turns the tuning knob beneath its long antenna.",
+      "words": [
+        {
+          "id": "r0246",
+          "w": "radio",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0247",
+      "concept": "The oshimi paper silverfish kneels on a cutaway panel of bare wooden floorboards and polishes one plank.",
+      "words": [
+        {
+          "id": "r0247",
+          "w": "floor",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0248",
+      "concept": "The oshimi paper silverfish sits still with another creature while an hourglass drains between their closed mouths.",
+      "words": [
+        {
+          "id": "r0248",
+          "w": "silence",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0249",
+      "concept": "The oshimi paper silverfish unrolls a rich red carpet with a fringed edge, revealing its soft pile.",
+      "words": [
+        {
+          "id": "r0249",
+          "w": "carpet",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0250",
+      "concept": "The oshimi paper silverfish jerks back and spills tea as a jack-in-the-box springs open in front of it.",
+      "words": [
+        {
+          "id": "r0250",
+          "w": "sudden",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0251",
+      "concept": "The oshimi paper silverfish slouches in a chair with feet up while a pile of unfinished work sits within reach.",
+      "words": [
+        {
+          "id": "r0251",
+          "w": "lazy",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0252",
+      "concept": "The oshimi paper silverfish pats a worker on the back and points approvingly to the neatly completed work.",
+      "words": [
+        {
+          "id": "r0252",
+          "w": "praise",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0253",
+      "concept": "The oshimi paper silverfish claps from the front of several rows of seated spectators all facing the same direction.",
+      "words": [
+        {
+          "id": "r0253",
+          "w": "audience",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0254",
+      "concept": "The oshimi paper silverfish acts out an anguished farewell in costume while a fellow actor brandishes an oar as a stage prop.",
+      "words": [
+        {
+          "id": "r0254",
+          "w": "drama",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0255",
+      "concept": "The oshimi paper silverfish straightens a framed painting on a freestanding gallery panel next to other exhibited pictures.",
+      "words": [
+        {
+          "id": "r0255",
+          "w": "gallery",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0256",
+      "concept": "The oshimi paper silverfish polishes a tarnished silver spoon to reveal a bright cool sheen on one half.",
+      "words": [
+        {
+          "id": "r0256",
+          "w": "silver",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0257",
+      "concept": "The oshimi paper silverfish loops a friendship ribbon into an infinity sign around its own claw and a friend's.",
+      "words": [
+        {
+          "id": "r0257",
+          "w": "forever",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0258",
+      "concept": "The oshimi paper silverfish presses the send button on a message with an envelope icon on its laptop.",
+      "words": [
+        {
+          "id": "r0258",
+          "w": "email",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0259",
+      "concept": "The oshimi paper silverfish presses a button on a clock with large segmented digits lighting up on its screen.",
+      "words": [
+        {
+          "id": "r0259",
+          "w": "digital",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0260",
+      "concept": "The oshimi paper silverfish lowers its head and hides its flushed face behind both claws as its broken promise card falls to the ground.",
+      "words": [
+        {
+          "id": "r0260",
+          "w": "ashamed",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0261",
+      "concept": "The oshimi paper silverfish reports for an assigned watch with a solemn expression and a signed duty roster in its claw.",
+      "words": [
+        {
+          "id": "r0261",
+          "w": "obligation",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0262",
+      "concept": "The oshimi paper silverfish chisels a permanent mark into a thick stone plaque and brushes the dust out of the deep groove.",
+      "words": [
+        {
+          "id": "r0262",
+          "w": "permanent",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0263",
+      "concept": "The oshimi paper silverfish clutches a cut purse strap and points to its emptied pouch while giving a theft report.",
+      "words": [
+        {
+          "id": "r0263",
+          "w": "victim",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0264",
+      "concept": "The oshimi paper silverfish raises two maritime signal flags in a precise pose toward a tiny ship prop.",
+      "words": [
+        {
+          "id": "r0264",
+          "w": "signal",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0265",
+      "concept": "The oshimi paper silverfish holds its growling belly and stares longingly at an empty plate.",
+      "words": [
+        {
+          "id": "r0265",
+          "w": "hunger",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0266",
+      "concept": "The oshimi paper silverfish reaches eagerly for a glass of water with a dry tongue out and beads of sweat on its face.",
+      "words": [
+        {
+          "id": "r0266",
+          "w": "thirst",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0267",
+      "concept": "The oshimi paper silverfish wrings its claws while eyeing a thought bubble of an overdue boat and glancing at a clock.",
+      "words": [
+        {
+          "id": "r0267",
+          "w": "worry",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0268",
+      "concept": "The oshimi paper silverfish compares two dated price tags on the same basket of groceries and holds up many more coins for the later price.",
+      "words": [
+        {
+          "id": "r0268",
+          "w": "inflation",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0269",
+      "concept": "The oshimi paper silverfish stands with a closed tool bag in a line of job seekers at a counter displaying empty vacancy slots.",
+      "words": [
+        {
+          "id": "r0269",
+          "w": "unemployment",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0270",
+      "concept": "The oshimi paper silverfish reels backward wide-eyed as a startling letter slips out of its claws.",
+      "words": [
+        {
+          "id": "r0270",
+          "w": "shock",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0271",
+      "concept": "The oshimi paper silverfish taps its temple and smiles as it recognizes the wrapped gift pictured in a thought bubble.",
+      "words": [
+        {
+          "id": "r0271",
+          "w": "remember",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0272",
+      "concept": "The oshimi paper silverfish walks shoulder to shoulder with a close friend as they share one long knitted scarf.",
+      "words": [
+        {
+          "id": "r0272",
+          "w": "friendship",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0273",
+      "concept": "The oshimi paper silverfish clasps both claws over its heart and smiles warmly at the friend who mended its coat.",
+      "words": [
+        {
+          "id": "r0273",
+          "w": "grateful",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0274",
+      "concept": "The oshimi paper silverfish removes its cap and bows its head to an elder holding a staff.",
+      "words": [
+        {
+          "id": "r0274",
+          "w": "respect",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0275",
+      "concept": "The oshimi paper silverfish places both claws over a kneeling keeper's head in a solemn blessing.",
+      "words": [
+        {
+          "id": "r0275",
+          "w": "bless",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0276",
+      "concept": "The oshimi paper silverfish reads an open classic with a stack of varied novels, plays and verse volumes by its elbow.",
+      "words": [
+        {
+          "id": "r0276",
+          "w": "literature",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0277",
+      "concept": "The oshimi paper silverfish arranges word tiles into a sentence and links the matching subject and verb with chalk marks.",
+      "words": [
+        {
+          "id": "r0277",
+          "w": "grammar",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0278",
+      "concept": "The oshimi paper silverfish pens a short poem with staggered line lengths and a small illustration of its subject in the margin.",
+      "words": [
+        {
+          "id": "r0278",
+          "w": "poem",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0279",
+      "concept": "The oshimi paper silverfish practices a greeting with a partner while matching equivalent greetings on two differently scripted flashcards.",
+      "words": [
+        {
+          "id": "r0279",
+          "w": "language",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    },
+    {
+      "g": "r0280",
+      "concept": "The oshimi paper silverfish jogs with an energetic grin holding a water bottle beside a small balanced meal and a steady heart symbol.",
+      "words": [
+        {
+          "id": "r0280",
+          "w": "healthy",
+          "tint": 0
+        }
+      ],
+      "species": "oshimi"
+    }
+  ]
+}

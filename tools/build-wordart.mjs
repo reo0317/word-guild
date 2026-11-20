@@ -5,10 +5,10 @@ import {fileURLToPath} from 'node:url';
 export async function buildWordart(root = new URL('../', import.meta.url)) {
   const source = new URL('data/work/wordart/', root);
   const result = {};
-  for (const name of (await readdir(source)).filter(n => /^groups-ch\d+\.json$/.test(n)).sort()) {
+  for (const name of (await readdir(source)).filter(n => /^groups-(ch\d+|rare)\.json$/.test(n)).sort()) {
     const {groups} = JSON.parse(await readFile(new URL(name, source), 'utf8'));
     for (const {g, words} of groups) {
-      if (!/^c[1-9]\d*-\d+(-[a-z])?$/.test(g)) throw new Error(`Invalid group: ${g}`);
+      if (!/^(?:c[1-9]\d*-\d+(-[a-z])?|r\d{4})$/.test(g)) throw new Error(`Invalid group: ${g}`);
       try { await access(new URL(`products/word-guild/art/word/${g}.webp`, root)); }
       catch (error) { if (error.code === 'ENOENT') continue; throw error; }
       for (const {id, tint} of words) {
