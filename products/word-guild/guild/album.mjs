@@ -210,8 +210,8 @@ function stampWithMark(word, spec, state, base, size) {
 }
 
 // 切手の拡大表示（切手帳と結果画面で共通）。host の中に重ねて出し、閉じる関数を返す。
-// opts: {word, spec, state, box, base, say, met（影でも語を見せるとき true）, lineHtml（その語を含む行。無ければ出さない）, sourceStamp（拡大元の切手）, onClose}
-export function showStampZoom(host, {word, spec, state, box = 0, base = BASE, say = defaultSpeak, met = state !== 'shadow', lineHtml = '', sourceStamp, onClose}) {
+// opts: {word, spec, state, box, base, say, met（影でも語を見せるとき true）, lineHtml（その語を含む行。無ければ出さない）, onClose}
+export function showStampZoom(host, {word, spec, state, box = 0, base = BASE, say = defaultSpeak, met = state !== 'shadow', lineHtml = '', onClose}) {
   ensureCss();
   // 画面内に同じ ID の defs を置くと、閉じた後も Safari が削除済み定義を参照する。
   ensureDefs(charaDefs(base));
@@ -230,11 +230,6 @@ export function showStampZoom(host, {word, spec, state, box = 0, base = BASE, sa
       <p class="gq-stars" aria-label="習熟度 ${box}">${starsMarkup(box)}</p>${ex}${lineHtml}`
       : '<h2>？</h2>'}
     <div class="gq-zoom-actions">${met ? fab({icon: 'speaker', label: '発音', caption: false, attrs: 'data-act="say"'}) : ''}${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}</div></div>`;
-  const bounds = sourceStamp?.getBoundingClientRect();
-  if (bounds?.width && bounds.height) {
-    overlay.querySelector('.gq-zoom-stamp').style.setProperty(
-      '--stamp-ratio', `${bounds.width} / ${bounds.height}`);
-  }
   let open = true;
   const close = () => {
     if (!open) return;
@@ -440,11 +435,11 @@ export function openAlbum(container, deps = {}) {
         <div class="gq-album-body gq-night-pages">${group.pages.map(page => `<section class="gq-night-row"><h3>${esc(stageName(page.shelf))}</h3><div class="gq-night-sheet">${page.words.map(word => stampWithMark(word, charaSpec(word, tags[word.id] ?? '', {rare: true}), stampState(progress.rares?.[word.id]), base, 'sm')).join('')}</div>${psOf(page.shelf)}</section>`).join('')}</div>`;
     }
 
-    function zoomRare(id, sourceStamp) {
+    function zoomRare(id) {
       const word = rares.find(w => w.id === id);
       if (!word) return;
       const close = showStampZoom(container, {word, spec: charaSpec(word, tags[id] ?? '', {rare: true}),
-        state: stampState(progress.rares?.[id]), box: progress.rares?.[id]?.box ?? 0, base, say, sourceStamp,
+        state: stampState(progress.rares?.[id]), box: progress.rares?.[id]?.box ?? 0, base, say,
         onClose: () => { const i = cleanups.indexOf(close); if (i >= 0) cleanups.splice(i, 1); }});
       cleanups.push(close);
     }
@@ -459,7 +454,7 @@ export function openAlbum(container, deps = {}) {
       // 拡大前の一覧のスクロール位置を保つ。
     }
 
-    function zoom(id, sourceStamp) {
+    function zoom(id) {
       const word = words.find(w => w.id === id);
       if (!word) return;
       const page = pages.find(p => p.shelf === word.shelf);
@@ -471,7 +466,7 @@ export function openAlbum(container, deps = {}) {
         return at < 0 ? '' : charaSvg(specs[at], {state, ward: page.ch, base});
       };
       const close = showStampZoom(container, {
-        word, spec, base, say, sourceStamp,
+        word, spec, base, say,
         state: stampState(progress.words?.[word.id]),
         box: progress.words?.[word.id]?.box ?? 0,
         lineHtml: wordLineHtml(letter, id, {face}),
@@ -508,15 +503,15 @@ export function openAlbum(container, deps = {}) {
       if (cell) { index = clampIndex(pages.findIndex(p => p.shelf === Number(cell.dataset.shelf)), pages.length); return renderPage(); }
       if (container.querySelector('.gq-zoom')) return;
       if (target.closest('.gq-album-letter')) {
-        handleLetterClick(event, {say, onWord: id => zoom(id)});
+        handleLetterClick(event, {say, onWord: zoom});
         return;
       }
-      const stamp = target.closest('.stamp[data-id]');
-      if (stamp && view === 'page') zoom(stamp.dataset.id, stamp);
-      if (stamp && view === 'night') zoomRare(stamp.dataset.id, stamp);
+      const stamp = target.closest('.stamp[data-id], [data-id]');
+      if (stamp && view === 'page') zoom(stamp.dataset.id);
+      if (stamp && view === 'night') zoomRare(stamp.dataset.id);
       if (stamp && view === 'stamps' && !stamp.classList.contains('s-shadow')) {
-        if (rares.some(word => word.id === stamp.dataset.id)) zoomRare(stamp.dataset.id, stamp);
-        else zoom(stamp.dataset.id, stamp);
+        if (rares.some(word => word.id === stamp.dataset.id)) zoomRare(stamp.dataset.id);
+        else zoom(stamp.dataset.id);
       }
     };
     container.onkeydown = event => {
