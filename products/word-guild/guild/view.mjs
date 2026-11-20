@@ -14,7 +14,7 @@ import {charaSpec, pageSpecs, stampState as rawStampState} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {rollDaily} from './daily.mjs';
 import {onUpdateReady, applyUpdate} from './pwa.mjs';
-import {esc, speak, prepareSpeech, setSpeechEnabled, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, waxButton, helpButton, icon,
+import {esc, speak, prepareSpeech, setSpeechEnabled, starsMarkup, loadStyle, reducedMotion, ensureDefs, fab, mapButton, bindMapButtonImages, waxButton, helpButton, icon,
   ensureLetterCss, letterHtml, lineBody, lampRing, deliveryLetter, deliveryLineLights, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
 import {showStampZoom, ensureCss as ensureAlbumCss, sceneFor, gateCard, newlyOpenedGate, playOptionalCinema, showPaperCard, sceneCardHtml, blankCardHtml, postscriptHtml, handlePostscriptClick} from './album.mjs';
 import {renderMap, dailyBrief, bindInfo} from './map.mjs';
@@ -205,7 +205,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     pop.className = 'gq-pop';
     pop.setAttribute('role', 'dialog');
     pop.setAttribute('aria-modal', 'true');
-    pop.innerHTML = `<div class="gq-pop-card"><div class="gq-pop-letter">${letterHtml(letter, {face: faceOf, shadowLines: shadowLinesOf(letter), lit: lamp?.lit === lamp?.total})}${ps ? postscriptHtml(ps) : ''}</div>
+    pop.innerHTML = `<div class="gq-pop-card"><div class="gq-pop-letter">${letterHtml(letter, {face: faceOf, shadowLines: shadowLinesOf(letter), lit: lamp?.lit === lamp?.total, signed: true})}${ps ? postscriptHtml(ps) : ''}</div>
       <div class="gq-pop-footer">${lamp?.done ? `<div class="gq-night-shadows" aria-label="まれびとの切手">${nightStamps}</div>` : ''}
       <div class="gq-pop-acts">${lamp?.done ? waxButton({label: '再配達', id: 'gq-return', cls: 'return'}) : ''}${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}${fab({icon: 'album', label: '切手帳', attrs: 'data-act="album"'})}</div></div></div>`;
     const close = () => { pop.remove(); if (popEl === pop) popEl = null; };
@@ -988,7 +988,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
           <div id="gq-env-sec" hidden></div>
         </section>` : ''}
         <section class="gq-res-sec" style="--d:${stampDelay}s">
-          <ul class="gq-stamps${lvStart ? ' mini' : ''}" aria-label="今回の切手">${stamps.join('') || '<li class="empty" aria-label="答えた語はありません">－</li>'}</ul>
+          <ul class="gq-stamps" aria-label="今回の切手">${stamps.join('') || '<li class="empty" aria-label="答えた語はありません">－</li>'}</ul>
         </section>
         ${lvStart ? '' : pageAndRoad(before, after, outcome, changedByShelf, stamps.length, lamps)}
         <section class="gq-res-sec gq-res-last" style="--d:${lvStart ? 0.6 : 0.1 + 0.07 * stamps.length + 2.6}s">
@@ -1004,11 +1004,12 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         </section>
       </div>
       <div class="gq-dock gq-result-dock">
-        ${fab({icon: returning ? 'next' : 'home', label: returning ? 'つぎの石段へ' : 'トップへ', attrs: 'id="gq-guild"'})}
+        ${returning ? fab({icon: 'next', label: 'つぎの石段へ', attrs: 'id="gq-guild"'}) : mapButton({kind: 'title', label: 'トップへ', id: 'gq-guild'})}
         ${waxButton({label: primary, id: 'gq-again', cls: !returning && after.fog ? 'fog' : ''})}
-        ${fab({icon: 'album', label: '切手帳', attrs: 'id="gq-album"'})}
+        ${mapButton({kind: 'album', label: '切手帳', id: 'gq-album'})}
         ${nextGate && !gateNext ? fab({icon: 'gate', label: `${nextGate.ch}区の門`, cls: 'glow', attrs: 'id="gq-gate"'}) : ''}
       </div>`;
+    bindMapButtonImages(view);
     bindInfo(view, daily);
     $('#gq-again').onclick = () => returning ? showMap() : (after.fog || !nextGate ? startQuest() : startQuest({gate: nextGate.ch}));
     $('#gq-guild').onclick = returning ? () => startQuest() : showMap;
@@ -1129,7 +1130,21 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     stopSession();
     setScreen('guild');
     view.className = 'gq gq-home';
-    view.innerHTML = '<p class="eyebrow">霧晴れ郵便局</p><p class="gq-loading">局の帳簿を開いています…</p>';
+    view.innerHTML = `<div class="gq-loading" role="status">
+      <p class="eyebrow">霧晴れ郵便局</p>
+      <svg viewBox="0 0 120 100" aria-hidden="true" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round">
+        <rect x="19" y="43" width="82" height="48" rx="4" fill="#e5cba3"/>
+        <path class="gq-load-flap" d="M20 44 60 69 100 44Z" fill="#efd9b5"/>
+        <g class="gq-load-sheet">
+          <rect x="32" y="43" width="56" height="36" rx="2" fill="#fff9e9"/>
+          <path d="M42 52h36m-36 7h29" fill="none" stroke="#99856b"/>
+        </g>
+        <path d="M20 44 60 70 100 44V87a4 4 0 0 1-4 4H24a4 4 0 0 1-4-4Z" fill="#efd9b5"/>
+        <path d="m22 88 25-26m51 26L73 62" fill="none"/>
+        <circle cx="60" cy="72" r="6" fill="var(--seal)"/>
+      </svg>
+      <p>よみこみ中</p>
+    </div>`;
     try {
       words ??= await loadWords();
       const rareResponse = await fetch(new URL('../data/rare.json', import.meta.url));

@@ -128,3 +128,8 @@
 .gq-stamp-shelf:has(> .gq-sheet:empty){min-height:min(121vw,540px)} /* 描く前だけ高さを仮置き */
 .gq-stamp-shelf{padding-top:16px} /* 街灯ごとの見出しは出さず、すき間だけ空ける */
 .gq-collected-sheet .stamp:disabled{cursor:default}
+
+.gq-settings .gs-speech{gap:5px}
+.gs-speech details{font-size:12px;line-height:1.5}
+.gs-speech summary{width:fit-content;cursor:pointer}
+.gs-speech details p{margin-top:4px}

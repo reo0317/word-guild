@@ -18,7 +18,7 @@ import {STORAGE_KEY, exportText, importText, saveProgress, backupProgress, resto
 import {todayNumber} from './srs.mjs';
 import {isStandalone, onUpdateReady, applyUpdate} from './pwa.mjs';
 import {renderCredits} from './library.mjs';
-import {esc, setSpeechEnabled, waxButton} from './dom.mjs';
+import {esc, setSpeechEnabled, watchSpeechVoice, waxButton} from './dom.mjs';
 
 const SOUND_KEY = 'kiriharePost.sound';
 const CSS_URL = new URL('../album.css', import.meta.url).href;
@@ -61,7 +61,7 @@ export function openSettings(container, deps = {}) {
   let updateReady = false;
   const off = onUpdateReady(() => { if (!closed && container.isConnected) { updateReady = true; paintUpdate(); } });
   let child = null; // クレジットから戻って開き直した設定
-  const release = () => { closed = true; off(); };
+  const release = () => { closed = true; off(); offVoice(); };
   const handle = {close() { handle.dead = true; release(); child?.close(); child = null; container.innerHTML = ''; }};
 
   const back = () => { handle.close(); deps.back?.(); };
@@ -74,7 +74,10 @@ export function openSettings(container, deps = {}) {
   container.innerHTML = `
     <p class="eyebrow">設定</p>
     <section><div class="gq-switch"><h3>曲と効果音</h3><button type="button" class="gs-toggle" aria-label="曲と効果音" id="gs-sound" aria-pressed="${soundOn}"></button></div></section>
-    <section><div class="gq-switch"><h3>読みあげ</h3><button type="button" class="gs-toggle" aria-label="読みあげ" id="gs-speech" aria-pressed="${progress.settings.speech !== false}">${progress.settings.speech !== false ? 'オン' : 'オフ'}</button></div></section>
+    <section class="gs-speech"><div class="gq-switch"><h3>読みあげ</h3><button type="button" class="gs-toggle" aria-label="読みあげ" id="gs-speech" aria-pressed="${progress.settings.speech !== false}">${progress.settings.speech !== false ? 'オン' : 'オフ'}</button></div>
+      <p class="note" id="gs-voice"></p>
+      <details><summary>iPhoneで声を追加</summary><p>設定 → アクセシビリティ → 読み上げコンテンツ → 声 → English で Enhanced／Premium の声を追加すると、より自然に聞こえます。</p></details>
+    </section>
     <section><h3>新出語数</h3><div class="gs-fresh" role="group" aria-label="新出語数">${[[4,'🌱 すくなめ'],[6,'🌿 ふつう'],[8,'🌳 たくさん']].map(([n,label]) => `<button type="button" class="gs-ticket" data-fresh="${n}" aria-pressed="${progress.settings.fresh === n}">${label}</button>`).join('')}</div></section>
     <section><h3>保存の書き出し</h3>
       <p class="note">最後に書き出した日：<span id="gs-exday">${esc(exportDay())}</span></p>
@@ -92,6 +95,8 @@ export function openSettings(container, deps = {}) {
       ${deps.dev ? '<p class="note">保存しないモードです。</p>' : ''}</details>
     <section id="gs-update" hidden><p>新しい版があります。</p><div class="row">${waxButton({label: '更新', id: 'gs-apply'})}</div></section>
     <div class="row gs-footer"><button class="text-button" type="button" id="gs-credits">クレジット</button><button class="text-button" type="button" id="gs-back">トップへ</button></div>`;
+
+  const offVoice = watchSpeechVoice(name => { $('#gs-voice').textContent = name ?? '端末の既定音声'; });
 
   $('#gs-export').disabled = Boolean(deps.dev);
   $('#gs-copy').disabled = true;

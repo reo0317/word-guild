@@ -19,7 +19,7 @@ import {visitors, rareStatus} from './rare.mjs';
 //   ctx.on        {go, gate, lamp, album, settings, title, notice}
 //
 // 遠近：スクロール量をカメラの前進距離として、同じ世界座標の道を投影し直す。
-import {esc, fab, mapButton, waxButton, miniHouse} from './dom.mjs';
+import {esc, fab, mapButton, bindMapButtonImages, waxButton, miniHouse} from './dom.mjs';
 import {artBox, HOUSE_ART} from './art.mjs';
 import {streakNow, DAILY_TEXT} from './daily.mjs';
 import {HEAVY_DUE} from './srs.mjs';
@@ -404,7 +404,9 @@ export function renderMap(view, ctx) {
   // 1区の手前の郵便局。押すと「はじまりの物語」を見返せる。
   const post = bb('gq-bb-post', 14, 0, `<div class="gq-post" role="button" tabindex="0" data-story aria-label="郵便局：はじまりの物語を見る"><img class="gq-post-art" src="art/post-front.webp" alt="" width="256" height="256" decoding="async">
     <div class="gq-guide">${artBox('hatoriSmile', 'gq-face-hatori')}${map.dueCount ? `<span class="gq-due-badge" aria-label="戻ってきた紙魚 ${map.dueCount} 匹"><b>${map.dueCount}</b></span>` : ''}</div></div>`);
-  const lighthouse = bb('gq-bb-top', roadEnd, 0, `<div class="gq-top-block" role="img" aria-label="道の終点の灯台">${night.complete ? '<span class="gq-full-stars" aria-label="夜の切手がすべてそろいました">✦ ⋆ ✧ ⋆ ✦</span>' : ''}<i class="gq-lighthouse-beam" aria-hidden="true"></i><img src="art/lighthouse.webp" data-lighthouse alt="" width="600" height="600" decoding="async"></div>`);
+  const lighthouse = bb('gq-bb-top', roadEnd, 0, `<div class="gq-top-block" role="img" aria-label="道の終点の灯台">${night.complete ? '<span class="gq-full-stars" aria-label="夜の切手がすべてそろいました">✦ ⋆ ✧ ⋆ ✦</span>' : ''}<img src="art/lighthouse.webp" data-lighthouse alt="" width="600" height="600" decoding="async"></div>`);
+  // 灯台と同じ座標に光を置き、霧より前の層で描く。
+  const lighthouseLight = bb('gq-bb-light', roadEnd, 0, '<div class="gq-top-block" aria-hidden="true"><i class="gq-lighthouse-beam"></i><i class="gq-lighthouse-lamp"></i></div>');
 
   const skies = [...new Set(map.wards.map(w => w.ch))].map(ch => `<div class="gq-sky-art" data-ward="${ch}">${artBox(`ward${Math.min(ch, 6)}`, 'gq-sky-img')}${night.wards[ch]?.complete ? constellation(ch) : ''}</div>`).join('');
   // カメラの先にある区を調べるための、区ごとの始まりの y
@@ -441,7 +443,7 @@ export function renderMap(view, ctx) {
           <path class="base" id="gq-r-base"/><path class="lines" id="gq-r-lines"/><path class="walked" id="gq-r-walked"/>
           <path class="edge" id="gq-r-edge"/><path class="center" id="gq-r-center"/>
         </svg>
-        ${nodes}${herePanel}${post}${lighthouse}
+        ${nodes}${herePanel}${post}${lighthouse}${lighthouseLight}
         ${map.fog ? `<span class="gq-fog-count" role="button" tabindex="0">${'<i></i>'.repeat(Math.min(6, Math.ceil(map.dueCount / 9)))}霧が晴れるまで 紙魚あと${Math.max(1, map.dueCount - HEAVY_DUE + 1)}匹</span><i class="gq-fogband" aria-hidden="true" style="--d:${fogDensity.toFixed(2)}"></i>` : ''}
       </div>
     </div></div>
@@ -468,12 +470,7 @@ export function renderMap(view, ctx) {
     storyDoor.onclick = openStory;
     storyDoor.onkeydown = event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openStory(); } };
   }
-  for (const img of view.querySelectorAll('[data-map-button-image]')) {
-    const show = () => img.parentElement.classList.add('image-loaded');
-    img.onload = show;
-    img.onerror = () => img.parentElement.classList.remove('image-loaded');
-    if (img.complete && img.naturalWidth) show();
-  }
+  bindMapButtonImages(view);
   const tower = view.querySelector('[data-lighthouse]');
   if (tower) tower.onerror = () => { tower.onerror = null; tower.src = 'art/house-48.webp'; };
 
@@ -703,7 +700,8 @@ export function renderMap(view, ctx) {
     for (const b of boards) {
       const r = b.y - c;
       const s = sOf(r);
-      const top = b.el.classList.contains('gq-bb-top');
+      const light = b.el.classList.contains('gq-bb-light');
+      const top = light || b.el.classList.contains('gq-bb-top');
       const post = b.el.classList.contains('gq-bb-post');
       const pin = b.el.classList.contains('gq-bb-tsumugi');
       // 灯台もほかの建物と同じく、遠いほど霧で薄くなるだけ（急に現れたり消えたりしない）。
@@ -736,9 +734,9 @@ export function renderMap(view, ctx) {
         b.house.style.transform = `translate(${(hx / displayScale).toFixed(2)}px,${(-size * .85 / displayScale).toFixed(2)}px) scale(${(size / (140 * displayScale)).toFixed(3)})`;
       }
       b.el.style.transform = `translate3d(${sx.toFixed(1)}px,${Y(s).toFixed(1)}px,0) scale(${displayScale.toFixed(3)})`;
-      b.el.style.opacity = String(fade);
+      b.el.style.opacity = light ? '1' : String(fade);
       // 重なり順は奥行きの距離で決める（1単位ごと）。遠くで縮尺を丸めると同じ値になり、順が入れかわってちらつくため。
-      b.el.style.zIndex = b.panel ? '199999' : String(Math.max(1, 100000 - Math.round(r)));
+      b.el.style.zIndex = light ? '200002' : b.panel ? '199999' : String(Math.max(1, 100000 - Math.round(r)));
     }
 
     // レイアウトの測定は初期表示・リサイズ・スクロール停止時だけ。

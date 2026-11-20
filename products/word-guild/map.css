@@ -73,6 +73,7 @@
 .gq-top-block{position:absolute;left:-300px;bottom:-18px;width:600px;height:600px;pointer-events:none}
 .gq-top-block img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .gq-top-block .gq-full-stars{position:absolute;bottom:100%;left:0;width:100%;text-align:center;color:var(--lamp)}
+.gq-lighthouse-lamp{position:absolute;left:50%;top:20%;width:10%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,#fffcee 12%,#ffe49cee 30%,#ffdd8188 50%,#ffdd8100 72%)}
 .gq-lighthouse-beam{position:absolute;left:50%;top:14%;width:95%;height:12%;transform-origin:0 50%;background:linear-gradient(90deg,#ffe6a0bb,#ffe6a000);border-radius:0 100% 100% 0;animation:gq-lighthouse-light 9s ease-in-out infinite;opacity:.6}
 @keyframes gq-lighthouse-light{0%,100%{transform:rotate(-12deg) scaleX(.8);opacity:.25}50%{transform:rotate(9deg) scaleX(1);opacity:.8}}
 @media(prefers-reduced-motion:reduce){.gq-lighthouse-beam{animation:none;opacity:.5}}
@@ -136,9 +137,6 @@
 .gq-pop [data-act="close"]:focus-visible{outline:2px solid var(--seal);outline-offset:3px;border-radius:6px}
 @media(max-height:700px){
  .gq-pop-card{gap:6px;padding:8px}
- .gq-pop .paper{padding:6px 8px}
- .gq-pop .paper .ln{font-size:14px;line-height:1.4}
- .gq-pop .paper .ph{padding-bottom:3px;margin-bottom:3px}
  .gq-pop .gq-postscript{padding:4px 8px;line-height:1.4}
 }
 

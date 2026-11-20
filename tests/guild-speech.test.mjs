@@ -79,3 +79,34 @@ test('話しはじめた長い発話は、見張りで最初からやり直さ�
   assert.throws(() => run(4000));
   assert.equal(calls.filter(x => x.text === 'a long letter').length, before);
 });
+
+test('英語の音声を品質、定番名、地域の順で選ぶ', () => {
+  const {speaker, synth, calls, run} = setup();
+  const voices = [
+    {lang: 'en-IE', name: 'Irish English'},
+    {lang: 'en-AU', name: 'Australian English'},
+    {lang: 'en-US', name: 'US English'},
+    {lang: 'en-GB', name: 'Daniel'},
+    {lang: 'en-IE', name: 'English (Enhanced)'},
+  ];
+  for (const name of ['Voice Premium', 'Voice Neural', 'Voice Natural', 'Siri Voice']) {
+    synth.voices = [...voices.slice(0, -1), {lang: 'en-GB', name}];
+    assert.equal(speaker.voiceName(), name);
+  }
+  for (const [i, voice] of voices.entries()) {
+    synth.voices = [{lang: 'fr-FR', name: 'French Premium'}, ...voices.slice(0, i + 1)];
+    assert.equal(speaker.voiceName(), voice.name);
+    speaker.speak('Hello'); run(50);
+    assert.equal(calls.at(-1).voice, voice);
+    assert.equal(calls.at(-1).lang, voice.lang);
+    assert.equal(calls.at(-1).rate, 0.9);
+    assert.equal(calls.at(-1).pitch, 1);
+  }
+  synth.voices = [{lang: 'en-GB', name: 'British English'}, voices[0]];
+  assert.equal(speaker.voiceName(), 'British English');
+  synth.voices = [{lang: 'fr-FR', name: 'French Premium'}];
+  assert.equal(speaker.voiceName(), undefined);
+  speaker.speak('Hello'); run(50);
+  assert.equal(calls.at(-1).voice, undefined);
+  assert.equal(calls.at(-1).lang, 'en-US');
+});

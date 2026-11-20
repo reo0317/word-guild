@@ -102,7 +102,7 @@ test('ツムギは初期位置で100pxを保ち、スクロールで道と同じ
 
 test('描画とスクロールにもツムギの遠近縮尺と背景の補正を適用する', () => {
   const progress = {words: {}, gates: []};
-  const map = buildMap(words, progress, 20000);
+  const map = {...buildMap(words, progress, 20000), fog:true, dueCount:40};
   let scroll, scheduled;
   const road = {clientWidth:402, clientHeight:710, scrollTop:0,
     getBoundingClientRect:()=>({top:44}), addEventListener:(_, fn)=>{scroll=fn;}};
@@ -110,10 +110,13 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
   const panel = {style:{}, offsetWidth:130, offsetHeight:80};
   const panelBoard = {style:{}, classList:{contains:()=>false}, querySelector:sel=>sel === '.gq-here-panel' ? panel : null};
   const lamps = [];
+  const towerLayers = ['gq-bb-top', 'gq-bb-light'].map(cls => ({
+    style:{}, classList:{contains:name=>name === cls}, querySelector:()=>null,
+  }));
   const depthHouses = [-30, 30].map(() => ({style:{}, classList:{contains:()=>false}, querySelector:()=>null}));
   const sky = {style:{setProperty(k,v){this[k]=v;}}, dataset:{ward:'1'}, classList:{toggle(){}}};
   const nodes = {'#gq-road':road, '#gq-stage':{style:{}, isConnected:true, getBoundingClientRect:()=>({left:0,top:44})}};
-  const view = {innerHTML:'', querySelector(selector) {
+  const view = {innerHTML:'', insertAdjacentHTML(_, html) { this.innerHTML += html; }, querySelector(selector) {
     return nodes[selector] ??= {style:{}, attrs:{}, setAttribute(k,v){this.attrs[k]=v;}};
   }, querySelectorAll(selector) {
     if (selector === '.gq-sky-art') return [sky];
@@ -126,7 +129,12 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     }
     for (const node of [pin, ...lamps]) node.querySelectorAll = () => [];
     depthHouses.forEach((house, i) => { house.dataset = {y:String(Number(pin.dataset.y) + (i ? 30 : -30)), lat:"0"}; });
-    return [pin, panelBoard, ...lamps, ...depthHouses];
+    towerLayers.forEach((layer, i) => {
+      const cls = i === 0 ? 'gq-bb-top' : 'gq-bb-light';
+      const [, y, lat] = this.innerHTML.match(new RegExp(`class="gq-bb ${cls}" data-y="([^"]+)" data-lat="([^"]+)"`));
+      layer.dataset = {y, lat};
+    });
+    return [pin, panelBoard, ...lamps, ...depthHouses, ...towerLayers];
   }};
   const oldWindow = globalThis.window, oldRAF = globalThis.requestAnimationFrame;
   globalThis.window = {innerHeight:874};
@@ -178,6 +186,16 @@ test('描画とスクロールにもツムギの遠近縮尺と背景の補正�
     checkRoadEnd();
     assert.ok(scale() > 1);
     assert.doesNotMatch(view.innerHTML, /<img[^>]*loading="lazy"/);
+    road.scrollTop = 0;
+    scroll(); scheduled();
+    const [tower, light] = towerLayers;
+    assert.equal(tower.hidden, false);
+    assert.equal(light.hidden, false);
+    assert.equal(light.style.transform, tower.style.transform);
+    assert.equal(light.style.opacity, '1');
+    assert.ok(Number(light.style.zIndex) > 200001);
+    assert.ok(Number(tower.style.zIndex) < 200000);
+    assert.match(view.innerHTML, /gq-bb-light[^>]*>.*?gq-lighthouse-beam.*?gq-lighthouse-lamp/);
   } finally {
     if (oldWindow === undefined) delete globalThis.window; else globalThis.window = oldWindow;
     if (oldRAF === undefined) delete globalThis.requestAnimationFrame; else globalThis.requestAnimationFrame = oldRAF;

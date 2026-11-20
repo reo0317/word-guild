@@ -4,11 +4,30 @@ export function esc(text) {
   return String(text).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
 }
 
+function voiceRank(voice) {
+  const lang = voice.lang?.toLowerCase();
+  if (lang !== 'en' && !lang?.startsWith('en-')) return Infinity;
+  if (/premium|enhanced|neural|natural|siri/i.test(voice.name)) return 0;
+  if (/\b(samantha|ava|allison|susan|zoe|nicky|karen|daniel)\b/i.test(voice.name)) return 1;
+  if (lang === 'en-us') return 2;
+  if (lang === 'en-gb' || lang === 'en-au') return 3;
+  return 4;
+}
+
 // 端末依存部分を注入できる、最新の語だけを読む制御。
 export function createSpeaker({synth, Utterance, later = setTimeout, clear = clearTimeout} = {}) {
   let ready = false, preparing = null;
   let unlocked = false, generation = 0, timer, watchdog, voice;
-  const voices = () => { voice = synth?.getVoices?.().find(v => v.lang === 'en-US'); };
+  const voices = () => {
+    voice = undefined;
+    let best = Infinity;
+    for (const candidate of synth?.getVoices?.() ?? []) {
+      const rank = voiceRank(candidate);
+      if (rank >= best) continue;
+      voice = candidate;
+      best = rank;
+    }
+  };
   voices();
   synth?.addEventListener?.('voiceschanged', voices);
   const resume = () => { if (synth?.paused) synth.resume(); };
@@ -44,7 +63,7 @@ export function createSpeaker({synth, Utterance, later = setTimeout, clear = cle
           if (voice && !probe) {
             resume();
             probe = new Utterance(' ');
-            probe.lang = 'en-US'; probe.voice = voice; probe.volume = 0;
+            probe.lang = voice.lang; probe.voice = voice; probe.volume = 0;
             probe.onstart = probe.onend = () => { unlocked = true; finish(true); };
             probe.onerror = () => finish(false);
             synth.speak(probe);
@@ -74,9 +93,10 @@ export function createSpeaker({synth, Utterance, later = setTimeout, clear = cle
           if (token !== generation) return;
           voices();
           const utterance = new Utterance(text);
-          utterance.lang = 'en-US';
+          utterance.lang = voice?.lang ?? 'en-US';
           if (voice) utterance.voice = voice;
           utterance.rate = 0.9;
+          utterance.pitch = 1;
           let settled = false;
           const retry = () => {
             if (settled || token !== generation) return;
@@ -95,7 +115,8 @@ export function createSpeaker({synth, Utterance, later = setTimeout, clear = cle
     }
     attempt();
   }
-  return {speak, unlock, prepare, cancel() { generation++; clear(timer); clear(watchdog); synth?.cancel(); }};
+  return {speak, unlock, prepare, voiceName() { voices(); return voice?.name; },
+    cancel() { generation++; clear(timer); clear(watchdog); synth?.cancel(); }};
 }
 let speechOn = true;
 export function setSpeechEnabled(on) { speechOn = on; if (!on) speaker?.cancel(); }
@@ -103,6 +124,14 @@ let speaker;
 function deviceSpeaker() {
   return speaker ??= createSpeaker({synth: globalThis.window?.speechSynthesis, Utterance: globalThis.SpeechSynthesisUtterance});
 }
+export function watchSpeechVoice(onName) {
+  const synth = globalThis.window?.speechSynthesis;
+  const update = () => onName(deviceSpeaker().voiceName());
+  update();
+  synth?.addEventListener?.('voiceschanged', update);
+  return () => synth?.removeEventListener?.('voiceschanged', update);
+}
+
 export const prepareSpeech = () => speechOn ? deviceSpeaker().prepare() : Promise.resolve(false);
 export const speak = text => { if (speechOn) deviceSpeaker().speak(text); };
 if (typeof document !== 'undefined') {
@@ -201,6 +230,15 @@ export function mapButton({kind, label, id, badge = false}) {
   return `<button type="button" class="gq-fab gq-map-button ${kind}" id="${esc(id)}" aria-label="${esc(label)}${badge ? '、書き出しのおすすめ' : ''}"><span class="gq-button-art"><img data-map-button-image src="art/btn-${kind === 'gear' ? 'settings' : kind}.webp" alt="" width="128" height="128" decoding="async"><svg viewBox="0 0 50 53" aria-hidden="true"><g class="gq-button-shadow" transform="translate(0 3)">${shape}</g><g class="gq-button-face">${shape}</g>${kind === 'gear' ? '<circle cx="25" cy="25" r="7" fill="#f3ead8" stroke="#1f2a44" stroke-width="2"/>' : ''}</svg>${['gear', 'letter'].includes(kind) ? '' : icon(kind)}${badge ? '<span class="gq-export-dot" role="img" aria-label="書き出しのおすすめ"></span>' : ''}</span><small>${esc(label)}</small></button>`;
 }
 
+export function bindMapButtonImages(view) {
+  for (const img of view.querySelectorAll('[data-map-button-image]')) {
+    const show = () => img.parentElement.classList.add('image-loaded');
+    img.onload = show;
+    img.onerror = () => img.parentElement.classList.remove('image-loaded');
+    if (img.complete && img.naturalWidth) show();
+  }
+}
+
 // 封蝋のボタン（主ボタン）。波打つ縁の赤い蝋に、文字を押す。
 const WAX_POINTS = Array.from({length: 56}, (_, k) => {
   const angle = k / 56 * Math.PI * 2;
@@ -279,13 +317,14 @@ export function wordLineHtml(lv, id, opts = {}) {
 
 // 1通。lv は letterView の結果。opts: {face, shadowLines: 影を乗せる行の番号の Set, lit: 街灯がともっているか}
 let introducedLine = false;
-export function letterHtml(lv, {face = () => '', shadowLines = new Set(), lit = false, hit = ''} = {}) {
+export function letterHtml(lv, {face = () => '', shadowLines = new Set(), lit = false, hit = '', signed = false} = {}) {
   const read = lv.lines.filter(line => line.readable).length;
   const all = lv.readable ? `<button type="button" class="ln-say all" data-say="${esc(lv.lines.map(plainLine).join(' '))}" aria-label="読みあげ">${icon('speaker', 16)}</button>` : '';
   const intro = !introducedLine ? lv.lines.findIndex(l => l.readable) : -1;
   if (intro >= 0) introducedLine = true;
   const head = `<div class="ph"><span class="from">${esc(lv.from ?? '')}</span><svg class="arr" viewBox="0 0 24 10" aria-hidden="true"><path d="M1 5h20M16 1l5 4-5 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="to">${esc(lv.to ?? '')}</span>${all}<span class="ring">${lampRing(read, lit)}</span></div>`;
-  return `<div class="paper k-${esc(lv.kind ?? 'memo')}" data-shelf="${lv.shelf}">${head}${lv.lines.map((line, i) => lineHtml(line, i, {face, shadow: shadowLines.has(i), hit}).replace('<p class="ja" hidden>', i === intro ? '<p class="ja">' : '<p class="ja" hidden>')).join('')}</div>`;
+  const signature = signed && lv.from ? `<p class="gq-letter-signature">${esc(lv.from)}</p>` : '';
+  return `<div class="paper k-${esc(lv.kind ?? 'memo')}" data-shelf="${lv.shelf}">${head}${lv.lines.map((line, i) => lineHtml(line, i, {face, shadow: shadowLines.has(i), hit}).replace('<p class="ja" hidden>', i === intro ? '<p class="ja">' : '<p class="ja" hidden>')).join('')}${signature}</div>`;
 }
 
 // 影を乗せる行：まだ霧のある行のうち、先頭の2行（今の石段と次の石段）。
