@@ -378,6 +378,143 @@ def naturalize():
     log('camellia / slate baked shading removed; moss + wear added to stairs')
 
 
+def rail_curb():
+    """石段の左の鎖手すり：柱の足もとに受け石が無く、草に刺さって見えた（埋まった袖石の頭も外したため）。
+    柱の並びに沿って、段ごとに水平な切り石の縁石（地面・踏み面から 12 cm 上）を据え、
+    柱・街灯・鎖をそれぞれの縁石の上面まで持ち上げる。"""
+    bo = OB['06 • Cast-iron bollards']
+    if 'OPUS 石段 | Bollard curb' in OB:
+        return
+    mw = bo.matrix_world
+    sz = mw.to_scale().z
+    bm = bmesh.new()
+    bm.from_mesh(bo.data)
+    bm.verts.ensure_lookup_table()
+    seen, isl = set(), []
+    for v in bm.verts:
+        if v.index in seen:
+            continue
+        st, comp = [v], []
+        seen.add(v.index)
+        while st:
+            x = st.pop()
+            comp.append(x)
+            for e in x.link_edges:
+                y = e.other_vert(x)
+                if y.index not in seen:
+                    seen.add(y.index)
+                    st.append(y)
+        ws = [mw @ x.co for x in comp]
+        zmin = min(w.z for w in ws)
+        low = [w for w in ws if w.z < zmin + 0.03]
+        c = sum(low, Vector()) / len(low)
+        isl.append((Vector((c.x, c.y, zmin)), comp))
+    isl.sort(key=lambda t: t[0].y)
+    bases = [t[0] for t in isl]
+    seg, acc = [], 0.0
+    for a, b in zip(bases, bases[1:]):
+        L_ = (b - a).xy.length
+        seg.append((a, b, acc, L_))
+        acc += L_
+    total = acc
+
+    def at(s_):
+        for a, b, s0, L_ in seg:
+            if s_ <= s0 + L_ or (a, b, s0, L_) == seg[-1]:
+                t = (s_ - s0) / L_
+                return a.lerp(b, t), (b - a).xy.normalized()
+
+    def param(p):
+        best = (1e9, 0.0)
+        for a, b, s0, L_ in seg:
+            d = (b - a).xy
+            t = max(0.0, min(1.0, (p.xy - a.xy).dot(d) / (L_ * L_)))
+            q = a.xy + d * t
+            best = min(best, ((p.xy - q).length, s0 + t * L_))
+        return best[1]
+    RISE = 0.12
+    step, gap, W, DEPTH = 0.42, 0.012, 0.34, 0.9
+    blocks = []
+    s_ = -0.30
+    while s_ < total + 0.30:
+        s0, s1 = s_, s_ + step
+        p0, t0 = at(min(max(s0, 0.0), total))
+        p1, _ = at(min(max(s1, 0.0), total))
+        e0 = Vector((t0.x, t0.y, 0))
+        if s0 < 0:
+            p0 = p0 + e0 * s0
+        if s1 > total:
+            p1 = p1 + e0 * (s1 - total)
+        mid = (p0 + p1) / 2
+        g = ground_z(mid.x, mid.y)
+        top = max(mid.z, g if g is not None else mid.z) + RISE
+        blocks.append((s0, s1, p0, p1, top))
+        s_ += step
+    out = bmesh.new()
+    for k, (s0, s1, p0, p1, top) in enumerate(blocks):
+        d = (p1 - p0).xy
+        L_ = max(d.length - gap, 0.05)
+        d = d.normalized()
+        n = Vector((-d.y, d.x))
+        mid = (p0 + p1) / 2
+        w = W * (1.0 + 0.05 * ((k * 31) % 3 - 1))
+        top_k = top + 0.006 * ((k * 7919) % 3 - 1)
+        cs = [Vector((mid.x + d.x * su * L_ / 2 + n.x * sn * w / 2, mid.y + d.y * su * L_ / 2 + n.y * sn * w / 2))
+              for su, sn in ((-1, -1), (1, -1), (1, 1), (-1, 1))]
+        vb = [out.verts.new((c.x, c.y, top_k - DEPTH)) for c in cs]
+        vt = [out.verts.new((c.x, c.y, top_k)) for c in cs]
+        out.faces.new(vt)
+        out.faces.new(list(reversed(vb)))
+        for i in range(4):
+            j = (i + 1) % 4
+            out.faces.new((vb[i], vb[j], vt[j], vt[i]))
+        blocks[k] = (s0, s1, p0, p1, top_k)
+    me = bpy.data.meshes.new('OPUS 石段 | Bollard curb')
+    out.to_mesh(me)
+    out.free()
+    me.materials.append(MA['Seawall • quarried stone 06'])
+    o = OB.new('OPUS 石段 | Bollard curb', me)
+    link_like(o, bo)
+    o.pass_index = 1
+    bv = o.modifiers.new('opus_arris', 'BEVEL')
+    bv.width = 0.018
+    bv.segments = 2
+
+    def top_at(s_):
+        for s0, s1, p0, p1, top in blocks:
+            if s0 <= s_ < s1:
+                return top
+        return blocks[-1][4]
+    lifts = []
+    for (base, comp), s_i in zip(isl, [param(t[0]) for t in isl]):
+        lift = top_at(s_i) - base.z
+        lifts.append((s_i, lift, base))
+        for x in comp:
+            x.co.z += lift / sz
+    bm.to_mesh(bo.data)
+    bm.free()
+    # 鎖：各頂点を沿線上の位置で柱の持ち上げ量を補間して上げる
+    ch = OB['07 • Linked mooring chains']
+    cm, ci = ch.matrix_world, ch.matrix_world.inverted()
+    lifts.sort()
+    for v in ch.data.vertices:
+        w = cm @ v.co
+        sp = param(w)
+        lo = max([l for l in lifts if l[0] <= sp] or [lifts[0]])
+        hi = min([l for l in lifts if l[0] >= sp] or [lifts[-1]])
+        t = 0 if hi[0] == lo[0] else (sp - lo[0]) / (hi[0] - lo[0])
+        w.z += lo[1] + (hi[1] - lo[1]) * t
+        v.co = ci @ w
+    # 街灯は同じ位置の柱の上に載っている
+    lamp = OB['08 • Harbour streetlights']
+    lp = lamp.matrix_world @ Vector(lamp.bound_box[0])
+    near = min(lifts, key=lambda l: (l[2].xy - Vector((lamp.matrix_world.translation.x, lamp.matrix_world.translation.y))).length
+               if False else (l[2].xy - (sum((lamp.matrix_world @ Vector(c) for c in lamp.bound_box), Vector()) / 8).xy).length)
+    lamp.location.z += near[1]
+    log(f'rail curb: {len(blocks)} cut stones (+{RISE} m above ground/treads) under {len(isl)} bollards; '
+        f'posts lifted {min(l[1] for l in lifts):.2f}..{max(l[1] for l in lifts):.2f} m, chain and lamp follow')
+
+
 # ================================================================ 2. 郵便局を絵に寄せる
 def post_office():
     org = OB['局舎 | Building origin']
@@ -636,16 +773,39 @@ def ashlar(m, c1, c2, mortar, bw=0.46, rh=0.23, bump=0.35):
     br.inputs['Color2'].default_value = (*c2, 1)
     br.inputs['Mortar'].default_value = (*mortar, 1)
     L(vec.outputs[0], br.inputs['Vector'])
+    br.squash = 0.72
+    br.squash_frequency = 3
+    # 不揃いな積み方：寸法・目地割りの違う 2 つの積み方を、大きなノイズで部分ごとに切り替える
+    br2 = N('ShaderNodeTexBrick', (-650, 300), Scale=1.0, **{'Mortar Size': 0.016, 'Mortar Smooth': 0.3,
+                                                             'Brick Width': bw * 0.66, 'Row Height': rh * 1.27})
+    br2.offset = 0.33
+    br2.offset_frequency = 3
+    br2.inputs['Color1'].default_value = (*c2, 1)
+    br2.inputs['Color2'].default_value = (*[min(1, x * 1.06) for x in c1], 1)
+    br2.inputs['Mortar'].default_value = (*mortar, 1)
+    L(vec.outputs[0], br2.inputs['Vector'])
+    mn = N('ShaderNodeTexNoise', (-650, 600), Scale=0.55, Detail=1.0)
+    L(vec.outputs[0], mn.inputs['Vector'])
+    mk = N('ShaderNodeMapRange', (-450, 600), **{'From Min': 0.49, 'From Max': 0.51})
+    L(mn.outputs['Fac'], mk.inputs['Value'])
+    mixc = N('ShaderNodeMix', (-450, 300), _data_type='RGBA')
+    L(mk.outputs[0], mixc.inputs['Factor'])
+    L(br.outputs['Color'], mixc.inputs[6])
+    L(br2.outputs['Color'], mixc.inputs[7])
+    mixf = N('ShaderNodeMix', (-450, 150), _data_type='FLOAT')
+    L(mk.outputs[0], mixf.inputs['Factor'])
+    L(br.outputs['Fac'], mixf.inputs[2])
+    L(br2.outputs['Fac'], mixf.inputs[3])
     noi = N('ShaderNodeTexNoise', (-650, -300), Scale=6.0, Detail=6.0, Roughness=0.6)
     L(tc.outputs['Object'], noi.inputs['Vector'])
     vr = N('ShaderNodeMapRange', (-450, -300), **{'To Min': 0.86, 'To Max': 1.08})
     L(noi.outputs['Fac'], vr.inputs['Value'])
     mul = N('ShaderNodeMix', (-250, 0), _data_type='RGBA', _blend_type='MULTIPLY')
     mul.inputs['Factor'].default_value = 1.0
-    L(br.outputs['Color'], mul.inputs[6])
+    L(mixc.outputs[2], mul.inputs[6])
     L(vr.outputs[0], mul.inputs[7])
     L(mul.outputs[2], p.inputs['Base Color'])
-    inv = mth(N, L, 'SUBTRACT', 1.0, br.outputs['Fac'], (-450, -550))
+    inv = mth(N, L, 'SUBTRACT', 1.0, mixf.outputs[0], (-450, -550))
     hb = mth(N, L, 'ADD', inv, mth(N, L, 'MULTIPLY', noi.outputs['Fac'], 0.25, (-450, -700)), (-300, -600))
     b = N('ShaderNodeBump', (-150, -500), Strength=bump, Distance=0.015)
     L(hb, b.inputs['Height'])
@@ -1253,6 +1413,7 @@ remove_buried_wall_shards()
 soften_rocks()
 fix_plaza_joints()
 naturalize()
+rail_curb()
 post_office()
 stone_post_office()
 light()
