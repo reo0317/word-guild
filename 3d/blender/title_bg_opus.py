@@ -144,6 +144,63 @@ def fix_normals():
         log(f'normals: {n} flipped {flipped}')
 
 
+TERRAIN = ['05 • Coastal bluff', '潮端 | Continuous graded schist bank and wooded saddle',
+           '岬の森 | Woodland footslope', '01 • Stair structure', '02 • Dressed granite treads',
+           '広場 | Oyster sandstone flags']
+
+
+def ground_z(x, y, top=40.0):
+    best = None
+    for n in TERRAIN:
+        o = OB.get(n)
+        if not o:
+            continue
+        inv = o.matrix_world.inverted()
+        a = inv @ Vector((x, y, top))
+        b = inv @ Vector((x, y, top - 1))
+        ok, loc, nor, idx = o.ray_cast(a, (b - a).normalized())
+        if ok:
+            z = (o.matrix_world @ loc).z
+            best = z if best is None else max(best, z)
+    return best
+
+
+def remove_buried_wall_shards():
+    """石段の左縁で、地面に埋まった袖石の頭だけが 2〜9 cm 草から突き出て「割れた板」に見える。
+    広場の下の袖石も敷石より 1 cm 高く、目地から点々と頭を出して（輪郭線がのって）黒い点列に見えていた。
+    地面・敷石からの突き出しが 10 cm 未満の石（＝ほぼ埋没）を取り除く。"""
+    o = OB['03 • Sea wall and capstones']
+    mw = o.matrix_world
+    bm = bmesh.new()
+    bm.from_mesh(o.data)
+    bm.verts.ensure_lookup_table()
+    seen, kill = set(), []
+    for v in bm.verts:
+        if v.index in seen:
+            continue
+        st, comp = [v], []
+        seen.add(v.index)
+        while st:
+            x = st.pop()
+            comp.append(x)
+            for e in x.link_edges:
+                y = e.other_vert(x)
+                if y.index not in seen:
+                    seen.add(y.index)
+                    st.append(y)
+        prot = []
+        for x in comp:
+            w = mw @ x.co
+            g = ground_z(w.x, w.y)
+            prot.append(w.z - g if g is not None else 99)
+        if 0.0 < max(prot) < 0.10:
+            kill.extend(comp)
+    bmesh.ops.delete(bm, geom=kill, context='VERTS')
+    bm.to_mesh(o.data)
+    bm.free()
+    log(f'sea wall: removed {len(kill) // 24} buried capstone shards')
+
+
 def soften_rocks():
     """多面体のまま光る岩：角を面取りし、浅い角はなめらかに（鋭い割れ目は残す）。"""
     rocks = ['Stair garden • slate ledges', 'Near escarpment • exposed split schist',
@@ -154,13 +211,23 @@ def soften_rocks():
             continue
         if 'opus_bevel' not in o.modifiers:
             b = o.modifiers.new('opus_bevel', 'BEVEL')
-            b.width = 0.025
+            b.width = 0.03
             b.segments = 2
             b.limit_method = 'ANGLE'
             b.angle_limit = math_radians(35)
-            b.harden_normals = False
-        for p in o.data.polygons:
-            p.use_smooth = True
+            # 平らな多面体を細かく割り、雲状ノイズで割れ肌の凹凸をつける
+            sd = o.modifiers.new('opus_split', 'SUBSURF')
+            sd.subdivision_type = 'SIMPLE'
+            sd.levels = sd.render_levels = 3
+            tex = bpy.data.textures.get('OPUS 岩肌') or bpy.data.textures.new('OPUS 岩肌', 'CLOUDS')
+            tex.noise_scale = 0.22
+            tex.noise_depth = 4
+            tex.noise_basis = 'VORONOI_F2'
+            dp = o.modifiers.new('opus_grain', 'DISPLACE')
+            dp.texture = tex
+            dp.texture_coords = 'GLOBAL'
+            dp.strength = 0.07
+            dp.mid_level = 0.5
         o.data.set_sharp_from_angle(angle=math_radians(48))
     # 椿：低ポリの球が縞に見える → 細分化してなめらかに
     o = OB.get('石段の椿 | Camellia at the margin of the steps')
@@ -179,7 +246,7 @@ def math_radians(d):
 
 def fix_plaza_joints():
     """敷石の目地が点線状にちらつく：目地の底が 7 cm 下の暗い面で、細い隙間が途切れて見えていた。
-    敷石の上面を写した目地床（3 mm 下、各石を 1.5 cm 広げる）を敷き、目地を一定の石灰色の線にする。"""
+    敷石の上面を写した目地床（0.7 mm 下、各石を 4 cm 広げる）を敷き、目地を一定の石灰色の線にする。"""
     m = MA['海辺の広場 | Lime pointing']
     set_ramp(m, [(0.33, 0.31, 0.26), (0.40, 0.37, 0.31)])
     src = OB['広場 | Oyster sandstone flags']
@@ -198,8 +265,8 @@ def fix_plaza_joints():
         for w in ws:
             d = (w - c)
             d.z = 0
-            grow = d.normalized() * 0.015 if d.length > 1e-6 else Vector()
-            vs.append(bm.verts.new((w.x + grow.x, w.y + grow.y, 4.467)))
+            grow = d.normalized() * 0.04 if d.length > 1e-6 else Vector()
+            vs.append(bm.verts.new((w.x + grow.x, w.y + grow.y, 4.4693)))
         bm.faces.new(vs)
     me = bpy.data.meshes.new('OPUS 広場 | Mortar bed')
     bm.to_mesh(me)
@@ -485,26 +552,30 @@ def sky():
     L(inv, proj.inputs['Scale'])
     stretch = N('ShaderNodeVectorMath', (-550, -600), _operation='MULTIPLY')
     L(proj.outputs[0], stretch.inputs[0])
-    stretch.inputs[1].default_value = (0.32, 0.95, 0.0)
-    noi = N('ShaderNodeTexNoise', (-400, -600), Scale=1.35, Detail=9.0, Roughness=0.58, Distortion=0.25)
+    stretch.inputs[1].default_value = (0.42, 1.0, 0.0)
+    noi = N('ShaderNodeTexNoise', (-400, -600), Scale=0.85, Detail=9.0, Roughness=0.58, Distortion=0.35)
     noi.noise_dimensions = '4D'
     noi.inputs['W'].default_value = 3.7
     L(stretch.outputs[0], noi.inputs['Vector'])
-    cm = N('ShaderNodeMapRange', (-200, -600), **{'From Min': 0.43, 'From Max': 0.66})
+    cm = N('ShaderNodeMapRange', (-200, -600), **{'From Min': 0.46, 'From Max': 0.60})
     cm.interpolation_type = 'SMOOTHSTEP'
     L(noi.outputs['Fac'], cm.inputs['Value'])
     hz = N('ShaderNodeMapRange', (-200, -850), **{'From Min': 0.015, 'From Max': 0.20})
     hz.interpolation_type = 'SMOOTHSTEP'
     L(z, hz.inputs['Value'])
+    hi = N('ShaderNodeMapRange', (-200, -1050), **{'From Min': 0.30, 'From Max': 0.85, 'To Min': 1.0, 'To Max': 0.35})
+    hi.interpolation_type = 'SMOOTHSTEP'
+    L(z, hi.inputs['Value'])
     cov = mth(N, L, 'MULTIPLY', cm.outputs[0], hz.outputs[0], (0, -700))
-    cov = mth(N, L, 'MULTIPLY', cov, 0.78, (150, -700))
+    cov = mth(N, L, 'MULTIPLY', cov, hi.outputs[0], (75, -700))
+    cov = mth(N, L, 'MULTIPLY', cov, 0.85, (150, -700))
     # 雲の色：陰は青灰、日向は紙色
-    shade = N('ShaderNodeMapRange', (-200, -400), **{'From Min': 0.55, 'From Max': 0.85})
+    shade = N('ShaderNodeMapRange', (-200, -400), **{'From Min': 0.47, 'From Max': 0.64})
     L(noi.outputs['Fac'], shade.inputs['Value'])
     ccol = N('ShaderNodeMix', (0, -400), _data_type='RGBA')
     L(shade.outputs[0], ccol.inputs['Factor'])
-    ccol.inputs[6].default_value = (0.58, 0.61, 0.66, 1)
-    ccol.inputs[7].default_value = (0.86, 0.84, 0.80, 1)
+    ccol.inputs[6].default_value = (0.62, 0.65, 0.70, 1)
+    ccol.inputs[7].default_value = (0.92, 0.90, 0.85, 1)
     skyc = N('ShaderNodeMix', (300, 0), _data_type='RGBA')
     L(cov, skyc.inputs['Factor'])
     L(glowc.outputs[2], skyc.inputs[6])
@@ -561,10 +632,11 @@ def fog_group():
 
 def fog():
     g = fog_group()
-    if 'fog' not in [a.name for a in VL.aovs]:
-        a = VL.aovs.add()
-        a.name = 'fog'
-        a.type = 'VALUE'
+    for nm in ('fog', 'line'):
+        if nm not in [a.name for a in VL.aovs]:
+            a = VL.aovs.add()
+            a.name = nm
+            a.type = 'VALUE'
     n_mat = 0
     for m in MA:
         if not m.use_nodes or not m.node_tree:
@@ -581,6 +653,23 @@ def fog():
         ao.aov_name = 'fog'
         ao.location = (-300, -900)
         t.links.new(gn.outputs[0], ao.inputs['Value'])
+        # 輪郭線マスク：元の ID Mask（Object Index パス）は EEVEE では全画面 1 になり、
+        # 敷石の目地や草まで線が乗って黒い点列になっていた → pass_index==1 を AOV で書く
+        oi = t.nodes.new('ShaderNodeObjectInfo')
+        oi.name = 'OPUS fog objinfo'
+        oi.location = (-600, -1100)
+        cmp_ = t.nodes.new('ShaderNodeMath')
+        cmp_.name = 'OPUS fog linecmp'
+        cmp_.operation = 'COMPARE'
+        cmp_.inputs[1].default_value = 1.0
+        cmp_.inputs[2].default_value = 0.5
+        cmp_.location = (-450, -1100)
+        t.links.new(oi.outputs['Object Index'], cmp_.inputs[0])
+        la = t.nodes.new('ShaderNodeOutputAOV')
+        la.name = 'OPUS fog lineaov'
+        la.aov_name = 'line'
+        la.location = (-300, -1100)
+        t.links.new(cmp_.outputs[0], la.inputs['Value'])
         n_mat += 1
     # コンポジター：輪郭線 → 霧 → 色調 → 紙肌（題字は HTML 側で重ねるので 0 のまま）
     ct = S.compositing_node_group
@@ -596,6 +685,10 @@ def fog():
             ct.links.remove(l)
     ct.links.new(rl.outputs['Image'], outline.inputs[6])
     ct.links.new(nd['Math.005'].outputs[0], outline.inputs['Factor'])
+    for l in list(ct.links):
+        if l.from_node.name == 'ID Mask':
+            ct.links.remove(l)
+    ct.links.new(rl.outputs['line'], nd['Math.004'].inputs[1])
     ct.links.new(outline.outputs[2], fogmix.inputs[6])
     ct.links.new(rl.outputs['fog'], fogmix.inputs['Factor'])
     fogmix.inputs[7].default_value = (0.66, 0.69, 0.71, 1)
@@ -616,6 +709,7 @@ def sea():
 
 # ================================================================ run
 fix_normals()
+remove_buried_wall_shards()
 soften_rocks()
 fix_plaza_joints()
 naturalize()
