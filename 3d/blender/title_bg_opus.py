@@ -254,7 +254,7 @@ def fix_plaza_joints():
     敷石の上面を写した目地床（0.7 mm 下、各石を 4 cm 広げる）を敷き、目地を一定の石灰色の線にする。"""
     m = MA['海辺の広場 | Lime pointing']
     # 目地は敷石より十分暗い色に（線として読める濃さ）
-    set_ramp(m, [(0.085, 0.080, 0.070), (0.12, 0.11, 0.095)])
+    set_ramp(m, [(0.15, 0.14, 0.12), (0.20, 0.18, 0.155)])
     src = OB['広場 | Oyster sandstone flags']
     if 'OPUS 広場 | Mortar bed' in OB:
         return
@@ -280,6 +280,24 @@ def fix_plaza_joints():
     me.materials.append(m)
     o = OB.new('OPUS 広場 | Mortar bed', me)
     link_like(o, src)
+    # 目地を線として読める幅に：各敷石の上面を 9 mm 内側へ寄せる（角が面取りになり、暗い目地床が 2 cm ほど見える）
+    inv = mw.inverted()
+    moved = set()
+    for p in src.data.polygons:
+        if p.normal.z < 0.9:
+            continue
+        ws = [mw @ src.data.vertices[i].co for i in p.vertices]
+        if abs(ws[0].z - 4.47) > 0.003:
+            continue
+        c = sum(ws, Vector()) / len(ws)
+        for i, w in zip(p.vertices, ws):
+            if i in moved:
+                continue
+            d = c - w
+            d.z = 0
+            if d.length > 0.03:
+                src.data.vertices[i].co = inv @ (w + d.normalized() * 0.009)
+                moved.add(i)
     log(f'plaza mortar bed: {len(me.polygons)} faces under the flag joints')
 
 
@@ -784,6 +802,14 @@ def stone_post_office():
         prism(P['Pilasters'], 'front', rect(sgn * WALL_X - 0.30 if sgn > 0 else -WALL_X - 0.05, 0.45,
                                             WALL_X + 0.05 if sgn > 0 else -WALL_X + 0.30, EAVE_Z - 0.16), 0.0, 0.07)
     prism(P['Dressed limestone'], 'front', rect(-WALL_X - 0.08, EAVE_Z - 0.16, WALL_X + 0.08, EAVE_Z + 0.02), 0.0, 0.13)
+    # 側面の隅柱（手前と奥）と軒下の帯
+    for side, sg in (('right', 1), ('left', -1)):
+        for y0_, y1_ in ((-0.05, 0.30), (REAR_Y - 0.30, REAR_Y + 0.05)):
+            a, b = sorted((sg * y0_, sg * y1_))
+            prism(P['Pilasters'], side, rect(a, 0.45, b, EAVE_Z - 0.16), 0.0, 0.07)
+        a, b = sorted((sg * -0.05, sg * (REAR_Y + 0.05)))
+        prism(P['Dressed limestone'], side, rect(a, EAVE_Z - 0.16, b, EAVE_Z - 0.02), 0.0, 0.10)
+        prism(P['Dressed limestone'], side, rect(a, 3.35, b, 3.47), 0.0, 0.08)
     for uu in (-2.2, -1.1, 0.0, 1.1, 2.2):
         prism(P['Gilded trim'], 'front', rect(uu - 0.06, EAVE_Z - 0.34, uu + 0.06, EAVE_Z - 0.16), 0.0, 0.11)
 
