@@ -1,6 +1,6 @@
 // 1クエストの状態。時間は advance(ms) で外から進める。DOM もタイマーも持たない。
 import {generateBoard, matchWord, spelling} from './board.mjs';
-import {grade, gradeReturn, isDue, isBig, isRestored} from './srs.mjs';
+import {grade, gradeReturn, isDue, isBig, isRestored, fitsGroup, groupWords} from './srs.mjs';
 import {applyOutcome, streakNow} from './daily.mjs';
 import {rollRare} from './rare.mjs';
 import {emptyProgress} from './store.mjs';
@@ -42,7 +42,7 @@ export class Quest {
     this.restoredIds = new Set(); // 今回ヒントなしで答えた語（再戦を含む）
     this.results = new Map(); // id → 'clean' | 'hint' | 'taught'（最初の結果）
     this.retreated = false;
-    this.revengeWords = [];
+    this.revengeGroups = [];
     this.outcome = null;
     this.enter(0, groups[0]);
   }
@@ -51,8 +51,8 @@ export class Quest {
   get isRevenge() { return !this.isNight && this.index >= this.total; }
   // 互換のため残す（非推奨）。
   get enemy() { return this.isRevenge ? REVENGE_ENEMY : ENEMIES[Math.min(this.index, ENEMIES.length - 1)]; }
-  get isBig() { return !this.isRevenge && this.slots.length === 1 && isBig(this.slots[0].word); }
-  get idleLimit() { return this.isNight ? 25000 : this.isBig ? IDLE_LIMIT_BIG : IDLE_LIMIT; }
+  get isBig() { return this.slots.length === 1 && isBig(this.slots[0].word); }
+  get idleLimit() { return this.isNight ? 25000 : !this.isRevenge && this.isBig ? IDLE_LIMIT_BIG : IDLE_LIMIT; }
   get unsolved() { return this.slots.filter(slot => !slot.solved); }
   get solvedCount() { return this.slots.length - this.unsolved.length; }
 
@@ -79,12 +79,19 @@ export class Quest {
         this.enter(this.index + 1, this.groups[this.index + 1]);
       } else if (this.mode === 'return' && !this.nightChecked && !this.isRevenge && this.openNight()) {
         // おまけは通常の配達と別に採点する。
-      } else if (this.mode !== 'arrival' && !this.isRevenge && this.pickRevenge().length > 0) {
-        this.isNight = false;
-        this.revengeWords = this.pickRevenge();
-        this.enter(this.total, this.revengeWords);
       } else {
-        this.finish(false);
+        if (!this.isRevenge && this.mode !== 'arrival') {
+          const words = this.pickRevenge();
+          this.revengeGroups = fitsGroup(words) && words.length ? [words] : groupWords(words);
+        }
+        const next = this.isRevenge ? this.index + 1 : this.total;
+        const group = this.revengeGroups[next - this.total];
+        if (group) {
+          this.isNight = false;
+          this.enter(next, group);
+        } else {
+          this.finish(false);
+        }
       }
     }
     return this.phase;

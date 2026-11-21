@@ -41,6 +41,13 @@ export function dueCount(words, progress, today) {
   return words.filter(word => isDue(progress.words[word.id], today)).length;
 }
 
+// 大物は横2列を使う。盤面に置ける列数と文字数を確認する。
+export function fitsGroup(words) {
+  const columns = words.reduce((sum, word) => sum + (isBig(word) ? 2 : 1), 0);
+  return columns <= GROUP_SIZE
+    && words.reduce((sum, word) => sum + spelling(word.w).length, 0) <= GROUP_LETTERS;
+}
+
 const byShelfThenId = (a, b) => a.shelf - b.shelf || a.id.localeCompare(b.id);
 
 // 3語ずつに分ける。1組の合計は 30 文字以下。13文字以上の語は1語だけの組。
@@ -48,8 +55,8 @@ const byShelfThenId = (a, b) => a.shelf - b.shelf || a.id.localeCompare(b.id);
 export function groupWords(words, rand = null) {
   const ordered = rand ? shuffle(words, rand) : [...words];
   ordered.sort((a, b) => spelling(b.w).length - spelling(a.w).length);
-  const solo = ordered.filter(word => spelling(word.w).length >= SOLO_LETTERS);
-  const rest = ordered.filter(word => spelling(word.w).length < SOLO_LETTERS);
+  const solo = ordered.filter(isBig);
+  const rest = ordered.filter(word => !isBig(word));
   const groups = Array.from({length: Math.ceil(rest.length / GROUP_SIZE)}, () => ({words: [], letters: 0}));
   for (const word of rest) {
     const length = spelling(word.w).length;
@@ -63,11 +70,8 @@ export function groupWords(words, rand = null) {
     target.words.push(word);
     target.letters += length;
   }
-  const all = [...groups.filter(g => g.words.length), ...solo.map(word => ({words: [word], letters: spelling(word.w).length}))];
-  const small = all.filter(g => !isBig(g.words[0]) || g.words.length > 1);
-  const big = all.filter(g => !small.includes(g));
-  const byLetters = (a, b) => a.letters - b.letters;
-  return [...small.sort(byLetters), ...big.sort(byLetters)].map(g => g.words);
+  const small = groups.filter(g => g.words.length).sort((a, b) => a.letters - b.letters);
+  return [...small.map(g => g.words), ...solo.sort((a, b) => spelling(a.w).length - spelling(b.w).length).map(word => [word])];
 }
 
 // progress.words は {id: {box, due, seen}}。戻り値は 3語ずつの組の配列。

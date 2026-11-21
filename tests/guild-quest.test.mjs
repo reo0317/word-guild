@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {Quest, IDLE_LIMIT, IDLE_LIMIT_BIG, HEARTS} from '../products/word-guild/guild/quest.mjs';
+import {isBig, groupWords} from '../products/word-guild/guild/srs.mjs';
 import {mulberry32} from '../products/word-guild/guild/rng.mjs';
 import {emptyProgress} from '../products/word-guild/guild/store.mjs';
 
@@ -160,6 +161,37 @@ test('リベンジ盤面：clean 以外の語を最大3語、taught を優先し
   assert.equal(saved0.w2.box, 1, '最初の結果（taught）のまま');
   assert.equal(saved0.w0.box, 1, 'hint は新出なら最低1');
   assert.equal(saved0.w1.box, 3);
+});
+
+test('大物を含む再戦は盤面を分け、選ばれた3語すべてを出す', () => {
+  const big = {id: 'big0', w: 'internationally', ja: '国際的に', pos: 'adv', shelf: 1};
+  const picked = [big, ...words.slice(0, 2)];
+  for (const mode of ['normal', 'return']) {
+    const quest = new Quest(groupWords(picked), {mode, rand: mulberry32(1)});
+    while (!quest.isRevenge) {
+      start(quest);
+      for (const {word} of quest.slots) quest.hint(word.id);
+      solve(quest);
+      quest.next();
+      assert.notEqual(quest.phase, 'finished');
+    }
+    const retried = [];
+    let boards = 0;
+    while (quest.phase !== 'finished') {
+      assert.equal(quest.isRevenge, true);
+      const board = quest.slots.map(slot => slot.word);
+      if (board.some(isBig)) assert.ok(board.length <= 2);
+      if (board.length === 1 && isBig(board[0])) assert.equal(quest.isBig, true);
+      retried.push(...board.map(word => word.id));
+      boards++;
+      start(quest);
+      solve(quest);
+      quest.next();
+    }
+    assert.equal(boards, 2);
+    assert.deepEqual(retried.sort(), picked.map(word => word.id).sort());
+    assert.ok(quest.outcome.entries.every(entry => entry.result === 'hint' && entry.restored));
+  }
 });
 
 test('リベンジでの結果は習熟度を変えない（ヒントなしで解いても、教わったまま）', () => {

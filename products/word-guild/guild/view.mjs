@@ -5,7 +5,7 @@ import {Trace} from './trace.mjs';
 import {artBox, artFile} from './art.mjs';
 import {loadWords} from './words.mjs';
 import {Quest, HEARTS} from './quest.mjs';
-import {pickSession, pickReturn, groupWords, todayNumber, SESSION_SIZE} from './srs.mjs';
+import {pickSession, pickReturn, groupWords, fitsGroup, todayNumber, SESSION_SIZE} from './srs.mjs';
 import {loadProgress, saveProgress} from './store.mjs';
 import {COLS, spelling} from './board.mjs';
 import {buildMap, accessibleWords, gateWords, gateArrivalWords, separateSpecs} from './stages.mjs';
@@ -322,7 +322,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const returning = opts.mode === 'return';
     const map = buildMap(words, progress, today);
     if (returning && !lampOf(map, opts.shelf)?.done) return;
-    const groups = opts.arrival ? [opts.arrival] : returning ? pickReturn(words, progress, today, opts.shelf, Math.random) : gate !== null
+    const groups = opts.arrival ? (fitsGroup(opts.arrival) ? [opts.arrival] : groupWords(opts.arrival)) : returning ? pickReturn(words, progress, today, opts.shelf, Math.random) : gate !== null
       ? groupWords(gateWords(words, progress, gate), Math.random)
       : pickSession(accessibleWords(words, map), progress, today, SESSION_SIZE, Math.random, progress.settings.fresh);
     const ward = opts.arrival ? opts.arrival[0].ch : returning ? words.find(word => word.shelf === opts.shelf)?.ch ?? 1 : gate ?? map.here?.ch ?? 1;
@@ -372,7 +372,8 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     quest.slots.forEach((slot, i) => dealt.set(slot.word.id, dealtSpecs[i]));
     strikes = [];
     picking = null;
-    message = quest.isBig ? '大物！' : '';
+    const announceBig = quest.isBig && !quest.isRevenge && !quest.isNight;
+    message = announceBig ? '大物！' : '';
     const coach = tutorial && quest.index === 0
       ? `<div class="gq-coach">${artBox('hatori', 'gq-coach-face')}<b>ハトリ局長</b>${COACH}</div>` : '';
     view.className = `gq gq-quest gq-ch${questWard}${coach ? ' gq-tutor' : ''}${quest.isNight ? ' gq-night' : ''}`;
@@ -385,7 +386,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
           ${artBox(`ward${questWard}`, 'gq-arena-bg')}
           <i class="gq-tint" aria-hidden="true"></i>
         </div>
-        <div class="gq-mons arriving" id="gq-mons">${quest.slots.map(monMarkup).join('')}</div>
+        <div class="gq-mons arriving${quest.isBig ? ' solo-big' : ''}" id="gq-mons">${quest.slots.map(monMarkup).join('')}</div>
         <ul class="gq-clues" id="gq-clues"></ul>
       </div>
       ${coach}
@@ -408,12 +409,12 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     bindBoard();
     paintAll();
     if (lastClip) { showClip(lastClip, true); lastClip = null; } // 盤面を取り切った語の行は、次の盤面でも少し残す
-    bgm(quest.isBig ? 'big' : 'delivery');
+    bgm(announceBig ? 'big' : 'delivery');
     const svg = $('#gq-seals');
     observer?.disconnect();
     observer = new ResizeObserver(drawSeals);
     observer.observe(svg);
-    if (quest.isBig) later(800, () => { message = ''; paintInput(); });
+    if (announceBig) later(800, () => { message = ''; paintInput(); });
     later(ENTER_MS, () => {
       quest.next(); // entering → battle
       if (tutorial && quest.index === 0) quest.slots[0].tutorialHint = true; // 最初の配達：1語目にヒント1

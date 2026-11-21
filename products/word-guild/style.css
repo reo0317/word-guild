@@ -316,6 +316,8 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 #view.gq-quest .gq-mons{bottom:calc(var(--plate-h) + 4px);padding-top:8px;container-type:size}
 #view.gq-quest .gq-mon-body{flex-shrink:0;width:min(82%,calc(100cqh - 26px),140px);margin-bottom:2px}
 #view.gq-quest .gq-mon.big .gq-mon-body{width:min(82%,calc(200cqh - 52px),220px);aspect-ratio:2/1;transform:none}
+#view.gq-quest .solo-big .gq-mon.big{flex-basis:100%}
+#view.gq-quest .solo-big .gq-mon.big .gq-mon-body{width:min(92%,calc(200cqh - 44px),308px)}
 #view.gq-quest .gq-clues{z-index:1}
 #view.gq-quest .gq-boardrow{flex:0 0 auto;width:100%;aspect-ratio:7/6;min-height:252px}
 #view.gq-quest .gq-board{width:100%}
