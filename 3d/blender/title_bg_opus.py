@@ -1250,6 +1250,7 @@ def place(src, name, loc, height, rot_z, coll):
         o = src.copy()               # メッシュは共有（インスタンス）
         o.name = name
         coll.objects.link(o)
+    o.hide_render = o.hide_viewport = False      # 原本の非表示を引き継がない
     s = height / max(src.dimensions.z, 1e-3) * (src.scale.z if src.scale.z else 1)
     o.location = loc
     o.rotation_euler = (0, 0, rot_z)
@@ -1330,6 +1331,21 @@ def realism():
         for s_ in o.material_slots:
             palette_tint(s_.material)
     shrubs = [sh[k] for k in sorted(sh)]
+    # 木は 30〜50 万面あるので、見た目の変わらない 2 割まで減らしてから複製する（描画時間とメモリ）
+    for src in (t1, t2):
+        if src.get('opus_decimated'):
+            continue
+        dm = src.modifiers.new('opus_lod', 'DECIMATE')
+        dm.ratio = 0.2
+        bpy.context.view_layer.update()
+        dg = bpy.context.evaluated_depsgraph_get()
+        src.hide_viewport = False
+        bpy.context.view_layer.update()
+        me = bpy.data.meshes.new_from_object(src.evaluated_get(bpy.context.evaluated_depsgraph_get()))
+        src.modifiers.remove(src.modifiers['opus_lod'])
+        src.data = me
+        src.hide_viewport = True
+        src['opus_decimated'] = True
     # 原本の原点を根元へ（LOD は原点が根元の中心）
     trees = [('老黒松 | Salt-shaped boughs and paired needles', t1, (11.44, 26.32, 8.82), 8.6, 2.6),
              ('黒松 | Leeward ridge pine', t2, (14.6, 31.5, 10.7), 5.4, 0.7),
@@ -1365,13 +1381,14 @@ def realism():
         for o in OB:
             if o.name.startswith(n):
                 o.hide_render = o.hide_viewport = True
+    oaks = [o_ for o_ in oaks if o_[3] >= 3.0]
     for i, (x, y, z, h) in enumerate(oaks):
         place(t1 if i % 2 else t2, f'OPUS 木 | 裏山の木 {i}', Vector((x, y, z - 0.1)), max(h * 1.15, 2.8), i * 2.1, coll)
     maples = [(5.7, 30.6, 6.63, 1.98), (6.3, 29.3, 6.73, 2.29), (8.7, 27.9, 7.9, 2.12), (9.1, 27.0, 8.02, 2.58),
               (10.8, 26.1, 8.18, 2.79), (11.3, 28.7, 9.38, 1.44), (13.0, 24.7, 9.41, 1.4), (13.4, 26.4, 8.88, 2.77),
               (13.9, 27.9, 9.94, 1.71)]
     for i, (x, y, z, h) in enumerate(maples):
-        src = t2 if h > 2.2 else shrubs[i % len(shrubs)]
+        src = t2 if h > 2.6 else shrubs[i % len(shrubs)]
         place(src, f'OPUS 木 | 林縁の若木 {i}', Vector((x, y, z - 0.08)), max(h, 1.2), i * 1.3, coll)
     # 石段右の椿 → 実写の低木
     OB['石段の椿 | Camellia at the margin of the steps'].hide_render = True
