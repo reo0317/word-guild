@@ -1203,6 +1203,281 @@ def stone_post_office():
         f'skirt roof, gable clock, swags, envelope sign, banner moved left')
 
 
+# ================================================================ 2c. 灯台・木・地肌（Poly Haven CC0 素材）
+import os
+ASSETS = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets', 'polyhaven'))
+
+
+def ph_blend(aid):
+    return os.path.join(ASSETS, aid, f'{aid}_1k.blend')
+
+
+def append_objects(aid, names):
+    have = {n: OB.get(f'PH {n}') for n in names}
+    need = [n for n, o in have.items() if o is None]
+    if need:
+        with bpy.data.libraries.load(ph_blend(aid), link=False) as (src, dst):
+            dst.objects = [n for n in src.objects if n in need]
+        for o in dst.objects:
+            if o is None:
+                continue
+            o.name = f'PH {o.name}'
+            have[o.name[3:]] = o
+    return have
+
+
+def palette_tint(m, sat=0.78, val=0.9, hue=0.5):
+    """写真素材の色をゲームの落ち着いた色調へ（彩度・明度を少し下げる）。"""
+    if not m or not m.use_nodes or any(n.name == 'OPUS tint' for n in m.node_tree.nodes):
+        return
+    p = principled(m)
+    if not p or not p.inputs['Base Color'].is_linked:
+        return
+    t = m.node_tree
+    src = p.inputs['Base Color'].links[0].from_socket
+    h = t.nodes.new('ShaderNodeHueSaturation')
+    h.name = 'OPUS tint'
+    h.inputs['Hue'].default_value = hue
+    h.inputs['Saturation'].default_value = sat
+    h.inputs['Value'].default_value = val
+    t.links.new(src, h.inputs['Color'])
+    t.links.new(h.outputs['Color'], p.inputs['Base Color'])
+
+
+def place(src, name, loc, height, rot_z, coll):
+    o = OB.get(name)
+    if o is None:
+        o = src.copy()               # メッシュは共有（インスタンス）
+        o.name = name
+        coll.objects.link(o)
+    s = height / max(src.dimensions.z, 1e-3) * (src.scale.z if src.scale.z else 1)
+    o.location = loc
+    o.rotation_euler = (0, 0, rot_z)
+    o.scale = (s, s, s)
+    return o
+
+
+def tex_mean(path):
+    try:
+        from PIL import Image
+        im = Image.open(path).convert('L').resize((64, 64))
+        px = list(im.getdata())
+        return sum((v / 255.0) ** 2.2 for v in px) / len(px)
+    except Exception:
+        return 0.2
+
+
+def photo_detail(m, aid, scale, amount, bump=0.4):
+    """写真テクスチャの濃淡だけを元の色に掛ける（色調は保ったまま肌理を足す）。ボックス投影。"""
+    if not m or not m.use_nodes or any(n.name == 'OPUS photo' for n in m.node_tree.nodes):
+        return
+    p = principled(m)
+    t = m.node_tree
+    N, L = nodes(t)
+    path = os.path.join(ASSETS, aid, f'{aid}_Diffuse_1k.jpg')
+    img = bpy.data.images.load(path, check_existing=True)
+    mean = tex_mean(path)
+    tc = N('ShaderNodeTexCoord', (-1800, -200))
+    mp = N('ShaderNodeMapping', (-1600, -200))
+    mp.inputs['Scale'].default_value = (1 / scale, 1 / scale, 1 / scale)
+    L(tc.outputs['Object'], mp.inputs['Vector'])
+    it = N('ShaderNodeTexImage', (-1400, -200))
+    it.name = 'OPUS photo'
+    it.image = img
+    it.projection = 'BOX'
+    it.projection_blend = 0.35
+    L(mp.outputs[0], it.inputs['Vector'])
+    bw = N('ShaderNodeRGBToBW', (-1150, -200))
+    L(it.outputs['Color'], bw.inputs['Color'])
+    k = mth(N, L, 'MULTIPLY', bw.outputs[0], 1.0 / max(mean, 0.02), (-1000, -200))
+    k = mth(N, L, 'MINIMUM', k, 2.2, (-850, -200))
+    bc = p.inputs['Base Color']
+    if bc.is_linked:
+        src = bc.links[0].from_socket
+    else:
+        rgb = N('ShaderNodeRGB', (-1000, 100))
+        rgb.outputs[0].default_value = bc.default_value
+        src = rgb.outputs[0]
+    mul = N('ShaderNodeMix', (-650, 0), _data_type='RGBA', _blend_type='MULTIPLY')
+    mul.inputs['Factor'].default_value = amount
+    L(src, mul.inputs[6])
+    comb = N('ShaderNodeCombineColor', (-800, -350))
+    for s_ in ('Red', 'Green', 'Blue'):
+        L(k, comb.inputs[s_])
+    L(comb.outputs[0], mul.inputs[7])
+    L(mul.outputs[2], bc)
+    if bump > 0:
+        b = N('ShaderNodeBump', (-500, -400), Strength=bump, Distance=0.03)
+        L(bw.outputs[0], b.inputs['Height'])
+        if p.inputs['Normal'].is_linked:
+            L(p.inputs['Normal'].links[0].from_socket, b.inputs['Normal'])
+        L(b.outputs['Normal'], p.inputs['Normal'])
+
+
+def realism():
+    coll = bpy.data.collections.get('OPUS 実写素材 | Poly Haven') or bpy.data.collections.new('OPUS 実写素材 | Poly Haven')
+    if coll.name not in S.collection.children:
+        S.collection.children.link(coll)
+    # ---- 木：手作りの黒松・浜の低木を Poly Haven の島の木・低木に置き換える
+    t1 = append_objects('island_tree_01', ['island_tree_01_LOD1'])['island_tree_01_LOD1']
+    t2 = append_objects('island_tree_02', ['island_tree_02_LOD1'])['island_tree_02_LOD1']
+    sh = append_objects('shrub_02', ['shrub_02_a_LOD1', 'shrub_02_b_LOD1', 'shrub_02_c_LOD1', 'shrub_02_d_LOD1'])
+    for o in [t1, t2] + list(sh.values()):
+        for c in list(o.users_collection):
+            c.objects.unlink(o)
+        o.hide_render = o.hide_viewport = True     # 原本は非表示、複製で配置
+        coll.objects.link(o)
+        for s_ in o.material_slots:
+            palette_tint(s_.material)
+    shrubs = [sh[k] for k in sorted(sh)]
+    # 原本の原点を根元へ（LOD は原点が根元の中心）
+    trees = [('老黒松 | Salt-shaped boughs and paired needles', t1, (11.44, 26.32, 8.82), 8.6, 2.6),
+             ('黒松 | Leeward ridge pine', t2, (14.6, 31.5, 10.7), 5.4, 0.7),
+             ('黒松 | Leeward ridge pine.001', t1, (9.2, 34.0, 8.84), 4.8, 4.1),
+             ('黒松 | Leeward ridge pine.002', t2, (18.09, 35.0, 12.5), 5.2, 1.9),
+             ('黒松 | Leeward ridge pine.003', t2, (5.0, 36.0, 7.37), 3.8, 5.3)]
+    for i, (old, src, base, h, rz) in enumerate(trees):
+        OB[old].hide_render = OB[old].hide_viewport = True
+        place(src, f'OPUS 木 | {old.split(" | ")[0]} {i}', Vector(base) - Vector((0, 0, 0.15)), h, rz, coll)
+    # 石段左の斜面の低木（手作りの丸い茂み → 実写の島の木・低木）
+    left = [(-1.22, 8.16, 0.08, 2.27), (-1.79, 8.23, -0.27, 1.23), (-1.96, 9.48, -0.31, 2.14),
+            (-0.71, 9.73, 0.38, 2.96), (-1.02, 11.08, 1.3, 2.09), (-1.91, 11.55, 1.6, 2.24),
+            (-2.17, 12.82, 1.52, 3.53), (-1.4, 12.87, 2.49, 2.41), (-2.5, 13.87, -0.57, 5.61),
+            (-3.3, 14.35, -1.1, 3.39), (-3.97, 20.35, -1.76, 3.29), (-3.62, 21.67, 0.83, 2.51),
+            (-4.04, 19.2, -2.15, 1.06)]
+    OB['浜のトベラとヒメユズリハ | Leathery coastal foliage'].hide_render = True
+    OB['浜のトベラとヒメユズリハ | Leathery coastal foliage'].hide_viewport = True
+    for i, (x, y, z, h) in enumerate(left):
+        g = ground_z(x, y)
+        zb = (g if g is not None else z) - 0.08
+        if h > 2.8:
+            place(t2, f'OPUS 木 | 浜の木 {i}', Vector((x, y, zb)), min(h, 4.2), i * 1.7, coll)
+        else:
+            place(shrubs[i % len(shrubs)], f'OPUS 木 | 浜の低木 {i}', Vector((x, y, zb)), max(h * 0.75, 0.9), i * 2.3, coll)
+    # 石段右の椿 → 実写の低木
+    OB['石段の椿 | Camellia at the margin of the steps'].hide_render = True
+    OB['石段の椿 | Camellia at the margin of the steps'].hide_viewport = True
+    for i, (x, y, h) in enumerate(((4.5, 4.9, 1.3), (5.3, 5.6, 1.1), (4.1, 5.7, 0.9))):
+        g = ground_z(x, y)
+        place(shrubs[(i + 2) % len(shrubs)], f'OPUS 木 | 石段脇の低木 {i}', Vector((x, y, (g or 3.0) - 0.05)), h, i * 2.0, coll)
+
+    # ---- 地肌・岩・石垣に写真テクスチャの肌理
+    photo_detail(MA.get('岬の草地 | Meadow, pine litter and fissured shale'), 'aerial_grass_rock', 4.0, 0.75, 0.5)
+    for n in ('Bluff | pale split face', 'Bluff | blue slate in shade', '草地 | Windblown stone'):
+        photo_detail(MA.get(n), 'aerial_rocks_02', 1.6, 0.8, 0.6)
+    for m in MA:
+        if m.name.startswith('Seawall • quarried stone'):
+            photo_detail(m, 'castle_wall_slates', 1.8, 0.55, 0.3)
+        elif m.name.startswith('Granite • worn face') or m.name.startswith('Granite • split face'):
+            photo_detail(m, 'aerial_rocks_02', 1.2, 0.35, 0.15)
+    log('Poly Haven trees/shrubs placed, photo detail on ground/rocks/walls')
+
+
+def lighthouse():
+    """灯台を沖の岩の岬へ遠ざけ、1.6 倍にして影絵の存在感を保つ。灯室を強く光らせ、霧に光の筋を出す。"""
+    if 'OPUS 灯台 | Headland' in OB:
+        return
+    lh = OB['06 • Lantern island lighthouse']
+    ck = OB['07 • Lighthouse keeper’s cottage']
+    cam = OB['撮影カメラ | Harbor ascent'].matrix_world.translation
+    base = Vector((-7.45, 62.0, 3.85))
+    K, SC = 2.05, 2.0
+    new = cam + (base - cam) * K       # 撮影カメラから見て同じ方向のまま遠くへ（高さもその線上）
+    # 岬の岩（Poly Haven namaqualand_cliff_01）
+    cl = append_objects('namaqualand_cliff_01', ['namaqualand_cliff_01_LOD1'])['namaqualand_cliff_01_LOD1']
+    for c in list(cl.users_collection):
+        c.objects.unlink(cl)
+    lh.users_collection[0].objects.link(cl)
+    cl.name = 'OPUS 灯台 | Headland'
+    cl.location = (new.x + 1.5, new.y + 1.0, -2.6)
+    cl.rotation_euler = (0, 0, 2.4)
+    cl.scale = (3.2, 3.2, 1.0)
+    for s_ in cl.material_slots:
+        palette_tint(s_.material, sat=0.6, val=0.75)
+    bpy.context.view_layer.update()
+    # 岩の天辺の高さ
+    inv = cl.matrix_world.inverted()
+    a = inv @ Vector((new.x, new.y, 40))
+    b = inv @ Vector((new.x, new.y, -10))
+    ok, loc, nor, idx = cl.ray_cast(a, (b - a).normalized())
+    top = (cl.matrix_world @ loc).z if ok else new.z
+    # 岩の天辺を灯台の足もと（カメラの視線上の高さ）へ合わせる
+    cl.location.z += (new.z + 0.25) - top
+    M = Matrix.Translation(new) @ Matrix.Scale(SC, 4) @ Matrix.Translation(-base)
+    for o in (lh, ck):
+        o.matrix_world = M @ o.matrix_world
+    # 灯台専用の材質（霧を弱める・塔を青灰の影絵に・灯を発光）
+    for o in (lh, ck):
+        for s_ in o.material_slots:
+            m = s_.material
+            if m and not m.name.startswith('OPUS 灯台'):
+                nm = 'OPUS 灯台 | ' + m.name.split('| ')[-1]
+                s_.link = 'OBJECT'
+                s_.material = MA.get(nm) or m.copy()
+                s_.material.name = nm
+    tower = MA['OPUS 灯台 | tower alabaster']
+    set_base(tower, (0.36, 0.39, 0.45))
+    lamp = MA['OPUS 灯台 | Fresnel lantern']
+    p = principled(lamp)
+    p.inputs['Emission Color'].default_value = (1.0, 0.72, 0.36, 1)
+    p.inputs['Emission Strength'].default_value = 40.0
+    # 灯室の中心
+    mw = lh.matrix_world
+    li = [i for i, s_ in enumerate(lh.material_slots) if s_.material == lamp]
+    ps = [mw @ pl.center for pl in lh.data.polygons if pl.material_index in li]
+    lc = sum(ps, Vector()) / max(len(ps), 1) if ps else mw @ Vector((0, 0, 8))
+    # 光の筋：加算の円錐 2 本（根元が明るく先へ薄れる、縁は柔らかく）
+    bm_ = MA.get('OPUS 灯台 | Beam') or MA.new('OPUS 灯台 | Beam')
+    bm_.use_nodes = True
+    t = bm_.node_tree
+    t.nodes.clear()
+    N, L = nodes(t)
+    tc = N('ShaderNodeTexCoord', (-900, 0))
+    sep = N('ShaderNodeSeparateXYZ', (-700, 0))
+    L(tc.outputs['Generated'], sep.inputs[0])
+    fade = mth(N, L, 'POWER', sep.outputs['Z'], 1.8, (-500, 0))     # 先端（z=0 側が広い）ほど薄い
+    lw = N('ShaderNodeLayerWeight', (-700, -250), Blend=0.5)
+    face = mth(N, L, 'SUBTRACT', 1.0, lw.outputs['Facing'], (-500, -250))
+    face = mth(N, L, 'POWER', face, 2.5, (-350, -250))
+    st = mth(N, L, 'MULTIPLY', fade, face, (-200, 0))
+    st = mth(N, L, 'MULTIPLY', st, 0.55, (-50, 0))
+    em = N('ShaderNodeEmission', (100, 0))
+    em.inputs['Color'].default_value = (1.0, 0.86, 0.62, 1)
+    L(st, em.inputs['Strength'])
+    tr = N('ShaderNodeBsdfTransparent', (100, -150))
+    add = N('ShaderNodeAddShader', (300, 0))
+    L(em.outputs[0], add.inputs[0])
+    L(tr.outputs[0], add.inputs[1])
+    out = N('ShaderNodeOutputMaterial', (500, 0))
+    L(add.outputs[0], out.inputs['Surface'])
+    bm_.surface_render_method = 'BLENDED'
+    bm_.use_transparency_overlap = True
+    for k, dvec in enumerate((Vector((-1.0, -0.55, -0.06)), Vector((0.85, 0.4, -0.03)))):
+        me = bpy.data.meshes.new(f'OPUS 灯台 | beam {k}')
+        b = bmesh.new()
+        L_ = 70.0 if k == 0 else 50.0
+        bmesh.ops.create_cone(b, cap_ends=False, segments=32, radius1=L_ * 0.085, radius2=0.3, depth=L_)
+        # 原点を灯へ：cone は z 方向 -L/2..L/2、radius2 側（+z）が灯
+        bmesh.ops.translate(b, verts=b.verts, vec=(0, 0, -L_ / 2))
+        b.to_mesh(me)
+        b.free()
+        me.materials.append(bm_)
+        o = OB.new(f'OPUS 灯台 | Beam {k}', me)
+        lh.users_collection[0].objects.link(o)
+        o.location = lc
+        o.rotation_euler = (-dvec.normalized()).to_track_quat('Z', 'Y').to_euler()
+        o.visible_shadow = False
+    # 灯の点光源（霧の中で周りを照らす）
+    ld = bpy.data.lights.new('OPUS 灯台 | Lamp', 'POINT')
+    ld.energy = 2500
+    ld.color = (1.0, 0.75, 0.42)
+    ld.shadow_soft_size = 0.4
+    lo = OB.new('OPUS 灯台 | Lamp', ld)
+    lh.users_collection[0].objects.link(lo)
+    lo.location = lc
+    log(f'lighthouse moved x{K} farther onto a Poly Haven headland, scaled x{SC}, lamp emissive + 2 beams')
+
+
 # ================================================================ 3. 空・霧・光
 SUN_DIR = Vector((-0.80, -0.42, 0.40)).normalized()     # 太陽の方向（左手前・高度約 24°）
 
@@ -1364,7 +1639,16 @@ def fog():
         ao.name = 'OPUS fog aov'
         ao.aov_name = 'fog'
         ao.location = (-300, -900)
-        t.links.new(gn.outputs[0], ao.inputs['Value'])
+        if m.name.startswith('OPUS 灯台'):
+            # 灯台は霧より手前の明るさに（霧を半分以下に）
+            mul = t.nodes.new('ShaderNodeMath')
+            mul.name = 'OPUS fog lighthouse'
+            mul.operation = 'MULTIPLY'
+            mul.inputs[1].default_value = 0.4
+            t.links.new(gn.outputs[0], mul.inputs[0])
+            t.links.new(mul.outputs[0], ao.inputs['Value'])
+        else:
+            t.links.new(gn.outputs[0], ao.inputs['Value'])
         # 輪郭線マスク：元の ID Mask（Object Index パス）は EEVEE では全画面 1 になり、
         # 敷石の目地や草まで線が乗って黒い点列になっていた → pass_index==1 を AOV で書く
         oi = t.nodes.new('ShaderNodeObjectInfo')
@@ -1428,6 +1712,8 @@ naturalize()
 rail_curb()
 post_office()
 stone_post_office()
+realism()
+lighthouse()
 light()
 sky()
 fog()
