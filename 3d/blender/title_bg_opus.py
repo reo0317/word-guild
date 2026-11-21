@@ -1354,6 +1354,25 @@ def realism():
             place(t2, f'OPUS 木 | 浜の木 {i}', Vector((x, y, zb)), min(h, 4.2), i * 1.7, coll)
         else:
             place(shrubs[i % len(shrubs)], f'OPUS 木 | 浜の低木 {i}', Vector((x, y, zb)), max(h * 0.75, 0.9), i * 2.3, coll)
+    # 局舎の裏山の広葉樹（綿玉のような手作りの木 → 実写の島の木を 2 種交互に）
+    oaks = [(2.1, 33.8, 6.83, 2.33), (3.7, 33.7, 5.52, 4.63), (3.8, 36.2, 6.52, 3.24), (4.3, 31.5, 6.55, 2.97),
+            (6.1, 31.6, 7.29, 4.46), (6.1, 33.5, 7.12, 5.08), (6.3, 35.8, 8.04, 3.05), (8.7, 33.6, 8.65, 4.42),
+            (8.9, 31.3, 8.25, 4.42), (11.4, 29.5, 11.2, 2.48), (11.4, 31.1, 9.48, 4.4), (11.4, 33.5, 11.37, 2.05),
+            (13.5, 33.0, 10.17, 3.67), (13.7, 31.1, 10.08, 4.62), (13.8, 29.3, 11.18, 3.77), (16.3, 29.0, 10.88, 4.73),
+            (16.4, 31.3, 11.77, 4.83), (18.6, 31.4, 12.4, 4.25), (19.1, 33.5, 13.22, 3.91), (20.8, 33.3, 13.64, 3.27),
+            (3.6, 37.8, 7.61, 1.58), (18.3, 29.7, 12.99, 2.77)]
+    for n in ('照葉と楓 | Coastal oaks and young maples', '林縁の若木 | Sunlit young maples'):
+        for o in OB:
+            if o.name.startswith(n):
+                o.hide_render = o.hide_viewport = True
+    for i, (x, y, z, h) in enumerate(oaks):
+        place(t1 if i % 2 else t2, f'OPUS 木 | 裏山の木 {i}', Vector((x, y, z - 0.1)), max(h * 1.15, 2.8), i * 2.1, coll)
+    maples = [(5.7, 30.6, 6.63, 1.98), (6.3, 29.3, 6.73, 2.29), (8.7, 27.9, 7.9, 2.12), (9.1, 27.0, 8.02, 2.58),
+              (10.8, 26.1, 8.18, 2.79), (11.3, 28.7, 9.38, 1.44), (13.0, 24.7, 9.41, 1.4), (13.4, 26.4, 8.88, 2.77),
+              (13.9, 27.9, 9.94, 1.71)]
+    for i, (x, y, z, h) in enumerate(maples):
+        src = t2 if h > 2.2 else shrubs[i % len(shrubs)]
+        place(src, f'OPUS 木 | 林縁の若木 {i}', Vector((x, y, z - 0.08)), max(h, 1.2), i * 1.3, coll)
     # 石段右の椿 → 実写の低木
     OB['石段の椿 | Camellia at the margin of the steps'].hide_render = True
     OB['石段の椿 | Camellia at the margin of the steps'].hide_viewport = True
@@ -1416,7 +1435,7 @@ def lighthouse():
                 s_.material = MA.get(nm) or m.copy()
                 s_.material.name = nm
     tower = MA['OPUS 灯台 | tower alabaster']
-    set_base(tower, (0.36, 0.39, 0.45))
+    set_base(tower, (0.20, 0.23, 0.29))
     lamp = MA['OPUS 灯台 | Fresnel lantern']
     p = principled(lamp)
     p.inputs['Emission Color'].default_value = (1.0, 0.72, 0.36, 1)
@@ -1644,7 +1663,7 @@ def fog():
             mul = t.nodes.new('ShaderNodeMath')
             mul.name = 'OPUS fog lighthouse'
             mul.operation = 'MULTIPLY'
-            mul.inputs[1].default_value = 0.4
+            mul.inputs[1].default_value = 0.28
             t.links.new(gn.outputs[0], mul.inputs[0])
             t.links.new(mul.outputs[0], ao.inputs['Value'])
         else:
@@ -1688,7 +1707,15 @@ def fog():
     ct.links.new(outline.outputs[2], fogmix.inputs[6])
     ct.links.new(rl.outputs['fog'], fogmix.inputs['Factor'])
     fogmix.inputs[7].default_value = (0.66, 0.69, 0.71, 1)
-    ct.links.new(fogmix.outputs[2], nd['RGB Curves'].inputs['Image'])
+    # 灯台の灯・窓の灯だけがにじむ程度の光のにじみ（霧の後に掛けるので灯は霧に負けない）
+    gl = nd.get('OPUS 灯のにじみ') or nd.new('CompositorNodeGlare')
+    gl.name = 'OPUS 灯のにじみ'
+    gl.inputs['Type'].default_value = 'Bloom'
+    gl.inputs['Threshold'].default_value = 2.5
+    gl.inputs['Strength'].default_value = 0.7
+    gl.inputs['Size'].default_value = 0.55
+    ct.links.new(fogmix.outputs[2], gl.inputs['Image'])
+    ct.links.new(gl.outputs['Image'], nd['RGB Curves'].inputs['Image'])
     nd['タイトル表示'].inputs['Factor'].default_value = 0.0
     log(f'fog AOV added to {n_mat} materials; compositor: outline -> fog -> curves -> paper')
 
