@@ -1316,85 +1316,76 @@ def photo_detail(m, aid, scale, amount, bump=0.4):
 
 
 def realism():
+    """植生の考え方（霧の多い温帯の海辺の丘）：
+    - 風と潮をまともに受ける石段左の斜面・崖の縁：草と、風で低く刈り込まれた常緑の低木（Searsia lucida）だけ。
+    - 局舎の右奥・裏山の風下（守られた所）：樹冠のまとまった広葉樹（island_tree_01）を少数、同じ縮尺で。
+    - 樹種をそろえ、数を絞って間隔をあける。枝ぶりの荒い island_tree_02 と手作りの松・ネズは使わない。"""
     coll = bpy.data.collections.get('OPUS 実写素材 | Poly Haven') or bpy.data.collections.new('OPUS 実写素材 | Poly Haven')
     if coll.name not in S.collection.children:
         S.collection.children.link(coll)
-    # ---- 木：手作りの黒松・浜の低木を Poly Haven の島の木・低木に置き換える
     t1 = append_objects('island_tree_01', ['island_tree_01_LOD1'])['island_tree_01_LOD1']
-    t2 = append_objects('island_tree_02', ['island_tree_02_LOD1'])['island_tree_02_LOD1']
-    sh = append_objects('shrub_02', ['shrub_02_a_LOD1', 'shrub_02_b_LOD1', 'shrub_02_c_LOD1', 'shrub_02_d_LOD1'])
-    for o in [t1, t2] + list(sh.values()):
+    sl_names = [f'searsia_lucida_{k}_LOD1' for k in 'abcde']
+    sl = append_objects('searsia_lucida', sl_names)
+    sh = append_objects('shrub_02', ['shrub_02_b_LOD1', 'shrub_02_c_LOD1'])
+    srcs = [t1] + [sl[n] for n in sl_names] + list(sh.values())
+    for o in srcs:
         for c in list(o.users_collection):
             c.objects.unlink(o)
-        o.hide_render = o.hide_viewport = True     # 原本は非表示、複製で配置
         coll.objects.link(o)
+        o.hide_render = o.hide_viewport = True     # 原本は非表示、複製で配置
         for s_ in o.material_slots:
             palette_tint(s_.material)
-    shrubs = [sh[k] for k in sorted(sh)]
-    # 木は 30〜50 万面あるので、見た目の変わらない 2 割まで減らしてから複製する（描画時間とメモリ）
-    for src in (t1, t2):
-        if src.get('opus_decimated'):
-            continue
-        dm = src.modifiers.new('opus_lod', 'DECIMATE')
+    # 広葉樹は 50 万面あるので 2 割に間引く（見た目は変わらない）
+    if not t1.get('opus_decimated'):
+        t1.hide_viewport = False
+        dm = t1.modifiers.new('opus_lod', 'DECIMATE')
         dm.ratio = 0.2
         bpy.context.view_layer.update()
-        dg = bpy.context.evaluated_depsgraph_get()
-        src.hide_viewport = False
-        bpy.context.view_layer.update()
-        me = bpy.data.meshes.new_from_object(src.evaluated_get(bpy.context.evaluated_depsgraph_get()))
-        src.modifiers.remove(src.modifiers['opus_lod'])
-        src.data = me
-        src.hide_viewport = True
-        src['opus_decimated'] = True
-    # 原本の原点を根元へ（LOD は原点が根元の中心）
-    trees = [('老黒松 | Salt-shaped boughs and paired needles', t1, (11.44, 26.32, 8.82), 8.6, 2.6),
-             ('黒松 | Leeward ridge pine', t2, (14.6, 31.5, 10.7), 5.4, 0.7),
-             ('黒松 | Leeward ridge pine.001', t1, (9.2, 34.0, 8.84), 4.8, 4.1),
-             ('黒松 | Leeward ridge pine.002', t2, (18.09, 35.0, 12.5), 5.2, 1.9),
-             ('黒松 | Leeward ridge pine.003', t2, (5.0, 36.0, 7.37), 3.8, 5.3)]
-    for i, (old, src, base, h, rz) in enumerate(trees):
-        OB[old].hide_render = OB[old].hide_viewport = True
-        place(src, f'OPUS 木 | {old.split(" | ")[0]} {i}', Vector(base) - Vector((0, 0, 0.15)), h, rz, coll)
-    # 石段左の斜面の低木（手作りの丸い茂み → 実写の島の木・低木）
-    left = [(-1.22, 8.16, 0.08, 2.27), (-1.79, 8.23, -0.27, 1.23), (-1.96, 9.48, -0.31, 2.14),
-            (-0.71, 9.73, 0.38, 2.96), (-1.02, 11.08, 1.3, 2.09), (-1.91, 11.55, 1.6, 2.24),
-            (-2.17, 12.82, 1.52, 3.53), (-1.4, 12.87, 2.49, 2.41), (-2.5, 13.87, -0.57, 5.61),
-            (-3.3, 14.35, -1.1, 3.39), (-3.97, 20.35, -1.76, 3.29), (-3.62, 21.67, 0.83, 2.51),
-            (-4.04, 19.2, -2.15, 1.06)]
-    OB['浜のトベラとヒメユズリハ | Leathery coastal foliage'].hide_render = True
-    OB['浜のトベラとヒメユズリハ | Leathery coastal foliage'].hide_viewport = True
-    for i, (x, y, z, h) in enumerate(left):
-        g = ground_z(x, y)
-        zb = (g if g is not None else z) - 0.08
-        # 石段左の斜面は開けておく（大きな木は置かず、低い茂みだけ）
-        place(shrubs[i % len(shrubs)], f'OPUS 木 | 浜の低木 {i}', Vector((x, y, zb)), min(max(h * 0.45, 0.7), 1.1), i * 2.3, coll)
-    # 局舎の裏山の広葉樹（綿玉のような手作りの木 → 実写の島の木を 2 種交互に）
-    oaks = [(2.1, 33.8, 6.83, 2.33), (3.7, 33.7, 5.52, 4.63), (3.8, 36.2, 6.52, 3.24), (4.3, 31.5, 6.55, 2.97),
-            (6.1, 31.6, 7.29, 4.46), (6.1, 33.5, 7.12, 5.08), (6.3, 35.8, 8.04, 3.05), (8.7, 33.6, 8.65, 4.42),
-            (8.9, 31.3, 8.25, 4.42), (11.4, 29.5, 11.2, 2.48), (11.4, 31.1, 9.48, 4.4), (11.4, 33.5, 11.37, 2.05),
-            (13.5, 33.0, 10.17, 3.67), (13.7, 31.1, 10.08, 4.62), (13.8, 29.3, 11.18, 3.77), (16.3, 29.0, 10.88, 4.73),
-            (16.4, 31.3, 11.77, 4.83), (18.6, 31.4, 12.4, 4.25), (19.1, 33.5, 13.22, 3.91), (20.8, 33.3, 13.64, 3.27),
-            (3.6, 37.8, 7.61, 1.58), (18.3, 29.7, 12.99, 2.77)]
-    for n in ('照葉と楓 | Coastal oaks and young maples', '林縁の若木 | Sunlit young maples'):
+        me = bpy.data.meshes.new_from_object(t1.evaluated_get(bpy.context.evaluated_depsgraph_get()))
+        t1.modifiers.remove(t1.modifiers['opus_lod'])
+        t1.data = me
+        t1.hide_viewport = True
+        t1['opus_decimated'] = True
+    coastal = [sl[n] for n in sl_names]          # 風衝の低木（大きい順）
+    # 手作りの木・低木はすべて外す
+    for n in ('老黒松 |', '黒松 |', '照葉と楓 |', '林縁の若木 |', '浜のトベラとヒメユズリハ |', '石段の椿 |',
+              '潮風のネズ |', '風下の杉林 |'):
         for o in OB:
             if o.name.startswith(n):
                 o.hide_render = o.hide_viewport = True
-    oaks = [o_ for o_ in oaks if o_[3] >= 3.0]
-    for i, (x, y, z, h) in enumerate(oaks):
-        place(t1 if i % 2 else t2, f'OPUS 木 | 裏山の木 {i}', Vector((x, y, z - 0.1)), max(h * 1.15, 2.8), i * 2.1, coll)
-    maples = [(5.7, 30.6, 6.63, 1.98), (6.3, 29.3, 6.73, 2.29), (8.7, 27.9, 7.9, 2.12), (9.1, 27.0, 8.02, 2.58),
-              (10.8, 26.1, 8.18, 2.79), (11.3, 28.7, 9.38, 1.44), (13.0, 24.7, 9.41, 1.4), (13.4, 26.4, 8.88, 2.77),
-              (13.9, 27.9, 9.94, 1.71)]
-    for i, (x, y, z, h) in enumerate(maples):
-        src = t2 if h > 2.6 else shrubs[i % len(shrubs)]
-        place(src, f'OPUS 木 | 林縁の若木 {i}', Vector((x, y, z - 0.08)), max(h, 1.2), i * 1.3, coll)
-    # 石段右の椿 → 実写の低木
-    OB['石段の椿 | Camellia at the margin of the steps'].hide_render = True
-    OB['石段の椿 | Camellia at the margin of the steps'].hide_viewport = True
-    for i, (x, y, h) in enumerate(((4.5, 4.9, 1.3), (5.3, 5.6, 1.1), (4.1, 5.7, 0.9))):
-        g = ground_z(x, y)
-        place(shrubs[(i + 2) % len(shrubs)], f'OPUS 木 | 石段脇の低木 {i}', Vector((x, y, (g or 3.0) - 0.05)), h, i * 2.0, coll)
 
+    # ---- 風下の広葉樹：裏山の木の位置候補から、4.5 m 以上離れたものだけを選ぶ
+    cand = [(11.44, 26.32, 8.82), (6.1, 33.5, 7.12), (3.7, 33.7, 5.52), (13.7, 31.1, 10.08), (8.9, 31.3, 8.25),
+            (16.4, 31.3, 11.77), (11.4, 31.1, 9.48), (18.6, 31.4, 12.4), (14.6, 31.5, 10.7), (9.2, 34.0, 8.84),
+            (6.1, 31.6, 7.29), (18.09, 35.0, 12.5), (20.8, 33.3, 13.64), (10.8, 26.1, 8.18), (13.4, 26.4, 8.88)]
+    chosen = []
+    for c in cand:
+        if all((Vector(c[:2]) - Vector(o[:2])).length > 4.5 for o in chosen):
+            chosen.append(c)
+    for i, (x, y, z) in enumerate(chosen):
+        g = ground_z(x, y)
+        zb = (g if g is not None else z) - 0.12
+        h = 6.2 + 0.5 * ((i * 37) % 5 - 2) * 0.5          # 5.7〜6.7 m にそろえる
+        place(t1, f'OPUS 木 | 風下の広葉樹 {i}', Vector((x, y, zb)), h, i * 1.9 + 0.4, coll)
+    # 局舎の右手（石段上端の右）の林縁に、低木の帯
+    edge = [(5.7, 30.6), (8.7, 27.9), (9.1, 27.0), (13.0, 24.7), (13.9, 27.9), (4.5, 4.9), (5.3, 5.6), (4.1, 5.7)]
+    for i, (x, y) in enumerate(edge):
+        g = ground_z(x, y)
+        src = coastal[i % 3] if y < 10 else sh[list(sh)[i % 2]]
+        place(src, f'OPUS 木 | 林縁の低木 {i}', Vector((x, y, (g or 3.0) - 0.05)), 1.1 if y < 10 else 1.5, i * 2.0, coll)
+    # ---- 風衝の斜面（石段左）：低く刈り込まれた常緑の低木を、少数・まばらに
+    left = [(-1.22, 8.16), (-1.96, 9.48), (-1.02, 11.08), (-2.17, 12.82), (-3.3, 14.35), (-3.97, 20.35)]
+    for i, (x, y) in enumerate(left):
+        g = ground_z(x, y)
+        if g is None:
+            continue
+        o = place(coastal[i % len(coastal)], f'OPUS 木 | 風衝の低木 {i}', Vector((x, y, g - 0.06)), 0.75 + 0.1 * (i % 3), i * 2.3, coll)
+        # 海風で陸側へ押し倒された形（横に広く低く）
+        o.scale = (o.scale.x * 1.35, o.scale.y * 1.15, o.scale.z)
+    log(f'vegetation: {len(chosen)} sheltered broadleaf trees, {len(edge)} edge shrubs, {len(left)} wind-pruned shrubs')
+
+
+def ground_photo():
     # ---- 地肌・岩・石垣に写真テクスチャの肌理
     photo_detail(MA.get('岬の草地 | Meadow, pine litter and fissured shale'), 'aerial_grass_rock', 4.0, 0.75, 0.5)
     for n in ('Bluff | pale split face', 'Bluff | blue slate in shade', '草地 | Windblown stone'):
@@ -1418,17 +1409,38 @@ def lighthouse():
     cam = cam_o.matrix_world.translation
     base = Vector((-7.45, 62.0, 3.85))
     SC = 2.2
-    # 撮影カメラの画面の左 3〜33% に見える遠山の稜線で、一番高い頂を探す
+    # 撮影カメラの画面の左から 20% の所に見える遠山の稜線を探し、その頂を盛り上げて高い山にする
     from bpy_extras.object_utils import world_to_camera_view
     S.render.resolution_x, S.render.resolution_y = 1080, 1920
     mt = OB['遠山 | Aeolian watershed']
-    best, hit_o = None, mt
+    hit_o = mt
+    mw = mt.matrix_world
+    best = None
     for v in mt.data.vertices:
-        w = mt.matrix_world @ v.co
+        w = mw @ v.co
         sc = world_to_camera_view(S, cam_o, w)
-        if 0.03 < sc.x < 0.33 and sc.z > 0 and (best is None or w.z > best.z):
+        if 0.18 < sc.x < 0.22 and sc.z > 0 and (best is None or w.z > best.z):
             best = w
-    new = best - Vector((0, 0, 0.8))
+    # 頂の画面の高さが上から 40% になる標高まで上げる（霧の帯より上）
+    lo, hi = best.z, best.z + 200.0
+    for _ in range(30):
+        mid = (lo + hi) / 2
+        if world_to_camera_view(S, cam_o, Vector((best.x, best.y, mid))).y < 0.60:
+            lo = mid
+        else:
+            hi = mid
+    lift = lo - best.z
+    R = 28.0
+    inv = mw.inverted()
+    for v in mt.data.vertices:
+        w = mw @ v.co
+        d2 = (w.x - best.x) ** 2 + (w.y - best.y) ** 2
+        if d2 < (3 * R) ** 2:
+            w.z += lift * math.exp(-d2 / (2 * (R * 0.55) ** 2))
+            v.co = inv @ w
+    mt.data.update()
+    best = Vector((best.x, best.y, best.z + lift))
+    new = best - Vector((0, 0, 1.0))
     M = Matrix.Translation(new) @ Matrix.Scale(SC, 4) @ Matrix.Translation(-base)
     lh.matrix_world = M @ lh.matrix_world
     lh['opus_moved'] = True
@@ -1749,6 +1761,7 @@ rail_curb()
 post_office()
 stone_post_office()
 realism()
+ground_photo()
 lighthouse()
 light()
 sky()
