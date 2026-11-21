@@ -1366,10 +1366,8 @@ def realism():
     for i, (x, y, z, h) in enumerate(left):
         g = ground_z(x, y)
         zb = (g if g is not None else z) - 0.08
-        if h > 2.8:
-            place(t2, f'OPUS 木 | 浜の木 {i}', Vector((x, y, zb)), min(h, 4.2), i * 1.7, coll)
-        else:
-            place(shrubs[i % len(shrubs)], f'OPUS 木 | 浜の低木 {i}', Vector((x, y, zb)), max(h * 0.75, 0.9), i * 2.3, coll)
+        # 石段左の斜面は開けておく（大きな木は置かず、低い茂みだけ）
+        place(shrubs[i % len(shrubs)], f'OPUS 木 | 浜の低木 {i}', Vector((x, y, zb)), min(max(h * 0.45, 0.7), 1.1), i * 2.3, coll)
     # 局舎の裏山の広葉樹（綿玉のような手作りの木 → 実写の島の木を 2 種交互に）
     oaks = [(2.1, 33.8, 6.83, 2.33), (3.7, 33.7, 5.52, 4.63), (3.8, 36.2, 6.52, 3.24), (4.3, 31.5, 6.55, 2.97),
             (6.1, 31.6, 7.29, 4.46), (6.1, 33.5, 7.12, 5.08), (6.3, 35.8, 8.04, 3.05), (8.7, 33.6, 8.65, 4.42),
@@ -1410,40 +1408,34 @@ def realism():
 
 
 def lighthouse():
-    """灯台を沖の岩の岬へ遠ざけ、1.6 倍にして影絵の存在感を保つ。灯室を強く光らせ、霧に光の筋を出す。"""
-    if 'OPUS 灯台 | Headland' in OB:
+    """灯台を局舎の左奥の高い山の頂へ。霧の上に出る高さで、2 倍の大きさの影絵にする。灯室を強く光らせ、霧に光の筋を出す。"""
+    if OB['06 • Lantern island lighthouse'].get('opus_moved'):
         return
     lh = OB['06 • Lantern island lighthouse']
     ck = OB['07 • Lighthouse keeper’s cottage']
-    cam = OB['撮影カメラ | Harbor ascent'].matrix_world.translation
+    ck.hide_render = ck.hide_viewport = True      # 番小屋は山の上では浮くので外す
+    cam_o = OB['撮影カメラ | Harbor ascent']
+    cam = cam_o.matrix_world.translation
     base = Vector((-7.45, 62.0, 3.85))
-    K, SC = 2.05, 2.0
-    new = cam + (base - cam) * K       # 撮影カメラから見て同じ方向のまま遠くへ（高さもその線上）
-    # 岬の岩（Poly Haven namaqualand_cliff_01）
-    cl = append_objects('namaqualand_cliff_01', ['namaqualand_cliff_01_LOD1'])['namaqualand_cliff_01_LOD1']
-    for c in list(cl.users_collection):
-        c.objects.unlink(cl)
-    lh.users_collection[0].objects.link(cl)
-    cl.name = 'OPUS 灯台 | Headland'
-    cl.location = (new.x + 1.5, new.y + 1.0, -2.6)
-    cl.rotation_euler = (0, 0, 2.4)
-    cl.scale = (3.2, 3.2, 1.0)
-    for s_ in cl.material_slots:
-        palette_tint(s_.material, sat=0.6, val=0.75)
-    bpy.context.view_layer.update()
-    # 岩の天辺の高さ
-    inv = cl.matrix_world.inverted()
-    a = inv @ Vector((new.x, new.y, 40))
-    b = inv @ Vector((new.x, new.y, -10))
-    ok, loc, nor, idx = cl.ray_cast(a, (b - a).normalized())
-    top = (cl.matrix_world @ loc).z if ok else new.z
-    # 岩の天辺を灯台の足もと（カメラの視線上の高さ）へ合わせる
-    cl.location.z += (new.z + 0.25) - top
+    SC = 2.2
+    # 撮影カメラの画面の左 3〜33% に見える遠山の稜線で、一番高い頂を探す
+    from bpy_extras.object_utils import world_to_camera_view
+    S.render.resolution_x, S.render.resolution_y = 1080, 1920
+    mt = OB['遠山 | Aeolian watershed']
+    best, hit_o = None, mt
+    for v in mt.data.vertices:
+        w = mt.matrix_world @ v.co
+        sc = world_to_camera_view(S, cam_o, w)
+        if 0.03 < sc.x < 0.33 and sc.z > 0 and (best is None or w.z > best.z):
+            best = w
+    new = best - Vector((0, 0, 0.8))
     M = Matrix.Translation(new) @ Matrix.Scale(SC, 4) @ Matrix.Translation(-base)
-    for o in (lh, ck):
-        o.matrix_world = M @ o.matrix_world
+    lh.matrix_world = M @ lh.matrix_world
+    lh['opus_moved'] = True
+    log(f'lighthouse on mountain {hit_o.name if hit_o else "?"} at {tuple(round(v, 1) for v in new)}, '
+        f'{(new - cam).length:.0f} m from the title camera')
     # 灯台専用の材質（霧を弱める・塔を青灰の影絵に・灯を発光）
-    for o in (lh, ck):
+    for o in (lh,):
         for s_ in o.material_slots:
             m = s_.material
             if m and not m.name.startswith('OPUS 灯台'):
@@ -1511,7 +1503,7 @@ def lighthouse():
     lo = OB.new('OPUS 灯台 | Lamp', ld)
     lh.users_collection[0].objects.link(lo)
     lo.location = lc
-    log(f'lighthouse moved x{K} farther onto a Poly Haven headland, scaled x{SC}, lamp emissive + 2 beams')
+    log(f'lighthouse scaled x{SC}, lamp emissive + 2 beams + point light')
 
 
 # ================================================================ 3. 空・霧・光
