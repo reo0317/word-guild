@@ -7,7 +7,7 @@ Kiribare_Hillside.opus.blend に保存する。何度流しても同じ結果に
       -P 3d/blender/title_bg_opus.py -- 3d/scenes/Kiribare_Hillside.opus.blend
 """
 import bpy, bmesh, math, sys
-from mathutils import Vector, Matrix, Euler
+from mathutils import Vector, Matrix, Euler, Quaternion
 
 argv = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
 OUT = argv[0] if argv else None
@@ -1751,6 +1751,198 @@ def sea():
     log('sea from turquoise to misty grey-blue')
 
 
+# ================================================================ 4. キャラクター（試し置き）
+# コレクション「OPUS 08 キャラクター」に作る。既定ではレンダーに出さない（hide_render）。
+# キャラ入りで撮るときは title_bg_render.py の 6 番目の引数に chara を渡す（コレクションを表示に切り替える）。
+MODELS = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'models', 'out'))
+CHARA_COLL = 'OPUS 08 キャラクター'
+
+
+def import_chara(name, coll):
+    before = set(bpy.data.objects)
+    bpy.ops.import_scene.gltf(filepath=os.path.join(MODELS, f'{name}.glb'))
+    new = [o for o in bpy.data.objects if o not in before]
+    for o in new:
+        for c in list(o.users_collection):
+            c.objects.unlink(o)
+        coll.objects.link(o)
+        o.name = f'OPUS {name} | {o.name}'
+    for o in new:
+        if o.type == 'MESH' and o.name.endswith('Icosphere'):
+            bpy.data.objects.remove(o)          # 書き出し時の環境球（不要）
+    new = [o for o in bpy.data.objects if o.name.startswith(f'OPUS {name} |')]
+    arm = next(o for o in new if o.type == 'ARMATURE')
+    root = arm
+    while root.parent:
+        root = root.parent
+    for o in new:
+        if o.type == 'MESH':
+            o.pass_index = 1                    # 局舎と同じ墨の輪郭線
+    return root, arm, [o for o in new if o.type == 'MESH']
+
+
+def turn(arm, bone, axis, deg):
+    """骨を、アーマチュア空間の軸のまわりに、骨の根元を中心に回す（親から順に呼ぶ）。"""
+    bpy.context.view_layer.update()
+    pb = arm.pose.bones[bone]
+    M = pb.matrix.copy()
+    R = Matrix.Rotation(math.radians(deg), 4, Vector(axis).normalized())
+    head = M.translation.copy()
+    M2 = Matrix.Translation(head) @ R @ Matrix.Translation(-head) @ M
+    pb.matrix = M2
+    bpy.context.view_layer.update()
+
+
+def pose_tsumugi(arm):
+    m = 'mixamorig:'
+    X, Y, Z = (1, 0, 0), (0, 1, 0), (0, 0, 1)
+    # 体：前へ少し傾け、上半身を左（カメラ側）へひねる
+    turn(arm, m + 'Spine', X, -6)
+    turn(arm, m + 'Spine1', X, -4)
+    turn(arm, m + 'Spine2', Z, 12)
+    # 頭：見上げてフウロウの方へ
+    turn(arm, m + 'Neck', X, 10)
+    turn(arm, m + 'Head', Z, 22)
+    turn(arm, m + 'Head', X, 8)
+    # 脚：右脚を次の段へ上げる（腿を前へ、膝を曲げる）、左脚は後ろで蹴り出す
+    turn(arm, m + 'RightUpLeg', X, -42)
+    turn(arm, m + 'RightLeg', X, 58)
+    turn(arm, m + 'RightFoot', X, -14)
+    turn(arm, m + 'LeftUpLeg', X, 14)
+    turn(arm, m + 'LeftLeg', X, 26)
+    turn(arm, m + 'LeftFoot', X, 12)
+    # 右腕：下ろして後ろへ振る、肘は軽く
+    turn(arm, m + 'RightArm', Y, -72)
+    turn(arm, m + 'RightArm', X, 22)
+    turn(arm, m + 'RightForeArm', X, -18)
+    # 左腕：手紙を胸の前で持ち、少し掲げる
+    turn(arm, m + 'LeftArm', Y, 66)
+    turn(arm, m + 'LeftArm', X, -28)
+    turn(arm, m + 'LeftForeArm', X, -78)     # 肘を曲げて前腕を前へ
+    turn(arm, m + 'LeftForeArm', Z, -28)     # 胸の前へ寄せる
+    turn(arm, m + 'LeftHand', Y, -20)
+    for f in ('Index', 'Middle', 'Ring', 'Pinky'):
+        for k in (1, 2):
+            turn(arm, f'{m}Left Hand{f}{k}'.replace('Left Hand', 'LeftHand'), Y, 22)
+            turn(arm, f'{m}RightHand{f}{k}', Y, -18)
+
+
+def pose_hatori(arm):
+    m = 'mixamorig:'
+    X, Y, Z = (1, 0, 0), (0, 1, 0), (0, 0, 1)
+    turn(arm, m + 'LeftArm', Y, 72)          # 左腕は下ろす
+    turn(arm, m + 'LeftForeArm', X, -30)
+    turn(arm, m + 'RightArm', Y, -25)         # 右腕を少し下げて横へ
+    turn(arm, m + 'RightArm', Z, 18)          # やや前へ
+    turn(arm, m + 'RightForeArm', Y, 115)     # 前腕を立てて出迎えの手振り
+    turn(arm, m + 'Head', X, 6)
+
+
+def pose_fuurou(arm, deg=28):
+    for side, s in (('L', 1), ('R', -1)):
+        b = arm.pose.bones[f'Wing_{side}_0']
+        b.rotation_mode = 'QUATERNION'
+        axis = (arm.matrix_world @ b.bone.matrix_local).to_quaternion().inverted() @ Vector((0, 1, 0))
+        b.rotation_quaternion = Quaternion(axis, math.radians(-deg * s))
+        b1 = arm.pose.bones[f'Wing_{side}_1']
+        b1.rotation_mode = 'QUATERNION'
+        b1.rotation_quaternion = Quaternion(axis, math.radians(-12 * s))
+    bpy.context.view_layer.update()
+    # 飛んでいる間は脚を後ろへたたむ
+    for side in ('Left', 'Right'):
+        for k in (0, 1):
+            nm = f'tripo::0_{side}_Limb_{k}'
+            if nm in arm.pose.bones:
+                turn(arm, nm, (1, 0, 0), 50)
+
+
+def place_root(root, loc, yaw_deg, height, mesh_h=0.98, pitch_deg=0.0):
+    s = height / mesh_h
+    root.location = loc
+    root.rotation_mode = 'XYZ'
+    root.rotation_euler = (math.radians(pitch_deg), 0, math.radians(yaw_deg))
+    root.scale = (s, s, s)
+    bpy.context.view_layer.update()
+
+
+def characters():
+    from mathutils import Quaternion as _Q
+    globals()['Quaternion'] = _Q
+    coll = bpy.data.collections.get(CHARA_COLL) or bpy.data.collections.new(CHARA_COLL)
+    if coll.name not in S.collection.children:
+        S.collection.children.link(coll)
+    # ---- ツムギ：撮影カメラ用の足元マーカーの位置で、石段を上っている（背中寄りの 3/4）
+    feet = OB['足元 | CHARACTER_FEET'].matrix_world
+    root, arm, meshes = import_chara('tsumugi', coll)
+    pose_tsumugi(arm)
+    yaw = math.degrees(feet.to_euler().z) + 180 + 18
+    place_root(root, feet.translation.copy(), yaw, 1.50)
+    # 足裏を段に合わせる（評価後の一番低い頂点を踏み面の高さへ）
+    dg = bpy.context.evaluated_depsgraph_get()
+    body = max(meshes, key=lambda o: len(o.data.polygons))
+    ev = body.evaluated_get(dg)
+    me = ev.to_mesh()
+    zmin = min((body.matrix_world @ v.co).z for v in me.vertices)
+    ev.to_mesh_clear()
+    root.location.z += feet.translation.z - zmin
+    bpy.context.view_layer.update()
+    # 手紙（左手）：紙色の封筒と朱の封蝋
+    hand = arm.pose.bones['mixamorig:LeftHand']
+    hw = arm.matrix_world @ hand.matrix
+    hp = arm.matrix_world @ hand.tail
+    env = bpy.data.meshes.new('OPUS tsumugi | letter')
+    b = bmesh.new()
+    bmesh.ops.create_cube(b, size=1.0)
+    for v in b.verts:
+        v.co = Vector((v.co.x * 0.20, v.co.y * 0.006, v.co.z * 0.13))
+    b.to_mesh(env)
+    b.free()
+    env.materials.append(MA['Post office • Ivory enamel'])
+    lo = OB.new('OPUS tsumugi | Letter', env)
+    coll.objects.link(lo)
+    lo.matrix_world = Matrix.Translation(hp) @ hw.to_quaternion().to_matrix().to_4x4() @ Matrix.Rotation(math.radians(90), 4, 'Z')
+    lo.pass_index = 1
+    seal = bpy.data.meshes.new('OPUS tsumugi | seal')
+    b = bmesh.new()
+    bmesh.ops.create_circle(b, cap_ends=True, segments=16, radius=0.022)
+    b.to_mesh(seal)
+    b.free()
+    seal.materials.append(MA['OPUS 局旗 | Vermilion wool'])
+    so = OB.new('OPUS tsumugi | Seal', seal)
+    coll.objects.link(so)
+    so.parent = lo
+    so.location = (0, -0.0035, 0)
+    so.rotation_euler = (math.radians(90), 0, 0)
+    # ---- フウロウ：ツムギの頭上の先を、局舎へ向かって羽ばたく（羽を上げた瞬間）
+    froot, farm, fmeshes = import_chara('fuurou', coll)
+    pose_fuurou(farm, 22)                                         # 羽を V 字に広げた瞬間
+    head_w = arm.matrix_world @ arm.pose.bones['mixamorig:HeadTop_End'].head
+    up = Vector((math.sin(math.radians(-yaw + 180 - 18)), 0, 0))
+    fwd = Vector((-math.sin(feet.to_euler().z), math.cos(feet.to_euler().z), 0))
+    # ツムギと同じ奥行きの右上の空中
+    floc = head_w + fwd * 0.2 + Vector((0.95, 0, 1.15))
+    place_root(froot, floc, -62.0, 1.0, pitch_deg=20)         # 頭を下げた前のめり        # 画面の左（灯台の方）へ、顔と広げた羽が見える 3/4 の向き
+    # ---- 羽鳥局長：局舎の扉の脇で出迎える（小さく）
+    org = OB['局舎 | Building origin'].matrix_world
+    hroot, harm, hmeshes = import_chara('hatori', coll)
+    pose_hatori(harm)
+    hl = org @ Vector((-1.05, -1.35, 0.0))
+    place_root(hroot, hl, math.degrees(org.to_euler().z) + 15, 1.45)
+    # ---- 人物を霧から浮かせる弱い逆光（人物だけを照らす）
+    rim = bpy.data.lights.new('OPUS キャラ | Rim', 'AREA')
+    rim.energy = 140
+    rim.size = 2.5
+    rim.color = (1.0, 0.86, 0.68)
+    ro = OB.new('OPUS キャラ | Rim', rim)
+    coll.objects.link(ro)
+    ro.location = feet.translation + Vector((-1.6, 3.0, 3.2))
+    ro.rotation_euler = (feet.translation + Vector((0, 0, 1.0)) - ro.location).to_track_quat('-Z', 'Y').to_euler()
+    for o in coll.all_objects:
+        o.hide_render = False
+    coll.hide_render = '--chara' not in argv
+    log(f'characters: tsumugi on the stairs, fuurou flying, hatori at the door (render {"on" if not coll.hide_render else "off"})')
+
+
 # ================================================================ run
 fix_normals()
 remove_buried_wall_shards()
@@ -1764,6 +1956,7 @@ realism()
 ground_photo()
 lighthouse()
 light()
+characters()
 sky()
 fog()
 sea()

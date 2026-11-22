@@ -1,8 +1,9 @@
 """Kiribare_Hillside.opus.blend を 4 台のカメラで撮る（EEVEE、任意で Cycles）。
 
   blender -b --disable-autoexec 3d/scenes/Kiribare_Hillside.opus.blend \
-      -P 3d/blender/title_bg_render.py -- <出力プレフィックス> <倍率> <サンプル数> [カメラ番号,..] [eevee|cycles]
+      -P 3d/blender/title_bg_render.py -- <出力プレフィックス> <倍率> <サンプル数> [カメラ番号,..] [eevee|cycles] [chara]
 
+6 番目の引数 chara でキャラクター（OPUS 08 キャラクター）を出す。
 カメラ番号 0=撮影カメラ(1080x1920) 1=人物合成(1080x1920) 2=前庭と石段(1600x1100) 3=局舎と袖看板(1440x1080)
 本番のタイトル背景: -- 3d/scenes/title-bg 1.0 128 0  → title-bg_cam0.png
 """
@@ -12,6 +13,10 @@ argv = sys.argv[sys.argv.index('--') + 1:]
 prefix, scale, samples = argv[0], float(argv[1]), int(argv[2])
 cams = [int(c) for c in argv[3].split(',')] if len(argv) > 3 else [0, 1, 2, 3]
 engine = argv[4] if len(argv) > 4 else 'eevee'
+chara = len(argv) > 5 and argv[5] == 'chara'
+cc = bpy.data.collections.get('OPUS 08 キャラクター')
+if cc:
+    cc.hide_render = not chara
 
 S = bpy.context.scene
 CAMS = ['撮影カメラ | Harbor ascent', '人物合成 | Character portrait',
