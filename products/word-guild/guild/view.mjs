@@ -950,7 +950,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     const litLetter = lampNow ? lampNow.lit === lampNow.total : false;
     const newlyRead = Boolean(lvStart && lvEnd && lvEnd.readable && !lvStart.readable);
     const nextLetter = newlyRead ? letterAt(shelf + 1, endProgress, today) : null;
-    const paperOpts = lv => ({face: faceOf, shadowLines: shadowLinesOf(lv), lit: litLetter});
+    const paperOpts = lv => ({face: faceOf, shadowLines: shadowLinesOf(lv), lit: litLetter, signed: true});
 
     const gateOpened = newlyOpenedGate(quest.startProgress, quest.progress, quest.gate);
     const openedWard = quest.gate;

@@ -346,7 +346,7 @@ export function openAlbum(container, deps = {}) {
         const at = page.words.findIndex(w => w.id === id);
         return at < 0 ? '' : charaSvg(specs[at], {state, ward: page.ch, base});
       };
-      const paper = letter ? `<div class="gq-album-letter">${letterHtml(letter, {face, shadowLines: shadowLinesOf(letter), lit: pp.complete})}</div>` : '';
+      const paper = letter ? `<div class="gq-album-letter">${letterHtml(letter, {face, shadowLines: shadowLinesOf(letter), lit: pp.complete, signed: true})}</div>` : '';
       const seal = pp.allGold ? '<span class="gq-seal gold">完・金</span>' : pp.complete ? '<span class="gq-seal">完</span>' : '';
       container.innerHTML = `
         <div class="gq-album-top">${backButton}<span class="gq-album-total">集めた切手 <b>${collected}</b>/${words.length}</span><button class="text-button" data-act="index" type="button">目次</button></div>

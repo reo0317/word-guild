@@ -96,22 +96,25 @@
 .gq-scene-tag{display:block;width:48px;min-height:44px;margin:8px 0 8px auto;padding:5px;border-radius:3px;border:1px solid var(--ink);background:var(--paper-hi);color:var(--ink);font:14px var(--serif,serif);box-shadow:2px 2px 0 #0002}
 .paper .ja{display:none!important} /* 手紙の和訳は出さない（依頼者の判断） */
 
-/* 家で開く便せん */
-.gq-pop .paper{
+/* 便せん：家・切手帳・結果画面で同じ見た目。行頭の点は出さない。段落の間は広く、段落の中は詰める。罫線は各行の下に引く */
+.paper .ln .dot{display:none}
+.paper .ln-wrap{padding-left:0}
+.gq-pop .paper,.gq-album-letter .paper,.gq-letter-sec .paper{
  padding:14px 14px 16px 25px;
  border:1px solid #d8c6a6;
  border-radius:2px;
- background:linear-gradient(90deg,transparent 17px,#b8756438 17px 18px,transparent 18px),
-   repeating-linear-gradient(transparent 0 32.4px,#738cac20 32.4px 33.3px) 0 31px,
-   #fff8e6;
+ background:linear-gradient(90deg,transparent 17px,#b8756438 17px 18px,transparent 18px),#fff8e6;
  box-shadow:inset 0 -2px #eee1c6,0 2px 5px #54432935;
 }
 .gq-pop-letter{padding:0 3px 5px}
-.gq-pop .paper .ph,.gq-letter-signature{
+.gq-letter-signature{
  font:italic 19px/1.3 "Snell Roundhand","Segoe Script",Georgia,serif;
  color:#51405a;
  overflow-wrap:anywhere;
+ text-align:right;margin:12px 0 0;
 }
-.gq-pop .paper .ph{border-bottom:1px solid #b8a7a34d;margin-bottom:8px}
-.gq-pop .paper .ln{font-size:18.5px;line-height:1.8}
-.gq-letter-signature{text-align:right;margin:12px 0 0}
+.gq-pop .paper .ln,.gq-album-letter .paper .ln,.gq-letter-sec .paper .ln{
+ font-size:18.5px;line-height:1.6;
+ background:repeating-linear-gradient(transparent 0 calc(1.6em - 1px),#738cac24 calc(1.6em - 1px) 1.6em);
+}
+.gq-pop .paper .ln-wrap+.ln-wrap,.gq-album-letter .paper .ln-wrap+.ln-wrap,.gq-letter-sec .paper .ln-wrap+.ln-wrap{margin-top:.95em}
