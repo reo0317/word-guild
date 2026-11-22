@@ -1,0 +1,80 @@
+{
+  "v": 1,
+  "scenes": {
+    "1": [
+      {
+        "bg": "post-office",
+        "parts": [
+          {"art": "hatori-normal", "x": 26, "y": 97, "h": 78},
+          {"art": "tsumugi-normal", "x": 71, "y": 99, "h": 83, "flip": true}
+        ],
+        "props": [{"prop": "memo", "x": 63, "y": 75, "h": 23, "rot": -12}]
+      },
+      {
+        "bg": "post-office",
+        "parts": [
+          {"art": "tsumugi-normal", "x": 23, "y": 99, "h": 75},
+          {"art": "hatori-normal", "x": 76, "y": 97, "h": 83, "flip": true}
+        ],
+        "props": [
+          {"prop": "drawer", "x": 54, "y": 94, "h": 31, "rot": 0},
+          {"prop": "question", "x": 55, "y": 53, "h": 21, "rot": -10}
+        ]
+      },
+      {
+        "bg": "post-office",
+        "parts": [
+          {"art": "tsumugi-normal", "x": 26, "y": 99, "h": 79},
+          {"art": "fuurou-stamp", "x": 71, "y": 93, "h": 68}
+        ],
+        "props": [{"prop": "drawer", "x": 60, "y": 99, "h": 30, "rot": 0, "wiggle": true}]
+      }
+    ]
+  },
+  "letters": {
+    "1": [
+      {
+        "parts": [
+          {"art": "post-front", "x": 50, "y": 68, "h": 64},
+          {"art": "hatori-normal", "x": 24, "y": 98, "h": 57},
+          {"art": "tsumugi-normal", "x": 76, "y": 98, "h": 55, "flip": true}
+        ],
+        "props": [{"prop": "memo", "x": 50, "y": 92, "h": 23, "rot": -8}],
+        "line": [0]
+      },
+      {
+        "parts": [
+          {"art": "hatori-normal", "x": 47, "y": 94, "h": 57, "flip": true},
+          {"art": "tsumugi-joy", "x": 67, "y": 98, "h": 42},
+          {"art": "tsumugi-normal", "x": 85, "y": 94, "h": 49, "flip": true}
+        ],
+        "props": [{"prop": "door", "x": 21, "y": 92, "h": 70, "rot": 0}],
+        "line": [1]
+      },
+      {
+        "parts": [{"art": "tsumugi-normal", "x": 29, "y": 98, "h": 82}],
+        "props": [
+          {"prop": "bag", "x": 75, "y": 55, "h": 32, "rot": -8},
+          {"prop": "letters", "x": 72, "y": 92, "h": 28, "rot": 6}
+        ],
+        "line": [2]
+      },
+      {
+        "parts": [
+          {"art": "fuurou-stamp", "x": 67, "y": 84, "h": 71},
+          {"art": "tsumugi-normal", "x": 21, "y": 98, "h": 47}
+        ],
+        "props": [{"prop": "letters", "x": 53, "y": 96, "h": 29, "rot": -7}],
+        "line": [3]
+      },
+      {
+        "parts": [{"art": "hatori-normal", "x": 73, "y": 98, "h": 77, "flip": true}],
+        "props": [
+          {"prop": "drawer", "x": 26, "y": 96, "h": 45, "rot": 0},
+          {"prop": "question", "x": 29, "y": 46, "h": 29, "rot": -8}
+        ],
+        "line": [4]
+      }
+    ]
+  }
+}

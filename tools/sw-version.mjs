@@ -4,6 +4,9 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 export const root = fileURLToPath(new URL('../products/word-guild/', import.meta.url));
+// The kamishibai lab is served directly and is separate from the game shell.
+const labFiles = new Set(['data/kamishibai.json', 'guild/kamishibai.mjs']);
+
 export async function precacheFiles(directory = root, prefix = '') {
   const files = [];
   for (const entry of await readdir(directory, { withFileTypes: true })) {
@@ -11,7 +14,7 @@ export async function precacheFiles(directory = root, prefix = '') {
     // Never traverse the retired assets or illustration working files.
     if (entry.isDirectory()) {
       if (name !== 'assets' && name !== 'art/work' && name !== 'art/word') files.push(...await precacheFiles(path.join(directory, entry.name), name + '/'));
-    } else if (entry.isFile() && name !== 'sw.js' && (/\.(html|css|mjs|json|webmanifest)$/.test(name) || /^art\/.*\.(webp|png)$/.test(name))) {
+    } else if (entry.isFile() && name !== 'sw.js' && !labFiles.has(name) && (/\.(html|css|mjs|json|webmanifest)$/.test(name) || /^art\/.*\.(webp|png)$/.test(name))) {
       files.push('./' + name);
     }
   }
