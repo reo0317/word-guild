@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>物語の台帳（開発用）</title>
+<style>
+/* 開発用：ゲームの物語データ（手紙・場面・追伸・白紙卿のカード・紙芝居）を1ページで通して読む */
+:root{--ink:#1f2a44;--sub:#5b6478;--paper:#f3ead8;--card:#fbf6ea;--line:#d9cdb3;--seal:#c8462f;--lamp:#e7b04a;--mist:#9fb3bf;
+ --serif:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;--sans:"Hiragino Sans","Yu Gothic UI",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root{--ink:#efe6d2;--sub:#aab3c4;--paper:#171d2e;--card:#202842;--line:#36405c;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.8 var(--sans);padding:16px max(16px,env(safe-area-inset-right)) 64px max(16px,env(safe-area-inset-left))}
+.wrap{max-width:760px;margin:0 auto}
+h1{font:900 24px/1.3 var(--serif);margin:8px 0 4px}
+h2{font:900 20px/1.4 var(--serif);margin:36px 0 10px;padding-bottom:4px;border-bottom:2px solid var(--ink)}
+h3{font:700 16px/1.4 var(--serif);margin:0}
+p{margin:0}
+.lead{color:var(--sub);font-size:13px}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);padding:8px 0;display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line)}
+nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:13px;padding:4px 10px;border:1.5px solid var(--ink);border-radius:999px}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0;font-size:13px}
+.filters label{display:flex;gap:4px;align-items:center}
+.kinds{display:grid;gap:8px;margin:14px 0}
+.kind{background:var(--card);border-left:5px solid var(--c);padding:8px 12px;border-radius:4px;font-size:13px}
+.kind b{color:var(--c)}
+.shelf{background:var(--card);border:1.5px solid var(--line);border-radius:8px;padding:14px;margin:12px 0;display:grid;gap:12px}
+.shelf header{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.no{font:900 13px var(--sans);color:#fff;background:var(--ink);border-radius:4px;padding:1px 7px}
+.who{color:var(--sub);font-size:13px}
+.block{border-left:4px solid var(--c);padding:2px 0 2px 12px;display:grid;gap:6px}
+.block>.tag{font:700 11px var(--sans);letter-spacing:.08em;color:var(--c)}
+.letter{--c:#3c6e9a}.scene{--c:var(--seal)}.ps{--c:#8a6d2b}.blank{--c:#6b5b8f}.kami{--c:#2f7d64}
+.ln{display:grid;gap:0}
+.ln .en{font:16px/1.6 Georgia,serif}
+.ln .ja{font-size:13px;color:var(--sub)}
+.w{border-bottom:2px dotted currentColor}
+.scene .lines p{font:15px/1.8 var(--serif)}
+.scene .title{font-weight:900}
+.kami button{justify-self:start;min-height:44px;min-width:44px;padding:0 16px;border-radius:999px;border:2px solid var(--ink);background:var(--card);color:var(--ink);font:700 14px var(--sans)}
+.blankcard{background:var(--card);border:2px double var(--ink);border-radius:6px;padding:12px;margin:12px 0}
+.blankcard .en{font:16px Georgia,serif}
+.blankcard .ja{font-size:13px;color:var(--sub)}
+body.hide-en .ln .en,body.hide-ja .ln .ja{display:none}
+body.hide-letter .letter,body.hide-scene .scene,body.hide-ps .ps,body.hide-kami .kami{display:none}
+#err{color:var(--seal)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>物語の台帳</h1>
+  <p class="lead">開発用。ゲームのデータ（products/word-guild/data/）をそのまま読み込んで、全56通を順に並べています。データを直すと、ここも変わります。</p>
+
+  <details style="margin:14px 0;background:var(--card);border:1.5px solid var(--line);border-radius:8px;padding:10px 14px" open>
+    <summary style="font-weight:700;cursor:pointer">あらすじ</summary>
+    <p style="margin-top:8px">港町ヨスガに来た新人局員ツムギと、封蝋から生まれた郵便フクロウのフウロウが、霧で消えた言葉を取り戻しながら手紙を届ける。白い服の男ブランク（白紙商会）は「借金も記録も消してあげる」と町に契約を迫る。</p>
+    <p style="margin-top:8px">手紙を追ううちに20年前の嵐の夜がわかる。助役トベ（今の町長）が灯台の油を止め、灯台守シラセは自分で油を運んで手で火をたき、ヨスガ丸を救った。それでも報告書に「怠慢」と書かれて町を追われた。その言葉に苦しんだシラセが紙魚を生み、白紙卿となった。</p>
+    <p style="margin-top:8px">町の人は契約を断り、町長はわびる。ツムギは、局長ハトリが20年届けられなかった乗組員のお礼状と自分の手紙の2通を、灯台のシラセに届けに行く。</p>
+    <p style="margin-top:8px" class="lead">局長はいつも郵便局にいて、外へ出るのはツムギとフウロウ。</p>
+  </details>
+
+  <div class="kinds">
+    <div class="kind letter"><b>手紙（英文）</b>：町の人が書いた手紙・掲示・日記の中身。配達で1語ずつ霧が晴れる。ゲームでは和訳は出さない。</div>
+    <div class="kind scene"><b>場面</b>：1通を読み終えたあと、ツムギに起きる出来事（日本語）。切手帳の「場面」札でも読める。</div>
+    <div class="kind ps"><b>追伸</b>：その通の「まれびと」5語を全部取り戻すと出る一文。</div>
+    <div class="kind blank"><b>白紙卿のカード</b>：区の門が開くとき（区が終わったとき）に1行ずつ読めるようになる。</div>
+    <div class="kind kami"><b>紙芝居（試作）</b>：場面は色つき、手紙は影絵。あるものだけボタンが出る。</div>
+  </div>
+
+  <div class="filters" aria-label="表示">
+    <label><input type="checkbox" data-hide="letter" checked>手紙</label>
+    <label><input type="checkbox" data-hide="en" checked>英文</label>
+    <label><input type="checkbox" data-hide="ja" checked>和訳</label>
+    <label><input type="checkbox" data-hide="scene" checked>場面</label>
+    <label><input type="checkbox" data-hide="ps" checked>追伸</label>
+    <label><input type="checkbox" data-hide="kami" checked>紙芝居</label>
+  </div>
+  <nav id="nav" aria-label="区"></nav>
+  <p id="err" role="status"></p>
+  <main id="book"></main>
+</div>
+<div id="player"></div>
+<script type="module">
+const DATA = new URL('../../products/word-guild/data/', import.meta.url);
+const get = async name => { const r = await fetch(new URL(name, DATA)); if (!r.ok) throw new Error(name); return r.json(); };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const WARDS = {1:'坂の上の朝市',2:'石だたみ通り',3:'波止場',4:'時計塔の役場',5:'駅前のホテル',6:'岬の灯台'};
+const enHtml = en => esc(en).replace(/\{([^}]*)\}/g, '<span class="w">$1</span>');
+const enPlain = en => String(en ?? '').replace(/[{}]/g, '');
+
+document.querySelectorAll('[data-hide]').forEach(box => box.onchange = () =>
+  document.body.classList.toggle('hide-' + box.dataset.hide, !box.checked));
+
+try {
+  const [story, scenes, ps, names, kami] = await Promise.all([
+    get('story.json'), get('scenes.json'), get('story-ps.json'), get('stage-names.json'), get('kamishibai.json').catch(() => null)]);
+  const sceneOf = n => scenes.scenes.find(s => s.shelf === n);
+  const psOf = n => ps.find(p => p.shelf === n);
+  const blankOf = ch => story.blank.find(b => b.ch === ch);
+  const book = document.getElementById('book');
+  const nav = document.getElementById('nav');
+  let html = '', ward = 0;
+  for (const letter of story.letters) {
+    if (letter.ch !== ward) {
+      if (ward) html += blankCard(ward);
+      ward = letter.ch;
+      html += `<h2 id="w${ward}">${ward}区 ${esc(WARDS[ward] ?? '')}</h2>`;
+      nav.insertAdjacentHTML('beforeend', `<a href="#w${ward}">${ward}区</a>`);
+    }
+    const n = letter.shelf, scene = sceneOf(n), p = psOf(n);
+    const k = kami?.scenes?.[n] || kami?.letters?.[n];
+    html += `<section class="shelf" id="s${n}">
+      <header><span class="no">${n}</span><h3>${esc(names[n] ?? '')}</h3><span class="who">${esc(letter.from)} → ${esc(letter.to)}（${esc(letter.kind)}）</span></header>
+      <div class="block letter"><span class="tag">手紙</span>${letter.lines.map(l => `<div class="ln"><p class="en">${enHtml(l.en)}</p><p class="ja">${esc(l.ja)}</p></div>`).join('')}</div>
+      ${scene ? `<div class="block scene"><span class="tag">場面</span><p class="title">「${esc(scene.title)}」</p><div class="lines">${scene.lines.map(l => `<p>${esc(l)}</p>`).join('')}</div></div>` : ''}
+      ${p ? `<div class="block ps"><span class="tag">追伸</span><div class="ln"><p class="en">${enHtml(p.en)}</p><p class="ja">${esc(p.ja)}</p></div></div>` : ''}
+      ${k ? `<div class="block kami"><span class="tag">紙芝居（試作）</span><div style="display:flex;gap:8px;flex-wrap:wrap">
+        ${kami.scenes?.[n] ? `<button type="button" data-play="scene" data-n="${n}">場面を見る</button>` : ''}
+        ${kami.letters?.[n] ? `<button type="button" data-play="letter" data-n="${n}">手紙の影絵を見る</button>` : ''}</div></div>` : ''}
+    </section>`;
+  }
+  html += blankCard(ward);
+  book.innerHTML = html;
+
+  function blankCard(ch) {
+    const b = blankOf(ch);
+    return b ? `<div class="blankcard block blank"><span class="tag">${ch}区の終わり：白紙卿のカード（${ch}行目）</span><p class="en">${esc(b.en)}</p><p class="ja">${esc(b.ja)}</p></div>` : '';
+  }
+
+  book.addEventListener('click', async event => {
+    const btn = event.target.closest('[data-play]');
+    if (!btn) return;
+    const n = Number(btn.dataset.n), kind = btn.dataset.play;
+    const {playKamishibai} = await import('../../products/word-guild/guild/kamishibai.mjs');
+    const letter = story.letters.find(l => l.shelf === n);
+    const scene = sceneOf(n);
+    const cards = kind === 'scene'
+      ? kami.scenes[n].map((c, i) => ({...c, caption: scene?.lines[i] ?? ''}))
+      : kami.letters[n].map(c => ({...c, caption: (c.line ?? []).map(i => enPlain(letter.lines[i]?.en)).join(' ')}));
+    await playKamishibai(document.getElementById('player'), {cards, mode: kind === 'scene' ? 'scene' : 'silhouette'});
+  });
+} catch (e) {
+  document.getElementById('err').textContent = '読み込めませんでした：' + e.message;
+}
+</script>
+</body>
+</html>
