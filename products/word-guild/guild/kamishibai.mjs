@@ -70,8 +70,9 @@ function renderProp(name, { silhouette, wiggle }) {
   svg.setAttribute('viewBox', viewBox);
   svg.setAttribute('preserveAspectRatio', 'xMidYMax meet');
   svg.setAttribute('fill', 'none');
-  svg.setAttribute('stroke', ink);
-  svg.setAttribute('stroke-width', '4.5');
+  // 影絵では塗りを紺一色にし、線は灯りの色で残す（切り絵のように中の形が読める）
+  svg.setAttribute('stroke', silhouette ? '#f7e6bf' : ink);
+  svg.setAttribute('stroke-width', silhouette ? '3.5' : '4.5');
   svg.setAttribute('stroke-linecap', 'round');
   svg.setAttribute('stroke-linejoin', 'round');
   svg.style.setProperty('--ink', ink);

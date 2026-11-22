@@ -5,29 +5,90 @@
       {
         "bg": "post-office",
         "parts": [
-          {"art": "hatori-normal", "x": 26, "y": 97, "h": 78},
-          {"art": "tsumugi-normal", "x": 71, "y": 99, "h": 83, "flip": true}
-        ],
-        "props": [{"prop": "memo", "x": 63, "y": 75, "h": 23, "rot": -12}]
-      },
-      {
-        "bg": "post-office",
-        "parts": [
-          {"art": "tsumugi-normal", "x": 23, "y": 99, "h": 75},
-          {"art": "hatori-normal", "x": 76, "y": 97, "h": 83, "flip": true}
+          {
+            "art": "hatori-normal",
+            "x": 26,
+            "y": 97,
+            "h": 78
+          },
+          {
+            "art": "tsumugi-normal",
+            "x": 71,
+            "y": 99,
+            "h": 83,
+            "flip": true
+          }
         ],
         "props": [
-          {"prop": "drawer", "x": 54, "y": 94, "h": 31, "rot": 0},
-          {"prop": "question", "x": 55, "y": 53, "h": 21, "rot": -10}
+          {
+            "prop": "memo",
+            "x": 63,
+            "y": 75,
+            "h": 23,
+            "rot": -12
+          }
         ]
       },
       {
         "bg": "post-office",
         "parts": [
-          {"art": "tsumugi-normal", "x": 26, "y": 99, "h": 79},
-          {"art": "fuurou-stamp", "x": 71, "y": 93, "h": 68}
+          {
+            "art": "tsumugi-normal",
+            "x": 23,
+            "y": 99,
+            "h": 75
+          },
+          {
+            "art": "hatori-normal",
+            "x": 76,
+            "y": 97,
+            "h": 83,
+            "flip": true
+          }
         ],
-        "props": [{"prop": "drawer", "x": 60, "y": 99, "h": 30, "rot": 0, "wiggle": true}]
+        "props": [
+          {
+            "prop": "drawer",
+            "x": 54,
+            "y": 94,
+            "h": 31,
+            "rot": 0
+          },
+          {
+            "prop": "question",
+            "x": 55,
+            "y": 53,
+            "h": 21,
+            "rot": -10
+          }
+        ]
+      },
+      {
+        "bg": "post-office",
+        "parts": [
+          {
+            "art": "tsumugi-normal",
+            "x": 26,
+            "y": 99,
+            "h": 79
+          },
+          {
+            "art": "fuurou-stamp",
+            "x": 71,
+            "y": 93,
+            "h": 68
+          }
+        ],
+        "props": [
+          {
+            "prop": "drawer",
+            "x": 60,
+            "y": 99,
+            "h": 30,
+            "rot": 0,
+            "wiggle": true
+          }
+        ]
       }
     ]
   },
@@ -35,45 +96,182 @@
     "1": [
       {
         "parts": [
-          {"art": "post-front", "x": 50, "y": 68, "h": 64},
-          {"art": "hatori-normal", "x": 24, "y": 98, "h": 57},
-          {"art": "tsumugi-normal", "x": 76, "y": 98, "h": 55, "flip": true}
+          {
+            "art": "post-front",
+            "x": 64,
+            "y": 92,
+            "h": 66
+          },
+          {
+            "art": "hatori-normal",
+            "x": 22,
+            "y": 98,
+            "h": 60
+          }
         ],
-        "props": [{"prop": "memo", "x": 50, "y": 92, "h": 23, "rot": -8}],
-        "line": [0]
+        "props": [
+          {
+            "prop": "fog",
+            "x": 40,
+            "y": 40,
+            "h": 20,
+            "rot": 0
+          },
+          {
+            "prop": "fog",
+            "x": 78,
+            "y": 30,
+            "h": 16,
+            "rot": 4
+          }
+        ],
+        "line": [
+          0
+        ]
       },
       {
         "parts": [
-          {"art": "hatori-normal", "x": 47, "y": 94, "h": 57, "flip": true},
-          {"art": "tsumugi-joy", "x": 67, "y": 98, "h": 42},
-          {"art": "tsumugi-normal", "x": 85, "y": 94, "h": 49, "flip": true}
+          {
+            "art": "shadow-man-walk",
+            "x": 36,
+            "y": 98,
+            "h": 62
+          },
+          {
+            "art": "shadow-woman-stand",
+            "x": 56,
+            "y": 98,
+            "h": 60
+          },
+          {
+            "art": "shadow-man-walk",
+            "x": 86,
+            "y": 98,
+            "h": 50,
+            "flip": true
+          }
         ],
-        "props": [{"prop": "door", "x": 21, "y": 92, "h": 70, "rot": 0}],
-        "line": [1]
-      },
-      {
-        "parts": [{"art": "tsumugi-normal", "x": 29, "y": 98, "h": 82}],
         "props": [
-          {"prop": "bag", "x": 75, "y": 55, "h": 32, "rot": -8},
-          {"prop": "letters", "x": 72, "y": 92, "h": 28, "rot": 6}
+          {
+            "prop": "door",
+            "x": 14,
+            "y": 96,
+            "h": 70,
+            "rot": 0
+          }
         ],
-        "line": [2]
+        "line": [
+          1
+        ]
       },
       {
         "parts": [
-          {"art": "fuurou-stamp", "x": 67, "y": 84, "h": 71},
-          {"art": "tsumugi-normal", "x": 21, "y": 98, "h": 47}
+          {
+            "art": "shadow-old-man-cane",
+            "x": 78,
+            "y": 98,
+            "h": 64,
+            "flip": true
+          }
         ],
-        "props": [{"prop": "letters", "x": 53, "y": 96, "h": 29, "rot": -7}],
-        "line": [3]
+        "props": [
+          {
+            "prop": "bag",
+            "x": 22,
+            "y": 92,
+            "h": 34,
+            "rot": -6
+          },
+          {
+            "prop": "letter",
+            "x": 50,
+            "y": 62,
+            "h": 22,
+            "rot": -10
+          }
+        ],
+        "line": [
+          2
+        ]
       },
       {
-        "parts": [{"art": "hatori-normal", "x": 73, "y": 98, "h": 77, "flip": true}],
-        "props": [
-          {"prop": "drawer", "x": 26, "y": 96, "h": 45, "rot": 0},
-          {"prop": "question", "x": 29, "y": 46, "h": 29, "rot": -8}
+        "parts": [
+          {
+            "art": "fuurou-stamp",
+            "x": 66,
+            "y": 92,
+            "h": 64
+          }
         ],
-        "line": [4]
+        "props": [
+          {
+            "prop": "clock",
+            "x": 20,
+            "y": 40,
+            "h": 26,
+            "rot": 0
+          },
+          {
+            "prop": "bag",
+            "x": 22,
+            "y": 94,
+            "h": 30,
+            "rot": -4
+          },
+          {
+            "prop": "letters",
+            "x": 44,
+            "y": 96,
+            "h": 24,
+            "rot": 6
+          }
+        ],
+        "line": [
+          3
+        ]
+      },
+      {
+        "parts": [
+          {
+            "art": "shadow-girl-point",
+            "x": 20,
+            "y": 98,
+            "h": 56
+          },
+          {
+            "art": "hatori-normal",
+            "x": 84,
+            "y": 98,
+            "h": 66,
+            "flip": true
+          }
+        ],
+        "props": [
+          {
+            "prop": "fog",
+            "x": 22,
+            "y": 30,
+            "h": 16,
+            "rot": 0
+          },
+          {
+            "prop": "drawer",
+            "x": 52,
+            "y": 96,
+            "h": 34,
+            "rot": 0
+          },
+          {
+            "prop": "question",
+            "x": 53,
+            "y": 52,
+            "h": 22,
+            "rot": -8
+          }
+        ],
+        "line": [
+          4
+        ]
       }
     ]
   }
