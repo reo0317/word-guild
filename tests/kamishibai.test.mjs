@@ -8,6 +8,20 @@ const readData = name => JSON.parse(readFileSync(new URL(`data/${name}.json`, pr
 const script = readData('kamishibai');
 const { scenes } = readData('scenes');
 const { letters } = readData('story');
+const scenery = new Set(['post-front']);
+const pendingArt = name => /^shadow-(hatori|fuurou)-/.test(name);
+const artFile = name => new URL(`art/${name}.webp`, product);
+
+test('kamishibai character art has a normal height and alpha bounds', () => {
+  for (const [name, size] of Object.entries(script.sizes)) {
+    assert.ok(Number.isFinite(size) && size > 0 && size <= 100, name);
+    const file = statSync(artFile(name), { throwIfNoEntry: false });
+    if (!file && pendingArt(name)) continue;
+    assert.ok(file?.isFile(), name);
+    const { height, bottom } = script.trim[name] ?? {};
+    assert.ok(height > 0 && height <= 1 && bottom >= 0 && height + bottom <= 1, name);
+  }
+});
 
 test('kamishibai cards reference existing backgrounds, character art and SVG props', () => {
   assert.equal(script.v, 1);
@@ -16,12 +30,25 @@ test('kamishibai cards reference existing backgrounds, character art and SVG pro
   for (const group of [script.scenes, script.letters]) {
     for (const cards of Object.values(group)) {
       for (const { bg, parts, props } of cards) {
-        const names = (parts ?? []).map(part => part.art);
-        if (bg !== undefined) names.push(bg);
-        for (const name of names) {
-          const url = new URL(`art/${name}.webp`, product);
-          assert.doesNotMatch(url.pathname, /\/art\/word\//);
-          assert.ok(statSync(url).isFile(), name);
+        if (bg !== undefined) {
+          assert.doesNotMatch(artFile(bg).pathname, /\/art\/word\//);
+          assert.ok(statSync(artFile(bg)).isFile(), bg);
+        }
+        for (const part of parts ?? []) {
+          const { art, depth, why } = part;
+          assert.doesNotMatch(artFile(art).pathname, /\/art\/word\//);
+          if (scenery.has(art)) {
+            assert.ok(statSync(artFile(art)).isFile(), art);
+            assert.ok(Number.isFinite(part.h), art);
+            assert.equal(depth, undefined, art);
+            continue;
+          }
+          assert.ok(Object.hasOwn(script.sizes, art), `No size for ${art}`);
+          assert.ok(!Object.hasOwn(part, 'h'), `Remove h from ${art}`);
+          if (depth !== undefined) {
+            assert.ok(Number.isFinite(depth) && depth >= 0.4 && depth <= 1, art);
+            assert.ok(typeof why === 'string' && why.trim(), `Explain depth for ${art}`);
+          }
         }
         for (const { prop, word } of props ?? []) {
           assert.ok(propNames.includes(prop), `Unknown SVG prop "${prop}"`);

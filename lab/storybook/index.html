@@ -137,7 +137,9 @@ try {
     const cards = kind === 'scene'
       ? kami.scenes[n].map((c, i) => ({...c, caption: scene?.lines[i] ?? ''}))
       : kami.letters[n].map(c => ({...c, caption: (c.line ?? []).map(i => enPlain(letter.lines[i]?.en)).join(' ')}));
-    await playKamishibai(document.getElementById('player'), {cards, mode: kind === 'scene' ? 'scene' : 'silhouette'});
+    await playKamishibai(document.getElementById('player'), {
+      cards, mode: kind === 'scene' ? 'scene' : 'silhouette', sizes: kami.sizes, trim: kami.trim
+    });
   });
 } catch (e) {
   document.getElementById('err').textContent = '読み込めませんでした：' + e.message;

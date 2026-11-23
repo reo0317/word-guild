@@ -1,5 +1,139 @@
 {
   "v": 1,
+  "sizes": {
+    "tsumugi-normal": 54,
+    "tsumugi-joy": 54,
+    "hatori-normal": 62,
+    "hatori-smile": 62,
+    "fuurou-normal": 30,
+    "fuurou-stamp": 30,
+    "shadow-man-walk": 62,
+    "shadow-woman-stand": 62,
+    "shadow-woman-bow": 62,
+    "shadow-old-man-cane": 62,
+    "shadow-sailor": 62,
+    "shadow-worker-box": 62,
+    "shadow-blank-coat": 62,
+    "shadow-keeper-lamp": 62,
+    "shadow-seller-stall": 62,
+    "shadow-clerk-desk": 62,
+    "shadow-boy-run": 46,
+    "shadow-girl-point": 46,
+    "shadow-crowd": 62,
+    "shadow-hatori-stand": 62,
+    "shadow-hatori-hand": 62,
+    "shadow-hatori-back": 62,
+    "shadow-hatori-write": 62,
+    "shadow-fuurou-stand": 30,
+    "shadow-fuurou-letter": 30,
+    "shadow-fuurou-fly": 34
+  },
+  "trim": {
+    "tsumugi-normal": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "tsumugi-joy": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "hatori-normal": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "hatori-smile": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "fuurou-normal": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "fuurou-stamp": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "shadow-man-walk": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-woman-stand": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-woman-bow": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-old-man-cane": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-sailor": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-worker-box": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-blank-coat": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-keeper-lamp": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-seller-stall": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-clerk-desk": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-boy-run": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-girl-point": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-crowd": {
+      "height": 0.787109375,
+      "bottom": 0.0
+    },
+    "shadow-hatori-stand": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-hatori-hand": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-hatori-back": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-hatori-write": {
+      "height": 1.0,
+      "bottom": 0.0
+    },
+    "shadow-fuurou-stand": {
+      "height": 0.8984375,
+      "bottom": 0.0
+    },
+    "shadow-fuurou-letter": {
+      "height": 0.8984375,
+      "bottom": 0.0
+    },
+    "shadow-fuurou-fly": {
+      "height": 0.62109375,
+      "bottom": 0.0
+    }
+  },
   "scenes": {
     "1": [
       {
@@ -8,23 +142,21 @@
           {
             "art": "hatori-normal",
             "x": 26,
-            "y": 97,
-            "h": 78
+            "y": 94
           },
           {
             "art": "tsumugi-normal",
             "x": 71,
-            "y": 99,
-            "h": 83,
+            "y": 94,
             "flip": true
           }
         ],
         "props": [
           {
             "prop": "memo",
-            "x": 63,
-            "y": 75,
-            "h": 23,
+            "x": 49,
+            "y": 78,
+            "h": 17,
             "rot": -12
           }
         ]
@@ -35,14 +167,12 @@
           {
             "art": "tsumugi-normal",
             "x": 23,
-            "y": 99,
-            "h": 75
+            "y": 94
           },
           {
             "art": "hatori-normal",
             "x": 76,
-            "y": 97,
-            "h": 83,
+            "y": 94,
             "flip": true
           }
         ],
@@ -69,22 +199,20 @@
           {
             "art": "tsumugi-normal",
             "x": 26,
-            "y": 99,
-            "h": 79
+            "y": 94
           },
           {
             "art": "fuurou-stamp",
-            "x": 71,
-            "y": 93,
-            "h": 68
+            "x": 78,
+            "y": 94
           }
         ],
         "props": [
           {
             "prop": "drawer",
-            "x": 60,
-            "y": 99,
-            "h": 30,
+            "x": 51,
+            "y": 94,
+            "h": 27,
             "rot": 0,
             "wiggle": true
           }
@@ -103,10 +231,9 @@
             "h": 66
           },
           {
-            "art": "hatori-normal",
+            "art": "shadow-hatori-hand",
             "x": 22,
-            "y": 98,
-            "h": 60
+            "y": 94
           }
         ],
         "props": [
@@ -133,28 +260,27 @@
         "parts": [
           {
             "art": "shadow-man-walk",
-            "x": 36,
-            "y": 98,
-            "h": 62
-          },
-          {
-            "art": "shadow-woman-stand",
-            "x": 56,
-            "y": 98,
-            "h": 60
+            "x": 85,
+            "y": 80,
+            "flip": true,
+            "depth": 0.72,
+            "why": "far"
           },
           {
             "art": "shadow-man-walk",
-            "x": 86,
-            "y": 98,
-            "h": 50,
-            "flip": true
+            "x": 37,
+            "y": 94
+          },
+          {
+            "art": "shadow-woman-stand",
+            "x": 62,
+            "y": 94
           }
         ],
         "props": [
           {
             "prop": "door",
-            "x": 14,
+            "x": 12,
             "y": 96,
             "h": 70,
             "rot": 0
@@ -169,8 +295,7 @@
           {
             "art": "shadow-old-man-cane",
             "x": 78,
-            "y": 98,
-            "h": 64,
+            "y": 94,
             "flip": true
           }
         ],
@@ -197,10 +322,9 @@
       {
         "parts": [
           {
-            "art": "fuurou-stamp",
-            "x": 66,
-            "y": 92,
-            "h": 64
+            "art": "shadow-fuurou-letter",
+            "x": 77,
+            "y": 94
           }
         ],
         "props": [
@@ -235,15 +359,12 @@
           {
             "art": "shadow-girl-point",
             "x": 20,
-            "y": 98,
-            "h": 56
+            "y": 94
           },
           {
-            "art": "hatori-normal",
+            "art": "shadow-hatori-back",
             "x": 84,
-            "y": 98,
-            "h": 66,
-            "flip": true
+            "y": 94
           }
         ],
         "props": [

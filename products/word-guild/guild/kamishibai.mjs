@@ -1,12 +1,15 @@
 // Script v1 groups cards by shelf under scenes and letters. A card has an
-// optional bg (art basename), ordered parts ({art, x, y, h, flip}), and
-// optional props ({prop, x, y, h, rot, wiggle}) drawn above the parts. x is the
-// horizontal center, y the bottom edge, and h the height, in card percentages.
+// optional bg (art basename), ordered parts ({art, x, y, flip}), and
+// optional props ({prop, x, y, h, rot, wiggle}) drawn above the parts.
+// x is the horizontal center, y the feet line or bottom edge, and h the
+// height, in card percentages. Characters use sizes and trim from the script,
+// with optional depth and why for perspective. Other parts specify h directly.
 // Scene captions follow scene line order. Letter line arrays hold zero-based
 // indices into the letter's lines. Pass cards with caption text to the player.
 
 const art = new URL('../art/', import.meta.url);
 const ink = '#1f2a44';
+const cardAspect = 3 / 2;
 const propPalette = {
   paper: '#fff8e6',
   seal: '#c8462f',
@@ -119,7 +122,7 @@ const styles = `
     color: #362319; font: 25px/1 system-ui; cursor: pointer;
   }
   .kami-frame {
-    position: relative; display: block; width: 100%; aspect-ratio: 3 / 2;
+    position: relative; display: block; width: 100%; aspect-ratio: ${cardAspect};
     overflow: hidden; padding: 0; margin: 0; border: 0; background: #e9c388;
     cursor: pointer; touch-action: pan-y pinch-zoom; user-select: none;
     -webkit-user-select: none; -webkit-tap-highlight-color: transparent;
@@ -188,7 +191,7 @@ function renderCard(card, silhouette) {
     image.alt = '';
     surface.append(image);
   }
-  for (const { image, prop, x, y, h, flip, rot = 0, wiggle } of card.layers) {
+  for (const { image, prop, x, y, h, trim, flip, rot = 0, wiggle } of card.layers) {
     let part;
     if (prop) {
       part = renderProp(prop, { silhouette, wiggle });
@@ -201,16 +204,23 @@ function renderCard(card, silhouette) {
       part.alt = '';
     }
     part.style.left = `${x}%`;
-    part.style.bottom = `${100 - y}%`;
-    part.style.width = `${Math.min(x, 100 - x) * 2}%`;
-    part.style.height = `${Math.min(h, y)}%`;
+    if (trim) {
+      const canvasHeight = h / trim.height;
+      part.style.bottom = `${100 - y - canvasHeight * trim.bottom}%`;
+      part.style.height = `${canvasHeight}%`;
+      part.style.width = `${canvasHeight * (image.naturalWidth / image.naturalHeight) / cardAspect}%`;
+    } else {
+      part.style.bottom = `${100 - y}%`;
+      part.style.width = `${Math.min(x, 100 - x) * 2}%`;
+      part.style.height = `${Math.min(h, y)}%`;
+    }
     part.style.transform = `translateX(-50%) rotate(${rot}deg) scaleX(${flip ? -1 : 1})`;
     surface.append(part);
   }
   return surface;
 }
 
-export async function playKamishibai(container, { cards, mode }) {
+export async function playKamishibai(container, { cards, mode, sizes, trim }) {
   if (!cards.length) return;
   const silhouette = mode === 'silhouette';
   const dialog = makeElement('dialog', `kami-player${silhouette ? ' kami-shadow' : ''}`);
@@ -262,16 +272,25 @@ export async function playKamishibai(container, { cards, mode }) {
     const prepared = await Promise.all(cards.map(async card => {
       const [background, layers] = await Promise.all([
         card.bg && !silhouette ? load(artUrl(card.bg)) : null,
-        Promise.all((card.parts ?? []).map(async part => ({
-          ...part,
-          image: await load(artUrl(part.art))
-        })))
+        Promise.all((card.parts ?? []).map(async part => {
+          const image = await load(artUrl(part.art));
+          if (!image) return null;
+          if (!Object.hasOwn(sizes, part.art)) return { ...part, image };
+          const bounds = trim[part.art];
+          if (!bounds) throw new Error(`No alpha bounds for ${part.art}`);
+          return {
+            ...part,
+            image,
+            h: sizes[part.art] * (part.depth ?? 1),
+            trim: bounds
+          };
+        }))
       ]);
       return {
         caption: card.caption,
         background,
         layers: [
-          ...layers.filter(part => part.image),
+          ...layers.filter(Boolean),
           ...(card.props ?? []).filter(({ prop }) => Object.hasOwn(props, prop))
         ]
       };

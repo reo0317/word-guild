@@ -67,7 +67,7 @@
           caption: sceneMode ? lines[i] : card.line.map(index => lines[index].en.replace(/[{}]/g, '')).join(' ')
         }));
         status.textContent = '';
-        await playKamishibai(player, { cards, mode });
+        await playKamishibai(player, { cards, mode, sizes: script.sizes, trim: script.trim });
       } catch (error) {
         console.error(error);
         status.textContent = '紙芝居を読み込めませんでした。';
