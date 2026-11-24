@@ -20,6 +20,13 @@ def part(name):
     return Image.open(PARTS / 'cut' / f'{name}.png').convert('RGBA')
 
 
+def sheet_height(name):
+    """同じシートの人物の高さの中央値（＝立ち姿の高さ）。ポーズが違っても同じ縮尺で描くための基準。"""
+    sheet = name.rsplit('-', 1)[0]
+    heights = sorted(Image.open(f).height for f in (PARTS / 'cut').glob(f'{sheet}-*.png'))
+    return heights[len(heights) // 2]
+
+
 def main(name):
     layout = json.loads((ROOT / 'data' / 'work' / 'kamishibai' / f'{name}-layout.json').read_text(encoding='utf-8'))
     sizes = layout['sizes']
@@ -31,10 +38,8 @@ def main(name):
         canvas = Image.open(PARTS / f"{card['bg']}.png").convert('RGBA').resize((1536, 1024))
         for who in card.get('who', []):
             im = part(who['part'])
-            h = sizes[who['h']]
-            if who.get('crouch'):
-                h = int(h * 0.62)  # しゃがんだ姿は背が低い
-            im = im.resize((round(im.width * h / im.height), h), Image.LANCZOS)
+            scale = sizes[who['h']] / sheet_height(who['part'])  # しゃがむ・腕を上げるなどでも縮尺は同じ
+            im = im.resize((round(im.width * scale), round(im.height * scale)), Image.LANCZOS)
             if who.get('flip'):
                 im = im.transpose(Image.FLIP_LEFT_RIGHT)
             x = round(who['x'] * 1536 - im.width / 2)

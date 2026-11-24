@@ -1,56 +1,303 @@
 {
-  "note": "手紙1の影絵カードの組み立て。bg は parts/bg-*.png、who は parts/cut/<名前>.png。x は中心（0〜1）、人物は足を地面（y=900）に置き、h は身長の種類（adult/girl/child）。icon は w（幅px）と top（上端px）。flip で左右反転。tools/kami-compose.py が art/work/kami/letter-01/NN.png に書き出す。",
-  "sizes": {"adult": 560, "girl": 480, "child": 400},
-  "cards": [
-    {"bg": "bg-harbor-street", "who": [
-      {"part": "puppet-townsfolk-1", "x": 0.30, "h": "adult"},
-      {"part": "puppet-townsfolk-2", "x": 0.62, "h": "adult", "flip": true}],
-     "icon": [{"part": "icons-a-1", "x": 0.43, "top": 40, "w": 380}]},
-    {"bg": "bg-harbor-street", "who": [
-      {"part": "puppet-hatori-3", "x": 0.28, "h": "adult"},
-      {"part": "puppet-tsumugi-1", "x": 0.62, "h": "girl"}],
-     "icon": [{"part": "icons-b-6", "x": 0.52, "top": 30, "w": 520}]},
-    {"bg": "bg-harbor-street", "who": [
-      {"part": "puppet-tsumugi-4", "x": 0.45, "h": "girl"}],
-     "icon": [{"part": "icons-a-3", "x": 0.16, "top": 60, "w": 240},
-              {"part": "icons-a-4", "x": 0.68, "top": 60, "w": 360}]},
-    {"bg": "bg-post-office-door", "who": [
-      {"part": "puppet-townsfolk-1", "x": 0.12, "h": "adult"},
-      {"part": "puppet-townsfolk-2", "x": 0.28, "h": "adult"},
-      {"part": "puppet-townsfolk-3", "x": 0.43, "h": "adult"},
-      {"part": "puppet-hatori-4", "x": 0.64, "h": "adult"}],
-     "icon": [{"part": "icons-a-5", "x": 0.30, "top": 20, "w": 320}]},
-    {"bg": "bg-post-office-door-snow", "who": [
-      {"part": "puppet-townsfolk-5", "x": 0.20, "h": "adult", "flip": true},
-      {"part": "puppet-townsfolk-6", "x": 0.37, "h": "adult", "flip": true},
-      {"part": "puppet-hatori-1", "x": 0.72, "h": "adult", "flip": true}],
-     "icon": [{"part": "icons-a-6", "x": 0.42, "top": 50, "w": 320}]},
-    {"bg": "bg-harbor-street", "who": [
-      {"part": "puppet-tsumugi-5", "x": 0.42, "h": "girl"}],
-     "icon": [{"part": "icons-a-7", "x": 0.66, "top": 50, "w": 380}]},
-    {"bg": "bg-post-office-door", "who": [
-      {"part": "puppet-tsumugi-5", "x": 0.35, "h": "girl"},
-      {"part": "puppet-townsfolk-4", "x": 0.62, "h": "adult"}],
-     "icon": [{"part": "icons-a-8", "x": 0.46, "top": 40, "w": 340}]},
-    {"bg": "bg-hill-road", "who": [
-      {"part": "puppet-tsumugi-2", "x": 0.52, "h": "girl"}],
-     "icon": [{"part": "icons-a-9", "x": 0.50, "top": 20, "w": 900},
-              {"part": "icons-a-10", "x": 0.72, "top": 230, "w": 300}]},
-    {"bg": "bg-post-office-inside", "who": [
-      {"part": "puppet-hatori-6", "x": 0.33, "h": "adult"},
-      {"part": "puppet-tsumugi-2", "x": 0.55, "h": "girl"}],
-     "icon": [{"part": "icons-b-4", "x": 0.34, "top": 40, "w": 380},
-              {"part": "icons-b-5", "x": 0.74, "top": 470, "w": 220}]},
-    {"bg": "bg-harbor-street", "who": [
-      {"part": "puppet-child-1", "x": 0.33, "h": "child"},
-      {"part": "puppet-tsumugi-6", "x": 0.63, "h": "girl", "crouch": true}],
-     "icon": [{"part": "icons-a-11", "x": 0.20, "top": 110, "w": 330},
-              {"part": "icons-a-12", "x": 0.76, "top": 110, "w": 330}]},
-    {"bg": "bg-post-office-inside", "who": [
-      {"part": "puppet-tsumugi-1", "x": 0.24, "h": "girl"},
-      {"part": "puppet-hatori-5", "x": 0.55, "h": "adult"}],
-     "icon": [{"part": "icons-b-2", "x": 0.14, "top": 140, "w": 260},
-              {"part": "icons-b-3", "x": 0.52, "top": 40, "w": 520},
-              {"part": "icons-b-1", "x": 0.86, "top": 470, "w": 150}]}
-  ]
+ "note": "手紙1の影絵カードの組み立て。bg は parts/bg-*.png、who は parts/cut/<名前>.png。x は中心（0〜1）、人物は足を地面（y=900）に置き、h は身長の種類（adult/girl/child）。icon は w（幅px）と top（上端px）。flip で左右反転。tools/kami-compose.py が art/work/kami/letter-01/NN.png に書き出す。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "child": 400
+ },
+ "cards": [
+  {
+   "bg": "bg-harbor-street",
+   "who": [
+    {
+     "part": "puppet-townsfolk-1",
+     "x": 0.3,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-2",
+     "x": 0.62,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-a-1",
+     "x": 0.43,
+     "top": 40,
+     "w": 380
+    }
+   ]
+  },
+  {
+   "bg": "bg-harbor-street",
+   "who": [
+    {
+     "part": "puppet-hatori-3",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-tsumugi-1",
+     "x": 0.62,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-b-6",
+     "x": 0.52,
+     "top": 30,
+     "w": 520
+    }
+   ]
+  },
+  {
+   "bg": "bg-harbor-street",
+   "who": [
+    {
+     "part": "puppet-tsumugi-4",
+     "x": 0.45,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-a-3",
+     "x": 0.32,
+     "top": 40,
+     "w": 240
+    },
+    {
+     "part": "icons-a-4",
+     "x": 0.68,
+     "top": 60,
+     "w": 360
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-door",
+   "who": [
+    {
+     "part": "puppet-townsfolk-1",
+     "x": 0.12,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-2",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.43,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-hatori-4",
+     "x": 0.64,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-a-5",
+     "x": 0.3,
+     "top": 20,
+     "w": 320
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-door-snow",
+   "who": [
+    {
+     "part": "puppet-townsfolk-5",
+     "x": 0.2,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "puppet-townsfolk-6",
+     "x": 0.37,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "puppet-hatori-1",
+     "x": 0.72,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-a-6",
+     "x": 0.42,
+     "top": 50,
+     "w": 320
+    }
+   ]
+  },
+  {
+   "bg": "bg-harbor-street",
+   "who": [
+    {
+     "part": "puppet-tsumugi-5",
+     "x": 0.42,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-a-7",
+     "x": 0.66,
+     "top": 50,
+     "w": 380
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-door",
+   "who": [
+    {
+     "part": "puppet-tsumugi-5",
+     "x": 0.35,
+     "h": "girl"
+    },
+    {
+     "part": "puppet-townsfolk-4",
+     "x": 0.62,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-a-8",
+     "x": 0.46,
+     "top": 40,
+     "w": 340
+    }
+   ]
+  },
+  {
+   "bg": "bg-hill-road",
+   "who": [
+    {
+     "part": "puppet-tsumugi-2",
+     "x": 0.52,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-a-9",
+     "x": 0.5,
+     "top": 20,
+     "w": 900
+    },
+    {
+     "part": "icons-a-10",
+     "x": 0.72,
+     "top": 230,
+     "w": 300
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-6",
+     "x": 0.33,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-tsumugi-2",
+     "x": 0.55,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-b-4",
+     "x": 0.34,
+     "top": 40,
+     "w": 380
+    },
+    {
+     "part": "icons-b-5",
+     "x": 0.74,
+     "top": 470,
+     "w": 220
+    }
+   ]
+  },
+  {
+   "bg": "bg-harbor-street",
+   "who": [
+    {
+     "part": "puppet-child-1",
+     "x": 0.33,
+     "h": "child"
+    },
+    {
+     "part": "puppet-tsumugi-6",
+     "x": 0.63,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-a-11",
+     "x": 0.2,
+     "top": 110,
+     "w": 330
+    },
+    {
+     "part": "icons-a-12",
+     "x": 0.76,
+     "top": 110,
+     "w": 330
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-tsumugi-1",
+     "x": 0.24,
+     "h": "girl"
+    },
+    {
+     "part": "puppet-hatori-5",
+     "x": 0.55,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-b-2",
+     "x": 0.14,
+     "top": 140,
+     "w": 260
+    },
+    {
+     "part": "icons-b-3",
+     "x": 0.52,
+     "top": 40,
+     "w": 520
+    },
+    {
+     "part": "icons-b-1",
+     "x": 0.86,
+     "top": 470,
+     "w": 150
+    }
+   ]
+  }
+ ]
 }

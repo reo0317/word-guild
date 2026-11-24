@@ -33,8 +33,12 @@ def key_green(im):
 
 def components(alpha, merge=9):
     """アルファの塊を、近いもの同士はまとめて、外接矩形のリストで返す。"""
+    if alpha.width < 8 or alpha.height < 8:
+        return [(0, 0, alpha.width, alpha.height)]
     small = alpha.resize((alpha.width // 4, alpha.height // 4))
-    grown = small.point(lambda v: 255 if v > 40 else 0).filter(ImageFilter.MaxFilter(merge // 4 * 2 + 1))
+    grown = small.point(lambda v: 255 if v > 40 else 0)
+    if merge >= 4:
+        grown = grown.filter(ImageFilter.MaxFilter(merge // 4 * 2 + 1))
     w, h = grown.size
     px = grown.load()
     seen = set()
@@ -80,6 +84,17 @@ def main():
             piece = im.crop(box)
             bbox = piece.getchannel('A').point(lambda v: 255 if v > 20 else 0).getbbox()
             piece = piece.crop(bbox)
+            # 隣の絵のかけらなど、本体から離れた小さな点を消す
+            parts = components(piece.getchannel('A'), merge=1)
+            if parts:
+                area = lambda b: (b[2] - b[0]) * (b[3] - b[1])
+                biggest = max(map(area, parts))
+                keep = Image.new('L', piece.size, 0)
+                for b in parts:
+                    if area(b) >= biggest * 0.03:
+                        keep.paste(255, b)
+                piece.putalpha(Image.composite(piece.getchannel('A'), keep, keep))
+                piece = piece.crop(piece.getchannel('A').getbbox())
             path = OUT / f'{sheet.stem}-{n}.png'
             piece.save(path)
             print(path.relative_to(ROOT), piece.size)
