@@ -17,6 +17,8 @@ WORK = ROOT / 'products' / 'word-guild' / 'art' / 'work'
 OUT = ROOT / 'products' / 'word-guild' / 'art'
 
 SPRITES = ['tsumugi-normal', 'tsumugi-joy', 'fuurou-normal', 'fuurou-stamp',
+           'tsumugi-ask', 'tsumugi-read', 'tsumugi-side-walk', 'tsumugi-surprise', 'tsumugi-worry',
+           'hatori-cap', 'hatori-give', 'hatori-side', 'hatori-stern', 'fuurou-fly', 'fuurou-hoot', 'fuurou-side',
            'hatori-normal', 'hatori-smile',
            'shimi', 'keshikasu', 'nijimi', 'hokoridama', 'atenashi', 'oshimi']
 # 紙魚の体（意味の分類16種）

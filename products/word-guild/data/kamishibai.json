@@ -145,6 +145,54 @@
     "shadow-fuurou-fly": {
       "height": 0.62109375,
       "bottom": 0.0
+    },
+    "tsumugi-side-walk": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "tsumugi-read": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "tsumugi-surprise": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "tsumugi-ask": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "tsumugi-worry": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "hatori-side": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "hatori-cap": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "hatori-give": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "hatori-stern": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "fuurou-hoot": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "fuurou-side": {
+      "height": 0.935546875,
+      "bottom": 0.03515625
+    },
+    "fuurou-fly": {
+      "height": 0.697265625,
+      "bottom": 0.03515625
     }
   },
   "scenes": {
@@ -153,28 +201,28 @@
         "bg": "post-office",
         "parts": [
           {
-            "art": "hatori-normal",
-            "x": 26,
+            "art": "tsumugi-read",
+            "x": 28,
             "y": 94,
             "act": "nod",
-            "delay": 280
+            "delay": 400
           },
           {
-            "art": "tsumugi-normal",
-            "x": 71,
+            "art": "hatori-side",
+            "x": 76,
             "y": 94,
-            "flip": true,
             "act": "sway",
             "delay": 120
           }
         ],
         "props": [
           {
-            "prop": "memo",
-            "x": 49,
-            "y": 78,
-            "h": 17,
-            "rot": -12
+            "prop": "fog",
+            "x": 22,
+            "y": 30,
+            "h": 14,
+            "rot": 0,
+            "act": "drift"
           }
         ]
       },
@@ -182,34 +230,33 @@
         "bg": "post-office",
         "parts": [
           {
-            "art": "tsumugi-normal",
-            "x": 23,
+            "art": "tsumugi-ask",
+            "x": 24,
             "y": 94,
-            "act": "nod",
-            "delay": 300
-          },
-          {
-            "art": "hatori-normal",
-            "x": 76,
-            "y": 94,
-            "flip": true,
             "act": "sway",
             "delay": 120
+          },
+          {
+            "art": "hatori-side",
+            "x": 76,
+            "y": 94,
+            "pose": [
+              "hatori-side",
+              "hatori-cap"
+            ],
+            "poseAt": [
+              1100
+            ],
+            "act": "nod",
+            "delay": 1300
           }
         ],
         "props": [
           {
-            "prop": "drawer",
-            "x": 54,
-            "y": 94,
-            "h": 31,
-            "rot": 0
-          },
-          {
             "prop": "question",
-            "x": 55,
-            "y": 53,
-            "h": 21,
+            "x": 40,
+            "y": 50,
+            "h": 18,
             "rot": -10
           }
         ]
@@ -218,24 +265,31 @@
         "bg": "post-office",
         "parts": [
           {
-            "art": "tsumugi-normal",
-            "x": 26,
+            "art": "fuurou-normal",
+            "x": 46,
             "y": 94,
-            "act": "sway",
-            "delay": 120
+            "pose": [
+              "fuurou-normal",
+              "fuurou-hoot"
+            ],
+            "poseAt": [
+              500
+            ],
+            "act": "hop",
+            "delay": 450
           },
           {
-            "art": "fuurou-stamp",
+            "art": "tsumugi-surprise",
             "x": 78,
             "y": 94,
-            "act": "hop",
-            "delay": 500
+            "act": "sway",
+            "delay": 1200
           }
         ],
         "props": [
           {
             "prop": "drawer",
-            "x": 51,
+            "x": 18,
             "y": 94,
             "h": 27,
             "rot": 0,
