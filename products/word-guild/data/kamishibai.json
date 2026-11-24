@@ -210,9 +210,7 @@
           {
             "art": "hatori-side",
             "x": 76,
-            "y": 94,
-            "act": "sway",
-            "delay": 120
+            "y": 94
           }
         ],
         "props": [
@@ -232,9 +230,7 @@
           {
             "art": "tsumugi-ask",
             "x": 24,
-            "y": 94,
-            "act": "sway",
-            "delay": 120
+            "y": 94
           },
           {
             "art": "hatori-side",
@@ -268,22 +264,13 @@
             "art": "fuurou-normal",
             "x": 46,
             "y": 94,
-            "pose": [
-              "fuurou-normal",
-              "fuurou-hoot"
-            ],
-            "poseAt": [
-              500
-            ],
             "act": "hop",
             "delay": 450
           },
           {
             "art": "tsumugi-surprise",
             "x": 78,
-            "y": 94,
-            "act": "sway",
-            "delay": 1200
+            "y": 94
           }
         ],
         "props": [
@@ -368,9 +355,7 @@
           {
             "art": "shadow-woman-stand",
             "x": 62,
-            "y": 94,
-            "act": "sway",
-            "delay": 220
+            "y": 94
           }
         ],
         "props": [
@@ -426,14 +411,7 @@
             "x": 77,
             "y": 94,
             "act": "hop",
-            "delay": 250,
-            "pose": [
-              "shadow-fuurou-stand",
-              "shadow-fuurou-fly"
-            ],
-            "poseAt": [
-              820
-            ]
+            "delay": 250
           }
         ],
         "props": [
@@ -475,9 +453,7 @@
           {
             "art": "shadow-hatori-back",
             "x": 84,
-            "y": 94,
-            "act": "sway",
-            "delay": 180
+            "y": 94
           }
         ],
         "props": [

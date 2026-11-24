@@ -84,11 +84,11 @@ const motions = {
   'enter-right': 'kami-enter .9s ease-out both, kami-step .3s ease-in-out 3',
   'exit-left': 'kami-exit .9s ease-in both, kami-step .3s ease-in-out 3',
   'exit-right': 'kami-exit .9s ease-in both, kami-step .3s ease-in-out 3',
-  walk: 'kami-walk .6s ease-in-out infinite',
+  walk: 'kami-walk .6s ease-in-out 2',
   bow: 'kami-bow .85s ease-in-out',
   nod: 'kami-nod .36s ease-in-out 2',
   hop: 'kami-hop .55s ease-out',
-  sway: 'kami-sway 3.4s ease-in-out infinite',
+  sway: 'kami-sway 1.7s ease-in-out 1',
   turn: 'kami-turn .5s ease-in-out both',
   approach: 'kami-approach .9s ease-out both',
   still: ''
@@ -183,7 +183,6 @@ const styles = `
   .kami-bg { inset: 0; width: 100%; height: 100%; }
   .kami-part { object-position: center bottom; }
   @media (prefers-reduced-motion: no-preference) {
-    .kami-shadow .kami-ready::before { animation: kami-glow 5.3s ease-in-out infinite; }
     .kami-ready .kami-layer {
       animation: var(--kami-act, none);
       animation-delay: var(--kami-delay);
@@ -270,14 +269,14 @@ function renderCard(card, silhouette) {
     image.alt = '';
     surface.append(image);
   }
-  for (const { frames, prop, x, y, h, flip, rot = 0, wiggle, act = silhouette && frames?.[0].trim ? 'sway' : 'still', delay } of card.layers) {
+  for (const { frames, prop, x, y, h, flip, rot = 0, wiggle, act = 'still', delay } of card.layers) {
     const layer = makeElement('span', `kami-layer kami-${act}`);
     layer.style.setProperty('--kami-feet', `${x}% ${y}%`);
     layer.style.setProperty('--kami-facing', flip ? '-1' : '1');
     layer.style.setProperty('--kami-delay', `${delay ?? (act.startsWith('exit-') ? 1000 : 0)}ms`);
     if (Object.hasOwn(travel, act)) layer.style.setProperty('--kami-travel', travel[act]);
     const motion = act === 'drift'
-      ? (prop === 'fog' ? 'kami-fog 7s ease-in-out infinite' : 'kami-drift .9s ease-out both')
+      ? 'kami-drift 1.2s ease-out both'
       : motions[act];
     if (motion) layer.style.setProperty('--kami-act', motion);
 
