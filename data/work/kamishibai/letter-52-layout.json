@@ -1,0 +1,210 @@
+{
+ "note": "tools/kami-layout.py が letter-52.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-hotel-lobby",
+   "who": [
+    {
+     "part": "puppet-blank-1",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-official-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-52-1",
+     "x": 0.595,
+     "top": 24,
+     "w": 354
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-blank-6",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-52-2",
+     "x": 0.63,
+     "top": 440,
+     "w": 441
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-blank-6",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-52-3",
+     "x": 0.63,
+     "top": 440,
+     "w": 431
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-blank-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-52-4",
+     "x": 0.63,
+     "top": 440,
+     "w": 425
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-blank-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-52-5",
+     "x": 0.413,
+     "top": 24,
+     "w": 347
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-blank-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-52-6",
+     "x": 0.413,
+     "top": 24,
+     "w": 346
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-blank-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-52-7",
+     "x": 0.414,
+     "top": 24,
+     "w": 351
+    }
+   ]
+  },
+  {
+   "bg": "bg-stone-street",
+   "who": [
+    {
+     "part": "puppet-blank-1",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-child-1",
+     "x": 0.73,
+     "h": "child",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-52-8",
+     "x": 0.485,
+     "top": 440,
+     "w": 431
+    }
+   ]
+  },
+  {
+   "bg": "bg-dock",
+   "who": [
+    {
+     "part": "puppet-blank-1",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-52-9",
+     "x": 0.485,
+     "top": 440,
+     "w": 444
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-blank-6",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-52-10",
+     "x": 0.63,
+     "top": 440,
+     "w": 463
+    }
+   ]
+  }
+ ]
+}
