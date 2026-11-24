@@ -7,26 +7,6 @@
     "hatori-smile": 62,
     "fuurou-normal": 30,
     "fuurou-stamp": 30,
-    "shadow-man-walk": 62,
-    "shadow-woman-stand": 62,
-    "shadow-woman-bow": 62,
-    "shadow-old-man-cane": 62,
-    "shadow-sailor": 62,
-    "shadow-worker-box": 62,
-    "shadow-blank-coat": 62,
-    "shadow-keeper-lamp": 62,
-    "shadow-seller-stall": 62,
-    "shadow-clerk-desk": 62,
-    "shadow-boy-run": 46,
-    "shadow-girl-point": 46,
-    "shadow-crowd": 62,
-    "shadow-hatori-stand": 62,
-    "shadow-hatori-hand": 62,
-    "shadow-hatori-back": 62,
-    "shadow-hatori-write": 62,
-    "shadow-fuurou-stand": 30,
-    "shadow-fuurou-letter": 30,
-    "shadow-fuurou-fly": 34,
     "tsumugi-side-walk": 54,
     "tsumugi-back": 54,
     "tsumugi-read": 54,
@@ -65,86 +45,6 @@
     "fuurou-stamp": {
       "height": 0.935546875,
       "bottom": 0.03515625
-    },
-    "shadow-man-walk": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-woman-stand": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-woman-bow": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-old-man-cane": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-sailor": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-worker-box": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-blank-coat": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-keeper-lamp": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-seller-stall": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-clerk-desk": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-boy-run": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-girl-point": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-crowd": {
-      "height": 0.787109375,
-      "bottom": 0.0
-    },
-    "shadow-hatori-stand": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-hatori-hand": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-hatori-back": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-hatori-write": {
-      "height": 1.0,
-      "bottom": 0.0
-    },
-    "shadow-fuurou-stand": {
-      "height": 0.8984375,
-      "bottom": 0.0
-    },
-    "shadow-fuurou-letter": {
-      "height": 0.8984375,
-      "bottom": 0.0
-    },
-    "shadow-fuurou-fly": {
-      "height": 0.62109375,
-      "bottom": 0.0
     },
     "tsumugi-side-walk": {
       "height": 0.935546875,
@@ -203,9 +103,7 @@
           {
             "art": "tsumugi-read",
             "x": 28,
-            "y": 94,
-            "act": "nod",
-            "delay": 400
+            "y": 94
           },
           {
             "art": "hatori-side",
@@ -219,8 +117,7 @@
             "x": 22,
             "y": 30,
             "h": 14,
-            "rot": 0,
-            "act": "drift"
+            "rot": 0
           }
         ]
       },
@@ -235,16 +132,7 @@
           {
             "art": "hatori-side",
             "x": 76,
-            "y": 94,
-            "pose": [
-              "hatori-side",
-              "hatori-cap"
-            ],
-            "poseAt": [
-              1100
-            ],
-            "act": "nod",
-            "delay": 1300
+            "y": 94
           }
         ],
         "props": [
@@ -263,9 +151,7 @@
           {
             "art": "fuurou-normal",
             "x": 46,
-            "y": 94,
-            "act": "hop",
-            "delay": 450
+            "y": 94
           },
           {
             "art": "tsumugi-surprise",
@@ -279,8 +165,7 @@
             "x": 18,
             "y": 94,
             "h": 27,
-            "rot": 0,
-            "wiggle": true
+            "rot": 0
           }
         ]
       }
@@ -289,201 +174,48 @@
   "letters": {
     "1": [
       {
-        "parts": [
-          {
-            "art": "post-front",
-            "x": 64,
-            "y": 92,
-            "h": 66
-          },
-          {
-            "art": "shadow-hatori-stand",
-            "x": 22,
-            "y": 94,
-            "pose": [
-              "shadow-hatori-stand",
-              "shadow-hatori-hand"
-            ],
-            "poseAt": [
-              800
-            ]
-          }
-        ],
-        "props": [
-          {
-            "prop": "fog",
-            "x": 40,
-            "y": 40,
-            "h": 20,
-            "rot": 0,
-            "act": "drift",
-            "delay": 160
-          },
-          {
-            "prop": "fog",
-            "x": 78,
-            "y": 30,
-            "h": 16,
-            "rot": 4,
-            "act": "drift",
-            "delay": 900
-          }
-        ],
-        "line": [
-          0
-        ]
+        "pic": "kami/letter-01/01",
+        "text": "Some {say} the fog is a gift,"
       },
       {
-        "parts": [
-          {
-            "art": "shadow-man-walk",
-            "x": 85,
-            "y": 80,
-            "flip": true,
-            "depth": 0.72,
-            "why": "far",
-            "act": "exit-right",
-            "delay": 1250
-          },
-          {
-            "art": "shadow-man-walk",
-            "x": 37,
-            "y": 94,
-            "act": "enter-left",
-            "delay": 180
-          },
-          {
-            "art": "shadow-woman-stand",
-            "x": 62,
-            "y": 94
-          }
-        ],
-        "props": [
-          {
-            "prop": "door",
-            "x": 12,
-            "y": 96,
-            "h": 70,
-            "rot": 0
-          }
-        ],
-        "line": [
-          1
-        ]
+        "pic": "kami/letter-01/02",
+        "text": "but I {think} you {know} the truth."
       },
       {
-        "parts": [
-          {
-            "art": "shadow-old-man-cane",
-            "x": 78,
-            "y": 94,
-            "flip": true,
-            "act": "turn",
-            "delay": 1000
-          }
-        ],
-        "props": [
-          {
-            "prop": "bag",
-            "x": 22,
-            "y": 92,
-            "h": 34,
-            "rot": -6
-          },
-          {
-            "prop": "letter",
-            "x": 61,
-            "y": 62,
-            "h": 22,
-            "rot": -10,
-            "act": "drift",
-            "delay": 180
-          }
-        ],
-        "line": [
-          2
-        ]
+        "pic": "kami/letter-01/03",
+        "text": "It is {time} to {see} it."
       },
       {
-        "parts": [
-          {
-            "art": "shadow-fuurou-stand",
-            "x": 77,
-            "y": 94,
-            "act": "hop",
-            "delay": 250
-          }
-        ],
-        "props": [
-          {
-            "prop": "clock",
-            "x": 20,
-            "y": 40,
-            "h": 26,
-            "rot": 0
-          },
-          {
-            "prop": "bag",
-            "x": 22,
-            "y": 94,
-            "h": 30,
-            "rot": -4
-          },
-          {
-            "prop": "letters",
-            "x": 44,
-            "y": 96,
-            "h": 24,
-            "rot": 6
-          }
-        ],
-        "line": [
-          3
-        ]
+        "pic": "kami/letter-01/04",
+        "text": "Every {year}, {good} {people} {come} to {work} here."
       },
       {
-        "parts": [
-          {
-            "art": "shadow-girl-point",
-            "x": 20,
-            "y": 94,
-            "act": "nod",
-            "delay": 280
-          },
-          {
-            "art": "shadow-hatori-back",
-            "x": 84,
-            "y": 94
-          }
-        ],
-        "props": [
-          {
-            "prop": "fog",
-            "x": 22,
-            "y": 30,
-            "h": 16,
-            "rot": 0
-          },
-          {
-            "prop": "drawer",
-            "x": 52,
-            "y": 96,
-            "h": 34,
-            "rot": 0,
-            "wiggle": true,
-            "delay": 850
-          },
-          {
-            "prop": "question",
-            "x": 53,
-            "y": 52,
-            "h": 22,
-            "rot": -8
-          }
-        ],
-        "line": [
-          4
-        ]
+        "pic": "kami/letter-01/05",
+        "text": "Few of them stay through the winter."
+      },
+      {
+        "pic": "kami/letter-01/06",
+        "text": "{Use} the {new} bag and {look} at each name."
+      },
+      {
+        "pic": "kami/letter-01/07",
+        "text": "Some will not {want} their words, but {give} them anyway."
+      },
+      {
+        "pic": "kami/letter-01/08",
+        "text": "In a {day}, you will {find} a {way} to do it."
+      },
+      {
+        "pic": "kami/letter-01/09",
+        "text": "Furo and all you {need} are at the {back}."
+      },
+      {
+        "pic": "kami/letter-01/10",
+        "text": "If a {child} asks what the fog {means}, {tell} the truth."
+      },
+      {
+        "pic": "kami/letter-01/11",
+        "text": "{Last} rule: never {call} me about the bottom drawer."
       }
     ]
   }

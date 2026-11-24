@@ -1,13 +1,7 @@
-// Script v1 groups cards by shelf under scenes and letters. A card has an
-// optional bg (art basename), ordered parts ({art, x, y, flip}), and
-// optional props ({prop, x, y, h, rot, wiggle}) drawn above the parts.
-// x is the horizontal center, y the feet line or bottom edge, and h the
-// height, in card percentages. Characters use sizes and trim from the script,
-// with optional depth and why for perspective. Other parts specify h directly.
-// Scene captions follow scene line order. Letter line arrays hold zero-based
-// indices into the letter's lines. Pass cards with caption text to the player.
-// act starts after delay (ms). pose lists the complete sequence, with one
-// poseAt time (ms from card reveal) for each change after the initial pose.
+// Scene cards compose a background, parts and SVG props. Positions and
+// heights are percentages of the card. Characters use sizes and alpha trim
+// to align their visible feet with y, with optional depth for perspective.
+// Letter cards carry a finished picture (pic) and marked-up English text.
 
 const art = new URL('../art/', import.meta.url);
 const ink = '#1f2a44';
@@ -49,7 +43,6 @@ const props = {
   question: ['0 0 62 84', `
     <path fill="var(--lamp)" d="M7 25C7 12 17 5 31 5c14 0 24 8 24 20 0 10-5 15-13 21-4 3-5 5-5 10H24c0-10 2-14 10-20 5-4 8-7 8-11 0-6-4-9-11-9-7 0-11 4-11 9z"/>
     <circle fill="var(--lamp)" cx="30" cy="71" r="7"/>`],
-  // 霧は影絵でも明るい帯のまま（影にすると塊に見えるため）
   fog: ['0 0 120 60', `
     <g stroke="none" fill="#fffaf0" opacity=".78">
       <path d="M4 22q10-10 24-4 10-12 26-4 14-10 30-1 16-6 30 6-8 6-22 4-12 6-26 2-14 6-28 1-14 6-28 0-6 1-6-4z"/>
@@ -72,48 +65,22 @@ const props = {
 
 export const propNames = Object.freeze(Object.keys(props));
 
-const travel = {
-  'enter-left': '-100%',
-  'enter-right': '100%',
-  'exit-left': '-100%',
-  'exit-right': '100%'
-};
-
-const motions = {
-  'enter-left': 'kami-enter .9s ease-out both, kami-step .3s ease-in-out 3',
-  'enter-right': 'kami-enter .9s ease-out both, kami-step .3s ease-in-out 3',
-  'exit-left': 'kami-exit .9s ease-in both, kami-step .3s ease-in-out 3',
-  'exit-right': 'kami-exit .9s ease-in both, kami-step .3s ease-in-out 3',
-  walk: 'kami-walk .6s ease-in-out 2',
-  bow: 'kami-bow .85s ease-in-out',
-  nod: 'kami-nod .36s ease-in-out 2',
-  hop: 'kami-hop .55s ease-out',
-  sway: 'kami-sway 1.7s ease-in-out 1',
-  turn: 'kami-turn .5s ease-in-out both',
-  approach: 'kami-approach .9s ease-out both',
-  still: ''
-};
-
-export const partActs = Object.freeze(Object.keys(motions));
-export const propActs = Object.freeze([...partActs, 'drift']);
-
-function renderProp(name, { silhouette, wiggle }) {
+function renderProp(name) {
   const [viewBox, artwork] = props[name];
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('class', 'kami-part');
   svg.setAttribute('viewBox', viewBox);
   svg.setAttribute('preserveAspectRatio', 'xMidYMax meet');
   svg.setAttribute('fill', 'none');
-  // 影絵では塗りを紺一色にし、線は灯りの色で残す（切り絵のように中の形が読める）
-  svg.setAttribute('stroke', silhouette ? '#f7e6bf' : ink);
-  svg.setAttribute('stroke-width', silhouette ? '3.5' : '4.5');
+  svg.setAttribute('stroke', ink);
+  svg.setAttribute('stroke-width', '4.5');
   svg.setAttribute('stroke-linecap', 'round');
   svg.setAttribute('stroke-linejoin', 'round');
   svg.style.setProperty('--ink', ink);
   for (const [color, value] of Object.entries(propPalette)) {
-    svg.style.setProperty(`--${color}`, silhouette ? ink : value);
+    svg.style.setProperty(`--${color}`, value);
   }
-  svg.innerHTML = `<g${wiggle ? ' class="kami-wiggle"' : ''}>${artwork}</g>`;
+  svg.innerHTML = artwork;
   return svg;
 }
 
@@ -158,100 +125,24 @@ const styles = `
     content: ''; position: absolute; z-index: 2; inset: 0; pointer-events: none;
     box-shadow: inset 0 0 12px #3e1d1470;
   }
+  .kami-frame:has(.kami-picture)::after { box-shadow: none; }
   .kami-frame:focus-visible { outline: 3px solid #1f2a44; outline-offset: -8px; }
   .kami-player figure { margin: 0; }
   .kami-card {
     position: absolute; z-index: 0; inset: 0; display: block; pointer-events: none;
     background: #e9c388; box-shadow: 4px 0 12px #41271880;
   }
-  .kami-shadow .kami-card {
-    background: radial-gradient(ellipse at 48% 65%, #fff5ce 6%, #f7d895 58%, #bc7b44 100%);
-  }
-  .kami-shadow .kami-card::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 48% 65%, #fff8dc 5%, transparent 76%);
-    opacity: .16;
-  }
-  .kami-layer { position: absolute; inset: 0; transform-origin: var(--kami-feet); }
-  @media (prefers-reduced-motion: reduce) {
-    .kami-exit-left, .kami-exit-right { transform: translateX(var(--kami-travel)); }
-    .kami-turn { transform: scaleX(-1); }
-  }
-  .kami-pose { opacity: 0; }
-  .kami-pose:last-child { opacity: 1; }
+  .kami-picture { background: #fbefda; }
   .kami-bg, .kami-part { position: absolute; display: block; object-fit: contain; }
   .kami-bg { inset: 0; width: 100%; height: 100%; }
   .kami-part { object-position: center bottom; }
-  @media (prefers-reduced-motion: no-preference) {
-    .kami-ready .kami-layer {
-      animation: var(--kami-act, none);
-      animation-delay: var(--kami-delay);
-    }
-    .kami-ready .kami-pose {
-      animation: kami-pose-in 120ms linear var(--kami-pose-in) both,
-                 kami-pose-out 120ms linear var(--kami-pose-out) forwards;
-    }
-    .kami-ready .kami-pose:first-child { opacity: 1; animation-name: none, kami-pose-out; }
-    .kami-ready .kami-pose:last-child { animation-name: kami-pose-in; }
-    .kami-card:not(.kami-ready) .kami-pose { opacity: 0; }
-    .kami-card:not(.kami-ready) .kami-pose:first-child { opacity: 1; }
-    .kami-ready .kami-wiggle {
-      transform-box: fill-box; transform-origin: center bottom;
-      animation: kami-wiggle 1.2s ease-in-out var(--kami-delay) 2;
-    }
-  }
-  @keyframes kami-glow { 22%, 66% { opacity: .08; } 44%, 83% { opacity: .19; } }
-  @keyframes kami-enter { from { translate: var(--kami-travel) 0; } to { translate: 0 0; } }
-  @keyframes kami-exit {
-    from { translate: 0 0; } to { translate: var(--kami-travel) 0; }
-  }
-  @keyframes kami-step { 50% { transform: translateY(-1.3%) rotate(1.3deg); } }
-  @keyframes kami-walk {
-    25% { transform: translateY(-1.3%) rotate(1.6deg); }
-    75% { transform: translateY(-1.3%) rotate(-1.6deg); }
-  }
-  @keyframes kami-bow { 50% { transform: rotate(calc(13deg * var(--kami-facing))); } }
-  @keyframes kami-nod { 50% { transform: rotate(calc(3deg * var(--kami-facing))); } }
-  @keyframes kami-hop { 45% { transform: translateY(-7%); } }
-  @keyframes kami-sway {
-    25% { transform: rotate(-1deg); }
-    75% { transform: rotate(1deg); }
-  }
-  @keyframes kami-turn {
-    0% { transform: scaleX(1); }
-    50% { transform: scaleX(0); }
-    100% { transform: scaleX(-1); }
-  }
-  @keyframes kami-approach { from { transform: translateY(-4%) scale(.7); } }
-  @keyframes kami-fog { 50% { transform: translateX(5%); } }
-  @keyframes kami-drift { from { transform: translateX(-16%); } }
-  @keyframes kami-pose-in { from { opacity: 0; } to { opacity: 1; } }
-  @keyframes kami-pose-out { from { opacity: 1; } to { opacity: 0; } }
-  @keyframes kami-wiggle {
-    10%, 30% { transform: rotate(-4deg); }
-    20%, 40% { transform: rotate(4deg); }
-    50%, 100% { transform: rotate(0); }
-  }
-  .kami-ink {
-    background-color: #1f2a44;
-    -webkit-mask-image: var(--kami-image);
-    mask-image: var(--kami-image);
-    -webkit-mask-position: center bottom;
-    mask-position: center bottom;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-  }
   .kami-caption {
     margin: 0; padding: 12px 16px 5px; min-height: 4em;
     font: 17px/1.55 system-ui, sans-serif; text-align: start;
   }
-  .kami-shadow .kami-caption:lang(en) { font-family: Georgia, serif; }
-  .kami-dots { display: flex; justify-content: center; gap: 8px; padding: 10px 12px 15px; }
-  .kami-dots[hidden] { display: none; }
-  .kami-dot { width: 7px; height: 7px; border-radius: 50%; background: #cbb495; }
-  .kami-dot[aria-current="step"] { background: #542d20; }
+  .kami-caption:lang(en) { font: 18px/1.55 Georgia, serif; }
+  .kami-word { font-weight: 600; border-bottom: 2px dotted currentColor; }
+  .kami-progress { padding: 4px 12px 10px; font: 12px/1.4 system-ui, sans-serif; }
 `;
 
 function makeElement(tag, className) {
@@ -260,8 +151,8 @@ function makeElement(tag, className) {
   return element;
 }
 
-function renderCard(card, silhouette) {
-  const surface = makeElement('span', 'kami-card');
+function renderCard(card) {
+  const surface = makeElement('span', card.pic ? 'kami-card kami-picture' : 'kami-card');
   surface.setAttribute('aria-hidden', 'true');
   if (card.background) {
     const image = card.background.cloneNode();
@@ -269,58 +160,45 @@ function renderCard(card, silhouette) {
     image.alt = '';
     surface.append(image);
   }
-  for (const { frames, prop, x, y, h, flip, rot = 0, wiggle, act = 'still', delay } of card.layers) {
-    const layer = makeElement('span', `kami-layer kami-${act}`);
-    layer.style.setProperty('--kami-feet', `${x}% ${y}%`);
-    layer.style.setProperty('--kami-facing', flip ? '-1' : '1');
-    layer.style.setProperty('--kami-delay', `${delay ?? (act.startsWith('exit-') ? 1000 : 0)}ms`);
-    if (Object.hasOwn(travel, act)) layer.style.setProperty('--kami-travel', travel[act]);
-    const motion = act === 'drift'
-      ? 'kami-drift 1.2s ease-out both'
-      : motions[act];
-    if (motion) layer.style.setProperty('--kami-act', motion);
-
-    const poses = frames ?? [{ h }];
-    poses.forEach(({ image, h, trim, at }, index) => {
-      let part;
-      if (prop) {
-        part = renderProp(prop, { silhouette, wiggle });
-      } else if (silhouette) {
-        part = makeElement('span', 'kami-part kami-ink');
-        part.style.setProperty('--kami-image', `url("${image.src}")`);
-      } else {
-        part = image.cloneNode();
-        part.className = 'kami-part';
-        part.alt = '';
-      }
-      part.style.left = `${x}%`;
-      if (trim) {
-        const canvasHeight = h / trim.height;
-        part.style.bottom = `${100 - y - canvasHeight * trim.bottom}%`;
-        part.style.height = `${canvasHeight}%`;
-        part.style.width = `${canvasHeight * (image.naturalWidth / image.naturalHeight) / cardAspect}%`;
-      } else {
-        part.style.bottom = `${100 - y}%`;
-        part.style.width = `${Math.min(x, 100 - x) * 2}%`;
-        part.style.height = `${Math.min(h, y)}%`;
-      }
-      part.style.transform = `translateX(-50%) rotate(${rot}deg) scaleX(${flip ? -1 : 1})`;
-      if (poses.length > 1) {
-        part.classList.add('kami-pose');
-        part.style.setProperty('--kami-pose-in', `${at}ms`);
-        part.style.setProperty('--kami-pose-out', `${poses[index + 1]?.at ?? 0}ms`);
-      }
-      layer.append(part);
-    });
-    surface.append(layer);
+  for (const { image, prop, x, y, h, trim, flip, rot = 0 } of card.layers) {
+    const part = prop ? renderProp(prop) : image.cloneNode();
+    if (!prop) {
+      part.className = 'kami-part';
+      part.alt = '';
+    }
+    part.style.left = `${x}%`;
+    if (trim) {
+      const canvasHeight = h / trim.height;
+      part.style.bottom = `${100 - y - canvasHeight * trim.bottom}%`;
+      part.style.height = `${canvasHeight}%`;
+      part.style.width = `${canvasHeight * (image.naturalWidth / image.naturalHeight) / cardAspect}%`;
+    } else {
+      part.style.bottom = `${100 - y}%`;
+      part.style.width = `${Math.min(x, 100 - x) * 2}%`;
+      part.style.height = `${Math.min(h, y)}%`;
+    }
+    part.style.transform = `translateX(-50%) rotate(${rot}deg) scaleX(${flip ? -1 : 1})`;
+    surface.append(part);
   }
   return surface;
 }
 
-export async function playKamishibai(container, { cards, mode, sizes, trim }) {
+function renderLetterCaption(caption, text) {
+  caption.replaceChildren();
+  for (const [index, fragment] of text.split(/\{([^}]+)\}/g).entries()) {
+    if (index % 2 === 0) {
+      caption.append(fragment);
+    } else {
+      const word = makeElement('span', 'kami-word');
+      word.textContent = fragment;
+      caption.append(word);
+    }
+  }
+}
+
+export async function playKamishibai(container, { cards, sizes = {}, trim = {} }) {
   if (!cards.length) return;
-  const silhouette = mode === 'silhouette';
-  const dialog = makeElement('dialog', `kami-player${silhouette ? ' kami-shadow' : ''}`);
+  const dialog = makeElement('dialog', 'kami-player');
   dialog.setAttribute('aria-label', '紙芝居');
   const style = document.createElement('style');
   style.textContent = styles;
@@ -340,11 +218,7 @@ export async function playKamishibai(container, { cards, mode, sizes, trim }) {
   caption.lang = 'ja';
   caption.setAttribute('aria-live', 'polite');
   caption.textContent = '読み込み中…';
-  const progress = makeElement('div', 'kami-dots');
-  progress.setAttribute('role', 'img');
-  progress.hidden = true;
-  const dots = cards.map(() => makeElement('span', 'kami-dot'));
-  progress.append(...dots);
+  const progress = makeElement('div', 'kami-progress');
   figure.append(frame, caption, progress);
   dialog.append(style, toolbar, figure);
   container.append(dialog);
@@ -361,36 +235,24 @@ export async function playKamishibai(container, { cards, mode, sizes, trim }) {
   async function prepare() {
     const images = new Map();
     function load(url) {
-      if (!url) return null;
       if (!images.has(url)) images.set(url, preload(url));
       return images.get(url);
     }
     const artUrl = name => new URL(`${name}.webp`, art).href;
     const prepared = await Promise.all(cards.map(async card => {
       const [background, layers] = await Promise.all([
-        card.bg && !silhouette ? load(artUrl(card.bg)) : null,
+        card.pic || card.bg ? load(artUrl(card.pic ?? card.bg)) : null,
         Promise.all((card.parts ?? []).map(async part => {
-          async function loadPose(name, at) {
-            const image = await load(artUrl(name));
-            if (!image) return null;
-            if (!Object.hasOwn(sizes, name)) return { image, h: part.h, at };
-            const bounds = trim[name];
-            if (!bounds) throw new Error(`No alpha bounds for ${name}`);
-            return { image, h: sizes[name] * (part.depth ?? 1), trim: bounds, at };
-          }
-
-          const frames = (await Promise.all((part.pose ?? [part.art]).map((name, index) =>
-            loadPose(name, index === 0 ? 0 : part.poseAt[index - 1])
-          ))).filter(Boolean);
-          if (!frames.length && part.pose) {
-            const fallback = await loadPose(part.art, 0);
-            if (fallback) frames.push(fallback);
-          }
-          return frames.length ? { ...part, frames } : null;
+          const image = await load(artUrl(part.art));
+          if (!image) return null;
+          if (!Object.hasOwn(sizes, part.art)) return { ...part, image };
+          const bounds = trim[part.art];
+          if (!bounds) throw new Error(`No alpha bounds for ${part.art}`);
+          return { ...part, image, h: sizes[part.art] * (part.depth ?? 1), trim: bounds };
         }))
       ]);
       return {
-        caption: card.caption,
+        ...card,
         background,
         layers: [
           ...layers.filter(Boolean),
@@ -405,17 +267,16 @@ export async function playKamishibai(container, { cards, mode, sizes, trim }) {
     let start = null;
     let swiped = false;
     const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-    let current = renderCard(prepared[0], silhouette);
+    let current = renderCard(prepared[0]);
     frame.append(current);
     frame.disabled = false;
-    caption.lang = silhouette ? 'en' : 'ja';
-    progress.hidden = false;
 
     function updateCaption() {
-      caption.textContent = prepared[index].caption;
-      progress.setAttribute('aria-label', `${index + 1} / ${cards.length}`);
-      dots[index - 1]?.removeAttribute('aria-current');
-      dots[index].setAttribute('aria-current', 'step');
+      const card = prepared[index];
+      caption.lang = card.pic ? 'en' : 'ja';
+      if (card.pic) renderLetterCaption(caption, card.text);
+      else caption.textContent = card.caption;
+      progress.textContent = `${index + 1} / ${cards.length}`;
       frame.setAttribute('aria-label', index === cards.length - 1 ? '紙芝居を閉じる' : '次のカード');
     }
 
@@ -427,7 +288,7 @@ export async function playKamishibai(container, { cards, mode, sizes, trim }) {
       }
       sliding = true;
       const outgoing = current;
-      current = renderCard(prepared[++index], silhouette);
+      current = renderCard(prepared[++index]);
       frame.prepend(current);
       try {
         if (!reducedMotion.matches && outgoing.animate) {
@@ -439,13 +300,11 @@ export async function playKamishibai(container, { cards, mode, sizes, trim }) {
       } finally {
         outgoing.remove();
         updateCaption();
-        current.classList.add('kami-ready');
         sliding = false;
       }
     }
 
     updateCaption();
-    current.classList.add('kami-ready');
     frame.addEventListener('pointerdown', event => {
       if (!event.isPrimary || event.button !== 0) return;
       swiped = false;

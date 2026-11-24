@@ -20,7 +20,7 @@ for art in script["sizes"]:
     try:
         image = Image.open(path)
     except FileNotFoundError:
-        if art.startswith(("shadow-hatori-", "shadow-fuurou-")) or pending_color.fullmatch(art):
+        if pending_color.fullmatch(art):
             print(f"Awaiting {path.name}")
             continue
         raise

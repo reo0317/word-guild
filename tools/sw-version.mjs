@@ -13,7 +13,7 @@ export async function precacheFiles(directory = root, prefix = '') {
     const name = prefix + entry.name;
     // Never traverse the retired assets or illustration working files.
     if (entry.isDirectory()) {
-      if (name !== 'assets' && name !== 'art/work' && name !== 'art/word') files.push(...await precacheFiles(path.join(directory, entry.name), name + '/'));
+      if (name !== 'assets' && name !== 'art/work' && name !== 'art/word' && name !== 'art/kami') files.push(...await precacheFiles(path.join(directory, entry.name), name + '/'));
     } else if (entry.isFile() && name !== 'sw.js' && !labFiles.has(name) && (/\.(html|css|mjs|json|webmanifest)$/.test(name) || /^art\/.*\.(webp|png)$/.test(name))) {
       files.push('./' + name);
     }

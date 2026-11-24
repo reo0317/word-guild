@@ -52,22 +52,22 @@
       return response.json();
     }
 
-    async function play(mode) {
+    async function play(sceneMode) {
       if (playing) return;
       playing = true;
       status.textContent = '読み込み中…';
       try {
-        const sceneMode = mode === 'scene';
         const [script, source] = await Promise.all([
-          load('kamishibai'), load(sceneMode ? 'scenes' : 'story')
+          load('kamishibai'), sceneMode ? load('scenes') : null
         ]);
-        const lines = sceneMode ? source.scenes.find(scene => scene.shelf === 1).lines : source.letters[0].lines;
-        const cards = (sceneMode ? script.scenes[1] : script.letters[1]).map((card, i) => ({
-          ...card,
-          caption: sceneMode ? lines[i] : card.line.map(index => lines[index].en.replace(/[{}]/g, '')).join(' ')
-        }));
+        const cards = sceneMode
+          ? script.scenes[1].map((card, i) => ({
+            ...card,
+            caption: source.scenes.find(scene => scene.shelf === 1).lines[i]
+          }))
+          : script.letters[1];
         status.textContent = '';
-        await playKamishibai(player, { cards, mode, sizes: script.sizes, trim: script.trim });
+        await playKamishibai(player, { cards, sizes: script.sizes, trim: script.trim });
       } catch (error) {
         console.error(error);
         status.textContent = '紙芝居を読み込めませんでした。';
@@ -76,8 +76,8 @@
       }
     }
 
-    document.querySelector('#scene').addEventListener('click', () => play('scene'));
-    document.querySelector('#letter').addEventListener('click', () => play('silhouette'));
+    document.querySelector('#scene').addEventListener('click', () => play(true));
+    document.querySelector('#letter').addEventListener('click', () => play(false));
   </script>
 </body>
 </html>

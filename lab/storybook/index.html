@@ -38,6 +38,10 @@ nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:13px;paddi
 .scene .lines p{font:15px/1.8 var(--serif)}
 .scene .title{font-weight:900}
 .kami button{justify-self:start;min-height:44px;min-width:44px;padding:0 16px;border-radius:999px;border:2px solid var(--ink);background:var(--card);color:var(--ink);font:700 14px var(--sans)}
+.kami-thumbs{display:flex;flex-wrap:wrap;gap:10px}
+.kami-thumb{flex:0 1 128px;margin:0;font:14px/1.4 Georgia,serif}
+.kami-thumb img{display:block;width:100%;aspect-ratio:3/2;object-fit:contain}
+.kami-thumb figcaption{padding-top:4px}
 .blankcard{background:var(--card);border:2px double var(--ink);border-radius:6px;padding:12px;margin:12px 0}
 .blankcard .en{font:16px Georgia,serif}
 .blankcard .ja{font-size:13px;color:var(--sub)}
@@ -86,7 +90,11 @@ const get = async name => { const r = await fetch(new URL(name, DATA)); if (!r.o
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const WARDS = {1:'坂の上の朝市',2:'石だたみ通り',3:'波止場',4:'時計塔の役場',5:'駅前のホテル',6:'岬の灯台'};
 const enHtml = en => esc(en).replace(/\{([^}]*)\}/g, '<span class="w">$1</span>');
-const enPlain = en => String(en ?? '').replace(/[{}]/g, '');
+const letterThumbs = cards => cards?.length ? `<div class="kami kami-thumbs">${cards.map(({pic, text}) =>
+  `<figure class="kami-thumb" hidden>
+    <img src="../../products/word-guild/art/${esc(pic)}.webp" alt="">
+    <figcaption lang="en">${enHtml(text)}</figcaption>
+  </figure>`).join('')}</div>` : '';
 
 document.querySelectorAll('[data-hide]').forEach(box => box.onchange = () =>
   document.body.classList.toggle('hide-' + box.dataset.hide, !box.checked));
@@ -108,10 +116,11 @@ try {
       nav.insertAdjacentHTML('beforeend', `<a href="#w${ward}">${ward}区</a>`);
     }
     const n = letter.shelf, scene = sceneOf(n), p = psOf(n);
-    const k = kami?.scenes?.[n] || kami?.letters?.[n];
+    const letterCards = kami?.letters?.[n];
+    const k = kami?.scenes?.[n] || letterCards;
     html += `<section class="shelf" id="s${n}">
       <header><span class="no">${n}</span><h3>${esc(names[n] ?? '')}</h3><span class="who">${esc(letter.from)} → ${esc(letter.to)}（${esc(letter.kind)}）</span></header>
-      <div class="block letter"><span class="tag">手紙</span>${letter.lines.map(l => `<div class="ln"><p class="en">${enHtml(l.en)}</p><p class="ja">${esc(l.ja)}</p></div>`).join('')}</div>
+      <div class="block letter"><span class="tag">手紙</span>${letter.lines.map(l => `<div class="ln"><p class="en">${enHtml(l.en)}</p><p class="ja">${esc(l.ja)}</p></div>`).join('')}${letterThumbs(letterCards)}</div>
       ${scene ? `<div class="block scene"><span class="tag">場面</span><p class="title">「${esc(scene.title)}」</p><div class="lines">${scene.lines.map(l => `<p>${esc(l)}</p>`).join('')}</div></div>` : ''}
       ${p ? `<div class="block ps"><span class="tag">追伸</span><div class="ln"><p class="en">${enHtml(p.en)}</p><p class="ja">${esc(p.ja)}</p></div></div>` : ''}
       ${k ? `<div class="block kami"><span class="tag">紙芝居（試作）</span><div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -120,6 +129,10 @@ try {
     </section>`;
   }
   html += blankCard(ward);
+  book.addEventListener('load', event => {
+    const thumb = event.target.closest('.kami-thumb');
+    if (thumb) thumb.hidden = false;
+  }, true);
   book.innerHTML = html;
 
   function blankCard(ch) {
@@ -132,13 +145,12 @@ try {
     if (!btn) return;
     const n = Number(btn.dataset.n), kind = btn.dataset.play;
     const {playKamishibai} = await import('../../products/word-guild/guild/kamishibai.mjs');
-    const letter = story.letters.find(l => l.shelf === n);
     const scene = sceneOf(n);
     const cards = kind === 'scene'
       ? kami.scenes[n].map((c, i) => ({...c, caption: scene?.lines[i] ?? ''}))
-      : kami.letters[n].map(c => ({...c, caption: (c.line ?? []).map(i => enPlain(letter.lines[i]?.en)).join(' ')}));
+      : kami.letters[n];
     await playKamishibai(document.getElementById('player'), {
-      cards, mode: kind === 'scene' ? 'scene' : 'silhouette', sizes: kami.sizes, trim: kami.trim
+      cards, sizes: kami.sizes, trim: kami.trim
     });
   });
 } catch (e) {
