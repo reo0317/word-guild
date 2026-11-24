@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync, statSync } from 'node:fs';
 import { test } from 'node:test';
-import { propNames } from '../products/word-guild/guild/kamishibai.mjs';
+import { playKamishibai, propNames } from '../products/word-guild/guild/kamishibai.mjs';
 
 const product = new URL('../products/word-guild/', import.meta.url);
 const readData = name => JSON.parse(readFileSync(new URL(`data/${name}.json`, product), 'utf8'));
@@ -84,4 +84,65 @@ test('kamishibai letter pictures and captions follow the full letter in order', 
       normalize(letter.lines.map(line => line.en).join(' '))
     );
   }
+});
+
+test('kamishibai taps and keys switch cards immediately', async t => {
+  class Element extends EventTarget {
+    children = [];
+    append(...children) { this.children.push(...children); }
+    replaceChildren(...children) { this.children = children; }
+    contains(element) { return this === element || this.children.includes(element); }
+    setAttribute() {}
+    focus() {}
+    getBoundingClientRect() { return { left: 16, width: 358 }; }
+    showModal() { this.open = true; }
+    close() {
+      this.open = false;
+      this.dispatchEvent(new Event('close'));
+    }
+    remove() {}
+  }
+
+  const document = { createElement: () => new Element() };
+  Object.defineProperty(globalThis, 'document', { value: document, configurable: true });
+  t.after(() => { delete globalThis.document; });
+
+  const container = new Element();
+  const closed = playKamishibai(container, {
+    cards: ['First', 'Second', 'Last'].map(caption => ({ caption }))
+  });
+  const [dialog] = container.children;
+  const [, panel] = dialog.children;
+  const [, figure] = panel.children;
+  const [frame, caption] = figure.children;
+  await new Promise(setImmediate);
+
+  function tap(target, clientX) {
+    const click = Object.assign(new Event('click'), { clientX, detail: 1 });
+    Object.defineProperty(click, 'target', { value: target });
+    figure.dispatchEvent(click);
+  }
+
+  function key(key) {
+    dialog.dispatchEvent(Object.assign(new Event('keydown', { cancelable: true }), { key }));
+  }
+
+  assert.equal(frame.children[1].className, 'kami-tap');
+  tap(frame, 20);
+  assert.equal(caption.textContent, 'Second');
+  assert.equal(frame.children.length, 1);
+  tap(frame, 20);
+  assert.equal(caption.textContent, 'First');
+  assert.equal(frame.children[1].className, 'kami-tap');
+  tap(caption, 20);
+  assert.equal(caption.textContent, 'Second');
+  key('ArrowLeft');
+  assert.equal(caption.textContent, 'First');
+  key('Enter');
+  assert.equal(caption.textContent, 'Second');
+  key('ArrowRight');
+  assert.equal(caption.textContent, 'Last');
+  tap(frame, 20);
+  assert.equal(dialog.open, false);
+  await closed;
 });

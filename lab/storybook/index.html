@@ -149,6 +149,7 @@ try {
     const cards = kind === 'scene'
       ? kami.scenes[n].map((c, i) => ({...c, caption: scene?.lines[i] ?? ''}))
       : kami.letters[n];
+    btn.focus();
     await playKamishibai(document.getElementById('player'), {
       cards, sizes: kami.sizes, trim: kami.trim
     });

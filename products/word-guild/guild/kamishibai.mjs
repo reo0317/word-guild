@@ -108,6 +108,18 @@ const styles = `
     color: #362319; background: #fbefda; border-radius: 12px;
     box-shadow: 0 12px 50px #180d0ba0; text-align: center;
   }
+  @media (max-width: 640px) {
+    .kami-player[open] {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      height: 100%; max-height: none; background: transparent; box-shadow: none;
+      border-radius: 0;
+    }
+    .kami-player::before, .kami-player::after { content: ''; flex: 1 0 16px; }
+    .kami-player::before { max-height: 120px; }
+    .kami-panel {
+      flex: none; border-radius: 12px; overflow: hidden; background: #fbefda;
+    }
+  }
   .kami-player::backdrop { background: #291a18d9; }
   .kami-toolbar { display: flex; justify-content: flex-end; padding: 5px 8px; background: linear-gradient(#754631, #542d20); border-bottom: 3px ridge #986747; }
   .kami-close {
@@ -118,7 +130,7 @@ const styles = `
   .kami-frame {
     position: relative; display: block; width: 100%; aspect-ratio: ${cardAspect};
     overflow: hidden; padding: 0; margin: 0; border: 0; background: #e9c388;
-    cursor: pointer; touch-action: pan-y pinch-zoom; user-select: none;
+    cursor: pointer; touch-action: manipulation; user-select: none;
     -webkit-user-select: none; -webkit-tap-highlight-color: transparent;
   }
   .kami-frame::after {
@@ -130,8 +142,15 @@ const styles = `
   .kami-player figure { margin: 0; }
   .kami-card {
     position: absolute; z-index: 0; inset: 0; display: block; pointer-events: none;
-    background: #e9c388; box-shadow: 4px 0 12px #41271880;
+    background: #e9c388;
   }
+  .kami-tap {
+    position: absolute; z-index: 3; right: 12px; bottom: 12px;
+    width: 34px; height: 34px; display: grid; place-items: center;
+    border-radius: 50%; background: #362319; color: #fff8e6;
+    font: 20px/1 system-ui, sans-serif; pointer-events: none;
+  }
+  .kami-player figure { cursor: pointer; touch-action: manipulation; }
   .kami-picture { background: #fbefda; }
   .kami-bg, .kami-part { position: absolute; display: block; object-fit: contain; }
   .kami-bg { inset: 0; width: 100%; height: 100%; }
@@ -220,7 +239,9 @@ export async function playKamishibai(container, { cards, sizes = {}, trim = {} }
   caption.textContent = '読み込み中…';
   const progress = makeElement('div', 'kami-progress');
   figure.append(frame, caption, progress);
-  dialog.append(style, toolbar, figure);
+  const panel = makeElement('div', 'kami-panel');
+  panel.append(toolbar, figure);
+  dialog.append(style, panel);
   container.append(dialog);
 
   const closed = new Promise(resolve => {
@@ -263,16 +284,15 @@ export async function playKamishibai(container, { cards, sizes = {}, trim = {} }
     if (!dialog.open) return;
 
     let index = 0;
-    let sliding = false;
-    let start = null;
-    let swiped = false;
-    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-    let current = renderCard(prepared[0]);
-    frame.append(current);
+    const tapHint = makeElement('span', 'kami-tap');
+    tapHint.setAttribute('aria-hidden', 'true');
+    tapHint.textContent = '☝';
     frame.disabled = false;
 
-    function updateCaption() {
+    function showCard() {
       const card = prepared[index];
+      frame.replaceChildren(renderCard(card));
+      if (index === 0) frame.append(tapHint);
       caption.lang = card.pic ? 'en' : 'ja';
       if (card.pic) renderLetterCaption(caption, card.text);
       else caption.textContent = card.caption;
@@ -280,49 +300,49 @@ export async function playKamishibai(container, { cards, sizes = {}, trim = {} }
       frame.setAttribute('aria-label', index === cards.length - 1 ? '紙芝居を閉じる' : '次のカード');
     }
 
-    async function advance(direction) {
-      if (!dialog.open || sliding) return;
-      if (index === cards.length - 1) {
-        dialog.close();
-        return;
-      }
-      sliding = true;
-      const outgoing = current;
-      current = renderCard(prepared[++index]);
-      frame.prepend(current);
-      try {
-        if (!reducedMotion.matches && outgoing.animate) {
-          await outgoing.animate(
-            [{ transform: 'translateX(0)' }, { transform: `translateX(${direction * 102}%)` }],
-            { duration: 320, easing: 'cubic-bezier(.35,.05,.65,1)', fill: 'forwards' }
-          ).finished;
-        }
-      } finally {
-        outgoing.remove();
-        updateCaption();
-        sliding = false;
+    function advance() {
+      if (index === cards.length - 1) dialog.close();
+      else {
+        index++;
+        showCard();
       }
     }
 
-    updateCaption();
-    frame.addEventListener('pointerdown', event => {
-      if (!event.isPrimary || event.button !== 0) return;
-      swiped = false;
-      start = { x: event.clientX, y: event.clientY, id: event.pointerId };
-      frame.setPointerCapture(event.pointerId);
+    function goBack() {
+      if (index === 0) return;
+      index--;
+      showCard();
+    }
+
+    showCard();
+    figure.addEventListener('click', event => {
+      if (index < cards.length - 1) frame.focus({ preventScroll: true });
+      if (index > 0 && index < cards.length - 1 && event.detail > 0 && frame.contains(event.target)) {
+        const picture = frame.getBoundingClientRect();
+        if (event.clientX < picture.left + picture.width / 4) {
+          goBack();
+          return;
+        }
+      }
+      advance();
     });
-    frame.addEventListener('pointercancel', () => { start = null; });
-    frame.addEventListener('pointerup', event => {
-      if (start?.id !== event.pointerId) return;
-      const dx = event.clientX - start.x;
-      const dy = event.clientY - start.y;
-      start = null;
-      swiped = Math.abs(dx) >= 32 && Math.abs(dx) > Math.abs(dy);
-      if (swiped) void advance(Math.sign(dx));
-    });
-    frame.addEventListener('click', event => {
-      if (!swiped || event.detail === 0) void advance(1);
-      swiped = false;
+    dialog.addEventListener('keydown', event => {
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      switch (event.key) {
+        case 'ArrowLeft':
+          goBack();
+          break;
+        case 'Enter':
+          if (event.target === close) return;
+          advance();
+          break;
+        case 'ArrowRight':
+          advance();
+          break;
+        default:
+          return;
+      }
+      event.preventDefault();
     });
   }
 
