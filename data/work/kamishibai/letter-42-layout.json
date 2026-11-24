@@ -1,0 +1,204 @@
+{
+ "note": "tools/kami-layout.py が letter-42.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-storm",
+   "who": [
+    {
+     "part": "puppet-crew-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-42-1",
+     "x": 0.63,
+     "top": 449,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-lobby",
+   "who": [
+    {
+     "part": "puppet-townsfolk-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-42-2",
+     "x": 0.63,
+     "top": 444,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-hall",
+   "who": [
+    {
+     "part": "puppet-townsfolk-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-42-3",
+     "x": 0.63,
+     "top": 453,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-dock",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-42-4",
+     "x": 0.63,
+     "top": 448,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-lobby",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-42-5",
+     "x": 0.63,
+     "top": 440,
+     "w": 440
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-lobby",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-42-6",
+     "x": 0.417,
+     "top": 24,
+     "w": 360
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-lobby",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-42-7",
+     "x": 0.63,
+     "top": 462,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-lobby",
+   "who": [
+    {
+     "part": "puppet-blank-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-child-2",
+     "x": 0.73,
+     "h": "child",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-42-8",
+     "x": 0.485,
+     "top": 456,
+     "w": 445
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-lobby",
+   "who": [
+    {
+     "part": "puppet-official-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-42-9",
+     "x": 0.419,
+     "top": 24,
+     "w": 366
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-lobby",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-nagi-6",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-42-10",
+     "x": 0.485,
+     "top": 453,
+     "w": 445
+    }
+   ]
+  }
+ ]
+}

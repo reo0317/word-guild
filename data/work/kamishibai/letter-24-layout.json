@@ -1,0 +1,210 @@
+{
+ "note": "tools/kami-layout.py が letter-24.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-storm",
+   "who": [
+    {
+     "part": "puppet-nagi-young-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-24-1",
+     "x": 0.41,
+     "top": 24,
+     "w": 339
+    }
+   ]
+  },
+  {
+   "bg": "bg-storm",
+   "who": [
+    {
+     "part": "puppet-nagi-young-1",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-crew-1",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-24-2",
+     "x": 0.485,
+     "top": 440,
+     "w": 419
+    }
+   ]
+  },
+  {
+   "bg": "bg-storm",
+   "who": [
+    {
+     "part": "puppet-nagi-young-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-24-3",
+     "x": 0.63,
+     "top": 440,
+     "w": 416
+    }
+   ]
+  },
+  {
+   "bg": "bg-storm",
+   "who": [
+    {
+     "part": "puppet-nagi-young-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-crew-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-24-4",
+     "x": 0.485,
+     "top": 440,
+     "w": 442
+    }
+   ]
+  },
+  {
+   "bg": "bg-storm",
+   "who": [
+    {
+     "part": "puppet-crew-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-24-5",
+     "x": 0.63,
+     "top": 440,
+     "w": 437
+    }
+   ]
+  },
+  {
+   "bg": "bg-storm",
+   "who": [
+    {
+     "part": "puppet-nagi-young-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-24-6",
+     "x": 0.406,
+     "top": 24,
+     "w": 327
+    }
+   ]
+  },
+  {
+   "bg": "bg-storm",
+   "who": [
+    {
+     "part": "puppet-nagi-young-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-24-7",
+     "x": 0.63,
+     "top": 440,
+     "w": 449
+    }
+   ]
+  },
+  {
+   "bg": "bg-storm",
+   "who": [
+    {
+     "part": "puppet-nagi-young-2",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-crew-1",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-24-8",
+     "x": 0.602,
+     "top": 24,
+     "w": 332
+    }
+   ]
+  },
+  {
+   "bg": "bg-storm",
+   "who": [
+    {
+     "part": "puppet-nagi-young-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-24-9",
+     "x": 0.63,
+     "top": 440,
+     "w": 426
+    }
+   ]
+  },
+  {
+   "bg": "bg-storm",
+   "who": [
+    {
+     "part": "puppet-nagi-young-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-24-10",
+     "x": 0.63,
+     "top": 440,
+     "w": 415
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,204 @@
+{
+ "note": "tools/kami-layout.py が letter-10.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-bookshop",
+   "who": [
+    {
+     "part": "puppet-aoi-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-10-1",
+     "x": 0.63,
+     "top": 458,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-stone-street",
+   "who": [
+    {
+     "part": "puppet-townsfolk-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-10-2",
+     "x": 0.427,
+     "top": 24,
+     "w": 391
+    }
+   ]
+  },
+  {
+   "bg": "bg-bookshop",
+   "who": [
+    {
+     "part": "puppet-aoi-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-10-3",
+     "x": 0.427,
+     "top": 24,
+     "w": 391
+    }
+   ]
+  },
+  {
+   "bg": "bg-bookshop",
+   "who": [
+    {
+     "part": "puppet-aoi-1",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-10-4",
+     "x": 0.581,
+     "top": 24,
+     "w": 395
+    }
+   ]
+  },
+  {
+   "bg": "bg-bookshop",
+   "who": [
+    {
+     "part": "puppet-aoi-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-10-5",
+     "x": 0.63,
+     "top": 458,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-bookshop",
+   "who": [
+    {
+     "part": "puppet-aoi-6",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-10-6",
+     "x": 0.63,
+     "top": 440,
+     "w": 459
+    }
+   ]
+  },
+  {
+   "bg": "bg-bookshop",
+   "who": [
+    {
+     "part": "puppet-aoi-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-10-7",
+     "x": 0.63,
+     "top": 488,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-stone-street",
+   "who": [
+    {
+     "part": "puppet-blank-1",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-10-8",
+     "x": 0.485,
+     "top": 442,
+     "w": 445
+    }
+   ]
+  },
+  {
+   "bg": "bg-bookshop",
+   "who": [
+    {
+     "part": "puppet-aoi-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-10-9",
+     "x": 0.422,
+     "top": 24,
+     "w": 375
+    }
+   ]
+  },
+  {
+   "bg": "bg-bookshop",
+   "who": [
+    {
+     "part": "puppet-aoi-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-10-10",
+     "x": 0.63,
+     "top": 490,
+     "w": 470
+    }
+   ]
+  }
+ ]
+}

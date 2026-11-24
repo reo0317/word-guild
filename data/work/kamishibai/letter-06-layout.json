@@ -1,0 +1,217 @@
+{
+ "note": "tools/kami-layout.py が letter-06.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-tsumugi-5",
+     "x": 0.28,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-06-1",
+     "x": 0.63,
+     "top": 440,
+     "w": 453
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-door",
+   "who": [
+    {
+     "part": "puppet-tsumugi-3",
+     "x": 0.28,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-06-2",
+     "x": 0.63,
+     "top": 440,
+     "w": 462
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-townsfolk-1",
+     "x": 0.21,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-child-2",
+     "x": 0.49,
+     "h": "child"
+    },
+    {
+     "part": "puppet-townsfolk-6",
+     "x": 0.77,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-06-3",
+     "x": 0.49,
+     "top": 24,
+     "w": 355
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-tsumugi-1",
+     "x": 0.28,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-06-4",
+     "x": 0.418,
+     "top": 24,
+     "w": 363
+    }
+   ]
+  },
+  {
+   "bg": "bg-station",
+   "who": [
+    {
+     "part": "puppet-tsumugi-4",
+     "x": 0.28,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-06-5",
+     "x": 0.63,
+     "top": 440,
+     "w": 466
+    }
+   ]
+  },
+  {
+   "bg": "bg-station",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-06-6",
+     "x": 0.381,
+     "top": 24,
+     "w": 371
+    }
+   ]
+  },
+  {
+   "bg": "bg-stone-street",
+   "who": [
+    {
+     "part": "puppet-blank-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-06-7",
+     "x": 0.63,
+     "top": 440,
+     "w": 462
+    }
+   ]
+  },
+  {
+   "bg": "bg-stone-street",
+   "who": [
+    {
+     "part": "puppet-townsfolk-4",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-06-8",
+     "x": 0.379,
+     "top": 24,
+     "w": 367
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-tsumugi-6",
+     "x": 0.28,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-06-9",
+     "x": 0.63,
+     "top": 440,
+     "w": 458
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-tsumugi-4",
+     "x": 0.28,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-06-10",
+     "x": 0.63,
+     "top": 443,
+     "w": 470
+    }
+   ]
+  }
+ ]
+}

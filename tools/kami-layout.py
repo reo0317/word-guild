@@ -1,0 +1,137 @@
+"""絵コンテの表（data/work/kamishibai/letter-NN.md）から、影絵カードの組み立て表を作る。
+
+使い方: python3 tools/kami-layout.py 02 03 …（省略すると 02〜56 のうち部品がそろったもの全部）
+出力: data/work/kamishibai/letter-NN-layout.json（tools/kami-compose.py が読む）
+
+人物：表の「向き」がシートの絵の向き（library.md の人物表）と逆なら左右反転する。
+記号：上段は人物の頭より上。吹き出しの尾・雲の小丸が左下なら左の人物の右上、右下なら右の人物の左上。
+      中段は人物の間のいちばん広い空きに、胸の高さで置く。空きが狭ければ上段に回す。
+"""
+import json
+import re
+import sys
+from pathlib import Path
+
+from PIL import Image
+
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / 'data' / 'work' / 'kamishibai'
+CUT = ROOT / 'products' / 'word-guild' / 'art' / 'work' / 'kami' / 'parts' / 'cut'
+W = 1536
+SIZES = {'adult': 560, 'girl': 480, 'teen': 480, 'child': 400, 'bird': 220}
+HEIGHT = {'puppet-tsumugi': 'girl', 'puppet-riku': 'teen', 'puppet-child': 'child', 'puppet-fuurou': 'bird'}
+HEAD_TOP = 900 - 560  # 大人の頭の高さ
+TOP_MAX_H = HEAD_TOP - 30  # 上段の記号の高さの上限
+
+
+def facing():
+    """library.md の人物表から、シートの各ポーズの向き（右・左・奥）を読む。"""
+    face = {}
+    for line in (DATA / 'library.md').read_text(encoding='utf-8').splitlines():
+        m = re.match(r'\| (puppet-[a-z-]+) \|', line)
+        if not m:
+            continue
+        cols = [c.strip() for c in line.strip().strip('|').split('|')]
+        for n, c in enumerate(cols[2:8], 1):
+            face[f'{m.group(1)}-{n}'] = c.split('／')[0]
+    return face
+
+
+def aspect(part):
+    im = Image.open(CUT / f'{part}.png')
+    return im.width / im.height
+
+
+def place_icon(part, desc, people):
+    a = aspect(part)
+    xs = sorted(p['x'] for p in people)
+    mid = '中段' in desc and '上段' not in desc
+    if mid:
+        edges = [0.02] + xs + [0.98]
+        gap, at = max((b - a_ - (0.1 if a_ > 0.02 else 0.04) - (0.1 if b < 0.98 else 0.04), (a_ + b) / 2)
+                      for a_, b in zip(edges, edges[1:]))
+        w = min(gap * W, 470, 400 * a)
+        if w >= 220:
+            h = w / a
+            return {'part': part, 'x': round(at, 3), 'top': round(max(40, 640 - h / 2)), 'w': round(w)}
+    w = round(min(480, TOP_MAX_H * a))
+    half = w / 2 / W
+    if xs and ('左下' in desc):
+        x = xs[0] + half + 0.02
+    elif xs and ('右下' in desc):
+        x = xs[-1] - half - 0.02
+    else:
+        x = sum(xs) / len(xs) if xs else 0.5
+    x = min(max(x, half + 0.02), 1 - half - 0.02)
+    return {"part": part, "x": round(x, 3), "top": 24, "w": w}
+
+
+def spread(icons):
+    """記号が2つあるときは左右に離す。"""
+    if len(icons) == 2:
+        icons[0]['x'] = round(max(icons[0]['w'] / 2 / W + 0.02, 0.3 - 0.0), 3)
+        icons[1]['x'] = round(min(1 - icons[1]['w'] / 2 / W - 0.02, 0.7), 3)
+        for i in icons:
+            i['w'] = min(i['w'], 360)
+            i['top'] = 50
+    return icons
+
+
+def build(nn, face):
+    md = (DATA / f'letter-{nn}.md').read_text(encoding='utf-8')
+    cards = []
+    for line in md.splitlines():
+        if not re.match(r'\| \d+ \|', line):
+            continue
+        cols = [c.strip() for c in line.strip().strip('|').split('|')]
+        bg, who_txt, icon_txt = cols[2], cols[3], cols[4]
+        who = []
+        for w in who_txt.split('<br>'):
+            m = re.match(r'(puppet-[a-z-]+-\d)、(右|左|奥|正面)向き、x=([0-9.]+)$', w.strip())
+            if not m:
+                continue
+            part, want, x = m.group(1), m.group(2), float(m.group(3))
+            sheet = part.rsplit('-', 1)[0]
+            p = {'part': part, 'x': x, 'h': HEIGHT.get(sheet, 'adult')}
+            have = face.get(part, '右')
+            if want in '右左' and have in '右左' and want != have:
+                p['flip'] = True
+            who.append(p)
+        icons = [place_icon(i, icon_txt, who) for i in re.findall(r'icons-[0-9a-z]+-\d+', icon_txt)]
+        cards.append({'bg': bg, 'who': who, 'icon': spread(icons)})
+    return {'note': f'tools/kami-layout.py が letter-{nn}.md から作った組み立て表。', 'sizes': SIZES, 'cards': cards}
+
+
+def ready(nn):
+    md = (DATA / f'letter-{nn}.md').read_text(encoding='utf-8')
+    return all((CUT / f'{p}.png').exists() for p in re.findall(r'(?:puppet|icons)-[0-9a-z-]+-\d+', md))
+
+
+def main(args):
+    face = facing()
+    done = []
+    for nn in args or [f'{n:02d}' for n in range(2, 57)]:
+        if not ready(nn):
+            print('部品待ち', nn)
+            continue
+        out = DATA / f'letter-{nn}-layout.json'
+        out.write_text(json.dumps(build(nn, face), ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+        print(out.relative_to(ROOT))
+        done.append(nn)
+    captions(done)
+
+
+def captions(nns):
+    """products/word-guild/data/kamishibai.json の letters に、絵コンテの文をカードの字幕として入れる。"""
+    path = ROOT / 'products' / 'word-guild' / 'data' / 'kamishibai.json'
+    data = json.loads(path.read_text(encoding='utf-8'))
+    for nn in nns:
+        md = (DATA / f'letter-{nn}.md').read_text(encoding='utf-8')
+        texts = [c.strip().strip('|').split('|')[1].strip() for c in md.splitlines() if re.match(r'\| \d+ \|', c)]
+        data['letters'][str(int(nn))] = [{'pic': f'kami/letter-{nn}/{i:02d}', 'text': t} for i, t in enumerate(texts, 1)]
+    data['letters'] = dict(sorted(data['letters'].items(), key=lambda kv: int(kv[0])))
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+
+if __name__ == '__main__':
+    main(sys.argv[1:])

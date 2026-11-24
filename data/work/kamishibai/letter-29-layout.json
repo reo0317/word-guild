@@ -1,0 +1,210 @@
+{
+ "note": "tools/kami-layout.py が letter-29.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-tobe-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-29-1",
+     "x": 0.411,
+     "top": 24,
+     "w": 340
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-tobe-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-29-2",
+     "x": 0.63,
+     "top": 440,
+     "w": 466
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-tobe-1",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-4",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-29-3",
+     "x": 0.374,
+     "top": 24,
+     "w": 351
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-tobe-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-29-4",
+     "x": 0.412,
+     "top": 24,
+     "w": 344
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-tobe-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-29-5",
+     "x": 0.63,
+     "top": 472,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-tobe-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-29-6",
+     "x": 0.63,
+     "top": 450,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-tobe-2",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-blank-1",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-29-7",
+     "x": 0.373,
+     "top": 24,
+     "w": 348
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-tobe-2",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-blank-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-29-8",
+     "x": 0.369,
+     "top": 24,
+     "w": 335
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-tobe-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-29-9",
+     "x": 0.63,
+     "top": 440,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-tobe-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-29-10",
+     "x": 0.414,
+     "top": 24,
+     "w": 351
+    }
+   ]
+  }
+ ]
+}

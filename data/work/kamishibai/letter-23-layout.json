@@ -1,0 +1,192 @@
+{
+ "note": "tools/kami-layout.py が letter-23.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-dock",
+   "who": [
+    {
+     "part": "puppet-crew-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-23-1",
+     "x": 0.63,
+     "top": 440,
+     "w": 436
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-23-2",
+     "x": 0.63,
+     "top": 440,
+     "w": 467
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-23-3",
+     "x": 0.415,
+     "top": 24,
+     "w": 352
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-official-6",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-23-4",
+     "x": 0.63,
+     "top": 440,
+     "w": 451
+    }
+   ]
+  },
+  {
+   "bg": "bg-dock",
+   "who": [
+    {
+     "part": "puppet-crew-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-23-5",
+     "x": 0.3,
+     "top": 50,
+     "w": 360
+    },
+    {
+     "part": "icons-a-5",
+     "x": 0.7,
+     "top": 50,
+     "w": 328
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-official-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-23-6",
+     "x": 0.412,
+     "top": 24,
+     "w": 345
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-23-7",
+     "x": 0.63,
+     "top": 455,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-23-8",
+     "x": 0.63,
+     "top": 449,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-storm",
+   "who": [],
+   "icon": [
+    {
+     "part": "icons-23-9",
+     "x": 0.5,
+     "top": 24,
+     "w": 339
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-23-10",
+     "x": 0.63,
+     "top": 440,
+     "w": 411
+    }
+   ]
+  }
+ ]
+}

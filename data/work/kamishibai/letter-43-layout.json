@@ -1,0 +1,198 @@
+{
+ "note": "tools/kami-layout.py が letter-43.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-hotel-hall",
+   "who": [
+    {
+     "part": "puppet-blank-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-43-1",
+     "x": 0.407,
+     "top": 24,
+     "w": 328
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-hall",
+   "who": [
+    {
+     "part": "puppet-blank-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-43-2",
+     "x": 0.407,
+     "top": 24,
+     "w": 328
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-hall",
+   "who": [
+    {
+     "part": "puppet-blank-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-43-3",
+     "x": 0.63,
+     "top": 440,
+     "w": 390
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-hall",
+   "who": [
+    {
+     "part": "puppet-blank-1",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-43-4",
+     "x": 0.485,
+     "top": 440,
+     "w": 431
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-hall",
+   "who": [
+    {
+     "part": "puppet-townsfolk-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-43-5",
+     "x": 0.63,
+     "top": 440,
+     "w": 435
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-hall",
+   "who": [
+    {
+     "part": "puppet-blank-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-43-6",
+     "x": 0.413,
+     "top": 24,
+     "w": 348
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-hall",
+   "who": [
+    {
+     "part": "puppet-blank-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-43-7",
+     "x": 0.63,
+     "top": 440,
+     "w": 397
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-hall",
+   "who": [
+    {
+     "part": "puppet-blank-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-43-8",
+     "x": 0.411,
+     "top": 24,
+     "w": 342
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-hall",
+   "who": [
+    {
+     "part": "puppet-blank-6",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-43-9",
+     "x": 0.408,
+     "top": 24,
+     "w": 331
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-hall",
+   "who": [
+    {
+     "part": "puppet-blank-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-43-10",
+     "x": 0.406,
+     "top": 24,
+     "w": 325
+    }
+   ]
+  }
+ ]
+}

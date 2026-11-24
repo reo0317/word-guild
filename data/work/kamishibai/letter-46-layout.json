@@ -1,0 +1,217 @@
+{
+ "note": "tools/kami-layout.py が letter-46.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-tsumugi-1",
+     "x": 0.73,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-46-1",
+     "x": 0.485,
+     "top": 440,
+     "w": 434
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-4",
+     "x": 0.24,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "puppet-tsumugi-5",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-46-2",
+     "x": 0.485,
+     "top": 440,
+     "w": 414
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-46-3",
+     "x": 0.63,
+     "top": 440,
+     "w": 417
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-4",
+     "x": 0.28,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-46-4",
+     "x": 0.63,
+     "top": 440,
+     "w": 410
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-6",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-46-5",
+     "x": 0.63,
+     "top": 440,
+     "w": 407
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-4",
+     "x": 0.24,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "puppet-tsumugi-1",
+     "x": 0.73,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-46-6",
+     "x": 0.37,
+     "top": 24,
+     "w": 337
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-46-7",
+     "x": 0.405,
+     "top": 24,
+     "w": 323
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-46-8",
+     "x": 0.63,
+     "top": 440,
+     "w": 454
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-6",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-46-9",
+     "x": 0.408,
+     "top": 24,
+     "w": 331
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-4",
+     "x": 0.24,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "puppet-tsumugi-1",
+     "x": 0.73,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-46-10",
+     "x": 0.485,
+     "top": 442,
+     "w": 445
+    }
+   ]
+  }
+ ]
+}

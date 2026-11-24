@@ -1,0 +1,217 @@
+{
+ "note": "tools/kami-layout.py が letter-02.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-market",
+   "who": [
+    {
+     "part": "puppet-townsfolk-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-02-1",
+     "x": 0.63,
+     "top": 440,
+     "w": 453
+    }
+   ]
+  },
+  {
+   "bg": "bg-market",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-02-2",
+     "x": 0.485,
+     "top": 452,
+     "w": 445
+    }
+   ]
+  },
+  {
+   "bg": "bg-market",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-02-3",
+     "x": 0.485,
+     "top": 457,
+     "w": 445
+    }
+   ]
+  },
+  {
+   "bg": "bg-market",
+   "who": [
+    {
+     "part": "puppet-townsfolk-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-02-4",
+     "x": 0.412,
+     "top": 24,
+     "w": 344
+    }
+   ]
+  },
+  {
+   "bg": "bg-market",
+   "who": [
+    {
+     "part": "puppet-townsfolk-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-02-5",
+     "x": 0.63,
+     "top": 440,
+     "w": 428
+    }
+   ]
+  },
+  {
+   "bg": "bg-market",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-02-6",
+     "x": 0.63,
+     "top": 440,
+     "w": 465
+    }
+   ]
+  },
+  {
+   "bg": "bg-market",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-02-7",
+     "x": 0.376,
+     "top": 24,
+     "w": 355
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-4",
+     "x": 0.24,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-02-8",
+     "x": 0.594,
+     "top": 24,
+     "w": 356
+    }
+   ]
+  },
+  {
+   "bg": "bg-market",
+   "who": [
+    {
+     "part": "puppet-townsfolk-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-02-9",
+     "x": 0.63,
+     "top": 440,
+     "w": 460
+    }
+   ]
+  },
+  {
+   "bg": "bg-market",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-02-10",
+     "x": 0.63,
+     "top": 440,
+     "w": 443
+    }
+   ]
+  }
+ ]
+}

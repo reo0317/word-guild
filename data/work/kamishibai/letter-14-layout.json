@@ -1,0 +1,229 @@
+{
+ "note": "tools/kami-layout.py が letter-14.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-bakery",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-14-1",
+     "x": 0.63,
+     "top": 440,
+     "w": 433
+    }
+   ]
+  },
+  {
+   "bg": "bg-station",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-5",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-14-2",
+     "x": 0.485,
+     "top": 440,
+     "w": 418
+    }
+   ]
+  },
+  {
+   "bg": "bg-stone-street",
+   "who": [
+    {
+     "part": "puppet-tsumugi-1",
+     "x": 0.24,
+     "h": "girl",
+     "flip": true
+    },
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-14-3",
+     "x": 0.485,
+     "top": 440,
+     "w": 425
+    }
+   ]
+  },
+  {
+   "bg": "bg-stone-street",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-14-4",
+     "x": 0.37,
+     "top": 24,
+     "w": 339
+    }
+   ]
+  },
+  {
+   "bg": "bg-bakery",
+   "who": [
+    {
+     "part": "puppet-townsfolk-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-14-5",
+     "x": 0.416,
+     "top": 24,
+     "w": 355
+    }
+   ]
+  },
+  {
+   "bg": "bg-bakery",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-blank-1",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-14-6",
+     "x": 0.602,
+     "top": 24,
+     "w": 333
+    }
+   ]
+  },
+  {
+   "bg": "bg-bakery",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-blank-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-14-7",
+     "x": 0.368,
+     "top": 24,
+     "w": 333
+    }
+   ]
+  },
+  {
+   "bg": "bg-station",
+   "who": [
+    {
+     "part": "puppet-blank-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-14-8",
+     "x": 0.63,
+     "top": 440,
+     "w": 450
+    }
+   ]
+  },
+  {
+   "bg": "bg-bakery",
+   "who": [
+    {
+     "part": "puppet-mina-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-14-9",
+     "x": 0.63,
+     "top": 440,
+     "w": 454
+    }
+   ]
+  },
+  {
+   "bg": "bg-bakery",
+   "who": [
+    {
+     "part": "puppet-townsfolk-4",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-14-10",
+     "x": 0.485,
+     "top": 440,
+     "w": 421
+    }
+   ]
+  }
+ ]
+}

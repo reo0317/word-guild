@@ -3,3 +3,6 @@ tools/music/out/_work/
 __pycache__/
 lab/story/story-preview.json
 *.blend1
+# 影絵カードの作業用PNG（tools/kami-compose.py で部品から作り直せる）
+products/word-guild/art/work/kami/letter-[0-9][0-9]/
+!products/word-guild/art/work/kami/letter-01/

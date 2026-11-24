@@ -1,0 +1,198 @@
+{
+ "note": "tools/kami-layout.py が letter-48.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-shirase-young-1",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-48-1",
+     "x": 0.485,
+     "top": 440,
+     "w": 422
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-48-2",
+     "x": 0.408,
+     "top": 24,
+     "w": 333
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-48-3",
+     "x": 0.408,
+     "top": 24,
+     "w": 333
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-48-4",
+     "x": 0.63,
+     "top": 440,
+     "w": 414
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-48-5",
+     "x": 0.63,
+     "top": 440,
+     "w": 426
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-48-6",
+     "x": 0.63,
+     "top": 440,
+     "w": 426
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-48-7",
+     "x": 0.63,
+     "top": 440,
+     "w": 430
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-48-8",
+     "x": 0.63,
+     "top": 440,
+     "w": 469
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-48-9",
+     "x": 0.63,
+     "top": 440,
+     "w": 442
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-48-10",
+     "x": 0.63,
+     "top": 440,
+     "w": 422
+    }
+   ]
+  }
+ ]
+}

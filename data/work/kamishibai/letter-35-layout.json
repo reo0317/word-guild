@@ -1,0 +1,197 @@
+{
+ "note": "tools/kami-layout.py が letter-35.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-child-2",
+     "x": 0.21,
+     "h": "child"
+    },
+    {
+     "part": "puppet-riku-1",
+     "x": 0.49,
+     "h": "teen"
+    },
+    {
+     "part": "puppet-official-2",
+     "x": 0.77,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-35-1",
+     "x": 0.49,
+     "top": 24,
+     "w": 370
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-kiri-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-35-2",
+     "x": 0.63,
+     "top": 440,
+     "w": 432
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-35-3",
+     "x": 0.63,
+     "top": 440,
+     "w": 429
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-35-4",
+     "x": 0.63,
+     "top": 448,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-35-5",
+     "x": 0.63,
+     "top": 440,
+     "w": 464
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-35-6",
+     "x": 0.63,
+     "top": 440,
+     "w": 421
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-35-7",
+     "x": 0.367,
+     "top": 24,
+     "w": 328
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-official-2",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-35-8",
+     "x": 0.367,
+     "top": 24,
+     "w": 328
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-official-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-35-9",
+     "x": 0.63,
+     "top": 440,
+     "w": 428
+    }
+   ]
+  }
+ ]
+}

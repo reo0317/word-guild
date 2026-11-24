@@ -1,0 +1,198 @@
+{
+ "note": "tools/kami-layout.py が letter-18.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-goro-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-18-1",
+     "x": 0.63,
+     "top": 469,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-goro-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-18-2",
+     "x": 0.63,
+     "top": 465,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-goro-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-18-3",
+     "x": 0.424,
+     "top": 24,
+     "w": 380
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-goro-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-18-4",
+     "x": 0.63,
+     "top": 452,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-goro-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-18-5",
+     "x": 0.3,
+     "top": 50,
+     "w": 360
+    },
+    {
+     "part": "icons-a-5",
+     "x": 0.7,
+     "top": 50,
+     "w": 328
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-goro-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-18-6",
+     "x": 0.63,
+     "top": 440,
+     "w": 430
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-goro-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-18-7",
+     "x": 0.63,
+     "top": 459,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-goro-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-18-8",
+     "x": 0.63,
+     "top": 448,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-goro-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-18-9",
+     "x": 0.63,
+     "top": 444,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-warehouse",
+   "who": [
+    {
+     "part": "puppet-goro-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-18-10",
+     "x": 0.428,
+     "top": 24,
+     "w": 393
+    }
+   ]
+  }
+ ]
+}

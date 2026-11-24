@@ -1,0 +1,204 @@
+{
+ "note": "tools/kami-layout.py が letter-36.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-kiri-4",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-36-1",
+     "x": 0.485,
+     "top": 443,
+     "w": 445
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-tsumugi-5",
+     "x": 0.28,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-36-2",
+     "x": 0.63,
+     "top": 440,
+     "w": 441
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-tobe-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-36-3",
+     "x": 0.63,
+     "top": 440,
+     "w": 411
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-36-4",
+     "x": 0.63,
+     "top": 440,
+     "w": 444
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-tsumugi-5",
+     "x": 0.28,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-36-5",
+     "x": 0.418,
+     "top": 24,
+     "w": 362
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-tsumugi-5",
+     "x": 0.28,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-36-6",
+     "x": 0.415,
+     "top": 24,
+     "w": 354
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-goro-3",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-tobe-1",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-36-7",
+     "x": 0.377,
+     "top": 24,
+     "w": 360
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-tobe-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-36-8",
+     "x": 0.416,
+     "top": 24,
+     "w": 357
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-kiri-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-36-9",
+     "x": 0.63,
+     "top": 440,
+     "w": 443
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-kiri-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-36-10",
+     "x": 0.63,
+     "top": 440,
+     "w": 425
+    }
+   ]
+  }
+ ]
+}

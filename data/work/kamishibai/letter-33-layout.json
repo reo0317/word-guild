@@ -1,0 +1,203 @@
+{
+ "note": "tools/kami-layout.py が letter-33.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-33-1",
+     "x": 0.63,
+     "top": 440,
+     "w": 437
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-33-2",
+     "x": 0.63,
+     "top": 440,
+     "w": 455
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-33-3",
+     "x": 0.416,
+     "top": 24,
+     "w": 355
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-33-4",
+     "x": 0.417,
+     "top": 24,
+     "w": 358
+    }
+   ]
+  },
+  {
+   "bg": "bg-stone-street",
+   "who": [
+    {
+     "part": "puppet-shirase-young-2",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-child-4",
+     "x": 0.73,
+     "h": "child"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-33-5",
+     "x": 0.485,
+     "top": 446,
+     "w": 445
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-33-6",
+     "x": 0.63,
+     "top": 440,
+     "w": 462
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-33-7",
+     "x": 0.63,
+     "top": 440,
+     "w": 443
+    }
+   ]
+  },
+  {
+   "bg": "bg-hotel-lobby",
+   "who": [
+    {
+     "part": "puppet-sora-5",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-shirase-young-1",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-33-8",
+     "x": 0.375,
+     "top": 24,
+     "w": 354
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-6",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-33-9",
+     "x": 0.63,
+     "top": 448,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-lighthouse-room",
+   "who": [
+    {
+     "part": "puppet-shirase-young-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-33-10",
+     "x": 0.63,
+     "top": 450,
+     "w": 470
+    }
+   ]
+  }
+ ]
+}

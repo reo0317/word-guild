@@ -1,0 +1,216 @@
+{
+ "note": "tools/kami-layout.py が letter-41.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-nagi-2",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-hatori-4",
+     "x": 0.73,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-41-1",
+     "x": 0.485,
+     "top": 454,
+     "w": 445
+    }
+   ]
+  },
+  {
+   "bg": "bg-dock",
+   "who": [
+    {
+     "part": "puppet-nagi-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-41-2",
+     "x": 0.63,
+     "top": 480,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-dock",
+   "who": [
+    {
+     "part": "puppet-nagi-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-41-3",
+     "x": 0.63,
+     "top": 448,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-dock",
+   "who": [
+    {
+     "part": "puppet-nagi-5",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-41-4",
+     "x": 0.585,
+     "top": 24,
+     "w": 383
+    }
+   ]
+  },
+  {
+   "bg": "bg-dock",
+   "who": [
+    {
+     "part": "puppet-nagi-5",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-41-5",
+     "x": 0.63,
+     "top": 470,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-dock",
+   "who": [
+    {
+     "part": "puppet-nagi-2",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-41-6",
+     "x": 0.587,
+     "top": 24,
+     "w": 379
+    }
+   ]
+  },
+  {
+   "bg": "bg-dock",
+   "who": [
+    {
+     "part": "puppet-nagi-2",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-tsumugi-5",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-41-7",
+     "x": 0.485,
+     "top": 446,
+     "w": 445
+    }
+   ]
+  },
+  {
+   "bg": "bg-dock",
+   "who": [
+    {
+     "part": "puppet-nagi-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-41-8",
+     "x": 0.63,
+     "top": 476,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-post-office-inside",
+   "who": [
+    {
+     "part": "puppet-hatori-4",
+     "x": 0.28,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-41-9",
+     "x": 0.63,
+     "top": 456,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-dock",
+   "who": [
+    {
+     "part": "puppet-nagi-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-41-10",
+     "x": 0.63,
+     "top": 462,
+     "w": 470
+    }
+   ]
+  }
+ ]
+}

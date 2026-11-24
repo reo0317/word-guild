@@ -1,0 +1,180 @@
+{
+ "note": "tools/kami-layout.py が letter-47.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-cape-path",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-47-1",
+     "x": 0.63,
+     "top": 440,
+     "w": 434
+    }
+   ]
+  },
+  {
+   "bg": "bg-cape-path",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-47-2",
+     "x": 0.63,
+     "top": 440,
+     "w": 422
+    }
+   ]
+  },
+  {
+   "bg": "bg-cape-path",
+   "who": [
+    {
+     "part": "puppet-nagi-2",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-47-3",
+     "x": 0.485,
+     "top": 440,
+     "w": 426
+    }
+   ]
+  },
+  {
+   "bg": "bg-cape-path",
+   "who": [
+    {
+     "part": "puppet-townsfolk-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-47-4",
+     "x": 0.63,
+     "top": 440,
+     "w": 438
+    }
+   ]
+  },
+  {
+   "bg": "bg-cape-path",
+   "who": [
+    {
+     "part": "puppet-official-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-47-5",
+     "x": 0.63,
+     "top": 440,
+     "w": 434
+    }
+   ]
+  },
+  {
+   "bg": "bg-cape-path",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-47-6",
+     "x": 0.63,
+     "top": 440,
+     "w": 455
+    }
+   ]
+  },
+  {
+   "bg": "bg-cape-path",
+   "who": [],
+   "icon": [
+    {
+     "part": "icons-47-7",
+     "x": 0.5,
+     "top": 24,
+     "w": 330
+    }
+   ]
+  },
+  {
+   "bg": "bg-cape-path",
+   "who": [],
+   "icon": [
+    {
+     "part": "icons-47-8",
+     "x": 0.5,
+     "top": 24,
+     "w": 353
+    }
+   ]
+  },
+  {
+   "bg": "bg-cape-path",
+   "who": [
+    {
+     "part": "puppet-townsfolk-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-47-9",
+     "x": 0.63,
+     "top": 440,
+     "w": 430
+    }
+   ]
+  },
+  {
+   "bg": "bg-cape-path",
+   "who": [],
+   "icon": [
+    {
+     "part": "icons-47-10",
+     "x": 0.5,
+     "top": 24,
+     "w": 315
+    }
+   ]
+  }
+ ]
+}

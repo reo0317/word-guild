@@ -34,6 +34,7 @@
     <div class="choices">
       <button id="scene" type="button">場面</button>
       <button id="letter" type="button">手紙</button>
+      <label>番号 <select id="number"></select></label>
     </div>
     <p id="status" role="status"></p>
   </main>
@@ -45,6 +46,10 @@
     const status = document.querySelector('#status');
     const data = '../../products/word-guild/data/';
     let playing = false;
+    const number = document.querySelector('#number');
+    load('kamishibai').then(script => {
+      number.append(...Object.keys(script.letters).map(n => new Option(`手紙${n}`, n)));
+    });
 
     async function load(name) {
       const response = await fetch(`${data}${name}.json`);
@@ -65,7 +70,7 @@
             ...card,
             caption: source.scenes.find(scene => scene.shelf === 1).lines[i]
           }))
-          : script.letters[1];
+          : script.letters[number.value];
         status.textContent = '';
         opener.focus();
         await playKamishibai(player, { cards, sizes: script.sizes, trim: script.trim });

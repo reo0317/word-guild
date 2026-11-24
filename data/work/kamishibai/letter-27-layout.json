@@ -1,0 +1,198 @@
+{
+ "note": "tools/kami-layout.py が letter-27.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220
+ },
+ "cards": [
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-official-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-27-1",
+     "x": 0.63,
+     "top": 440,
+     "w": 414
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-27-2",
+     "x": 0.63,
+     "top": 440,
+     "w": 425
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-27-3",
+     "x": 0.63,
+     "top": 440,
+     "w": 368
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-27-4",
+     "x": 0.63,
+     "top": 440,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-townsfolk-1",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-27-5",
+     "x": 0.63,
+     "top": 440,
+     "w": 429
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-official-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-27-6",
+     "x": 0.411,
+     "top": 24,
+     "w": 342
+    }
+   ]
+  },
+  {
+   "bg": "bg-council",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.24,
+     "h": "adult"
+    },
+    {
+     "part": "puppet-tobe-1",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-27-7",
+     "x": 0.485,
+     "top": 440,
+     "w": 441
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-official-2",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-27-8",
+     "x": 0.63,
+     "top": 440,
+     "w": 441
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-official-4",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-27-9",
+     "x": 0.63,
+     "top": 440,
+     "w": 442
+    }
+   ]
+  },
+  {
+   "bg": "bg-town-counter",
+   "who": [
+    {
+     "part": "puppet-blank-3",
+     "x": 0.28,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "icons-27-10",
+     "x": 0.63,
+     "top": 440,
+     "w": 418
+    }
+   ]
+  }
+ ]
+}
