@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync, statSync } from 'node:fs';
 import { test } from 'node:test';
-import { propNames } from '../products/word-guild/guild/kamishibai.mjs';
+import { partActs, propActs, propNames } from '../products/word-guild/guild/kamishibai.mjs';
 
 const product = new URL('../products/word-guild/', import.meta.url);
 const readData = name => JSON.parse(readFileSync(new URL(`data/${name}.json`, product), 'utf8'));
@@ -9,7 +9,8 @@ const script = readData('kamishibai');
 const { scenes } = readData('scenes');
 const { letters } = readData('story');
 const scenery = new Set(['post-front']);
-const pendingArt = name => /^shadow-(hatori|fuurou)-/.test(name);
+const pendingArt = name => /^(shadow-(hatori|fuurou)-|tsumugi-(side-walk|back|read|surprise|ask|worry)$|hatori-(side|cap|give|stern)$|fuurou-(hoot|side|fly)$)/.test(name);
+const saneTime = time => Number.isInteger(time) && time >= 0 && time <= 60_000;
 const artFile = name => new URL(`art/${name}.webp`, product);
 
 test('kamishibai character art has a normal height and alpha bounds', () => {
@@ -53,6 +54,27 @@ test('kamishibai cards reference existing backgrounds, character art and SVG pro
         for (const { prop, word } of props ?? []) {
           assert.ok(propNames.includes(prop), `Unknown SVG prop "${prop}"`);
           assert.equal(word, undefined, 'Use prop names for SVG placements');
+        }
+      }
+    }
+  }
+});
+
+test('kamishibai actions and pose changes have valid names and timing', () => {
+  for (const cards of [...Object.values(script.scenes), ...Object.values(script.letters)]) {
+    for (const { parts = [], props = [] } of cards) {
+      for (const layer of [...parts, ...props]) {
+        const { art, prop, act, delay, pose, poseAt } = layer;
+        if (act !== undefined) assert.ok((prop ? propActs : partActs).includes(act), act);
+        if (delay !== undefined) assert.ok(saneTime(delay), `Invalid delay for ${art ?? prop}`);
+        if (pose === undefined && poseAt === undefined) continue;
+        assert.ok(!prop && Array.isArray(pose) && pose.length > 0, art ?? prop);
+        for (const name of pose) {
+          assert.ok(typeof name === 'string' && Object.hasOwn(script.sizes, name), `No pose size for ${name}`);
+        }
+        assert.ok(Array.isArray(poseAt) && poseAt.length === pose.length - 1, art);
+        for (const [index, time] of poseAt.entries()) {
+          assert.ok(saneTime(time) && time > (poseAt[index - 1] ?? -1), `Invalid pose time for ${art}`);
         }
       }
     }

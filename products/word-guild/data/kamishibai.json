@@ -26,7 +26,20 @@
     "shadow-hatori-write": 62,
     "shadow-fuurou-stand": 30,
     "shadow-fuurou-letter": 30,
-    "shadow-fuurou-fly": 34
+    "shadow-fuurou-fly": 34,
+    "tsumugi-side-walk": 54,
+    "tsumugi-back": 54,
+    "tsumugi-read": 54,
+    "tsumugi-surprise": 54,
+    "tsumugi-ask": 54,
+    "tsumugi-worry": 54,
+    "hatori-side": 62,
+    "hatori-cap": 62,
+    "hatori-give": 62,
+    "hatori-stern": 62,
+    "fuurou-hoot": 30,
+    "fuurou-side": 30,
+    "fuurou-fly": 34
   },
   "trim": {
     "tsumugi-normal": {
@@ -142,13 +155,17 @@
           {
             "art": "hatori-normal",
             "x": 26,
-            "y": 94
+            "y": 94,
+            "act": "nod",
+            "delay": 280
           },
           {
             "art": "tsumugi-normal",
             "x": 71,
             "y": 94,
-            "flip": true
+            "flip": true,
+            "act": "sway",
+            "delay": 120
           }
         ],
         "props": [
@@ -167,13 +184,17 @@
           {
             "art": "tsumugi-normal",
             "x": 23,
-            "y": 94
+            "y": 94,
+            "act": "nod",
+            "delay": 300
           },
           {
             "art": "hatori-normal",
             "x": 76,
             "y": 94,
-            "flip": true
+            "flip": true,
+            "act": "sway",
+            "delay": 120
           }
         ],
         "props": [
@@ -199,12 +220,16 @@
           {
             "art": "tsumugi-normal",
             "x": 26,
-            "y": 94
+            "y": 94,
+            "act": "sway",
+            "delay": 120
           },
           {
             "art": "fuurou-stamp",
             "x": 78,
-            "y": 94
+            "y": 94,
+            "act": "hop",
+            "delay": 500
           }
         ],
         "props": [
@@ -231,9 +256,16 @@
             "h": 66
           },
           {
-            "art": "shadow-hatori-hand",
+            "art": "shadow-hatori-stand",
             "x": 22,
-            "y": 94
+            "y": 94,
+            "pose": [
+              "shadow-hatori-stand",
+              "shadow-hatori-hand"
+            ],
+            "poseAt": [
+              800
+            ]
           }
         ],
         "props": [
@@ -242,14 +274,18 @@
             "x": 40,
             "y": 40,
             "h": 20,
-            "rot": 0
+            "rot": 0,
+            "act": "drift",
+            "delay": 160
           },
           {
             "prop": "fog",
             "x": 78,
             "y": 30,
             "h": 16,
-            "rot": 4
+            "rot": 4,
+            "act": "drift",
+            "delay": 900
           }
         ],
         "line": [
@@ -264,17 +300,23 @@
             "y": 80,
             "flip": true,
             "depth": 0.72,
-            "why": "far"
+            "why": "far",
+            "act": "exit-right",
+            "delay": 1250
           },
           {
             "art": "shadow-man-walk",
             "x": 37,
-            "y": 94
+            "y": 94,
+            "act": "enter-left",
+            "delay": 180
           },
           {
             "art": "shadow-woman-stand",
             "x": 62,
-            "y": 94
+            "y": 94,
+            "act": "sway",
+            "delay": 220
           }
         ],
         "props": [
@@ -296,7 +338,9 @@
             "art": "shadow-old-man-cane",
             "x": 78,
             "y": 94,
-            "flip": true
+            "flip": true,
+            "act": "turn",
+            "delay": 1000
           }
         ],
         "props": [
@@ -309,10 +353,12 @@
           },
           {
             "prop": "letter",
-            "x": 50,
+            "x": 61,
             "y": 62,
             "h": 22,
-            "rot": -10
+            "rot": -10,
+            "act": "drift",
+            "delay": 180
           }
         ],
         "line": [
@@ -322,9 +368,18 @@
       {
         "parts": [
           {
-            "art": "shadow-fuurou-letter",
+            "art": "shadow-fuurou-stand",
             "x": 77,
-            "y": 94
+            "y": 94,
+            "act": "hop",
+            "delay": 250,
+            "pose": [
+              "shadow-fuurou-stand",
+              "shadow-fuurou-fly"
+            ],
+            "poseAt": [
+              820
+            ]
           }
         ],
         "props": [
@@ -359,12 +414,16 @@
           {
             "art": "shadow-girl-point",
             "x": 20,
-            "y": 94
+            "y": 94,
+            "act": "nod",
+            "delay": 280
           },
           {
             "art": "shadow-hatori-back",
             "x": 84,
-            "y": 94
+            "y": 94,
+            "act": "sway",
+            "delay": 180
           }
         ],
         "props": [
@@ -380,7 +439,9 @@
             "x": 52,
             "y": 96,
             "h": 34,
-            "rot": 0
+            "rot": 0,
+            "wiggle": true,
+            "delay": 850
           },
           {
             "prop": "question",
