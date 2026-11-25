@@ -9,6 +9,8 @@
 """
 from pathlib import Path
 
+import sys
+
 import numpy as np
 from PIL import Image, ImageFilter
 
@@ -171,12 +173,14 @@ def grid(alpha, cols, rows):
 
 def main():
     OUT.mkdir(exist_ok=True)
-    for sheet in sorted(list(PARTS.glob('puppet-*.png')) + list(PARTS.glob('icons-*.png'))):
+    sheets = [f for pattern in ('puppet-*.png', 'icons-*.png', 'cpuppet-*.png', 'cicons-*.png') for f in PARTS.glob(pattern)]
+    only = sys.argv[1:]  # シート名を渡すと、そのシートだけ切り出す
+    for sheet in sorted(f for f in sheets if not only or f.stem in only):
         if sheet.stem in ('icons-a', 'icons-b'):
             continue  # 手紙1用の不ぞろいなシート。切り出し済みのものを使う
         im = key_green(Image.open(sheet))
         alpha = im.getchannel('A')
-        cols, rows = (6, 1) if sheet.stem.startswith('puppet-') else (4, 3)
+        cols, rows = (6, 1) if 'puppet-' in sheet.stem else (4, 3)
         for old in OUT.glob(f'{sheet.stem}-*.png'):
             if old.stem.rsplit('-', 1)[1].isdigit() and old.stem.rsplit('-', 1)[0] == sheet.stem:
                 old.unlink()
