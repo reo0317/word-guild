@@ -18,6 +18,7 @@ import {esc, speak, prepareSpeech, setSpeechEnabled, starsMarkup, loadStyle, red
   ensureLetterCss, letterHtml, lineBody, lampRing, deliveryLetter, deliveryLineLights, shadowLinesOf, wordLineHtml, handleLetterClick, envelopeScene} from './dom.mjs';
 import {showStampZoom, ensureCss as ensureAlbumCss, sceneFor, gateCard, newlyOpenedGate, playOptionalCinema, showPaperCard, sceneCardHtml, blankCardHtml, postscriptHtml, handlePostscriptClick} from './album.mjs';
 import {renderMap, dailyBrief, bindInfo} from './map.mjs';
+import {loadKami, letterCards, sceneCards, playCards} from './kami-play.mjs';
 
 const POS_LABEL = {v: '動', n: '名', a: '形', o: '他'}; // 色の意味を文字でも示す
 const RESULT_LABEL = {known: '知ってた', correct: '正解', hint: 'ヒント', taught: '教わった', missed: '未回答'};
@@ -58,6 +59,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   let story = {v: 1, letters: []}; // 物語の英文。data/story.json が無い・一部の街灯だけでも遊べる
   let storyLoaded = false;
   let scenes = null;
+  let kami = null; // 紙芝居の台本（data/kamishibai.json）。無ければボタンを出さない
   let presentationClose = null;
   let progress = loadProgress(storage).progress;
   setSpeechEnabled(progress.settings.speech !== false);
@@ -207,7 +209,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     pop.setAttribute('aria-modal', 'true');
     pop.innerHTML = `<div class="gq-pop-card"><div class="gq-pop-letter">${letterHtml(letter, {face: faceOf, shadowLines: shadowLinesOf(letter), lit: lamp?.lit === lamp?.total, signed: true})}${ps ? postscriptHtml(ps) : ''}</div>
       <div class="gq-pop-footer">${lamp?.done ? `<div class="gq-night-shadows" aria-label="まれびとの切手">${nightStamps}</div>` : ''}
-      <div class="gq-pop-acts">${lamp?.done ? waxButton({label: '再配達', id: 'gq-return', cls: 'return'}) : ''}${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}${fab({icon: 'album', label: '切手帳', attrs: 'data-act="album"'})}</div></div></div>`;
+      <div class="gq-pop-acts">${lamp?.done ? waxButton({label: '再配達', id: 'gq-return', cls: 'return'}) : ''}${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}${lamp?.done && letterCards(kami, shelf) ? fab({icon: 'kami', label: '紙芝居', attrs: 'data-act="kami"'}) : ''}${fab({icon: 'album', label: '切手帳', attrs: 'data-act="album"'})}</div></div></div>`;
     const close = () => { pop.remove(); if (popEl === pop) popEl = null; };
     pop.onclick = event => {
       if (view.querySelector('.gq-zoom')) return;
@@ -218,6 +220,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       const act = event.target.closest('[data-act]')?.dataset.act;
       if (act === 'close' || event.target === pop) { close(); return; }
       if (act === 'album') { close(); openAlbumAt(shelf); return; }
+      if (act === 'kami') { void playCards(view, kami, letterCards(kami, shelf)); return; }
       handleLetterClick(event, {onWord: id => {
         const closeZoom = zoomWord(view, letter, id, progress, () => { if (zoomClose === closeZoom) zoomClose = null; });
         zoomClose = closeZoom;
@@ -242,7 +245,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
   // 切手帳・設定が受け取る材料。戻るボタンは地図へ。
   function libDeps(extra = {}) {
     return {
-      words, tags, rares, postscript, progress, storage, dev, music, today: todayNumber(), story: story.letters.length ? story : null, scenes,
+      words, tags, rares, postscript, progress, storage, dev, music, today: todayNumber(), story: story.letters.length ? story : null, scenes, kami,
       back: showMap, speak,
       onProgress: next => { persist(next); },
       ...extra,
@@ -817,6 +820,13 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       <img class="gq-mini-tsumugi" alt="" src="${esc(artFile('tsumugi'))}" style="--x0:${x0}%;--y0:${y0}%;--x1:${x1}%;--y1:${y1}%"></div>`;
   }
 
+  // 場面：色つきの紙芝居があればそれを、無ければ紙の札を見せる。
+  async function presentScene(scene) {
+    const cards = sceneCards(kami, scene);
+    if (!cards) return paperPresentation(sceneCardHtml(scene));
+    await playCards(view, kami, cards);
+  }
+
   async function paperPresentation(html) {
     const card = showPaperCard(view, html);
     presentationClose = card.close;
@@ -1090,7 +1100,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
           sfx('lamp');
           env.scrollIntoView({block: 'center', behavior: reducedMotion() ? 'auto' : 'smooth'});
           await new Promise(resolve => setTimeout(resolve, reducedMotion() ? 0 : 4400));
-          if (token === sessionToken && scene) await paperPresentation(sceneCardHtml(scene));
+          if (token === sessionToken && scene) await presentScene(scene);
         }).then(() => { if (token === sessionToken) return onComplete?.(); });
       });
     } else steps.push(() => { void onComplete?.(); });
@@ -1149,7 +1159,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
       } catch { /* 分類がなくても、紙魚は既存の5種で出る */ }
       if (!storyLoaded) {
         storyLoaded = true;
-        scenes = await loadScenes();
+        [scenes, kami] = await Promise.all([loadScenes(), loadKami()]);
         // 英文が無い・壊れているときは、英文なしで遊ぶ。一部の街灯だけでもよい。
         try {
           const response = await fetch(STORY_URL);

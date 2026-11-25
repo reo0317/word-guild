@@ -132,6 +132,8 @@
 .gq-pop .gq-night-shadows .stamp:nth-child(5){left:50px;top:8px;transform:rotate(12deg)}
 .gq-pop .gq-night-shadows .stamp:focus-visible{z-index:1}
 .gq-pop .gq-pop-acts{flex:0 0 auto;flex-wrap:nowrap;align-items:center;gap:8px}
+.gq-pop-footer:has([data-act="kami"]) > .gq-night-shadows{flex-basis:86px;height:82px;transform:scale(.8);transform-origin:0 0}
+.gq-pop-footer:has([data-act="kami"]) .gq-pop-acts{gap:6px}
 .gq-pop .gq-wax{width:64px;height:64px;font-size:15px}
 .gq-pop [data-act="close"]:focus:not(:focus-visible){outline:none}
 .gq-pop [data-act="close"]:focus-visible{outline:2px solid var(--seal);outline-offset:3px;border-radius:6px}

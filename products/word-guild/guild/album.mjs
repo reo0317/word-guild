@@ -18,6 +18,7 @@ import {isRestored} from './srs.mjs';
 import {stampState as rawStampState, pageSpecs, charaSpec} from './chara.mjs';
 import {charaDefs, charaSvg, stampHtml} from './chara-svg.mjs';
 import {letterView, loadScenes} from './story.mjs';
+import {loadKami, letterCards, sceneCards, playCards} from './kami-play.mjs';
 import {CHAPTER_NAMES} from './chapters.mjs';
 import {emptyProgress} from './store.mjs';
 import {esc, speak as defaultSpeak, starsMarkup, fab, icon, ensureDefs, ensureLetterCss, letterHtml, shadowLinesOf, wordLineHtml, handleLetterClick} from './dom.mjs';
@@ -274,7 +275,8 @@ async function load(deps) {
   };
   const [rares, postscript] = await Promise.all([deps.rares ?? optional('rare'), deps.postscript ?? optional('story-ps')]);
   const scenes = deps.scenes === undefined ? await loadScenes() : deps.scenes;
-  return {words, tags, scenes, rares, postscript, story: Array.isArray(story?.letters) ? story : null};
+  const kami = deps.kami === undefined ? await loadKami() : deps.kami;
+  return {words, tags, scenes, kami, rares, postscript, story: Array.isArray(story?.letters) ? story : null};
 }
 
 export function openAlbum(container, deps = {}) {
@@ -292,7 +294,7 @@ export function openAlbum(container, deps = {}) {
   }};
   container.className = 'gq gq-album';
   container.innerHTML = '<p class="gq-loading">切手帳をひらいています…</p>';
-  load(deps).then(({words, tags, story, scenes, rares, postscript}) => { if (!closed) start(words, tags, story, scenes, rares, postscript); }, () => {
+  load(deps).then(({words, tags, story, scenes, kami, rares, postscript}) => { if (!closed) start(words, tags, story, scenes, kami, rares, postscript); }, () => {
     if (closed) return;
     container.innerHTML = '<p class="gq-warn">切手帳を読み込めません。</p>';
     addBack();
@@ -309,7 +311,7 @@ export function openAlbum(container, deps = {}) {
     container.append(button);
   }
 
-  function start(words, tags, story, scenes, rares, postscript) {
+  function start(words, tags, story, scenes, kami, rares, postscript) {
     const progress = deps.progress ?? emptyProgress();
     const say = deps.speak ?? defaultSpeak;
     const base = deps.base ?? BASE;
@@ -358,7 +360,7 @@ export function openAlbum(container, deps = {}) {
         <div class="gq-album-body ${pp.allGold ? 'gold-page' : pp.complete ? 'lit-page' : ''}">
           ${first ? `<div class="gq-album-gate">${memorialHtml(page.ch, gates.includes(page.ch), base)}</div>` : ''}
           ${paper}${psOf(page.shelf)}
-          ${letter?.readable && sceneFor(scenes, page.shelf) ? '<button type="button" class="gq-scene-tag" data-act="scene">場面</button>' : ''}
+          ${letter?.readable && (sceneFor(scenes, page.shelf) || letterCards(kami, page.shelf)) ? `<div class="gq-scene-tags">${letterCards(kami, page.shelf) ? '<button type="button" class="gq-scene-tag" data-act="kami">紙芝居</button>' : ''}${sceneFor(scenes, page.shelf) ? '<button type="button" class="gq-scene-tag" data-act="scene">場面</button>' : ''}</div>` : ''}
           <p class="gq-page-count"><b>${pp.got}/${pp.total}</b> ${seal}</p>
           <div class="gq-sheet">${stamps}</div>
         </div>`;
@@ -482,11 +484,18 @@ export function openAlbum(container, deps = {}) {
       if (container.querySelector('.gq-story-overlay')) return;
       if (act === 'scene') {
         const scene = letterOf(pages[index].shelf)?.readable ? sceneFor(scenes, pages[index].shelf) : null;
-        if (scene) {
+        const cards = sceneCards(kami, scene);
+        if (cards) void playCards(container, kami, cards);
+        else if (scene) {
           const card = showPaperCard(container, sceneCardHtml(scene));
           cleanups.push(card.close);
           card.finished.then(() => { const i = cleanups.indexOf(card.close); if (i >= 0) cleanups.splice(i, 1); });
         }
+        return;
+      }
+      if (act === 'kami') {
+        const cards = letterOf(pages[index].shelf)?.readable ? letterCards(kami, pages[index].shelf) : null;
+        if (cards) void playCards(container, kami, cards);
         return;
       }
       if (act === 'back') return deps.back?.();

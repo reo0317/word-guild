@@ -293,8 +293,8 @@ export async function playKamishibai(container, { cards, sizes = {}, trim = {} }
       const card = prepared[index];
       frame.replaceChildren(renderCard(card));
       if (index === 0) frame.append(tapHint);
-      caption.lang = card.pic ? 'en' : 'ja';
-      if (card.pic) renderLetterCaption(caption, card.text);
+      caption.lang = card.text ? 'en' : 'ja';
+      if (card.text) renderLetterCaption(caption, card.text);
       else caption.textContent = card.caption;
       progress.textContent = `${index + 1} / ${cards.length}`;
       frame.setAttribute('aria-label', index === cards.length - 1 ? '紙芝居を閉じる' : '次のカード');
