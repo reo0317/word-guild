@@ -348,7 +348,7 @@ export function openAlbum(container, deps = {}) {
         const at = page.words.findIndex(w => w.id === id);
         return at < 0 ? '' : charaSvg(specs[at], {state, ward: page.ch, base});
       };
-      const paper = letter ? `<div class="gq-album-letter">${letterHtml(letter, {face, shadowLines: shadowLinesOf(letter), lit: pp.complete, signed: true})}</div>` : '';
+      const paper = letter ? `<div class="gq-album-letter">${letterHtml(letter, {face, shadowLines: shadowLinesOf(letter), lit: pp.complete, signed: true, movie: Boolean(letter.readable && letterCards(kami, page.shelf))})}</div>` : '';
       const seal = pp.allGold ? '<span class="gq-seal gold">完・金</span>' : pp.complete ? '<span class="gq-seal">完</span>' : '';
       container.innerHTML = `
         <div class="gq-album-top">${backButton}<span class="gq-album-total">集めた切手 <b>${collected}</b>/${words.length}</span><button class="text-button" data-act="index" type="button">目次</button></div>
@@ -360,7 +360,7 @@ export function openAlbum(container, deps = {}) {
         <div class="gq-album-body ${pp.allGold ? 'gold-page' : pp.complete ? 'lit-page' : ''}">
           ${first ? `<div class="gq-album-gate">${memorialHtml(page.ch, gates.includes(page.ch), base)}</div>` : ''}
           ${paper}${psOf(page.shelf)}
-          ${letter?.readable && (sceneFor(scenes, page.shelf) || letterCards(kami, page.shelf)) ? `<div class="gq-scene-tags">${letterCards(kami, page.shelf) ? '<button type="button" class="gq-scene-tag" data-act="kami">紙芝居</button>' : ''}${sceneFor(scenes, page.shelf) ? '<button type="button" class="gq-scene-tag" data-act="scene">場面</button>' : ''}</div>` : ''}
+          ${letter?.readable && sceneFor(scenes, page.shelf) ? '<button type="button" class="gq-scene-tag" data-act="scene">場面</button>' : ''}
           <p class="gq-page-count"><b>${pp.got}/${pp.total}</b> ${seal}</p>
           <div class="gq-sheet">${stamps}</div>
         </div>`;

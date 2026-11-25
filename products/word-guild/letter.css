@@ -93,8 +93,7 @@
 .gq-story-card .gq-round{display:block;margin:18px 0 0 auto;width:44px;height:44px;border-radius:50%}
 .gq-card-mist{opacity:.32;letter-spacing:.14em;background:radial-gradient(ellipse,#b9c7cf99,transparent);user-select:none}
 .gq-card-door{margin:14px auto 24px}
-.gq-scene-tags{display:flex;justify-content:flex-end;gap:8px;margin:8px 0}.gq-scene-tags .gq-scene-tag{margin:0}
-.gq-scene-tag{display:block;min-width:48px;min-height:44px;margin:8px 0 8px auto;padding:5px;border-radius:3px;border:1px solid var(--ink);background:var(--paper-hi);color:var(--ink);font:14px var(--serif,serif);box-shadow:2px 2px 0 #0002}
+.gq-scene-tag{display:block;width:48px;min-height:44px;margin:8px 0 8px auto;padding:5px;border-radius:3px;border:1px solid var(--ink);background:var(--paper-hi);color:var(--ink);font:14px var(--serif,serif);box-shadow:2px 2px 0 #0002}
 .paper .ja{display:none!important} /* 手紙の和訳は出さない（依頼者の判断） */
 
 /* 便せん：家・切手帳・結果画面で同じ見た目。行頭の点は出さない。段落の間は広く、段落の中は詰める。罫線は各行の下に引く */

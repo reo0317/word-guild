@@ -188,7 +188,7 @@ const ICON_PATHS = {
   title: 'M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z',
   speaker: 'M4 9v6h4l5 4V5L8 9zM16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12',
   close: 'M6 6l12 12M18 6L6 18',
-  kami: 'M4 4h16v13H4zM8 21l4-4 4 4M7 14l3.5-3.5 2.5 2.5 2-2 2 2M9 8.5h.5',
+  movie: 'M3 10h18v10H3zM3 10l1.5-5.5 15.5 0 1 5.5M8.5 4.5 7 10M14 4.5 12.5 10M10.5 13v4.5l4-2.25z',
   prev: 'M15 5l-7 7 7 7',
   next: 'M9 5l7 7-7 7',
   gate: 'M5 21V10a7 7 0 0 1 14 0v11M9 21v-6a3 3 0 0 1 6 0v6',
@@ -318,9 +318,10 @@ export function wordLineHtml(lv, id, opts = {}) {
 
 // 1通。lv は letterView の結果。opts: {face, shadowLines: 影を乗せる行の番号の Set, lit: 街灯がともっているか}
 let introducedLine = false;
-export function letterHtml(lv, {face = () => '', shadowLines = new Set(), lit = false, hit = '', signed = false} = {}) {
+// movie: 読み終えた手紙の読みあげの隣に、紙芝居を開くボタン（data-act="kami"）を置く。
+export function letterHtml(lv, {face = () => '', shadowLines = new Set(), lit = false, hit = '', signed = false, movie = false} = {}) {
   const read = lv.lines.filter(line => line.readable).length;
-  const all = lv.readable ? `<button type="button" class="ln-say all" data-say="${esc(lv.lines.map(plainLine).join(' '))}" aria-label="読みあげ">${icon('speaker', 16)}</button>` : '';
+  const all = lv.readable ? `<button type="button" class="ln-say all" data-say="${esc(lv.lines.map(plainLine).join(' '))}" aria-label="読みあげ">${icon('speaker', 16)}</button>${movie ? `<button type="button" class="ln-say all ln-movie" data-act="kami" aria-label="紙芝居を見る">${icon('movie', 16)}</button>` : ''}` : '';
   const intro = !introducedLine ? lv.lines.findIndex(l => l.readable) : -1;
   if (intro >= 0) introducedLine = true;
   const head = `<div class="ph"><span class="from">${esc(lv.from ?? '')}</span><svg class="arr" viewBox="0 0 24 10" aria-hidden="true"><path d="M1 5h20M16 1l5 4-5 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="to">${esc(lv.to ?? '')}</span>${all}<span class="ring">${lampRing(read, lit)}</span></div>`;
