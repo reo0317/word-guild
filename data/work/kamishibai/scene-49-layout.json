@@ -1,0 +1,85 @@
+{
+ "note": "tools/kami-layout.py が scene-49.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-lighthouse",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-49-1",
+     "x": 0.65,
+     "top": 440,
+     "w": 456
+    }
+   ]
+  },
+  {
+   "bg": "cbg-lighthouse",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-49-2",
+     "x": 0.65,
+     "top": 440,
+     "w": 444
+    }
+   ]
+  },
+  {
+   "bg": "cbg-lighthouse",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-2",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-49-3",
+     "x": 0.457,
+     "top": 24,
+     "w": 358
+    }
+   ]
+  },
+  {
+   "bg": "cbg-lighthouse",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-49-4",
+     "x": 0.65,
+     "top": 440,
+     "w": 454
+    }
+   ]
+  }
+ ]
+}

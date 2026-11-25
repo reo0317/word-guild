@@ -1,0 +1,96 @@
+{
+ "note": "tools/kami-layout.py が scene-06.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-office",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.28,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-fuurou-3",
+     "x": 0.73,
+     "h": "owl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-06-1",
+     "x": 0.505,
+     "top": 440,
+     "w": 353
+    }
+   ]
+  },
+  {
+   "bg": "cbg-office",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.28,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-fuurou-1",
+     "x": 0.73,
+     "h": "owl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-06-2",
+     "x": 0.505,
+     "top": 440,
+     "w": 381
+    }
+   ]
+  },
+  {
+   "bg": "cbg-office",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-2",
+     "x": 0.28,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-hatori-5",
+     "x": 0.73,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-06-3",
+     "x": 0.397,
+     "top": 24,
+     "w": 297
+    }
+   ]
+  },
+  {
+   "bg": "cbg-hill",
+   "who": [],
+   "icon": [
+    {
+     "part": "cicons-06-4",
+     "x": 0.5,
+     "top": 440,
+     "w": 333
+    }
+   ]
+  }
+ ]
+}

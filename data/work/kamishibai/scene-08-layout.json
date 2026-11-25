@@ -1,0 +1,103 @@
+{
+ "note": "tools/kami-layout.py が scene-08.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-street",
+   "who": [
+    {
+     "part": "cpuppet-tailor-4",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-1",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-08-1",
+     "x": 0.505,
+     "top": 443,
+     "w": 384
+    }
+   ]
+  },
+  {
+   "bg": "cbg-street",
+   "who": [
+    {
+     "part": "cpuppet-tailor-2",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-08-2",
+     "x": 0.394,
+     "top": 24,
+     "w": 290
+    }
+   ]
+  },
+  {
+   "bg": "cbg-street",
+   "who": [
+    {
+     "part": "cpuppet-tailor-4",
+     "x": 0.32,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-08-3",
+     "x": 0.65,
+     "top": 440,
+     "w": 371
+    }
+   ]
+  },
+  {
+   "bg": "cbg-street",
+   "who": [
+    {
+     "part": "cpuppet-tailor-4",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-08-4",
+     "x": 0.505,
+     "top": 460,
+     "w": 384
+    }
+   ]
+  }
+ ]
+}

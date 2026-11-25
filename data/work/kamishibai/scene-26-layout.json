@@ -1,0 +1,79 @@
+{
+ "note": "tools/kami-layout.py が scene-26.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-warehouse",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-26-1",
+     "x": 0.65,
+     "top": 446,
+     "w": 470
+    }
+   ]
+  },
+  {
+   "bg": "cbg-warehouse",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-26-2",
+     "x": 0.65,
+     "top": 440,
+     "w": 449
+    }
+   ]
+  },
+  {
+   "bg": "cbg-warehouse",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-26-3",
+     "x": 0.65,
+     "top": 440,
+     "w": 462
+    }
+   ]
+  },
+  {
+   "bg": "cbg-square",
+   "who": [],
+   "icon": [
+    {
+     "part": "cicons-26-4",
+     "x": 0.5,
+     "top": 440,
+     "w": 423
+    }
+   ]
+  }
+ ]
+}

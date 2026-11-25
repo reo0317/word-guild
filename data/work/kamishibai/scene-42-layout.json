@@ -1,0 +1,109 @@
+{
+ "note": "tools/kami-layout.py が scene-42.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-dock",
+   "who": [
+    {
+     "part": "cpuppet-nagi-4",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-42-1",
+     "x": 0.505,
+     "top": 444,
+     "w": 384
+    }
+   ]
+  },
+  {
+   "bg": "cbg-dock",
+   "who": [
+    {
+     "part": "cpuppet-nagi-2",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-1",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-42-2",
+     "x": 0.403,
+     "top": 24,
+     "w": 315
+    }
+   ]
+  },
+  {
+   "bg": "cbg-dock",
+   "who": [
+    {
+     "part": "cpuppet-nagi-2",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-1",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-42-3",
+     "x": 0.4,
+     "top": 24,
+     "w": 308
+    }
+   ]
+  },
+  {
+   "bg": "cbg-dock",
+   "who": [
+    {
+     "part": "cpuppet-nagi-5",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-1",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-42-4",
+     "x": 0.505,
+     "top": 440,
+     "w": 376
+    }
+   ]
+  }
+ ]
+}

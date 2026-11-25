@@ -1,0 +1,85 @@
+{
+ "note": "tools/kami-layout.py が scene-03.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-bakery",
+   "who": [
+    {
+     "part": "cpuppet-mina-4",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-03-1",
+     "x": 0.505,
+     "top": 454,
+     "w": 384
+    }
+   ]
+  },
+  {
+   "bg": "cbg-bakery",
+   "who": [
+    {
+     "part": "cpuppet-mina-5",
+     "x": 0.32,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-03-2",
+     "x": 0.455,
+     "top": 24,
+     "w": 352
+    }
+   ]
+  },
+  {
+   "bg": "cbg-bakery",
+   "who": [
+    {
+     "part": "cpuppet-mina-6",
+     "x": 0.32,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-03-3",
+     "x": 0.65,
+     "top": 440,
+     "w": 439
+    }
+   ]
+  },
+  {
+   "bg": "cbg-hotel-front",
+   "who": [],
+   "icon": [
+    {
+     "part": "cicons-03-4",
+     "x": 0.5,
+     "top": 440,
+     "w": 434
+    }
+   ]
+  }
+ ]
+}

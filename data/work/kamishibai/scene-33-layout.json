@@ -1,0 +1,97 @@
+{
+ "note": "tools/kami-layout.py が scene-33.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-records",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.28,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-kiri-4",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-33-1",
+     "x": 0.505,
+     "top": 445,
+     "w": 384
+    }
+   ]
+  },
+  {
+   "bg": "cbg-records",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-33-2",
+     "x": 0.65,
+     "top": 440,
+     "w": 417
+    }
+   ]
+  },
+  {
+   "bg": "cbg-records",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-33-3",
+     "x": 0.65,
+     "top": 440,
+     "w": 415
+    }
+   ]
+  },
+  {
+   "bg": "cbg-records",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.28,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-kiri-4",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-33-4",
+     "x": 0.505,
+     "top": 465,
+     "w": 384
+    }
+   ]
+  }
+ ]
+}

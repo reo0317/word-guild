@@ -1,0 +1,91 @@
+{
+ "note": "tools/kami-layout.py が scene-02.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-market",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.23,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-mina-2",
+     "x": 0.52,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "cpuppet-gatekeeper-2",
+     "x": 0.8,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-02-1",
+     "x": 0.517,
+     "top": 24,
+     "w": 328
+    }
+   ]
+  },
+  {
+   "bg": "cbg-hill",
+   "who": [],
+   "icon": [
+    {
+     "part": "cicons-02-2",
+     "x": 0.5,
+     "top": 440,
+     "w": 434
+    }
+   ]
+  },
+  {
+   "bg": "cbg-market",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-02-3",
+     "x": 0.65,
+     "top": 440,
+     "w": 458
+    }
+   ]
+  },
+  {
+   "bg": "cbg-market",
+   "who": [
+    {
+     "part": "cpuppet-gatekeeper-3",
+     "x": 0.32,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-02-4",
+     "x": 0.449,
+     "top": 24,
+     "w": 334
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "note": "tools/kami-layout.py が scene-47.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-cape",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-47-1",
+     "x": 0.65,
+     "top": 440,
+     "w": 379
+    }
+   ]
+  },
+  {
+   "bg": "cbg-cape",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-2",
+     "x": 0.38,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-fuurou-5",
+     "x": 0.43,
+     "h": "owl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-47-2",
+     "x": 0.705,
+     "top": 440,
+     "w": 311
+    }
+   ]
+  },
+  {
+   "bg": "cbg-cape",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-47-3",
+     "x": 0.65,
+     "top": 440,
+     "w": 342
+    }
+   ]
+  },
+  {
+   "bg": "cbg-cape",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-6",
+     "x": 0.47,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-47-4",
+     "x": 0.725,
+     "top": 440,
+     "w": 315
+    }
+   ]
+  }
+ ]
+}

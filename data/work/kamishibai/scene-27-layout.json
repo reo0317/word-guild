@@ -1,0 +1,115 @@
+{
+ "note": "tools/kami-layout.py が scene-27.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-town",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.23,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-elder-1",
+     "x": 0.52,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "cpuppet-townsperson-1",
+     "x": 0.8,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-27-1",
+     "x": 0.517,
+     "top": 24,
+     "w": 336
+    }
+   ]
+  },
+  {
+   "bg": "cbg-town",
+   "who": [
+    {
+     "part": "cpuppet-elder-2",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-townsperson-1",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-27-2",
+     "x": 0.408,
+     "top": 24,
+     "w": 333
+    }
+   ]
+  },
+  {
+   "bg": "cbg-town",
+   "who": [
+    {
+     "part": "cpuppet-blank-2",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-elder-1",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-27-3",
+     "x": 0.505,
+     "top": 448,
+     "w": 384
+    }
+   ]
+  },
+  {
+   "bg": "cbg-town",
+   "who": [
+    {
+     "part": "cpuppet-fuurou-2",
+     "x": 0.28,
+     "h": "owl"
+    },
+    {
+     "part": "cpuppet-blank-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-27-4",
+     "x": 0.505,
+     "top": 453,
+     "w": 384
+    }
+   ]
+  }
+ ]
+}

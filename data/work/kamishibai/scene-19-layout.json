@@ -1,0 +1,109 @@
+{
+ "note": "tools/kami-layout.py が scene-19.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-warehouse",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.28,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-intern-2",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-19-1",
+     "x": 0.505,
+     "top": 449,
+     "w": 384
+    }
+   ]
+  },
+  {
+   "bg": "cbg-warehouse",
+   "who": [
+    {
+     "part": "cpuppet-intern-2",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-1",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-19-2",
+     "x": 0.392,
+     "top": 24,
+     "w": 283
+    }
+   ]
+  },
+  {
+   "bg": "cbg-warehouse",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.28,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-intern-4",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-19-3",
+     "x": 0.505,
+     "top": 451,
+     "w": 384
+    }
+   ]
+  },
+  {
+   "bg": "cbg-warehouse",
+   "who": [
+    {
+     "part": "cpuppet-fuurou-1",
+     "x": 0.28,
+     "h": "owl"
+    },
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-19-4",
+     "x": 0.505,
+     "top": 450,
+     "w": 384
+    }
+   ]
+  }
+ ]
+}

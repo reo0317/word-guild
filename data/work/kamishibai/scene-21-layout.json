@@ -1,0 +1,97 @@
+{
+ "note": "tools/kami-layout.py が scene-21.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-warehouse",
+   "who": [
+    {
+     "part": "cpuppet-dockworker-4",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-dockworker-2-4",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-21-1",
+     "x": 0.505,
+     "top": 476,
+     "w": 384
+    }
+   ]
+  },
+  {
+   "bg": "cbg-warehouse",
+   "who": [
+    {
+     "part": "cpuppet-dockworker-3",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-goro-3",
+     "x": 0.73,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-21-2",
+     "x": 0.428,
+     "top": 24,
+     "w": 393
+    }
+   ]
+  },
+  {
+   "bg": "cbg-warehouse",
+   "who": [
+    {
+     "part": "cpuppet-goro-3",
+     "x": 0.32,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-21-3",
+     "x": 0.65,
+     "top": 440,
+     "w": 462
+    }
+   ]
+  },
+  {
+   "bg": "cbg-warehouse",
+   "who": [
+    {
+     "part": "cpuppet-goro-4",
+     "x": 0.32,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-21-4",
+     "x": 0.65,
+     "top": 440,
+     "w": 440
+    }
+   ]
+  }
+ ]
+}

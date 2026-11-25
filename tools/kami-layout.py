@@ -22,9 +22,9 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / 'data' / 'work' / 'kamishibai'
 CUT = ROOT / 'products' / 'word-guild' / 'art' / 'work' / 'kami' / 'parts' / 'cut'
 W = 1536
-SIZES = {'adult': 560, 'girl': 480, 'teen': 480, 'child': 400, 'bird': 220}
+SIZES = {'adult': 560, 'girl': 480, 'teen': 480, 'child': 400, 'bird': 220, 'owl': 300}
 HEIGHT = {'puppet-tsumugi': 'girl', 'puppet-riku': 'teen', 'puppet-child': 'child', 'puppet-fuurou': 'bird',
-          'cpuppet-tsumugi': 'girl', 'cpuppet-riku': 'child', 'cpuppet-fish-child': 'child', 'cpuppet-fuurou': 'bird'}
+          'cpuppet-tsumugi': 'girl', 'cpuppet-riku': 'child', 'cpuppet-fish-child': 'child', 'cpuppet-fuurou': 'owl'}
 KINDS = {
     'shadow': {'dir': DATA, 'board': 'letter', 'first': 2, 'key': 'letters'},
     'color': {'dir': DATA / 'color', 'board': 'scene', 'first': 1, 'key': 'scenes'},

@@ -1,0 +1,114 @@
+{
+ "note": "tools/kami-layout.py が scene-38.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-hotel",
+   "who": [
+    {
+     "part": "cpuppet-sora-4",
+     "x": 0.15,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-hotel-staff-4",
+     "x": 0.38,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-hotel-staff-2-4",
+     "x": 0.62,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.85,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-38-1",
+     "x": 0.5,
+     "top": 24,
+     "w": 321
+    }
+   ]
+  },
+  {
+   "bg": "cbg-hotel",
+   "who": [
+    {
+     "part": "cpuppet-sora-2",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-1",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-38-2",
+     "x": 0.416,
+     "top": 24,
+     "w": 355
+    }
+   ]
+  },
+  {
+   "bg": "cbg-hotel",
+   "who": [
+    {
+     "part": "cpuppet-sora-2",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-38-3",
+     "x": 0.505,
+     "top": 471,
+     "w": 384
+    }
+   ]
+  },
+  {
+   "bg": "cbg-hotel",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-38-4",
+     "x": 0.446,
+     "top": 24,
+     "w": 327
+    }
+   ]
+  }
+ ]
+}

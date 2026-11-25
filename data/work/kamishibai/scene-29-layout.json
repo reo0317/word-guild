@@ -1,0 +1,109 @@
+{
+ "note": "tools/kami-layout.py が scene-29.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-square",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.23,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-townsperson-2",
+     "x": 0.52,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "cpuppet-elder-3",
+     "x": 0.8,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-29-1",
+     "x": 0.517,
+     "top": 24,
+     "w": 316
+    }
+   ]
+  },
+  {
+   "bg": "cbg-square",
+   "who": [
+    {
+     "part": "cpuppet-mina-3",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-1",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-29-2",
+     "x": 0.411,
+     "top": 24,
+     "w": 341
+    }
+   ]
+  },
+  {
+   "bg": "cbg-square",
+   "who": [
+    {
+     "part": "cpuppet-tobe-4",
+     "x": 0.32,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-29-3",
+     "x": 0.65,
+     "top": 440,
+     "w": 436
+    }
+   ]
+  },
+  {
+   "bg": "cbg-square",
+   "who": [
+    {
+     "part": "cpuppet-tobe-4",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-29-4",
+     "x": 0.505,
+     "top": 462,
+     "w": 384
+    }
+   ]
+  }
+ ]
+}

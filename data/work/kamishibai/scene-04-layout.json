@@ -1,0 +1,91 @@
+{
+ "note": "tools/kami-layout.py が scene-04.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-dock",
+   "who": [
+    {
+     "part": "cpuppet-riku-3",
+     "x": 0.28,
+     "h": "child"
+    },
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-04-1",
+     "x": 0.505,
+     "top": 477,
+     "w": 384
+    }
+   ]
+  },
+  {
+   "bg": "cbg-dock",
+   "who": [
+    {
+     "part": "cpuppet-riku-4",
+     "x": 0.28,
+     "h": "child"
+    },
+    {
+     "part": "cpuppet-tsumugi-1",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-04-2",
+     "x": 0.414,
+     "top": 24,
+     "w": 350
+    }
+   ]
+  },
+  {
+   "bg": "cbg-dock",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-04-3",
+     "x": 0.65,
+     "top": 440,
+     "w": 465
+    }
+   ]
+  },
+  {
+   "bg": "cbg-cape",
+   "who": [],
+   "icon": [
+    {
+     "part": "cicons-04-4",
+     "x": 0.5,
+     "top": 440,
+     "w": 459
+    }
+   ]
+  }
+ ]
+}

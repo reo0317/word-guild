@@ -1,0 +1,103 @@
+{
+ "note": "tools/kami-layout.py が scene-10.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-books",
+   "who": [
+    {
+     "part": "cpuppet-aoi-6",
+     "x": 0.32,
+     "h": "adult"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-10-1",
+     "x": 0.65,
+     "top": 440,
+     "w": 395
+    }
+   ]
+  },
+  {
+   "bg": "cbg-books",
+   "who": [
+    {
+     "part": "cpuppet-aoi-2",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-1",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-10-2",
+     "x": 0.404,
+     "top": 24,
+     "w": 318
+    }
+   ]
+  },
+  {
+   "bg": "cbg-books",
+   "who": [
+    {
+     "part": "cpuppet-aoi-6",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-10-3",
+     "x": 0.505,
+     "top": 446,
+     "w": 384
+    }
+   ]
+  },
+  {
+   "bg": "cbg-books",
+   "who": [
+    {
+     "part": "cpuppet-aoi-4",
+     "x": 0.28,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.73,
+     "h": "girl",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-10-4",
+     "x": 0.505,
+     "top": 454,
+     "w": 384
+    }
+   ]
+  }
+ ]
+}

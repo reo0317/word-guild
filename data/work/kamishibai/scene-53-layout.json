@@ -1,0 +1,136 @@
+{
+ "note": "tools/kami-layout.py が scene-53.md から作った組み立て表。",
+ "sizes": {
+  "adult": 560,
+  "girl": 480,
+  "teen": 480,
+  "child": 400,
+  "bird": 220,
+  "owl": 300
+ },
+ "cards": [
+  {
+   "bg": "cbg-hill",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-2",
+     "x": 0.23,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-townsperson-1",
+     "x": 0.52,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "cpuppet-elder-1",
+     "x": 0.8,
+     "h": "adult",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-53-1",
+     "x": 0.517,
+     "top": 24,
+     "w": 328
+    }
+   ]
+  },
+  {
+   "bg": "cbg-hill",
+   "who": [
+    {
+     "part": "cpuppet-mina-3",
+     "x": 0.15,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-aoi-2",
+     "x": 0.38,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-goro-4",
+     "x": 0.62,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "cpuppet-riku-6",
+     "x": 0.85,
+     "h": "child",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-53-2",
+     "x": 0.5,
+     "top": 24,
+     "w": 347
+    }
+   ]
+  },
+  {
+   "bg": "cbg-hill",
+   "who": [
+    {
+     "part": "cpuppet-mina-2",
+     "x": 0.12,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-tsumugi-1",
+     "x": 0.31,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-aoi-1",
+     "x": 0.5,
+     "h": "adult"
+    },
+    {
+     "part": "cpuppet-goro-1",
+     "x": 0.69,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "cpuppet-riku-1",
+     "x": 0.88,
+     "h": "child",
+     "flip": true
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-53-3",
+     "x": 0.248,
+     "top": 24,
+     "w": 331
+    }
+   ]
+  },
+  {
+   "bg": "cbg-hill",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.32,
+     "h": "girl"
+    }
+   ],
+   "icon": [
+    {
+     "part": "cicons-53-4",
+     "x": 0.65,
+     "top": 440,
+     "w": 412
+    }
+   ]
+  }
+ ]
+}

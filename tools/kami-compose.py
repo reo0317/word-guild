@@ -23,7 +23,8 @@ def part(name):
 def sheet_height(name):
     """同じシートの人物の高さの中央値（＝立ち姿の高さ）。ポーズが違っても同じ縮尺で描くための基準。"""
     sheet = name.rsplit('-', 1)[0]
-    heights = sorted(Image.open(f).height for f in (PARTS / 'cut').glob(f'{sheet}-*.png'))
+    heights = sorted(Image.open(f).height for f in (PARTS / 'cut').glob(f'{sheet}-*.png')
+                     if f.stem.rsplit('-', 1)[0] == sheet)  # dockworker と dockworker-2 を混ぜない
     return heights[len(heights) // 2]
 
 
