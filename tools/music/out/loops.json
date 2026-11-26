@@ -10,5 +10,9 @@
   "big": {
     "file": "big.m4a",
     "loopEnd": 53.76
+  },
+  "rare": {
+    "file": "rare.m4a",
+    "loopEnd": 51.2
   }
 }

@@ -47,12 +47,16 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 .gq-loading svg{width:120px;height:100px}
 .gq-load-flap{transform-origin:0 44px;transform:scaleY(-1)}
 .gq-load-sheet{transform:translateY(-19px)}
+.gq-load-front{opacity:0}
 @media(prefers-reduced-motion:no-preference){
  .gq-load-flap{animation:gq-load-flap 2.4s ease-in-out infinite}
  .gq-load-sheet{animation:gq-load-sheet 2.4s ease-in-out infinite}
+ .gq-load-front{animation:gq-load-flap 2.4s ease-in-out infinite,gq-load-front 2.4s step-end infinite}
 }
+/* ふたが閉じている間（前半の開きかけまで・後半の閉じかけから）は、ふたを手紙より手前に描く */
+@keyframes gq-load-front{0%{opacity:1}12.5%{opacity:0}85%{opacity:1}}
 @keyframes gq-load-flap{0%,95%,100%{transform:scaleY(1)}25%,75%{transform:scaleY(-1)}}
-@keyframes gq-load-sheet{0%,25%,85%,100%{transform:translateY(0)}45%,65%{transform:translateY(-19px)}}
+@keyframes gq-load-sheet{0%,25%,75%,100%{transform:translateY(0)}40%,58%{transform:translateY(-19px)}}
 .gq-guide{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .bubble{position:relative;flex:1;background:var(--paper-hi);padding:8px 12px;border:2px solid var(--ink);border-radius:10px;font-size:13px;line-height:1.5}
 .bubble small{display:block;font-size:11px;font-weight:900;color:var(--seal)}

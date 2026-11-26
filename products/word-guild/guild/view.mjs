@@ -407,7 +407,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     bindBoard();
     paintAll();
     if (lastClip) { showClip(lastClip, true); lastClip = null; } // 盤面を取り切った語の行は、次の盤面でも少し残す
-    bgm(announceBig ? 'big' : 'delivery');
+    bgm(announceBig ? 'big' : quest.isNight ? 'rare' : 'delivery'); // まれびとの夜の盤面は専用の曲
     const svg = $('#gq-seals');
     observer?.disconnect();
     observer = new ResizeObserver(drawSeals);
@@ -1137,6 +1137,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         </g>
         <path d="M20 44 60 70 100 44V87a4 4 0 0 1-4 4H24a4 4 0 0 1-4-4Z" fill="#efd9b5"/>
         <path d="m22 88 25-26m51 26L73 62" fill="none"/>
+        <path class="gq-load-flap gq-load-front" d="M20 44 60 69 100 44Z" fill="#efd9b5"/>
         <circle cx="60" cy="72" r="6" fill="var(--seal)"/>
       </svg>
       <p>よみこみ中</p>

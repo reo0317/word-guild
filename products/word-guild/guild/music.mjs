@@ -1,5 +1,5 @@
 // AAC の末尾の詰め物を除いた、音楽上の一周の長さ（秒）。
-const LOOP_END = {post: 80.640, delivery: 80.000, big: 53.760};
+const LOOP_END = {post: 80.640, delivery: 80.000, big: 53.760, rare: 51.200};
 const FADE = 0.6;
 
 export function createMusic(options = {}) {
@@ -48,7 +48,7 @@ export function createMusic(options = {}) {
           const buffer = await ctx.decodeAudioData(await response.arrayBuffer());
           return {buffer, scene};
         } catch {
-          return scene === 'big' ? load('delivery') : null;
+          return scene === 'big' || scene === 'rare' ? load('delivery') : null;
         }
       })());
     }
