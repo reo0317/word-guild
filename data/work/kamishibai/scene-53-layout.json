@@ -30,14 +30,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-53-1",
-     "x": 0.517,
-     "top": 24,
-     "w": 328
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hill",
@@ -65,14 +58,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-53-2",
-     "x": 0.5,
-     "top": 24,
-     "w": 347
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hill",
@@ -105,14 +91,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-53-3",
-     "x": 0.248,
-     "top": 24,
-     "w": 331
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hill",
@@ -123,14 +102,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-53-4",
-     "x": 0.65,
-     "top": 440,
-     "w": 412
-    }
-   ]
+   "icon": []
   }
  ]
 }

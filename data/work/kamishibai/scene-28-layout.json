@@ -24,14 +24,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-28-1",
-     "x": 0.505,
-     "top": 447,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-records",
@@ -48,14 +41,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-28-2",
-     "x": 0.408,
-     "top": 24,
-     "w": 333
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-records",
@@ -72,14 +58,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-28-3",
-     "x": 0.505,
-     "top": 473,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-records",
@@ -96,14 +75,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-28-4",
-     "x": 0.505,
-     "top": 486,
-     "w": 384
-    }
-   ]
+   "icon": []
   }
  ]
 }

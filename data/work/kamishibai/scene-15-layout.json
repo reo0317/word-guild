@@ -18,14 +18,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-15-1",
-     "x": 0.65,
-     "top": 440,
-     "w": 390
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-street",
@@ -36,14 +29,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-15-2",
-     "x": 0.65,
-     "top": 440,
-     "w": 363
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-street",
@@ -54,26 +40,12 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-15-3",
-     "x": 0.65,
-     "top": 440,
-     "w": 381
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-cape",
    "who": [],
-   "icon": [
-    {
-     "part": "cicons-15-4",
-     "x": 0.5,
-     "top": 440,
-     "w": 382
-    }
-   ]
+   "icon": []
   }
  ]
 }

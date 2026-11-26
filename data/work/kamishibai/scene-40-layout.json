@@ -30,14 +30,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-40-1",
-     "x": 0.517,
-     "top": 24,
-     "w": 338
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-station",
@@ -54,14 +47,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-40-2",
-     "x": 0.505,
-     "top": 465,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-station",
@@ -84,14 +70,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-40-3",
-     "x": 0.36,
-     "top": 24,
-     "w": 337
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-station",
@@ -102,14 +81,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-40-4",
-     "x": 0.453,
-     "top": 24,
-     "w": 347
-    }
-   ]
+   "icon": []
   }
  ]
 }

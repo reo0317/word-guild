@@ -18,14 +18,7 @@
      "h": "adult"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-12-1",
-     "x": 0.65,
-     "top": 440,
-     "w": 412
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-bakery",
@@ -36,14 +29,7 @@
      "h": "adult"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-12-2",
-     "x": 0.65,
-     "top": 441,
-     "w": 470
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-bakery",
@@ -54,14 +40,7 @@
      "h": "adult"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-12-3",
-     "x": 0.467,
-     "top": 24,
-     "w": 391
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-bakery",
@@ -72,14 +51,7 @@
      "h": "adult"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-12-4",
-     "x": 0.65,
-     "top": 463,
-     "w": 470
-    }
-   ]
+   "icon": []
   }
  ]
 }

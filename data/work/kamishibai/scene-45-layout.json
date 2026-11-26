@@ -18,14 +18,7 @@
      "h": "adult"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-45-1",
-     "x": 0.65,
-     "top": 440,
-     "w": 404
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hotel",
@@ -36,14 +29,7 @@
      "h": "adult"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-45-2",
-     "x": 0.65,
-     "top": 440,
-     "w": 434
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hotel",
@@ -54,26 +40,12 @@
      "h": "adult"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-45-3",
-     "x": 0.65,
-     "top": 440,
-     "w": 388
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-cape",
    "who": [],
-   "icon": [
-    {
-     "part": "cicons-45-4",
-     "x": 0.5,
-     "top": 440,
-     "w": 398
-    }
-   ]
+   "icon": []
   }
  ]
 }

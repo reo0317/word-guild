@@ -30,14 +30,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-09-1",
-     "x": 0.517,
-     "top": 24,
-     "w": 315
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-street",
@@ -48,14 +41,7 @@
      "h": "adult"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-09-2",
-     "x": 0.65,
-     "top": 440,
-     "w": 416
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-street",
@@ -72,14 +58,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-09-3",
-     "x": 0.505,
-     "top": 449,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-street",
@@ -95,14 +74,7 @@
      "h": "adult"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-09-4",
-     "x": 0.505,
-     "top": 454,
-     "w": 384
-    }
-   ]
+   "icon": []
   }
  ]
 }

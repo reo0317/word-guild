@@ -18,14 +18,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-56-1",
-     "x": 0.335,
-     "top": 440,
-     "w": 419
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-cape",
@@ -42,14 +35,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-56-2",
-     "x": 0.37,
-     "top": 440,
-     "w": 392
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-cape",
@@ -66,14 +52,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-56-3",
-     "x": 0.845,
-     "top": 24,
-     "w": 323
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-lighthouse",
@@ -90,14 +69,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-56-4",
-     "x": 0.25,
-     "top": 440,
-     "w": 399
-    }
-   ]
+   "icon": []
   }
  ]
 }

@@ -18,14 +18,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-43-1",
-     "x": 0.65,
-     "top": 440,
-     "w": 376
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hotel-hall",
@@ -36,14 +29,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-43-2",
-     "x": 0.65,
-     "top": 440,
-     "w": 359
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hotel-hall",
@@ -54,14 +40,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-43-3",
-     "x": 0.65,
-     "top": 440,
-     "w": 369
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hotel-hall",
@@ -78,14 +57,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-43-4",
-     "x": 0.505,
-     "top": 440,
-     "w": 375
-    }
-   ]
+   "icon": []
   }
  ]
 }

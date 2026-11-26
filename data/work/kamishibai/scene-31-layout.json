@@ -24,14 +24,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-31-1",
-     "x": 0.505,
-     "top": 480,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-records",
@@ -48,14 +41,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-31-2",
-     "x": 0.505,
-     "top": 489,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-records",
@@ -72,14 +58,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-31-3",
-     "x": 0.416,
-     "top": 24,
-     "w": 356
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-records",
@@ -90,14 +69,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-31-4",
-     "x": 0.65,
-     "top": 443,
-     "w": 470
-    }
-   ]
+   "icon": []
   }
  ]
 }

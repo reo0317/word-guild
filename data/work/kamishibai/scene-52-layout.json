@@ -18,14 +18,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-52-1",
-     "x": 0.65,
-     "top": 440,
-     "w": 414
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-lighthouse",
@@ -36,14 +29,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-52-2",
-     "x": 0.65,
-     "top": 440,
-     "w": 399
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-lighthouse",
@@ -54,14 +40,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-52-3",
-     "x": 0.449,
-     "top": 24,
-     "w": 334
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-lighthouse",
@@ -72,14 +51,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-52-4",
-     "x": 0.65,
-     "top": 440,
-     "w": 414
-    }
-   ]
+   "icon": []
   }
  ]
 }

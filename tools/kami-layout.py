@@ -4,6 +4,7 @@
         python3 tools/kami-layout.py --color 01 02 …（色つきの場面）
 影絵：data/work/kamishibai/letter-NN.md → letter-NN-layout.json、kamishibai.json の letters（英文の字幕）
 色つき：data/work/kamishibai/color/scene-NN.md → scene-NN-layout.json、kamishibai.json の scenes
+       （背景と人物だけで組む。吹き出し・小絵は重ねない）
        （字幕はゲームが scenes.json の行から付ける）
 組み立て表は tools/kami-compose.py が読む。
 
@@ -111,7 +112,8 @@ def build(nn, face):
             if want in '右左' and have in '右左' and want != have:
                 p['flip'] = True
             who.append(p)
-        icons = [place_icon(i, icon_txt, who) for i in re.findall(r'c?icons-[0-9a-z]+-\d+', icon_txt)]
+        icons = [] if KIND['key'] == 'scenes' else [  # 色つきは吹き出し・小絵を重ねない（絵の破綻が多いため）
+            place_icon(i, icon_txt, who) for i in re.findall(r'c?icons-[0-9a-z]+-\d+', icon_txt)]
         cards.append({'bg': bg, 'who': who, 'icon': spread(icons)})
     return {'note': f"tools/kami-layout.py が {KIND['board']}-{nn}.md から作った組み立て表。", 'sizes': SIZES, 'cards': cards}
 

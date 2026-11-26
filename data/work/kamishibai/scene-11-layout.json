@@ -30,14 +30,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-11-1",
-     "x": 0.517,
-     "top": 24,
-     "w": 285
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-square",
@@ -54,14 +47,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-11-2",
-     "x": 0.393,
-     "top": 24,
-     "w": 286
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-square",
@@ -78,14 +64,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-11-3",
-     "x": 0.505,
-     "top": 440,
-     "w": 370
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-square",
@@ -102,14 +81,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-11-4",
-     "x": 0.505,
-     "top": 440,
-     "w": 376
-    }
-   ]
+   "icon": []
   }
  ]
 }

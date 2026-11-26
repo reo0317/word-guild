@@ -24,14 +24,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-18-1",
-     "x": 0.505,
-     "top": 440,
-     "w": 371
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-warehouse",
@@ -42,14 +35,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-18-2",
-     "x": 0.65,
-     "top": 440,
-     "w": 406
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-warehouse",
@@ -66,26 +52,12 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-18-3",
-     "x": 0.402,
-     "top": 24,
-     "w": 314
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-dock",
    "who": [],
-   "icon": [
-    {
-     "part": "cicons-18-4",
-     "x": 0.5,
-     "top": 440,
-     "w": 405
-    }
-   ]
+   "icon": []
   }
  ]
 }

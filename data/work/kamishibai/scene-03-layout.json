@@ -24,14 +24,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-03-1",
-     "x": 0.505,
-     "top": 454,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-bakery",
@@ -42,14 +35,7 @@
      "h": "adult"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-03-2",
-     "x": 0.455,
-     "top": 24,
-     "w": 352
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-bakery",
@@ -60,26 +46,12 @@
      "h": "adult"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-03-3",
-     "x": 0.65,
-     "top": 440,
-     "w": 439
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hotel-front",
    "who": [],
-   "icon": [
-    {
-     "part": "cicons-03-4",
-     "x": 0.5,
-     "top": 440,
-     "w": 434
-    }
-   ]
+   "icon": []
   }
  ]
 }

@@ -24,14 +24,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-39-1",
-     "x": 0.505,
-     "top": 464,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hotel",
@@ -48,14 +41,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-39-2",
-     "x": 0.505,
-     "top": 461,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hotel",
@@ -72,14 +58,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-39-3",
-     "x": 0.408,
-     "top": 24,
-     "w": 333
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hotel",
@@ -90,14 +69,7 @@
      "h": "girl"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-39-4",
-     "x": 0.448,
-     "top": 24,
-     "w": 331
-    }
-   ]
+   "icon": []
   }
  ]
 }

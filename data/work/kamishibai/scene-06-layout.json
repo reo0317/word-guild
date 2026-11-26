@@ -24,14 +24,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-06-1",
-     "x": 0.505,
-     "top": 440,
-     "w": 353
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-office",
@@ -48,14 +41,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-06-2",
-     "x": 0.505,
-     "top": 440,
-     "w": 381
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-office",
@@ -71,26 +57,12 @@
      "h": "adult"
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-06-3",
-     "x": 0.397,
-     "top": 24,
-     "w": 297
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-hill",
    "who": [],
-   "icon": [
-    {
-     "part": "cicons-06-4",
-     "x": 0.5,
-     "top": 440,
-     "w": 333
-    }
-   ]
+   "icon": []
   }
  ]
 }

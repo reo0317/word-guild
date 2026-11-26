@@ -24,14 +24,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-46-1",
-     "x": 0.505,
-     "top": 475,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-office",
@@ -48,14 +41,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-46-2",
-     "x": 0.505,
-     "top": 450,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-office",
@@ -72,14 +58,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-46-3",
-     "x": 0.505,
-     "top": 466,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-office",
@@ -96,14 +75,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-46-4",
-     "x": 0.4,
-     "top": 24,
-     "w": 308
-    }
-   ]
+   "icon": []
   }
  ]
 }

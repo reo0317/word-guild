@@ -24,14 +24,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-20-1",
-     "x": 0.505,
-     "top": 447,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-dock",
@@ -48,14 +41,7 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-20-2",
-     "x": 0.505,
-     "top": 467,
-     "w": 384
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-dock",
@@ -72,26 +58,12 @@
      "flip": true
     }
    ],
-   "icon": [
-    {
-     "part": "cicons-20-3",
-     "x": 0.404,
-     "top": 24,
-     "w": 318
-    }
-   ]
+   "icon": []
   },
   {
    "bg": "cbg-dock",
    "who": [],
-   "icon": [
-    {
-     "part": "cicons-20-4",
-     "x": 0.5,
-     "top": 440,
-     "w": 438
-    }
-   ]
+   "icon": []
   }
  ]
 }
