@@ -10,7 +10,7 @@
  },
  "cards": [
   {
-   "bg": "cbg-hotel-hall",
+   "bg": "cbg-hotel-hall--lamps-flaring",
    "who": [
     {
      "part": "cpuppet-tsumugi-4",
@@ -33,7 +33,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-hotel-hall",
+   "bg": "cbg-hotel-hall--corner-door-ajar",
    "who": [
     {
      "part": "cpuppet-tsumugi-4",
@@ -44,7 +44,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-hotel-hall",
+   "bg": "cbg-hotel-hall--corner-door-ajar",
    "who": [
     {
      "part": "cpuppet-tsumugi-4",

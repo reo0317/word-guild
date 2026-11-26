@@ -10,7 +10,7 @@
  },
  "cards": [
   {
-   "bg": "cbg-office",
+   "bg": "cbg-office--bottom-drawer-open",
    "who": [
     {
      "part": "cpuppet-tsumugi-4",
@@ -26,7 +26,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-office",
+   "bg": "cbg-office--bottom-drawer-open",
    "who": [
     {
      "part": "cpuppet-tsumugi-5",
@@ -43,7 +43,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-office",
+   "bg": "cbg-office--lights-out",
    "who": [
     {
      "part": "cpuppet-tsumugi-2",
@@ -59,7 +59,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-hill",
+   "bg": "cbg-hill--streetlamps-lit",
    "who": [],
    "icon": []
   }

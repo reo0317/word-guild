@@ -10,7 +10,7 @@
  },
  "cards": [
   {
-   "bg": "cbg-street",
+   "bg": "cbg-street--white-window-placards",
    "who": [
     {
      "part": "cpuppet-tsumugi-2",
@@ -21,7 +21,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-street",
+   "bg": "cbg-street--white-window-placards",
    "who": [
     {
      "part": "cpuppet-tsumugi-3",

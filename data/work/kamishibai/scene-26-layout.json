@@ -10,7 +10,7 @@
  },
  "cards": [
   {
-   "bg": "cbg-warehouse",
+   "bg": "cbg-warehouse--open-crate",
    "who": [
     {
      "part": "cpuppet-tsumugi-3",
@@ -22,7 +22,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-warehouse",
+   "bg": "cbg-warehouse--open-crate",
    "who": [
     {
      "part": "cpuppet-tsumugi-4",
@@ -34,7 +34,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-warehouse",
+   "bg": "cbg-warehouse--open-crate",
    "who": [
     {
      "part": "cpuppet-tsumugi-5",

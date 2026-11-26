@@ -44,7 +44,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-hotel-front",
+   "bg": "cbg-hotel-front--top-window-glowing",
    "who": [
     {
      "part": "cpuppet-tsumugi-3",
@@ -55,7 +55,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-hotel-front",
+   "bg": "cbg-hotel-front--top-window-glowing",
    "who": [
     {
      "part": "cpuppet-fuurou-5",

@@ -32,7 +32,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-office",
+   "bg": "cbg-office--bottom-drawer-open",
    "who": [
     {
      "part": "cpuppet-tsumugi-5",
@@ -43,7 +43,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-office",
+   "bg": "cbg-office--lights-out",
    "who": [
     {
      "part": "cpuppet-fuurou-5",

@@ -61,7 +61,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-warehouse",
+   "bg": "cbg-warehouse--open-crate",
    "who": [
     {
      "part": "cpuppet-tsumugi-4",

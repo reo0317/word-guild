@@ -33,7 +33,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-office",
+   "bg": "cbg-office--dense-window-fog",
    "who": [
     {
      "part": "cpuppet-florist-3",
