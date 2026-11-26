@@ -29,7 +29,6 @@ const MAX_FRAME_MS = 250; // 長い停止の後に、まとめて攻撃されな
 const MAP_CSS = new URL('../map.css', import.meta.url).href;
 const TAGS_URL = new URL('../data/chara.json', import.meta.url);
 const STORY_URL = new URL('../data/story.json', import.meta.url);
-const EXPORT_REMIND_DAYS = 14;
 
 function pulse(element, className) {
   if (!element) return;
@@ -192,7 +191,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     });
   }
 
-  // 地図で街灯の節を押したとき：その通を開く。下に切手帳のページへの入口。
+  // 地図で街灯の節を押したとき：その通を開く。
   function openLetterPop(map, shelf) {
     const letter = letterAt(shelf);
     if (!letter) { openAlbumAt(shelf); return; }
@@ -209,7 +208,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
     pop.setAttribute('aria-modal', 'true');
     pop.innerHTML = `<div class="gq-pop-card"><div class="gq-pop-letter">${letterHtml(letter, {face: faceOf, shadowLines: shadowLinesOf(letter), lit: lamp?.lit === lamp?.total, signed: true, movie: Boolean(lamp?.done && letterCards(kami, shelf))})}${ps ? postscriptHtml(ps) : ''}</div>
       <div class="gq-pop-footer">${lamp?.done ? `<div class="gq-night-shadows" aria-label="まれびとの切手">${nightStamps}</div>` : ''}
-      <div class="gq-pop-acts">${lamp?.done ? waxButton({label: '再配達', id: 'gq-return', cls: 'return'}) : ''}${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}${fab({icon: 'album', label: '切手帳', attrs: 'data-act="album"'})}</div></div></div>`;
+      <div class="gq-pop-acts">${lamp?.done ? waxButton({label: '再配達', id: 'gq-return', cls: 'return'}) : ''}${fab({icon: 'close', label: 'とじる', caption: false, attrs: 'data-act="close"'})}</div></div></div>`;
     const close = () => { pop.remove(); if (popEl === pop) popEl = null; };
     pop.onclick = event => {
       if (view.querySelector('.gq-zoom')) return;
@@ -235,10 +234,6 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
 
   function mapNotice(today) {
     if (updateReady) return {text: '新しい版があります　', label: '更新', act: 'update'};
-    const collected = Object.values(progress.words).filter(isRestored).length;
-    if (collected >= 100 && today - progress.exportDay >= EXPORT_REMIND_DAYS) {
-      return {text: '進捗を書き出しておこう　', label: '書き出し', act: 'settings'};
-    }
     return null;
   }
 
@@ -1005,7 +1000,7 @@ export function mountGuild({view, dev = false, setScreen, exit, music = null}) {
         </section>
       </div>
       <div class="gq-dock gq-result-dock">
-        ${returning ? fab({icon: 'next', label: 'つぎの石段へ', attrs: 'id="gq-guild"'}) : mapButton({kind: 'title', label: 'トップへ', id: 'gq-guild'})}
+        ${returning ? fab({icon: 'next', label: 'つぎの石段へ', attrs: 'id="gq-guild"'}) : mapButton({kind: 'road', label: '地図へ', id: 'gq-guild'})}
         ${waxButton({label: primary, id: 'gq-again', cls: !returning && after.fog ? 'fog' : ''})}
         ${mapButton({kind: 'album', label: '切手帳', id: 'gq-album'})}
         ${nextGate && !gateNext ? fab({icon: 'gate', label: `${nextGate.ch}区の門`, cls: 'glow', attrs: 'id="gq-gate"'}) : ''}

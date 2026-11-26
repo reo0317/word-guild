@@ -1,11 +1,10 @@
-// 設定の画面：音、保存の書き出し／読み込み、Safari とホーム画面アプリの違い、クレジットへの入口。
+// 設定の画面：音、読みあげ、新しい単語の数、クレジットへの入口。（App Store 版では記録は端末に残るので、書き出し・読み込みは出さない）
 //
 // openSettings(container, deps) → {close()}
 //
 // deps（すべて省略できる。無い項目は下の既定で補う）：
 //   progress   進捗。無ければ空の進捗。読み込みで置きかえるときは、この物の中身を入れ替える（参照を保つ）
 //   words      語の配列。「集めた語」の数に使う。無ければ 保存の words の数
-//   today      日番号。書き出した日（exportDay）に使う。無ければ srs.mjs の todayNumber()
 //   storage    getItem / setItem を持つ物（localStorage）。無ければ書き出しの日の保存・読み込みを無効にする
 //   dev        真なら保存しない（書き出し・読み込みのボタンを無効）
 //   back()     戻るボタンで呼ぶ。読み込みで置きかえたあとも呼ぶ
@@ -14,9 +13,8 @@
 //   setSound(on)  音の切り替えを呼び出し側で保存するとき。無ければ localStorage に保存して music.setEnabled する
 //   onProgress(progress)  書き出しの日や読み込みで進捗が変わったとき
 // speak などは使わない。クレジットは library.mjs の renderCredits（戻ると設定に戻る）。
-import {STORAGE_KEY, exportText, importText, saveProgress, backupProgress, restoreBackup, hasBackup, emptyProgress} from './store.mjs';
-import {todayNumber} from './srs.mjs';
-import {isStandalone, onUpdateReady, applyUpdate} from './pwa.mjs';
+import {saveProgress, emptyProgress} from './store.mjs';
+import {onUpdateReady, applyUpdate} from './pwa.mjs';
 import {renderCredits} from './library.mjs';
 import {esc, setSpeechEnabled, watchSpeechVoice, waxButton} from './dom.mjs';
 
@@ -56,8 +54,6 @@ export function openSettings(container, deps = {}) {
     soundOn = true;
     try { soundOn = localStorage.getItem(SOUND_KEY) !== 'off'; } catch { /* 読めなくても動く */ }
   }
-  let imported = null;
-  let exported = '';
   let updateReady = false;
   const off = onUpdateReady(() => { if (!closed && container.isConnected) { updateReady = true; paintUpdate(); } });
   let child = null; // クレジットから戻って開き直した設定
@@ -66,9 +62,6 @@ export function openSettings(container, deps = {}) {
 
   const back = () => { handle.close(); deps.back?.(); };
   const $ = selector => container.querySelector(selector);
-  const today = () => deps.today ?? todayNumber();
-  const exportDay = () => !progress.exportDay ? 'まだ書き出していません'
-    : progress.exportDay >= today() ? '今日' : `${today() - progress.exportDay}日前`;
 
   container.className = 'gq gq-settings';
   container.innerHTML = `
@@ -79,28 +72,11 @@ export function openSettings(container, deps = {}) {
       <details><summary>声をもっと自然にするには</summary><p>iPhone の 設定 → アクセシビリティ → 読み上げコンテンツ → 声 → English で、「拡張」や「プレミアム」の声を追加してください。</p></details>
     </section>
     <section><h3>1回の配達で出会う新しい単語</h3><div class="gs-fresh" role="group" aria-label="新しい単語の数">${[[4,'🌱 すくなめ'],[6,'🌿 ふつう'],[8,'🌳 たくさん']].map(([n,label]) => `<button type="button" class="gs-ticket" data-fresh="${n}" aria-pressed="${progress.settings.fresh === n}">${label}</button>`).join('')}</div></section>
-    <details class="gs-help gs-move"><summary>記録の引っ越し</summary>
-      <p class="note">機種を変えるときや、Safari からホーム画面のアプリに移るときに使います。${isStandalone() ? '' : 'ホーム画面に追加すると、記録が消えにくくなります（共有 →「ホーム画面に追加」）。'}</p>
-      <h4>1. 今の端末で</h4>
-      <p class="note">最後に書き出した日：<span id="gs-exday">${esc(exportDay())}</span></p>
-      <textarea id="gs-out" readonly rows="3" aria-label="書き出した文字列" hidden></textarea>
-      <div class="row">${waxButton({label: '書き出す', id: 'gs-export'})}${waxButton({label: 'コピー', id: 'gs-copy'})}</div>
-      <p class="msg" id="gs-exmsg" role="status"></p>
-      <h4>2. 新しい端末で</h4>
-      <textarea id="gs-in" rows="3" placeholder="コピーした文字をここに貼り付け" aria-label="読み込む文字列"></textarea>
-      <div class="row">${waxButton({label: '確かめる', id: 'gs-check'})}</div>
-      <div id="gs-result" role="status"></div>
-      <div class="row">${waxButton({label: '控えに<br>戻す', id: 'gs-restore'})}</div>
-      ${deps.dev ? '<p class="note">保存しないモードです。</p>' : ''}</details>
     <section id="gs-update" hidden><p>新しい版があります。</p><div class="row">${waxButton({label: '更新', id: 'gs-apply'})}</div></section>
     <div class="row gs-footer"><button class="text-button" type="button" id="gs-credits">クレジット</button><button class="text-button" type="button" id="gs-back">トップへ</button></div>`;
 
   const offVoice = watchSpeechVoice(name => { $('#gs-voice').textContent = name ?? '端末の既定音声'; });
 
-  $('#gs-export').disabled = Boolean(deps.dev);
-  $('#gs-copy').disabled = true;
-  $('#gs-check').disabled = !writable;
-  $('#gs-restore').hidden = !(writable && hasBackup(storage));
 
   const paintSound = () => { const b = $('#gs-sound'); if (b) { b.textContent = soundOn ? 'オン' : 'オフ'; b.setAttribute('aria-pressed', soundOn); } };
   function paintUpdate() { const s = $('#gs-update'); if (s) s.hidden = !updateReady; }
@@ -131,73 +107,6 @@ export function openSettings(container, deps = {}) {
     deps.onProgress?.(progress);
     container.querySelectorAll('[data-fresh]').forEach(b => b.setAttribute('aria-pressed', b === button));
   }; });
-  const say = (selector, text, error = false) => { const el = $(selector); if (el) { el.textContent = text; el.className = `msg${error ? ' err' : ''}`; } };
-
-  $('#gs-export').onclick = () => {
-    const out = $('#gs-out');
-    exported = exportText(progress);
-    out.value = exported;
-    out.hidden = false;
-    $('#gs-copy').disabled = false;
-    progress.exportDay = today();
-    if (storage) saveProgress(storage, progress);
-    deps.onProgress?.(progress);
-    $('#gs-exday').textContent = exportDay();
-    say('#gs-exmsg', '書き出しました。コピーして保管してください。');
-  };
-  $('#gs-copy').onclick = async () => {
-    const out = $('#gs-out');
-    try {
-      await navigator.clipboard.writeText(exported);
-      say('#gs-exmsg', 'コピーしました。');
-    } catch {
-      out.focus();
-      out.select();
-      say('#gs-exmsg', '長押しでコピーしてください。', true);
-    }
-  };
-
-  $('#gs-check').onclick = () => {
-    const result = importText($('#gs-in').value);
-    const box = $('#gs-result');
-    imported = null;
-    if (!result.ok) { box.innerHTML = `<p class="msg err">${esc(IMPORT_ERRORS[result.error] ?? IMPORT_ERRORS.data)}</p>`; return; }
-    imported = result.progress;
-    const now = summarize(progress, deps.words);
-    const next = summarize(imported, deps.words);
-    box.innerHTML = `<table class="gq-compare"><tr><th></th><th>いま</th><th>読み込む進捗</th></tr>
-      <tr><th>集めた切手</th><td>${now.stamps}</td><td>${next.stamps}</td></tr>
-      <tr><th>クエスト</th><td>${now.quests}回</td><td>${next.quests}回</td></tr>
-      <tr><th>連続</th><td>${now.streak}日</td><td>${next.streak}日</td></tr></table>
-      
-      <div class="row">${waxButton({label: '置きかえる', id: 'gs-replace'})}</div>`;
-    $('#gs-replace').onclick = () => {
-      // 控えと本保存の両方が成功してから置きかえる。失敗したら何も変えない
-      let hadSaved = false;
-      try { hadSaved = storage.getItem(STORAGE_KEY) != null; } catch { hadSaved = true; }
-      if (hadSaved && !backupProgress(storage)) { failSave('控えを保存できませんでした。進捗は置きかえていません。'); return; }
-      replaceWith(imported);
-    };
-  };
-
-  function failSave(text) {
-    const box = $('#gs-result');
-    if (box) box.innerHTML = `<p class="msg err">${esc(text)}</p>`;
-  }
-
-  function replaceWith(next) {
-    if (!saveProgress(storage, next)) { failSave('保存できませんでした（容量不足など）。進捗は置きかえていません。'); return; }
-    for (const key of Object.keys(progress)) delete progress[key]; // 呼び出し側の参照を保ったまま中身を入れ替える
-    Object.assign(progress, next);
-    deps.onProgress?.(progress);
-    back();
-  }
-  $('#gs-restore').onclick = () => {
-    const restored = restoreBackup(storage);
-    if (!restored.ok) { $('#gs-result').innerHTML = '<p class="msg err">控えがありません。</p>'; return; }
-    replaceWith(restored.progress);
-  };
-
   $('#gs-apply').onclick = () => applyUpdate();
   $('#gs-credits').onclick = () => {
     release(); // 古い設定の更新通知の購読を解除してから移る

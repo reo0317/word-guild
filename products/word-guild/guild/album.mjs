@@ -25,7 +25,6 @@ import {esc, speak as defaultSpeak, starsMarkup, fab, icon, ensureDefs, ensureLe
 import {todayNumber} from './srs.mjs';
 
 const POS = {v: '動詞', n: '名詞', a: '形容詞', o: 'その他'};
-const STATE_NAME = {shadow: '影', proof: '仮刷り', print: '本刷り', gold: '金ぶち'};
 
 // ---------- DOM を使わない部分（tests/guild-album.test.mjs が検査する） ----------
 
@@ -226,7 +225,6 @@ export function showStampZoom(host, {word, spec, state, box = 0, base = BASE, sa
   overlay.setAttribute('aria-modal', 'true');
   overlay.innerHTML = `<div class="gq-zoom-card">
     <div class="gq-zoom-stamp">${stampWithMark(word, spec, state, base, 'lg')}</div>
-    <p class="gq-zoom-state">${STATE_NAME[state]}</p>
     ${met ? `<h2>${esc(word.w)}</h2><p class="gq-zoom-ja">${esc(word.ja)}　<small>${POS[word.pos] ?? ''}</small></p>
       <p class="gq-stars" aria-label="習熟度 ${box}">${starsMarkup(box)}</p>${ex}${lineHtml}`
       : '<h2>？</h2>'}
