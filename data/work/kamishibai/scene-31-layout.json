@@ -14,12 +14,12 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-4",
-     "x": 0.28,
+     "x": 0.39,
      "h": "girl"
     },
     {
      "part": "cpuppet-kiri-4",
-     "x": 0.73,
+     "x": 0.61,
      "h": "adult",
      "flip": true
     }
@@ -31,12 +31,12 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-4",
-     "x": 0.28,
+     "x": 0.39,
      "h": "girl"
     },
     {
      "part": "cpuppet-kiri-4",
-     "x": 0.73,
+     "x": 0.61,
      "h": "adult",
      "flip": true
     }

@@ -13,14 +13,14 @@
    "bg": "cbg-records",
    "who": [
     {
-     "part": "cpuppet-kiri-4",
-     "x": 0.28,
-     "h": "adult"
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.39,
+     "h": "girl"
     },
     {
-     "part": "cpuppet-tsumugi-4",
-     "x": 0.73,
-     "h": "girl",
+     "part": "cpuppet-kiri-4",
+     "x": 0.61,
+     "h": "adult",
      "flip": true
     }
    ],
@@ -30,8 +30,8 @@
    "bg": "cbg-records",
    "who": [
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.32,
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.43,
      "h": "girl"
     }
    ],

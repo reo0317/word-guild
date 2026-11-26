@@ -13,13 +13,13 @@
    "bg": "cbg-office",
    "who": [
     {
-     "part": "cpuppet-tsumugi-4",
-     "x": 0.28,
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.38,
      "h": "girl"
     },
     {
      "part": "cpuppet-hatori-3",
-     "x": 0.73,
+     "x": 0.65,
      "h": "adult",
      "flip": true
     }
@@ -30,15 +30,14 @@
    "bg": "cbg-office",
    "who": [
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.28,
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.66,
      "h": "girl"
     },
     {
-     "part": "cpuppet-hatori-4",
-     "x": 0.73,
-     "h": "adult",
-     "flip": true
+     "part": "cpuppet-hatori-3",
+     "x": 0.42,
+     "h": "adult"
     }
    ],
    "icon": []
@@ -47,14 +46,14 @@
    "bg": "cbg-office",
    "who": [
     {
-     "part": "cpuppet-fuurou-1",
-     "x": 0.28,
-     "h": "owl"
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.54,
+     "h": "girl"
     },
     {
-     "part": "cpuppet-tsumugi-5",
-     "x": 0.73,
-     "h": "girl",
+     "part": "cpuppet-fuurou-1",
+     "x": 0.75,
+     "h": "owl",
      "flip": true
     }
    ],

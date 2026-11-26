@@ -15,7 +15,8 @@
     {
      "part": "cpuppet-tsumugi-5",
      "x": 0.23,
-     "h": "girl"
+     "h": "girl",
+     "flip": true
     },
     {
      "part": "cpuppet-mina-2",
@@ -25,7 +26,7 @@
     },
     {
      "part": "cpuppet-gatekeeper-2",
-     "x": 0.8,
+     "x": 0.77,
      "h": "adult",
      "flip": true
     }
@@ -41,9 +42,16 @@
    "bg": "cbg-market",
    "who": [
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.32,
-     "h": "girl"
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.35,
+     "h": "girl",
+     "flip": true
+    },
+    {
+     "part": "cpuppet-gatekeeper-4",
+     "x": 0.58,
+     "h": "adult",
+     "flip": true
     }
    ],
    "icon": []
@@ -52,9 +60,15 @@
    "bg": "cbg-market",
    "who": [
     {
+     "part": "cpuppet-tsumugi-1",
+     "x": 0.39,
+     "h": "girl"
+    },
+    {
      "part": "cpuppet-gatekeeper-3",
-     "x": 0.32,
-     "h": "adult"
+     "x": 0.63,
+     "h": "adult",
+     "flip": true
     }
    ],
    "icon": []

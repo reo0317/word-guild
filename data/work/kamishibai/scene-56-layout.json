@@ -21,16 +21,16 @@
    "icon": []
   },
   {
-   "bg": "cbg-cape",
+   "bg": "cbg-cape--door-ajar",
    "who": [
     {
      "part": "cpuppet-tsumugi-5",
-     "x": 0.72,
+     "x": 0.64,
      "h": "girl"
     },
     {
-     "part": "cpuppet-blank-3",
-     "x": 0.88,
+     "part": "cpuppet-blank-1",
+     "x": 0.84,
      "h": "adult",
      "flip": true
     }
@@ -38,16 +38,16 @@
    "icon": []
   },
   {
-   "bg": "cbg-cape",
+   "bg": "cbg-cape--door-ajar",
    "who": [
     {
      "part": "cpuppet-tsumugi-5",
-     "x": 0.72,
+     "x": 0.64,
      "h": "girl"
     },
     {
      "part": "cpuppet-blank-4",
-     "x": 0.88,
+     "x": 0.83,
      "h": "adult",
      "flip": true
     }
@@ -58,15 +58,15 @@
    "bg": "cbg-lighthouse",
    "who": [
     {
-     "part": "cpuppet-blank-4",
-     "x": 0.78,
-     "h": "adult",
-     "flip": true
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.47,
+     "h": "girl"
     },
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.48,
-     "h": "girl"
+     "part": "cpuppet-blank-4",
+     "x": 0.76,
+     "h": "adult",
+     "flip": true
     }
    ],
    "icon": []

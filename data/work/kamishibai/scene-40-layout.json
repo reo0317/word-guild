@@ -14,20 +14,18 @@
    "who": [
     {
      "part": "cpuppet-townsperson-2",
-     "x": 0.23,
+     "x": 0.24,
      "h": "adult"
     },
     {
      "part": "cpuppet-sailor-1",
-     "x": 0.52,
-     "h": "adult",
-     "flip": true
+     "x": 0.49,
+     "h": "adult"
     },
     {
      "part": "cpuppet-sailor-2-2",
-     "x": 0.8,
-     "h": "adult",
-     "flip": true
+     "x": 0.68,
+     "h": "adult"
     }
    ],
    "icon": []
@@ -37,14 +35,13 @@
    "who": [
     {
      "part": "cpuppet-sailor-1",
-     "x": 0.28,
+     "x": 0.52,
      "h": "adult"
     },
     {
      "part": "cpuppet-sailor-2-2",
-     "x": 0.73,
-     "h": "adult",
-     "flip": true
+     "x": 0.72,
+     "h": "adult"
     }
    ],
    "icon": []
@@ -54,7 +51,7 @@
    "who": [
     {
      "part": "cpuppet-station-agent-2",
-     "x": 0.23,
+     "x": 0.32,
      "h": "adult"
     },
     {
@@ -65,9 +62,8 @@
     },
     {
      "part": "cpuppet-sailor-1",
-     "x": 0.8,
-     "h": "adult",
-     "flip": true
+     "x": 0.76,
+     "h": "adult"
     }
    ],
    "icon": []

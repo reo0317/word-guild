@@ -25,12 +25,12 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-2",
-     "x": 0.28,
+     "x": 0.3,
      "h": "girl"
     },
     {
      "part": "cpuppet-hatori-2",
-     "x": 0.73,
+     "x": 0.7,
      "h": "adult",
      "flip": true
     }
@@ -42,14 +42,13 @@
    "who": [
     {
      "part": "cpuppet-fuurou-2",
-     "x": 0.28,
+     "x": 0.57,
      "h": "owl"
     },
     {
      "part": "cpuppet-tsumugi-3",
-     "x": 0.73,
-     "h": "girl",
-     "flip": true
+     "x": 0.32,
+     "h": "girl"
     }
    ],
    "icon": []

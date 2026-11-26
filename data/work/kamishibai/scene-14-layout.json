@@ -14,18 +14,24 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-5",
-     "x": 0.23,
+     "x": 0.2,
      "h": "girl"
     },
     {
-     "part": "cpuppet-confectioner-2",
-     "x": 0.52,
+     "part": "cpuppet-confectioner-5",
+     "x": 0.39,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "cpuppet-elder-1",
+     "x": 0.6,
      "h": "adult",
      "flip": true
     },
     {
      "part": "cpuppet-townsperson-1",
-     "x": 0.8,
+     "x": 0.81,
      "h": "adult",
      "flip": true
     }
@@ -36,13 +42,13 @@
    "bg": "cbg-street",
    "who": [
     {
-     "part": "cpuppet-townsperson-1",
-     "x": 0.28,
+     "part": "cpuppet-townsperson-2",
+     "x": 0.36,
      "h": "adult"
     },
     {
-     "part": "cpuppet-elder-2",
-     "x": 0.73,
+     "part": "cpuppet-elder-4",
+     "x": 0.64,
      "h": "adult",
      "flip": true
     }

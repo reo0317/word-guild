@@ -47,8 +47,8 @@
    "bg": "cbg-warehouse",
    "who": [
     {
-     "part": "cpuppet-goro-3",
-     "x": 0.32,
+     "part": "cpuppet-goro-5",
+     "x": 0.28,
      "h": "adult"
     }
    ],
@@ -58,9 +58,10 @@
    "bg": "cbg-warehouse",
    "who": [
     {
-     "part": "cpuppet-goro-4",
-     "x": 0.32,
-     "h": "adult"
+     "part": "cpuppet-goro-1",
+     "x": 0.35,
+     "h": "adult",
+     "flip": true
     }
    ],
    "icon": []

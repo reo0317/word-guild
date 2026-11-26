@@ -47,13 +47,13 @@
    "bg": "cbg-warehouse",
    "who": [
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.28,
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.39,
      "h": "girl"
     },
     {
-     "part": "cpuppet-goro-1",
-     "x": 0.73,
+     "part": "cpuppet-goro-4",
+     "x": 0.61,
      "h": "adult",
      "flip": true
     }
@@ -64,13 +64,13 @@
    "bg": "cbg-warehouse",
    "who": [
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.28,
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.39,
      "h": "girl"
     },
     {
      "part": "cpuppet-goro-4",
-     "x": 0.73,
+     "x": 0.61,
      "h": "adult",
      "flip": true
     }

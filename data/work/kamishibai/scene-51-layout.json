@@ -24,8 +24,8 @@
    "bg": "cbg-lighthouse",
    "who": [
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.32,
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.53,
      "h": "girl"
     }
    ],
@@ -35,15 +35,14 @@
    "bg": "cbg-lighthouse",
    "who": [
     {
-     "part": "cpuppet-fuurou-3",
-     "x": 0.28,
-     "h": "owl"
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.52,
+     "h": "girl"
     },
     {
-     "part": "cpuppet-tsumugi-3",
+     "part": "cpuppet-fuurou-3",
      "x": 0.73,
-     "h": "girl",
-     "flip": true
+     "h": "owl"
     }
    ],
    "icon": []

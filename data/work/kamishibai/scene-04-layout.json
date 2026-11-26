@@ -14,12 +14,12 @@
    "who": [
     {
      "part": "cpuppet-riku-3",
-     "x": 0.28,
+     "x": 0.39,
      "h": "child"
     },
     {
      "part": "cpuppet-tsumugi-5",
-     "x": 0.73,
+     "x": 0.61,
      "h": "girl",
      "flip": true
     }
@@ -44,18 +44,19 @@
    "icon": []
   },
   {
-   "bg": "cbg-dock",
+   "bg": "cbg-dock--bay-fog-break",
    "who": [
     {
      "part": "cpuppet-tsumugi-5",
-     "x": 0.32,
-     "h": "girl"
+     "x": 0.38,
+     "h": "girl",
+     "flip": true
     }
    ],
    "icon": []
   },
   {
-   "bg": "cbg-cape",
+   "bg": "cbg-cape--unlit-tower",
    "who": [],
    "icon": []
   }

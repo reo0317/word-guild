@@ -25,36 +25,36 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-3",
-     "x": 0.32,
-     "h": "girl"
-    }
-   ],
-   "icon": []
-  },
-  {
-   "bg": "cbg-hotel-hall",
-   "who": [
-    {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.32,
-     "h": "girl"
-    }
-   ],
-   "icon": []
-  },
-  {
-   "bg": "cbg-hotel-hall",
-   "who": [
-    {
-     "part": "cpuppet-fuurou-3",
-     "x": 0.28,
-     "h": "owl"
-    },
-    {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.73,
+     "x": 0.42,
      "h": "girl",
      "flip": true
+    }
+   ],
+   "icon": []
+  },
+  {
+   "bg": "cbg-hotel-hall",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.59,
+     "h": "girl"
+    }
+   ],
+   "icon": []
+  },
+  {
+   "bg": "cbg-hotel-hall",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.52,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-fuurou-3",
+     "x": 0.75,
+     "h": "owl"
     }
    ],
    "icon": []

@@ -13,15 +13,15 @@
    "bg": "cbg-street",
    "who": [
     {
-     "part": "cpuppet-tailor-4",
-     "x": 0.28,
-     "h": "adult"
+     "part": "cpuppet-tailor-3",
+     "x": 0.6,
+     "h": "adult",
+     "flip": true
     },
     {
-     "part": "cpuppet-tsumugi-1",
-     "x": 0.73,
-     "h": "girl",
-     "flip": true
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.39,
+     "h": "girl"
     }
    ],
    "icon": []
@@ -48,7 +48,7 @@
    "who": [
     {
      "part": "cpuppet-tailor-4",
-     "x": 0.32,
+     "x": 0.38,
      "h": "adult"
     }
    ],
@@ -59,12 +59,12 @@
    "who": [
     {
      "part": "cpuppet-tailor-4",
-     "x": 0.28,
+     "x": 0.38,
      "h": "adult"
     },
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.73,
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.61,
      "h": "girl",
      "flip": true
     }

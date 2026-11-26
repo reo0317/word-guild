@@ -36,7 +36,7 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-5",
-     "x": 0.32,
+     "x": 0.69,
      "h": "girl"
     }
    ],
@@ -47,8 +47,9 @@
    "who": [
     {
      "part": "cpuppet-fuurou-5",
-     "x": 0.32,
-     "h": "owl"
+     "x": 0.76,
+     "h": "owl",
+     "flip": true
     }
    ],
    "icon": []

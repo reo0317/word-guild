@@ -13,9 +13,10 @@
    "bg": "cbg-warehouse",
    "who": [
     {
-     "part": "cpuppet-tsumugi-4",
-     "x": 0.32,
-     "h": "girl"
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.38,
+     "h": "girl",
+     "flip": true
     }
    ],
    "icon": []
@@ -24,9 +25,10 @@
    "bg": "cbg-warehouse",
    "who": [
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.32,
-     "h": "girl"
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.38,
+     "h": "girl",
+     "flip": true
     }
    ],
    "icon": []
@@ -36,8 +38,9 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-5",
-     "x": 0.32,
-     "h": "girl"
+     "x": 0.35,
+     "h": "girl",
+     "flip": true
     }
    ],
    "icon": []

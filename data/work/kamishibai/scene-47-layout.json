@@ -10,7 +10,7 @@
  },
  "cards": [
   {
-   "bg": "cbg-cape",
+   "bg": "cbg-cape--path-through-fog",
    "who": [
     {
      "part": "cpuppet-tsumugi-3",
@@ -21,23 +21,23 @@
    "icon": []
   },
   {
-   "bg": "cbg-cape",
+   "bg": "cbg-cape--path-through-fog",
    "who": [
-    {
-     "part": "cpuppet-tsumugi-2",
-     "x": 0.38,
-     "h": "girl"
-    },
     {
      "part": "cpuppet-fuurou-5",
-     "x": 0.43,
+     "x": 0.28,
      "h": "owl"
+    },
+    {
+     "part": "cpuppet-tsumugi-2",
+     "x": 0.48,
+     "h": "girl"
     }
    ],
    "icon": []
   },
   {
-   "bg": "cbg-cape",
+   "bg": "cbg-cape--path-through-fog",
    "who": [
     {
      "part": "cpuppet-tsumugi-3",
@@ -48,11 +48,11 @@
    "icon": []
   },
   {
-   "bg": "cbg-cape",
+   "bg": "cbg-cape--path-through-fog",
    "who": [
     {
      "part": "cpuppet-tsumugi-6",
-     "x": 0.47,
+     "x": 0.42,
      "h": "girl"
     }
    ],

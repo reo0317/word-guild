@@ -13,14 +13,15 @@
    "bg": "cbg-square",
    "who": [
     {
-     "part": "cpuppet-tobe-4",
-     "x": 0.28,
-     "h": "adult"
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.22,
+     "h": "girl",
+     "flip": true
     },
     {
-     "part": "cpuppet-tsumugi-5",
-     "x": 0.73,
-     "h": "girl",
+     "part": "cpuppet-tobe-4",
+     "x": 0.42,
+     "h": "adult",
      "flip": true
     }
    ],
@@ -55,7 +56,7 @@
    "icon": []
   },
   {
-   "bg": "cbg-cape",
+   "bg": "cbg-cape--path-through-fog",
    "who": [],
    "icon": []
   }

@@ -35,15 +35,15 @@
    "bg": "cbg-hotel",
    "who": [
     {
-     "part": "cpuppet-sora-1",
-     "x": 0.32,
+     "part": "cpuppet-sora-6",
+     "x": 0.53,
      "h": "adult"
     }
    ],
    "icon": []
   },
   {
-   "bg": "cbg-cape",
+   "bg": "cbg-cape--lantern-glimmer",
    "who": [],
    "icon": []
   }

@@ -14,12 +14,12 @@
    "who": [
     {
      "part": "cpuppet-hatori-1",
-     "x": 0.28,
+     "x": 0.39,
      "h": "adult"
     },
     {
      "part": "cpuppet-tsumugi-4",
-     "x": 0.73,
+     "x": 0.61,
      "h": "girl",
      "flip": true
     }
@@ -47,15 +47,14 @@
    "bg": "cbg-office",
    "who": [
     {
-     "part": "cpuppet-hatori-6",
-     "x": 0.28,
-     "h": "adult"
+     "part": "cpuppet-fuurou-4",
+     "x": 0.54,
+     "h": "owl"
     },
     {
-     "part": "cpuppet-fuurou-4",
-     "x": 0.73,
-     "h": "owl",
-     "flip": true
+     "part": "cpuppet-hatori-6",
+     "x": 0.74,
+     "h": "adult"
     }
    ],
    "icon": []
@@ -65,20 +64,18 @@
    "who": [
     {
      "part": "cpuppet-hatori-1",
-     "x": 0.23,
+     "x": 0.29,
      "h": "adult"
     },
     {
-     "part": "cpuppet-tsumugi-3",
+     "part": "cpuppet-tsumugi-4",
      "x": 0.52,
-     "h": "girl",
-     "flip": true
+     "h": "girl"
     },
     {
      "part": "cpuppet-fuurou-4",
-     "x": 0.8,
-     "h": "owl",
-     "flip": true
+     "x": 0.73,
+     "h": "owl"
     }
    ],
    "icon": []

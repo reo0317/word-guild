@@ -100,6 +100,8 @@ def build(nn, face):
             continue
         cols = [c.strip() for c in line.strip().strip('|').split('|')]
         bg, who_txt, icon_txt = cols[2], cols[3], cols[4]
+        if '--' in bg and not (CUT.parent / f'{bg}.png').exists():
+            bg = bg.split('--')[0]  # 変化をつけた背景がまだ無ければ元の背景で組む
         who = []
         for w in who_txt.split('<br>'):
             m = re.match(r'(c?puppet-[a-z0-9-]+-\d)、(右|左|奥|正面)向き、x=([0-9.]+)$', w.strip())
@@ -122,7 +124,7 @@ def ready(nn):
     md = board(nn)
     parts = re.findall(r'c?(?:puppet|icons)-[0-9a-z-]+-\d+', md)
     bgs = re.findall(r'\| (c?bg-[a-z0-9-]+) \|', md)
-    return all((CUT / f'{p}.png').exists() for p in parts) and all((CUT.parent / f'{b}.png').exists() for b in bgs)
+    return all((CUT / f'{p}.png').exists() for p in parts) and all((CUT.parent / f"{b.split('--')[0]}.png").exists() for b in bgs)
 
 
 def main(args):

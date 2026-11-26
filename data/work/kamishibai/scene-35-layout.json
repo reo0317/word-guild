@@ -13,8 +13,8 @@
    "bg": "cbg-hill",
    "who": [
     {
-     "part": "cpuppet-tsumugi-5",
-     "x": 0.32,
+     "part": "cpuppet-tsumugi-2",
+     "x": 0.36,
      "h": "girl"
     }
    ],
@@ -53,7 +53,7 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-5",
-     "x": 0.32,
+     "x": 0.67,
      "h": "girl"
     }
    ],
@@ -64,7 +64,7 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-5",
-     "x": 0.32,
+     "x": 0.66,
      "h": "girl"
     }
    ],

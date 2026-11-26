@@ -35,15 +35,15 @@
    "bg": "cbg-books",
    "who": [
     {
-     "part": "cpuppet-aoi-2",
-     "x": 0.72,
-     "h": "adult",
-     "flip": true
+     "part": "cpuppet-tsumugi-5",
+     "x": 0.39,
+     "h": "girl"
     },
     {
-     "part": "cpuppet-tsumugi-5",
-     "x": 0.28,
-     "h": "girl"
+     "part": "cpuppet-aoi-2",
+     "x": 0.59,
+     "h": "adult",
+     "flip": true
     }
    ],
    "icon": []

@@ -14,23 +14,24 @@
    "who": [
     {
      "part": "cpuppet-sora-4",
-     "x": 0.15,
-     "h": "adult"
+     "x": 0.2,
+     "h": "adult",
+     "flip": true
     },
     {
      "part": "cpuppet-hotel-staff-4",
-     "x": 0.38,
+     "x": 0.4,
      "h": "adult"
     },
     {
      "part": "cpuppet-hotel-staff-2-4",
-     "x": 0.62,
+     "x": 0.6,
      "h": "adult",
      "flip": true
     },
     {
      "part": "cpuppet-tsumugi-5",
-     "x": 0.85,
+     "x": 0.8,
      "h": "girl",
      "flip": true
     }
@@ -75,8 +76,8 @@
    "bg": "cbg-hotel",
    "who": [
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.32,
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.4,
      "h": "girl"
     }
    ],

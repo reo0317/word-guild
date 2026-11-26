@@ -14,7 +14,7 @@
    "who": [
     {
      "part": "cpuppet-aoi-6",
-     "x": 0.32,
+     "x": 0.67,
      "h": "adult"
     }
    ],
@@ -24,13 +24,13 @@
    "bg": "cbg-books",
    "who": [
     {
-     "part": "cpuppet-aoi-2",
-     "x": 0.28,
+     "part": "cpuppet-aoi-5",
+     "x": 0.36,
      "h": "adult"
     },
     {
      "part": "cpuppet-tsumugi-1",
-     "x": 0.73,
+     "x": 0.66,
      "h": "girl",
      "flip": true
     }
@@ -42,14 +42,13 @@
    "who": [
     {
      "part": "cpuppet-aoi-6",
-     "x": 0.28,
+     "x": 0.7,
      "h": "adult"
     },
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.73,
-     "h": "girl",
-     "flip": true
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.43,
+     "h": "girl"
     }
    ],
    "icon": []
@@ -59,12 +58,12 @@
    "who": [
     {
      "part": "cpuppet-aoi-4",
-     "x": 0.28,
+     "x": 0.4,
      "h": "adult"
     },
     {
      "part": "cpuppet-tsumugi-4",
-     "x": 0.73,
+     "x": 0.61,
      "h": "girl",
      "flip": true
     }

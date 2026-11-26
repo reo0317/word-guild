@@ -13,19 +13,19 @@
    "bg": "cbg-office",
    "who": [
     {
-     "part": "cpuppet-florist-2",
-     "x": 0.2,
+     "part": "cpuppet-florist-6",
+     "x": 0.23,
      "h": "adult"
     },
     {
-     "part": "cpuppet-confectioner-2",
-     "x": 0.8,
+     "part": "cpuppet-hatori-1",
+     "x": 0.51,
      "h": "adult",
      "flip": true
     },
     {
-     "part": "cpuppet-hatori-1",
-     "x": 0.53,
+     "part": "cpuppet-confectioner-2",
+     "x": 0.77,
      "h": "adult",
      "flip": true
     }

@@ -14,13 +14,30 @@
    "who": [
     {
      "part": "cpuppet-mina-4",
-     "x": 0.28,
-     "h": "adult"
+     "x": 0.62,
+     "h": "adult",
+     "flip": true
     },
     {
      "part": "cpuppet-tsumugi-4",
-     "x": 0.73,
-     "h": "girl",
+     "x": 0.38,
+     "h": "girl"
+    }
+   ],
+   "icon": []
+  },
+  {
+   "bg": "cbg-bakery",
+   "who": [
+    {
+     "part": "cpuppet-tsumugi-1",
+     "x": 0.38,
+     "h": "girl"
+    },
+    {
+     "part": "cpuppet-mina-5",
+     "x": 0.62,
+     "h": "adult",
      "flip": true
     }
    ],
@@ -30,19 +47,8 @@
    "bg": "cbg-bakery",
    "who": [
     {
-     "part": "cpuppet-mina-5",
-     "x": 0.32,
-     "h": "adult"
-    }
-   ],
-   "icon": []
-  },
-  {
-   "bg": "cbg-bakery",
-   "who": [
-    {
      "part": "cpuppet-mina-6",
-     "x": 0.32,
+     "x": 0.74,
      "h": "adult"
     }
    ],

@@ -14,18 +14,19 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-5",
-     "x": 0.23,
-     "h": "girl"
+     "x": 0.27,
+     "h": "girl",
+     "flip": true
     },
     {
-     "part": "cpuppet-elder-1",
-     "x": 0.52,
+     "part": "cpuppet-elder-2",
+     "x": 0.51,
      "h": "adult",
      "flip": true
     },
     {
      "part": "cpuppet-townsperson-1",
-     "x": 0.8,
+     "x": 0.74,
      "h": "adult",
      "flip": true
     }
@@ -53,12 +54,12 @@
    "bg": "cbg-town",
    "who": [
     {
-     "part": "cpuppet-blank-2",
-     "x": 0.28,
+     "part": "cpuppet-elder-2",
+     "x": 0.53,
      "h": "adult"
     },
     {
-     "part": "cpuppet-elder-1",
+     "part": "cpuppet-blank-2",
      "x": 0.73,
      "h": "adult",
      "flip": true
@@ -71,12 +72,12 @@
    "who": [
     {
      "part": "cpuppet-fuurou-2",
-     "x": 0.28,
+     "x": 0.51,
      "h": "owl"
     },
     {
      "part": "cpuppet-blank-2",
-     "x": 0.73,
+     "x": 0.74,
      "h": "adult",
      "flip": true
     }

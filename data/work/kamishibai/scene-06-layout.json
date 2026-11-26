@@ -14,14 +14,13 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-4",
-     "x": 0.28,
+     "x": 0.55,
      "h": "girl"
     },
     {
      "part": "cpuppet-fuurou-3",
-     "x": 0.73,
-     "h": "owl",
-     "flip": true
+     "x": 0.78,
+     "h": "owl"
     }
    ],
    "icon": []
@@ -31,12 +30,12 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-5",
-     "x": 0.28,
+     "x": 0.54,
      "h": "girl"
     },
     {
      "part": "cpuppet-fuurou-1",
-     "x": 0.73,
+     "x": 0.75,
      "h": "owl",
      "flip": true
     }

@@ -10,7 +10,7 @@
  },
  "cards": [
   {
-   "bg": "cbg-hall",
+   "bg": "cbg-hall--ceramic-lamp-bright",
    "who": [
     {
      "part": "cpuppet-tsumugi-4",
@@ -48,18 +48,17 @@
    "who": [
     {
      "part": "cpuppet-sailor-4",
-     "x": 0.23,
+     "x": 0.34,
      "h": "adult"
     },
     {
      "part": "cpuppet-sailor-2-4",
-     "x": 0.52,
-     "h": "adult",
-     "flip": true
+     "x": 0.54,
+     "h": "adult"
     },
     {
      "part": "cpuppet-kiri-4",
-     "x": 0.8,
+     "x": 0.75,
      "h": "adult",
      "flip": true
     }
@@ -70,15 +69,14 @@
    "bg": "cbg-hall",
    "who": [
     {
-     "part": "cpuppet-blank-5",
-     "x": 0.28,
-     "h": "adult"
+     "part": "cpuppet-tsumugi-3",
+     "x": 0.48,
+     "h": "girl"
     },
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.73,
-     "h": "girl",
-     "flip": true
+     "part": "cpuppet-blank-5",
+     "x": 0.79,
+     "h": "adult"
     }
    ],
    "icon": []

@@ -53,14 +53,16 @@
    "bg": "cbg-town",
    "who": [
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.39,
-     "h": "girl"
+     "part": "cpuppet-fuurou-6",
+     "x": 0.3,
+     "h": "owl",
+     "flip": true
     },
     {
-     "part": "cpuppet-fuurou-6",
-     "x": 0.45,
-     "h": "owl"
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.49,
+     "h": "girl",
+     "flip": true
     }
    ],
    "icon": []
@@ -69,8 +71,8 @@
    "bg": "cbg-town",
    "who": [
     {
-     "part": "cpuppet-tsumugi-3",
-     "x": 0.32,
+     "part": "cpuppet-tsumugi-4",
+     "x": 0.65,
      "h": "girl"
     }
    ],

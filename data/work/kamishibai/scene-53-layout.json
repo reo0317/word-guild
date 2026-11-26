@@ -14,18 +14,18 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-2",
-     "x": 0.23,
+     "x": 0.25,
      "h": "girl"
     },
     {
      "part": "cpuppet-townsperson-1",
-     "x": 0.52,
+     "x": 0.53,
      "h": "adult",
      "flip": true
     },
     {
      "part": "cpuppet-elder-1",
-     "x": 0.8,
+     "x": 0.78,
      "h": "adult",
      "flip": true
     }
@@ -36,24 +36,24 @@
    "bg": "cbg-hill",
    "who": [
     {
-     "part": "cpuppet-mina-3",
-     "x": 0.15,
+     "part": "cpuppet-mina-1",
+     "x": 0.17,
      "h": "adult"
     },
     {
-     "part": "cpuppet-aoi-2",
-     "x": 0.38,
+     "part": "cpuppet-aoi-1",
+     "x": 0.39,
      "h": "adult"
     },
     {
-     "part": "cpuppet-goro-4",
-     "x": 0.62,
+     "part": "cpuppet-goro-1",
+     "x": 0.61,
      "h": "adult",
      "flip": true
     },
     {
      "part": "cpuppet-riku-6",
-     "x": 0.85,
+     "x": 0.83,
      "h": "child",
      "flip": true
     }
@@ -65,28 +65,30 @@
    "who": [
     {
      "part": "cpuppet-mina-2",
-     "x": 0.12,
+     "x": 0.14,
      "h": "adult"
     },
     {
      "part": "cpuppet-tsumugi-1",
-     "x": 0.31,
-     "h": "girl"
+     "x": 0.32,
+     "h": "girl",
+     "flip": true
     },
     {
      "part": "cpuppet-aoi-1",
      "x": 0.5,
-     "h": "adult"
-    },
-    {
-     "part": "cpuppet-goro-1",
-     "x": 0.69,
      "h": "adult",
      "flip": true
     },
     {
-     "part": "cpuppet-riku-1",
-     "x": 0.88,
+     "part": "cpuppet-goro-1",
+     "x": 0.68,
+     "h": "adult",
+     "flip": true
+    },
+    {
+     "part": "cpuppet-riku-6",
+     "x": 0.86,
      "h": "child",
      "flip": true
     }

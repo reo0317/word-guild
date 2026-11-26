@@ -14,18 +14,17 @@
    "who": [
     {
      "part": "cpuppet-tsumugi-4",
-     "x": 0.23,
+     "x": 0.28,
      "h": "girl"
     },
     {
      "part": "cpuppet-townsperson-2",
-     "x": 0.52,
-     "h": "adult",
-     "flip": true
+     "x": 0.53,
+     "h": "adult"
     },
     {
      "part": "cpuppet-elder-1",
-     "x": 0.8,
+     "x": 0.77,
      "h": "adult",
      "flip": true
     }
