@@ -16,9 +16,28 @@ function readRows(filename) {
 
 const library = readRows('library.md');
 const backgrounds = new Set(library.filter(([id]) => /^cbg-/.test(id)).map(([id]) => id));
+const [variantHeader, ...variantRows] = readRows('variants.md');
+const variantBackgrounds = new Set(variantRows.map(([id]) => id));
 const puppets = new Map(library.filter(([id]) => /^cpuppet-/.test(id)).map(
   ([id, , ...poses]) => [id, poses],
 ));
+
+test('カラー紙芝居の背景差分は既存の背景を元にする', () => {
+  assert.deepEqual(variantHeader, [
+    'id', '元の背景', '変えること（英語で、画像編集の指示として具体的に）', '使うカード',
+  ]);
+  const ids = new Set();
+  for (const row of variantRows) {
+    assert.equal(row.length, 4);
+    const [id, base, instruction, cards] = row;
+    assert.ok(backgrounds.has(base), `${id}の未定義の元背景 ${base}`);
+    assert.ok(id.startsWith(`${base}--`), `${id}の元背景と接頭辞`);
+    assert.match(id.slice(base.length + 2), /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+    assert.ok(!ids.has(id) && !backgrounds.has(id), `背景IDが重複 ${id}`);
+    assert.ok(instruction && cards, `${id}の編集指示と使用カード`);
+    ids.add(id);
+  }
+});
 
 for (const { shelf, title, lines } of scenes) {
   const nn = String(shelf).padStart(2, '0');
@@ -40,17 +59,29 @@ for (const { shelf, title, lines } of scenes) {
       assert.equal(cells.length, 6, label);
       const [number, , background, people, icon, description] = cells;
       assert.equal(number, String(index + 1), label);
-      assert.ok(backgrounds.has(background), `${label}の未定義背景 ${background}`);
+      assert.ok(
+        backgrounds.has(background) || variantBackgrounds.has(background),
+        `${label}の未定義背景 ${background}`,
+      );
       assert.ok(description, `${label}の絵の説明`);
 
       if (people !== 'なし') {
+        const positions = [];
         for (const person of people.split('<br>')) {
-          const match = /^(cpuppet-[a-z0-9-]+)-([1-6])、(?:右|左|奥)向き、x=(?:0\.\d{2}|1\.00)$/.exec(person);
+          const match = /^(cpuppet-[a-z0-9-]+)-([1-6])、(?:右|左|奥)向き、x=(0\.\d{2}|1\.00)$/.exec(person);
           assert.ok(match, `${label}の人物指定 ${person}`);
-          const [, id, pose] = match;
+          const [, id, pose, x] = match;
           const poses = puppets.get(id);
           assert.equal(poses?.length, 6, `${label}の人物シート ${id}`);
           assert.match(poses[Number(pose) - 1], /^(?:右|左|奥)／.+$/);
+          // Compare hundredths so exactly 0.16 is accepted without rounding error.
+          const position = Number(x.replace('.', ''));
+          assert.ok(position >= 8 && position <= 92, `${label}の人物位置 ${x} は0.08〜0.92`);
+          positions.push(position);
+        }
+        positions.sort((a, b) => a - b);
+        for (let i = 1; i < positions.length; i++) {
+          assert.ok(positions[i] - positions[i - 1] >= 16, `${label}の人物間隔は0.16以上`);
         }
       }
 
