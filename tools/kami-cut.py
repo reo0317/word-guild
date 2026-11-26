@@ -103,6 +103,67 @@ def clean(piece, inside=0.01):
     return piece.crop(piece.getchannel('A').getbbox())
 
 
+def label(a, step=2):
+    """a（真偽の配列）を step 分の1に縮めて、つながった塊ごとに番号を振る。(番号の配列, 各塊の画素数, 外接矩形)"""
+    small = a[::step, ::step]
+    h, w = small.shape
+    lab = np.zeros(small.shape, np.int32)
+    sizes, boxes = [0], [None]
+    for y, x in zip(*np.nonzero(small)):
+        if lab[y, x]:
+            continue
+        n = len(sizes)
+        lab[y, x] = n
+        stack, count, box = [(y, x)], 0, [x, y, x, y]
+        while stack:
+            cy, cx = stack.pop()
+            count += 1
+            box = [min(box[0], cx), min(box[1], cy), max(box[2], cx), max(box[3], cy)]
+            for ny, nx in ((cy + 1, cx), (cy - 1, cx), (cy, cx + 1), (cy, cx - 1)):
+                if 0 <= ny < h and 0 <= nx < w and small[ny, nx] and not lab[ny, nx]:
+                    lab[ny, nx] = n
+                    stack.append((ny, nx))
+        sizes.append(count)
+        boxes.append(box)
+    return lab, sizes, boxes
+
+
+def figures(im, count):
+    """人物シート：人物ごとの塊で切り分ける（手が隣の人物の上に伸びていても切れない）。
+    大きい塊 count 個を人物とし、離れた小物（手に持つ紙など）はいちばん近い人物に付ける。
+    人物同士がくっついていて count 個に分かれないときは None。"""
+    step = 2
+    a = np.asarray(im.getchannel('A')) > 40
+    lab, sizes, boxes = label(a, step)
+    order = sorted(range(1, len(sizes)), key=lambda n: -sizes[n])
+    main = order[:count]
+    if len(main) < count or sizes[main[-1]] < sizes[main[0]] * 0.08:
+        return None
+    main.sort(key=lambda n: (boxes[n][0] + boxes[n][2]) / 2)
+    owner = np.zeros(len(sizes), np.int32)
+    for i, n in enumerate(main):
+        owner[n] = i + 1
+    for n in order[count:]:
+        bx = boxes[n]
+        def gap(m):
+            b = boxes[m]
+            dx = max(b[0] - bx[2], bx[0] - b[2], 0)
+            dy = max(b[1] - bx[3], bx[1] - b[3], 0)
+            return dx * dx + dy * dy
+        owner[n] = main.index(min(main, key=gap)) + 1
+    who = owner[lab].repeat(step, 0).repeat(step, 1)
+    full = np.zeros(a.shape, np.int32)
+    full[:who.shape[0], :who.shape[1]] = who[:a.shape[0], :a.shape[1]]
+    pieces = []
+    alpha = np.asarray(im.getchannel('A'))
+    for i in range(1, count + 1):
+        m = Image.fromarray(((full == i) * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(5))
+        piece = im.copy()
+        piece.putalpha(Image.fromarray(np.minimum(alpha, np.asarray(m))))
+        pieces.append(piece.crop(piece.getchannel('A').getbbox()))
+    return pieces
+
+
 def cut_line(alpha, at, span, axis, lo, hi):
     """at の前後 span の範囲で、絵（不透明の画素）がいちばん少ない線の位置を返す。"""
     a = np.asarray(alpha) > 40
@@ -184,6 +245,13 @@ def main():
         for old in OUT.glob(f'{sheet.stem}-*.png'):
             if old.stem.rsplit('-', 1)[1].isdigit() and old.stem.rsplit('-', 1)[0] == sheet.stem:
                 old.unlink()
+        split = figures(im, cols) if rows == 1 and sheet.stem.startswith('cpuppet-') else None
+        if split:
+            for n, piece in enumerate(split, 1):
+                path = OUT / f'{sheet.stem}-{n}.png'
+                piece.save(path)
+                print(path.relative_to(ROOT), piece.size)
+            continue
         for n, box in enumerate(grid(alpha, cols, rows), 1):
             piece = im.crop(box)
             bbox = piece.getchannel('A').point(lambda v: 255 if v > 20 else 0).getbbox()
