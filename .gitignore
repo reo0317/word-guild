@@ -6,3 +6,4 @@ lab/story/story-preview.json
 # 影絵カードの作業用PNG（tools/kami-compose.py で部品から作り直せる）
 products/word-guild/art/work/kami/letter-[0-9][0-9]/
 !products/word-guild/art/work/kami/letter-01/
+products/word-guild/art/work/kami/scene-[0-9][0-9]/
