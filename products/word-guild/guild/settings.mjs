@@ -73,7 +73,7 @@ export function openSettings(container, deps = {}) {
     </section>
     <section><h3>1回の配達で出会う新しい単語</h3><div class="gs-fresh" role="group" aria-label="新しい単語の数">${[[4,'🌱 すくなめ'],[6,'🌿 ふつう'],[8,'🌳 たくさん']].map(([n,label]) => `<button type="button" class="gs-ticket" data-fresh="${n}" aria-pressed="${progress.settings.fresh === n}">${label}</button>`).join('')}</div></section>
     <section id="gs-update" hidden><p>新しい版があります。</p><div class="row">${waxButton({label: '更新', id: 'gs-apply'})}</div></section>
-    <div class="row gs-footer"><button class="text-button" type="button" id="gs-credits">クレジット</button><button class="text-button" type="button" id="gs-back">トップへ</button></div>`;
+    <div class="row gs-footer"><button class="text-button" type="button" id="gs-credits">クレジット</button><button class="text-button" type="button" id="gs-back">地図へ</button></div>`;
 
   const offVoice = watchSpeechVoice(name => { $('#gs-voice').textContent = name ?? '端末の既定音声'; });
 

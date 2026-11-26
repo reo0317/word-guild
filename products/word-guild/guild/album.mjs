@@ -304,7 +304,7 @@ export function openAlbum(container, deps = {}) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'text-button';
-    button.textContent = '← トップへ';
+    button.textContent = '← 地図へ';
     button.onclick = () => deps.back();
     container.append(button);
   }
@@ -331,7 +331,7 @@ export function openAlbum(container, deps = {}) {
     let view = 'page'; // 'page' | 'index' | 'night' | 'stamps'
 
 
-    const backButton = deps.back ? '<button class="text-button gq-album-back" data-act="back" type="button">← トップへ</button>' : '';
+    const backButton = deps.back ? '<button class="text-button gq-album-back" data-act="back" type="button">← 地図へ</button>' : '';
 
     function renderPage() {
       view = 'page';
