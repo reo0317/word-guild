@@ -20,6 +20,18 @@ function unlockSound() {
   music.resume();
 }
 
+// タイトルの丸いスイッチ：絵（音符・スピーカー）と小さな文字。切ると絵に斜線が入る。
+const SWITCH = {
+  sound: {name: '曲と効果音', path: 'M9 17.5V5.5l10-2v12M9 17.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM19 15.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z'},
+  speech: {name: '読みあげ', path: 'M4 9v6h4l5 4V5L8 9zM16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12'},
+};
+function paintSwitch(button, kind, on) {
+  const {name, path} = SWITCH[kind];
+  button.setAttribute('aria-pressed', on);
+  button.setAttribute('aria-label', `${name} ${on ? 'オン' : 'オフ'}`);
+  button.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${path}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>${on ? '' : '<path d="M3 3l18 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>'}</svg><small>${on ? 'オン' : 'オフ'}</small>`;
+}
+
 function title() {
   try { soundOn = localStorage.getItem(SOUND_KEY) !== 'off'; } catch {}
   const returning = guild.hasProgress();
@@ -33,14 +45,13 @@ function title() {
       <button class="text-button" id="kp-sound" type="button" aria-pressed="${soundOn}"></button>
     </div>`;
 
-  view.querySelector('#kp-sound').insertAdjacentHTML('afterend', `<button type="button" class="kp-switch" id="kp-speech" aria-pressed="${guild.speechEnabled()}">読みあげ ${guild.speechEnabled() ? 'オン' : 'オフ'}</button>`);
-  view.querySelector('#kp-speech').onclick = event => {
-    guild.setSpeech(!guild.speechEnabled());
-    event.currentTarget.textContent = `読みあげ ${guild.speechEnabled() ? 'オン' : 'オフ'}`;
-    event.currentTarget.setAttribute('aria-pressed', guild.speechEnabled());
-  };
+  view.querySelector('#kp-sound').insertAdjacentHTML('afterend', `<button type="button" class="kp-switch" id="kp-speech"></button>`);
+  const speech = view.querySelector('#kp-speech');
+  const paintSpeech = () => paintSwitch(speech, 'speech', guild.speechEnabled());
+  paintSpeech();
+  speech.onclick = () => { guild.setSpeech(!guild.speechEnabled()); paintSpeech(); };
   const sound = view.querySelector('#kp-sound');
-  const paintSound = () => { sound.textContent = soundOn ? '曲と効果音 オン' : '曲と効果音 オフ'; sound.setAttribute('aria-pressed', soundOn); };
+  const paintSound = () => paintSwitch(sound, 'sound', soundOn);
   paintSound();
   sound.onclick = () => {
     soundOn = !soundOn;

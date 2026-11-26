@@ -75,23 +75,22 @@ export function openSettings(container, deps = {}) {
     <p class="eyebrow">設定</p>
     <section><div class="gq-switch"><h3>曲と効果音</h3><button type="button" class="gs-toggle" aria-label="曲と効果音" id="gs-sound" aria-pressed="${soundOn}"></button></div></section>
     <section class="gs-speech"><div class="gq-switch"><h3>読みあげ</h3><button type="button" class="gs-toggle" aria-label="読みあげ" id="gs-speech" aria-pressed="${progress.settings.speech !== false}">${progress.settings.speech !== false ? 'オン' : 'オフ'}</button></div>
-      <p class="note" id="gs-voice"></p>
-      <details><summary>iPhoneで声を追加</summary><p>設定 → アクセシビリティ → 読み上げコンテンツ → 声 → English で Enhanced／Premium の声を追加すると、より自然に聞こえます。</p></details>
+      <p class="note" id="gs-voice" hidden></p>
+      <details><summary>声をもっと自然にするには</summary><p>iPhone の 設定 → アクセシビリティ → 読み上げコンテンツ → 声 → English で、「拡張」や「プレミアム」の声を追加してください。</p></details>
     </section>
-    <section><h3>新出語数</h3><div class="gs-fresh" role="group" aria-label="新出語数">${[[4,'🌱 すくなめ'],[6,'🌿 ふつう'],[8,'🌳 たくさん']].map(([n,label]) => `<button type="button" class="gs-ticket" data-fresh="${n}" aria-pressed="${progress.settings.fresh === n}">${label}</button>`).join('')}</div></section>
-    <section><h3>保存の書き出し</h3>
+    <section><h3>1回の配達で出会う新しい単語</h3><div class="gs-fresh" role="group" aria-label="新しい単語の数">${[[4,'🌱 すくなめ'],[6,'🌿 ふつう'],[8,'🌳 たくさん']].map(([n,label]) => `<button type="button" class="gs-ticket" data-fresh="${n}" aria-pressed="${progress.settings.fresh === n}">${label}</button>`).join('')}</div></section>
+    <details class="gs-help gs-move"><summary>記録の引っ越し</summary>
+      <p class="note">機種を変えるときや、Safari からホーム画面のアプリに移るときに使います。${isStandalone() ? '' : 'ホーム画面に追加すると、記録が消えにくくなります（共有 →「ホーム画面に追加」）。'}</p>
+      <h4>1. 今の端末で</h4>
       <p class="note">最後に書き出した日：<span id="gs-exday">${esc(exportDay())}</span></p>
       <textarea id="gs-out" readonly rows="3" aria-label="書き出した文字列" hidden></textarea>
       <div class="row">${waxButton({label: '書き出す', id: 'gs-export'})}${waxButton({label: 'コピー', id: 'gs-copy'})}</div>
-      <p class="msg" id="gs-exmsg" role="status"></p></section>
-    <section><h3>保存の読み込み</h3>
-      <textarea id="gs-in" rows="3" placeholder="書き出した文字列を貼り付け" aria-label="読み込む文字列"></textarea>
+      <p class="msg" id="gs-exmsg" role="status"></p>
+      <h4>2. 新しい端末で</h4>
+      <textarea id="gs-in" rows="3" placeholder="コピーした文字をここに貼り付け" aria-label="読み込む文字列"></textarea>
       <div class="row">${waxButton({label: '確かめる', id: 'gs-check'})}</div>
       <div id="gs-result" role="status"></div>
-      <div class="row">${waxButton({label: '控えに<br>戻す', id: 'gs-restore'})}</div></section>
-    <details class="gs-help"><summary>Safari とホーム画面アプリ</summary>
-      <p>進捗は別々です。「書き出す」→ アプリで読み込み。</p>
-      ${isStandalone() ? '' : '<p>追加は共有 →「ホーム画面に追加」。Safari では長く開かないと保存が消える場合があります。</p>'}
+      <div class="row">${waxButton({label: '控えに<br>戻す', id: 'gs-restore'})}</div>
       ${deps.dev ? '<p class="note">保存しないモードです。</p>' : ''}</details>
     <section id="gs-update" hidden><p>新しい版があります。</p><div class="row">${waxButton({label: '更新', id: 'gs-apply'})}</div></section>
     <div class="row gs-footer"><button class="text-button" type="button" id="gs-credits">クレジット</button><button class="text-button" type="button" id="gs-back">トップへ</button></div>`;

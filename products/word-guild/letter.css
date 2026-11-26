@@ -5,10 +5,11 @@
 .paper.k-news{background:#efe7d3}
 .paper.k-ledger{background-image:repeating-linear-gradient(transparent 0 27px,#9fb3bf33 27px 28px)}
 .paper.k-diary,.paper.k-letter{background-image:linear-gradient(90deg,#c8462f22 0 2px,transparent 2px);background-position:22px 0;background-repeat:no-repeat}
-.paper .ph{display:flex;align-items:center;gap:6px;min-height:30px;padding:0 38px 6px 0;margin-bottom:4px;border-bottom:1.5px solid var(--ink);font:700 12px/1.2 system-ui,sans-serif;color:var(--seal);flex-wrap:wrap}
+.paper .ph{display:flex;align-items:center;gap:6px;min-height:30px;padding:0 38px 6px 0;margin-bottom:4px;border-bottom:1.5px solid var(--ink);font:700 12px/1.2 system-ui,sans-serif;color:var(--seal);flex-wrap:nowrap}
 .paper .ph .arr{width:22px;height:10px;flex:0 0 auto}
 .paper .ph .ring{position:absolute;right:8px;top:5px;line-height:0}
-.paper .ph .ln-say.all{margin-left:2px}
+.paper .ph .ln-tools{display:inline-flex;gap:6px;flex:0 0 auto;margin-left:2px}
+.paper .ph .from,.paper .ph .to{min-width:0;flex:0 1 auto}
 
 .paper .ln-wrap{position:relative;padding-left:14px}
 .paper .ln{margin:0;font-size:clamp(15px,4.4vw,17px);line-height:1.95;letter-spacing:.01em}

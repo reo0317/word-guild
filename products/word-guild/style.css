@@ -389,7 +389,10 @@ button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 
 .kp-foot{grid-template-columns:1fr 1fr;justify-items:center;align-items:center}
 #kp-start{grid-column:1/-1}
-.kp-foot #kp-sound,.kp-foot #kp-speech{border:2px solid var(--ink);border-radius:50%;width:112px;height:64px;font-size:12px;padding:6px;background:var(--paper)}
+.kp-foot #kp-sound,.kp-foot #kp-speech{border:2px solid var(--ink);border-radius:50%;width:64px;height:64px;min-width:0;padding:0;display:grid;place-items:center;align-content:center;gap:1px;background:var(--paper);color:var(--ink);box-shadow:0 3px 0 var(--ink);text-decoration:none}
+.kp-foot #kp-sound svg,.kp-foot #kp-speech svg{width:26px;height:26px}
+.kp-foot #kp-sound small,.kp-foot #kp-speech small{font:700 10px/1 system-ui,sans-serif}
+.kp-foot [aria-pressed="false"]{opacity:.75}
 
 
 .gq-fog-count i{display:inline-block;width:12px;height:6px;border-radius:50%;background:var(--fog);margin-right:2px;vertical-align:middle}

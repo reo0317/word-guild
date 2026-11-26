@@ -321,7 +321,7 @@ let introducedLine = false;
 // movie: 読み終えた手紙の読みあげの隣に、紙芝居を開くボタン（data-act="kami"）を置く。
 export function letterHtml(lv, {face = () => '', shadowLines = new Set(), lit = false, hit = '', signed = false, movie = false} = {}) {
   const read = lv.lines.filter(line => line.readable).length;
-  const all = lv.readable ? `<button type="button" class="ln-say all" data-say="${esc(lv.lines.map(plainLine).join(' '))}" aria-label="読みあげ">${icon('speaker', 16)}</button>${movie ? `<button type="button" class="ln-say all ln-movie" data-act="kami" aria-label="紙芝居を見る">${icon('movie', 16)}</button>` : ''}` : '';
+  const all = lv.readable ? `<span class="ln-tools"><button type="button" class="ln-say all" data-say="${esc(lv.lines.map(plainLine).join(' '))}" aria-label="読みあげ">${icon('speaker', 16)}</button>${movie ? `<button type="button" class="ln-say all ln-movie" data-act="kami" aria-label="紙芝居を見る">${icon('movie', 16)}</button>` : ''}</span>` : '';
   const intro = !introducedLine ? lv.lines.findIndex(l => l.readable) : -1;
   if (intro >= 0) introducedLine = true;
   const head = `<div class="ph"><span class="from">${esc(lv.from ?? '')}</span><svg class="arr" viewBox="0 0 24 10" aria-hidden="true"><path d="M1 5h20M16 1l5 4-5 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="to">${esc(lv.to ?? '')}</span>${all}<span class="ring">${lampRing(read, lit)}</span></div>`;
